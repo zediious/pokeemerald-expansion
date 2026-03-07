@@ -669,6 +669,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "DragonScaledEmma",
+      "name": "Emma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/220702264?v=4",
+      "profile": "https://github.com/DragonScaledEmma",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
