@@ -278,6 +278,11 @@ void EndTruckSequence(u8 taskId)
     }
 }
 
+void ZED_FadeOutInHomeSequence(void)
+{
+    FadeInFromBlack();
+}
+
 bool8 TrySetPortholeWarpDestination(void)
 {
     s8 mapGroup, mapNum;

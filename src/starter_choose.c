@@ -110,6 +110,7 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
     {8, 4},
 };
 
+// This is no longer utilized
 #define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_TREECKO)
 #define FIRE_STARTER  (IS_FRLG ? SPECIES_CHARMANDER : SPECIES_TORCHIC)
 #define WATER_STARTER (IS_FRLG ? SPECIES_SQUIRTLE   : SPECIES_MUDKIP )

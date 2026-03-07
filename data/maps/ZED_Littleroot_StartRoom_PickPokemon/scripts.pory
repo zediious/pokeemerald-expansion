@@ -1,0 +1,171 @@
+mapscripts ZED_Littleroot_StartRoom_PickPokemon_MapScripts {}
+
+script LittlerootTown_StartGame_PokemonChoice1{
+    lockall
+    if(flag(FLAG_UNUSED_0x025)){
+        msgbox("You are certain you did not choose
+                two Pokémon.")
+        releaseall
+        return
+    }
+    showmonpic(SPECIES_SIMISEAR, 10, 3)
+    playmoncry(SPECIES_SIMISEAR, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Do you want to choose Simisear?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SIMISEAR, 1)
+        playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You received Simisear!")
+        removeobject(ZED_Starter_01)
+        setflag(FLAG_UNUSED_0x020)
+        setvar(VAR_STARTER_MON, 0)
+        call(LittlerootTown_StartGame_NicknamePartyMon)
+        call(LittlerootTown_StartGame_WarpAfterPickMon)
+    }
+    else{
+        hidemonpic
+        msgbox("You did not choose Simisear.")
+        waitmessage
+        release
+    }
+}
+
+script LittlerootTown_StartGame_PokemonChoice2{
+    lockall
+    if(flag(FLAG_UNUSED_0x025)){
+        msgbox("You are certain you did not choose
+                two Pokémon.")
+        releaseall
+        return
+    }
+    showmonpic(SPECIES_SIMISAGE, 10, 3)
+    playmoncry(SPECIES_SIMISAGE, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Do you want to choose Simisage?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SIMISAGE, 1)
+        playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You received Simisage!")
+        removeobject(ZED_Starter_02)
+        setflag(FLAG_UNUSED_0x021)
+        setvar(VAR_STARTER_MON, 1)
+        call(LittlerootTown_StartGame_NicknamePartyMon)
+        call(LittlerootTown_StartGame_WarpAfterPickMon)
+    }
+    else{
+        hidemonpic
+        msgbox("You did not choose Simisage.")
+        waitmessage
+        release
+    }
+}
+
+script LittlerootTown_StartGame_PokemonChoice3{
+    lockall
+    if(flag(FLAG_UNUSED_0x025)){
+        msgbox("You are certain you did not choose
+                two Pokémon.")
+        releaseall
+        return
+    }
+    showmonpic(SPECIES_SIMIPOUR, 10, 3)
+    playmoncry(SPECIES_SIMIPOUR, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Do you want to choose Simipour?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SIMIPOUR, 1)
+        playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You received Simipour!")
+        removeobject(ZED_Starter_03)
+        setflag(FLAG_UNUSED_0x022)
+        setvar(VAR_STARTER_MON, 2)
+        call(LittlerootTown_StartGame_NicknamePartyMon)
+        call(LittlerootTown_StartGame_WarpAfterPickMon)
+    }
+    else{
+        hidemonpic
+        msgbox("You did not choose Simipour.")
+        waitmessage
+        release
+    }
+} 
+
+script LittlerootTown_StartGame_PokemonChoice4{
+    lockall
+    if(flag(FLAG_UNUSED_0x025)){
+        msgbox("You are certain you did not choose
+                two Pokémon.")
+        releaseall
+        return
+    }
+    showmonpic(SPECIES_PASSIMIAN, 10, 3)
+    playmoncry(SPECIES_PASSIMIAN, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Do you want to choose Passimian?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_PASSIMIAN, 1)
+        playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You received Passimian!")
+        removeobject(ZED_Starter_04)
+        setflag(FLAG_UNUSED_0x023)
+        setvar(VAR_STARTER_MON, 3)
+        call(LittlerootTown_StartGame_NicknamePartyMon)
+        call(LittlerootTown_StartGame_WarpAfterPickMon)
+    }
+    else{
+        hidemonpic
+        msgbox("You did not choose Passimian.")
+        waitmessage
+        release
+    }
+}
+
+script LittlerootTown_StartGame_PokemonChoice5{
+    lockall
+    if(flag(FLAG_UNUSED_0x025)){
+        msgbox("You are certain you did not choose
+                two Pokémon.")
+        releaseall
+        return
+    }
+    showmonpic(SPECIES_ORANGURU, 10, 3)
+    playmoncry(SPECIES_ORANGURU, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox("Do you want to choose Oranguru?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_ORANGURU, 1)
+        playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You received Oranguru!")
+        removeobject(ZED_Starter_05)
+        setflag(FLAG_UNUSED_0x024)
+        setvar(VAR_STARTER_MON, 4)
+        call(LittlerootTown_StartGame_NicknamePartyMon)
+        call(LittlerootTown_StartGame_WarpAfterPickMon)
+    }
+    else{
+        hidemonpic
+        msgbox("You did not choose Oranguru.")
+        waitmessage
+        release
+    }
+}
+
+script LittlerootTown_StartGame_NicknamePartyMon{
+    hidemonpic
+    msgbox("Do you want to give your Pokémon
+            a nickname?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script LittlerootTown_StartGame_WarpAfterPickMon{
+    msgbox("You feel as though you are beginning
+            to wake up.")
+    waitmessage
+    setflag(FLAG_SYS_POKEMON_GET)
+    warp(MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4)
+    release
+
+}

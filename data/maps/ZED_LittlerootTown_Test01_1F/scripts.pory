@@ -1,0 +1,37 @@
+mapscripts MAP_ZED_LITTLEROOT_TOWN_TEST01_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_EventScript_JordanAwakenStart
+}
+
+script LittlerootTown_EventScript_JordanAwakenStart {
+    lock
+    // Jordan walk to player in bed
+    applymovement(JordanInHome, moves(
+        walk_up,
+        walk_left * 4,
+        walk_up,
+        walk_left
+    ))
+    waitmovement
+    msgbox("Jordan: Are you okay, you were tossing
+            and turning quite a bit. Anyways, I
+            bet you're ready to get going!
+            
+            Like I said yesterday, you absolutely
+            must check out the Palladium in
+            Gerbon Town, just east of here.
+            
+            I'll let you get to it."
+    )
+    waitmessage
+    // Jordan walk back to table from bed
+    applymovement(JordanInHome, moves(
+        walk_right,
+        walk_down,
+        walk_right * 4,
+        walk_down
+    ))
+    waitmovement
+    // Player arrived at bed after choosing starter
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    release
+}

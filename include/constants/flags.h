@@ -51,12 +51,12 @@
 
 #else
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_UNUSED_0x020    0x20 // Starter Mon Ball: Simisear
+#define FLAG_UNUSED_0x021    0x21 // Starter Mon Ball: Simisage
+#define FLAG_UNUSED_0x022    0x22 // Starter Mon Ball: Simipour
+#define FLAG_UNUSED_0x023    0x23 // Starter Mon Ball: Passimian
+#define FLAG_UNUSED_0x024    0x24 // Starter Mon Ball: Oranguru
+#define FLAG_UNUSED_0x025    0x25 // If player chose a starter
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
