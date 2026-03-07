@@ -669,6 +669,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "gammel2013",
+      "name": "gammel2013",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160730477?v=4",
+      "profile": "https://github.com/Gammel2013",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
