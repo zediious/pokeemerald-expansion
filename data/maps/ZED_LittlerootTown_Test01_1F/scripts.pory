@@ -93,7 +93,8 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
     applymovement(JordanInHome, moves(
         walk_up * 2,
         walk_right * 3,
-        walk_down
+        walk_down,
+        face_left
     ))
     waitmovement
     setvar(VAR_JORDAN_WARNED_TRAINERS, 1)
