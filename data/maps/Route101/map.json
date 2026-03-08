@@ -5,7 +5,7 @@
   "music": "MUS_ROUTE101",
   "region_map_section": "MAPSEC_ROUTE_101",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY",
+  "weather": "WEATHER_VOLCANIC_ASH",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -38,10 +38,65 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route101_EventScript_Trainer01",
       "flag": "0"
+    },
+    {
+      "local_id": "ZED_Route101_CatchTeacher",
+      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "x": 41,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route101_EventScript_TrainerTeachCatch02",
+      "flag": "FLAG_ROUTE101_TEACHER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 24,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route101_EventScript_Trainer02",
+      "flag": "0"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route101_EventScript_TrainerTeachTriggerSwitchLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route101_EventScript_TrainerTeachTriggerSwitchBottom"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route101_EventScript_TrainerTeachTriggerSwitchRight"
+    }
+  ],
   "bg_events": [
     {
       "type": "hidden_item",
@@ -49,6 +104,22 @@
       "y": 17,
       "elevation": 0,
       "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
+    },
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_SUPER_POTION",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
+    },
+    {
+      "type": "hidden_item",
+      "x": 29,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_POKE_BALL",
       "flag": "FLAG_HIDDEN_ITEMS_START"
     }
   ]

@@ -1,5 +1,194 @@
-mapscripts Route101_MapScripts {}
+mapscripts Route101_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ZEROED, 0: Route101_MapScript_CatchTrainerDisable
+    ]
+}
 
+// Disable/enable the catching lesson teacher when applicable, map script.
+script Route101_MapScript_CatchTrainerDisable{
+    if (var(VAR_ROUTE101CATCH_PROGRESS) == 1){
+        clearflag(FLAG_ROUTE101_TEACHER)
+    }
+    elif (var(VAR_ROUTE101CATCH_PROGRESS) == 0){
+        setflag(FLAG_ROUTE101_TEACHER)
+    }
+    else {
+        nop
+    }
+    setvar(VAR_ZEROED, 1)
+}
+
+//// Pokemon catching lesson
+script Route101_EventScript_TrainerTeachCatch02{
+    lock
+    faceplayer
+    msgbox("Trainer: You finally made it. Did you
+            manage to catch anything with that
+            Poke Ball I gave you?
+            
+            Checks bag...")
+    waitmessage
+    getpartysize
+    copyvar(VAR_ROUTE101CATCH_PARTYSIZE, VAR_RESULT)
+    if (var(VAR_ROUTE101CATCH_PARTYSIZE) > 1){
+        msgbox("That's great, it looks like you did catch
+                a Pokemon! Do you still want a lesson?
+                
+                It's always good to learn more.", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            msgbox("Great, here's another Poke Ball.")
+            giveitem(ITEM_POKE_BALL, 1)
+            goto(Route101_EventScript_TrainerTeachLesson)
+        }
+        else {
+            msgbox("A mistake. I'll be here when you change
+                    your mind")
+            waitmessage
+            release
+            end
+        }
+    }
+    else {
+        msgbox("Not yet it seems. Let's get started with
+                your lesson.")
+        waitmessage
+        goto(Route101_EventScript_TrainerTeachLesson)
+    }
+}
+
+script Route101_EventScript_TrainerTeachLesson{
+    playbgm(MUS_RG_OAK, 0)
+    if (var(VAR_ROUTE101CATCH_PLAYERPOSITION) == 0){
+        applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnLeft)
+        delay(10)
+        applymovement(0xFF, PlayerMovePlayerOnLeft)
+        waitmovement
+    }
+    elif (var(VAR_ROUTE101CATCH_PLAYERPOSITION) == 1) {
+        applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown)
+        delay(10)
+        applymovement(0xFF, PlayerMovePlayerOnBottom)
+        waitmovement
+    }
+    else {
+        applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown)
+        delay(10)
+        applymovement(0xFF, PlayerMovePlayerOnRight)
+        waitmovement
+    }
+
+    faceplayer
+    msgbox("To find wild Pokemon, run around in the
+            grass, like this.")
+    waitmessage
+    applymovement(ZED_Route101_CatchTeacher, TrainerMoveInCircles)
+    waitmovement
+    faceplayer
+    msgbox("Now, you give it a try.")
+    applymovement(ZED_Route101_CatchTeacher, moves(face_up))
+    applymovement(0xFF, PlayerMoveInCircles)
+    waitmovement
+    setwildbattle(SPECIES_WURMPLE, 2)
+    dowildbattle
+    lock
+    applymovement(ZED_Route101_CatchTeacher, TrainerMoveToPlayer)
+    getpartysize
+    if (var(VAR_RESULT) > VAR_ROUTE101CATCH_PARTYSIZE) {
+        msgbox("Awesome, you caught it! Keep at it, and
+                you'll be a master in no time.
+                
+                Here, have some more Poke Balls.")
+    }
+    else {
+        msgbox("That's too bad, you almost had it. Don't
+                give up!
+                
+                Here, have some more Poke Balls.")
+    }
+    giveitem(ITEM_POKE_BALL, 5)
+    msgbox("Maybe I'll see you another time. Bye!")
+    goto(Route101_EventScript_TrainerTeachEnd)
+}
+
+script Route101_EventScript_TrainerTeachEnd {
+    fadescreen(FADE_TO_BLACK)
+    removeobject(ZED_Route101_CatchTeacher)
+    setvar(VAR_ROUTE101CATCH_PROGRESS, 2)
+    setflag(FLAG_ROUTE101_TEACHER)
+    fadescreen(FADE_FROM_BLACK)
+    fadedefaultbgm
+    release
+    end
+}
+
+// Scripts for triggers around teacher, to change route to the training spot.
+script Route101_EventScript_TrainerTeachTriggerSwitchLeft{
+    setvar(VAR_ROUTE101CATCH_PLAYERPOSITION, 0)
+}
+
+script Route101_EventScript_TrainerTeachTriggerSwitchBottom{
+    setvar(VAR_ROUTE101CATCH_PLAYERPOSITION, 1)
+}
+
+script Route101_EventScript_TrainerTeachTriggerSwitchRight{
+    setvar(VAR_ROUTE101CATCH_PLAYERPOSITION, 2)
+}
+
+// Trainer and Player movements for catching lesson
+movement TrainerMovePlayerOnLeft{
+    walk_down,
+    walk_left * 3,
+    walk_up * 4,
+    walk_left * 3,
+    walk_up * 2,
+}
+
+movement TrainerMovePlayerOnRightOrDown{
+    walk_left * 3,
+    walk_up * 5,
+    walk_left * 3
+}
+
+movement PlayerMovePlayerOnLeft{
+    walk_left * 2,
+    walk_up * 5,
+    walk_left * 2
+}
+
+movement PlayerMovePlayerOnBottom{
+    walk_left * 3,
+    walk_up * 6,
+    walk_left * 2
+}
+
+movement PlayerMovePlayerOnRight{
+    walk_left * 4,
+    walk_up * 5,
+    walk_left * 2
+}
+
+movement TrainerMoveInCircles{
+    walk_up * 2,
+    walk_right,
+    walk_down,
+    walk_left,
+    walk_down
+}
+
+movement PlayerMoveInCircles{
+    walk_up * 2,
+    walk_right,
+    walk_down,
+    walk_left,
+    walk_up
+}
+
+movement TrainerMoveToPlayer{
+    walk_up * 2,
+    face_right
+}
+
+//// Route trainers
 script Route101_EventScript_Trainer01{
     trainerbattle_single(
         TRAINER_MAGNUS,
@@ -8,6 +197,18 @@ script Route101_EventScript_Trainer01{
     )
     msgbox("It's healthy for the old bones to have a
             battle now and again.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script Route101_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_JERRY_1,
+        "This place is so cool, I can't contain it!",
+        "I have been contained."
+    )
+    msgbox("I wonder what I'll find under all of
+            these ashes.", MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }

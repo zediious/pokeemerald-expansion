@@ -1067,3 +1067,33 @@ script LittlerootTown_EventScript_ArtistTalk01 {
     release
 }
 
+script LittlerootTown_EventScript_TrainerTeachCatch01 {
+    lock
+    faceplayer
+    msgbox("Trainer: I see you only have one
+            Pokemon. Do you want to learn how
+            to catch more?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES){
+        msgbox("Great. Here, have a Poke Ball. I
+                challenge you to catch one on your own,
+                on your way through Route 101.
+                
+                I'll meet you at the end of the route.")
+        giveitem(ITEM_POKE_BALL, 1)
+        fadescreen(FADE_TO_BLACK)
+        removeobject(ZED_Sawgrass_CatchTeacher)
+        setflag(FLAG_SAWGRASS_TEACHER)
+        setvar(VAR_ROUTE101CATCH_PROGRESS, 1)
+        fadescreen(FADE_FROM_BLACK)
+        release
+        end
+    }
+    else {
+        msgbox("Got it, I suppose you'll figure it out on
+                your own.")
+        release
+        end
+    }
+
+}
+

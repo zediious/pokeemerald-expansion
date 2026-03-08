@@ -5,7 +5,7 @@
   "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY_CLOUDS",
+  "weather": "WEATHER_VOLCANIC_ASH",
   "map_type": "MAP_TYPE_TOWN",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -23,10 +23,10 @@
     {
       "local_id": "LOCALID_LITTLEROOT_TEST01",
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
-      "x": 11,
+      "x": 6,
       "y": 12,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -47,6 +47,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_ElderTalk01",
       "flag": "0"
+    },
+    {
+      "local_id": "ZED_Sawgrass_CatchTeacher",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
+      "x": 21,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_EventScript_TrainerTeachCatch01",
+      "flag": "FLAG_SAWGRASS_TEACHER"
     }
   ],
   "warp_events": [

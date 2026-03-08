@@ -5,7 +5,7 @@ ZED_Littleroot_StartRoom_PickPokemon_MapScripts::
 
 ZED_Littleroot_StartRoom_PickPokemon_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 3 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	map_script_2 VAR_UNUSED_0x404E, 0, LittlerootTown_StartGame_PlayMusic
+	map_script_2 VAR_DREAM_ENTERED, 0, LittlerootTown_StartGame_PlayMusic
 	.2byte 0
 
 
@@ -13,7 +13,7 @@ LittlerootTown_StartGame_PlayMusic::
 # 8 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	playbgm MUS_CAVE_OF_ORIGIN, 0
 # 9 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setvar VAR_UNUSED_0x404E, 1
+	setvar VAR_DREAM_ENTERED, 1
 	return
 
 

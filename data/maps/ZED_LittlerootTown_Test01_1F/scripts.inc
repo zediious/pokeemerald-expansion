@@ -5,7 +5,7 @@ ZED_LittlerootTown_Test01_1F_MapScripts::
 
 ZED_LittlerootTown_Test01_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 3 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	map_script_2 VAR_DEWFORD_TOWN_STATE, 0, LittlerootTown_EventScript_JordanAwakenStart
+	map_script_2 VAR_ZED_STORY_TRACKER, 0, LittlerootTown_EventScript_JordanAwakenStart
 	.2byte 0
 
 
@@ -33,7 +33,7 @@ LittlerootTown_EventScript_JordanAwakenStart::
 # 42 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
 # 44 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setvar VAR_DEWFORD_TOWN_STATE, 1
+	setvar VAR_ZED_STORY_TRACKER, 1
 # 45 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	fadedefaultbgm
 # 46 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"

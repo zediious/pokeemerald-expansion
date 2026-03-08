@@ -1,6 +1,6 @@
 mapscripts ZED_LittlerootTown_Test01_1F_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_DEWFORD_TOWN_STATE, 0: LittlerootTown_EventScript_JordanAwakenStart
+        VAR_ZED_STORY_TRACKER, 0: LittlerootTown_EventScript_JordanAwakenStart
     ]
 }
 
@@ -41,7 +41,7 @@ script LittlerootTown_EventScript_JordanAwakenStart {
     ))
     waitmovement
     // Player arrived at bed after choosing starter
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    setvar(VAR_ZED_STORY_TRACKER, 1)
     fadedefaultbgm
     release
 }
