@@ -5125,7 +5125,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Rest
 
 === TRAINER_JERRY_1 ===
-Name: JERRY
+Name: Jerry
 Class: School Kid
 Pic: School Kid M
 Gender: Male
@@ -5134,12 +5134,19 @@ Double Battle: No
 AI: Check Bad Move
 
 Ralts
-Level: 2
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Draining Kiss
+- Psybeam
+- Hypnosis
 
-Wurmple
-Level: 2
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 2 SpD / 1 Spe
+Dustox
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Gust
+- Poison Powder
+- Moonlight
 
 === TRAINER_TED ===
 Name: TED
@@ -11049,7 +11056,7 @@ Level: 25
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_TIANA ===
-Name: TIANA
+Name: Tiana
 Class: Lass
 Pic: Lass
 Gender: Female
@@ -11057,13 +11064,21 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
+Magcargo
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ancient Power
+- Ember
+- Harden
+- Yawn
 
 Shroomish
-Level: 4
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Mega Drain
+- Headbutt
+- Leech Seed
+- Stun Spore
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
@@ -16892,8 +16907,16 @@ Double Battle: No
 AI: Basic Trainer
 
 Poochyena
-Level: 1
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 16 Spe
+- Bite
 - Tackle
 - Tail Whip
-- Growl
+
+Mightyena
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 16 Spe
+- Bite
+- Tackle
+- Tail Whip
+- Swagger

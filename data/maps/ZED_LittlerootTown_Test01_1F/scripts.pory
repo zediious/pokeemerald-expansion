@@ -19,7 +19,7 @@ script LittlerootTown_EventScript_JordanAwakenStart {
         walk_left
     ))
     waitmovement
-    msgbox("Jordan: Are you okay, you were tossing
+    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Are you okay, you were tossing
             and turning quite a bit. Anyways, I
             bet you're ready to get going!
             
@@ -44,4 +44,46 @@ script LittlerootTown_EventScript_JordanAwakenStart {
     setvar(VAR_ZED_STORY_TRACKER, 1)
     fadedefaultbgm
     release
+}
+
+script LittlerootTown_EventScript_JordanRememberTrainers{
+    applymovement(JordanInHome, moves(
+        emote_exclamation_mark
+    ))
+    delay(60)
+    applymovement(JordanInHome, moves(
+        walk_up,
+        walk_left * 3,
+        walk_down * 2,
+        face_left
+    ))
+    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sorry, I forgot to tell you!
+            The trainers around here don't mess
+            around, you'll face a pretty tough
+            challenge!
+            
+            I recommend you stick to the south side
+            of Route 101 to avoid them, but that's
+            up to you!
+            
+            If you decide to battle them, these will
+            help out.")
+    giveitem(ITEM_SUPER_POTION, 10)
+    giveitem(ITEM_FULL_HEAL, 5)
+    msgbox("Those should cover our meal at the
+            Woltia City train station, that you
+            paid for.
+            
+            ...
+            
+            Alright, that was quite a bit more
+            expensive I'll admit it. That should
+            be at least half!
+            
+            Anyways, don't go to hard on your
+            Pokemon, those trainers are really
+            tough! Good luck!")
+    setvar(VAR_JORDAN_WARNED_TRAINERS, 1)
+    release
+    end
 }

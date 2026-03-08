@@ -400,6 +400,16 @@ Route101_EventScript_Trainer02::
 	end
 
 
+Route101_EventScript_Trainer03::
+# 217 "data/maps/Route101/scripts.pory"
+	trainerbattle_single TRAINER_TIANA, Route101_EventScript_Trainer03_Text_0, Route101_EventScript_Trainer03_Text_1
+# 224 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
+# 226 "data/maps/Route101/scripts.pory"
+	waitmessage
+	end
+
+
 # 88 "data/maps/Route101/scripts.pory"
 Route101_EventScript_TrainerTeachLesson_Movement_0:
 # 88 "data/maps/Route101/scripts.pory"
@@ -483,3 +493,17 @@ Route101_EventScript_Trainer02_Text_2:
 # 210 "data/maps/Route101/scripts.pory"
 	.string "I wonder what I'll find under all of\n"
 	.string "these ashes.$"
+
+Route101_EventScript_Trainer03_Text_0:
+# 219 "data/maps/Route101/scripts.pory"
+	.string "Surpise! Did I get you?\p"
+	.string "Check out this Pokemon I caught!$"
+
+Route101_EventScript_Trainer03_Text_1:
+# 222 "data/maps/Route101/scripts.pory"
+	.string "It's still cool!$"
+
+Route101_EventScript_Trainer03_Text_2:
+# 224 "data/maps/Route101/scripts.pory"
+	.string "Maybe you can find one too if you look\n"
+	.string "hard enough.$"

@@ -212,3 +212,17 @@ script Route101_EventScript_Trainer02{
     waitmessage
     end
 }
+
+script Route101_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_TIANA,
+        "Surpise! Did I get you?
+        
+        Check out this Pokemon I caught!",
+        "It's still cool!"
+    )
+    msgbox("Maybe you can find one too if you look
+            hard enough.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
