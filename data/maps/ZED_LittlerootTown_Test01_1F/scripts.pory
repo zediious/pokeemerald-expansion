@@ -30,7 +30,7 @@ script LittlerootTown_EventScript_JordanAwakenStart {
             I'll let you get to it."
     )
     waitmessage
-    waitbuttonpress
+    closemessage
     // Jordan walk back to table from bed
     applymovement(JordanInHome, moves(
         walk_right,
@@ -47,16 +47,19 @@ script LittlerootTown_EventScript_JordanAwakenStart {
 }
 
 script LittlerootTown_EventScript_JordanRememberTrainers{
+    lock
     applymovement(JordanInHome, moves(
         emote_exclamation_mark
     ))
     delay(60)
+    applymovement(0xFF, moves(face_right))
     applymovement(JordanInHome, moves(
         walk_up,
         walk_left * 3,
         walk_down * 2,
         face_left
     ))
+    waitmovement
     msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sorry, I forgot to tell you!
             The trainers around here don't mess
             around, you'll face a pretty tough
@@ -68,6 +71,8 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
             
             If you decide to battle them, these will
             help out.")
+    waitmessage
+    closemessage
     giveitem(ITEM_SUPER_POTION, 10)
     giveitem(ITEM_FULL_HEAL, 5)
     msgbox("Those should cover our meal at the
@@ -83,6 +88,14 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
             Anyways, don't go to hard on your
             Pokemon, those trainers are really
             tough! Good luck!")
+    waitmessage
+    closemessage
+    applymovement(JordanInHome, moves(
+        walk_up * 2,
+        walk_right * 3,
+        walk_down
+    ))
+    waitmovement
     setvar(VAR_JORDAN_WARNED_TRAINERS, 1)
     release
     end
