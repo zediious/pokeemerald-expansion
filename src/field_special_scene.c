@@ -280,6 +280,7 @@ void EndTruckSequence(u8 taskId)
 
 void ZED_FadeOutInHomeSequence(void)
 {
+    DrawWholeMapView();
     FadeInFromBlack();
 }
 
