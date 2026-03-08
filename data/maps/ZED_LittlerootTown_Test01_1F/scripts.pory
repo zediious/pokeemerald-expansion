@@ -1,5 +1,7 @@
-mapscripts MAP_ZED_LITTLEROOT_TOWN_TEST01_1F_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_EventScript_JordanAwakenStart
+mapscripts ZED_LittlerootTown_Test01_1F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_DEWFORD_TOWN_STATE, 0: LittlerootTown_EventScript_JordanAwakenStart
+    ]
 }
 
 script LittlerootTown_EventScript_JordanAwakenStart {
