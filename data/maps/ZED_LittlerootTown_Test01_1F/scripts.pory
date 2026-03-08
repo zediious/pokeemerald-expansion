@@ -7,6 +7,7 @@ mapscripts ZED_LittlerootTown_Test01_1F_MapScripts {
 script LittlerootTown_EventScript_JordanAwakenStart {
     lock
     // Jordan walk to player in bed
+    playbgm(MUS_ENCOUNTER_MAY, 0)
     applymovement(JordanInHome, moves(
         emote_exclamation_mark,
         walk_up,
@@ -38,5 +39,6 @@ script LittlerootTown_EventScript_JordanAwakenStart {
     waitmovement
     // Player arrived at bed after choosing starter
     setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    fadedefaultbgm
     release
 }
