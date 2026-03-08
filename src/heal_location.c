@@ -65,11 +65,12 @@ static bool32 IsLastHealLocation(u32 healLocation)
         && warpData->y == loc->y;
 }
 
-bool32 IsLastHealLocationPlayerHouse()
+bool32 IsLastHealLocationPlayerHouse() // Will add new heal location in Sawgrass Village at a later time.
 {
-    if (IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE)
-        || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
-        || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE)
+    // if (IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE)
+    if (IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
+        // || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
+        // || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE)
         || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F)
         || IsLastHealLocation(HEAL_LOCATION_PALLET_TOWN))
         return TRUE;
