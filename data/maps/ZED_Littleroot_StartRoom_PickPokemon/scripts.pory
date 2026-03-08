@@ -166,6 +166,7 @@ script LittlerootTown_StartGame_WarpAfterPickMon{
     waitmessage
     setflag(FLAG_SYS_POKEMON_GET)
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
+    setflag(FLAG_SYS_B_DASH)
     warp(MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4)
     release
 
