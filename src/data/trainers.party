@@ -16873,3 +16873,23 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+/*
+New Trainers
+*/
+
+=== TRAINER_MAGNUS ===
+Name: Magnus
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+Poochyena
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 16 Spe
+- Tackle
+- Tail Whip
+- Growl

@@ -26,16 +26,17 @@
   ],
   "object_events": [
     {
+      "local_id": "ZED_Route101_Trainer01",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 28,
       "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Route101_EventScript_Trainer01",
       "flag": "0"
     }
   ],
