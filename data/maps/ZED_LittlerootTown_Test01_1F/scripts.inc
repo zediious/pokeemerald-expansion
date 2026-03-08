@@ -72,11 +72,11 @@ LittlerootTown_EventScript_JordanRememberTrainers::
 	closemessage
 # 93 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_2
-# 98 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmovement
 # 99 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setvar VAR_JORDAN_WARNED_TRAINERS, 1
+	waitmovement
 # 100 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setvar VAR_JORDAN_WARNED_TRAINERS, 1
+# 101 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 
@@ -163,6 +163,8 @@ LittlerootTown_EventScript_JordanRememberTrainers_Movement_2:
 	walk_right
 # 96 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	walk_down
+# 97 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	face_left
 	step_end
 
 LittlerootTown_EventScript_JordanAwakenStart_Text_0:
