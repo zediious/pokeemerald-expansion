@@ -1042,3 +1042,28 @@ script LittlerootTown_EventScript_JordanTalk01 {
     release
 }
 
+script LittlerootTown_EventScript_ElderTalk01 {
+    lock
+    faceplayer
+    msgbox("Elder: Sawgrass Village has been around
+            for many years, in many different forms.
+            
+            War and volcanic eruptions have forced
+            us to rebuild three times in my lifetime
+            
+            Despite this, we must remain. This place
+            is sacred, and bears extreme importance
+            to a certain Pokemon.")
+    waitmessage()
+    release
+}
+
+script LittlerootTown_EventScript_ArtistTalk01 {
+    lock
+    faceplayer
+    msgbox("Artist: This place is beautiful! My next
+            piece will simply be inspired!")
+    waitmessage()
+    release
+}
+

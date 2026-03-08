@@ -23,7 +23,7 @@
     {
       "local_id": "LOCALID_LITTLEROOT_TEST01",
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
-      "x": 25,
+      "x": 11,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -31,13 +31,27 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LittlerootTown_EventScript_ArtistTalk01",
+      "flag": "0"
+    },
+    {
+      "local_id": "ZED_Sawgrass_Elder",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_EventScript_ElderTalk01",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 33,
+      "x": 19,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ZED_LITTLEROOT_TOWN_TEST01_1F",
@@ -48,7 +62,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 31,
+      "x": 17,
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -56,7 +70,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 25,
+      "x": 11,
       "y": 5,
       "elevation": 0,
       "item": "ITEM_MUSCLE_FEATHER",
