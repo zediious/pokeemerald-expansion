@@ -70,6 +70,13 @@
       "elevation": 0,
       "dest_map": "MAP_ZED_LITTLEROOT_TOWN_TEST01_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_VILLAGE_POKEMON_CENTER",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
