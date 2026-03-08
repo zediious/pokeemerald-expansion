@@ -26,7 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice1",
-      "flag": "FLAG_UNUSED_0x020"
+      "flag": "FLAG_STARTER_BALL_SIMISEAR"
     },
     {
       "local_id": "ZED_Starter_02",
@@ -40,7 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice2",
-      "flag": "FLAG_UNUSED_0x021"
+      "flag": "FLAG_STARTER_BALL_SIMISAGE"
     },
     {
       "local_id": "ZED_Starter_03",
@@ -54,7 +54,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice3",
-      "flag": "FLAG_UNUSED_0x022"
+      "flag": "FLAG_STARTER_BALL_SIMIPOUR"
     },
     {
       "local_id": "ZED_Starter_04",
@@ -68,7 +68,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice4",
-      "flag": "FLAG_UNUSED_0x023"
+      "flag": "FLAG_STARTER_BALL_PASSIMIAN"
     },
     {
       "local_id": "ZED_Starter_05",
@@ -82,7 +82,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice5",
-      "flag": "FLAG_UNUSED_0x024"
+      "flag": "FLAG_STARTER_BALL_ORANGURU"
     }
   ],
   "warp_events": [],
