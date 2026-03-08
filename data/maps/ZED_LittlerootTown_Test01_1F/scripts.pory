@@ -26,6 +26,7 @@ script LittlerootTown_EventScript_JordanAwakenStart {
             I'll let you get to it."
     )
     waitmessage
+    waitbuttonpress
     // Jordan walk back to table from bed
     applymovement(JordanInHome, moves(
         walk_right,
