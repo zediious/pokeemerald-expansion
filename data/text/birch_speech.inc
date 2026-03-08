@@ -47,9 +47,9 @@ gText_Birch_YourePlayer::
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "I want to travel around the region?\p"
+	.string "I want to travel around the region\p"
 	.string "to explore all the sights! Who knows\n"
 	.string "what could unfold?\p"
-	.string "I had a Pokémon who is my best\n"
-	.string "friend, who was that...\p"
+	.string "I have a Pokémon who is my best\n"
+	.string "friend, who is that...\p"
 	.string "$"
