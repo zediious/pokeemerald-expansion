@@ -22,7 +22,7 @@ script Route101_MapScript_CatchTrainerDisable{
 script Route101_EventScript_TrainerTeachCatch02{
     lock
     faceplayer
-    msgbox("Trainer: You finally made it. Did you
+    msgbox("{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You finally made it. Did you
             manage to catch anything with that
             Poke Ball I gave you?
             

@@ -104,13 +104,13 @@ LittlerootTown_EventScript_JordanSign_Text_0:
 
 LittlerootTown_EventScript_JordanTalk01_Text_0:
 # 1037 "data/maps/LittlerootTown/scripts.pory"
-	.string "Jordan: I worked all week, so I just\n"
+	.string "{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I worked all week, so I just\n"
 	.string "want to relax today. Sorry! I know you\l"
 	.string "and your Pokemon will enjoy it!$"
 
 LittlerootTown_EventScript_ElderTalk01_Text_0:
 # 1048 "data/maps/LittlerootTown/scripts.pory"
-	.string "Elder: Sawgrass Village has been around\n"
+	.string "{COLOR GREEN}Elder:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sawgrass Village has been around\n"
 	.string "for many years, in many different forms.\p"
 	.string "War and volcanic eruptions have forced\n"
 	.string "us to rebuild three times in my lifetime\p"
@@ -120,12 +120,12 @@ LittlerootTown_EventScript_ElderTalk01_Text_0:
 
 LittlerootTown_EventScript_ArtistTalk01_Text_0:
 # 1064 "data/maps/LittlerootTown/scripts.pory"
-	.string "Artist: This place is beautiful! My next\n"
+	.string "{COLOR GREEN}Artist:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} This place is beautiful! My next\n"
 	.string "piece will simply be inspired!$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_0:
 # 1073 "data/maps/LittlerootTown/scripts.pory"
-	.string "Trainer: I see you only have one\n"
+	.string "{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I see you only have one\n"
 	.string "Pokemon. Do you want to learn how\l"
 	.string "to catch more?$"
 

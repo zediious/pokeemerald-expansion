@@ -1034,7 +1034,7 @@ script LittlerootTown_EventScript_JordanSign {
 script LittlerootTown_EventScript_JordanTalk01 {
     lock
     faceplayer
-    msgbox("Jordan: I worked all week, so I just
+    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I worked all week, so I just
             want to relax today. Sorry! I know you
             and your Pokemon will enjoy it!")
     applymovement(JordanInHome, moves(face_left))
@@ -1045,7 +1045,7 @@ script LittlerootTown_EventScript_JordanTalk01 {
 script LittlerootTown_EventScript_ElderTalk01 {
     lock
     faceplayer
-    msgbox("Elder: Sawgrass Village has been around
+    msgbox("{COLOR GREEN}Elder:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sawgrass Village has been around
             for many years, in many different forms.
             
             War and volcanic eruptions have forced
@@ -1061,7 +1061,7 @@ script LittlerootTown_EventScript_ElderTalk01 {
 script LittlerootTown_EventScript_ArtistTalk01 {
     lock
     faceplayer
-    msgbox("Artist: This place is beautiful! My next
+    msgbox("{COLOR GREEN}Artist:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} This place is beautiful! My next
             piece will simply be inspired!")
     waitmessage()
     release
@@ -1070,7 +1070,7 @@ script LittlerootTown_EventScript_ArtistTalk01 {
 script LittlerootTown_EventScript_TrainerTeachCatch01 {
     lock
     faceplayer
-    msgbox("Trainer: I see you only have one
+    msgbox("{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I see you only have one
             Pokemon. Do you want to learn how
             to catch more?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES){
@@ -1096,4 +1096,3 @@ script LittlerootTown_EventScript_TrainerTeachCatch01 {
     }
 
 }
-

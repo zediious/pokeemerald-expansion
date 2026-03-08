@@ -408,7 +408,7 @@ Route101_EventScript_TrainerTeachLesson_Movement_0:
 
 Route101_EventScript_TrainerTeachCatch02_Text_0:
 # 25 "data/maps/Route101/scripts.pory"
-	.string "Trainer: You finally made it. Did you\n"
+	.string "{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You finally made it. Did you\n"
 	.string "manage to catch anything with that\l"
 	.string "Poke Ball I gave you?\p"
 	.string "Checks bag...$"
