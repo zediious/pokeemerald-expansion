@@ -81,10 +81,13 @@ script Route101_EventScript_TrainerTeachLesson{
     msgbox("To find wild Pokemon, run around in the
             grass, like this.")
     waitmessage
+    closemessage
     applymovement(ZED_Route101_CatchTeacher, TrainerMoveInCircles)
     waitmovement
     faceplayer
     msgbox("Now, you give it a try.")
+    waitmessage
+    closemessage
     applymovement(ZED_Route101_CatchTeacher, moves(face_up))
     applymovement(0xFF, PlayerMoveInCircles)
     waitmovement
@@ -92,6 +95,7 @@ script Route101_EventScript_TrainerTeachLesson{
     dowildbattle
     lock
     applymovement(ZED_Route101_CatchTeacher, TrainerMoveToPlayer)
+    waitmovement
     getpartysize
     if (var(VAR_RESULT) > VAR_ROUTE101CATCH_PARTYSIZE) {
         msgbox("Awesome, you caught it! Keep at it, and
