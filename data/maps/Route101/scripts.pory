@@ -6,4 +6,8 @@ script Route101_EventScript_Trainer01{
         "I like a good battle now and again!",
         "That's how they usually go, fun!"
     )
+    msgbox("It's healthy for the old bones to have a
+            battle now and again.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
 }
