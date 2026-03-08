@@ -101,22 +101,22 @@
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
 #define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_ZED_STORY_TRACKER                           0x4052 // Wide story state tracker
+#define VAR_ZED_STORY_TRACKER                            0x4052 // Wide story state tracker
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_ZEROED                        0x4055 // Always stays at 0
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+#define VAR_ZEROED                                       0x4055 // Always stays at 0
+#define VAR_JORDAN_WARNED_TRAINERS                       0x4056 // Jordan remembered to warn you about the tough trainers.
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
-#define VAR_ROUTE101CATCH_PLAYERPOSITION                          0x4059 // Route 101 catch teacher, player is on left(0), bottom(1), or right(2)
+#define VAR_ROUTE101CATCH_PLAYERPOSITION                 0x4059 // Route 101 catch teacher, player is on left(0), bottom(1), or right(2)
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
-#define VAR_ROUTE101CATCH_PROGRESS                           0x405B // Intro catch teacher progress
-#define VAR_ROUTE101CATCH_PARTYSIZE                          0x405C // Party size before the lesson begins for intro catch
+#define VAR_ROUTE101CATCH_PROGRESS                       0x405B // Intro catch teacher progress
+#define VAR_ROUTE101CATCH_PARTYSIZE                      0x405C // Party size before the lesson begins for intro catch
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
-#define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
+#define VAR_STARTER_SPECIES                              0x405F // Species of starter
 #define VAR_ROUTE101_STATE                               0x4060
-#define VAR_ROUTE102_STATE                               0x4061 // Unused Var
+#define VAR_STARTER_SPECIES_NAME                         0x4061 // Name of starter
 #define VAR_ROUTE103_STATE                               0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
