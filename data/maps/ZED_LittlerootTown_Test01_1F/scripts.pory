@@ -30,7 +30,8 @@ script LittlerootTown_EventScript_JordanAwakenStart {
         walk_right,
         walk_down,
         walk_right * 4,
-        walk_down
+        walk_down,
+        face_left
     ))
     waitmovement
     // Player arrived at bed after choosing starter
