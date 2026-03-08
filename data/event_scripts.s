@@ -1740,3 +1740,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ZED_LittlerootTown_Test01_1F/scripts.inc"
 
 	.include "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.inc"
+
+	.include "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.inc"
