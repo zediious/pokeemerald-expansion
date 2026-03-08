@@ -1,4 +1,13 @@
-mapscripts ZED_Littleroot_StartRoom_PickPokemon_MapScripts {}
+mapscripts ZED_Littleroot_StartRoom_PickPokemon_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_UNUSED_0x404E, 0: LittlerootTown_StartGame_PlayMusic
+    ]
+}
+
+script LittlerootTown_StartGame_PlayMusic{
+    playbgm(MUS_CAVE_OF_ORIGIN, 0)
+    setvar(VAR_UNUSED_0x404E, 1)
+}
 
 script LittlerootTown_StartGame_PokemonChoice1{
     lockall
@@ -174,7 +183,12 @@ script LittlerootTown_StartGame_WarpAfterPickMon{
     msgbox("You feel as though you are beginning
             to wake up.")
     waitmessage
+    // Enable Pokedex and Pokemon menus
+    setflag(FLAG_SYS_POKEDEX_GET)
+	special(SetUnlockedPokedexFlags)
+	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
     setflag(FLAG_SYS_POKEMON_GET)
+    // Enable running shoes
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
     setflag(FLAG_SYS_B_DASH)
     warp(MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4)
