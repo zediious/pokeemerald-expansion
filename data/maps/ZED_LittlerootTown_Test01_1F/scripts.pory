@@ -9,7 +9,10 @@ script LittlerootTown_EventScript_JordanAwakenStart {
     // Jordan walk to player in bed
     playbgm(MUS_ENCOUNTER_MAY, 0)
     applymovement(JordanInHome, moves(
-        emote_exclamation_mark,
+        emote_exclamation_mark
+    ))
+    delay(60)
+    applymovement(JordanInHome, moves(
         walk_up,
         walk_left * 4,
         walk_up,
