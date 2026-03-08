@@ -15,7 +15,9 @@ script LittlerootTown_StartGame_PokemonChoice1{
     if(var(VAR_RESULT) == YES){
         givemon(SPECIES_SIMISEAR, 1)
         playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
         msgbox("You received Simisear!")
+        waitmessage
         removeobject(ZED_Starter_01)
         setflag(FLAG_UNUSED_0x020)
         setvar(VAR_STARTER_MON, 0)
@@ -45,7 +47,9 @@ script LittlerootTown_StartGame_PokemonChoice2{
     if(var(VAR_RESULT) == YES){
         givemon(SPECIES_SIMISAGE, 1)
         playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
         msgbox("You received Simisage!")
+        waitmessage
         removeobject(ZED_Starter_02)
         setflag(FLAG_UNUSED_0x021)
         setvar(VAR_STARTER_MON, 1)
@@ -75,7 +79,9 @@ script LittlerootTown_StartGame_PokemonChoice3{
     if(var(VAR_RESULT) == YES){
         givemon(SPECIES_SIMIPOUR, 1)
         playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
         msgbox("You received Simipour!")
+        waitmessage
         removeobject(ZED_Starter_03)
         setflag(FLAG_UNUSED_0x022)
         setvar(VAR_STARTER_MON, 2)
@@ -105,7 +111,9 @@ script LittlerootTown_StartGame_PokemonChoice4{
     if(var(VAR_RESULT) == YES){
         givemon(SPECIES_PASSIMIAN, 1)
         playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
         msgbox("You received Passimian!")
+        waitmessage
         removeobject(ZED_Starter_04)
         setflag(FLAG_UNUSED_0x023)
         setvar(VAR_STARTER_MON, 3)
@@ -135,7 +143,9 @@ script LittlerootTown_StartGame_PokemonChoice5{
     if(var(VAR_RESULT) == YES){
         givemon(SPECIES_ORANGURU, 1)
         playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
         msgbox("You received Oranguru!")
+        waitmessage
         removeobject(ZED_Starter_05)
         setflag(FLAG_UNUSED_0x024)
         setvar(VAR_STARTER_MON, 4)
