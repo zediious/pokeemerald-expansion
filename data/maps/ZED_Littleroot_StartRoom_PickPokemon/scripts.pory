@@ -88,10 +88,14 @@ script LittlerootTown_StartGame_WarpAfterPickMon{
     msgbox("You feel as though you are beginning
             to wake up.")
     waitmessage
-    // Enable Pokedex and Pokemon menus
+    // Enable Pokedex
     setflag(FLAG_SYS_POKEDEX_GET)
 	special(SetUnlockedPokedexFlags)
 	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    # Enable National Dex
+    setflag(FLAG_SYS_NATIONAL_DEX)
+	special(EnableNationalPokedex)
+    # Enable Pokemon menu
     setflag(FLAG_SYS_POKEMON_GET)
     // Enable running shoes
     setflag(FLAG_RECEIVED_RUNNING_SHOES)

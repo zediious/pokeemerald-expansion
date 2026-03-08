@@ -157,15 +157,19 @@ LittlerootTown_StartGame_WarpAfterPickMon::
 	special SetUnlockedPokedexFlags
 # 94 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
-# 95 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+# 96 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_SYS_NATIONAL_DEX
 # 97 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-# 98 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	special EnableNationalPokedex
 # 99 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 101 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 102 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 103 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	warp MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4
-# 100 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 104 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	release
 	return
 
