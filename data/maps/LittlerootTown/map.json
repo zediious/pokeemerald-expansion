@@ -138,6 +138,14 @@
       "elevation": 0,
       "item": "ITEM_MUSCLE_FEATHER",
       "flag": "FLAG_HIDDEN_ITEMS_START"
+    },
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "item": "ITEM_POKE_DOLL",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
     }
   ]
 }
