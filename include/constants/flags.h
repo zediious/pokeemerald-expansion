@@ -57,7 +57,7 @@
 #define FLAG_STARTER_BALL_PASSIMIAN    0x23 // Starter Mon Ball: Passimian
 #define FLAG_STARTER_BALL_ORANGURU    0x24 // Starter Mon Ball: Oranguru
 #define FLAG_STARTER_CHOSEN    0x25 // If player chose a starter
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_GOT_SOOTHE_BELL_SAWGRASS   0x26 // Player got Soothe Bell from woman in Sawgrass Village
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag

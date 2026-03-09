@@ -1108,13 +1108,57 @@ script LittlerootTown_EventScript_TiredLady {
 
 script LittlerootTown_EventScript_TiredLady_Pooch {
     lock
-    msgbox("Rah!")
     playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+    msgbox("Rah!")
     waitmoncry
     waitmessage
     closemessage
     release
 }
+
+script LittlerootTown_EventScript_HusbandLament {
+    lock
+    faceplayer
+    msgbox("Skitty's got it made. I have to make my
+            own meals!")
+    waitmessage
+    release
+}
+
+script LittlerootTown_EventScript_WifeCookingForSkitty {
+    lock
+    faceplayer
+    if (flag(FLAG_GOT_SOOTHE_BELL_SAWGRASS)) {
+        msgbox("Skitty loves me for the food, but she's
+                holding a Soothe Bell too!
+                
+                I hope Skitty loves me for who I am too!")
+    }
+    else {
+        msgbox("I always make Skitty home-cooked
+            meals. She absolutely loves them!
+            
+            Here, this can help your Pokemon grow
+            to love you too!")
+        waitmessage
+        giveitem(ITEM_SOOTHE_BELL, 1)
+        setflag(FLAG_GOT_SOOTHE_BELL_SAWGRASS)
+    }
+    release
+    applymovement(ZED_SAWGRASS_COOKINGMAMA, moves(face_up))
+    end
+}
+
+script LittlerootTown_EventScript_WifeCookingForSkitty_Skitty {
+    lock
+    playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
+    msgbox("Meeow!")
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}
+
 
 script LittlerootTown_EventScript_TrainerTeachCatch01 {
     lock
