@@ -37,7 +37,7 @@ script LittlerootTown_StartGame_PokemonChoice5{
 script LittlerootTown_StartGame_ChooseMon {
     lockall
     if(flag(FLAG_STARTER_CHOSEN)){
-        msgbox("You are certain you did not choose
+        msgbox("I'm certain I did not have
                 two Pokémon.")
         releaseall
         return
@@ -46,12 +46,13 @@ script LittlerootTown_StartGame_ChooseMon {
     showmonpic(VAR_STARTER_SPECIES, 10, 3)
     playmoncry(VAR_STARTER_SPECIES, CRY_MODE_NORMAL)
     waitmoncry
-    msgbox("Do you want to choose {COLOR RED}{STR_VAR_1}?", MSGBOX_YESNO)
+    msgbox("Was {COLOR RED}{STR_VAR_1} my Pokemon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
         givemon(VAR_STARTER_SPECIES, 20)
         playfanfare(MUS_OBTAIN_BADGE)
         waitfanfare
-        msgbox("You received {COLOR RED}{STR_VAR_1}!")
+        msgbox("That's right, {COLOR RED}{STR_VAR_1} was
+                my Pokemon!")
         waitmessage
         setvar(VAR_STARTER_MON, 4)
         call(LittlerootTown_EventScript_RemoveBalls)
@@ -60,7 +61,7 @@ script LittlerootTown_StartGame_ChooseMon {
     }
     else{
         hidemonpic
-        msgbox("You did not choose {COLOR RED}{STR_VAR_1}.")
+        msgbox("No, {COLOR RED}{STR_VAR_1} was not my Pokemon.")
         waitmessage
         release
     }
@@ -76,8 +77,7 @@ script LittlerootTown_EventScript_RemoveBalls {
 
 script LittlerootTown_StartGame_NicknamePartyMon{
     hidemonpic
-    msgbox("Do you want to give your Pokémon
-            a nickname?", MSGBOX_YESNO)
+    msgbox("Hmm, Did my Pokemon have a nickname?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
         call(Common_EventScript_NameReceivedPartyMon)
@@ -85,9 +85,6 @@ script LittlerootTown_StartGame_NicknamePartyMon{
 }
 
 script LittlerootTown_StartGame_WarpAfterPickMon{
-    msgbox("You feel as though you are beginning
-            to wake up.")
-    waitmessage
     // Enable Pokedex
     setflag(FLAG_SYS_POKEDEX_GET)
 	special(SetUnlockedPokedexFlags)
