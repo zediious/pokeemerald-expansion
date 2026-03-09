@@ -1067,6 +1067,55 @@ script LittlerootTown_EventScript_ArtistTalk01 {
     release
 }
 
+script LittlerootTown_EventScript_BlockageCop {
+    lock
+    faceplayer
+    msgbox("Sorry, this way is closed for now. There
+            has been an incident, we don't have any
+            details right now.
+            
+            You'll have to come back another time.")
+    applymovement(ZED_Sawgrass_Blockage_Cop, moves(face_up))
+    release
+    end
+}
+
+script LittlerootTown_EventScript_BlockageFearow {
+    lock
+    faceplayer
+    msgbox("Skreee!")
+    playmoncry(SPECIES_FEAROW, CRY_MODE_NORMAL)
+    waitmoncry
+    waitmessage
+    release
+    end
+}
+
+script LittlerootTown_EventScript_TiredLady {
+    lock
+    msgbox("My Poochyena has so much energy, I just
+            can't run anymore!
+            
+            Look at him, he's still going!")
+    closemessage
+    msgbox("Rah!")
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}
+
+script LittlerootTown_EventScript_TiredLady_Pooch {
+    lock
+    msgbox("Rah!")
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}
+
 script LittlerootTown_EventScript_TrainerTeachCatch01 {
     lock
     faceplayer

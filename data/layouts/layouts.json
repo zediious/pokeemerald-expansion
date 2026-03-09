@@ -9353,6 +9353,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ZED_SawgrassVillage_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/ZED_SawgrassVillage_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZED_SAWGRASS_VILLAGE_HOME01",
+      "name": "ZED_SawgrassVillage_Home01_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ZED_SawgrassVillage_Home01/border.bin",
+      "blockdata_filepath": "data/layouts/ZED_SawgrassVillage_Home01/map.bin"
     }
   ]
 }

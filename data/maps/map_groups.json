@@ -143,7 +143,8 @@
     "LittlerootTown_ProfessorBirchsLab",
     "ZED_LittlerootTown_Test01_1F",
     "ZED_Littleroot_StartRoom_PickPokemon",
-    "ZED_SawgrassVillage_PokemonCenter"
+    "ZED_SawgrassVillage_PokemonCenter",
+    "ZED_SawgrassVillage_Home01"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
