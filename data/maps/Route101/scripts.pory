@@ -231,3 +231,16 @@ script Route101_EventScript_Trainer03{
     waitmessage
     end
 }
+
+script Route101_EventScript_ScaredTrainer {
+    lock
+    faceplayer
+    msgbox("The southern side of a Route is usually
+            free of trainers, but you'll be forced
+            to contend with wild Pokemon.
+            
+            That sure beats dealing with all those
+            tough trainers!")
+    release
+    end
+}
