@@ -1067,7 +1067,7 @@ script LittlerootTown_EventScript_ArtistTalk01 {
     release
 }
 
-script LittlerootTown_EventScript_BlockageCop {
+script LittlerootTown_EventScript_BlockageSailor {
     lock
     faceplayer
     msgbox("Sorry, this way is closed for now. There
@@ -1075,16 +1075,16 @@ script LittlerootTown_EventScript_BlockageCop {
             details right now.
             
             You'll have to come back another time.")
-    applymovement(ZED_Sawgrass_Blockage_Cop, moves(face_up))
+    applymovement(ZED_Sawgrass_Blockage_Sailor, moves(face_up))
     release
     end
 }
 
-script LittlerootTown_EventScript_BlockageFearow {
+script LittlerootTown_EventScript_BlockageAzumarill {
     lock
     faceplayer
     msgbox("Skreee!")
-    playmoncry(SPECIES_FEAROW, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_AZUMARILL, CRY_MODE_NORMAL)
     waitmoncry
     waitmessage
     release

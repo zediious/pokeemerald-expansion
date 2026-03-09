@@ -64,7 +64,7 @@
     },
     {
       "local_id": "ZED_Sawgrass_Blockage_Cop",
-      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 3,
       "y": 17,
       "elevation": 0,
@@ -78,7 +78,7 @@
     },
     {
       "local_id": "ZED_Sawgrass_Blockage_Fearow",
-      "graphics_id": "OBJ_EVENT_GFX_FEAROW",
+      "graphics_id": "OBJ_EVENT_GFX_AZUMARILL",
       "x": 2,
       "y": 17,
       "elevation": 0,
@@ -87,7 +87,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_EventScript_BlockageFearow",
+      "script": "LittlerootTown_EventScript_BlockageAzumarill",
       "flag": "0"
     }
   ],
