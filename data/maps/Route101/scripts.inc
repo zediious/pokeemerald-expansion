@@ -420,6 +420,18 @@ Route101_EventScript_Trainer03::
 	end
 
 
+Route101_EventScript_ScaredTrainer::
+# 236 "data/maps/Route101/scripts.pory"
+	lock
+# 237 "data/maps/Route101/scripts.pory"
+	faceplayer
+# 238 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_ScaredTrainer_Text_0
+# 244 "data/maps/Route101/scripts.pory"
+	release
+	end
+
+
 # 91 "data/maps/Route101/scripts.pory"
 Route101_EventScript_TrainerTeachLesson_Movement_0:
 # 91 "data/maps/Route101/scripts.pory"
@@ -523,3 +535,11 @@ Route101_EventScript_Trainer03_Text_2:
 # 229 "data/maps/Route101/scripts.pory"
 	.string "Maybe you can find one too if you look\n"
 	.string "hard enough.$"
+
+Route101_EventScript_ScaredTrainer_Text_0:
+# 238 "data/maps/Route101/scripts.pory"
+	.string "The southern side of a Route is usually\n"
+	.string "free of trainers, but you'll be forced\l"
+	.string "to contend with wild Pokemon.\p"
+	.string "That sure beats dealing with all those\n"
+	.string "tough trainers!$"
