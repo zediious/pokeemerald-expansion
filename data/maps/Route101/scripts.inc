@@ -137,18 +137,20 @@ Route101_EventScript_TrainerTeachLesson_1:
 # 98 "data/maps/Route101/scripts.pory"
 	waitmovement
 # 99 "data/maps/Route101/scripts.pory"
-	getpartysize
+	applymovement 0xFF, Route101_EventScript_TrainerTeachLesson_Movement_1
 # 100 "data/maps/Route101/scripts.pory"
+	getpartysize
+# 101 "data/maps/Route101/scripts.pory"
 	compare VAR_RESULT, VAR_ROUTE101CATCH_PARTYSIZE
 	goto_if_gt Route101_EventScript_TrainerTeachLesson_8
-# 107 "data/maps/Route101/scripts.pory"
+# 108 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_3
 Route101_EventScript_TrainerTeachLesson_7:
-# 112 "data/maps/Route101/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
 # 113 "data/maps/Route101/scripts.pory"
-	msgbox Route101_EventScript_TrainerTeachLesson_Text_4
+	giveitem ITEM_POKE_BALL, 5
 # 114 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_TrainerTeachLesson_Text_4
+# 115 "data/maps/Route101/scripts.pory"
 	goto Route101_EventScript_TrainerTeachEnd
 	return
 
@@ -175,245 +177,245 @@ Route101_EventScript_TrainerTeachLesson_3:
 	goto Route101_EventScript_TrainerTeachLesson_1
 
 Route101_EventScript_TrainerTeachLesson_8:
-# 101 "data/maps/Route101/scripts.pory"
+# 102 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_2
 	goto Route101_EventScript_TrainerTeachLesson_7
 
 
 Route101_EventScript_TrainerTeachEnd::
-# 118 "data/maps/Route101/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 119 "data/maps/Route101/scripts.pory"
-	removeobject ZED_Route101_CatchTeacher
+	fadescreen FADE_TO_BLACK
 # 120 "data/maps/Route101/scripts.pory"
-	setvar VAR_ROUTE101CATCH_PROGRESS, 2
+	removeobject ZED_Route101_CatchTeacher
 # 121 "data/maps/Route101/scripts.pory"
-	setflag FLAG_ROUTE101_TEACHER
+	setvar VAR_ROUTE101CATCH_PROGRESS, 2
 # 122 "data/maps/Route101/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	setflag FLAG_ROUTE101_TEACHER
 # 123 "data/maps/Route101/scripts.pory"
-	fadedefaultbgm
+	fadescreen FADE_FROM_BLACK
 # 124 "data/maps/Route101/scripts.pory"
+	fadedefaultbgm
+# 125 "data/maps/Route101/scripts.pory"
 	release
 	end
 
 
 Route101_EventScript_TrainerTeachTriggerSwitchLeft::
-# 130 "data/maps/Route101/scripts.pory"
+# 131 "data/maps/Route101/scripts.pory"
 	setvar VAR_ROUTE101CATCH_PLAYERPOSITION, 0
 	return
 
 
 Route101_EventScript_TrainerTeachTriggerSwitchBottom::
-# 134 "data/maps/Route101/scripts.pory"
+# 135 "data/maps/Route101/scripts.pory"
 	setvar VAR_ROUTE101CATCH_PLAYERPOSITION, 1
 	return
 
 
 Route101_EventScript_TrainerTeachTriggerSwitchRight::
-# 138 "data/maps/Route101/scripts.pory"
+# 139 "data/maps/Route101/scripts.pory"
 	setvar VAR_ROUTE101CATCH_PLAYERPOSITION, 2
 	return
 
 
-# 142 "data/maps/Route101/scripts.pory"
-TrainerMovePlayerOnLeft:
 # 143 "data/maps/Route101/scripts.pory"
+TrainerMovePlayerOnLeft:
+# 144 "data/maps/Route101/scripts.pory"
 	walk_down
-# 144 "data/maps/Route101/scripts.pory"
-	walk_left
-# 144 "data/maps/Route101/scripts.pory"
-	walk_left
-# 144 "data/maps/Route101/scripts.pory"
+# 145 "data/maps/Route101/scripts.pory"
 	walk_left
 # 145 "data/maps/Route101/scripts.pory"
-	walk_up
+	walk_left
 # 145 "data/maps/Route101/scripts.pory"
-	walk_up
-# 145 "data/maps/Route101/scripts.pory"
-	walk_up
-# 145 "data/maps/Route101/scripts.pory"
-	walk_up
-# 146 "data/maps/Route101/scripts.pory"
 	walk_left
 # 146 "data/maps/Route101/scripts.pory"
-	walk_left
+	walk_up
 # 146 "data/maps/Route101/scripts.pory"
-	walk_left
-# 147 "data/maps/Route101/scripts.pory"
+	walk_up
+# 146 "data/maps/Route101/scripts.pory"
+	walk_up
+# 146 "data/maps/Route101/scripts.pory"
 	walk_up
 # 147 "data/maps/Route101/scripts.pory"
+	walk_left
+# 147 "data/maps/Route101/scripts.pory"
+	walk_left
+# 147 "data/maps/Route101/scripts.pory"
+	walk_left
+# 148 "data/maps/Route101/scripts.pory"
+	walk_up
+# 148 "data/maps/Route101/scripts.pory"
 	walk_up
 	step_end
 
-# 150 "data/maps/Route101/scripts.pory"
+# 151 "data/maps/Route101/scripts.pory"
 TrainerMovePlayerOnRightOrDown:
-# 151 "data/maps/Route101/scripts.pory"
-	walk_left
-# 151 "data/maps/Route101/scripts.pory"
-	walk_left
-# 151 "data/maps/Route101/scripts.pory"
+# 152 "data/maps/Route101/scripts.pory"
 	walk_left
 # 152 "data/maps/Route101/scripts.pory"
-	walk_up
+	walk_left
 # 152 "data/maps/Route101/scripts.pory"
-	walk_up
-# 152 "data/maps/Route101/scripts.pory"
-	walk_up
-# 152 "data/maps/Route101/scripts.pory"
-	walk_up
-# 152 "data/maps/Route101/scripts.pory"
-	walk_up
-# 153 "data/maps/Route101/scripts.pory"
 	walk_left
 # 153 "data/maps/Route101/scripts.pory"
-	walk_left
+	walk_up
 # 153 "data/maps/Route101/scripts.pory"
+	walk_up
+# 153 "data/maps/Route101/scripts.pory"
+	walk_up
+# 153 "data/maps/Route101/scripts.pory"
+	walk_up
+# 153 "data/maps/Route101/scripts.pory"
+	walk_up
+# 154 "data/maps/Route101/scripts.pory"
+	walk_left
+# 154 "data/maps/Route101/scripts.pory"
+	walk_left
+# 154 "data/maps/Route101/scripts.pory"
 	walk_left
 	step_end
 
-# 156 "data/maps/Route101/scripts.pory"
+# 157 "data/maps/Route101/scripts.pory"
 PlayerMovePlayerOnLeft:
-# 157 "data/maps/Route101/scripts.pory"
-	walk_left
-# 157 "data/maps/Route101/scripts.pory"
+# 158 "data/maps/Route101/scripts.pory"
 	walk_left
 # 158 "data/maps/Route101/scripts.pory"
-	walk_up
-# 158 "data/maps/Route101/scripts.pory"
-	walk_up
-# 158 "data/maps/Route101/scripts.pory"
-	walk_up
-# 158 "data/maps/Route101/scripts.pory"
-	walk_up
-# 158 "data/maps/Route101/scripts.pory"
-	walk_up
-# 159 "data/maps/Route101/scripts.pory"
 	walk_left
 # 159 "data/maps/Route101/scripts.pory"
+	walk_up
+# 159 "data/maps/Route101/scripts.pory"
+	walk_up
+# 159 "data/maps/Route101/scripts.pory"
+	walk_up
+# 159 "data/maps/Route101/scripts.pory"
+	walk_up
+# 159 "data/maps/Route101/scripts.pory"
+	walk_up
+# 160 "data/maps/Route101/scripts.pory"
+	walk_left
+# 160 "data/maps/Route101/scripts.pory"
 	walk_left
 	step_end
 
-# 162 "data/maps/Route101/scripts.pory"
+# 163 "data/maps/Route101/scripts.pory"
 PlayerMovePlayerOnBottom:
-# 163 "data/maps/Route101/scripts.pory"
-	walk_left
-# 163 "data/maps/Route101/scripts.pory"
-	walk_left
-# 163 "data/maps/Route101/scripts.pory"
+# 164 "data/maps/Route101/scripts.pory"
 	walk_left
 # 164 "data/maps/Route101/scripts.pory"
-	walk_up
+	walk_left
 # 164 "data/maps/Route101/scripts.pory"
-	walk_up
-# 164 "data/maps/Route101/scripts.pory"
-	walk_up
-# 164 "data/maps/Route101/scripts.pory"
-	walk_up
-# 164 "data/maps/Route101/scripts.pory"
-	walk_up
-# 164 "data/maps/Route101/scripts.pory"
-	walk_up
-# 165 "data/maps/Route101/scripts.pory"
 	walk_left
 # 165 "data/maps/Route101/scripts.pory"
+	walk_up
+# 165 "data/maps/Route101/scripts.pory"
+	walk_up
+# 165 "data/maps/Route101/scripts.pory"
+	walk_up
+# 165 "data/maps/Route101/scripts.pory"
+	walk_up
+# 165 "data/maps/Route101/scripts.pory"
+	walk_up
+# 165 "data/maps/Route101/scripts.pory"
+	walk_up
+# 166 "data/maps/Route101/scripts.pory"
+	walk_left
+# 166 "data/maps/Route101/scripts.pory"
 	walk_left
 	step_end
 
-# 168 "data/maps/Route101/scripts.pory"
+# 169 "data/maps/Route101/scripts.pory"
 PlayerMovePlayerOnRight:
-# 169 "data/maps/Route101/scripts.pory"
-	walk_left
-# 169 "data/maps/Route101/scripts.pory"
-	walk_left
-# 169 "data/maps/Route101/scripts.pory"
-	walk_left
-# 169 "data/maps/Route101/scripts.pory"
+# 170 "data/maps/Route101/scripts.pory"
 	walk_left
 # 170 "data/maps/Route101/scripts.pory"
-	walk_up
+	walk_left
 # 170 "data/maps/Route101/scripts.pory"
-	walk_up
+	walk_left
 # 170 "data/maps/Route101/scripts.pory"
-	walk_up
-# 170 "data/maps/Route101/scripts.pory"
-	walk_up
-# 170 "data/maps/Route101/scripts.pory"
-	walk_up
-# 171 "data/maps/Route101/scripts.pory"
 	walk_left
 # 171 "data/maps/Route101/scripts.pory"
+	walk_up
+# 171 "data/maps/Route101/scripts.pory"
+	walk_up
+# 171 "data/maps/Route101/scripts.pory"
+	walk_up
+# 171 "data/maps/Route101/scripts.pory"
+	walk_up
+# 171 "data/maps/Route101/scripts.pory"
+	walk_up
+# 172 "data/maps/Route101/scripts.pory"
+	walk_left
+# 172 "data/maps/Route101/scripts.pory"
 	walk_left
 	step_end
 
-# 174 "data/maps/Route101/scripts.pory"
+# 175 "data/maps/Route101/scripts.pory"
 TrainerMoveInCircles:
-# 175 "data/maps/Route101/scripts.pory"
-	walk_up
-# 175 "data/maps/Route101/scripts.pory"
+# 176 "data/maps/Route101/scripts.pory"
 	walk_up
 # 176 "data/maps/Route101/scripts.pory"
-	walk_right
+	walk_up
 # 177 "data/maps/Route101/scripts.pory"
-	walk_down
+	walk_right
 # 178 "data/maps/Route101/scripts.pory"
-	walk_left
+	walk_down
 # 179 "data/maps/Route101/scripts.pory"
+	walk_left
+# 180 "data/maps/Route101/scripts.pory"
 	walk_down
 	step_end
 
-# 182 "data/maps/Route101/scripts.pory"
+# 183 "data/maps/Route101/scripts.pory"
 PlayerMoveInCircles:
-# 183 "data/maps/Route101/scripts.pory"
-	walk_up
-# 183 "data/maps/Route101/scripts.pory"
+# 184 "data/maps/Route101/scripts.pory"
 	walk_up
 # 184 "data/maps/Route101/scripts.pory"
-	walk_right
+	walk_up
 # 185 "data/maps/Route101/scripts.pory"
-	walk_down
+	walk_right
 # 186 "data/maps/Route101/scripts.pory"
-	walk_left
+	walk_down
 # 187 "data/maps/Route101/scripts.pory"
+	walk_left
+# 188 "data/maps/Route101/scripts.pory"
 	walk_up
 	step_end
 
-# 190 "data/maps/Route101/scripts.pory"
+# 191 "data/maps/Route101/scripts.pory"
 TrainerMoveToPlayer:
-# 191 "data/maps/Route101/scripts.pory"
-	walk_up
-# 191 "data/maps/Route101/scripts.pory"
+# 192 "data/maps/Route101/scripts.pory"
 	walk_up
 # 192 "data/maps/Route101/scripts.pory"
+	walk_up
+# 193 "data/maps/Route101/scripts.pory"
 	face_right
 	step_end
 
 Route101_EventScript_Trainer01::
-# 197 "data/maps/Route101/scripts.pory"
+# 198 "data/maps/Route101/scripts.pory"
 	trainerbattle_single TRAINER_MAGNUS, Route101_EventScript_Trainer01_Text_0, Route101_EventScript_Trainer01_Text_1
-# 202 "data/maps/Route101/scripts.pory"
+# 203 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
-# 204 "data/maps/Route101/scripts.pory"
+# 205 "data/maps/Route101/scripts.pory"
 	waitmessage
 	end
 
 
 Route101_EventScript_Trainer02::
-# 209 "data/maps/Route101/scripts.pory"
+# 210 "data/maps/Route101/scripts.pory"
 	trainerbattle_single TRAINER_JERRY_1, Route101_EventScript_Trainer02_Text_0, Route101_EventScript_Trainer02_Text_1
-# 214 "data/maps/Route101/scripts.pory"
+# 215 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_Trainer02_Text_2, MSGBOX_AUTOCLOSE
-# 216 "data/maps/Route101/scripts.pory"
+# 217 "data/maps/Route101/scripts.pory"
 	waitmessage
 	end
 
 
 Route101_EventScript_Trainer03::
-# 221 "data/maps/Route101/scripts.pory"
+# 222 "data/maps/Route101/scripts.pory"
 	trainerbattle_single TRAINER_TIANA, Route101_EventScript_Trainer03_Text_0, Route101_EventScript_Trainer03_Text_1
-# 228 "data/maps/Route101/scripts.pory"
+# 229 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
-# 230 "data/maps/Route101/scripts.pory"
+# 231 "data/maps/Route101/scripts.pory"
 	waitmessage
 	end
 
@@ -422,6 +424,12 @@ Route101_EventScript_Trainer03::
 Route101_EventScript_TrainerTeachLesson_Movement_0:
 # 91 "data/maps/Route101/scripts.pory"
 	face_up
+	step_end
+
+# 99 "data/maps/Route101/scripts.pory"
+Route101_EventScript_TrainerTeachLesson_Movement_1:
+# 99 "data/maps/Route101/scripts.pory"
+	face_left
 	step_end
 
 Route101_EventScript_TrainerTeachCatch02_Text_0:
@@ -461,57 +469,57 @@ Route101_EventScript_TrainerTeachLesson_Text_1:
 	.string "Now, you give it a try.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_2:
-# 101 "data/maps/Route101/scripts.pory"
+# 102 "data/maps/Route101/scripts.pory"
 	.string "Awesome, you caught it! Keep at it, and\n"
 	.string "you'll be a master in no time.\p"
 	.string "Here, have some more Poke Balls.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_3:
-# 107 "data/maps/Route101/scripts.pory"
+# 108 "data/maps/Route101/scripts.pory"
 	.string "That's too bad, you almost had it. Don't\n"
 	.string "give up!\p"
 	.string "Here, have some more Poke Balls.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_4:
-# 113 "data/maps/Route101/scripts.pory"
+# 114 "data/maps/Route101/scripts.pory"
 	.string "Maybe I'll see you another time. Bye!$"
 
 Route101_EventScript_Trainer01_Text_0:
-# 199 "data/maps/Route101/scripts.pory"
+# 200 "data/maps/Route101/scripts.pory"
 	.string "I like a good battle now and again!$"
 
 Route101_EventScript_Trainer01_Text_1:
-# 200 "data/maps/Route101/scripts.pory"
+# 201 "data/maps/Route101/scripts.pory"
 	.string "That's how they usually go, fun!$"
 
 Route101_EventScript_Trainer01_Text_2:
-# 202 "data/maps/Route101/scripts.pory"
+# 203 "data/maps/Route101/scripts.pory"
 	.string "It's healthy for the old bones to have a\n"
 	.string "battle now and again.$"
 
 Route101_EventScript_Trainer02_Text_0:
-# 211 "data/maps/Route101/scripts.pory"
+# 212 "data/maps/Route101/scripts.pory"
 	.string "This place is so cool, I can't contain it!$"
 
 Route101_EventScript_Trainer02_Text_1:
-# 212 "data/maps/Route101/scripts.pory"
+# 213 "data/maps/Route101/scripts.pory"
 	.string "I have been contained.$"
 
 Route101_EventScript_Trainer02_Text_2:
-# 214 "data/maps/Route101/scripts.pory"
+# 215 "data/maps/Route101/scripts.pory"
 	.string "I wonder what I'll find under all of\n"
 	.string "these ashes.$"
 
 Route101_EventScript_Trainer03_Text_0:
-# 223 "data/maps/Route101/scripts.pory"
+# 224 "data/maps/Route101/scripts.pory"
 	.string "Surpise! Did I get you?\p"
 	.string "Check out this Pokemon I caught!$"
 
 Route101_EventScript_Trainer03_Text_1:
-# 226 "data/maps/Route101/scripts.pory"
+# 227 "data/maps/Route101/scripts.pory"
 	.string "It's still cool!$"
 
 Route101_EventScript_Trainer03_Text_2:
-# 228 "data/maps/Route101/scripts.pory"
+# 229 "data/maps/Route101/scripts.pory"
 	.string "Maybe you can find one too if you look\n"
 	.string "hard enough.$"

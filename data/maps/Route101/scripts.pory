@@ -96,6 +96,7 @@ script Route101_EventScript_TrainerTeachLesson{
     lock
     applymovement(ZED_Route101_CatchTeacher, TrainerMoveToPlayer)
     waitmovement
+    applymovement(0xFF, moves(face_left))
     getpartysize
     if (var(VAR_RESULT) > VAR_ROUTE101CATCH_PARTYSIZE) {
         msgbox("Awesome, you caught it! Keep at it, and
