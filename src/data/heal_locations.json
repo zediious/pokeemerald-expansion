@@ -334,7 +334,7 @@
       "id": "HEAL_LOCATION_LITTLEROOT_TOWN",
       "map": "MAP_LITTLEROOT_TOWN",
       "x": 9,
-      "y": 15,
+      "y": 21,
       "respawn_map": "MAP_ZED_SAWGRASS_VILLAGE_POKEMON_CENTER",
       "respawn_npc": "ZED_LOCALID_SAWGRASS_NURSE"
     }

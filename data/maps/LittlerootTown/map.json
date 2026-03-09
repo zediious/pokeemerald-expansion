@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE101",
-      "offset": 0,
+      "offset": 6,
       "direction": "right"
     }
   ],
@@ -24,7 +24,7 @@
       "local_id": "LOCALID_LITTLEROOT_TEST01",
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -38,7 +38,7 @@
       "local_id": "ZED_Sawgrass_Elder",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 9,
-      "y": 5,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -52,7 +52,7 @@
       "local_id": "ZED_Sawgrass_CatchTeacher",
       "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
       "x": 21,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
       "movement_range_x": 0,
@@ -66,7 +66,7 @@
       "local_id": "ZED_Sawgrass_Blockage_Sailor",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 3,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -80,7 +80,7 @@
       "local_id": "ZED_Sawgrass_Blockage_Fearow",
       "graphics_id": "OBJ_EVENT_GFX_AZUMARILL",
       "x": 2,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -94,28 +94,28 @@
   "warp_events": [
     {
       "x": 19,
-      "y": 5,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ZED_LITTLEROOT_TOWN_TEST01_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
-      "y": 14,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_ZED_SAWGRASS_VILLAGE_POKEMON_CENTER",
       "dest_warp_id": "0"
     },
     {
       "x": 17,
-      "y": 16,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ZED_SAWGRASS_VILLAGE_HOME01",
       "dest_warp_id": "0"
     },
     {
       "x": 3,
-      "y": 5,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ZED_SAWGRASS_VILLAGE_HOME02",
       "dest_warp_id": "0"
@@ -126,7 +126,7 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 5,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_JordanSign"
@@ -134,7 +134,7 @@
     {
       "type": "hidden_item",
       "x": 11,
-      "y": 5,
+      "y": 11,
       "elevation": 0,
       "item": "ITEM_MUSCLE_FEATHER",
       "flag": "FLAG_HIDDEN_ITEMS_START"
