@@ -1,6 +1,7 @@
 gText_Birch_Welcome::
-	.string "Looks like you are having a dream.\p"
-	.string "Who am I?!$"
+	.string "... ... ...\p"
+	.string "Am I dreaming?.\p"
+	.string "Who am I?$"
 	.string "$"
 
 gText_Birch_Pokemon::
@@ -33,23 +34,33 @@ gText_Birch_BoyOrGirl::
 	.string "Or am I a girl?$"
 
 gText_Birch_WhatsYourName::
-	.string "That adds up.\n"
+	.string "That adds up, I think.\n"
 	.string "What's my name?$"
 
 gText_Birch_SoItsPlayer::
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "Is it really {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
 	.string "Ah, right!\p"
 	.string "I don't know how I forgot.\n"
-	.string "I'm visiting my friend\l"
-	.string "in the XXX region.\p"
+	.string "I'm visiting my friend in the Vulias region.\l"
+	.string "in the Vulias region.\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "I want to travel around the region\p"
-	.string "to explore all the sights! Who knows\n"
-	.string "what could unfold?\p"
-	.string "I have a Pokémon who is my best\n"
-	.string "friend, who is that...\p"
+	.string "Ah, right!\n"
+	.string "I don't know how I forgot.\l"
+	.string "Now I remember what's going on!\p"
+	.string "I'm visiting my friend in the Vulias region.\n"
+	.string "He moved here from the Alola region a\l"
+	.string "few years ago, where we both grew up. I\l"
+	.string "decided to visit, and see the region\l"
+	.string "for myself!\p"
+	.string "I want to travel around the region to\n"
+	.string "explore all the sights! Who knows what\l"
+	.string "could unfold? Maybe this place will\l"
+	.string "become special to me!\p"
+	.string "I have a Pokémon who is my best friend,\n"
+	.string "they are very important to me.\l"
+	.string "What is that Pokemon...\p"
 	.string "$"
