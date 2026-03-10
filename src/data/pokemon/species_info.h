@@ -214,6 +214,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_MegaOranguru,
         .iconSprite = gMonIcon_MegaOranguru,
         .shinyPalette = gMonShinyPalette_Oranguru,
+        .formChangeTable = sOranguruFormChangeTable,
+        .formSpeciesIdTable = sOranguruFormSpeciesIdTable,
         FOOTPRINT(Oranguru)
     },
 };
