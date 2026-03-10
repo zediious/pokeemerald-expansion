@@ -6431,6 +6431,10 @@ Cry_Mega_Passimian::
 	.incbin "sound/direct_sound_samples/cries/mega_passimian.bin"
 
 	.align 2
+Cry_Mega_Simisear::
+	.incbin "sound/direct_sound_samples/cries/mega_simisear.bin"
+
+	.align 2
 DirectSoundWaveData_register_noise::
 	.incbin "sound/direct_sound_samples/register_noise.bin"
 
