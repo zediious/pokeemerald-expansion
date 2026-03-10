@@ -2425,4 +2425,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Normal moves are Fighting."),
         .aiRating = 8,
     },
+    [ABILITY_SCORCHING_POWER] =
+    {
+        .name = _("Scorching Power"),
+        .description = COMPOUND_STRING("Water hits boosts Attack."),
+        .aiRating = 8,
+    },
 };
