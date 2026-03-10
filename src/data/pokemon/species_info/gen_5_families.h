@@ -1635,6 +1635,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         )
         .levelUpLearnset = sSimisearLevelUpLearnset,
         .teachableLearnset = sSimisearTeachableLearnset,
+        .formChangeTable = sSimisearFormChangeTable,
+        .formSpeciesIdTable = sSimisearFormSpeciesIdTable,
     },
 #endif //P_FAMILY_PANSEAR
 
