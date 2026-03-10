@@ -3948,6 +3948,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sOranguruLevelUpLearnset,
         .teachableLearnset = sOranguruTeachableLearnset,
         .eggMoveLearnset = sOranguruEggMoveLearnset,
+        .formChangeTable = sOranguruFormChangeTable,
+        .formSpeciesIdTable = sOranguruFormSpeciesIdTable,
     },
 #endif //P_FAMILY_ORANGURU
 

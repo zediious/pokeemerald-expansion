@@ -27506,3 +27506,10 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.smol");
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
+
+    const u32 gMonFrontPic_MegaOranguru[] = INCBIN_U32("graphics/pokemon/oranguru/mega/anim_front.4bpp.lz");
+    const u32 gMonBackPic_MegaOranguru[] = INCBIN_U32("graphics/pokemon/oranguru/mega/back.4bpp.lz");
+    const u16 gMonPalette_MegaOranguru[] = INCBIN_U16("graphics/pokemon/oranguru/mega/normal.gbapal");
+    const u16 gMonShinyPalette_MegaOranguru[] = INCBIN_U16("graphics/pokemon/oranguru/mega/shiny.gbapal");
+    const u8 gMonIcon_MegaOranguru[] = INCBIN_U8("graphics/pokemon/oranguru/mega/icon.4bpp");
+    const u8 gMonFootprint_MegaOranguru[] = INCBIN_U8("graphics/pokemon/oranguru/mega/footprint.1bpp");
