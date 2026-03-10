@@ -2413,4 +2413,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+    [ABILITY_MINDBENDING] =
+    {
+        .name = _("Mind Bending"),
+        .description = COMPOUND_STRING("Normal moves are Psychic."),
+        .aiRating = 8,
+    },
 };
