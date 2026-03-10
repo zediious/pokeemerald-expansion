@@ -3962,7 +3962,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 40,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = 172,
         .evYield_Attack = 2,
@@ -4019,6 +4019,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sPassimianLevelUpLearnset,
         .teachableLearnset = sPassimianTeachableLearnset,
         .eggMoveLearnset = sPassimianEggMoveLearnset,
+        .formChangeTable = sPassimianFormChangeTable,
+        .formSpeciesIdTable = sPassimianFormSpeciesIdTable,
     },
 #endif //P_FAMILY_PASSIMIAN
 
