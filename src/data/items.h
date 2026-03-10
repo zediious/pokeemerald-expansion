@@ -15862,6 +15862,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Lucarionite,
         .iconPalette = gItemIconPalette_Lucarionite,
     },
+
+    [ITEM_SIMISEARITE] =
+    {
+        .name = ITEM_NAME("Simisearite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING("This stone enables\n"
+                                        "Simisear to Mega\n"
+                                        "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Lucarionite,
+        .iconPalette = gItemIconPalette_Lucarionite,
+    },
 };
 
 #undef ITEM_NAME
