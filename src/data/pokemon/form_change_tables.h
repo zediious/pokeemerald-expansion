@@ -2208,5 +2208,14 @@ static const struct FormChange sSimisearFormChangeTable[] =
     {FORM_CHANGE_TERMINATOR},
 };
 
+// Simisage
+static const struct FormChange sSimisageFormChangeTable[] =
+{
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SIMISAGE_MEGA, ITEM_SIMISAGITE},
+    {FORM_CHANGE_FAINT,                         SPECIES_SIMISAGE},
+    {FORM_CHANGE_END_BATTLE,                    SPECIES_SIMISAGE},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN

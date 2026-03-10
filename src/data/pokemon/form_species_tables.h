@@ -2590,3 +2590,11 @@ static const u16 sSimisearFormSpeciesIdTable[] = {
     SPECIES_SIMISEAR_MEGA,
     FORM_SPECIES_END,
 };
+
+// Simisage
+static const u16 sSimisageFormSpeciesIdTable[] = {
+    SPECIES_SIMISAGE,
+    SPECIES_SIMISAGE_MEGA,
+    FORM_SPECIES_END,
+};
+
