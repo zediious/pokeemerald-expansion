@@ -2419,4 +2419,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Normal moves are Psychic."),
         .aiRating = 8,
     },
+    [ABILITY_RUSHDOWN] =
+    {
+        .name = _("Rush Down"),
+        .description = COMPOUND_STRING("Normal moves are Fighting."),
+        .aiRating = 8,
+    },
 };
