@@ -6423,6 +6423,10 @@ Cry_Pecharunt::
 .endif @ P_CRIES_ENABLED
 
 	.align 2
+Cry_Mega_Oranguru::
+	.incbin "sound/direct_sound_samples/cries/oranguru.bin"
+
+	.align 2
 DirectSoundWaveData_register_noise::
 	.incbin "sound/direct_sound_samples/register_noise.bin"
 
