@@ -27522,3 +27522,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_MegaPassimian[] = INCBIN_U16("graphics/pokemon/passimian/mega/shiny.gbapal");
     const u8 gMonIcon_MegaPassimian[] = INCBIN_U8("graphics/pokemon/passimian/mega/icon.4bpp");
     const u8 gMonFootprint_MegaPassimian[] = INCBIN_U8("graphics/pokemon/passimian/mega/footprint.1bpp");
+
+    // Mega Simisear
+    const u32 gMonFrontPic_MegaSimisear[] = INCBIN_U32("graphics/pokemon/simisear/mega/anim_front.4bpp.lz");
+    const u32 gMonBackPic_MegaSimisear[] = INCBIN_U32("graphics/pokemon/simisear/mega/back.4bpp.lz");
+    const u16 gMonPalette_MegaSimisear[] = INCBIN_U16("graphics/pokemon/simisear/mega/normal.gbapal");
+    const u16 gMonShinyPalette_MegaSimisear[] = INCBIN_U16("graphics/pokemon/simisear/mega/shiny.gbapal");
+    const u8 gMonIcon_MegaSimisear[] = INCBIN_U8("graphics/pokemon/simisear/mega/icon.4bpp");
+    const u8 gMonFootprint_MegaSimisear[] = INCBIN_U8("graphics/pokemon/simisear/mega/footprint.1bpp");

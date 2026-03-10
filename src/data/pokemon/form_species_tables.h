@@ -2582,3 +2582,11 @@ static const u16 sPassimianFormSpeciesIdTable[] = {
     SPECIES_PASSIMIAN_MEGA,
     FORM_SPECIES_END,
 };
+
+
+// Simisear
+static const u16 sSimisearFormSpeciesIdTable[] = {
+    SPECIES_SIMISEAR,
+    SPECIES_SIMISEAR_MEGA,
+    FORM_SPECIES_END,
+};
