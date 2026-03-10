@@ -1689,8 +1689,9 @@
 #define SPECIES_GLIMMORA_MEGA                           1572
 
 #define SPECIES_ORANGURU_MEGA                           1573
+#define SPECIES_PASSIMIAN_MEGA                          1574
 
-#define SPECIES_EGG                                     (SPECIES_ORANGURU_MEGA + 1)
+#define SPECIES_EGG                                     (SPECIES_PASSIMIAN_MEGA + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

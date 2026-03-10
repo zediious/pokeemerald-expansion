@@ -27507,9 +27507,18 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
 
+    // Mega Oranguru
     const u32 gMonFrontPic_MegaOranguru[] = INCBIN_U32("graphics/pokemon/oranguru/mega/anim_front.4bpp.lz");
     const u32 gMonBackPic_MegaOranguru[] = INCBIN_U32("graphics/pokemon/oranguru/mega/back.4bpp.lz");
     const u16 gMonPalette_MegaOranguru[] = INCBIN_U16("graphics/pokemon/oranguru/mega/normal.gbapal");
     const u16 gMonShinyPalette_MegaOranguru[] = INCBIN_U16("graphics/pokemon/oranguru/mega/shiny.gbapal");
     const u8 gMonIcon_MegaOranguru[] = INCBIN_U8("graphics/pokemon/oranguru/mega/icon.4bpp");
     const u8 gMonFootprint_MegaOranguru[] = INCBIN_U8("graphics/pokemon/oranguru/mega/footprint.1bpp");
+
+    // Mega Passimian
+    const u32 gMonFrontPic_MegaPassimian[] = INCBIN_U32("graphics/pokemon/passimian/mega/anim_front.4bpp.lz");
+    const u32 gMonBackPic_MegaPassimian[] = INCBIN_U32("graphics/pokemon/passimian/mega/back.4bpp.lz");
+    const u16 gMonPalette_MegaPassimian[] = INCBIN_U16("graphics/pokemon/passimian/mega/normal.gbapal");
+    const u16 gMonShinyPalette_MegaPassimian[] = INCBIN_U16("graphics/pokemon/passimian/mega/shiny.gbapal");
+    const u8 gMonIcon_MegaPassimian[] = INCBIN_U8("graphics/pokemon/passimian/mega/icon.4bpp");
+    const u8 gMonFootprint_MegaPassimian[] = INCBIN_U8("graphics/pokemon/passimian/mega/footprint.1bpp");

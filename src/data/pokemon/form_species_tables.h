@@ -2569,9 +2569,16 @@ static const u16 sTerapagosFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_TERAPAGOS
 
-
+// Oranguru
 static const u16 sOranguruFormSpeciesIdTable[] = {
     SPECIES_ORANGURU,
     SPECIES_ORANGURU_MEGA,
+    FORM_SPECIES_END,
+};
+
+// Passimian
+static const u16 sPassimianFormSpeciesIdTable[] = {
+    SPECIES_PASSIMIAN,
+    SPECIES_PASSIMIAN_MEGA,
     FORM_SPECIES_END,
 };
