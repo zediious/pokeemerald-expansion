@@ -6424,7 +6424,8 @@ Cry_Pecharunt::
 
 	.align 2
 Cry_Mega_Oranguru::
-	.incbin "sound/direct_sound_samples/cries/oranguru.bin"
+	.incbin "sound/direct_sound_samples/cries/mega_oranguru.bin"
+
 
 	.align 2
 DirectSoundWaveData_register_noise::
