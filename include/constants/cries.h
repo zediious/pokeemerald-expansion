@@ -2556,6 +2556,7 @@ enum PokemonCry
     CRY_PECHARUNT,
 #endif //P_FAMILY_PECHARUNT
     CRY_MEGA_ORANGURU,
+    CRY_MEGA_PASSIMIAN,
     CRY_COUNT,
 };
 

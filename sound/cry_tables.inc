@@ -2553,6 +2553,7 @@ gCryTable::
 	cry Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
 cry Cry_Mega_Oranguru
+cry Cry_Mega_Passimian
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -5110,4 +5111,5 @@ gCryTable_Reverse::
 	cry_reverse Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
 cry_reverse Cry_Mega_Oranguru
+cry_reverse Cry_Mega_Passimian
 .endif @ P_CRIES_ENABLED
