@@ -1693,8 +1693,9 @@
 #define SPECIES_SIMISEAR_MEGA                           1575
 #define SPECIES_SIMISAGE_MEGA                           1576
 #define SPECIES_SIMIPOUR_MEGA                           1577
+#define SPECIES_INNAPE                                  1578
 
-#define SPECIES_EGG                                     (SPECIES_SIMIPOUR_MEGA + 1)
+#define SPECIES_EGG                                     (SPECIES_INNAPE + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

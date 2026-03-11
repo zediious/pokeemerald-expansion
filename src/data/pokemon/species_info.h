@@ -395,6 +395,73 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formSpeciesIdTable = sSimipourFormSpeciesIdTable,
         FOOTPRINT(Simipour)
     },
+    [SPECIES_INNAPE] =
+    {
+        .baseHP        = 30,
+        .baseAttack    = 35,
+        .baseDefense   = 30,
+        .baseSpeed     = 45,
+        .baseSpAttack  = 35,
+        .baseSpDefense = 30,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 45,
+        .expYield = 42,
+        .evYield_SpDefense = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_LIBERO, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Innape"),
+        .cryId = CRY_INNAPE,
+        .natDexNum = NATIONAL_DEX_INNAPE,
+        .categoryName = _("Scuffle"),
+        .height = 8,
+        .weight = 190,
+        .description = COMPOUND_STRING(
+            "Rarely seen, this Pokemon is the precursor\n"
+            "to both Oranguru and Passimian. While\n"
+            "growing, they are highly protected, and kept\n"
+            "secret from others."),
+        .pokemonScale = 268,
+        .pokemonOffset = 2,
+        .trainerScale = 271,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Innape,
+        .frontPicSize = MON_COORDS_SIZE(56, 56),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 5),
+        ),
+        .frontAnimId = ANIM_SHRINK_GROW_SLOW,
+        .backPic = gMonBackPic_Innape,
+        .backPicSize = MON_COORDS_SIZE(64, 48),
+        .backPicYOffset = 12,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        .palette = gMonPalette_Innape,
+        .shinyPalette = gMonShinyPalette_Innape,
+        .iconSprite = gMonIcon_Innape,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-2, 6, SHADOW_SIZE_M)
+        FOOTPRINT(Innape)
+        OVERWORLD(
+            sPicTable_Tyrogue,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Tyrogue,
+            gShinyOverworldPalette_Tyrogue
+        )
+        .levelUpLearnset = sInnapeLevelUpLearnset,
+        .teachableLearnset = sInnapeTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 15, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
+                                {EVO_LEVEL, 15, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
+    },
 };
 
 const struct EggData gEggDatas[EGG_ID_COUNT] =
