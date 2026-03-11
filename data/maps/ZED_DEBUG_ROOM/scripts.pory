@@ -1,0 +1,27 @@
+mapscripts ZED_DEBUG_ROOM_MapScripts {}
+
+script GiveNewMegaStones{
+    lock
+    giveitem(ITEM_SIMIPOURITE, 1)
+    giveitem(ITEM_SIMISAGITE, 1)
+    giveitem(ITEM_SIMISEARITE, 1)
+    giveitem(ITEM_PASSIMINITE, 1)
+    giveitem(ITEM_ORANGURINITE, 1)
+    waitmessage
+    release
+}
+
+script GiveMegaRing{
+    lock
+    giveitem(ITEM_MEGA_RING, 1)
+    waitmessage
+    release
+}
+
+script GiveInnape{
+    lock
+    givemon(SPECIES_INNAPE, 1)
+    msgbox("Innape has been added to your party")
+    waitmessage
+    release
+}

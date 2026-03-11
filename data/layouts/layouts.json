@@ -9373,6 +9373,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ZED_SawgrassVillage_Home02/border.bin",
       "blockdata_filepath": "data/layouts/ZED_SawgrassVillage_Home02/map.bin"
+    },
+    {
+      "id": "LAYOUT_ZED_DEBUG_ROOM",
+      "name": "ZED_DEBUG_ROOM_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ZED_DEBUG_ROOM/border.bin",
+      "blockdata_filepath": "data/layouts/ZED_DEBUG_ROOM/map.bin"
     }
   ]
 }

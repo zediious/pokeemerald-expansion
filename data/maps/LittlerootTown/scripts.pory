@@ -1083,8 +1083,8 @@ script LittlerootTown_EventScript_BlockageSailor {
 script LittlerootTown_EventScript_BlockageAzumarill {
     lock
     faceplayer
-    msgbox("Skreee!")
-    playmoncry(SPECIES_AZUMARILL, CRY_MODE_NORMAL)
+    msgbox("Raaaaa!")
+    playmoncry(SPECIES_HOUNDOOM, CRY_MODE_NORMAL)
     waitmoncry
     waitmessage
     release

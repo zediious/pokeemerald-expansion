@@ -145,7 +145,8 @@
     "ZED_Littleroot_StartRoom_PickPokemon",
     "ZED_SawgrassVillage_PokemonCenter",
     "ZED_SawgrassVillage_Home01",
-    "ZED_SawgrassVillage_Home02"
+    "ZED_SawgrassVillage_Home02",
+    "ZED_DEBUG_ROOM"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

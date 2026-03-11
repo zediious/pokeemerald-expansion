@@ -78,7 +78,7 @@ LittlerootTown_EventScript_BlockageAzumarill::
 # 1086 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_BlockageAzumarill_Text_0
 # 1087 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_AZUMARILL, CRY_MODE_NORMAL
+	playmoncry SPECIES_HOUNDOOM, CRY_MODE_NORMAL
 # 1088 "data/maps/LittlerootTown/scripts.pory"
 	waitmoncry
 # 1089 "data/maps/LittlerootTown/scripts.pory"
@@ -270,7 +270,7 @@ LittlerootTown_EventScript_BlockageSailor_Text_0:
 
 LittlerootTown_EventScript_BlockageAzumarill_Text_0:
 # 1086 "data/maps/LittlerootTown/scripts.pory"
-	.string "Skreee!$"
+	.string "Raaaaa!$"
 
 LittlerootTown_EventScript_TiredLady_Text_0:
 # 1096 "data/maps/LittlerootTown/scripts.pory"
