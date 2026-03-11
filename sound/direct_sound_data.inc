@@ -6423,6 +6423,26 @@ Cry_Pecharunt::
 .endif @ P_CRIES_ENABLED
 
 	.align 2
+Cry_Mega_Oranguru::
+	.incbin "sound/direct_sound_samples/cries/mega_oranguru.bin"
+
+	.align 2
+Cry_Mega_Passimian::
+	.incbin "sound/direct_sound_samples/cries/mega_passimian.bin"
+
+	.align 2
+Cry_Mega_Simisear::
+	.incbin "sound/direct_sound_samples/cries/mega_simisear.bin"
+
+	.align 2
+Cry_Mega_Simisage::
+	.incbin "sound/direct_sound_samples/cries/mega_simisage.bin"
+
+	.align 2
+Cry_Mega_Simipour::
+	.incbin "sound/direct_sound_samples/cries/mega_simipour.bin"
+
+	.align 2
 DirectSoundWaveData_register_noise::
 	.incbin "sound/direct_sound_samples/register_noise.bin"
 

@@ -802,4 +802,6 @@ extern const u8 BattleScript_GhostGetOutGetOut[];
 extern const u8 BattleScript_TooScaredToMove[];
 extern const u8 BattleScript_SilphScopeUnveiled[];
 
+extern const u8 BattleScript_EffectPhotosynthesisRestore[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

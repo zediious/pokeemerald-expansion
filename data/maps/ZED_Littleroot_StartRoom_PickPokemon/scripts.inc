@@ -177,16 +177,16 @@ LittlerootTown_StartGame_ChooseMon_Text_0:
 
 LittlerootTown_StartGame_ChooseMon_Text_1:
 # 49 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	.string "Was {COLOR RED}{STR_VAR_1} my Pokemon?$"
+	.string "Was {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} my Pokemon?$"
 
 LittlerootTown_StartGame_ChooseMon_Text_2:
 # 54 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	.string "That's right, {COLOR RED}{STR_VAR_1} was\n"
+	.string "That's right, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was\n"
 	.string "my Pokemon!$"
 
 LittlerootTown_StartGame_ChooseMon_Text_3:
 # 64 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	.string "No, {COLOR RED}{STR_VAR_1} was not my Pokemon.$"
+	.string "No, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was not my Pokemon.$"
 
 LittlerootTown_StartGame_NicknamePartyMon_Text_0:
 # 80 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"

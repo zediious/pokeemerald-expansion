@@ -5908,9 +5908,15 @@ bool32 ShouldTriggerAbility(enum BattlerId battlerAtk, enum BattlerId battlerDef
         case ABILITY_WATER_ABSORB:
             return (gAiThinkingStruct->aiFlags[battlerDef] & AI_FLAG_HP_AWARE);
 
+        case ABILITY_PHOTOSYNTHESIS:
+            return (gAiThinkingStruct->aiFlags[battlerDef] & AI_FLAG_HP_AWARE);
+
         case ABILITY_RATTLED:
         case ABILITY_STEAM_ENGINE:
             return BattlerStatCanRise(battlerDef, ability, STAT_SPEED);
+
+        case ABILITY_SCORCHING_POWER:
+            return BattlerStatCanRise(battlerDef, ability, STAT_ATK);
 
         case ABILITY_FLASH_FIRE:
             return (HasMoveWithType(battlerDef, TYPE_FIRE) && !gBattleMons[battlerDef].volatiles.flashFireBoosted);

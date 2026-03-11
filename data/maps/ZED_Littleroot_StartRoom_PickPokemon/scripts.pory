@@ -46,12 +46,12 @@ script LittlerootTown_StartGame_ChooseMon {
     showmonpic(VAR_STARTER_SPECIES, 10, 3)
     playmoncry(VAR_STARTER_SPECIES, CRY_MODE_NORMAL)
     waitmoncry
-    msgbox("Was {COLOR RED}{STR_VAR_1} my Pokemon?", MSGBOX_YESNO)
+    msgbox("Was {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} my Pokemon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
         givemon(VAR_STARTER_SPECIES, 20)
         playfanfare(MUS_OBTAIN_BADGE)
         waitfanfare
-        msgbox("That's right, {COLOR RED}{STR_VAR_1} was
+        msgbox("That's right, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was
                 my Pokemon!")
         waitmessage
         setvar(VAR_STARTER_MON, 4)
@@ -61,7 +61,7 @@ script LittlerootTown_StartGame_ChooseMon {
     }
     else{
         hidemonpic
-        msgbox("No, {COLOR RED}{STR_VAR_1} was not my Pokemon.")
+        msgbox("No, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was not my Pokemon.")
         waitmessage
         release
     }

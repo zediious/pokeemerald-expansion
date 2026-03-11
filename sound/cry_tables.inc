@@ -2552,6 +2552,11 @@ gCryTable::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
+cry Cry_Mega_Oranguru
+cry Cry_Mega_Passimian
+cry Cry_Mega_Simisear
+cry Cry_Mega_Simisage
+cry Cry_Mega_Simipour
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -5108,4 +5113,9 @@ gCryTable_Reverse::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry_reverse Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
+cry_reverse Cry_Mega_Oranguru
+cry_reverse Cry_Mega_Passimian
+cry_reverse Cry_Mega_Simisear
+cry_reverse Cry_Mega_Simisage
+cry_reverse Cry_Mega_Simipour
 .endif @ P_CRIES_ENABLED

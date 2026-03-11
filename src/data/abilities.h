@@ -2413,4 +2413,34 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+    [ABILITY_MINDBENDING] =
+    {
+        .name = _("Mind Bending"),
+        .description = COMPOUND_STRING("Normal moves are Psychic."),
+        .aiRating = 8,
+    },
+    [ABILITY_RUSHDOWN] =
+    {
+        .name = _("Rush Down"),
+        .description = COMPOUND_STRING("Normal moves are Fighting."),
+        .aiRating = 8,
+    },
+    [ABILITY_SCORCHING_POWER] =
+    {
+        .name = _("Scorching Power"),
+        .description = COMPOUND_STRING("Water hits boosts Attack."),
+        .aiRating = 8,
+    },
+    [ABILITY_PHOTOSYNTHESIS] =
+    {
+        .name = _("Photosynthesis"),
+        .description = COMPOUND_STRING("Fire heals after damage."),
+        .aiRating = 8,
+    },
+    [ABILITY_FROZEN_BODY] =
+    {
+        .name = _("Frozen Body"),
+        .description = COMPOUND_STRING("Freezes grass moves."),
+        .aiRating = 8,
+    },
 };

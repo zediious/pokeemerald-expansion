@@ -2156,8 +2156,9 @@ static enum MoveEndResult MoveEndProtectLikeEffect(void)
 }
 
 static void SetHealScript(s32 healAmount)
-{
+{   
     healAmount = GetDrainedBigRootHp(gBattlerAttacker, healAmount);
+
     if (GetBattlerAbility(gBattlerTarget) == ABILITY_LIQUID_OOZE
      && (GetMoveEffect(gCurrentMove) != EFFECT_DREAM_EATER || GetConfig(B_DREAM_EATER_LIQUID_OOZE) >= GEN_5))
     {
@@ -3351,6 +3352,51 @@ static enum MoveEndResult MoveEndCardButton(void)
     return result;
 }
 
+static enum MoveEndResult MoveEndPhotosynthesisAbility(void)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    if (GetBattlerAbility(gBattlerTarget) == ABILITY_PHOTOSYNTHESIS) {
+        if (GetBattleMoveType(gCurrentMove) == TYPE_FIRE
+        && IsBattlerAlive(gBattlerTarget)
+        && IsBattlerTurnDamaged(gBattlerTarget)
+        && gBattleStruct->moveDamage[gBattlerTarget] > 0
+        && !IsBattlerAtMaxHp(gBattlerTarget))
+        {
+            s32 healAmount = (gBattleStruct->moveDamage[gBattlerTarget] / 1.5);
+            SetHealAmount(gBattlerTarget, healAmount);
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ABSORB_PHOTOSYNTHESIS;
+            BattleScriptCall(BattleScript_EffectPhotosynthesisRestore);
+            result = MOVEEND_RESULT_RUN_SCRIPT;
+        }
+    }
+
+    gBattleScripting.moveendState++;
+    return result;
+}
+
+static enum MoveEndResult MoveEndFrozenBodyAbility(void)
+{
+    enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
+
+    if ((GetBattlerAbility(gBattlerTarget) == ABILITY_FROZEN_BODY)
+    && (GetBattleMoveType(gCurrentMove) == TYPE_GRASS)
+    && IsBattlerAlive(gBattlerTarget)
+    && IsBattlerTurnDamaged(gBattlerTarget)
+    && (gBattleStruct->moveDamage[gBattlerTarget] > 0)
+    && CompareStat(gBattlerTarget, STAT_SPATK, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
+    {   
+        gEffectBattler = gBattlerAbility = gBattlerTarget;
+        SET_STATCHANGER(STAT_SPATK, 2, FALSE);
+        BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet);
+        result = MOVEEND_RESULT_RUN_SCRIPT;
+    }
+
+    gBattleScripting.moveendState++;
+    return result;
+    
+}
+
 static enum MoveEndResult MoveEndLifeOrbShellBell(void)
 {
     enum MoveEndResult result = MOVEEND_RESULT_CONTINUE;
@@ -3839,6 +3885,8 @@ static enum MoveEndResult (*const sMoveEndHandlers[])(void) =
     [MOVEEND_SET_VALUES] = MoveEndSetValues,
     [MOVEEND_PROTECT_LIKE_EFFECT] = MoveEndProtectLikeEffect,
     [MOVEEND_ABSORB] = MoveEndAbsorb,
+    [MOVEEND_PHOTOSYNTHESIS_HEAL] = MoveEndPhotosynthesisAbility,
+    [MOVEEND_FROZENBODY_BOOST] = MoveEndFrozenBodyAbility,
     [MOVEEND_RAGE] = MoveEndRage,
     [MOVEEND_SYNCHRONIZE_TARGET] = MoveEndSynchronizeTarget,
     [MOVEEND_ABILITIES] = MoveEndAbilities,

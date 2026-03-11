@@ -1688,7 +1688,13 @@
 #define SPECIES_TATSUGIRI_STRETCHY_MEGA                 1571
 #define SPECIES_GLIMMORA_MEGA                           1572
 
-#define SPECIES_EGG                                     (SPECIES_GLIMMORA_MEGA + 1)
+#define SPECIES_ORANGURU_MEGA                           1573
+#define SPECIES_PASSIMIAN_MEGA                          1574
+#define SPECIES_SIMISEAR_MEGA                           1575
+#define SPECIES_SIMISAGE_MEGA                           1576
+#define SPECIES_SIMIPOUR_MEGA                           1577
+
+#define SPECIES_EGG                                     (SPECIES_SIMIPOUR_MEGA + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 
