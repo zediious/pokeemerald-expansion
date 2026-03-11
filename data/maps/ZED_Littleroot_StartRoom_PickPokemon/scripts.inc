@@ -88,11 +88,11 @@ LittlerootTown_StartGame_ChooseMon_4:
 # 46 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	givemon VAR_STARTER_SPECIES, 20
 # 47 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	playfanfare MUS_OBTAIN_BADGE
-# 48 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	waitfanfare
-# 49 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	msgbox LittlerootTown_StartGame_ChooseMon_Text_2
+# 49 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	playfanfare MUS_OBTAIN_BADGE
+# 50 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	waitfanfare
 # 51 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	waitmessage
 # 52 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
@@ -170,7 +170,7 @@ LittlerootTown_StartGame_ChooseMon_Text_1:
 	.string "Was {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} my Pokemon?$"
 
 LittlerootTown_StartGame_ChooseMon_Text_2:
-# 49 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 47 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	.string "That's right, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was\n"
 	.string "my Pokemon!$"
 
