@@ -877,6 +877,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNDISGUISEWASBUSTED]                = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s disguise was busted!"),
     [STRINGID_ZENMODETRIGGERED]                     = COMPOUND_STRING("{B_SCR_ABILITY} triggered!"),
     [STRINGID_ZENMODEENDED]                         = COMPOUND_STRING("{B_SCR_ABILITY} ended!"),
+    [STRINGID_REGAINEDWITHPHOTOSYNTHESIS]           = COMPOUND_STRING("{B_DEF_NAME} used the flames to perform Photosynthesis!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1221,7 +1222,8 @@ const u16 gAttractUsedStringIds[] =
 const u16 gAbsorbDrainStringIds[] =
 {
     [B_MSG_ABSORB]      = STRINGID_PKMNENERGYDRAINED,
-    [B_MSG_ABSORB_OOZE] = STRINGID_ITSUCKEDLIQUIDOOZE
+    [B_MSG_ABSORB_OOZE] = STRINGID_ITSUCKEDLIQUIDOOZE,
+    [B_MSG_ABSORB_PHOTOSYNTHESIS] = STRINGID_REGAINEDWITHPHOTOSYNTHESIS
 };
 
 const u16 gSportsUsedStringIds[] =
