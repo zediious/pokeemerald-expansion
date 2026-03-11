@@ -3372,7 +3372,7 @@ static enum MoveEndResult MoveEndPhotosynthesisAbility(void)
         && gBattleStruct->moveDamage[gBattlerTarget] > 0
         && !IsBattlerAtMaxHp(gBattlerTarget))
         {
-            s32 healAmount = (gBattleStruct->moveDamage[gBattlerTarget] / 4);
+            s32 healAmount = (gBattleStruct->moveDamage[gBattlerTarget] / 1.5);
             SetHealAmount(gBattlerTarget, healAmount);
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ABSORB_PHOTOSYNTHESIS;
             BattleScriptCall(BattleScript_EffectPhotosynthesisRestore);
