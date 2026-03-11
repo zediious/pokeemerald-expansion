@@ -10,27 +10,22 @@ script LittlerootTown_StartGame_PlayMusic{
 }
 
 script LittlerootTown_StartGame_PokemonChoice1{
-    setvar(VAR_STARTER_SPECIES, 514)
+    setvar(VAR_STARTER_SPECIES, SPECIES_PANSEAR)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
 
 script LittlerootTown_StartGame_PokemonChoice2{
-    setvar(VAR_STARTER_SPECIES, 512)
+    setvar(VAR_STARTER_SPECIES, SPECIES_PANSAGE)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
 
 script LittlerootTown_StartGame_PokemonChoice3{
-    setvar(VAR_STARTER_SPECIES, 516)
+    setvar(VAR_STARTER_SPECIES, SPECIES_PANPOUR)
     goto(LittlerootTown_StartGame_ChooseMon)
 } 
 
 script LittlerootTown_StartGame_PokemonChoice4{
-    setvar(VAR_STARTER_SPECIES, 766)
-    goto(LittlerootTown_StartGame_ChooseMon)
-}
-
-script LittlerootTown_StartGame_PokemonChoice5{
-    setvar(VAR_STARTER_SPECIES, 765)
+    setvar(VAR_STARTER_SPECIES, SPECIES_INNAPE)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
 
@@ -72,7 +67,6 @@ script LittlerootTown_EventScript_RemoveBalls {
     removeobject(ZED_Starter_02)
     removeobject(ZED_Starter_03)
     removeobject(ZED_Starter_04)
-    removeobject(ZED_Starter_05)
 }
 
 script LittlerootTown_StartGame_NicknamePartyMon{

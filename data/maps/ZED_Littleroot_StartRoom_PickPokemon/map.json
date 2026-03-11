@@ -15,9 +15,9 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "ZED_Starter_01",
+      "local_id": "ZED_Starter_Pansear",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 1,
+      "x": 2,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -26,12 +26,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice1",
-      "flag": "FLAG_STARTER_BALL_SIMISEAR"
+      "flag": ""
     },
     {
-      "local_id": "ZED_Starter_02",
+      "local_id": "ZED_Starter_Pansage",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 3,
+      "x": 4,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -40,12 +40,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice2",
-      "flag": "FLAG_STARTER_BALL_SIMISAGE"
+      "flag": ""
     },
     {
-      "local_id": "ZED_Starter_03",
+      "local_id": "ZED_Starter_Panpour",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 5,
+      "x": 6,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -54,12 +54,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice3",
-      "flag": "FLAG_STARTER_BALL_SIMIPOUR"
+      "flag": ""
     },
     {
-      "local_id": "ZED_Starter_04",
+      "local_id": "ZED_Starter_Innape",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 7,
+      "x": 8,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -68,21 +68,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_StartGame_PokemonChoice4",
-      "flag": "FLAG_STARTER_BALL_PASSIMIAN"
-    },
-    {
-      "local_id": "ZED_Starter_05",
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 9,
-      "y": 6,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_StartGame_PokemonChoice5",
-      "flag": "FLAG_STARTER_BALL_ORANGURU"
+      "flag": ""
     }
   ],
   "warp_events": [],
