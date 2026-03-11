@@ -5908,6 +5908,9 @@ bool32 ShouldTriggerAbility(enum BattlerId battlerAtk, enum BattlerId battlerDef
         case ABILITY_WATER_ABSORB:
             return (gAiThinkingStruct->aiFlags[battlerDef] & AI_FLAG_HP_AWARE);
 
+        case ABILITY_PHOTOSYNTHESIS:
+            return (gAiThinkingStruct->aiFlags[battlerDef] & AI_FLAG_HP_AWARE);
+
         case ABILITY_RATTLED:
         case ABILITY_STEAM_ENGINE:
             return BattlerStatCanRise(battlerDef, ability, STAT_SPEED);

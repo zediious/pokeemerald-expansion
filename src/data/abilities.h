@@ -2431,4 +2431,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Water hits boosts Attack."),
         .aiRating = 8,
     },
+    [ABILITY_PHOTOSYNTHESIS] =
+    {
+        .name = _("Photosynthesis"),
+        .description = COMPOUND_STRING("Fire heals after damage."),
+        .aiRating = 8,
+    },
 };
