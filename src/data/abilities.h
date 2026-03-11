@@ -2437,4 +2437,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Fire heals after damage."),
         .aiRating = 8,
     },
+    [ABILITY_FROZEN_BODY] =
+    {
+        .name = _("Frozen Body"),
+        .description = COMPOUND_STRING("Freezes grass moves."),
+        .aiRating = 8,
+    },
 };
