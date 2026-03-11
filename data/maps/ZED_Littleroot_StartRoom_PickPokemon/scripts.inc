@@ -86,7 +86,7 @@ LittlerootTown_StartGame_ChooseMon_2:
 
 LittlerootTown_StartGame_ChooseMon_4:
 # 46 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	givemon VAR_STARTER_SPECIES, 20
+	givemon VAR_STARTER_SPECIES, 5
 # 47 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	msgbox LittlerootTown_StartGame_ChooseMon_Text_2
 # 49 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"

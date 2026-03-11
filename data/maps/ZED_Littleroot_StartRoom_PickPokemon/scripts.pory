@@ -43,7 +43,7 @@ script LittlerootTown_StartGame_ChooseMon {
     waitmoncry
     msgbox("Was {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} my Pokemon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(VAR_STARTER_SPECIES, 20)
+        givemon(VAR_STARTER_SPECIES, 5)
         msgbox("That's right, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was
                 my Pokemon!")
         playfanfare(MUS_OBTAIN_BADGE)
