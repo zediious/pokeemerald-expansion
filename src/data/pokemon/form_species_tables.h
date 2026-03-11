@@ -2598,3 +2598,10 @@ static const u16 sSimisageFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
+// Simipour
+static const u16 sSimipourFormSpeciesIdTable[] = {
+    SPECIES_SIMIPOUR,
+    SPECIES_SIMIPOUR_MEGA,
+    FORM_SPECIES_END,
+};
+
