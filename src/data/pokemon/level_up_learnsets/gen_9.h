@@ -22314,3 +22314,16 @@ static const struct LevelUpMove sPecharuntLevelUpLearnset[] = {
 };
 #endif //P_FAMILY_PECHARUNT
 
+// Innape
+static const struct LevelUpMove sInnapeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_AFTER_YOU),
+    LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
+    LEVEL_UP_MOVE( 8, MOVE_FOCUS_ENERGY),
+    LEVEL_UP_MOVE(16, MOVE_TAUNT),
+    LEVEL_UP_MOVE(32, MOVE_RECOVER),
+    LEVEL_UP_MOVE(56, MOVE_PSYCHO_BOOST),
+    LEVEL_UP_MOVE(56, MOVE_HIGH_JUMP_KICK),
+    LEVEL_UP_END
+};
