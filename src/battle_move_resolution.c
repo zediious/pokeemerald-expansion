@@ -3359,7 +3359,7 @@ static enum MoveEndResult MoveEndPhotosynthesisAbility(void)
     if (GetBattlerAbility(gBattlerTarget) == ABILITY_PHOTOSYNTHESIS) {
         if (GetBattleMoveType(gCurrentMove) == TYPE_FIRE
         && IsBattlerAlive(gBattlerTarget)
-        && IsBattlerTurnDamaged(gBattlerTarget)
+        && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
         && gBattleStruct->moveDamage[gBattlerTarget] > 0
         && !IsBattlerAtMaxHp(gBattlerTarget))
         {
@@ -3382,7 +3382,7 @@ static enum MoveEndResult MoveEndFrozenBodyAbility(void)
     if ((GetBattlerAbility(gBattlerTarget) == ABILITY_FROZEN_BODY)
     && (GetBattleMoveType(gCurrentMove) == TYPE_GRASS)
     && IsBattlerAlive(gBattlerTarget)
-    && IsBattlerTurnDamaged(gBattlerTarget)
+    && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
     && (gBattleStruct->moveDamage[gBattlerTarget] > 0)
     && CompareStat(gBattlerTarget, STAT_SPATK, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
     {   

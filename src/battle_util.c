@@ -4151,7 +4151,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             enum Ability abilityAtk = GetBattlerAbility(gBattlerAttacker);
             if (IsBattlerAlive(gBattlerAttacker)
             && !gBattleStruct->unableToUseMove
-            && IsBattlerTurnDamaged(gBattlerTarget)
+            && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
             && CanBeFrozen(gBattlerTarget, gBattlerAttacker, abilityAtk)
             && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, abilityAtk, GetBattlerHoldEffect(gBattlerAttacker), move))
             {
@@ -4265,7 +4265,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_SCORCHING_POWER:
-            if (IsBattlerTurnDamaged(gBattlerTarget)
+            if (IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
              && IsBattlerAlive(battler)
              && CompareStat(battler, STAT_ATK, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility)
              && (moveType == TYPE_WATER))
