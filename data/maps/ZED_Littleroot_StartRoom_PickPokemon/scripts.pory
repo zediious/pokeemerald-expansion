@@ -63,10 +63,10 @@ script LittlerootTown_StartGame_ChooseMon {
 }
 
 script LittlerootTown_EventScript_RemoveBalls {
-    removeobject(ZED_Starter_01)
-    removeobject(ZED_Starter_02)
-    removeobject(ZED_Starter_03)
-    removeobject(ZED_Starter_04)
+    removeobject(ZED_Starter_Pansear)
+    removeobject(ZED_Starter_Pansage)
+    removeobject(ZED_Starter_Panpour)
+    removeobject(ZED_Starter_Innape)
 }
 
 script LittlerootTown_StartGame_NicknamePartyMon{

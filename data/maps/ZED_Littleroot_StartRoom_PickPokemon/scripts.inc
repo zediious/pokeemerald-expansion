@@ -108,13 +108,13 @@ LittlerootTown_StartGame_ChooseMon_4:
 
 LittlerootTown_EventScript_RemoveBalls::
 # 66 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	removeobject ZED_Starter_01
+	removeobject ZED_Starter_Pansear
 # 67 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	removeobject ZED_Starter_02
+	removeobject ZED_Starter_Pansage
 # 68 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	removeobject ZED_Starter_03
+	removeobject ZED_Starter_Panpour
 # 69 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	removeobject ZED_Starter_04
+	removeobject ZED_Starter_Innape
 	return
 
 
