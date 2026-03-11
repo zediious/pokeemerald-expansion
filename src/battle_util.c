@@ -4237,7 +4237,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
              && (moveType == TYPE_WATER))
             {
                 gEffectBattler = gBattlerAbility = battler;
-                SET_STATCHANGER(STAT_ATK, 6, FALSE);
+                SET_STATCHANGER(STAT_ATK, 2, FALSE);
                 BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet);
                 effect++;
             }
