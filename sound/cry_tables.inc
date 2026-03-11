@@ -2555,6 +2555,7 @@ gCryTable::
 cry Cry_Mega_Oranguru
 cry Cry_Mega_Passimian
 cry Cry_Mega_Simisear
+cry Cry_Mega_Simisage
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -5114,4 +5115,5 @@ gCryTable_Reverse::
 cry_reverse Cry_Mega_Oranguru
 cry_reverse Cry_Mega_Passimian
 cry_reverse Cry_Mega_Simisear
+cry_reverse Cry_Mega_Simisage
 .endif @ P_CRIES_ENABLED

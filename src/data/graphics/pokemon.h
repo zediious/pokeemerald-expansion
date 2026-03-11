@@ -27530,3 +27530,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_MegaSimisear[] = INCBIN_U16("graphics/pokemon/simisear/mega/shiny.gbapal");
     const u8 gMonIcon_MegaSimisear[] = INCBIN_U8("graphics/pokemon/simisear/mega/icon.4bpp");
     const u8 gMonFootprint_MegaSimisear[] = INCBIN_U8("graphics/pokemon/simisear/mega/footprint.1bpp");
+
+    // Mega Simisage
+    const u32 gMonFrontPic_MegaSimisage[] = INCBIN_U32("graphics/pokemon/simisage/mega/anim_front.4bpp.lz");
+    const u32 gMonBackPic_MegaSimisage[] = INCBIN_U32("graphics/pokemon/simisage/mega/back.4bpp.lz");
+    const u16 gMonPalette_MegaSimisage[] = INCBIN_U16("graphics/pokemon/simisage/mega/normal.gbapal");
+    const u16 gMonShinyPalette_MegaSimisage[] = INCBIN_U16("graphics/pokemon/simisage/mega/shiny.gbapal");
+    const u8 gMonIcon_MegaSimisage[] = INCBIN_U8("graphics/pokemon/simisage/mega/icon.4bpp");
+    const u8 gMonFootprint_MegaSimisage[] = INCBIN_U8("graphics/pokemon/simisage/mega/footprint.1bpp");
