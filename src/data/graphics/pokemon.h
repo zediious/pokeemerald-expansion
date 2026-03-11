@@ -27546,3 +27546,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_MegaSimipour[] = INCBIN_U16("graphics/pokemon/simipour/mega/shiny.gbapal");
     const u8 gMonIcon_MegaSimipour[] = INCBIN_U8("graphics/pokemon/simipour/mega/icon.4bpp");
     const u8 gMonFootprint_MegaSimipour[] = INCBIN_U8("graphics/pokemon/simipour/mega/footprint.1bpp");
+
+    // Innape
+    const u32 gMonFrontPic_Innape[] = INCBIN_U32("graphics/pokemon/innape/anim_front.4bpp.lz");
+    const u32 gMonBackPic_Innape[] = INCBIN_U32("graphics/pokemon/innape/back.4bpp.lz");
+    const u16 gMonPalette_Innape[] = INCBIN_U16("graphics/pokemon/innape/normal.gbapal");
+    const u16 gMonShinyPalette_Innape[] = INCBIN_U16("graphics/pokemon/innape/shiny.gbapal");
+    const u8 gMonIcon_Innape[] = INCBIN_U8("graphics/pokemon/innape/icon.4bpp");
+    const u8 gMonFootprint_Innape[] = INCBIN_U8("graphics/pokemon/innape/footprint.1bpp");
