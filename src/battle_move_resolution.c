@@ -2157,7 +2157,17 @@ static enum MoveEndResult MoveEndProtectLikeEffect(void)
 
 static void SetHealScript(s32 healAmount)
 {
+    // Only apply GetDrainedBigRootHp if not Photosynthesis heal
+    if (!(GetBattlerAbility(gBattlerTarget) == ABILITY_PHOTOSYNTHESIS))
+    {
     healAmount = GetDrainedBigRootHp(gBattlerAttacker, healAmount);
+    }
+    if (GetBattlerAbility(gBattlerTarget) == ABILITY_PHOTOSYNTHESIS)
+    {
+        SetPassiveDamageAmount(gBattlerAttacker, healAmount);
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ABSORB_PHOTOSYNTHESIS;
+        BattleScriptCall(BattleScript_EffectAbsorbLiquidOoze);
+    }
     if (GetBattlerAbility(gBattlerTarget) == ABILITY_LIQUID_OOZE
      && (GetMoveEffect(gCurrentMove) != EFFECT_DREAM_EATER || GetConfig(B_DREAM_EATER_LIQUID_OOZE) >= GEN_5))
     {
