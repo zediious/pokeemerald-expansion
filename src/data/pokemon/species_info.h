@@ -459,8 +459,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         )
         .levelUpLearnset = sInnapeLevelUpLearnset,
         .teachableLearnset = sInnapeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 15, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
-                                {EVO_LEVEL, 15, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
+                                {EVO_LEVEL, 22, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
     },
 };
 
