@@ -54,130 +54,130 @@ LittlerootTown_StartGame_ChooseMon::
 	lockall
 # 34 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	goto_if_set FLAG_STARTER_CHOSEN, LittlerootTown_StartGame_ChooseMon_2
-# 40 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	bufferspeciesname STR_VAR_1, VAR_STARTER_SPECIES
-# 41 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	showmonpic VAR_STARTER_SPECIES, 10, 3
 # 42 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	playmoncry VAR_STARTER_SPECIES, CRY_MODE_NORMAL
+	bufferspeciesname STR_VAR_1, VAR_STARTER_SPECIES
 # 43 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	waitmoncry
+	showmonpic VAR_STARTER_SPECIES, 10, 3
 # 44 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	msgbox LittlerootTown_StartGame_ChooseMon_Text_1, MSGBOX_YESNO
+	playmoncry VAR_STARTER_SPECIES, CRY_MODE_NORMAL
 # 45 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	waitmoncry
+# 46 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	msgbox LittlerootTown_StartGame_ChooseMon_Text_1, MSGBOX_YESNO
+# 47 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartGame_ChooseMon_4
-# 58 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 63 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	hidemonpic
-# 59 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 65 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	msgbox LittlerootTown_StartGame_ChooseMon_Text_3
-# 60 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 67 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	waitmessage
-# 61 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 68 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	release
 	return
 
 LittlerootTown_StartGame_ChooseMon_2:
-# 35 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 36 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	msgbox LittlerootTown_StartGame_ChooseMon_Text_0
-# 37 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 39 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_StartGame_ChooseMon_4:
-# 46 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	givemon VAR_STARTER_SPECIES, 5
-# 47 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	msgbox LittlerootTown_StartGame_ChooseMon_Text_2
 # 49 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	playfanfare MUS_OBTAIN_BADGE
-# 50 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	waitfanfare
+	createmon 0, 0, VAR_STARTER_SPECIES, 5, isStarter = 1
 # 51 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	waitmessage
-# 52 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setvar VAR_STARTER_MON, 4
-# 53 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	call LittlerootTown_EventScript_RemoveBalls
+	msgbox LittlerootTown_StartGame_ChooseMon_Text_2
 # 54 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	call LittlerootTown_StartGame_NicknamePartyMon
+	playfanfare MUS_OBTAIN_BADGE
 # 55 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	waitfanfare
+# 56 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	waitmessage
+# 57 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setvar VAR_STARTER_MON, 4
+# 58 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	call LittlerootTown_EventScript_RemoveBalls
+# 59 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	call LittlerootTown_StartGame_NicknamePartyMon
+# 60 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	call LittlerootTown_StartGame_WarpAfterPickMon
 	return
 
 
 LittlerootTown_EventScript_RemoveBalls::
-# 66 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 73 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	removeobject ZED_Starter_Pansear
-# 67 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 74 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	removeobject ZED_Starter_Pansage
-# 68 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 75 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	removeobject ZED_Starter_Panpour
-# 69 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 76 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	removeobject ZED_Starter_Innape
 	return
 
 
 LittlerootTown_StartGame_NicknamePartyMon::
-# 73 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 80 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	hidemonpic
-# 74 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 82 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	msgbox LittlerootTown_StartGame_NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 75 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 84 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartGame_NicknamePartyMon_1
 	return
 
 LittlerootTown_StartGame_NicknamePartyMon_1:
-# 76 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 85 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	call Common_EventScript_GetGiftMonPartySlot
-# 77 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 86 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 LittlerootTown_StartGame_WarpAfterPickMon::
-# 83 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
-# 84 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	special SetUnlockedPokedexFlags
-# 85 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
-# 87 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_NATIONAL_DEX
-# 88 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	special EnableNationalPokedex
-# 90 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
 # 92 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_POKEDEX_GET
 # 93 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	special SetUnlockedPokedexFlags
 # 94 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+# 96 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_SYS_NATIONAL_DEX
+# 97 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	special EnableNationalPokedex
+# 99 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 101 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 102 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 103 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	warp MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4
-# 95 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 104 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_StartGame_ChooseMon_Text_0:
-# 35 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 36 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	.string "I'm certain I did not have\n"
 	.string "two Pokémon.$"
 
 LittlerootTown_StartGame_ChooseMon_Text_1:
-# 44 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 46 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	.string "Was {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} my Pokemon?$"
 
 LittlerootTown_StartGame_ChooseMon_Text_2:
-# 47 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 51 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	.string "That's right, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was\n"
 	.string "my Pokemon!$"
 
 LittlerootTown_StartGame_ChooseMon_Text_3:
-# 59 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 65 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	.string "No, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was not my Pokemon.$"
 
 LittlerootTown_StartGame_NicknamePartyMon_Text_0:
-# 74 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+# 82 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	.string "Hmm, Did my Pokemon have a nickname?$"
