@@ -2760,6 +2760,9 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
         case MON_DATA_MODERN_FATEFUL_ENCOUNTER:
             retVal = GetSubstruct3(boxMon)->modernFatefulEncounter;
             break;
+        case MON_DATA_IS_STARTER:           // NEW: isStarter, used only if starter was Innape
+            retVal = GetSubstruct3(boxMon)->isStarter;
+            break;
         case MON_DATA_SPECIES_OR_EGG:
             retVal = GetSubstruct0(boxMon)->species;
             if (retVal && IsEggOrBadEgg(boxMon))
@@ -3275,6 +3278,9 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
             break;
         case MON_DATA_MODERN_FATEFUL_ENCOUNTER:
             SET8(GetSubstruct3(boxMon)->modernFatefulEncounter);
+            break;
+        case MON_DATA_IS_STARTER:           // NEW: isStarter, used only if starter was Innape
+            SET8(GetSubstruct3(boxMon)->isStarter);
             break;
         case MON_DATA_IVS:
         {
