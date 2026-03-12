@@ -1709,7 +1709,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPanpourLevelUpLearnset,
         .teachableLearnset = sPanpourTeachableLearnset,
         .eggMoveLearnset = sPanpourEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_SIMIPOUR}),,
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_SIMIPOUR}),
     },
 
     [SPECIES_SIMIPOUR] =
