@@ -52,7 +52,7 @@
 #define VAR_RECYCLE_GOODS                                0x4020
 #define VAR_REPEL_STEP_COUNT                             0x4021
 #define VAR_ICE_STEP_COUNT                               0x4022
-#define VAR_STARTER_MON                                  0x4023 // 0=Simisear, 1=Simisage, 2=Simipour, 3=Passimian, 4=Oranguru, 
+#define VAR_STARTER_MON                                  0x4023 // 0=Pansear, 1=Pansage, 2=Panpour, 3=Innape 
 #define VAR_MIRAGE_RND_H                                 0x4024
 #define VAR_MIRAGE_RND_L                                 0x4025
 #define VAR_SECRET_BASE_MAP                              0x4026
@@ -122,7 +122,7 @@
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
 #define VAR_ROUTE106_STATE                               0x4065 // Unused Var
 #define VAR_ROUTE107_STATE                               0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
+#define VAR_STARTER_INNAPE_EVO                           0x4067 // Used only if starter was Innape, saves species of evolved Innape (Passimian or Oranguru)
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var

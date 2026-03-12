@@ -32,8 +32,10 @@ script LittlerootTown_StartGame_PokemonChoice4{
 script LittlerootTown_StartGame_ChooseMon {
     lockall
     if(flag(FLAG_STARTER_CHOSEN)){
+
         msgbox("I'm certain I did not have
                 two Pokémon.")
+
         releaseall
         return
     }
@@ -43,9 +45,12 @@ script LittlerootTown_StartGame_ChooseMon {
     waitmoncry
     msgbox("Was {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} my Pokemon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(VAR_STARTER_SPECIES, 5)
+        //Give starter with isStarter flag set
+        createmon(0, 0, VAR_STARTER_SPECIES, 5, isStarter=1)
+
         msgbox("That's right, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was
                 my Pokemon!")
+
         playfanfare(MUS_OBTAIN_BADGE)
         waitfanfare
         waitmessage
@@ -56,7 +61,9 @@ script LittlerootTown_StartGame_ChooseMon {
     }
     else{
         hidemonpic
+
         msgbox("No, {COLOR RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was not my Pokemon.")
+
         waitmessage
         release
     }
@@ -71,7 +78,9 @@ script LittlerootTown_EventScript_RemoveBalls {
 
 script LittlerootTown_StartGame_NicknamePartyMon{
     hidemonpic
+
     msgbox("Hmm, Did my Pokemon have a nickname?", MSGBOX_YESNO)
+
     if (var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
         call(Common_EventScript_NameReceivedPartyMon)

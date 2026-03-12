@@ -5,6 +5,7 @@
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
+#include "event_data.h"
 #include "evolution_scene.h"
 #include "evolution_graphics.h"
 #include "gpu_regs.h"
@@ -787,6 +788,17 @@ static void Task_EvolutionScene(u8 taskId)
             EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
+
+            // If starter was innape, store species of evolved mon to determine rival mon
+            if (GetMonData(mon, MON_DATA_IS_STARTER)) {
+                if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_PASSIMIAN) {
+                    VarSet(VAR_STARTER_INNAPE_EVO, SPECIES_PASSIMIAN);
+                }
+                else if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_ORANGURU) {
+                    VarSet(VAR_STARTER_INNAPE_EVO, SPECIES_ORANGURU);
+                }    
+            }
+
             IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
         }
         break;

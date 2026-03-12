@@ -3885,12 +3885,12 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_ORANGURU
     [SPECIES_ORANGURU] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 60,
+        .baseHP        = 100,
+        .baseAttack    = 55,
         .baseDefense   = 80,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 90,
-        .baseSpDefense = 110,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 125,
+        .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_PSYCHIC),
         .catchRate = 45,
         .expYield = 172,
@@ -3956,12 +3956,12 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_PASSIMIAN
     [SPECIES_PASSIMIAN] =
     {
-        .baseHP        = 100,
+        .baseHP        = 90,
         .baseAttack    = 120,
-        .baseDefense   = 90,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 60,
+        .baseDefense   = 80,
+        .baseSpeed     = 120,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = 172,

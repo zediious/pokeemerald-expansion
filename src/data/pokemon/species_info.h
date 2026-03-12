@@ -310,10 +310,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_SIMISAGE_MEGA] =
     {
         .baseHP        = 85,
-        .baseAttack    = 125,
+        .baseAttack    = 130,
         .baseDefense   = 90,
         .baseSpeed     = 105,
-        .baseSpAttack  = 120,
+        .baseSpAttack  = 115,
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_GRASS, TYPE_DARK),
         .catchRate = 75,
@@ -397,12 +397,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_INNAPE] =
     {
-        .baseHP        = 30,
-        .baseAttack    = 35,
-        .baseDefense   = 30,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 35,
-        .baseSpDefense = 30,
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 65,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 45,
         .expYield = 42,
@@ -459,8 +459,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         )
         .levelUpLearnset = sInnapeLevelUpLearnset,
         .teachableLearnset = sInnapeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 15, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
-                                {EVO_LEVEL, 15, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
+                                {EVO_LEVEL, 22, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
     },
 };
 
