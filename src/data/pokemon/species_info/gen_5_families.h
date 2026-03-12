@@ -1426,7 +1426,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPansageLevelUpLearnset,
         .teachableLearnset = sPansageTeachableLearnset,
         .eggMoveLearnset = sPansageEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_SIMISAGE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_SIMISAGE}),
     },
 
     [SPECIES_SIMISAGE] =
@@ -1566,7 +1566,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPansearLevelUpLearnset,
         .teachableLearnset = sPansearTeachableLearnset,
         .eggMoveLearnset = sPansearEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_SIMISEAR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_SIMISEAR}),
     },
 
     [SPECIES_SIMISEAR] =
@@ -1709,7 +1709,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPanpourLevelUpLearnset,
         .teachableLearnset = sPanpourTeachableLearnset,
         .eggMoveLearnset = sPanpourEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_SIMIPOUR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_SIMIPOUR}),,
     },
 
     [SPECIES_SIMIPOUR] =
