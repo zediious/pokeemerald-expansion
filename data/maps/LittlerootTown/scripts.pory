@@ -1031,6 +1031,19 @@ script LittlerootTown_EventScript_JordanSign {
     releaseall
 }
 
+// Trainer Tip in northern part of town
+script LittlerootTown_EventScript_TrainerTips01 {
+    lockall
+    msgbox("Trainer Tips: Always be sure to go into
+            the Pokemon center in new places you
+            visit, even if you don't plan to use the
+            services.
+            
+            That way, you'll respawn there if you
+            lose a battle!")
+    releaseall
+}
+
 script LittlerootTown_EventScript_JordanTalk01 {
     lock
     faceplayer
