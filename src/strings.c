@@ -1222,6 +1222,9 @@ const u8 gText_QuestAnnounce[] = _("The quest '{STR_VAR_1}'\nis now {STR_VAR_2}.
 const u8 gText_QuestComplete[] =_("complete");
 const u8 gText_QuestActive[] =_("active");
 
+// Updated quest description
+const u8 gText_QuestUpdated[] = _("The quest '{STR_VAR_1}'\nhas been updated!");
+
 //names
 const u8 gText_SideQuestName_1[] = _("Side Quest 1");
 const u8 gText_SideQuestName_2[] = _("Side Quest 2");
@@ -1255,6 +1258,11 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
+
+// Main Quest
+const u8 gText_MainQuestDesc_01[] = _("Jordan recommends I go east to Gerbon\nTown, to visit the Palladium!");
+const u8 gText_MainQuestDesc_02[] = _("To get stronger, Jordan and I should\ngo to Route 110. Jordan claims there\nis a good place to train there!");
+
 const u8 gText_SideQuestDesc_1[] = _("Description 1");
 const u8 gText_SideQuestDesc_2[] = _("Description 2");
 const u8 gText_SideQuestDesc_3[] = _("Description 3");

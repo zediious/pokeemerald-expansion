@@ -2059,8 +2059,29 @@ void GenerateQuestFlavorText(s32 questId)
 	StringExpandPlaceholders(gStringVar3, gStringVar1);
 }
 void UpdateQuestFlavorText(s32 questId)
+{	
+	// Track certain quests, update the description based on tracker var for said quests
+
+	// Main Quest (ID: 0)
+	if (questId == 0) 
+	{
+		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
+		// Player on way to Palladium, not finished battle with Jordan yet
+		if (mainStoryTracker == 1 || mainStoryTracker == 2)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_01);
+		}
+		// Player finished battle with Jordan at Palladium, on way to Route 110
+		else if (mainStoryTracker == 3)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_02);
+		}
+	}
+	else
 {
 	StringCopy(gStringVar1, sSideQuests[questId].desc);
+	}
+
 }
 void PrintQuestFlavorText(s32 questId)
 {

@@ -2155,6 +2155,9 @@ extern const u8 gText_QuestAnnounce[];
 extern const u8 gText_QuestComplete[];
 extern const u8 gText_QuestActive[];
 
+// Updating quest description
+extern const u8 gText_QuestUpdated[];
+
 //names
 extern const u8 gText_SideQuestName_1[];
 extern const u8 gText_SideQuestName_2[];
@@ -2188,6 +2191,11 @@ extern const u8 gText_SideQuestName_29[];
 extern const u8 gText_SideQuestName_30[];
 
 //descriptions
+
+// Main Quest
+extern const u8 gText_MainQuestDesc_01[];
+extern const u8 gText_MainQuestDesc_02[];
+
 extern const u8 gText_SideQuestDesc_1[];
 extern const u8 gText_SideQuestDesc_2[];
 extern const u8 gText_SideQuestDesc_3[];
