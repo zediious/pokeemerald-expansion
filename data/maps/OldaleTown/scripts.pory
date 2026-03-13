@@ -212,5 +212,9 @@ script GerbonTown_OutdoorBattleEnd {
     removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE)
     delay(30)
     fadescreen(FADE_FROM_BLACK)
+
+    // Show messagebox that main quest is updated, and play chime
+    questupdated(0)
+
     release
 }

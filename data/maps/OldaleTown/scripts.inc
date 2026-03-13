@@ -275,7 +275,9 @@ GerbonTown_OutdoorBattleEnd::
 	delay 30
 # 214 "data/maps/OldaleTown/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 215 "data/maps/OldaleTown/scripts.pory"
+# 217 "data/maps/OldaleTown/scripts.pory"
+	questupdated 0
+# 219 "data/maps/OldaleTown/scripts.pory"
 	release
 	return
 
