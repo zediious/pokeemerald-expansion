@@ -1327,6 +1327,11 @@ const u8 gText_SideQuestDoneDesc_29[] = _("Completed Quest 29");
 const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 
 //map
+
+// Main Quest
+const u8 gText_MainQuestMap_01[] = _("Gerbon Town");
+const u8 gText_MainQuestMap_02[] = _("Route 110");
+
 const u8 gText_SideQuestMap1[] = _("Map 1");
 const u8 gText_SideQuestMap2[] = _("Map 2");
 const u8 gText_SideQuestMap3[] = _("Map 3");
