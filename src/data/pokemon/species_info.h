@@ -418,19 +418,19 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .cryId = CRY_INNAPE,
         .natDexNum = NATIONAL_DEX_INNAPE,
         .categoryName = _("Scuffle"),
-        .height = 8,
-        .weight = 190,
+        .height = 5,
+        .weight = 120,
         .description = COMPOUND_STRING(
-            "Rarely seen, this Pokemon is the precursor\n"
-            "to both Oranguru and Passimian. While\n"
-            "growing, they are highly protected, and kept\n"
-            "secret from others."),
-        .pokemonScale = 268,
-        .pokemonOffset = 2,
-        .trainerScale = 271,
+            "Rarely seen, Innape is the precursor\n"
+            "to Oranguru and Passimian. While\n"
+            "growing, they are highly protected\n"
+            "and kept secret from others."),
+        .pokemonScale = 422,
+        .pokemonOffset = 12,
+        .trainerScale = 244,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Innape,
-        .frontPicSize = MON_COORDS_SIZE(56, 56),
+        .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(1, 20),
@@ -438,7 +438,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         ),
         .frontAnimId = ANIM_SHRINK_GROW_SLOW,
         .backPic = gMonBackPic_Innape,
-        .backPicSize = MON_COORDS_SIZE(64, 48),
+        .backPicSize = MON_COORDS_SIZE(48, 56),
         .backPicYOffset = 12,
         .backAnimId = BACK_ANIM_H_SLIDE,
         .palette = gMonPalette_Innape,
