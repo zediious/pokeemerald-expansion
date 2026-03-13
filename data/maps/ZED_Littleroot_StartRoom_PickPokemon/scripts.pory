@@ -100,6 +100,8 @@ script LittlerootTown_StartGame_WarpAfterPickMon{
 	special(EnableNationalPokedex)
     # Enable Pokemon menu
     setflag(FLAG_SYS_POKEMON_GET)
+    # Enable quests menu
+    setflag(FLAG_SYS_QUEST_MENU_GET)
     // Enable running shoes
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
     setflag(FLAG_SYS_B_DASH)

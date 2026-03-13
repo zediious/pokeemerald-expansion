@@ -46,6 +46,7 @@
 #include "berry_powder.h"
 #include "mystery_gift.h"
 #include "union_room_chat.h"
+#include "quests.h"
 #include "constants/map_groups.h"
 #include "constants/items.h"
 #include "difficulty.h"
@@ -228,6 +229,7 @@ void NewGameInitData(void)
     ResetTrainerHillResults();
     ResetTrainerTowerResults();
     ResetContestLinkResults();
+    QuestMenu_ResetMenuSaveData();
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();

@@ -33,6 +33,7 @@
 #include "constants/field_specials.h"
 #include "constants/field_tasks.h"
 #include "constants/field_weather.h"
+#include "constants/quests.h"
 #include "constants/flags.h"
 #include "constants/follower_npc.h"
 #include "constants/frontier_util.h"
