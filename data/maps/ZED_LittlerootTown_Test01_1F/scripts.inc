@@ -32,53 +32,55 @@ LittlerootTown_EventScript_JordanAwakenStart::
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_2
 # 42 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
-# 44 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 1
 # 45 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	startquest 0
+# 48 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 1
+# 49 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	fadedefaultbgm
-# 46 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 50 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_EventScript_JordanRememberTrainers::
-# 50 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	lock
-# 51 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_0
 # 54 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	delay 60
+	lock
 # 55 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_0
+# 58 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	delay 60
+# 59 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement 0xFF, LittlerootTown_EventScript_JordanRememberTrainers_Movement_0
-# 56 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 60 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_1
-# 62 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 66 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
-# 63 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 67 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_0
-# 74 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmessage
-# 75 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	closemessage
-# 76 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	giveitem ITEM_POTION, 10
-# 77 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	giveitem ITEM_FULL_HEAL, 5
 # 78 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_1
-# 91 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmessage
-# 92 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 79 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	closemessage
-# 93 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 80 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	giveitem ITEM_POTION, 10
+# 81 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	giveitem ITEM_FULL_HEAL, 5
+# 82 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_1
+# 95 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	waitmessage
+# 96 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	closemessage
+# 97 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_2
-# 99 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 103 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
-# 100 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 104 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	setvar VAR_JORDAN_WARNED_TRAINERS, 1
-# 101 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 105 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN
-# 102 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 106 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 
@@ -127,45 +129,45 @@ LittlerootTown_EventScript_JordanAwakenStart_Movement_2:
 	face_left
 	step_end
 
-# 55 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 59 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 LittlerootTown_EventScript_JordanRememberTrainers_Movement_0:
-# 55 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 59 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	face_right
 	step_end
 
-# 56 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-LittlerootTown_EventScript_JordanRememberTrainers_Movement_1:
-# 57 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_up
-# 58 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_left
-# 58 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_left
-# 58 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_left
-# 59 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 59 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
 # 60 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+LittlerootTown_EventScript_JordanRememberTrainers_Movement_1:
+# 61 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_up
+# 62 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_left
+# 62 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_left
+# 62 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_left
+# 63 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 63 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 64 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	face_left
 	step_end
 
-# 93 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-LittlerootTown_EventScript_JordanRememberTrainers_Movement_2:
-# 94 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_up
-# 94 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_up
-# 95 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 95 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 95 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 96 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
 # 97 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+LittlerootTown_EventScript_JordanRememberTrainers_Movement_2:
+# 98 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_up
+# 98 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_up
+# 99 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 99 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 99 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 100 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 101 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	face_left
 	step_end
 
@@ -180,7 +182,7 @@ LittlerootTown_EventScript_JordanAwakenStart_Text_0:
 	.string "I'll let you get to it.$"
 
 LittlerootTown_EventScript_JordanRememberTrainers_Text_0:
-# 63 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 67 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	.string "{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sorry, I forgot to tell you!\n"
 	.string "The trainers around here don't mess\l"
 	.string "around, you'll face a pretty tough\l"
@@ -192,7 +194,7 @@ LittlerootTown_EventScript_JordanRememberTrainers_Text_0:
 	.string "help out. Catch!$"
 
 LittlerootTown_EventScript_JordanRememberTrainers_Text_1:
-# 78 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 82 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	.string "Those should cover our meal at the\n"
 	.string "Woltia City train station, that you\l"
 	.string "paid for.\p"

@@ -40,6 +40,10 @@ script LittlerootTown_EventScript_JordanAwakenStart {
         face_left
     ))
     waitmovement
+
+    // Start main story quest
+    startquest(0)
+
     // Player arrived at bed after choosing starter
     setvar(VAR_ZED_STORY_TRACKER, 1)
     fadedefaultbgm
