@@ -115,7 +115,7 @@
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
       "width": 36,
-      "height": 26,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
@@ -9383,6 +9383,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/ZED_DEBUG_ROOM/border.bin",
       "blockdata_filepath": "data/layouts/ZED_DEBUG_ROOM/map.bin"
+    },
+    {
+      "id": "LAYOUT_GERBON_TOWN_BATTLE_HALL",
+      "name": "GerbonTown_BattleHall_Layout",
+      "width": 20,
+      "height": 17,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/GerbonTown_BattleHall/border.bin",
+      "blockdata_filepath": "data/layouts/GerbonTown_BattleHall/map.bin"
     }
   ]
 }

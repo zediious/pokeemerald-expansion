@@ -51,19 +51,19 @@
 
 #else
 
-#define FLAG_STARTER_BALL_SIMISEAR    0x20 // Starter Mon Ball: Simisear
-#define FLAG_STARTER_BALL_SIMISAGE    0x21 // Starter Mon Ball: Simisage
-#define FLAG_STARTER_BALL_SIMIPOUR    0x22 // Starter Mon Ball: Simipour
-#define FLAG_STARTER_BALL_PASSIMIAN    0x23 // Starter Mon Ball: Passimian
-#define FLAG_STARTER_BALL_ORANGURU    0x24 // Starter Mon Ball: Oranguru
-#define FLAG_STARTER_CHOSEN    0x25 // If player chose a starter
-#define FLAG_GOT_SOOTHE_BELL_SAWGRASS   0x26 // Player got Soothe Bell from woman in Sawgrass Village
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_STARTER_BALL_SIMISEAR              0x20 // Starter Mon Ball: Simisear
+#define FLAG_STARTER_BALL_SIMISAGE              0x21 // Starter Mon Ball: Simisage
+#define FLAG_STARTER_BALL_SIMIPOUR              0x22 // Starter Mon Ball: Simipour
+#define FLAG_STARTER_BALL_PASSIMIAN             0x23 // Starter Mon Ball: Passimian
+#define FLAG_STARTER_BALL_ORANGURU              0x24 // Starter Mon Ball: Oranguru
+#define FLAG_STARTER_CHOSEN                     0x25 // If player chose a starter
+#define FLAG_GOT_SOOTHE_BELL_SAWGRASS           0x26 // Player got Soothe Bell from woman in Sawgrass Village
+#define FLAG_GERBON_CRASH_KID                   0x27 // Whether kid crashing into player in Gerbon is enabled
+#define FLAG_CANDACE01_MON                      0x28 // Candace 01 kilowattrel
+#define FLAG_CANDACE01_MON2                     0x29 // Candace 01 Mantine
+#define FLAG_GERBON_BATTLEHALL_JORDAN01         0x2A // Appearance of jordan in first battle hall scene of gerbon
+#define FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE     0x2B // Flag for jordan outside gerbon for first battle
+#define FLAG_GERBON_TOWN_BLOCKERS               0x2C // Two dudes that block the Palladium doors
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag

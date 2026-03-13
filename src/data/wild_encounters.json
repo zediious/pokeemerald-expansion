@@ -83,63 +83,63 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 14,
-                "max_level": 14,
+                "min_level": 2,
+                "max_level": 2,
                 "species": "SPECIES_ROLYCOLY"
               },
               {
-                "min_level": 14,
-                "max_level": 15,
+                "min_level": 2,
+                "max_level": 2,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
+                "min_level": 2,
+                "max_level": 3,
                 "species": "SPECIES_ROLYCOLY"
               },
               {
-                "min_level": 15,
-                "max_level": 16,
+                "min_level": 2,
+                "max_level": 3,
                 "species": "SPECIES_ROLYCOLY"
               },
               {
-                "min_level": 15,
-                "max_level": 15,
+                "min_level": 2,
+                "max_level": 3,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 15,
-                "max_level": 16,
+                "min_level": 2,
+                "max_level": 3,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 15,
-                "max_level": 17,
+                "min_level": 3,
+                "max_level": 4,
                 "species": "SPECIES_ROLYCOLY"
               },
               {
-                "min_level": 17,
-                "max_level": 17,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 15,
-                "max_level": 16,
+                "min_level": 3,
+                "max_level": 4,
                 "species": "SPECIES_ORICORIO_BAILE"
               },
               {
-                "min_level": 15,
-                "max_level": 18,
+                "min_level": 3,
+                "max_level": 4,
                 "species": "SPECIES_MAGCARGO"
               },
               {
-                "min_level": 19,
-                "max_level": 19,
+                "min_level": 2,
+                "max_level": 5,
                 "species": "SPECIES_NUMEL"
               },
               {
-                "min_level": 19,
-                "max_level": 19,
+                "min_level": 2,
+                "max_level": 5,
                 "species": "SPECIES_MAGCARGO"
               }
             ]

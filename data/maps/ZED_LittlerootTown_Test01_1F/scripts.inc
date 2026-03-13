@@ -61,7 +61,7 @@ LittlerootTown_EventScript_JordanRememberTrainers::
 # 75 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	closemessage
 # 76 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	giveitem ITEM_SUPER_POTION, 10
+	giveitem ITEM_POTION, 10
 # 77 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	giveitem ITEM_FULL_HEAL, 5
 # 78 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
@@ -77,6 +77,8 @@ LittlerootTown_EventScript_JordanRememberTrainers::
 # 100 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	setvar VAR_JORDAN_WARNED_TRAINERS, 1
 # 101 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN
+# 102 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 
@@ -187,7 +189,7 @@ LittlerootTown_EventScript_JordanRememberTrainers_Text_0:
 	.string "of Route 101 to avoid them, but that's\l"
 	.string "up to you!\p"
 	.string "If you decide to battle them, these will\n"
-	.string "help out.$"
+	.string "help out. Catch!$"
 
 LittlerootTown_EventScript_JordanRememberTrainers_Text_1:
 # 78 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"

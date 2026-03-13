@@ -1,183 +1,187 @@
 Route101_MapScripts::
 # 2 "data/maps/Route101/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_TRANSITION, Route101_MapScript_CatchTrainerDisable
 	.byte 0
-
-Route101_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-# 3 "data/maps/Route101/scripts.pory"
-	map_script_2 VAR_ZEROED, 0, Route101_MapScript_CatchTrainerDisable
-	.2byte 0
 
 
 Route101_MapScript_CatchTrainerDisable::
-# 9 "data/maps/Route101/scripts.pory"
-	compare VAR_ROUTE101CATCH_PROGRESS, 1
-	goto_if_eq Route101_MapScript_CatchTrainerDisable_2
-# 12 "data/maps/Route101/scripts.pory"
-	compare VAR_ROUTE101CATCH_PROGRESS, 0
-	goto_if_eq Route101_MapScript_CatchTrainerDisable_3
-# 16 "data/maps/Route101/scripts.pory"
-	nop
-Route101_MapScript_CatchTrainerDisable_1:
-# 18 "data/maps/Route101/scripts.pory"
-	setvar VAR_ZEROED, 1
+# 7 "data/maps/Route101/scripts.pory"
+	compare VAR_ROUTE101_TRAINER_PRE_DISABLE, 0
+	goto_if_eq Route101_MapScript_CatchTrainerDisable_1
 	return
 
-Route101_MapScript_CatchTrainerDisable_2:
-# 10 "data/maps/Route101/scripts.pory"
-	clearflag FLAG_ROUTE101_TEACHER
-	goto Route101_MapScript_CatchTrainerDisable_1
+Route101_MapScript_CatchTrainerDisable_1:
+# 8 "data/maps/Route101/scripts.pory"
+	compare VAR_ROUTE101CATCH_PROGRESS, 1
+	goto_if_eq Route101_MapScript_CatchTrainerDisable_3
+# 13 "data/maps/Route101/scripts.pory"
+	compare VAR_ROUTE101CATCH_PROGRESS, 0
+	goto_if_eq Route101_MapScript_CatchTrainerDisable_4
+	return
 
 Route101_MapScript_CatchTrainerDisable_3:
-# 13 "data/maps/Route101/scripts.pory"
+# 9 "data/maps/Route101/scripts.pory"
+	clearflag FLAG_ROUTE101_TEACHER
+# 10 "data/maps/Route101/scripts.pory"
+	addobject ZED_Route101_CatchTeacher
+# 11 "data/maps/Route101/scripts.pory"
+	setvar VAR_ROUTE101_TRAINER_PRE_DISABLE, 1
+	return
+
+Route101_MapScript_CatchTrainerDisable_4:
+# 14 "data/maps/Route101/scripts.pory"
 	setflag FLAG_ROUTE101_TEACHER
-	goto Route101_MapScript_CatchTrainerDisable_1
+# 15 "data/maps/Route101/scripts.pory"
+	removeobject ZED_Route101_CatchTeacher
+	return
 
 
 Route101_EventScript_TrainerTeachCatch02::
-# 23 "data/maps/Route101/scripts.pory"
+# 22 "data/maps/Route101/scripts.pory"
 	lock
-# 24 "data/maps/Route101/scripts.pory"
+# 23 "data/maps/Route101/scripts.pory"
 	faceplayer
-# 25 "data/maps/Route101/scripts.pory"
+# 24 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachCatch02_Text_0
-# 30 "data/maps/Route101/scripts.pory"
+# 29 "data/maps/Route101/scripts.pory"
 	waitmessage
-# 31 "data/maps/Route101/scripts.pory"
+# 30 "data/maps/Route101/scripts.pory"
 	getpartysize
-# 32 "data/maps/Route101/scripts.pory"
+# 31 "data/maps/Route101/scripts.pory"
 	copyvar VAR_ROUTE101CATCH_PARTYSIZE, VAR_RESULT
-# 33 "data/maps/Route101/scripts.pory"
+# 32 "data/maps/Route101/scripts.pory"
 	compare VAR_ROUTE101CATCH_PARTYSIZE, 1
 	goto_if_gt Route101_EventScript_TrainerTeachCatch02_1
-# 52 "data/maps/Route101/scripts.pory"
+# 51 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachCatch02_Text_4
-# 54 "data/maps/Route101/scripts.pory"
+# 53 "data/maps/Route101/scripts.pory"
 	waitmessage
-# 55 "data/maps/Route101/scripts.pory"
+# 54 "data/maps/Route101/scripts.pory"
 	goto Route101_EventScript_TrainerTeachLesson
 	return
 
 Route101_EventScript_TrainerTeachCatch02_1:
-# 34 "data/maps/Route101/scripts.pory"
+# 33 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachCatch02_Text_1, MSGBOX_YESNO
-# 38 "data/maps/Route101/scripts.pory"
+# 37 "data/maps/Route101/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Route101_EventScript_TrainerTeachCatch02_4
-# 44 "data/maps/Route101/scripts.pory"
+# 43 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachCatch02_Text_3
-# 46 "data/maps/Route101/scripts.pory"
+# 45 "data/maps/Route101/scripts.pory"
 	waitmessage
-# 47 "data/maps/Route101/scripts.pory"
+# 46 "data/maps/Route101/scripts.pory"
 	release
 	end
 
 Route101_EventScript_TrainerTeachCatch02_4:
-# 39 "data/maps/Route101/scripts.pory"
+# 38 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachCatch02_Text_2
-# 40 "data/maps/Route101/scripts.pory"
+# 39 "data/maps/Route101/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
-# 41 "data/maps/Route101/scripts.pory"
+# 40 "data/maps/Route101/scripts.pory"
 	goto Route101_EventScript_TrainerTeachLesson
 	return
 
 
 Route101_EventScript_TrainerTeachLesson::
-# 60 "data/maps/Route101/scripts.pory"
+# 59 "data/maps/Route101/scripts.pory"
 	playbgm MUS_RG_OAK, 0
-# 61 "data/maps/Route101/scripts.pory"
+# 60 "data/maps/Route101/scripts.pory"
 	compare VAR_ROUTE101CATCH_PLAYERPOSITION, 0
 	goto_if_eq Route101_EventScript_TrainerTeachLesson_2
-# 67 "data/maps/Route101/scripts.pory"
+# 66 "data/maps/Route101/scripts.pory"
 	compare VAR_ROUTE101CATCH_PLAYERPOSITION, 1
 	goto_if_eq Route101_EventScript_TrainerTeachLesson_3
-# 74 "data/maps/Route101/scripts.pory"
+# 73 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown
+# 74 "data/maps/Route101/scripts.pory"
+	delay 60
 # 75 "data/maps/Route101/scripts.pory"
-	delay 10
-# 76 "data/maps/Route101/scripts.pory"
 	applymovement 0xFF, PlayerMovePlayerOnRight
-# 77 "data/maps/Route101/scripts.pory"
+# 76 "data/maps/Route101/scripts.pory"
 	waitmovement
 Route101_EventScript_TrainerTeachLesson_1:
+# 79 "data/maps/Route101/scripts.pory"
+	faceplayer
 # 80 "data/maps/Route101/scripts.pory"
-	faceplayer
-# 81 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_0
+# 82 "data/maps/Route101/scripts.pory"
+	waitmessage
 # 83 "data/maps/Route101/scripts.pory"
-	waitmessage
+	closemessage
 # 84 "data/maps/Route101/scripts.pory"
-	closemessage
-# 85 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, TrainerMoveInCircles
+# 85 "data/maps/Route101/scripts.pory"
+	waitmovement
 # 86 "data/maps/Route101/scripts.pory"
-	waitmovement
-# 87 "data/maps/Route101/scripts.pory"
 	faceplayer
-# 88 "data/maps/Route101/scripts.pory"
+# 87 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_1
-# 89 "data/maps/Route101/scripts.pory"
+# 88 "data/maps/Route101/scripts.pory"
 	waitmessage
-# 90 "data/maps/Route101/scripts.pory"
+# 89 "data/maps/Route101/scripts.pory"
 	closemessage
-# 91 "data/maps/Route101/scripts.pory"
+# 90 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, Route101_EventScript_TrainerTeachLesson_Movement_0
-# 92 "data/maps/Route101/scripts.pory"
+# 91 "data/maps/Route101/scripts.pory"
 	applymovement 0xFF, PlayerMoveInCircles
+# 92 "data/maps/Route101/scripts.pory"
+	waitmovement
 # 93 "data/maps/Route101/scripts.pory"
-	waitmovement
-# 94 "data/maps/Route101/scripts.pory"
 	setwildbattle SPECIES_WURMPLE, 2
-# 95 "data/maps/Route101/scripts.pory"
+# 94 "data/maps/Route101/scripts.pory"
 	dowildbattle
-# 96 "data/maps/Route101/scripts.pory"
+# 95 "data/maps/Route101/scripts.pory"
 	lock
-# 97 "data/maps/Route101/scripts.pory"
+# 96 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, TrainerMoveToPlayer
-# 98 "data/maps/Route101/scripts.pory"
+# 97 "data/maps/Route101/scripts.pory"
 	waitmovement
-# 99 "data/maps/Route101/scripts.pory"
+# 98 "data/maps/Route101/scripts.pory"
 	applymovement 0xFF, Route101_EventScript_TrainerTeachLesson_Movement_1
-# 100 "data/maps/Route101/scripts.pory"
+# 99 "data/maps/Route101/scripts.pory"
 	getpartysize
-# 101 "data/maps/Route101/scripts.pory"
+# 100 "data/maps/Route101/scripts.pory"
 	compare VAR_RESULT, VAR_ROUTE101CATCH_PARTYSIZE
 	goto_if_gt Route101_EventScript_TrainerTeachLesson_8
-# 108 "data/maps/Route101/scripts.pory"
+# 107 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_3
 Route101_EventScript_TrainerTeachLesson_7:
-# 113 "data/maps/Route101/scripts.pory"
+# 112 "data/maps/Route101/scripts.pory"
 	giveitem ITEM_POKE_BALL, 5
-# 114 "data/maps/Route101/scripts.pory"
+# 113 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_4
+# 114 "data/maps/Route101/scripts.pory"
+	waitmessage
 # 115 "data/maps/Route101/scripts.pory"
 	goto Route101_EventScript_TrainerTeachEnd
 	return
 
 Route101_EventScript_TrainerTeachLesson_2:
-# 62 "data/maps/Route101/scripts.pory"
+# 61 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, TrainerMovePlayerOnLeft
+# 62 "data/maps/Route101/scripts.pory"
+	delay 60
 # 63 "data/maps/Route101/scripts.pory"
-	delay 10
-# 64 "data/maps/Route101/scripts.pory"
 	applymovement 0xFF, PlayerMovePlayerOnLeft
-# 65 "data/maps/Route101/scripts.pory"
+# 64 "data/maps/Route101/scripts.pory"
 	waitmovement
 	goto Route101_EventScript_TrainerTeachLesson_1
 
 Route101_EventScript_TrainerTeachLesson_3:
-# 68 "data/maps/Route101/scripts.pory"
+# 67 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown
+# 68 "data/maps/Route101/scripts.pory"
+	delay 60
 # 69 "data/maps/Route101/scripts.pory"
-	delay 10
-# 70 "data/maps/Route101/scripts.pory"
 	applymovement 0xFF, PlayerMovePlayerOnBottom
-# 71 "data/maps/Route101/scripts.pory"
+# 70 "data/maps/Route101/scripts.pory"
 	waitmovement
 	goto Route101_EventScript_TrainerTeachLesson_1
 
 Route101_EventScript_TrainerTeachLesson_8:
-# 102 "data/maps/Route101/scripts.pory"
+# 101 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventScript_TrainerTeachLesson_Text_2
 	goto Route101_EventScript_TrainerTeachLesson_7
 
@@ -432,68 +436,68 @@ Route101_EventScript_ScaredTrainer::
 	end
 
 
-# 91 "data/maps/Route101/scripts.pory"
+# 90 "data/maps/Route101/scripts.pory"
 Route101_EventScript_TrainerTeachLesson_Movement_0:
-# 91 "data/maps/Route101/scripts.pory"
+# 90 "data/maps/Route101/scripts.pory"
 	face_up
 	step_end
 
-# 99 "data/maps/Route101/scripts.pory"
+# 98 "data/maps/Route101/scripts.pory"
 Route101_EventScript_TrainerTeachLesson_Movement_1:
-# 99 "data/maps/Route101/scripts.pory"
+# 98 "data/maps/Route101/scripts.pory"
 	face_left
 	step_end
 
 Route101_EventScript_TrainerTeachCatch02_Text_0:
-# 25 "data/maps/Route101/scripts.pory"
+# 24 "data/maps/Route101/scripts.pory"
 	.string "{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You finally made it. Did you\n"
 	.string "manage to catch anything with that\l"
 	.string "Poke Ball I gave you?\p"
 	.string "Checks bag...$"
 
 Route101_EventScript_TrainerTeachCatch02_Text_1:
-# 34 "data/maps/Route101/scripts.pory"
+# 33 "data/maps/Route101/scripts.pory"
 	.string "That's great, it looks like you did catch\n"
 	.string "a Pokemon! Do you still want a lesson?\p"
 	.string "It's always good to learn more.$"
 
 Route101_EventScript_TrainerTeachCatch02_Text_2:
-# 39 "data/maps/Route101/scripts.pory"
+# 38 "data/maps/Route101/scripts.pory"
 	.string "Great, here's another Poke Ball.$"
 
 Route101_EventScript_TrainerTeachCatch02_Text_3:
-# 44 "data/maps/Route101/scripts.pory"
+# 43 "data/maps/Route101/scripts.pory"
 	.string "A mistake. I'll be here when you change\n"
 	.string "your mind$"
 
 Route101_EventScript_TrainerTeachCatch02_Text_4:
-# 52 "data/maps/Route101/scripts.pory"
+# 51 "data/maps/Route101/scripts.pory"
 	.string "Not yet it seems. Let's get started with\n"
 	.string "your lesson.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_0:
-# 81 "data/maps/Route101/scripts.pory"
+# 80 "data/maps/Route101/scripts.pory"
 	.string "To find wild Pokemon, run around in the\n"
 	.string "grass, like this.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_1:
-# 88 "data/maps/Route101/scripts.pory"
+# 87 "data/maps/Route101/scripts.pory"
 	.string "Now, you give it a try.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_2:
-# 102 "data/maps/Route101/scripts.pory"
+# 101 "data/maps/Route101/scripts.pory"
 	.string "Awesome, you caught it! Keep at it, and\n"
 	.string "you'll be a master in no time.\p"
 	.string "Here, have some more Poke Balls.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_3:
-# 108 "data/maps/Route101/scripts.pory"
+# 107 "data/maps/Route101/scripts.pory"
 	.string "That's too bad, you almost had it. Don't\n"
 	.string "give up!\p"
 	.string "Here, have some more Poke Balls.$"
 
 Route101_EventScript_TrainerTeachLesson_Text_4:
-# 114 "data/maps/Route101/scripts.pory"
+# 113 "data/maps/Route101/scripts.pory"
 	.string "Maybe I'll see you another time. Bye!$"
 
 Route101_EventScript_Trainer01_Text_0:

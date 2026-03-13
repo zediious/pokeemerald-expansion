@@ -1,21 +1,20 @@
 mapscripts Route101_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_ZEROED, 0: Route101_MapScript_CatchTrainerDisable
-    ]
+    MAP_SCRIPT_ON_TRANSITION: Route101_MapScript_CatchTrainerDisable
 }
 
 // Disable/enable the catching lesson teacher when applicable, map script.
 script Route101_MapScript_CatchTrainerDisable{
-    if (var(VAR_ROUTE101CATCH_PROGRESS) == 1){
-        clearflag(FLAG_ROUTE101_TEACHER)
+    if (var(VAR_ROUTE101_TRAINER_PRE_DISABLE) == 0) {
+        if (var(VAR_ROUTE101CATCH_PROGRESS) == 1){
+            clearflag(FLAG_ROUTE101_TEACHER)
+            addobject(ZED_Route101_CatchTeacher)
+            setvar(VAR_ROUTE101_TRAINER_PRE_DISABLE, 1)
+        }
+        elif (var(VAR_ROUTE101CATCH_PROGRESS) == 0){
+            setflag(FLAG_ROUTE101_TEACHER)
+            removeobject(ZED_Route101_CatchTeacher)
+        }
     }
-    elif (var(VAR_ROUTE101CATCH_PROGRESS) == 0){
-        setflag(FLAG_ROUTE101_TEACHER)
-    }
-    else {
-        nop
-    }
-    setvar(VAR_ZEROED, 1)
 }
 
 //// Pokemon catching lesson
@@ -60,19 +59,19 @@ script Route101_EventScript_TrainerTeachLesson{
     playbgm(MUS_RG_OAK, 0)
     if (var(VAR_ROUTE101CATCH_PLAYERPOSITION) == 0){
         applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnLeft)
-        delay(10)
+        delay(60)
         applymovement(0xFF, PlayerMovePlayerOnLeft)
         waitmovement
     }
     elif (var(VAR_ROUTE101CATCH_PLAYERPOSITION) == 1) {
         applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown)
-        delay(10)
+        delay(60)
         applymovement(0xFF, PlayerMovePlayerOnBottom)
         waitmovement
     }
     else {
         applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown)
-        delay(10)
+        delay(60)
         applymovement(0xFF, PlayerMovePlayerOnRight)
         waitmovement
     }
@@ -112,6 +111,7 @@ script Route101_EventScript_TrainerTeachLesson{
     }
     giveitem(ITEM_POKE_BALL, 5)
     msgbox("Maybe I'll see you another time. Bye!")
+    waitmessage
     goto(Route101_EventScript_TrainerTeachEnd)
 }
 

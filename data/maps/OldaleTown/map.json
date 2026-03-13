@@ -2,10 +2,10 @@
   "id": "MAP_OLDALE_TOWN",
   "name": "OldaleTown",
   "layout": "LAYOUT_OLDALE_TOWN",
-  "music": "MUS_OLDALE",
+  "music": "MUS_RUSTBORO",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_VOLCANIC_ASH",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -19,23 +19,130 @@
       "direction": "left"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "GERBON_KID_RUNNING_CRASH",
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 10,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_GERBON_CRASH_KID"
+    },
+    {
+      "local_id": "GERBON_TOWN_JORDAN_FIRSTBATTLE",
+      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "x": 29,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE"
+    },
+    {
+      "local_id": "GERBON_PALLADIUM_BLOCKER_1",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 28,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_PalladiumBlockers",
+      "flag": "0"
+    },
+    {
+      "local_id": "GERBON_PALLADIUM_BLOCKER_2",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 29,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_PalladiumBlockers",
+      "flag": "0"
+    }
+  ],
   "warp_events": [
     {
       "x": 6,
-      "y": 16,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
-      "y": 21,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_GERBON_TOWN_BATTLE_HALL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_GERBON_TOWN_BATTLE_HALL",
+      "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GERBON_FIRST_VISIT_TRIGGERS",
+      "var_value": "0",
+      "script": "GerbonTown_EventScript_KidTrigger01"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GERBON_FIRST_VISIT_TRIGGERS",
+      "var_value": "0",
+      "script": "GerbonTown_EventScript_KidTrigger02"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GerbonTown_EventScript_KeepOffFlowers"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GerbonTown_EventScript_TownSign"
+    }
+  ]
 }

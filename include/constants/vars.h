@@ -104,7 +104,7 @@
 #define VAR_ZED_STORY_TRACKER                            0x4052 // Wide story state tracker
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_ZEROED                                       0x4055 // Always stays at 0
+#define VAR_ROUTE101_TRAINER_PRE_DISABLE                 0x4055 // Remains at 0 until Sawgrass encounter completed, and route 101 entered
 #define VAR_JORDAN_WARNED_TRAINERS                       0x4056 // Jordan remembered to warn you about the tough trainers.
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
@@ -117,11 +117,11 @@
 #define VAR_STARTER_SPECIES                              0x405F // Species of starter
 #define VAR_ROUTE101_STATE                               0x4060
 #define VAR_STARTER_SPECIES_NAME                         0x4061 // Name of starter
-#define VAR_ROUTE103_STATE                               0x4062 // Unused Var
+#define VAR_GERBON_FIRST_VISIT_POSITION                  0x4062 // Whether player was in top or bottom tile on first visit to Gerbon town.
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                               0x4066 // Unused Var
+#define VAR_GERBON_FIRST_VISIT_TRIGGERS                  0x4064 // Trigger var for first visit script
+#define VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER           0x4065 // Whether map scripts to disable elements of the palladium show trigger
+#define VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER     0x4066 // Whether triggers for first battle for candace and julia are present
 #define VAR_STARTER_INNAPE_EVO                           0x4067 // Used only if starter was Innape, saves species of evolved Innape (Passimian or Oranguru)
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069

@@ -11,21 +11,25 @@ script LittlerootTown_StartGame_PlayMusic{
 
 script LittlerootTown_StartGame_PokemonChoice1{
     setvar(VAR_STARTER_SPECIES, SPECIES_PANSEAR)
+    setvar(VAR_STARTER_MON, 0)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
 
 script LittlerootTown_StartGame_PokemonChoice2{
     setvar(VAR_STARTER_SPECIES, SPECIES_PANSAGE)
+    setvar(VAR_STARTER_MON, 1)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
 
 script LittlerootTown_StartGame_PokemonChoice3{
     setvar(VAR_STARTER_SPECIES, SPECIES_PANPOUR)
+    setvar(VAR_STARTER_MON, 2)
     goto(LittlerootTown_StartGame_ChooseMon)
 } 
 
 script LittlerootTown_StartGame_PokemonChoice4{
     setvar(VAR_STARTER_SPECIES, SPECIES_INNAPE)
+    setvar(VAR_STARTER_MON, 3)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
 
@@ -54,7 +58,6 @@ script LittlerootTown_StartGame_ChooseMon {
         playfanfare(MUS_OBTAIN_BADGE)
         waitfanfare
         waitmessage
-        setvar(VAR_STARTER_MON, 4)
         call(LittlerootTown_EventScript_RemoveBalls)
         call(LittlerootTown_StartGame_NicknamePartyMon)
         call(LittlerootTown_StartGame_WarpAfterPickMon)

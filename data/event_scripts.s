@@ -1748,3 +1748,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ZED_SawgrassVillage_Home02/scripts.inc"
 
 	.include "data/maps/ZED_DEBUG_ROOM/scripts.inc"
+
+	.include "data/maps/GerbonTown_BattleHall/scripts.inc"

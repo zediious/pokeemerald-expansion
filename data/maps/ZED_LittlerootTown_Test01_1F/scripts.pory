@@ -70,10 +70,10 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
             up to you!
             
             If you decide to battle them, these will
-            help out.")
+            help out. Catch!")
     waitmessage
     closemessage
-    giveitem(ITEM_SUPER_POTION, 10)
+    giveitem(ITEM_POTION, 10)
     giveitem(ITEM_FULL_HEAL, 5)
     msgbox("Those should cover our meal at the
             Woltia City train station, that you
@@ -98,6 +98,7 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
     ))
     waitmovement
     setvar(VAR_JORDAN_WARNED_TRAINERS, 1)
+    setrespawn(HEAL_LOCATION_LITTLEROOT_TOWN)
     release
     end
 }

@@ -5134,19 +5134,17 @@ Double Battle: No
 AI: Check Bad Move
 
 Ralts
-Level: 19
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Draining Kiss
-- Psybeam
-- Hypnosis
+- Disarming Voice
+- Growl
+- Double Team
 
-Dustox
-Level: 18
+Weedle
+Level: 2
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Confusion
-- Gust
-- Poison Powder
-- Moonlight
+- Poison Sting
+- String Shot
 
 === TRAINER_TED ===
 Name: TED
@@ -9513,72 +9511,96 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Future Sight
 
 === TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
-Name: BRENDAN
+Name: Jordan
 Class: Rival
-Pic: Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
-Name: BRENDAN
-Class: Rival
-Pic: Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Grovyle
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
-Name: BRENDAN
-Class: Rival
-Pic: Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Slugma
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Pelipper
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Grovyle
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_BRENDAN_ROUTE_103_TREECKO ===
-Name: BRENDAN
-Class: Rival
-Pic: Brendan
+Pic: Leader Norman
 Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Torchic
-Level: 5
+Innape
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Astonish
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
+=== TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
+Name: Jordan
+Class: Rival
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Pansear
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Flame Charge
+- Fire Spin
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
+=== TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
+Name: Jordan
+Class: Rival
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Pansage
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Vine Whip
+- Leech Seed
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
+=== TRAINER_BRENDAN_ROUTE_103_TREECKO ===
+Name: Jordan
+Class: Rival
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Force Setup First Turn
+
+Panpour
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Water Gun
+- Aqua Ring
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -11065,19 +11087,17 @@ Double Battle: No
 AI: Check Bad Move
 
 Magcargo
-Level: 17
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Ancient Power
+- Earth Power
 - Ember
-- Harden
 - Yawn
 
 Shroomish
-Level: 17
+Level: 2
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Mega Drain
-- Headbutt
-- Leech Seed
+- Absorb
+- Tackle
 - Stun Spore
 
 === TRAINER_HALEY_1 ===
@@ -16907,16 +16927,13 @@ Double Battle: No
 AI: Basic Trainer
 
 Poochyena
-Level: 17
+Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 16 Spe
-- Bite
 - Tackle
-- Tail Whip
+- Howl
 
-Mightyena
-Level: 19
+Poliwag
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 16 Spe
-- Bite
-- Tackle
-- Tail Whip
-- Swagger
+- Water Gun
+- Hypnosis

@@ -1,0 +1,152 @@
+mapscripts GerbonTown_BattleHall_MapScripts {}
+
+// Player walked in for first time on left, start watching
+script GerbonTownBattleHall_EventScript_FirstEnterWatchLeft {
+    lock
+    setvar(VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER, 1)
+
+    msgbox("DING DING DING ...
+    
+            The match is about to begin!")
+
+    waitmessage
+    applymovement(0xFF, moves(
+            walk_up * 6
+        )
+    )
+    waitmovement
+    goto(GerbonTownBattleHall_CandaceAndJulia01)
+}
+
+// Player walked in for first time on right, start watching
+script GerbonTownBattleHall_EventScript_FirstEnterWatchRight {
+    lock
+    setvar(VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER, 1)
+
+    msgbox("DING DING DING ...
+    
+            The match is about to begin!")
+
+    waitmessage
+    applymovement(0xFF, moves(
+            walk_up * 5,
+            walk_left,
+            walk_up
+        )
+    )
+    waitmovement
+    goto(GerbonTownBattleHall_CandaceAndJulia01)
+}
+
+// Initial battle between Julia and Candace
+script GerbonTownBattleHall_CandaceAndJulia01 {
+    // Center camera and move up slightly to stage
+    special(SpawnCameraObject)
+    applymovement(LOCALID_CAMERA, moves(
+        walk_up * 4
+    ))
+    waitmovement
+
+    // Julia tells Golem to use Stone Edge
+    applymovement(GERBONBATTLEHALL_JULIA_01, moves(jump_in_place_right))
+
+    msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Golem! Use your
+            Stone Edge attack!")
+
+    waitmessage
+    // Golem misses the attack
+    playmoncry(SPECIES_GOLEM, CRY_MODE_NORMAL)
+    applymovement(GERBONBATTLEHALL_JULIA_01_GOLEM,
+        moves(walk_fast_right * 2, walk_in_place_fast_right, walk_fast_left * 2, face_right)
+    )
+    playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
+    applymovement(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL,
+        moves(walk_faster_right)
+    )
+    waitmovement
+    applymovement(GERBONBATTLEHALL_JULIA_01_GOLEM,
+        moves(walk_fast_left * 2, face_right)
+    )
+    waitmovement
+    applymovement(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL,
+        moves(walk_faster_left)
+    )
+    
+    waitmovement
+    waitmoncry
+
+    // Candace tells mon to use U-turn
+    applymovement(GERBONBATTLEHALL_CANDACE_01, moves(jump_in_place_left * 2))
+
+    msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No good! Use your
+            U-Turn Kilowattrel!")
+
+    waitmessage
+    playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
+    applymovement(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL,
+        moves(walk_fast_left * 2, walk_in_place_fast_left, walk_faster_right * 3)
+    )
+    waitmovement
+    waitmoncry
+    // Candace switches out Kilowattrel for Mantine
+    setflag(FLAG_CANDACE01_MON)
+    removeobject(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL)
+    delay(60)
+
+    msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Alright, now is your
+            time! Go Mantine!")
+
+    // Mantine appears, and gets into place
+    clearflag(GERBONBATTLEHALL_CANDACE_01_MANTINE)
+    addobject(GERBONBATTLEHALL_CANDACE_01_MANTINE)
+    applymovement(GERBONBATTLEHALL_CANDACE_01_MANTINE, moves(walk_left))
+    delay(20)
+    playmoncry(SPECIES_MANTINE, CRY_MODE_NORMAL)
+    waitmoncry
+    waitmessage
+
+    // Camera move back to player, as Jordan walks in
+    clearflag(FLAG_GERBON_BATTLEHALL_JORDAN01)
+    addobject(GERBON_BATTLEHALL_JORDAN_01)
+    applymovement(LOCALID_CAMERA, moves(
+        walk_down * 4
+    ))
+    applymovement(GERBON_BATTLEHALL_JORDAN_01, moves(walk_left, walk_up * 5))
+    waitmovement
+    special(RemoveCameraObject)
+    setvar(VAR_ZED_STORY_TRACKER, 2)
+    applymovement(0xFF, moves(face_down, emote_exclamation_mark))
+    waitmovement
+
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I didn't mean to
+            surprise you!
+            
+            ... ... ...
+            
+            Well, I did, but not in a bad way! I'm glad
+            I got to you before the show ended! I
+            decided I couldn't let you see your
+            first {COLOR RED}Exhibition Match!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} alone! Are you
+            enjoying it so far?
+            
+            Let's keep watching!")
+
+    waitmessage
+    applymovement(0xFF, moves(face_up))
+    applymovement(GERBON_BATTLEHALL_JORDAN_01, moves(walk_right, walk_up))
+    waitmovement
+    delay(60)
+    fadescreen(FADE_TO_BLACK)
+    setflag(FLAG_GERBON_BATTLEHALL_JORDAN01)
+    removeobject(GERBON_BATTLEHALL_JORDAN_01)
+    clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
+    addobject(GERBON_TOWN_JORDAN_FIRSTBATTLE, MAP_OLDALE_TOWN)
+    clearflag(FLAG_GERBON_TOWN_BLOCKERS)
+    addobject(GERBON_PALLADIUM_BLOCKER_1, MAP_OLDALE_TOWN)
+    addobject(GERBON_PALLADIUM_BLOCKER_2, MAP_OLDALE_TOWN)
+    delay(60)
+    warp(MAP_OLDALE_TOWN, 28, 10)
+    end
+}
+
+
