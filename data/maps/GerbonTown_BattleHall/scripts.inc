@@ -140,12 +140,22 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 139 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 140 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	setflag FLAG_GERBON_BATTLEHALL_JORDAN01
 # 141 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	addobject GERBON_TOWN_JORDAN_FIRSTBATTLE, MAP_OLDALE_TOWN
+	removeobject GERBON_BATTLEHALL_JORDAN_01
 # 142 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	delay 60
+	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 143 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	addobject GERBON_TOWN_JORDAN_FIRSTBATTLE, MAP_OLDALE_TOWN
+# 144 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	clearflag FLAG_GERBON_TOWN_BLOCKERS
+# 145 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	addobject GERBON_PALLADIUM_BLOCKER_1, MAP_OLDALE_TOWN
+# 146 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	addobject GERBON_PALLADIUM_BLOCKER_2, MAP_OLDALE_TOWN
+# 147 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	delay 60
+# 148 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	warp MAP_OLDALE_TOWN, 28, 10
 	end
 
