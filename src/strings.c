@@ -1226,7 +1226,7 @@ const u8 gText_QuestActive[] =_("active");
 const u8 gText_QuestUpdated[] = _("The quest '{STR_VAR_1}'\nhas been updated!");
 
 //names
-const u8 gText_SideQuestName_1[] = _("Side Quest 1");
+const u8 gText_SideQuestName_1[] = _("Around the World");
 const u8 gText_SideQuestName_2[] = _("Side Quest 2");
 const u8 gText_SideQuestName_3[] = _("Side Quest 3");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
@@ -1295,7 +1295,7 @@ const u8 gText_SideQuestDesc_29[] = _("Description 29");
 const u8 gText_SideQuestDesc_30[] = _("Description 30");
 
 //completed quest description
-const u8 gText_SideQuestDoneDesc_1[] = _("Completed Quest 1");
+const u8 gText_SideQuestDoneDesc_1[] = _("You have explored the Vulias region!");
 const u8 gText_SideQuestDoneDesc_2[] = _("Completed Quest 2");
 const u8 gText_SideQuestDoneDesc_3[] = _("Completed Quest 3");
 const u8 gText_SideQuestDoneDesc_4[] = _("Completed Quest 4");
