@@ -1977,6 +1977,17 @@
 	waitfanfare
 	.endm
 
+	@ Show message that a quest description has been updated, and chime.
+	.macro questupdated quest:req
+	closemessage
+	delay 30
+	questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
+	bufferstring 1 gText_QuestUpdated
+	playfanfare MUS_LEVEL_UP
+	msgbox gText_QuestUpdated, MSGBOX_SIGN
+	waitfanfare
+	.endm
+
 	.macro goto_if_quest_inactive quest:req, dest:req
 	questmenu QUEST_MENU_CHECK_INACTIVE \quest
 	goto_if_eq VAR_RESULT, TRUE, \dest
