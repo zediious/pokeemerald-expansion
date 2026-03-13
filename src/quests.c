@@ -1436,7 +1436,28 @@ void GenerateQuestLocation(s32 questId)
 {
 	if (!IsSubquestMode())
 	{
-		StringCopy(gStringVar2, sSideQuests[questId].map);
+		// For certain quests, set the location based on story var
+		if (questId == 0) 
+		{
+			u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
+			// Player on way to Palladium, not finished battle with Jordan yet
+			if (mainStoryTracker == 1 || mainStoryTracker == 2)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_01);
+			}
+			// Player finished battle with Jordan at Palladium, on way to Route 110
+			else if (mainStoryTracker == 3)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_02);
+			}
+			else {
+				StringCopy(gStringVar2, sSideQuests[questId].map);
+			}
+		}
+		else
+		{
+			StringCopy(gStringVar2, sSideQuests[questId].map);
+		}
 	}
 	else
 	{

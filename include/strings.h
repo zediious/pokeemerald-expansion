@@ -2260,6 +2260,11 @@ extern const u8 gText_SideQuestDoneDesc_29[];
 extern const u8 gText_SideQuestDoneDesc_30[];
 
 //map
+
+// Main Quest
+extern const u8 gText_MainQuestMap_01[];
+extern const u8 gText_MainQuestMap_02[];
+
 extern const u8 gText_SideQuestMap1[];
 extern const u8 gText_SideQuestMap2[];
 extern const u8 gText_SideQuestMap3[];
