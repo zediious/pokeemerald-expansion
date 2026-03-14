@@ -197,7 +197,7 @@
       "elevation": 0,
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "4",
-      "script": "SawgrassForest_EventScript_JordanFollower"
+      "script": "SawgrassForest_JordanLeave"
     },
     {
       "type": "trigger",
@@ -206,7 +206,7 @@
       "elevation": 0,
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "4",
-      "script": "SawgrassForest_EventScript_JordanFollower"
+      "script": "SawgrassForest_JordanLeave"
     }
   ],
   "bg_events": [

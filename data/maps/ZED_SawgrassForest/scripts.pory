@@ -6,14 +6,14 @@ mapscripts ZED_SawgrassForest_MapScripts {
 
 // Make Jordan a follower when player enters during stage 3 of story
 script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
+    setflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
+    addobject(SAWGRASSFOREST_JORDAN_01)
+    setobjectxy(SAWGRASSFOREST_JORDAN_01, 5, 4)
+    applymovement(0xFF, moves(walk_down * 2, face_left))
+    waitmovement
     applymovement(SAWGRASSFOREST_JORDAN_01, moves(emote_exclamation_mark))
     waitmovement
-    delay(20)
-    applymovement(SAWGRASSFOREST_JORDAN_01, moves(
-        walk_right,
-        face_up
-    ))
-    waitmovement
+    delay(30)
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are {PLAYER}, I've
             been waiting! There's all sorts of
             Pokemon in this forest, not to mention
@@ -22,7 +22,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
             Let's explore the place, maybe we'll find
             a rare Pokemon!
             
-            Are you ready to go?" MSGBOX_YESNO)
+            Are you ready to go?", MSGBOX_YESNO)
 
     if (var(VAR_RESULT) == YES) {
         msgbox("Great! Let's go!")
@@ -38,6 +38,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
             SawgrassForest_EventScript_JordanFollower,
             PARTNER_JORDAN_INNAPE_01
         )
+        clearflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
         setvar(VAR_ZED_STORY_TRACKER, 4)
         release
         end
@@ -45,6 +46,8 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
     else {
         msgbox("Alright, but hurry back!")
         waitmessage
+        clearflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
+        setvar(VAR_ZED_STORY_TRACKER, 3)
         release
         warp(MAP_LITTLEROOT_TOWN, 3, 25)
         end
@@ -53,30 +56,42 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
 
 // Jordan follower script
 script SawgrassForest_EventScript_JordanFollower {
-    if (var(VAR_ZED_STORY_TRACKER) == 4) {
-        goto(SawgrassForest_JordanLeave)
-    }
+    lock
+    faceplayer
+    msgbox("This place is a lot spookier than
+            I remember...
+            
+            Keep your eyes open!")
+    waitmessage
+    release
+    end
 }
 
 // Jordan ready to leave script
 script SawgrassForest_JordanLeave {
-    lock
-    faceplayer
-    msgbox("Do you want to take a break?
-            I'll be waiting for you." MSGBOX_YESNO)
-    if (var(VAR_RESULT) == YES) {
-        msgbox("Alright, but hurry back!")
-        waitmessage
-        release
-        destroyfollowernpc
-        warp(MAP_LITTLEROOT_TOWN, 3, 25)
-        setvar(VAR_ZED_STORY_TRACKER, 3)
-        end
-    } else {
-        applymovement(0xFF, moves(walk_down))
-        waitmovement
-        release
-        end
+    if (var(VAR_ZED_STORY_TRACKER) == 4 && !flag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)) {
+        lock
+        faceplayer
+        msgbox("Do you want to take a break?
+                I'll be waiting for you.", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("Alright, but hurry back!")
+            waitmessage
+            release
+            fadescreen(FADE_TO_BLACK)
+            // Move Jordan back to the entrance to the forest
+            destroyfollowernpc
+            addobject(SAWGRASSFOREST_JORDAN_01)
+            setobjectxy(SAWGRASSFOREST_JORDAN_01, 5, 4)
+            setvar(VAR_ZED_STORY_TRACKER, 3)
+            warp(MAP_LITTLEROOT_TOWN, 3, 25)
+            end
+        } else {
+            applymovement(0xFF, moves(walk_down))
+            waitmovement
+            release
+            end
+        }
     }
 }
 
