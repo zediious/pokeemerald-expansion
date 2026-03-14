@@ -261,23 +261,29 @@ GerbonTown_OutdoorBattleEnd::
 	applymovement 0xFF, GerbonTownBattleHall_OutdoorBattleStart_Movement_0
 # 184 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_OutdoorBattleEnd_Text_0
-# 208 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
-# 209 "data/maps/OldaleTown/scripts.pory"
-	closemessage
 # 210 "data/maps/OldaleTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	waitmessage
 # 211 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	closemessage
 # 212 "data/maps/OldaleTown/scripts.pory"
-	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
+	fadescreen FADE_TO_BLACK
 # 213 "data/maps/OldaleTown/scripts.pory"
-	delay 30
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 214 "data/maps/OldaleTown/scripts.pory"
+	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
+# 215 "data/maps/OldaleTown/scripts.pory"
+	delay 30
+# 216 "data/maps/OldaleTown/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 217 "data/maps/OldaleTown/scripts.pory"
-	questupdated 0
 # 219 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_SAWGRASS_SOUTH_BLOCKERS
+# 220 "data/maps/OldaleTown/scripts.pory"
+	removeobject ZED_Sawgrass_Blockage_Sailor, MAP_LITTLEROOT_TOWN
+# 221 "data/maps/OldaleTown/scripts.pory"
+	removeobject ZED_Sawgrass_Blockage_Fearow, MAP_LITTLEROOT_TOWN
+# 224 "data/maps/OldaleTown/scripts.pory"
+	questupdated 0
+# 226 "data/maps/OldaleTown/scripts.pory"
 	release
 	return
 
@@ -344,17 +350,18 @@ GerbonTown_OutdoorBattleEnd_Text_0:
 	.string "I've been thinking, maybe we should try\n"
 	.string "to challenge the {COLOR RED}Representative\l"
 	.string "Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon Town. That's Julia,\l"
-	.string "one of the trainers we just watched!\p"
+	.string "one of the trainers we just watched!\l"
+	.string "Most people call them 'Rep Trainers'.\p"
 	.string "Every three years, there is a\n"
 	.string "tournment in each of the stadiums.\l"
 	.string "Whoever wins gets to face the current\l"
-	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. If they\l"
-	.string "win, they get to become the\l"
-	.string "{COLOR RED}Representative Trainer!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "{COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. If they win, they get to\l"
+	.string "become the new {COLOR RED}Rep Trainer!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
 	.string "We've got to get stronger first though,\n"
 	.string "I don't think either of us stand a\l"
 	.string "chance right now.\p"
-	.string "Meet me on Route 110, {COLOR RED} south of\n"
-	.string "Sawgrass Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. I know of a good place\l"
-	.string "to train our Pokemon there!\l"
+	.string "Meet me at the entrance to {COLOR RED}\n"
+	.string "Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY, south of\l"
+	.string "Sawgrass Village. I know a good place\l"
+	.string "to train Pokemon there!\p"
 	.string "See you soon!$"

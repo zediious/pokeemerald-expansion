@@ -10,3 +10,8 @@ script SawgrassForest_EventScript_WarningSign {
             
             Stick to the lamplight for safety.")
 }
+
+// Jordan follower script
+// script SawgrassForest_EventScript_JordanFollower {
+    
+// }
