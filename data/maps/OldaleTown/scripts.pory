@@ -202,7 +202,7 @@ script GerbonTown_OutdoorBattleEnd {
             chance right now.
             
             Meet me at the entrance to {COLOR RED}
-            Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY, south of
+            Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, south of
             Sawgrass Village. I know a good place
             to train Pokemon there!
 
