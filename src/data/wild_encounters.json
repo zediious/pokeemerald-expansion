@@ -36577,6 +36577,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ZED_SAWGRASS_FOREST",
+          "base_label": "gZED_SawgrassForest",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 9,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MORELULL"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_BLIPBUG"
+              },
+              {
+                "min_level": 9,
+                "max_level": 10,
+                "species": "SPECIES_PHANTUMP"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 11,
+                "species": "SPECIES_IMPIDIMP"
+              },
+              {
+                "min_level": 8,
+                "max_level": 11,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_CAPSAKID"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 12,
+                "species": "SPECIES_CAPSAKID"
+              },
+              {
+                "min_level": 9,
+                "max_level": 12,
+                "species": "SPECIES_DREEPY"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_SCYTHER"
+              }
+            ]
+          }
         }
       ]
     },
