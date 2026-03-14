@@ -1,0 +1,12 @@
+mapscripts ZED_SawgrassForest_MapScripts {}
+
+// Warning sign at beginning
+script SawgrassForest_EventScript_WarningSign {
+    lock
+    msgbox("WARNING:
+    
+            Patrols in Sawgrass Forest are not
+            frequent.
+            
+            Stick to the lamplight for safety.")
+}

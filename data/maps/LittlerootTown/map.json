@@ -17,11 +17,6 @@
       "map": "MAP_ROUTE101",
       "offset": 6,
       "direction": "right"
-    },
-    {
-      "map": "MAP_ZED_ROUTE101",
-      "offset": 9,
-      "direction": "down"
     }
   ],
   "object_events": [
@@ -131,6 +126,20 @@
       "elevation": 0,
       "dest_map": "MAP_ZED_DEBUG_ROOM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_FOREST",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_FOREST",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

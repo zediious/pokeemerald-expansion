@@ -1,0 +1,28 @@
+{
+  "id": "MAP_ZED_ROUTE101",
+  "name": "ZED_Route101",
+  "layout": "LAYOUT_ZED_ROUTE101",
+  "music": "MUS_MT_PYRE_EXTERIOR",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_VOLCANIC_ASH",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_ROUTE101",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
