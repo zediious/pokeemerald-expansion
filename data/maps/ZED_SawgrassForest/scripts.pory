@@ -32,12 +32,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
         msgbox("Jordan is now your follower!")
         waitse
         waitmessage
-        setfollowernpc(
-            SAWGRASSFOREST_JORDAN_01,
-            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
-            SawgrassForest_EventScript_JordanFollower,
-            PARTNER_JORDAN_INNAPE_01
-        )
+        call(SawgrassForest_DetermineJordanTeam)
         clearflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
         setvar(VAR_ZED_STORY_TRACKER, 4)
         release
@@ -51,6 +46,42 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
         release
         warp(MAP_LITTLEROOT_TOWN, 3, 25)
         end
+    }
+}
+
+// Decide Jordan team
+script SawgrassForest_DetermineJordanTeam {
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        setfollowernpc(
+            SAWGRASSFOREST_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            SawgrassForest_EventScript_JordanFollower,
+            PARTNER_JORDAN_PANPOUR_01
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        setfollowernpc(
+            SAWGRASSFOREST_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            SawgrassForest_EventScript_JordanFollower,
+            PARTNER_JORDAN_PANSEAR_01
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        setfollowernpc(
+            SAWGRASSFOREST_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            SawgrassForest_EventScript_JordanFollower,
+            PARTNER_JORDAN_PANSAGE_01
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        setfollowernpc(
+            SAWGRASSFOREST_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            SawgrassForest_EventScript_JordanFollower,
+            PARTNER_JORDAN_INNAPE_01
+        )
     }
 }
 
