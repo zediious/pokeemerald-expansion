@@ -56,3 +56,95 @@ Party Size: 0
 
 Wynaut
 
+=== PARTNER_JORDAN_INNAPE_01 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Innape
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Astonish
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
+=== PARTNER_JORDAN_PANSEAR_01 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Pansear
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Flame Charge
+- Fire Spin
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
+=== PARTNER_JORDAN_PANSAGE_01 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Pansage
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Vine Whip
+- Leech Seed
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
+=== PARTNER_JORDAN_PANPOUR_01 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Panpour
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Water Gun
+- Aqua Ring
+- Leer
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
+
