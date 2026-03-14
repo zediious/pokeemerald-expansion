@@ -213,6 +213,11 @@ script GerbonTown_OutdoorBattleEnd {
     delay(30)
     fadescreen(FADE_FROM_BLACK)
 
+    // Disable blockers of Sawngrass Village south exit
+    setflag(FLAG_SAWGRASS_SOUTH_BLOCKERS)
+    removeobject(ZED_Sawgrass_Blockage_Sailor, MAP_LITTLEROOT_TOWN)
+    removeobject(ZED_Sawgrass_Blockage_Fearow, MAP_LITTLEROOT_TOWN)
+
     // Show messagebox that main quest is updated, and play chime
     questupdated(0)
 
