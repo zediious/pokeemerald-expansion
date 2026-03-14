@@ -189,21 +189,23 @@ script GerbonTown_OutdoorBattleEnd {
             to challenge the {COLOR RED}Representative
             Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon Town. That's Julia,
             one of the trainers we just watched!
+            Most people call them 'Rep Trainers'.
 
             Every three years, there is a
             tournment in each of the stadiums.
             Whoever wins gets to face the current
-            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. If they
-            win, they get to become the
-            {COLOR RED}Representative Trainer!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+            {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. If they win, they get to
+            become the new {COLOR RED}Rep Trainer!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
             
             We've got to get stronger first though,
             I don't think either of us stand a
             chance right now.
             
-            Meet me on Route 110, {COLOR RED} south of
-            Sawgrass Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. I know of a good place
-            to train our Pokemon there!
+            Meet me at the entrance to {COLOR RED}
+            Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY, south of
+            Sawgrass Village. I know a good place
+            to train Pokemon there!
+
             See you soon!")
     waitmessage
     closemessage
