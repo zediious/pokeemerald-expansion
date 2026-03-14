@@ -1619,8 +1619,31 @@ void DetermineSpriteType(s32 questId)
 	u8 spriteType;
 
 	if (IsSubquestMode() == FALSE)
-	{
-		spriteId = sSideQuests[questId].sprite;
+	{	
+
+		// Determine sprite ID for certain quests, based on story var state
+		if (questId == 0) 
+		{
+			u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
+			// Player on way to Palladium, not finished battle with Jordan yet
+			if (mainStoryTracker == 1 || mainStoryTracker == 2)
+			{
+				spriteId = OBJ_EVENT_GFX_ROXANNE;
+			}
+			// Player finished battle with Jordan at Palladium, on way to Route 110
+			else if (mainStoryTracker == 3)
+			{
+				spriteId = OBJ_EVENT_GFX_NORMAN;
+			}
+			else {
+				spriteId = sSideQuests[questId].sprite;
+			}
+		}
+		else
+		{
+			spriteId = sSideQuests[questId].sprite;
+		}
+
 		spriteType = sSideQuests[questId].spritetype;
 
 		QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
