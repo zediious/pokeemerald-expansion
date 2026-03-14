@@ -3068,25 +3068,6 @@ const u16 gTilesetPalettes_ZEDPrimaryTest[][16] =
 
 const u32 gTilesetTiles_ZEDPrimaryTest[] = INCBIN_U32("data/tilesets/primary/zedprimary_test/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_ShadyForest[][16] =
-{
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/primary/shady_forest/palettes/12.gbapal"),
-};
-
-const u32 gTilesetTiles_ShadyForest[] = INCBIN_U32("data/tilesets/primary/shady_forest/tiles.4bpp.lz");
-
 const u16 gTilesetPalettes_ShadyForestSecondary[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/shady_forest_secondary/palettes/00.gbapal"),

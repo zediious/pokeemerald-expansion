@@ -1553,17 +1553,6 @@ const struct Tileset gTileset_ZEDPrimaryTest =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_ShadyForest =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_ShadyForest,
-    .palettes = gTilesetPalettes_ShadyForest,
-    .metatiles = gMetatiles_ShadyForest,
-    .metatileAttributes = gMetatileAttributes_ShadyForest,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_ShadyForestSecondary =
 {
     .isCompressed = TRUE,
