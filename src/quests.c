@@ -1446,10 +1446,10 @@ void GenerateQuestLocation(s32 questId)
 				StringCopy(gStringVar2, gText_MainQuestMap_01);
 			}
 			// Player finished battle with Jordan at Palladium, on way to Route 110
-			else if (mainStoryTracker == 3)
+			else if (mainStoryTracker == 3 || mainStoryTracker == 4)
 			{
 				StringCopy(gStringVar2, gText_MainQuestMap_02);
-			}
+			} 
 			else {
 				StringCopy(gStringVar2, sSideQuests[questId].map);
 			}
@@ -1523,7 +1523,7 @@ void UpdateQuestFlavorText(s32 questId)
 			StringCopy(gStringVar1, gText_MainQuestDesc_01);
 		}
 		// Player finished battle with Jordan at Palladium, on way to Route 110
-		else if (mainStoryTracker == 3)
+		else if (mainStoryTracker == 3 || mainStoryTracker == 4)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_02);
 		}
@@ -1628,12 +1628,12 @@ void DetermineSpriteType(s32 questId)
 			// Player on way to Palladium, not finished battle with Jordan yet
 			if (mainStoryTracker == 1 || mainStoryTracker == 2)
 			{
-				spriteId = OBJ_EVENT_GFX_ROXANNE;
+				spriteId = OBJ_EVENT_GFX_POKE_BALL;
 			}
 			// Player finished battle with Jordan at Palladium, on way to Route 110
-			else if (mainStoryTracker == 3)
+			else if (mainStoryTracker == 3 || mainStoryTracker == 4)
 			{
-				spriteId = OBJ_EVENT_GFX_NORMAN;
+				spriteId = OBJ_EVENT_GFX_STEVEN;
 			}
 			else {
 				spriteId = sSideQuests[questId].sprite;
