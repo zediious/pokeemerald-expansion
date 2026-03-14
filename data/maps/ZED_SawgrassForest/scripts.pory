@@ -1,4 +1,86 @@
-mapscripts ZED_SawgrassForest_MapScripts {}
+mapscripts ZED_SawgrassForest_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ZED_STORY_TRACKER, 3: SawgrassForest_MapScript_OnFrameMakeJordanFollower
+    ]
+}
+
+// Make Jordan a follower when player enters during stage 3 of story
+script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
+    applymovement(SAWGRASSFOREST_JORDAN_01, moves(emote_exclamation_mark))
+    waitmovement
+    delay(20)
+    applymovement(SAWGRASSFOREST_JORDAN_01, moves(
+        walk_right,
+        face_up
+    ))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are {PLAYER}, I've
+            been waiting! There's all sorts of
+            Pokemon in this forest, not to mention
+            other trainers.
+            
+            Let's explore the place, maybe we'll find
+            a rare Pokemon!
+            
+            Are you ready to go?" MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Great! Let's go!")
+        waitmessage
+        delay(30)
+        playse(MUS_RG_OBTAIN_KEY_ITEM)
+        msgbox("Jordan is now your follower!")
+        waitse
+        waitmessage
+        setfollowernpc(
+            SAWGRASSFOREST_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            SawgrassForest_EventScript_JordanFollower,
+            PARTNER_JORDAN_INNAPE_01
+        )
+        setvar(VAR_ZED_STORY_TRACKER, 4)
+        release
+        end
+    }
+    else {
+        msgbox("Alright, but hurry back!")
+        waitmessage
+        release
+        warp(MAP_LITTLEROOT_TOWN, 3, 25)
+        end
+    }
+}
+
+// Jordan follower script
+script SawgrassForest_EventScript_JordanFollower {
+    if (var(VAR_ZED_STORY_TRACKER) == 4) {
+        goto(SawgrassForest_JordanLeave)
+    }
+}
+
+// Jordan ready to leave script
+script SawgrassForest_JordanLeave {
+    lock
+    faceplayer
+    msgbox("Do you want to take a break?
+            I'll be waiting for you." MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Alright, but hurry back!")
+        waitmessage
+        release
+        destroyfollowernpc
+        warp(MAP_LITTLEROOT_TOWN, 3, 25)
+        setvar(VAR_ZED_STORY_TRACKER, 3)
+        end
+    } else {
+        applymovement(0xFF, moves(walk_down))
+        waitmovement
+        release
+        end
+    }
+}
+
+//// Signs and items
 
 // Warning sign at beginning
 script SawgrassForest_EventScript_WarningSign {
@@ -9,9 +91,53 @@ script SawgrassForest_EventScript_WarningSign {
             frequent.
             
             Stick to the lamplight for safety.")
+    waitmessage
+    release
 }
 
-// Jordan follower script
-// script SawgrassForest_EventScript_JordanFollower {
-    
-// }
+// Mansion warning
+script SawgrassForest_EventScript_MansionSign {
+    lock
+    msgbox("You can make out some words, but it's
+            been faded with time.
+            
+            PRIVATE PROPERTY: KEEP OUT OR ELSE")
+    waitmessage
+    release
+}
+
+// TM Taunt Poke Ball
+script SawgrassForest_EventScript_TauntGive {
+    lock
+    giveitem(ITEM_TM_TAUNT)
+    setflag(FLAG_SAWGRASSFOREST_TAUNTTM)
+    removeobject(SAWGRASS_FOREST_TAUNT)
+    waitmessage
+    release
+    end
+}
+
+//// Route trainers
+script SawgrassForest_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_LARRY,
+        "Ah! A ghost!",
+        "You could still be a ghost!"
+    )
+    msgbox("I think my friends pranked me, this is
+            not a good place to camp!.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script SawgrassForest_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_DAVIS,
+        "This place is scary, but there's so
+        many bugs!",
+        "Watch out, you're scaring off the bugs!"
+    )
+    msgbox("Where did the bugs go?", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}

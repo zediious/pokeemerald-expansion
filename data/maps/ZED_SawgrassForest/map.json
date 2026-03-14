@@ -2,14 +2,14 @@
   "id": "MAP_ZED_SAWGRASS_FOREST",
   "name": "ZED_SawgrassForest",
   "layout": "LAYOUT_ZED_SAWGRASS_FOREST",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "music": "MUS_DUSK_FOREST",
+  "region_map_section": "MAPSEC_SAWGRASS_FOREST",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": false,
-  "allow_escaping": false,
-  "allow_running": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
-      "x": 3,
-      "y": 20,
+      "x": 2,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
-      "x": 4,
-      "y": 20,
+      "x": 3,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -119,6 +119,7 @@
       "flag": "0"
     },
     {
+      "local_id": "SAWGRASSFOREST_JORDAN_01",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN",
       "x": 5,
       "y": 4,
@@ -130,6 +131,46 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_SAWGRASSFOREST_JORDANFOLLOWER"
+    },
+    {
+      "local_id": "SAWGRASS_FOREST_TAUNT",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SawgrassForest_EventScript_TauntGive",
+      "flag": "FLAG_SAWGRASSFOREST_TAUNTTM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 22,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "SawgrassForest_EventScript_Trainer01",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 26,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 7,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SawgrassForest_EventScript_Trainer02",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -148,7 +189,26 @@
       "dest_warp_id": "6"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "4",
+      "script": "SawgrassForest_EventScript_JordanFollower"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "4",
+      "script": "SawgrassForest_EventScript_JordanFollower"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -157,6 +217,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SawgrassForest_EventScript_WarningSign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SawgrassForest_EventScript_MansionSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_SUPER_POTION",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
     }
   ]
 }

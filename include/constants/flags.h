@@ -66,7 +66,7 @@
 #define FLAG_GERBON_TOWN_BLOCKERS               0x2C // Two dudes that block the Palladium doors
 #define FLAG_SAWGRASS_SOUTH_BLOCKERS            0x2D // Dude and houndoom blocking south exit of Sawgrass
 #define FLAG_SAWGRASSFOREST_JORDANFOLLOWER      0x2E // Jordan the follower in Sawgrass Forest
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_SAWGRASSFOREST_TAUNTTM             0x2F // Taunt TM item in Sawgrass Forest
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag

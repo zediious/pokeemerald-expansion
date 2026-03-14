@@ -75,165 +75,165 @@ LittlerootTown_EventScript_BlockageSailor::
 	faceplayer
 # 65 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_BlockageSailor_Text_0
-# 70 "data/maps/LittlerootTown/scripts.pory"
+# 73 "data/maps/LittlerootTown/scripts.pory"
 	applymovement ZED_Sawgrass_Blockage_Sailor, LittlerootTown_EventScript_BlockageSailor_Movement_0
-# 71 "data/maps/LittlerootTown/scripts.pory"
+# 74 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
 
 LittlerootTown_EventScript_BlockageAzumarill::
-# 76 "data/maps/LittlerootTown/scripts.pory"
-	lock
-# 77 "data/maps/LittlerootTown/scripts.pory"
-	faceplayer
-# 78 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_BlockageAzumarill_Text_0
 # 79 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_HOUNDOOM, CRY_MODE_NORMAL
+	lock
 # 80 "data/maps/LittlerootTown/scripts.pory"
-	waitmoncry
+	faceplayer
 # 81 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	msgbox LittlerootTown_EventScript_BlockageAzumarill_Text_0
 # 82 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_HOUNDOOM, CRY_MODE_NORMAL
+# 83 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 84 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 85 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
 
 LittlerootTown_EventScript_TiredLady::
-# 87 "data/maps/LittlerootTown/scripts.pory"
+# 90 "data/maps/LittlerootTown/scripts.pory"
 	lock
-# 88 "data/maps/LittlerootTown/scripts.pory"
+# 91 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TiredLady_Text_0
-# 92 "data/maps/LittlerootTown/scripts.pory"
-	closemessage
-# 93 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_TiredLady_Text_1
-# 94 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
 # 95 "data/maps/LittlerootTown/scripts.pory"
-	waitmoncry
-# 96 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
-# 97 "data/maps/LittlerootTown/scripts.pory"
 	closemessage
+# 96 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_TiredLady_Text_1
+# 97 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
 # 98 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 99 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 100 "data/maps/LittlerootTown/scripts.pory"
+	closemessage
+# 101 "data/maps/LittlerootTown/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_EventScript_TiredLady_Pooch::
-# 102 "data/maps/LittlerootTown/scripts.pory"
-	lock
-# 103 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
-# 104 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_TiredLady_Text_1
 # 105 "data/maps/LittlerootTown/scripts.pory"
-	waitmoncry
+	lock
 # 106 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
 # 107 "data/maps/LittlerootTown/scripts.pory"
-	closemessage
+	msgbox LittlerootTown_EventScript_TiredLady_Text_1
 # 108 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 109 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 110 "data/maps/LittlerootTown/scripts.pory"
+	closemessage
+# 111 "data/maps/LittlerootTown/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_EventScript_HusbandLament::
-# 112 "data/maps/LittlerootTown/scripts.pory"
+# 115 "data/maps/LittlerootTown/scripts.pory"
 	lock
-# 113 "data/maps/LittlerootTown/scripts.pory"
-	faceplayer
-# 114 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_HusbandLament_Text_0
 # 116 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	faceplayer
 # 117 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_HusbandLament_Text_0
+# 119 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 120 "data/maps/LittlerootTown/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_EventScript_WifeCookingForSkitty::
-# 121 "data/maps/LittlerootTown/scripts.pory"
+# 124 "data/maps/LittlerootTown/scripts.pory"
 	lock
-# 122 "data/maps/LittlerootTown/scripts.pory"
+# 125 "data/maps/LittlerootTown/scripts.pory"
 	faceplayer
-# 123 "data/maps/LittlerootTown/scripts.pory"
+# 126 "data/maps/LittlerootTown/scripts.pory"
 	goto_if_set FLAG_GOT_SOOTHE_BELL_SAWGRASS, LittlerootTown_EventScript_WifeCookingForSkitty_2
-# 130 "data/maps/LittlerootTown/scripts.pory"
+# 133 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_WifeCookingForSkitty_Text_1
-# 135 "data/maps/LittlerootTown/scripts.pory"
+# 138 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
-# 136 "data/maps/LittlerootTown/scripts.pory"
+# 139 "data/maps/LittlerootTown/scripts.pory"
 	giveitem ITEM_SOOTHE_BELL, 1
-# 137 "data/maps/LittlerootTown/scripts.pory"
+# 140 "data/maps/LittlerootTown/scripts.pory"
 	setflag FLAG_GOT_SOOTHE_BELL_SAWGRASS
 LittlerootTown_EventScript_WifeCookingForSkitty_1:
-# 139 "data/maps/LittlerootTown/scripts.pory"
+# 142 "data/maps/LittlerootTown/scripts.pory"
 	release
-# 140 "data/maps/LittlerootTown/scripts.pory"
+# 143 "data/maps/LittlerootTown/scripts.pory"
 	applymovement ZED_SAWGRASS_COOKINGMAMA, LittlerootTown_EventScript_BlockageSailor_Movement_0
 	end
 
 LittlerootTown_EventScript_WifeCookingForSkitty_2:
-# 124 "data/maps/LittlerootTown/scripts.pory"
+# 127 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_WifeCookingForSkitty_Text_0
 	goto LittlerootTown_EventScript_WifeCookingForSkitty_1
 
 
 LittlerootTown_EventScript_WifeCookingForSkitty_Skitty::
-# 145 "data/maps/LittlerootTown/scripts.pory"
-	lock
-# 146 "data/maps/LittlerootTown/scripts.pory"
-	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
-# 147 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_WifeCookingForSkitty_Skitty_Text_0
 # 148 "data/maps/LittlerootTown/scripts.pory"
-	waitmoncry
+	lock
 # 149 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
 # 150 "data/maps/LittlerootTown/scripts.pory"
-	closemessage
+	msgbox LittlerootTown_EventScript_WifeCookingForSkitty_Skitty_Text_0
 # 151 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 152 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 153 "data/maps/LittlerootTown/scripts.pory"
+	closemessage
+# 154 "data/maps/LittlerootTown/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_EventScript_TrainerTeachCatch01::
-# 156 "data/maps/LittlerootTown/scripts.pory"
+# 159 "data/maps/LittlerootTown/scripts.pory"
 	lock
-# 157 "data/maps/LittlerootTown/scripts.pory"
+# 160 "data/maps/LittlerootTown/scripts.pory"
 	faceplayer
-# 158 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_0, MSGBOX_YESNO
 # 161 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_0, MSGBOX_YESNO
+# 164 "data/maps/LittlerootTown/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_EventScript_TrainerTeachCatch01_1
-# 179 "data/maps/LittlerootTown/scripts.pory"
+# 182 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_3
-# 181 "data/maps/LittlerootTown/scripts.pory"
+# 184 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
 LittlerootTown_EventScript_TrainerTeachCatch01_1:
-# 162 "data/maps/LittlerootTown/scripts.pory"
+# 165 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_1
-# 163 "data/maps/LittlerootTown/scripts.pory"
+# 166 "data/maps/LittlerootTown/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
-# 164 "data/maps/LittlerootTown/scripts.pory"
+# 167 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_2
-# 170 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 171 "data/maps/LittlerootTown/scripts.pory"
-	removeobject ZED_Sawgrass_CatchTeacher
-# 172 "data/maps/LittlerootTown/scripts.pory"
-	setflag FLAG_SAWGRASS_TEACHER
 # 173 "data/maps/LittlerootTown/scripts.pory"
-	setvar VAR_ROUTE101CATCH_PROGRESS, 1
+	fadescreen FADE_TO_BLACK
 # 174 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	removeobject ZED_Sawgrass_CatchTeacher
 # 175 "data/maps/LittlerootTown/scripts.pory"
+	setflag FLAG_SAWGRASS_TEACHER
+# 176 "data/maps/LittlerootTown/scripts.pory"
+	setvar VAR_ROUTE101CATCH_PROGRESS, 1
+# 177 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 178 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
@@ -244,9 +244,9 @@ LittlerootTown_EventScript_JordanTalk01_Movement_0:
 	face_left
 	step_end
 
-# 70 "data/maps/LittlerootTown/scripts.pory"
+# 73 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_EventScript_BlockageSailor_Movement_0:
-# 70 "data/maps/LittlerootTown/scripts.pory"
+# 73 "data/maps/LittlerootTown/scripts.pory"
 	face_up
 	step_end
 
@@ -287,59 +287,61 @@ LittlerootTown_EventScript_ArtistTalk01_Text_0:
 
 LittlerootTown_EventScript_BlockageSailor_Text_0:
 # 65 "data/maps/LittlerootTown/scripts.pory"
-	.string "Sorry, this way is closed for now. There\n"
-	.string "has been an incident, we don't have any\l"
-	.string "details right now.\p"
+	.string "Sorry, this way is closed for now.\p"
+	.string "Someone broke all the lamps in\n"
+	.string "{COLOR RED}Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, and the place is pitch\l"
+	.string "without them. We're working on repairing\l"
+	.string "them now.\p"
 	.string "You'll have to come back another time.$"
 
 LittlerootTown_EventScript_BlockageAzumarill_Text_0:
-# 78 "data/maps/LittlerootTown/scripts.pory"
+# 81 "data/maps/LittlerootTown/scripts.pory"
 	.string "Raaaaa!$"
 
 LittlerootTown_EventScript_TiredLady_Text_0:
-# 88 "data/maps/LittlerootTown/scripts.pory"
+# 91 "data/maps/LittlerootTown/scripts.pory"
 	.string "My Poochyena has so much energy, I just\n"
 	.string "can't run anymore!\p"
 	.string "Look at him, he's still going!$"
 
 LittlerootTown_EventScript_TiredLady_Text_1:
-# 93 "data/maps/LittlerootTown/scripts.pory"
+# 96 "data/maps/LittlerootTown/scripts.pory"
 	.string "Rah!$"
 
 LittlerootTown_EventScript_HusbandLament_Text_0:
-# 114 "data/maps/LittlerootTown/scripts.pory"
+# 117 "data/maps/LittlerootTown/scripts.pory"
 	.string "Skitty's got it made. I have to make my\n"
 	.string "own meals!$"
 
 LittlerootTown_EventScript_WifeCookingForSkitty_Text_0:
-# 124 "data/maps/LittlerootTown/scripts.pory"
+# 127 "data/maps/LittlerootTown/scripts.pory"
 	.string "Skitty loves me for the food, but she's\n"
 	.string "holding a Soothe Bell too!\p"
 	.string "I hope Skitty loves me for who I am too!$"
 
 LittlerootTown_EventScript_WifeCookingForSkitty_Text_1:
-# 130 "data/maps/LittlerootTown/scripts.pory"
+# 133 "data/maps/LittlerootTown/scripts.pory"
 	.string "I always make Skitty home-cooked\n"
 	.string "meals. She absolutely loves them!\p"
 	.string "Here, this can help your Pokemon grow\n"
 	.string "to love you too!$"
 
 LittlerootTown_EventScript_WifeCookingForSkitty_Skitty_Text_0:
-# 147 "data/maps/LittlerootTown/scripts.pory"
+# 150 "data/maps/LittlerootTown/scripts.pory"
 	.string "Meeow!$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_0:
-# 158 "data/maps/LittlerootTown/scripts.pory"
+# 161 "data/maps/LittlerootTown/scripts.pory"
 	.string "{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I see you only have one\n"
 	.string "Pokemon. Do you want to learn how\l"
 	.string "to catch more?$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_1:
-# 162 "data/maps/LittlerootTown/scripts.pory"
+# 165 "data/maps/LittlerootTown/scripts.pory"
 	.string "Great. Here, have a Poke Ball.$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_2:
-# 164 "data/maps/LittlerootTown/scripts.pory"
+# 167 "data/maps/LittlerootTown/scripts.pory"
 	.string "I challenge you to catch one on\n"
 	.string "your own, on your way through\l"
 	.string "Route 101.\p"
@@ -347,6 +349,6 @@ LittlerootTown_EventScript_TrainerTeachCatch01_Text_2:
 	.string "the route.$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_3:
-# 179 "data/maps/LittlerootTown/scripts.pory"
+# 182 "data/maps/LittlerootTown/scripts.pory"
 	.string "Got it, I suppose you'll figure it out on\n"
 	.string "your own.$"
