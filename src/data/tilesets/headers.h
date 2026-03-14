@@ -1552,3 +1552,58 @@ const struct Tileset gTileset_ZEDPrimaryTest =
     .metatileAttributes = gMetatileAttributes_ZEDPrimaryTest,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ShadyForest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_ShadyForest,
+    .palettes = gTilesetPalettes_ShadyForest,
+    .metatiles = gMetatiles_ShadyForest,
+    .metatileAttributes = gMetatileAttributes_ShadyForest,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_ShadyForestSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ShadyForestSecondary,
+    .palettes = gTilesetPalettes_ShadyForestSecondary,
+    .metatiles = gMetatiles_ShadyForestSecondary,
+    .metatileAttributes = gMetatileAttributes_ShadyForestSecondary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_DesertMain =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_DesertMain,
+    .palettes = gTilesetPalettes_DesertMain,
+    .metatiles = gMetatiles_DesertMain,
+    .metatileAttributes = gMetatileAttributes_DesertMain,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CavesMain =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_CavesMain,
+    .palettes = gTilesetPalettes_CavesMain,
+    .metatiles = gMetatiles_CavesMain,
+    .metatileAttributes = gMetatileAttributes_CavesMain,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CavesMainSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CavesMainSecondary,
+    .palettes = gTilesetPalettes_CavesMainSecondary,
+    .metatiles = gMetatiles_CavesMainSecondary,
+    .metatileAttributes = gMetatileAttributes_CavesMainSecondary,
+    .callback = NULL,
+};
