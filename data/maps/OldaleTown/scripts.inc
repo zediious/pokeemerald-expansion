@@ -361,7 +361,7 @@ GerbonTown_OutdoorBattleEnd_Text_0:
 	.string "I don't think either of us stand a\l"
 	.string "chance right now.\p"
 	.string "Meet me at the entrance to {COLOR RED}\n"
-	.string "Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY, south of\l"
+	.string "Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, south of\l"
 	.string "Sawgrass Village. I know a good place\l"
 	.string "to train Pokemon there!\p"
 	.string "See you soon!$"
