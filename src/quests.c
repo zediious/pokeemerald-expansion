@@ -1445,11 +1445,16 @@ void GenerateQuestLocation(s32 questId)
 			{
 				StringCopy(gStringVar2, gText_MainQuestMap_01);
 			}
-			// Player finished battle with Jordan at Palladium, on way to Route 110
+			// Player finished battle with Jordan at Palladium, on way to and/or through Sawgrass Forest
 			else if (mainStoryTracker == 3 || mainStoryTracker == 4)
 			{
 				StringCopy(gStringVar2, gText_MainQuestMap_02);
 			} 
+			// Player got through Sawgrass Forest, on way through Route 110
+			else if (mainStoryTracker == 5)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_03);
+			}
 			else {
 				StringCopy(gStringVar2, sSideQuests[questId].map);
 			}
@@ -1526,6 +1531,11 @@ void UpdateQuestFlavorText(s32 questId)
 		else if (mainStoryTracker == 3 || mainStoryTracker == 4)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_02);
+		}
+		// Player got through Sawgrass Forest, going through Route 110
+		else if (mainStoryTracker == 5)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_03);
 		}
 	}
 	else
@@ -1631,7 +1641,7 @@ void DetermineSpriteType(s32 questId)
 				spriteId = OBJ_EVENT_GFX_POKE_BALL;
 			}
 			// Player finished battle with Jordan at Palladium, on way to Route 110
-			else if (mainStoryTracker == 3 || mainStoryTracker == 4)
+			else if (mainStoryTracker >= 3 && mainStoryTracker <= 5)
 			{
 				spriteId = OBJ_EVENT_GFX_STEVEN;
 			}
