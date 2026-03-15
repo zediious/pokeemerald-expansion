@@ -87,16 +87,18 @@ script VuliasRoute110_EventScript_WonderingMan {
 script VuliasRoute110_FirstArrivalWithJordanTrigger01 {
     lock
     applymovement(0xFF, moves(walk_down))
-    delay(60)
-    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, walk_down * 2, walk_left, face_up))
+    delay(20)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, walk_down * 3, walk_left, face_up))
+    waitmovement
     goto(VuliasRoute110_FirstArrivalWithJordan)
 }
 
 script VuliasRoute110_FirstArrivalWithJordanTrigger02 {
     lock
     applymovement(0xFF, moves(walk_down))
-    delay(60)
-    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, walk_down * 2, walk_right, face_up))
+    delay(20)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, walk_down * 3, walk_right, face_up))
+    waitmovement
     goto(VuliasRoute110_FirstArrivalWithJordan)
 }
 
@@ -116,6 +118,7 @@ script VuliasRoute110_FirstArrivalWithJordan {
             I'll see you at the end of Route 110!")
     waitmessage
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right * 11))
+    waitmovement
     destroyfollowernpc
     setflag(FLAG_SAWGRASSFOREST_JORDANFOLLOWER)
     setvar(VAR_ZED_STORY_TRACKER, 5)

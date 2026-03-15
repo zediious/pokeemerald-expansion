@@ -171,7 +171,7 @@
       "elevation": 0,
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "4",
-      "script": "NULL"
+      "script": "VuliasRoute110_FirstArrivalWithJordanTrigger01"
     },
     {
       "type": "trigger",
@@ -180,7 +180,7 @@
       "elevation": 0,
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "4",
-      "script": "NULL"
+      "script": "VuliasRoute110_FirstArrivalWithJordanTrigger02"
     }
   ],
   "bg_events": [
