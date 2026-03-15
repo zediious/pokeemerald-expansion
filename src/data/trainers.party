@@ -9957,7 +9957,7 @@ Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MITCHELL ===
-Name: MITCHELL
+Name: Mitchell
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -9965,16 +9965,14 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Lunatone
-Level: 43
+Bagon
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Explosion
-- Reflect
-- Light Screen
-- Psychic
+- Tackle
+- Iron Defense
 
-Solrock
-Level: 43
+Beldum
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Explosion
 - Reflect
@@ -15925,7 +15923,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Confuse Ray
 
 === TRAINER_DARIUS ===
-Name: DARIUS
+Name: Darius
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
@@ -15933,9 +15931,26 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Tropius
-Level: 30
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Pidgey
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Gust
+- Sand Attack
+- Tackle
+
+Pidgey
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Gust
+- Sand Attack
+- Tackle
+
+Murkrow
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Gust
+- Astonish
+- Haze
 
 === TRAINER_STEVEN ===
 Name: STEVEN

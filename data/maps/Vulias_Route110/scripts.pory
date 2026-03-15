@@ -1,1 +1,128 @@
 mapscripts Vulias_Route110_MapScripts {}
+
+// Disable blockers in Gerbon before entering warp, and advance the story
+script VuliasRoute110_EventScript_TriggerDisableGerbonBlockers {
+    setflag(FLAG_GERBONSOUTH_BLOCKERS)
+    setvar(VAR_ZED_STORY_TRACKER, 6)
+}
+
+//// Signs and Items
+
+// To Gerbon Town and Plume Hamlet
+script SawgrassForest_EventScript_WarningSign {
+    lock
+    msgbox("{RIGHT_ARROW} To Gerbon Town
+            {LEFT_ARROW} To Plume Hamlet")
+    waitmessage
+    release
+}
+
+// Trainer Tip near Pokemon Center
+script VuliasRoute110_EventScript_TrainerTips02 {
+    lockall
+    msgbox("Trainer Tips!
+    
+            Items can be found in Poke Balls around
+            the world, but items can also be hidden!
+            
+            Press A in all the nooks and crannies
+            and on various different things!")
+    waitmessage
+    releaseall
+}
+
+// Bright Powder Poke ball
+script VuliasRoute110_EventScript_BrightPowderGive {
+    lock
+    giveitem(ITEM_BRIGHT_POWDER, 1)
+    setflag(FLAG_ROUTE110_POKEBALLSOUTHDELTA)
+    removeobject(ROUTE110_BRIGHT_POWDER)
+    waitmessage
+    release
+    end
+}
+
+//// Route trainers
+script VuliasRoute110_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_MITCHELL,
+        "You! You'll be perfect training!",
+        "I guess I was the perfect training."
+    )
+    msgbox("You're not half bad, I thought you
+            would be easy pickings.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasRoute110_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_DARIUS,
+        "My birds fly so high, you're Pokemon
+        could never reach them!",
+        "I guess the sky isn't the limit."
+    )
+    msgbox("I love Bird Pokemon, they make
+            me happy!.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+//// Misc Dialogue NPCs
+
+script VuliasRoute110_EventScript_WonderingMan {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Wondering Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I wonder how I can get
+            up that cliff...
+            
+            Confound it! I just can't {COLOR RED}Rock Climb!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    release
+    end
+}
+
+// Triggers for first arrival
+
+script VuliasRoute110_FirstArrivalWithJordanTrigger01 {
+    lock
+    applymovement(0xFF, moves(walk_down))
+    delay(60)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, walk_down * 2, walk_left, face_up))
+    goto(VuliasRoute110_FirstArrivalWithJordan)
+}
+
+script VuliasRoute110_FirstArrivalWithJordanTrigger02 {
+    lock
+    applymovement(0xFF, moves(walk_down))
+    delay(60)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, walk_down * 2, walk_right, face_up))
+    goto(VuliasRoute110_FirstArrivalWithJordan)
+}
+
+// Player arrived for first time with Jordan follower
+script VuliasRoute110_FirstArrivalWithJordan {
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We made it through! I don't
+            know about you, but my Pokemon got
+            much more powerful from that! I wonder
+            if they got as scared as I did...
+            
+            Anyways, I want to do a little solo
+            training, so I'll go on ahead.
+            
+            Just go east until the water, then head
+            North. You'll reach Gerbon Town!\
+            
+            I'll see you at the end of Route 110!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right * 11))
+    destroyfollowernpc
+    setflag(FLAG_SAWGRASSFOREST_JORDANFOLLOWER)
+    setvar(VAR_ZED_STORY_TRACKER, 5)
+
+    // Show messagebox that main quest is updated, and play chime
+    questupdated(0)
+    
+    release
+    end
+}

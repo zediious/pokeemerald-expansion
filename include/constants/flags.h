@@ -73,10 +73,10 @@
 #define FLAG_SAWGRASSFOREST_KOWTOW              0x33 // Sawgrass Kowtow thugs
 #define FLAG_SAWGRASSFOREST_MUGGEDWOMAN         0x34 // Sawgrass woman Kowtow thugs were mugging
 #define FLAG_GERBON_HIDDENITEMBALL              0x35 // Hidden Poke Ball with EXP Candies.
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
+#define FLAG_GERBONSOUTH_BLOCKERS               0x36 // Battling trainers blocking south of Gerbon
 #define FLAG_SAWGRASSFOREST_SUPERPOTION         0x37 // Super Potion in Sawgrass Forest
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
+#define FLAG_ROUTE110_POKEBALLSOUTHDELTA        0x38 // Pokeball south of River delta with Bright Powder
+#define FLAG_ROUTE110_JORDAN                    0x39 // Jordan at north end of Route 110
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
@@ -558,8 +558,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    (FLAG_HIDDEN_ITEMS_START + 0x04) // Route 101 super potion
 #define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   (FLAG_HIDDEN_ITEMS_START + 0x05) // Route 101 poke ball
 #define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                (FLAG_HIDDEN_ITEMS_START + 0x06) // Route 101 revive
-#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08)
+#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) // Route 110 Great Ball
+#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08) // Route 110 Revive
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x0B)

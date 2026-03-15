@@ -232,6 +232,76 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GerbonTown_EventScript_HiddenItemBall",
       "flag": "FLAG_GERBON_HIDDENITEMBALL"
+    },
+    {
+      "local_id": "GERBON_BLOCKER_BATTLER1",
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 6,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_BlockingBattleScene",
+      "flag": "FLAG_GERBONSOUTH_BLOCKERS"
+    },
+    {
+      "local_id": "GERBON_BLOCKER_BATTLER2",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 9,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_BlockingBattleScene",
+      "flag": "FLAG_GERBONSOUTH_BLOCKERS"
+    },
+    {
+      "local_id": "GERBON_BLOCKER_BATTLER1_MON",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LILLIPUP)",
+      "x": 7,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_BlockingBattleScene",
+      "flag": "FLAG_GERBONSOUTH_BLOCKERS"
+    },
+    {
+      "local_id": "GERBON_BLOCKER_BATTLER2_MON",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SALANDIT)",
+      "x": 8,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_BlockingBattleScene",
+      "flag": "FLAG_GERBONSOUTH_BLOCKERS"
+    },
+    {
+      "local_id": "GERBON_BLOCKER_WATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_MadWoman",
+      "flag": "FLAG_GERBONSOUTH_BLOCKERS"
     }
   ],
   "warp_events": [
@@ -262,6 +332,34 @@
       "elevation": 0,
       "dest_map": "MAP_GERBON_TOWN_BATTLE_HALL",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE110",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE110",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE110",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 9,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE110",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
@@ -300,6 +398,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "GerbonTown_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GerbonTown_EventScript_Route110Sign"
     }
   ]
 }

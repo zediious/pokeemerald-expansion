@@ -337,6 +337,12 @@
       "y": 21,
       "respawn_map": "MAP_ZED_SAWGRASS_VILLAGE_POKEMON_CENTER",
       "respawn_npc": "ZED_LOCALID_SAWGRASS_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_VULIAS_ROUTE110",
+      "map": "MAP_VULIAS_ROUTE110",
+      "x": 21,
+      "y": 57
     }
   ]
 }

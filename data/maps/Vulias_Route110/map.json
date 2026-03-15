@@ -13,8 +13,208 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "x": 17,
+      "y": 55,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VuliasRoute110_EventScript_WonderingMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
+      "x": 58,
+      "y": 58,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 13,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
+      "x": 43,
+      "y": 56,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 13,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "ROUTE110_BRIGHT_POWDER",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 64,
+      "y": 56,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "x": 66,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_DOWN_RIGHT_UP",
+      "movement_range_x": 9,
+      "movement_range_y": 8,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "VuliasRoute110_EventScript_Trainer01",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 63,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "VuliasRoute110_EventScript_Trainer02",
+      "flag": "0"
+    },
+    {
+      "local_id": "ROUTE110_JORDAN",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "x": 62,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ROUTE110_JORDAN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_FOREST",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 23,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_FOREST",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 60,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 61,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 21,
+      "y": 56,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE110_POKEMON_CENTER",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "5",
+      "script": "VuliasRoute110_EventScript_TriggerDisableGerbonBlockers"
+    },
+    {
+      "type": "trigger",
+      "x": 61,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "5",
+      "script": "VuliasRoute110_EventScript_TriggerDisableGerbonBlockers"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "4",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "4",
+      "script": "NULL"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SawgrassForest_EventScript_WarningSign"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 52,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VuliasRoute110_EventScript_TrainerTips02"
+    },
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 55,
+      "elevation": 0,
+      "item": "ITEM_GREAT_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 59,
+      "y": 38,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS"
+    }
+  ]
 }

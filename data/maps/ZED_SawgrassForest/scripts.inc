@@ -545,9 +545,9 @@ Sawgrass_Kowtow_AfterBattle_1:
 	call SawgrassForest_KowtowScene_FollowPlayerFace
 # 453 "data/maps/ZED_SawgrassForest/scripts.pory"
 	msgbox Sawgrass_Kowtow_AfterBattle_Text_4
-# 467 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 478 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmessage
-# 468 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 479 "data/maps/ZED_SawgrassForest/scripts.pory"
 	release
 	end
 
@@ -564,18 +564,18 @@ Sawgrass_Kowtow_AfterBattle_2:
 
 
 SawgrassForest_KowtowScene_FollowPlayerFace::
-# 473 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 484 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto_if_set FLAG_SAWGRASSFOREST_KOWTOWPOSITION, SawgrassForest_KowtowScene_FollowPlayerFace_1
-# 478 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 489 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_7
-# 479 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 490 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement 0xFF, SawgrassForest_KowtowEncounter_Movement_6
 	return
 
 SawgrassForest_KowtowScene_FollowPlayerFace_1:
-# 474 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 485 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_6
-# 475 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 486 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement 0xFF, SawgrassForest_KowtowEncounter_Movement_7
 	return
 
@@ -876,12 +876,21 @@ Sawgrass_Kowtow_AfterBattle_Text_3:
 
 Sawgrass_Kowtow_AfterBattle_Text_4:
 # 454 "data/maps/ZED_SawgrassForest/scripts.pory"
-	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a lo! But hey, that\n"
-	.string "{COLOR RED}Exp Share{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} will definitely be useful!\l"
-	.string "Lucky for me, I already have one!\p"
+	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Argh! I can't believe\n"
+	.string "we let those {COLOR RED}Team Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} members\l"
+	.string "get away!\p"
+	.string "They're a gang of criminals, and they\n"
+	.string "have started to cause more trouble\l"
+	.string "lately. Robbing people, stores, and\l"
+	.string "stealing Pokemon!\p"
+	.string "Ah well, I'm not sure we would be able to\n"
+	.string "restrain them anyways. In any case, it's\l"
+	.string "good that you got that {COLOR RED}Exp Share{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!\l"
+	.string "will definitely be useful! Lucky for\l"
+	.string "me, I already have one!\p"
 	.string "...\p"
 	.string "What? I waas going to get you one!\n"
 	.string "Honest!\p"
 	.string "Anyways, we should press on, and get to\n"
-	.string "{COLOR GREEN}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want\l"
+	.string "{COLOR RED}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want\l"
 	.string "to come back to this place.$"

@@ -451,17 +451,28 @@ script Sawgrass_Kowtow_AfterBattle {
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
 
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a lo! But hey, that
-        {COLOR RED}Exp Share{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} will definitely be useful!
-        Lucky for me, I already have one!
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Argh! I can't believe
+        we let those {COLOR RED}Team Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} members
+        get away!
         
+        They're a gang of criminals, and they
+        have started to cause more trouble
+        lately. Robbing people, stores, and
+        stealing Pokemon!
+
+        Ah well, I'm not sure we would be able to
+        restrain them anyways. In any case, it's
+        good that you got that {COLOR RED}Exp Share{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+        will definitely be useful! Lucky for
+        me, I already have one!
+
         ...
         
         What? I waas going to get you one!
         Honest!
         
         Anyways, we should press on, and get to
-        {COLOR GREEN}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want
+        {COLOR RED}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want
         to come back to this place."
     )
     waitmessage

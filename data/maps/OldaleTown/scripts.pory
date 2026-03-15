@@ -39,6 +39,13 @@ script GerbonTown_EventScript_TownSign {
     releaseall
 }
 
+// Sign to Route 110
+script GerbonTown_EventScript_Route110Sign {
+    lockall
+    msgbox("{DOWN_ARROW} To Route 110")
+    releaseall
+}
+
 // Sign on flower bed
 script GerbonTown_EventScript_KeepOffFlowers {
     lockall
@@ -59,10 +66,58 @@ script GerbonTown_EventScript_HiddenItemBall {
 // Dudes that block that Palladium doors
 script GerbonTown_EventScript_PalladiumBlockers {
     lock
-    msgbox("{COLOR GREEN}Reckless Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Not allowed in when
+    msgbox("{COLOR GREEN}Palladium Guard: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Not allowed in when
             there's no match going on.
             
             Come another time.")
+    waitmessage
+    release
+    end
+}
+
+// Woman angry about south blocking battle
+script GerbonTown_EventScript_MadWoman {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Angry Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}These trainers! Breaking
+            out into a battle wherever they please!
+            
+            Don't they know they're blocking
+            the way? They won't listen!")
+    waitmessage
+    release
+    end
+}
+
+// Battle scene blocking south exit
+script GerbonTown_EventScript_BlockingBattleScene {
+    lock
+    msgbox("{COLOR GREEN}Battler 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Lillipup! Use your Tackle
+            attack!")
+    waitmessage
+    playmoncry(SPECIES_LILLIPUP, CRY_MODE_NORMAL)
+    applymovement(GERBON_BLOCKER_BATTLER1_MON, moves(jump_in_place_right))
+    delay(20)
+    applymovement(GERBON_BLOCKER_BATTLER2_MON, moves(face_right))
+    delay(10)
+    applymovement(GERBON_BLOCKER_BATTLER2_MON, moves(face_left))
+    playmoncry(SPECIES_SALANDIT, CRY_MODE_NORMAL)
+    waitmoncry
+    waitmovement
+    msgbox("{COLOR GREEN}Battler 2: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Salandit, don't take that!
+            Use your Scratch attack!")
+    waitmessage
+    playmoncry(SPECIES_SALANDIT, CRY_MODE_NORMAL)
+    applymovement(GERBON_BLOCKER_BATTLER2_MON, moves(jump_in_place_left))
+    delay(20)
+    applymovement(GERBON_BLOCKER_BATTLER1_MON, moves(face_left))
+    delay(10)
+    applymovement(GERBON_BLOCKER_BATTLER1_MON, moves(face_right))
+    playmoncry(SPECIES_LILLIPUP, CRY_MODE_NORMAL)
+    waitmoncry
+    waitmovement
+    msgbox("They don't seem to notice you")
+    waitmessage
     release
     end
 }
