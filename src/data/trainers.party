@@ -6821,7 +6821,7 @@ Level: 37
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_DYLAN_1 ===
-Name: DYLAN
+Name: Dylan
 Class: Triathlete
 Pic: Running Triathlete M
 Gender: Male
@@ -6829,9 +6829,19 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Doduo
-Level: 17
+Stufful
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Stomp
+- Baby-Doll Eyes
+- Payback
+
+Electrike
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Quick Attack
+- Thunder Shock
+- Thunder Wave
 
 === TRAINER_DYLAN_2 ===
 Name: DYLAN
@@ -9350,7 +9360,7 @@ Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_EDWIN_1 ===
-Name: EDWIN
+Name: Edwin
 Class: Collector
 Pic: Collector
 Gender: Male
@@ -9358,13 +9368,26 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Lombre
-Level: 14
+Phantump
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Astonish
+- Branch Poke
+- Confuse Ray
 
-Nuzleaf
-Level: 14
+Sableye
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Shadow Sneak
+- Fake Out
+- Leer
+
+Woobat
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Endeavor
+- Confusion
+- Gust
 
 === TRAINER_HECTOR ===
 Name: HECTOR
@@ -9539,7 +9562,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leer
 
 Rolycoly
-Level: 7
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 - Rapid Spin
@@ -9557,12 +9580,13 @@ AI: Check Bad Move / Basic Trainer
 Pansear
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Flame Charge
-- Fire Spin
+- Ember
+- Lick
 - Leer
+- Scratch
 
 Rolycoly
-Level: 7
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 - Rapid Spin
@@ -9580,12 +9604,13 @@ AI: Check Bad Move / Basic Trainer
 Pansage
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Vine Whip
-- Leech Seed
+- Leafage
+- Scratch
 - Leer
+- Lick
 
 Rolycoly
-Level: 7
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 - Rapid Spin
@@ -9604,8 +9629,9 @@ Panpour
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Water Gun
-- Aqua Ring
+- Scratch
 - Leer
+- Lick
 
 Rolycoly
 Level: 7
@@ -12004,7 +12030,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Smokescreen
 
 === TRAINER_KEIGO ===
-Name: KEIGO
+Name: Keigo
 Class: Ninja Boy
 Pic: Ninja Boy
 Gender: Male
@@ -12012,21 +12038,20 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move / Try To Faint
 
-Koffing
-Level: 28
+Froakie
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Self Destruct
-- Sludge
-- Smokescreen
+- Water Gun
+- Quick Attack
+- Lick
 
-Ninjask
-Level: 28
+Croagunk
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Sand Attack
-- Double Team
-- Fury Cutter
-- Swords Dance
+- Astonish
+- Taunt
+- Fake Out
+- Poison Sting
 
 === TRAINER_RILEY ===
 Name: RILEY

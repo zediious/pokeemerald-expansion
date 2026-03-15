@@ -154,7 +154,7 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "SawgrassForest_EventScript_Trainer01",
       "flag": "0"
@@ -162,13 +162,13 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 26,
-      "y": 17,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 0,
       "movement_range_y": 7,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "SawgrassForest_EventScript_Trainer02",
       "flag": "0"
     },
@@ -213,6 +213,72 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_SAWGRASSFOREST_KOWTOW"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "x": 17,
+      "y": 51,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SawgrassForest_EventScript_Trainer04",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 7,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 4,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SawgrassForest_EventScript_Trainer03",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
+      "x": 17,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "LIGHT_TYPE_BALL",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 21,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BURIED",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SawgrassForest_EventScript_Trainer05",
+      "flag": "0"
+    },
+    {
+      "local_id": "SAWGRASS_FOREST_SUPERPOT",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 0,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SawgrassForest_EventScript_SuperPotionGive",
+      "flag": "FLAG_SAWGRASSFOREST_SUPERPOTION"
     }
   ],
   "warp_events": [
@@ -229,6 +295,20 @@
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN",
       "dest_warp_id": "6"
+    },
+    {
+      "x": 22,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_FOREST",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_ZED_SAWGRASS_FOREST",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -292,7 +372,15 @@
       "y": 12,
       "elevation": 0,
       "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 27,
+      "elevation": 0,
+      "item": "ITEM_SUPER_REPEL",
+      "flag": "FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL"
     }
   ]
 }

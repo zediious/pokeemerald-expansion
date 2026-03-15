@@ -71,9 +71,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 - Astonish
 - Leer
+- Round
 
 Rolycoly
-Level: 7
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 - Rapid Spin
@@ -91,9 +92,10 @@ AI: Basic Trainer
 Pansear
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Flame Charge
-- Fire Spin
+- Ember
+- Lick
 - Leer
+- Scratch
 
 Rolycoly
 Level: 7
@@ -114,9 +116,10 @@ AI: Basic Trainer
 Pansage
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Vine Whip
-- Leech Seed
+- Leafage
+- Scratch
 - Leer
+- Lick
 
 Rolycoly
 Level: 7
@@ -138,8 +141,9 @@ Panpour
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Water Gun
-- Aqua Ring
+- Scratch
 - Leer
+- Lick
 
 Rolycoly
 Level: 7
