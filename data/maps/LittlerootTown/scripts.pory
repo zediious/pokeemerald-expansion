@@ -64,10 +64,8 @@ script LittlerootTown_EventScript_BlockageSailor {
     faceplayer
     msgbox("Sorry, this way is closed for now.
 
-            Someone broke all the lamps in
-            {COLOR RED}Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, and the place is pitch
-            without them. We're working on repairing
-            them now.
+            There's...uhhhh...something going on
+            there. Important stuff.
 
             You'll have to come back another time.")
     applymovement(ZED_Sawgrass_Blockage_Sailor, moves(face_up))
