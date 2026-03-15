@@ -247,5 +247,5 @@ VuliasRoute110_FirstArrivalWithJordan_Text_0:
 	.string "Anyways, I want to do a little solo\n"
 	.string "training, so I'll go on ahead.\p"
 	.string "Just go east until the water, then head\n"
-	.string "North. You'll reach Gerbon Town!\\p"
+	.string "North. You'll reach Gerbon Town!\p"
 	.string "I'll see you at the end of Route 110!$"
