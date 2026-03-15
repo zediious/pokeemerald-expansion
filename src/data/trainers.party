@@ -3764,10 +3764,6 @@ Lillipup
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Pikipek
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 Capsakid
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
@@ -5151,12 +5147,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Disarming Voice
 - Growl
 - Double Team
-
-Weedle
-Level: 2
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Sting
-- String Shot
 
 === TRAINER_TED ===
 Name: TED
@@ -9382,13 +9372,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Fake Out
 - Leer
 
-Woobat
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Endeavor
-- Confusion
-- Gust
-
 === TRAINER_HECTOR ===
 Name: HECTOR
 Class: Collector
@@ -11130,19 +11113,12 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Magcargo
+Komala
 Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Earth Power
-- Ember
-- Yawn
-
-Shroomish
-Level: 2
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Absorb
-- Tackle
-- Stun Spore
+- Rollout
+- Defense Curl
+- Sing
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
