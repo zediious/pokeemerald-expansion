@@ -123,9 +123,9 @@
 #define VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER           0x4065 // Whether map scripts to disable elements of the palladium show trigger
 #define VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER     0x4066 // Whether triggers for first battle for candace and julia are present
 #define VAR_STARTER_INNAPE_EVO                           0x4067 // Used only if starter was Innape, saves species of evolved Innape (Passimian or Oranguru)
-#define VAR_ROUTE109_STATE                               0x4068 // Unused Var
-#define VAR_ROUTE110_STATE                               0x4069
-#define VAR_ROUTE111_STATE                               0x406A // Unused Var
+#define VAR_KOWTOW_ENCOUNTERS                            0x4068 // Track amount of Team Kowtow encounters. Story state
+#define VAR_ROUTE110_STATE                               0x4069 
+#define VAR_SAWGRASS_PARTNER                             0x406A // ID for partner in sawgrass
 #define VAR_ROUTE112_STATE                               0x406B // Unused Var
 #define VAR_ROUTE113_STATE                               0x406C // Unused Var
 #define VAR_ROUTE114_STATE                               0x406D // Unused Var

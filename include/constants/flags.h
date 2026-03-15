@@ -68,10 +68,10 @@
 #define FLAG_SAWGRASSFOREST_JORDANFOLLOWER      0x2E // Jordan the follower in Sawgrass Forest
 #define FLAG_SAWGRASSFOREST_TAUNTTM             0x2F // Taunt TM item in Sawgrass Forest
 #define FLAG_SAWGRASSFOREST_JORDANNOTRIGGER     0x30 // Prevent leave trigger from firing during initial scene
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
+#define FLAG_SAWGRASSFOREST_PLAYERLEFT          0x31 // Track if the player left during first visit
+#define FLAG_SAWGRASSFOREST_KOWTOWPOSITION      0x32 // Player position for Kowtow encounter movement
+#define FLAG_SAWGRASSFOREST_KOWTOW              0x33 // Sawgrass Kowtow thugs
+#define FLAG_SAWGRASSFOREST_MUGGEDWOMAN         0x34 // Sawgrass woman Kowtow thugs were mugging
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    0x37 // Unused Flag
