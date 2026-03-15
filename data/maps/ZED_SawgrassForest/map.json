@@ -171,6 +171,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SawgrassForest_EventScript_Trainer02",
       "flag": "0"
+    },
+    {
+      "local_id": "SAWGRASS_MUGGED_WOMAN",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 14,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_SAWGRASSFOREST_MUGGEDWOMAN"
+    },
+    {
+      "local_id": "SAWGRASS_KOWTOW_01",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 15,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_SAWGRASSFOREST_KOWTOW"
+    },
+    {
+      "local_id": "SAWGRASS_KOWTOW_02",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_SAWGRASSFOREST_KOWTOW"
     }
   ],
   "warp_events": [
@@ -207,6 +249,24 @@
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "4",
       "script": "SawgrassForest_JordanLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_KOWTOW_ENCOUNTERS",
+      "var_value": "0",
+      "script": "SawgrassForest_EventScript_KowtowEncounterTrigger01"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_KOWTOW_ENCOUNTERS",
+      "var_value": "0",
+      "script": "SawgrassForest_EventScript_KowtowEncounterTrigger02"
     }
   ],
   "bg_events": [

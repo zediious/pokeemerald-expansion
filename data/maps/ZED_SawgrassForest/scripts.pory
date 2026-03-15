@@ -14,7 +14,15 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
     applymovement(SAWGRASSFOREST_JORDAN_01, moves(emote_exclamation_mark))
     waitmovement
     delay(30)
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are {PLAYER}, I've
+
+    // Different message if player entered already
+    if (flag(FLAG_SAWGRASSFOREST_PLAYERLEFT))
+    {
+        msgbox("You're back! Ready to go?", MSGBOX_YESNO)
+    }
+    else
+    {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are {PLAYER}, I've
             been waiting! There's all sorts of
             Pokemon in this forest, not to mention
             other trainers.
@@ -23,6 +31,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
             a rare Pokemon!
             
             Are you ready to go?", MSGBOX_YESNO)
+    }
 
     if (var(VAR_RESULT) == YES) {
         msgbox("Great! Let's go!")
@@ -42,6 +51,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
         msgbox("Alright, but hurry back!")
         waitmessage
         clearflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
+        setflag(FLAG_SAWGRASSFOREST_PLAYERLEFT)
         setvar(VAR_ZED_STORY_TRACKER, 3)
         release
         warp(MAP_LITTLEROOT_TOWN, 3, 25)
@@ -114,6 +124,7 @@ script SawgrassForest_JordanLeave {
             destroyfollowernpc
             addobject(SAWGRASSFOREST_JORDAN_01)
             setobjectxy(SAWGRASSFOREST_JORDAN_01, 5, 4)
+            setflag(FLAG_SAWGRASSFOREST_PLAYERLEFT)
             setvar(VAR_ZED_STORY_TRACKER, 3)
             warp(MAP_LITTLEROOT_TOWN, 3, 25)
             end
@@ -186,4 +197,236 @@ script SawgrassForest_EventScript_Trainer02{
     msgbox("Where did the bugs go?", MSGBOX_AUTOCLOSE)
     waitmessage
     end
+}
+
+// Trigger Kowtow first meeting
+script SawgrassForest_EventScript_KowtowEncounterTrigger01 {
+    clearflag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)
+    goto(SawgrassForest_KowtowEncounter)
+}
+
+script SawgrassForest_EventScript_KowtowEncounterTrigger02 {
+    setflag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)
+    goto(SawgrassForest_KowtowEncounter)
+}
+
+// Team Kotow first meeting
+script SawgrassForest_KowtowEncounter {
+    lock
+    setvar(VAR_KOWTOW_ENCOUNTERS, 1)
+    applymovement(0xFF, moves(emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
+    waitmovement
+
+    if (flag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)) {
+        applymovement(OBJ_EVENT_ID_NPC_FOLLOWER , moves(walk_up, walk_left))
+    }
+    else {
+        applymovement(OBJ_EVENT_ID_NPC_FOLLOWER , moves(walk_down, walk_left))
+    }
+    waitmovement
+
+    msgbox(
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}What's going on here!"
+    )
+
+    applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_down))
+    applymovement(SAWGRASS_KOWTOW_02, moves(emote_exclamation_mark, face_right))
+    waitmovement
+    delay(60)
+    applymovement(SAWGRASS_KOWTOW_01, moves(
+        walk_down, walk_right, walk_down, walk_right * 2
+        )
+    )
+    delay(30)
+    applymovement(SAWGRASS_KOWTOW_02, moves(
+        walk_down * 2, walk_right * 4
+        )
+    )
+    waitmovement
+
+    msgbox(
+        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}What are you doing
+            here! I guess that guy we paid to block
+            the entrance tucked tail."
+    )
+    waitmessage
+
+    applymovement(SAWGRASS_KOWTOW_01, moves(face_down))
+    applymovement(SAWGRASS_KOWTOW_02, moves(face_up))
+
+    msgbox(
+        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I guess we'll just have
+            to take them, down ourselves, the boss
+            don't got to know we messed up a little
+            bit!"
+    )
+    waitmessage
+
+    msgbox(
+        "{COLOR GREEN}Kowtow Grunt 2: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Sure, sure, until his
+            {COLOR RED}Kingambit{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares us down for so long
+            that we break into a sweat!"
+    )
+    waitmessage
+
+    call(SawgrassForest_KowtowScene_FollowPlayerFace)
+
+    msgbox(
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Sheesh, the trash might take
+            itself out if they keep arguing."
+    )
+    waitmessage
+
+    msgbox(
+        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Quit being a..."
+    )
+    waitmessage
+
+    applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_right))
+    applymovement(SAWGRASS_KOWTOW_02, moves(emote_exclamation_mark, face_right))
+
+    msgbox(
+        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Who are you calling
+            trash!"
+    )
+    waitmessage
+
+    // Based on starter, begin 2v2 battle with proper partner team
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        goto(SawgrassVillage_RawScript_Start2v2_Panpour)
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        goto(SawgrassVillage_RawScript_Start2v2_Pansear)
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        goto(SawgrassVillage_RawScript_Start2v2_Pansage)
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        goto(SawgrassVillage_RawScript_Start2v2_Innape)
+    }
+}
+
+// Initiate 2v2 Battle with Grunts VS Player and Jordan
+// Notably, this has no issues being performed while having a follower.
+// Poryscript does not appear to have a shorthand for this.
+raw`
+SawgrassVillage_RawScript_Start2v2_Pansage::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANSAGE_01
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
+
+SawgrassVillage_RawScript_Start2v2_Pansear::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANSEAR_01
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
+
+SawgrassVillage_RawScript_Start2v2_Panpour::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANPOUR_01
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
+
+SawgrassVillage_RawScript_Start2v2_Innape::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_INNAPE_01
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
+
+SawgrassVillage_RawScript_AfterMultiDirect::
+    switch VAR_RESULT
+	case 1, Sawgrass_Kowtow_AfterBattle
+	goto Sawgrass_Kowtow_Whiteout
+
+SawgrassVillage_Grunt1_Loss:
+    .string "Awh, no way!$"
+
+SawgrassVillage_Grunt2_Loss:
+    .string "This ain't good!$"
+`
+
+script Sawgrass_Kowtow_Whiteout {
+    fadescreen(FADE_TO_BLACK)
+    special(SetCB2WhiteOut)
+}
+
+script Sawgrass_Kowtow_AfterBattle {
+    lock
+    msgbox("No good, use the smokescreen!")
+    waitmessage
+
+    // "Smoke bomb"
+    playse(SE_M_DOUBLE_TEAM)
+    fadescreen(FADE_TO_BLACK)
+    setflag(FLAG_SAWGRASSFOREST_KOWTOW)
+    removeobject(SAWGRASS_KOWTOW_01)
+    removeobject(SAWGRASS_KOWTOW_02)
+    waitse
+    delay(120)
+    fadescreen(FADE_FROM_BLACK)
+
+    call(SawgrassForest_KowtowScene_FollowPlayerFace)
+
+    msgbox(
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}They got away!"
+    )
+    waitmessage
+
+    // Woman walks up to player
+    if (flag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)) {
+        applymovement(SAWGRASS_MUGGED_WOMAN, moves(walk_down * 3, walk_right * 4))
+        delay(30)
+        applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
+        applymovement(0xFF, moves(face_left))
+    }
+    else {
+        applymovement(SAWGRASS_MUGGED_WOMAN, moves(walk_down * 2, walk_right * 4))
+        delay(30)
+        applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
+        applymovement(0xFF, moves(face_left))
+    }
+    waitmovement
+    msgbox("{COLOR GREEN}Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Thank you for dealing with them!
+            They did take my money, but I was
+            worried for my life!
+            
+            Here, have this! I insist!")
+    waitmessage
+    giveitem(ITEM_EXP_SHARE, 1)
+    msgbox("{COLOR GREEN}Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I was going to train my Pokemon
+            with that, but I think I'm going to take
+            some time to relax. Keep it!")
+
+    // Woman leaves
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    setflag(FLAG_SAWGRASSFOREST_MUGGEDWOMAN)
+    removeobject(SAWGRASS_MUGGED_WOMAN)
+    delay(120)
+    fadescreen(FADE_FROM_BLACK)
+
+    call(SawgrassForest_KowtowScene_FollowPlayerFace)
+
+    msgbox(
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a lo! But hey, that
+        {COLOR RED}Exp Share{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} will definitely be useful!
+        Lucky for me, I already have one!
+        
+        ...
+        
+        What? I waas going to get you one!
+        Honest!
+        
+        Anyways, we should press on, and get to
+        {COLOR GREEN}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want
+        to come back to this place."
+    )
+    waitmessage
+    release
+    end
+}
+
+script SawgrassForest_KowtowScene_FollowPlayerFace {
+    if (flag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)) {
+        applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_down))
+        applymovement(0xFF, moves(face_up))
+    }
+    else {
+        applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
+        applymovement(0xFF, moves(face_down))
+    }
 }
