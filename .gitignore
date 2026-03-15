@@ -67,3 +67,5 @@ __pycache__
 .map_version
 
 /tools/poryscript/poryscript
+
+rom2sp.sh
