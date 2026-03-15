@@ -72,9 +72,9 @@
 #define FLAG_SAWGRASSFOREST_KOWTOWPOSITION      0x32 // Player position for Kowtow encounter movement
 #define FLAG_SAWGRASSFOREST_KOWTOW              0x33 // Sawgrass Kowtow thugs
 #define FLAG_SAWGRASSFOREST_MUGGEDWOMAN         0x34 // Sawgrass woman Kowtow thugs were mugging
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
+#define FLAG_GERBON_HIDDENITEMBALL              0x35 // Hidden Poke Ball with EXP Candies.
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_SAWGRASSFOREST_SUPERPOTION         0x37 // Super Potion in Sawgrass Forest
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
