@@ -1,9 +1,9 @@
 mapscripts Vulias_Route110_PokemonCenter_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: Sawgrass_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_TRANSITION: VuliasRoute110_PokemonCenter_OnTransition
     MAP_SCRIPT_ON_RESUME: CableClub_OnResume
 }
 
-script Sawgrass_PokemonCenter_OnTransition {
+script VuliasRoute110_PokemonCenter_OnTransition {
     setrespawn(HEAL_LOCATION_VULIAS_ROUTE110)
     end
 }

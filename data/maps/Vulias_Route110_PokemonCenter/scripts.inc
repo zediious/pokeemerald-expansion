@@ -1,12 +1,12 @@
 Vulias_Route110_PokemonCenter_MapScripts::
 # 2 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, Sawgrass_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, VuliasRoute110_PokemonCenter_OnTransition
 # 3 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
 
-Sawgrass_PokemonCenter_OnTransition::
+VuliasRoute110_PokemonCenter_OnTransition::
 # 7 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
 	setrespawn HEAL_LOCATION_VULIAS_ROUTE110
 	end
