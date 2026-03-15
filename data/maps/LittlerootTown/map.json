@@ -158,7 +158,7 @@
       "y": 11,
       "elevation": 0,
       "item": "ITEM_MUSCLE_FEATHER",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_ETHER"
     },
     {
       "type": "hidden_item",
@@ -166,7 +166,7 @@
       "y": 5,
       "elevation": 0,
       "item": "ITEM_POKE_DOLL",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST"
     },
     {
       "type": "sign",

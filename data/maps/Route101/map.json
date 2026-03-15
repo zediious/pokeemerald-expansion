@@ -132,7 +132,7 @@
       "y": 17,
       "elevation": 0,
       "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL"
     },
     {
       "type": "hidden_item",
@@ -140,7 +140,7 @@
       "y": 2,
       "elevation": 0,
       "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS"
     },
     {
       "type": "hidden_item",
@@ -148,7 +148,7 @@
       "y": 2,
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM"
     }
   ]
 }
