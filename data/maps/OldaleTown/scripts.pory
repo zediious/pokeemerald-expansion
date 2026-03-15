@@ -46,6 +46,16 @@ script GerbonTown_EventScript_KeepOffFlowers {
     releaseall
 }
 
+// Hidden Poke Ball with
+script GerbonTown_EventScript_HiddenItemBall {
+    lock
+    giveitem(ITEM_EXP_CANDY_S, 2)
+    removeobject(GERBON_CANDY_BALL)
+    setflag(FLAG_GERBON_HIDDENITEMBALL)
+    release
+    end
+}
+
 // Dudes that block that Palladium doors
 script GerbonTown_EventScript_PalladiumBlockers {
     lock
