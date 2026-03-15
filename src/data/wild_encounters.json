@@ -100,7 +100,7 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_ROLYCOLY"
+                "species": "SPECIES_BUNNELBY"
               },
               {
                 "min_level": 2,
@@ -110,7 +110,7 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_POOCHYENA"
+                "species": "SPECIES_BUNNELBY"
               },
               {
                 "min_level": 3,
@@ -120,27 +120,27 @@
               {
                 "min_level": 2,
                 "max_level": 4,
-                "species": "SPECIES_POOCHYENA"
+                "species": "SPECIES_BUNNELBY"
               },
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_ORICORIO_BAILE"
+                "species": "SPECIES_ORICORIO_POM_POM"
               },
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_MAGCARGO"
+                "species": "SPECIES_KOMALA"
               },
               {
-                "min_level": 2,
+                "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_NUMEL"
+                "species": "SPECIES_JANGMO_O"
               },
               {
-                "min_level": 2,
+                "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_MAGCARGO"
+                "species": "SPECIES_GROOKEY"
               }
             ]
           }
