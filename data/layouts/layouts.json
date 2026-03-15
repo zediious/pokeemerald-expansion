@@ -9413,6 +9413,16 @@
       "secondary_tileset": "gTileset_ShadyForestSecondary",
       "border_filepath": "data/layouts/ZED_SawgrassForest/border.bin",
       "blockdata_filepath": "data/layouts/ZED_SawgrassForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_ROUTE110",
+      "name": "Vulias_Route110_Layout",
+      "width": 100,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Vulias_Route110/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Route110/map.bin"
     }
   ]
 }

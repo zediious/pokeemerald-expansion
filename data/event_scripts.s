@@ -1755,3 +1755,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ZED_Route101/scripts.inc"
 
 	.include "data/maps/ZED_SawgrassForest/scripts.inc"
+
+	.include "data/maps/Vulias_Route110/scripts.inc"

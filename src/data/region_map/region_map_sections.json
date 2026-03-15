@@ -1630,6 +1630,10 @@
     {
       "id": "MAPSEC_SAWGRASS_FOREST",
       "name": "Sawgrass Forest"
+    },
+    {
+      "id": "MAPSEC_VULIAS_ROUTE110",
+      "name": "Route 110"
     }
   ]
 }
