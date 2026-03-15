@@ -10,11 +10,11 @@ VuliasRoute110_EventScript_TriggerDisableGerbonBlockers::
 	return
 
 
-SawgrassForest_EventScript_WarningSign::
+VuliasRoute110_EventScript_DirectionSign::
 # 13 "data/maps/Vulias_Route110/scripts.pory"
 	lock
 # 14 "data/maps/Vulias_Route110/scripts.pory"
-	msgbox SawgrassForest_EventScript_WarningSign_Text_0
+	msgbox VuliasRoute110_EventScript_DirectionSign_Text_0
 # 16 "data/maps/Vulias_Route110/scripts.pory"
 	waitmessage
 # 17 "data/maps/Vulias_Route110/scripts.pory"
@@ -192,7 +192,7 @@ VuliasRoute110_FirstArrivalWithJordan_Movement_0:
 	walk_right
 	step_end
 
-SawgrassForest_EventScript_WarningSign_Text_0:
+VuliasRoute110_EventScript_DirectionSign_Text_0:
 # 14 "data/maps/Vulias_Route110/scripts.pory"
 	.string "{RIGHT_ARROW} To Gerbon Town\n"
 	.string "{LEFT_ARROW} To Plume Hamlet$"

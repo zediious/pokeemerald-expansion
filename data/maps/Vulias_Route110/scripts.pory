@@ -9,7 +9,7 @@ script VuliasRoute110_EventScript_TriggerDisableGerbonBlockers {
 //// Signs and Items
 
 // To Gerbon Town and Plume Hamlet
-script SawgrassForest_EventScript_WarningSign {
+script VuliasRoute110_EventScript_DirectionSign {
     lock
     msgbox("{RIGHT_ARROW} To Gerbon Town
             {LEFT_ARROW} To Plume Hamlet")
@@ -122,7 +122,7 @@ script VuliasRoute110_FirstArrivalWithJordan {
 
     // Show messagebox that main quest is updated, and play chime
     questupdated(0)
-    
+
     release
     end
 }
