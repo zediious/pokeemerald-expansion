@@ -203,7 +203,7 @@
     {
       "type": "hidden_item",
       "x": 26,
-      "y": 55,
+      "y": 54,
       "elevation": 0,
       "item": "ITEM_GREAT_BALL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL"
