@@ -21,7 +21,7 @@ script GiveMegaRing{
 script GiveInnape{
     lock
     givemon(SPECIES_INNAPE, 1)
-    msgbox("Innape has been added to your party")
+    msgbox("Innonk has been added to your party")
     waitmessage
     release
 }

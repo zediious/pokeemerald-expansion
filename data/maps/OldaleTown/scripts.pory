@@ -228,7 +228,7 @@ script GerbonTownBattleHall_OutdoorBattleStart {
                 event_script=GerbonTown_OutdoorBattleEnd
             )
         }
-        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_103_MUDKIP,
                 "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's what I'm

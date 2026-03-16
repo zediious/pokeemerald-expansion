@@ -50,4 +50,4 @@ GiveInnape::
 
 GiveInnape_Text_0:
 # 24 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	.string "Innape has been added to your party$"
+	.string "Innonk has been added to your party$"
