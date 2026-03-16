@@ -1690,9 +1690,9 @@
 
 #define SPECIES_ORANGURU_MEGA                           1573
 #define SPECIES_PASSIMIAN_MEGA                          1574
-#define SPECIES_SIMISEAR_MEGA                           1575
-#define SPECIES_SIMISAGE_MEGA                           1576
-#define SPECIES_SIMIPOUR_MEGA                           1577
+#define SPECIES_MANDRASEAR                              1575
+#define SPECIES_BONOSAGE                                1576
+#define SPECIES_PONGAPOUR                               1577
 #define SPECIES_INNAPE                                  1578
 
 #define SPECIES_EGG                                     (SPECIES_INNAPE + 1)

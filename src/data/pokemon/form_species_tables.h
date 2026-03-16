@@ -2584,24 +2584,24 @@ static const u16 sPassimianFormSpeciesIdTable[] = {
 };
 
 
-// Simisear
-static const u16 sSimisearFormSpeciesIdTable[] = {
-    SPECIES_SIMISEAR,
-    SPECIES_SIMISEAR_MEGA,
-    FORM_SPECIES_END,
-};
+// // Simisear
+// static const u16 sSimisearFormSpeciesIdTable[] = {
+//     SPECIES_SIMISEAR,
+//     SPECIES_SIMISEAR_MEGA,
+//     FORM_SPECIES_END,
+// };
 
-// Simisage
-static const u16 sSimisageFormSpeciesIdTable[] = {
-    SPECIES_SIMISAGE,
-    SPECIES_SIMISAGE_MEGA,
-    FORM_SPECIES_END,
-};
+// // Simisage
+// static const u16 sSimisageFormSpeciesIdTable[] = {
+//     SPECIES_SIMISAGE,
+//     SPECIES_SIMISAGE_MEGA,
+//     FORM_SPECIES_END,
+// };
 
-// Simipour
-static const u16 sSimipourFormSpeciesIdTable[] = {
-    SPECIES_SIMIPOUR,
-    SPECIES_SIMIPOUR_MEGA,
-    FORM_SPECIES_END,
-};
+// // Simipour
+// static const u16 sSimipourFormSpeciesIdTable[] = {
+//     SPECIES_SIMIPOUR,
+//     SPECIES_SIMIPOUR_MEGA,
+//     FORM_SPECIES_END,
+// };
 
