@@ -1694,8 +1694,9 @@
 #define SPECIES_BONOSAGE                                1576
 #define SPECIES_PONGAPOUR                               1577
 #define SPECIES_INNAPE                                  1578
+#define SPECIES_INNONK                                  1579
 
-#define SPECIES_EGG                                     (SPECIES_INNAPE + 1)
+#define SPECIES_EGG                                     (SPECIES_INNONK + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

@@ -2561,6 +2561,7 @@ enum PokemonCry
     CRY_MEGA_SIMISAGE,
     CRY_MEGA_SIMIPOUR,
     CRY_INNAPE,
+    CRY_INNAPEREAL,
     CRY_COUNT,
 };
 

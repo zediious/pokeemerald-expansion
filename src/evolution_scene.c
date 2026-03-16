@@ -789,7 +789,8 @@ static void Task_EvolutionScene(u8 taskId)
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
             GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
 
-            // If starter was innape, store species of evolved mon to determine rival mon
+            // If starter was Innonk, and this evolution is Passimian or Oranguru, record
+            // thw evolved Pokemon species for Rival battle determination
             if (GetMonData(mon, MON_DATA_IS_STARTER)) {
                 if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_PASSIMIAN) {
                     VarSet(VAR_STARTER_INNAPE_EVO, SPECIES_PASSIMIAN);

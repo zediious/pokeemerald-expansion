@@ -6443,6 +6443,10 @@ Cry_Mega_Simipour::
 	.incbin "sound/direct_sound_samples/cries/mega_simipour.bin"
 
 	.align 2
+Cry_InnapeReal::
+	.incbin "sound/direct_sound_samples/cries/innapereal.bin"
+
+	.align 2
 Cry_Innape::
 	.incbin "sound/direct_sound_samples/cries/innape.bin"
 

@@ -395,14 +395,14 @@ const struct SpeciesInfo gSpeciesInfo[] =
         // .formSpeciesIdTable = sSimipourFormSpeciesIdTable,
         FOOTPRINT(Simipour)
     },
-    [SPECIES_INNAPE] =
+    [SPECIES_INNONK] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 70,
-        .baseDefense   = 65,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 65,
+        .baseHP        = 45,
+        .baseAttack    = 50,
+        .baseDefense   = 55,
+        .baseSpeed     = 55,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 45,
         .expYield = 42,
@@ -412,20 +412,20 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_AURA_BREAK, ABILITY_ANALYTIC, ABILITY_LIBERO },
+        .abilities = { ABILITY_ANALYTIC, ABILITY_AURA_BREAK, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Innape"),
+        .speciesName = _("Innonk"),
         .cryId = CRY_INNAPE,
-        .natDexNum = NATIONAL_DEX_INNAPE,
-        .categoryName = _("Scuffle"),
+        .natDexNum = NATIONAL_DEX_INNONK,
+        .categoryName = _("Chimp"),
         .height = 5,
         .weight = 120,
         .description = COMPOUND_STRING(
-            "Rarely seen, Innape is the precursor\n"
+            "Rarely seen, Innonk is the precursor\n"
             "to Oranguru and Passimian. While\n"
             "growing, they are highly protected\n"
             "and kept secret from others."),
-        .pokemonScale = 422,
+        .pokemonScale = 280,
         .pokemonOffset = 12,
         .trainerScale = 244,
         .trainerOffset = 0,
@@ -446,6 +446,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Innape,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        .levelUpLearnset = sInnapeLevelUpLearnset,
+        .teachableLearnset = sInnapeTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_INNAPE}),
         SHADOW(-2, 6, SHADOW_SIZE_M)
         FOOTPRINT(Innape)
         OVERWORLD(
@@ -457,10 +460,73 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gOverworldPalette_Tyrogue,
             gShinyOverworldPalette_Tyrogue
         )
-        .levelUpLearnset = sInnapeLevelUpLearnset,
-        .teachableLearnset = sInnapeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
-                                {EVO_LEVEL, 22, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
+    },
+    [SPECIES_INNAPE] =
+    {
+        .baseHP        = 75,
+        .baseAttack    = 80,
+        .baseDefense   = 70,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 45,
+        .expYield = 42,
+        .evYield_SpDefense = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_ANALYTIC, ABILITY_AURA_BREAK, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Innape"),
+        .cryId = CRY_INNAPE,
+        .natDexNum = NATIONAL_DEX_INNAPE,
+        .categoryName = _("Chimp"),
+        .height = 9,
+        .weight = 430,
+        .description = COMPOUND_STRING(
+            "Innape can carry a widely different\n"
+            "disposition to one another. Some may\n"
+            "thrash about, while others often\n"
+            "contemplate in silence."),
+        .pokemonScale = 340,
+        .pokemonOffset = 12,
+        .trainerScale = 244,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_InnapeReal,
+        .frontPicSize = MON_COORDS_SIZE(48, 48),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 5),
+        ),
+        .frontAnimId = ANIM_SHRINK_GROW_SLOW,
+        .backPic = gMonBackPic_InnapeReal,
+        .backPicSize = MON_COORDS_SIZE(48, 56),
+        .backPicYOffset = 12,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        .palette = gMonPalette_InnapeReal,
+        .shinyPalette = gMonShinyPalette_InnapeReal,
+        .iconSprite = gMonIcon_InnapeReal,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-2, 6, SHADOW_SIZE_M)
+        FOOTPRINT(Innape)
+        OVERWORLD(
+            sPicTable_Tyrogue,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Tyrogue,
+            gShinyOverworldPalette_Tyrogue
+        )
+        .levelUpLearnset = sInnapeRealLevelUpLearnset,
+        .teachableLearnset = sInnapeRealTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_PASSIMIAN, CONDITIONS({IF_ATK_GT_SPATK})},
+                                {EVO_LEVEL, 35, SPECIES_ORANGURU, CONDITIONS({IF_SPATK_GT_ATK})}),
     },
 };
 

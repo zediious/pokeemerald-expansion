@@ -2558,6 +2558,7 @@ cry Cry_Mega_Simisear
 cry Cry_Mega_Simisage
 cry Cry_Mega_Simipour
 cry Cry_Innape
+cry Cry_InnapeReal
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -5120,4 +5121,5 @@ cry_reverse Cry_Mega_Simisear
 cry_reverse Cry_Mega_Simisage
 cry_reverse Cry_Mega_Simipour
 cry_reverse Cry_Innape
+cry_reverse Cry_InnapeReal
 .endif @ P_CRIES_ENABLED
