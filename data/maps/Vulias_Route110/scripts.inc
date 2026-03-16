@@ -70,135 +70,155 @@ VuliasRoute110_EventScript_Trainer02::
 	end
 
 
-VuliasRoute110_EventScript_WonderingMan::
-# 74 "data/maps/Vulias_Route110/scripts.pory"
-	lock
-# 75 "data/maps/Vulias_Route110/scripts.pory"
-	faceplayer
-# 76 "data/maps/Vulias_Route110/scripts.pory"
-	msgbox VuliasRoute110_EventScript_WonderingMan_Text_0
-# 80 "data/maps/Vulias_Route110/scripts.pory"
+VuliasRoute110_EventScript_Trainer03::
+# 72 "data/maps/Vulias_Route110/scripts.pory"
+	trainerbattle_single TRAINER_HAILEY, VuliasRoute110_EventScript_Trainer03_Text_0, VuliasRoute110_EventScript_Trainer03_Text_1
+# 77 "data/maps/Vulias_Route110/scripts.pory"
+	msgbox VuliasRoute110_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
+# 78 "data/maps/Vulias_Route110/scripts.pory"
 	waitmessage
-# 81 "data/maps/Vulias_Route110/scripts.pory"
+	end
+
+
+VuliasRoute110_EventScript_Trainer04::
+# 83 "data/maps/Vulias_Route110/scripts.pory"
+	trainerbattle_single TRAINER_CHANDLER, VuliasRoute110_EventScript_Trainer04_Text_0, VuliasRoute110_EventScript_Trainer04_Text_1
+# 88 "data/maps/Vulias_Route110/scripts.pory"
+	msgbox VuliasRoute110_EventScript_Trainer04_Text_2, MSGBOX_AUTOCLOSE
+# 89 "data/maps/Vulias_Route110/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasRoute110_EventScript_WonderingMan::
+# 96 "data/maps/Vulias_Route110/scripts.pory"
+	lock
+# 97 "data/maps/Vulias_Route110/scripts.pory"
+	faceplayer
+# 98 "data/maps/Vulias_Route110/scripts.pory"
+	msgbox VuliasRoute110_EventScript_WonderingMan_Text_0
+# 102 "data/maps/Vulias_Route110/scripts.pory"
+	waitmessage
+# 103 "data/maps/Vulias_Route110/scripts.pory"
 	release
 	end
 
 
 VuliasRoute110_FirstArrivalWithJordanTrigger01::
-# 88 "data/maps/Vulias_Route110/scripts.pory"
+# 110 "data/maps/Vulias_Route110/scripts.pory"
 	lock
-# 89 "data/maps/Vulias_Route110/scripts.pory"
+# 111 "data/maps/Vulias_Route110/scripts.pory"
 	applymovement 0xFF, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0
-# 90 "data/maps/Vulias_Route110/scripts.pory"
+# 112 "data/maps/Vulias_Route110/scripts.pory"
 	delay 20
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_1
-# 92 "data/maps/Vulias_Route110/scripts.pory"
+# 114 "data/maps/Vulias_Route110/scripts.pory"
 	waitmovement
-# 93 "data/maps/Vulias_Route110/scripts.pory"
+# 115 "data/maps/Vulias_Route110/scripts.pory"
 	goto VuliasRoute110_FirstArrivalWithJordan
 	return
 
 
 VuliasRoute110_FirstArrivalWithJordanTrigger02::
-# 97 "data/maps/Vulias_Route110/scripts.pory"
+# 119 "data/maps/Vulias_Route110/scripts.pory"
 	lock
-# 98 "data/maps/Vulias_Route110/scripts.pory"
+# 120 "data/maps/Vulias_Route110/scripts.pory"
 	applymovement 0xFF, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0
-# 99 "data/maps/Vulias_Route110/scripts.pory"
+# 121 "data/maps/Vulias_Route110/scripts.pory"
 	delay 20
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, VuliasRoute110_FirstArrivalWithJordanTrigger02_Movement_0
-# 101 "data/maps/Vulias_Route110/scripts.pory"
+# 123 "data/maps/Vulias_Route110/scripts.pory"
 	waitmovement
-# 102 "data/maps/Vulias_Route110/scripts.pory"
+# 124 "data/maps/Vulias_Route110/scripts.pory"
 	goto VuliasRoute110_FirstArrivalWithJordan
 	return
 
 
 VuliasRoute110_FirstArrivalWithJordan::
-# 107 "data/maps/Vulias_Route110/scripts.pory"
-	msgbox VuliasRoute110_FirstArrivalWithJordan_Text_0
-# 119 "data/maps/Vulias_Route110/scripts.pory"
-	waitmessage
-# 120 "data/maps/Vulias_Route110/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, VuliasRoute110_FirstArrivalWithJordan_Movement_0
-# 121 "data/maps/Vulias_Route110/scripts.pory"
-	waitmovement
-# 122 "data/maps/Vulias_Route110/scripts.pory"
-	destroyfollowernpc
-# 123 "data/maps/Vulias_Route110/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
-# 124 "data/maps/Vulias_Route110/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 5
-# 127 "data/maps/Vulias_Route110/scripts.pory"
-	questupdated 0
 # 129 "data/maps/Vulias_Route110/scripts.pory"
+	msgbox VuliasRoute110_FirstArrivalWithJordan_Text_0
+# 141 "data/maps/Vulias_Route110/scripts.pory"
+	waitmessage
+# 142 "data/maps/Vulias_Route110/scripts.pory"
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, VuliasRoute110_FirstArrivalWithJordan_Movement_0
+# 143 "data/maps/Vulias_Route110/scripts.pory"
+	waitmovement
+# 144 "data/maps/Vulias_Route110/scripts.pory"
+	destroyfollowernpc
+# 145 "data/maps/Vulias_Route110/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
+# 146 "data/maps/Vulias_Route110/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 5
+# 149 "data/maps/Vulias_Route110/scripts.pory"
+	questupdated 0
+# 151 "data/maps/Vulias_Route110/scripts.pory"
 	release
 	end
 
 
-# 89 "data/maps/Vulias_Route110/scripts.pory"
+# 111 "data/maps/Vulias_Route110/scripts.pory"
 VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0:
-# 89 "data/maps/Vulias_Route110/scripts.pory"
+# 111 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
 	step_end
 
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_1:
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	walk_left
-# 91 "data/maps/Vulias_Route110/scripts.pory"
+# 113 "data/maps/Vulias_Route110/scripts.pory"
 	face_up
 	step_end
 
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 VuliasRoute110_FirstArrivalWithJordanTrigger02_Movement_0:
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	walk_left
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	walk_down
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 100 "data/maps/Vulias_Route110/scripts.pory"
+# 122 "data/maps/Vulias_Route110/scripts.pory"
 	face_up
 	step_end
 
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 VuliasRoute110_FirstArrivalWithJordan_Movement_0:
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
-# 120 "data/maps/Vulias_Route110/scripts.pory"
+# 142 "data/maps/Vulias_Route110/scripts.pory"
 	walk_right
 	step_end
 
@@ -240,16 +260,40 @@ VuliasRoute110_EventScript_Trainer02_Text_1:
 VuliasRoute110_EventScript_Trainer02_Text_2:
 # 65 "data/maps/Vulias_Route110/scripts.pory"
 	.string "I love Bird Pokemon, they make\n"
-	.string "me happy!.$"
+	.string "me happy!$"
+
+VuliasRoute110_EventScript_Trainer03_Text_0:
+# 74 "data/maps/Vulias_Route110/scripts.pory"
+	.string "Splash!$"
+
+VuliasRoute110_EventScript_Trainer03_Text_1:
+# 75 "data/maps/Vulias_Route110/scripts.pory"
+	.string "I'm still splashing!$"
+
+VuliasRoute110_EventScript_Trainer03_Text_2:
+# 77 "data/maps/Vulias_Route110/scripts.pory"
+	.string "Nobody can stop me from splashing!$"
+
+VuliasRoute110_EventScript_Trainer04_Text_0:
+# 85 "data/maps/Vulias_Route110/scripts.pory"
+	.string "I'm making bigger splashes than her!$"
+
+VuliasRoute110_EventScript_Trainer04_Text_1:
+# 86 "data/maps/Vulias_Route110/scripts.pory"
+	.string "Awh, that was a big splash!$"
+
+VuliasRoute110_EventScript_Trainer04_Text_2:
+# 88 "data/maps/Vulias_Route110/scripts.pory"
+	.string "I'm the biggest splasher!$"
 
 VuliasRoute110_EventScript_WonderingMan_Text_0:
-# 76 "data/maps/Vulias_Route110/scripts.pory"
+# 98 "data/maps/Vulias_Route110/scripts.pory"
 	.string "{COLOR GREEN}Wondering Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I wonder how I can get\n"
 	.string "up that cliff...\p"
 	.string "Confound it! I just can't {COLOR RED}Rock Climb!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 VuliasRoute110_FirstArrivalWithJordan_Text_0:
-# 107 "data/maps/Vulias_Route110/scripts.pory"
+# 129 "data/maps/Vulias_Route110/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We made it through! I don't\n"
 	.string "know about you, but my Pokemon got\l"
 	.string "much more powerful from that! I wonder\l"
