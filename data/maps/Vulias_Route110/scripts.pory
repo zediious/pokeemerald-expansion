@@ -63,7 +63,29 @@ script VuliasRoute110_EventScript_Trainer02{
         "I guess the sky isn't the limit."
     )
     msgbox("I love Bird Pokemon, they make
-            me happy!.", MSGBOX_AUTOCLOSE)
+            me happy!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasRoute110_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_HAILEY,
+        "Splash!",
+        "I'm still splashing!"
+    )
+    msgbox("Nobody can stop me from splashing!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasRoute110_EventScript_Trainer04{
+    trainerbattle_single(
+        TRAINER_CHANDLER,
+        "I'm making bigger splashes than her!",
+        "Awh, that was a big splash!"
+    )
+    msgbox("I'm the biggest splasher!", MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
