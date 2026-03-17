@@ -1263,6 +1263,9 @@ const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 const u8 gText_MainQuestDesc_01[] = _("Jordan recommends I go east to Gerbon\nTown to visit The Palladium!");
 const u8 gText_MainQuestDesc_02[] = _("To get stronger, Jordan and I should\ngo to Sawgrass Forest. Jordan claims\nthere is a good place to train there!");
 const u8 gText_MainQuestDesc_03[] = _("We got through Sawgrass Forest! Now\nI need to go through Route 110 back\nto Gerbon Town, Jordan is waiting!");
+const u8 gText_MainQuestDesc_04[] = _("It's the morning of the Palladium\ntournament! Jordan is waiting at Gerbon\nTown for me, I can take time to train.")
+const u8 gText_MainQuestDesc_05[] = _("The Palladium Tournament is\nunderway!.")
+const u8 gText_MainQuestDesc_06[] = _("After winning the Palladium tourney,\nJordan and I are off to the next one\nin Woltia City, through Mullen Cave.")
 
 const u8 gText_SideQuestDesc_1[] = _("Description 1");
 const u8 gText_SideQuestDesc_2[] = _("Description 2");
@@ -1333,6 +1336,8 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 const u8 gText_MainQuestMap_01[] = _("Gerbon Town");
 const u8 gText_MainQuestMap_02[] = _("Sawgrass Forest");
 const u8 gText_MainQuestMap_03[] = _("Route 110");
+const u8 gText_MainQuestMap_04[] = _("The Palladium");
+const u8 gText_MainQuestMap_05[] = _("Mulled Cave");
 
 const u8 gText_SideQuestMap1[] = _("Map 1");
 const u8 gText_SideQuestMap2[] = _("Map 2");

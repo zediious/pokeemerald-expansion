@@ -2196,6 +2196,9 @@ extern const u8 gText_SideQuestName_30[];
 extern const u8 gText_MainQuestDesc_01[];
 extern const u8 gText_MainQuestDesc_02[];
 extern const u8 gText_MainQuestDesc_03[];
+extern const u8 gText_MainQuestDesc_04[];
+extern const u8 gText_MainQuestDesc_05[];
+extern const u8 gText_MainQuestDesc_06[];
 
 extern const u8 gText_SideQuestDesc_1[];
 extern const u8 gText_SideQuestDesc_2[];
@@ -2266,6 +2269,8 @@ extern const u8 gText_SideQuestDoneDesc_30[];
 extern const u8 gText_MainQuestMap_01[];
 extern const u8 gText_MainQuestMap_02[];
 extern const u8 gText_MainQuestMap_03[];
+extern const u8 gText_MainQuestMap_04[];
+extern const u8 gText_MainQuestMap_05[];
 
 extern const u8 gText_SideQuestMap1[];
 extern const u8 gText_SideQuestMap2[];

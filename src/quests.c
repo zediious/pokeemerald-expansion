@@ -1455,6 +1455,21 @@ void GenerateQuestLocation(s32 questId)
 			{
 				StringCopy(gStringVar2, gText_MainQuestMap_03);
 			}
+			// Awoke at Jordan's ready to start first tournament
+			else if (mainStoryTracker == 6 || mainStoryTracker == 7)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_01);
+			}
+			// Palladium Tournament underway
+			else if (mainStoryTracker == 8 | mainStoryTracker == 9)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_04);
+			}
+			// Player won tourney, on way to Woltia through Mulled Cave
+			else if (mainStoryTracker == 10)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_05);
+			}
 			else {
 				StringCopy(gStringVar2, sSideQuests[questId].map);
 			}
@@ -1536,6 +1551,18 @@ void UpdateQuestFlavorText(s32 questId)
 		else if (mainStoryTracker == 5)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_03);
+		}
+		else if (mainStoryTracker == 6 || mainStoryTracker == 7)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_04);
+		}
+		else if (mainStoryTracker == 8 || mainStoryTracker == 9)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_05);
+		}
+		else if (mainStoryTracker == 10)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_06);
 		}
 	}
 	else
@@ -1644,6 +1671,14 @@ void DetermineSpriteType(s32 questId)
 			else if (mainStoryTracker >= 3 && mainStoryTracker <= 5)
 			{
 				spriteId = OBJ_EVENT_GFX_STEVEN;
+			}
+			else if (mainStoryTracker >= 6 || mainStoryTracker <= 9)
+			{
+				spriteId = OBJ_EVENT_GFX_ROXANNE;
+			}
+			else if (mainStoryTracker >= 10)
+			{
+				spriteId = OBJ_EVENT_GFX_POKE_BALL;
 			}
 			else {
 				spriteId = sSideQuests[questId].sprite;
