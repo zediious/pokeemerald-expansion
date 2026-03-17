@@ -165,43 +165,36 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
 script GerbonBattleHall_TournamentBattleTrigger {
       if (var(VAR_GERBON_TOURNAMENT_STATE) == 2) {
         setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_MARC)
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GERBONTOURNEY_TRAINER01)
         clearflag(FLAG_GERBON_TOURNEY_TRAINER01)
         addobject(GERBONTOURNEY_TRAINER01)
     }
 
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 3) {
         setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_CRISTIAN)
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GERBONTOURNEY_TRAINER02)
         clearflag(FLAG_GERBON_TOURNEY_TRAINER02)
         addobject(GERBONTOURNEY_TRAINER02)
     }
 
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 4) {
         setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRYAN)
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GERBONTOURNEY_TRAINER03)
         clearflag(FLAG_GERBON_TOURNEY_TRAINER03)
         addobject(GERBONTOURNEY_TRAINER03)
     }
 
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 5) {
-        
-        // Determine Jordan starter
-        if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
-            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_110_TORCHIC)
-        }
-        elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
-            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_119_TREECKO)
-        }
-        elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
-            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_103_TORCHIC)
-        }
-        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
-            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_110_TREECKO)
-        }
+        // Not actually Jordan's starter, but used to buffer his name
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_110_TORCHIC)
         clearflag(FLAG_GERBON_TOURNEY_TRAINER04)
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GERBONTOURNEY_TRAINER04)
         addobject(GERBONTOURNEY_TRAINER04)
     }
 
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 6) {
         setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_ROXANNE_1)
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GERBONTOURNEY_TRAINER05)
         clearflag(FLAG_GERBON_TOURNEY_TRAINER05)
         addobject(GERBONTOURNEY_TRAINER05)
     }
@@ -228,19 +221,90 @@ script GerbonBattleHall_TournamentBattle {
     ))
     waitmovement
 
-    // Player and marc walk towards center
+    // Player and trainer walk towards center
     applymovement(0xFF, moves(
         walk_right * 3
     ))
-    applymovement(GERBONTOURNEY_TRAINER01, moves(
+    applymovement(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, moves(
         walk_left * 3
     ))
     waitmovement
     delay(30)
 
-    // Begin battle VS TRAINER_MARC
-    trainerbattle_single(VAR_GERBON_TOURNAMENT_OPPONENT, "The battle begins!", "And the winner is {PLAYER}!", GerbonBattleHall_TournamentBattleAfter)
-    end
+    // Begin battle VS current trainer
+      if (var(VAR_GERBON_TOURNAMENT_STATE) == 2) {
+        trainerbattle_single(
+            TRAINER_MARC,
+            "We're gonna have a rockin time!",
+            "I've been rocked!",
+            event_script=GerbonBattleHall_TournamentBattleAfter,
+        )
+        }
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 3) {
+        trainerbattle_single(
+            TRAINER_CRISTIAN,
+            "My Pokemon and I are unstoppable!",
+            "Immovable object, you know how it goes.",
+            event_script=GerbonBattleHall_TournamentBattleAfter,
+        )
+    }
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 4) {
+        trainerbattle_single(
+            TRAINER_BRYAN,
+            "The fruits of my labor will show!",
+            "My fruits!",
+            event_script=GerbonBattleHall_TournamentBattleAfter,
+        )
+    }
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 5) {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! We both made it to
+                the end! It all comes down to this!")
+        waitmessage
+
+        // Determine Jordan starter
+        if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+            trainerbattle_single(
+                TRAINER_BRENDAN_ROUTE_110_TORCHIC,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=GerbonBattleHall_TournamentBattleAfter,
+            )
+        }
+        elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+            trainerbattle_single(
+                TRAINER_BRENDAN_ROUTE_119_TREECKO,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=GerbonBattleHall_TournamentBattleAfter,
+            )
+        }
+        elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+            trainerbattle_single(
+                TRAINER_BRENDAN_ROUTE_103_TORCHIC,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=GerbonBattleHall_TournamentBattleAfter,
+            )
+        }
+        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
+            trainerbattle_single(
+                TRAINER_BRENDAN_ROUTE_110_TREECKO,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=GerbonBattleHall_TournamentBattleAfter,
+            )
+        }
+    }
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 6) {
+        trainerbattle_single(
+            TRAINER_ROXANNE_1,
+            "Congratulations on making it this far!
+            Unfortunately, I'm going to have to
+            your train here!",
+            "Shows what I know!",
+            event_script=GerbonBattleHall_TournamentBattleAfter,
+        )
+    }
 }
 
 script GerbonBattleHall_TournamentBattleAfter {
@@ -253,7 +317,7 @@ script GerbonBattleHall_TournamentBattleAfter {
 
     msgbox("DING DING DING ...
     
-            Congraguations {PLAYER}! What a
+            Congragulations {PLAYER}! What a
             battle that was!
             
             The next match will begin soon!" )
@@ -291,15 +355,16 @@ script GerbonBattleHall_TournamentPlayerWon {
 
         setflag(FLAG_BADGE01_GET)
         playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You got the Palladium Ribbon!", MSGBOX_SIGN)
         waitfanfare
-
-        playfanfare(MUS_LEVEL_UP)
+        waitmessage
 
         // Let player know about level cap
-        waitfanfare
+        playfanfare(MUS_LEVEL_UP)
         msgbox("The level cap has been raised to 23!", MSGBOX_SIGN)
-
+        waitfanfare
         waitmessage
+        
         delay(30)
         msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little
                 something extra from me, I think you'll
