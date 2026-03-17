@@ -1,0 +1,86 @@
+mapscripts Vulias_Route102_MapScripts {}
+
+// Signs and Items
+
+// Mulled Cave
+script VuliasRoute102_EventScript_MulledCaveSign {
+    lockall
+    msgbox("Mullen Cave")
+    releaseall
+}
+
+// Crossroad sign
+script VuliasRoute102_EventScript_CrossroadSign {
+    lockall
+    msgbox("{RIGHT_ARROW} Cian Heights to Morien Town
+            {LEFT_ARROW} Mulled Cave to Woltia City")
+    releaseall
+}
+
+// Poke Ball with Expert Belt
+script VuliasRoute102_EventScript_HiddenItemBall {
+    lock
+    giveitem(ITEM_EXPERT_BELT, 1)
+    removeobject(ROUTE102_EXPERT_BELT)
+    setflag(FLAG_ROUTE102_EXPERT_BELT)
+    release
+    end
+}
+
+//// Misc NPCs
+
+// Man of the broken bridge
+script VuliasRoute102_EventScript_BrokenBridgeMan {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Concerned Hiker: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bah! And I prepared
+            all night for this trip! The {COLOR RED}bridge{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} has
+            collapsed!
+            
+            I called the service men, but I know
+            they take a long time to fix these
+            things. I suppose my only detour
+            will be through {COLOR RED}Mulled Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but that
+            will require me to travel so far!
+            
+            I think I'll just stay home.")
+    waitmessage
+    release
+    end
+}
+
+//// Route trainers
+script Route102_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_DEANDRE,
+        "I love the color of the leaves!",
+        "I didn't love that so much!"
+    )
+    msgbox("Pick on someone your own size!.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script Route102_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_NANCY,
+        "What a lovely day!",
+        "And a lovely battle!"
+    )
+    msgbox("I love spending time on this path.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script Route102_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_ALIX,
+        "My Pokemon sensed you, they want
+        to battle!",
+        "Hmm, maybe they were just hungry?"
+    )
+    msgbox("Hold on Meditite, I think I've got a few
+            berries in here somewhere...", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}

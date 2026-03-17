@@ -9443,6 +9443,16 @@
       "secondary_tileset": "gTileset_RustboroGym",
       "border_filepath": "data/layouts/GerbonTown_BattleHall_PrepRoom/border.bin",
       "blockdata_filepath": "data/layouts/GerbonTown_BattleHall_PrepRoom/map.bin"
+    {
+      "id": "LAYOUT_VULIAS_ROUTE102",
+      "name": "Vulias_Route102_Layout",
+      "width": 50,
+      "height": 47,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_AutumnRuins",
+      "border_filepath": "data/layouts/Vulias_Route102/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Route102/map.bin"
+    },
     }
   ]
 }
