@@ -28,6 +28,10 @@ script GerbonTown_BattleHallDisables{
 
     // Disable the Palladium tournament battlers
     setflag(GERBONTOURNEY_TRAINER01)
+    setflag(GERBONTOURNEY_TRAINER02)
+    setflag(GERBONTOURNEY_TRAINER03)
+    setflag(GERBONTOURNEY_TRAINER04)
+    setflag(GERBONTOURNEY_TRAINER05)
 
     // Prevent from triggering again
     setvar(VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1)
