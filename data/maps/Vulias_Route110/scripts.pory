@@ -1,11 +1,5 @@
 mapscripts Vulias_Route110_MapScripts {}
 
-// Disable blockers in Gerbon before entering warp, and advance the story
-script VuliasRoute110_EventScript_TriggerDisableGerbonBlockers {
-    setflag(FLAG_GERBONSOUTH_BLOCKERS)
-    setvar(VAR_ZED_STORY_TRACKER, 6)
-}
-
 //// Signs and Items
 
 // To Gerbon Town and Plume Hamlet
@@ -13,6 +7,14 @@ script VuliasRoute110_EventScript_DirectionSign {
     lock
     msgbox("{RIGHT_ARROW} To Gerbon Town
             {LEFT_ARROW} To Plume Hamlet")
+    waitmessage
+    release
+}
+
+// Gerbon Town sign
+script VuliasRoute110_EventScript_GerbonSign{
+    lock
+    msgbox("Gerbon Town")
     waitmessage
     release
 }
@@ -37,6 +39,17 @@ script VuliasRoute110_EventScript_BrightPowderGive {
     giveitem(ITEM_BRIGHT_POWDER, 1)
     setflag(FLAG_ROUTE110_POKEBALLSOUTHDELTA)
     removeobject(ROUTE110_BRIGHT_POWDER)
+    waitmessage
+    release
+    end
+}
+
+// Rare Candy Pokeball
+script VuliasRoute110_EventScript_RareCandyGive {
+    lock
+    giveitem(ITEM_RARE_CANDY, 1)
+    setflag(FLAG_ROUTE110_POKEBALLSOUTHDELTA)
+    removeobject(ROUTE110_RARECANDY)
     waitmessage
     release
     end
@@ -148,6 +161,38 @@ script VuliasRoute110_FirstArrivalWithJordan {
     // Show messagebox that main quest is updated, and play chime
     questupdated(0)
 
+    release
+    end
+}
+
+// Player reached Jordan at end of Route
+script VuliasRoute110_PlayerArrivedToJordan {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are! How did your
+            training go? Mine have gotten so much
+            stronger, but they're tired! Speaking
+            of which, I'm also tired!
+            
+            The tournament starts tomorrow, so we
+            better make sure we're well rested.
+            Let's head back to my place, I'll
+            make us a proper supper!")
+
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    delay(30)
+    playfanfare(MUS_RG_POKE_FLUTE)
+    waitfanfare
+    delay(30)
+    setflag(FLAG_GERBONSOUTH_BLOCKERS)
+    setflag(FLAG_ROUTE110_JORDAN)
+    removeobject(ROUTE110_JORDAN)
+    clearflag(FLAG_JORDANINHOME)
+    setvar(VAR_ZED_STORY_TRACKER, 6)
+
+    // Warp player back to Jordan's house
+    warp(MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4)
     release
     end
 }

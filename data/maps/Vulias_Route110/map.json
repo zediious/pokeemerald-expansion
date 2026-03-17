@@ -65,7 +65,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VuliasRoute110_EventScript_BrightPowderGive",
-      "flag": "0"
+      "flag": "FLAG_ROUTE110_POKEBALLSOUTHDELTA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
@@ -96,16 +96,30 @@
     {
       "local_id": "ROUTE110_JORDAN",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN",
-      "x": 62,
-      "y": 4,
+      "x": 58,
+      "y": 10,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "VuliasRoute110_PlayerArrivedToJordan",
       "flag": "FLAG_ROUTE110_JORDAN"
+    },
+    {
+      "local_id": "ROUTE110_RARECANDY",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 66,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VuliasRoute110_EventScript_RareCandyGive",
+      "flag": "FLAG_ROUTE110_POKEBALLRARECANDY"
     }
   ],
   "warp_events": [
@@ -146,24 +160,6 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 60,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_ZED_STORY_TRACKER",
-      "var_value": "5",
-      "script": "VuliasRoute110_EventScript_TriggerDisableGerbonBlockers"
-    },
-    {
-      "type": "trigger",
-      "x": 61,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_ZED_STORY_TRACKER",
-      "var_value": "5",
-      "script": "VuliasRoute110_EventScript_TriggerDisableGerbonBlockers"
-    },
     {
       "type": "trigger",
       "x": 22,
@@ -215,6 +211,22 @@
       "elevation": 0,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS"
+    },
+    {
+      "type": "sign",
+      "x": 59,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VuliasRoute110_EventScript_GerbonSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 61,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_PEARL",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD"
     }
   ]
 }
