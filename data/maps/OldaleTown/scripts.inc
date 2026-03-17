@@ -453,7 +453,9 @@ GerbonTownTourney_JordanAfter::
 	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 371 "data/maps/OldaleTown/scripts.pory"
 	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
-# 372 "data/maps/OldaleTown/scripts.pory"
+# 374 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_ROUTE102_STAIRBLOCKERS
+# 376 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
@@ -644,8 +646,8 @@ GerbonTownTourney_JordanAfter_Text_0:
 	.string "I'll get you back for the rest of the\n"
 	.string "meal, I promise! Anyways, Woltia City\l"
 	.string "is North and then west, through\l"
-	.string "{COLOR RED}Route 102, and Mulled Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.\p"
-	.string "Mulled Cave is full of Pokemon, so we'll\n"
+	.string "{COLOR RED}Route 102, and Mullen Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.\p"
+	.string "Mullen Cave is full of Pokemon, so we'll\n"
 	.string "find lots of new partners. Maybe I'll\l"
 	.string "see you while I'm there. Catch you\l"
 	.string "later {PLAYER}!$"

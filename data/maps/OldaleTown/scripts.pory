@@ -356,9 +356,9 @@ script GerbonTownTourney_JordanAfter {
             I'll get you back for the rest of the
             meal, I promise! Anyways, Woltia City
             is North and then west, through
-            {COLOR RED}Route 102, and Mulled Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
+            {COLOR RED}Route 102, and Mullen Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
             
-            Mulled Cave is full of Pokemon, so we'll
+            Mullen Cave is full of Pokemon, so we'll
             find lots of new partners. Maybe I'll
             see you while I'm there. Catch you
             later {PLAYER}!")
@@ -369,6 +369,10 @@ script GerbonTownTourney_JordanAfter {
     setvar(VAR_ZED_STORY_TRACKER, 10)
     setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
     removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE)
+
+    // Disable the cops blocking Mullen Cave
+    setflag(FLAG_ROUTE102_STAIRBLOCKERS)
+
     release
     end
 }
