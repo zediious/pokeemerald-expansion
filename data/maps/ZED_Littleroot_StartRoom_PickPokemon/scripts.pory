@@ -104,6 +104,7 @@ script LittlerootTown_StartGame_WarpAfterPickMon{
     setflag(FLAG_SYS_QUEST_MENU_GET)
     # Enable DexNav
     setflag(FLAG_UNUSED_0x267)
+    setflag(FLAG_UNUSED_0x268)
     // Enable running shoes
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
     setflag(FLAG_SYS_B_DASH)

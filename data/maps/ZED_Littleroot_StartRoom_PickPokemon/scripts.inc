@@ -159,13 +159,15 @@ LittlerootTown_StartGame_WarpAfterPickMon::
 	setflag FLAG_SYS_QUEST_MENU_GET
 # 106 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	setflag FLAG_UNUSED_0x267
-# 108 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 107 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	setflag FLAG_UNUSED_0x268
 # 109 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 # 110 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	warp MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4
+	setflag FLAG_SYS_B_DASH
 # 111 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	warp MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4
+# 112 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	release
 	return
 
