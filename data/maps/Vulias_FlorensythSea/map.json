@@ -1,0 +1,35 @@
+{
+  "id": "MAP_VULIAS_FLORENSYTH_SEA",
+  "name": "Vulias_FlorensythSea",
+  "layout": "LAYOUT_VULIAS_FLORENSYTH_SEA",
+  "music": "MUS_ROUTE119",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_OLDALE_TOWN",
+      "offset": 7,
+      "direction": "left"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FlorensythSea_EventScript_GerbonTownSign"
+    }
+  ]
+}

@@ -1174,7 +1174,9 @@
     "SevenIsland_SevaultCanyon_House_Frlg"
   ],
   "gMapGroup_ZEDTownsAndRoutes": [
-    "Vulias_Route110"
+    "Vulias_Route110",
+    "Vulias_FlorensythSea",
+    "Vulias_Route102"
   ],
   "gMapGroup_ZEDMiscInt": [
     "Vulias_Route110_PokemonCenter"

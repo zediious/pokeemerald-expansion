@@ -1634,6 +1634,14 @@
     {
       "id": "MAPSEC_VULIAS_ROUTE110",
       "name": "Route 110"
+    },
+    {
+      "id": "MAPSEC_Florensyth_Sea",
+      "name": "Florensyth Sea"
+    },
+    {
+      "id": "MAPSEC_MULLEN_CAVE",
+      "name": "Mullen Cave"
     }
   ]
 }

@@ -1,0 +1,9 @@
+mapscripts Vulias_FlorensythSea_MapScripts {}
+
+// Near entrances to town
+script FlorensythSea_EventScript_GerbonTownSign {
+    lockall
+    msgbox("{RIGHT_ARROW} Florensyth Sea
+            {LEFT_ARROW} Gerbon Town")
+    releaseall
+}
