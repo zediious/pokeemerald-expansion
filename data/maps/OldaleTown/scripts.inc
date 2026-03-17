@@ -447,7 +447,8 @@ GerbonTownTourney_JordanAfter::
 	applymovement GERBON_TOWN_JORDAN_FIRSTBATTLE, GerbonTownTourney_JordanAfter_Movement_0
 # 366 "data/maps/OldaleTown/scripts.pory"
 	waitmovement
-# 367 "data/maps/OldaleTown/scripts.pory"
+# 369 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 10
 	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 368 "data/maps/OldaleTown/scripts.pory"
 	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE

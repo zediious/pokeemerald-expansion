@@ -368,6 +368,7 @@ script GerbonTownTourney_JordanAfter {
         walk_down, walk_left * 12
     ))
     waitmovement
+    setvar(VAR_ZED_STORY_TRACKER, 10)
     setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
     removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE)
     release
