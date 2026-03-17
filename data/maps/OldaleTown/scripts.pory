@@ -1,6 +1,7 @@
 mapscripts OldaleTown_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_ZED_STORY_TRACKER, 2: GerbonTownBattleHall_OutdoorBattleStart
+        VAR_ZED_STORY_TRACKER, 8: GerbonTownTourney_JordanAfter
     ]
 
     MAP_SCRIPT_ON_TRANSITION: GerbonTown_MapScript_OnTransition
@@ -12,18 +13,21 @@ script GerbonTown_MapScript_OnTransition {
     }
     end
 }
-
 // Disables elements of the palladium show until it's been initiated
 script GerbonTown_BattleHallDisables{
     setflag(FLAG_CANDACE01_MON2)
     setflag(FLAG_GERBON_BATTLEHALL_JORDAN01)
     setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
     setflag(FLAG_GERBON_TOWN_BLOCKERS)
+    setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
     removeobject(GERBONBATTLEHALL_CANDACE_01_MANTINE, MAP_GERBON_TOWN_BATTLE_HALL)
     removeobject(GERBON_BATTLEHALL_JORDAN_01, MAP_GERBON_TOWN_BATTLE_HALL)
     removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE, MAP_OLDALE_TOWN)
     removeobject(GERBON_PALLADIUM_BLOCKER_1, MAP_OLDALE_TOWN)
     removeobject(GERBON_PALLADIUM_BLOCKER_2, MAP_OLDALE_TOWN)
+
+    // Disable the Palladium tournament battlers
+    setflag(GERBONTOURNEY_TRAINER01)
 
     // Prevent from triggering again
     setvar(VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1)
@@ -144,6 +148,7 @@ script GerbonTown_EventScript_KidRunIntoPlayer {
         waitmovement
     }
 
+    playse(SE_PIN)
     delay(60)
     msgbox("{COLOR GREEN}Reckless Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Ouch, that hurt!
             I'm sorry, I'm just so excited for the
@@ -289,4 +294,74 @@ script GerbonTown_OutdoorBattleEnd {
     questupdated(0)
 
     release
+}
+
+//// Palladium Tournament
+
+script GerbonTownTourney_JordanStartOutside {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are! It's time to
+            start the tournament! I should explain
+            exactly how it works, eh?
+            
+            16 trainers are entering the tourny
+            and it will be a swiss matchup.
+            You will battle a total of four trainers,
+            then you'll be facing the current
+            {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Julia!
+
+            When the tournament starts, you'll be in
+            the prep room, where you'll be able to
+            heal up, and start your next match.
+            
+            Are you ready to go? You'll be able to
+            heal between your matches, but you
+            can't leave once the tournament has
+            started!", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's go!")
+        waitmessage
+        setvar(VAR_GERBON_TOURNAMENT_STATE, 1)
+        setvar(VAR_ZED_STORY_TRACKER, 8)
+        warp(MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5)
+        release
+        end
+    }
+}
+
+// After the tournament, Jordan guides player North of Gerbon Town
+script GerbonTownTourney_JordanAfter {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was amazing! I'm a little
+            miffed that I didn't win, but I can't
+            deny what I bore witness to! I said it
+            before, but you must have really been
+            practicing!
+            
+            Don't worry though, because I'm going
+            to get you next time! That's right!
+            We're going to battle in the next
+            tournament in {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+            
+            ...
+            
+            I'll get you back for the rest of the
+            meal, I promise! Anyways, Woltia City
+            is North and then west, through
+            {COLOR RED}Route 102, and Mulled Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
+            
+            Mulled Cave is full of Pokemon, so we'll
+            find lots of new partners. Maybe I'll
+            see you while I'm there. Catch you
+            later {PLAYER}!")
+    applymovement(GERBON_TOWN_JORDAN_FIRSTBATTLE, moves(
+        walk_down, walk_left * 12
+    ))
+    waitmovement
+    setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
+    removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE)
+    release
+    end
 }

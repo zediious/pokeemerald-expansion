@@ -1760,3 +1760,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Route110/scripts.inc"
 
 	.include "data/maps/Vulias_Route110_PokemonCenter/scripts.inc"
+
+	.include "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.inc"

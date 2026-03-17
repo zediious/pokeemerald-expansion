@@ -77,14 +77,14 @@
 #define FLAG_SAWGRASSFOREST_SUPERPOTION         0x37 // Super Potion in Sawgrass Forest
 #define FLAG_ROUTE110_POKEBALLSOUTHDELTA        0x38 // Pokeball south of River delta with Bright Powder
 #define FLAG_ROUTE110_JORDAN                    0x39 // Jordan at north end of Route 110
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
+#define FLAG_ROUTE110_POKEBALLRARECANDY         0x3A // Rare Candy poke ball on route 110
+#define FLAG_JORDANINHOME                       0x3B // Jordan in his house
+#define FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE      0x3C // Jordan outside Palladium, waiting for player
+#define FLAG_GERBON_TOURNEY_TRAINER01           0x3D // Gerbon Tourney Trainer Marc
+#define FLAG_GERBON_TOURNEY_TRAINER02           0x3E // Gerbon Tourney Trainer Cristain
+#define FLAG_GERBON_TOURNEY_TRAINER03           0x3F // Gerbon Tourney Trainer Bryan
+#define FLAG_GERBON_TOURNEY_TRAINER04           0x40 // Gerbon Tourney Trainer Jordan
+#define FLAG_GERBON_TOURNEY_TRAINER05           0x41 // Gerbon Tourney Trainer Julia
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
@@ -560,7 +560,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                (FLAG_HIDDEN_ITEMS_START + 0x06) // Route 101 revive
 #define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) // Route 110 Great Ball
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08) // Route 110 Revive
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09)
+#define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09) // Route 110 Pearl
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x0B)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x0C)

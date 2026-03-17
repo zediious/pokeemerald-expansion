@@ -9433,6 +9433,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/Vulias_Route110_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Route110_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_GERBON_TOWN_BATTLE_HALL_PREP_ROOM",
+      "name": "GerbonTown_BattleHall_PrepRoom_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/GerbonTown_BattleHall_PrepRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GerbonTown_BattleHall_PrepRoom/map.bin"
     }
   ]
 }

@@ -1,4 +1,12 @@
-mapscripts GerbonTown_BattleHall_MapScripts {}
+mapscripts GerbonTown_BattleHall_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_GERBON_TOURNAMENT_STATE, 2: GerbonBattleHall_TournamentBattleTrigger
+        VAR_GERBON_TOURNAMENT_STATE, 3: GerbonBattleHall_TournamentBattleTrigger
+        VAR_GERBON_TOURNAMENT_STATE, 4: GerbonBattleHall_TournamentBattleTrigger
+        VAR_GERBON_TOURNAMENT_STATE, 5: GerbonBattleHall_TournamentBattleTrigger
+        VAR_GERBON_TOURNAMENT_STATE, 6: GerbonBattleHall_TournamentBattleTrigger
+    ]
+}
 
 // Player walked in for first time on left, start watching
 script GerbonTownBattleHall_EventScript_FirstEnterWatchLeft {
@@ -107,6 +115,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
 
     // Camera move back to player, as Jordan walks in
     clearflag(FLAG_GERBON_BATTLEHALL_JORDAN01)
+    setflag(FLAG_JORDANINHOME)
     addobject(GERBON_BATTLEHALL_JORDAN_01)
     applymovement(LOCALID_CAMERA, moves(
         walk_down * 4
@@ -116,6 +125,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     special(RemoveCameraObject)
     setvar(VAR_ZED_STORY_TRACKER, 2)
     applymovement(0xFF, moves(face_down, emote_exclamation_mark))
+    playse(SE_PIN)
     waitmovement
 
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I didn't mean to
@@ -148,5 +158,172 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     warp(MAP_OLDALE_TOWN, 28, 10)
     end
 }
+
+/// Gerbon Tournament Battles
+
+// Trigger battle
+script GerbonBattleHall_TournamentBattleTrigger {
+      if (var(VAR_GERBON_TOURNAMENT_STATE) == 2) {
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_MARC)
+        clearflag(FLAG_GERBON_TOURNEY_TRAINER01)
+        addobject(GERBONTOURNEY_TRAINER01)
+    }
+
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 3) {
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_CRISTIAN)
+        clearflag(FLAG_GERBON_TOURNEY_TRAINER02)
+        addobject(GERBONTOURNEY_TRAINER02)
+    }
+
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 4) {
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRYAN)
+        clearflag(FLAG_GERBON_TOURNEY_TRAINER03)
+        addobject(GERBONTOURNEY_TRAINER03)
+    }
+
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 5) {
+        
+        // Determine Jordan starter
+        if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_110_TORCHIC)
+        }
+        elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_119_TREECKO)
+        }
+        elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_103_TORCHIC)
+        }
+        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
+            setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_BRENDAN_ROUTE_110_TREECKO)
+        }
+        clearflag(FLAG_GERBON_TOURNEY_TRAINER04)
+        addobject(GERBONTOURNEY_TRAINER04)
+    }
+
+    elif (var(VAR_GERBON_TOURNAMENT_STATE) == 6) {
+        setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_ROXANNE_1)
+        clearflag(FLAG_GERBON_TOURNEY_TRAINER05)
+        addobject(GERBONTOURNEY_TRAINER05)
+    }
+    goto(GerbonBattleHall_TournamentBattle)
+    }
+
+// Shared battle script
+script GerbonBattleHall_TournamentBattle {
+    lock
+    delay(60)
+    buffertrainername(STR_VAR_1, VAR_GERBON_TOURNAMENT_OPPONENT)
+    msgbox("DING DING DING ...
+    
+            Avid battlers, step up!
+            
+            {PLAYER} VS {STR_VAR_1}!" )
+    waitmessage
+
+    // Move camera to "center" stage
+    special(SpawnCameraObject)
+    applymovement(LOCALID_CAMERA, moves(
+        walk_right * 4,
+        walk_down
+    ))
+    waitmovement
+
+    // Player and marc walk towards center
+    applymovement(0xFF, moves(
+        walk_right * 3
+    ))
+    applymovement(GERBONTOURNEY_TRAINER01, moves(
+        walk_left * 3
+    ))
+    waitmovement
+    delay(30)
+
+    // Begin battle VS TRAINER_MARC
+    trainerbattle_single(VAR_GERBON_TOURNAMENT_OPPONENT, "The battle begins!", "And the winner is {PLAYER}!", GerbonBattleHall_TournamentBattleAfter)
+    end
+}
+
+script GerbonBattleHall_TournamentBattleAfter {
+    lock
+    delay(60)
+
+    if (var(VAR_GERBON_TOURNAMENT_STATE) == 6) {
+        goto(GerbonBattleHall_TournamentPlayerWon)
+    }
+
+    msgbox("DING DING DING ...
+    
+            Congraguations {PLAYER}! What a
+            battle that was!
+            
+            The next match will begin soon!" )
+    waitmessage
+    playfanfare(SE_APPLAUSE)
+    waitse
+    warp(MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5)
+    special(RemoveCameraObject)
+    release
+    end
+}
+
+script GerbonBattleHall_TournamentPlayerWon {
+        msgbox("DING DING DING DING DING DING
+    
+            {PLAYER} has defeated the standing
+            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Julia!
+
+            They now take the crown! What an upset!" )
+        waitmessage
+        playfanfare(SE_APPLAUSE)
+        setvar(VAR_GERBON_TOURNAMENT_STATE, 7)
+        waitfanfare
+        applymovement(GERBONTOURNEY_TRAINER05, moves(walk_left * 2))
+        msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I had so much fun! That was an
+        amazing battle! I'm sure most would be
+        unhappy in my shoes, but I can't stop
+        smiling!
+        
+        You're the new Rep Trainer for Gerbon
+        Town! Congratulations! Here is the 
+        Palladium Ribbon, the mark of your
+        status.")
+        waitmessage
+
+        setflag(FLAG_BADGE01_GET)
+        playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
+
+        playfanfare(MUS_LEVEL_UP)
+
+        // Let player know about level cap
+        waitfanfare
+        msgbox("The level cap has been raised to 23!", MSGBOX_SIGN)
+
+        waitmessage
+        delay(30)
+        msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little
+                something extra from me, I think you'll
+                find some good use for it.")
+        waitmessage
+
+        giveitem(ITEM_TM_ROCK_TOMB, 1)
+        waitmessage
+
+        msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move hits nice and hard, and
+                it slows down your opponent to boot!
+                
+                Anyways, keep on getting better! I know
+                you'll make waves around here!")
+        waitmessage
+        setvar(VAR_ZED_STORY_TRACKER, 9)
+        delay(30)
+        clearflag(FLAG_GERBON_TOWN_BLOCKERS)
+        setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
+        clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
+        warp(MAP_OLDALE_TOWN, 28, 10)
+        release
+        end
+}
+
 
 
