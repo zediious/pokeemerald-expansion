@@ -252,6 +252,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_GROW_VIBRATE,
         .frontAnimDelay = 15,
         .enemyMonElevation = 6,
+        SHADOW(-2, 6, SHADOW_SIZE_L)
         .backPic = gMonBackPic_MegaPassimian,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
@@ -295,7 +296,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         ),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .frontAnimDelay = 15,
-        .enemyMonElevation = 6,
+        .enemyMonElevation = 1,
+        SHADOW(-2, 6, SHADOW_SIZE_M)
         .backPic = gMonBackPic_MegaSimisear,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
@@ -339,7 +341,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         ),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .frontAnimDelay = 15,
-        .enemyMonElevation = 6,
+        .enemyMonElevation = 1,
+        SHADOW(-2, 6, SHADOW_SIZE_M)
         .backPic = gMonBackPic_MegaSimisage,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
@@ -383,7 +386,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         ),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .frontAnimDelay = 15,
-        .enemyMonElevation = 6,
+        .enemyMonElevation = 1,
+        SHADOW(-2, 6, SHADOW_SIZE_M)
         .backPic = gMonBackPic_MegaSimipour,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
@@ -430,8 +434,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .trainerScale = 244,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Innape,
-        .frontPicSize = MON_COORDS_SIZE(48, 48),
-        .frontPicYOffset = 5,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(1, 20),
             ANIMCMD_FRAME(0, 5),
@@ -446,10 +450,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Innape,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        .enemyMonElevation = 1,
         .levelUpLearnset = sInnapeLevelUpLearnset,
         .teachableLearnset = sInnapeTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_INNAPE}),
-        SHADOW(-2, 6, SHADOW_SIZE_M)
+        SHADOW(0, 12, SHADOW_SIZE_M)
         FOOTPRINT(Innape)
         OVERWORLD(
             sPicTable_Tyrogue,
@@ -496,17 +501,18 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .trainerScale = 244,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_InnapeReal,
-        .frontPicSize = MON_COORDS_SIZE(48, 48),
-        .frontPicYOffset = 5,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = -3,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(1, 20),
             ANIMCMD_FRAME(0, 5),
         ),
-        .frontAnimId = ANIM_SHRINK_GROW_SLOW,
+        .frontAnimId = ANIM_CONCAVE_ARC_LARGE,
+        .enemyMonElevation = 1,
         .backPic = gMonBackPic_InnapeReal,
-        .backPicSize = MON_COORDS_SIZE(48, 56),
-        .backPicYOffset = 2,
-        .backAnimId = BACK_ANIM_H_SLIDE,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 1,
+        .backAnimId = ANIM_CONCAVE_ARC_SMALL,
         .palette = gMonPalette_InnapeReal,
         .shinyPalette = gMonShinyPalette_InnapeReal,
         .iconSprite = gMonIcon_InnapeReal,
