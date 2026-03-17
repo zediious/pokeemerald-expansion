@@ -128,7 +128,7 @@
 #define VAR_SAWGRASS_PARTNER                             0x406A // ID for partner in sawgrass
 #define VAR_GERBON_TOURNAMENT_STATE                      0x406B // State of the Gerbon tournament
 #define VAR_GERBON_TOURNAMENT_OPPONENT                   0x406C // Current opponent enum
-#define VAR_ROUTE114_STATE                               0x406D // Unused Var
+#define VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL             0x406D // Current opponent localid
 #define VAR_ROUTE115_STATE                               0x406E // Unused Var
 #define VAR_ROUTE116_STATE                               0x406F
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var
