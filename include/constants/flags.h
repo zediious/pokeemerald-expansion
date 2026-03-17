@@ -85,9 +85,9 @@
 #define FLAG_GERBON_TOURNEY_TRAINER03           0x3F // Gerbon Tourney Trainer Bryan
 #define FLAG_GERBON_TOURNEY_TRAINER04           0x40 // Gerbon Tourney Trainer Jordan
 #define FLAG_GERBON_TOURNEY_TRAINER05           0x41 // Gerbon Tourney Trainer Julia
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
+#define FLAG_GERBON_FIRSTSHOW_JULIA             0x42 // First show Julia
+#define FLAG_GERBON_FIRSTSHOW_CANDACE           0x43 // First show Candace
+#define FLAG_GERBON_FIRSTSHOW_GOLEM             0x44 // First show golem
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    0x47 // Unused Flag
