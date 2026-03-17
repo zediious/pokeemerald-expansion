@@ -418,12 +418,20 @@ GerbonTownTourney_JordanStartOutside_1:
 # 328 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
 # 329 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_GERBON_TOURNAMENT_STATE, 1
+	setflag FLAG_GERBON_FIRSTSHOW_JULIA
 # 330 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 8
+	setflag FLAG_GERBON_FIRSTSHOW_CANDACE
 # 331 "data/maps/OldaleTown/scripts.pory"
-	warp MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5
+	setflag FLAG_GERBON_FIRSTSHOW_GOLEM
 # 332 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_CANDACE01_MON2
+# 333 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_GERBON_TOURNAMENT_STATE, 1
+# 334 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 8
+# 335 "data/maps/OldaleTown/scripts.pory"
+	warp MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5
+# 336 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
