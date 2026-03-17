@@ -423,3 +423,6 @@ const u16 gMetatileAttributes_CavesMain[] = INCBIN_U16("data/tilesets/primary/ca
 
 const u16 gMetatiles_CavesMainSecondary[] = INCBIN_U16("data/tilesets/secondary/caves_main_secondary/metatiles.bin");
 const u16 gMetatileAttributes_CavesMainSecondary[] = INCBIN_U16("data/tilesets/secondary/caves_main_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_AutumnRuins[] = INCBIN_U16("data/tilesets/secondary/autumn_ruins/metatiles.bin");
+const u16 gMetatileAttributes_AutumnRuins[] = INCBIN_U16("data/tilesets/secondary/autumn_ruins/metatile_attributes.bin");
