@@ -1,7 +1,7 @@
 mapscripts OldaleTown_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_ZED_STORY_TRACKER, 2: GerbonTownBattleHall_OutdoorBattleStart
-        VAR_ZED_STORY_TRACKER, 8: GerbonTownTourney_JordanAfter
+        VAR_ZED_STORY_TRACKER, 9: GerbonTownTourney_JordanAfter
     ]
 
     MAP_SCRIPT_ON_TRANSITION: GerbonTown_MapScript_OnTransition

@@ -9,7 +9,7 @@ OldaleTown_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 3 "data/maps/OldaleTown/scripts.pory"
 	map_script_2 VAR_ZED_STORY_TRACKER, 2, GerbonTownBattleHall_OutdoorBattleStart
 # 4 "data/maps/OldaleTown/scripts.pory"
-	map_script_2 VAR_ZED_STORY_TRACKER, 8, GerbonTownTourney_JordanAfter
+	map_script_2 VAR_ZED_STORY_TRACKER, 9, GerbonTownTourney_JordanAfter
 	.2byte 0
 
 
