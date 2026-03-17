@@ -76,7 +76,8 @@
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_ZEDTownsAndRoutes",
-    "gMapGroup_ZEDMiscInt"
+    "gMapGroup_ZEDMiscInt",
+    "gMapGroup_ZEDDungeons"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1180,5 +1181,9 @@
   ],
   "gMapGroup_ZEDMiscInt": [
     "Vulias_Route110_PokemonCenter"
+  ],
+  "gMapGroup_ZEDDungeons": [
+    "Vulias_MullenCave",
+    "Vulias_MullenCave_B1"
   ]
 }

@@ -9464,6 +9464,25 @@
       "border_filepath": "data/layouts/Vulias_Route102/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Route102/map.bin"
     },
+    {
+      "id": "LAYOUT_VULIAS_MULLEN_CAVE",
+      "name": "Vulias_MullenCave_Layout",
+      "width": 44,
+      "height": 27,
+      "primary_tileset": "gTileset_CavesMain",
+      "secondary_tileset": "gTileset_CavesMainSecondary",
+      "border_filepath": "data/layouts/Vulias_MullenCave/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_MullenCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_MULLEN_CAVE_B1",
+      "name": "Vulias_MullenCave_B1_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_CavesMain",
+      "secondary_tileset": "gTileset_CavesMainSecondary",
+      "border_filepath": "data/layouts/Vulias_MullenCave_B1/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_MullenCave_B1/map.bin"
     }
   ]
 }
