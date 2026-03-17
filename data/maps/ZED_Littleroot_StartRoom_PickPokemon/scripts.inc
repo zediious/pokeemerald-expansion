@@ -49,7 +49,7 @@ LittlerootTown_StartGame_PokemonChoice3::
 
 LittlerootTown_StartGame_PokemonChoice4::
 # 31 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
-	setvar VAR_STARTER_SPECIES, SPECIES_INNAPE
+	setvar VAR_STARTER_SPECIES, SPECIES_INNONK
 # 32 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	setvar VAR_STARTER_MON, 3
 # 33 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"

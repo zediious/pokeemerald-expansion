@@ -28,7 +28,7 @@ script LittlerootTown_StartGame_PokemonChoice3{
 } 
 
 script LittlerootTown_StartGame_PokemonChoice4{
-    setvar(VAR_STARTER_SPECIES, SPECIES_INNAPE)
+    setvar(VAR_STARTER_SPECIES, SPECIES_INNONK)
     setvar(VAR_STARTER_MON, 3)
     goto(LittlerootTown_StartGame_ChooseMon)
 }
