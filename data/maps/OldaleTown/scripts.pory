@@ -309,18 +309,16 @@ script GerbonTownTourney_JordanStartOutside {
             start the tournament! I should explain
             exactly how it works, eh?
             
-            16 trainers are entering the tourny
-            and it will be a swiss matchup.
-            You will battle a total of four trainers,
-            then you'll be facing the current
+            16 trainers are entering, and you will
+            battle a total of four trainers.
+            Then, you'll be facing the current
             {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Julia!
 
             When the tournament starts, you'll be in
             the prep room, where you'll be able to
             heal up, and start your next match.
             
-            Are you ready to go? You'll be able to
-            heal between your matches, but you
+            Are you ready to go? You
             can't leave once the tournament has
             started!", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
