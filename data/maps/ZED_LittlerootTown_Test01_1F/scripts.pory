@@ -1,9 +1,11 @@
 mapscripts ZED_LittlerootTown_Test01_1F_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_ZED_STORY_TRACKER, 0: LittlerootTown_EventScript_JordanAwakenStart
+        VAR_ZED_STORY_TRACKER, 6: SawgrassVillage_AwakenAfterRoute110
     ]
 }
 
+// Jordan wakes the player
 script LittlerootTown_EventScript_JordanAwakenStart {
     lock
     // Jordan walk to player in bed
@@ -11,6 +13,7 @@ script LittlerootTown_EventScript_JordanAwakenStart {
     applymovement(JordanInHome, moves(
         emote_exclamation_mark
     ))
+    playse(SE_PIN)
     delay(60)
     applymovement(JordanInHome, moves(
         walk_up,
@@ -19,15 +22,19 @@ script LittlerootTown_EventScript_JordanAwakenStart {
         walk_left
     ))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Are you okay, you were tossing
-            and turning quite a bit. Anyways, I
-            bet you're ready to get going!
+    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Are you okay? You were tossing
+            and turning for the past few minutes.
+            Anyways, I bet you're ready to get
+            going, those feature matches are the
+            coolest thing in the world!
             
             Like I said yesterday, you absolutely
-            must check out the Palladium in
+            must check out {COLOR RED}The Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in
             Gerbon Town, just east of here.
             
-            I'll let you get to it."
+            I'm tuckered out today, but I'll go
+            to the other {COLOR RED}Battle Stadiums{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}with you
+            tomorrow!."
     )
     waitmessage
     closemessage
@@ -50,6 +57,7 @@ script LittlerootTown_EventScript_JordanAwakenStart {
     release
 }
 
+// Jordan remembers to tell you something before you leave for first time
 script LittlerootTown_EventScript_JordanRememberTrainers{
     lock
     applymovement(JordanInHome, moves(
@@ -103,6 +111,53 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
     waitmovement
     setvar(VAR_JORDAN_WARNED_TRAINERS, 1)
     setrespawn(HEAL_LOCATION_LITTLEROOT_TOWN)
+    release
+    end
+}
+
+// Awoken in house after reaching end of Route 110
+script SawgrassVillage_AwakenAfterRoute110 {
+    lock
+    setvar(VAR_ZED_STORY_TRACKER, 7)
+    // Jordan walk to player in bed
+    playbgm(MUS_ENCOUNTER_MAY, 0)
+    applymovement(JordanInHome, moves(
+        emote_exclamation_mark
+    ))
+    playse(SE_PIN)
+    delay(60)
+    applymovement(JordanInHome, moves(
+        walk_up,
+        walk_left * 4,
+        walk_up,
+        walk_left
+    ))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Good morning {PLAYER}! You
+            better have gotten good sleep, because
+            today, we're gonna have great battles!
+            
+            The tournament to decide the next 
+            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The
+            Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is starting today! I'm going
+            to make my way over there.
+            
+            You can take your time, do a bit of
+            training if you want! Meet me at the
+            entrance to {COLOR RED}The Palladium!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}"
+    )
+    waitmessage
+    applymovement(JordanInHome, moves(walk_down * 3, walk_left, walk_down))
+    waitmovement
+    playse(SE_DOOR)
+    setflag(FLAG_JORDANINHOME)
+    removeobject(JordanInHome)
+    setflag(FLAG_GERBON_TOWN_BLOCKERS)
+    clearflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
+    waitse
+    fadedefaultbgm
+    delay(30)
+    questupdated(0)
     release
     end
 }
