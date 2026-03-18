@@ -152,3 +152,134 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Rapid Spin
 - Smokescreen
 
+=== PARTNER_JORDAN_INNAPE_02 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Innape
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Astonish
+- Leer
+- Round
+
+Carkol
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ancient Power
+- Rock Polish
+- Flame Charge
+- Rapid Spin
+
+Electrike
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Shock Wave
+- Bite
+- Quick Attack
+- Howl
+
+=== PARTNER_JORDAN_PANSEAR_02 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Simisear
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Flame Wheel
+- Fire Spin
+- Leer
+- Force Palm
+
+Carkol
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ancient Power
+- Rock Polish
+- Flame Charge
+- Rapid Spin
+
+Electrike
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Shock Wave
+- Bite
+- Quick Attack
+- Howl
+
+=== PARTNER_JORDAN_PANSAGE_02 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Simisage
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Razor Leaf
+- Leech Seed
+- Taunt
+- Bite
+
+Carkol
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ancient Power
+- Rock Polish
+- Flame Charge
+- Rapid Spin
+
+Electrike
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Shock Wave
+- Bite
+- Quick Attack
+- Howl
+
+=== PARTNER_JORDAN_PANPOUR_02 ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Back Pic: Steven
+AI: Basic Trainer
+
+Simipour
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Water Pulse
+- Whirlpool
+- Taunt
+- Draining Kiss
+
+Carkol
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ancient Power
+- Rock Polish
+- Flame Charge
+- Rapid Spin
+
+Electrike
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Shock Wave
+- Bite
+- Quick Attack
+- Howl

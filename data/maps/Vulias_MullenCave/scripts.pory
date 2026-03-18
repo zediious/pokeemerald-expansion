@@ -2,6 +2,16 @@ mapscripts Vulias_MullenCave_MapScripts {}
 
 //// Signs and Items
 
+// Poke Ball with Charcoal
+script VuliasMullenCave_EventScript_Charcoal {
+    lock
+    giveitem(ITEM_CHARCOAL, 1)
+    removeobject(MULLED_CHARCOAL)
+    setflag(FLAG_MULLED_CHARCOAL)
+    release
+    end
+}
+
 // Poke Ball with Quick Ball
 script VuliasMullenCave_EventScript_QuickBall {
     lock
@@ -60,5 +70,119 @@ script VuliasMullenCave_EventScript_Trainer04{
     msgbox("I'm sure there are tons of rare Pokemon
             deeper in the cave!", MSGBOX_AUTOCLOSE)
     waitmessage
+    end
+}
+
+// Player speaks with Jordan who is blocking way to bridge
+script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
+    lock
+    faceplayer
+    applymovement(MULLED_CAVE_JORDAN_01, moves(
+        emote_exclamation_mark,
+        face_right
+    ))
+    playse(SE_PIN)
+    waitmovement
+
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Who's the-
+    
+            {PLAYER}! Wow, you got me this time, I
+            nearly jumped out of my socks! I was a
+            bit mesmerized by the water here, this
+            cave is surpisingly serene.
+            
+            Anyways, want to tag along through the
+            rest of Mullen Cave?", MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's get moving! The
+                exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shouldn't be too far
+                far, {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} won't be far then!")
+        waitmessage
+        delay(30)
+        playse(MUS_RG_OBTAIN_KEY_ITEM)
+        msgbox("Jordan is now your follower!")
+        waitse
+        waitmessage
+        call(MulledCave_DetermineJordanTeam)
+        setvar(VAR_ZED_STORY_TRACKER, 11)
+        release
+        end
+    } else {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all good! I'm sure you
+                want to catch some Pokemon eh?
+                
+                I'll see you at exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. We'll
+                be close to {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} then!")
+        waitmessage
+        applymovement(MULLED_CAVE_JORDAN_01, moves(walk_left * 13))
+        waitmovement
+        setflag(FLAG_MULLED_CAVE_JORDAN_01)
+        removeobject(MULLED_CAVE_JORDAN_01)
+        setvar(VAR_ZED_STORY_TRACKER, 11)
+        release
+        end
+    }
+}
+
+script MulledCave_DetermineJordanTeam {
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        setfollowernpc(
+            MULLED_CAVE_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            MullenCave_EventScript_JordanFollower,
+            PARTNER_JORDAN_PANPOUR_02
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        setfollowernpc(
+            MULLED_CAVE_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            MullenCave_EventScript_JordanFollower,
+            PARTNER_JORDAN_PANSEAR_02
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        setfollowernpc(
+            MULLED_CAVE_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            MullenCave_EventScript_JordanFollower,
+            PARTNER_JORDAN_PANSAGE_02
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        setfollowernpc(
+            MULLED_CAVE_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            MullenCave_EventScript_JordanFollower,
+            PARTNER_JORDAN_INNAPE_02
+        )
+    }
+}
+
+// Jordan follower script
+script MullenCave_EventScript_JordanFollower {
+    lock
+    faceplayer
+    msgbox("There are plenty of local legends about
+            this cave, but no one has been able to
+            find the caverns that are spoken of.")
+    waitmessage
+    release
+    end
+}
+
+// Prevent leaving from entrance while having follower
+script MullenCave_EventScript_NoLeaveWhileFollower {
+    checkfollowernpc
+    if (var(VAR_RESULT) == YES) {
+        lock
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's try to make it to the
+                exit! No use going back now!")
+        waitmessage
+        applymovement(0xFF, moves(walk_up))
+        waitmovement
+        release
+    }
     end
 }
