@@ -1642,6 +1642,14 @@
     {
       "id": "MAPSEC_MULLEN_CAVE",
       "name": "Mullen Cave"
+    },
+    {
+      "id": "MAPSEC_Vulias_Route103",
+      "name": "Route 103"
+    },
+    {
+      "id": "MAPSEC_VULIAS_WOLTIA_CITY",
+      "name": "Woltia City"
     }
   ]
 }

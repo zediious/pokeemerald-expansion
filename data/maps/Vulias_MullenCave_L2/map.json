@@ -92,14 +92,14 @@
       "x": 7,
       "y": 47,
       "elevation": 0,
-      "dest_map": "MAP_VULIAS_MULLEN_CAVE_L2",
+      "dest_map": "MAP_VULIAS_ROUTE103",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 47,
       "elevation": 0,
-      "dest_map": "MAP_VULIAS_MULLEN_CAVE_L2",
+      "dest_map": "MAP_VULIAS_ROUTE103",
       "dest_warp_id": "0"
     }
   ],

@@ -1177,7 +1177,9 @@
   "gMapGroup_ZEDTownsAndRoutes": [
     "Vulias_Route110",
     "Vulias_FlorensythSea",
-    "Vulias_Route102"
+    "Vulias_Route102",
+    "Vulias_Route103",
+    "Vulias_Woltia_City"
   ],
   "gMapGroup_ZEDMiscInt": [
     "Vulias_Route110_PokemonCenter",

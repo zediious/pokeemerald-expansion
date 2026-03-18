@@ -425,7 +425,7 @@ VuliasMullenCave_EventScript_Trainer07_Text_2:
 
 VuliasMullenCave_EventScript_Trainer08_Text_0:
 # 116 "data/maps/Vulias_MullenCave/scripts.pory"
-	.string "{COLOR Green}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my\n"
+	.string "{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my\n"
 	.string "students? Let us see how you fare\l"
 	.string "against me!$"
 
@@ -439,7 +439,7 @@ VuliasMullenCave_EventScript_Trainer08_Text_2:
 
 ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_Text_0:
 # 134 "data/maps/Vulias_MullenCave/scripts.pory"
-	.string "{COLOR Green}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this\n"
+	.string "{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this\n"
 	.string "{COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!$"
 
 VuliasMullenCave_EventScript_Trainer09_Text_0:
