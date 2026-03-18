@@ -1,6 +1,4 @@
 Vulias_MullenCave_MapScripts::
-# 2 "data/maps/Vulias_MullenCave/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Vulias_MullenCave_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
 Vulias_MullenCave_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:

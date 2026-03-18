@@ -33,9 +33,6 @@ script GerbonTown_BattleHallDisables{
     setflag(FLAG_GERBON_TOURNEY_TRAINER04)
     setflag(FLAG_GERBON_TOURNEY_TRAINER05)
 
-    // Allow custom paths for Hex Maniac
-    setvar(VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 1)
-
     // Prevent from triggering again
     setvar(VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1)
     end

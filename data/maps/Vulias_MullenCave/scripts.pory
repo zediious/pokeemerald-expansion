@@ -1,28 +1,4 @@
-mapscripts Vulias_MullenCave_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 1: VuliasMullenCave_MapScript_HexManiacTrainerPathingTrigger
-    ]
-}
-
-// Trigger custom path for hex maniac trainer
-script VuliasMullenCave_MapScript_HexManiacTrainerPathingTrigger {
-    setvar(VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 0)
-    applymovement(MULLEN_HEXMANIAC, moves(
-        walk_up * 6, walk_right * 3, walk_up * 3,
-        walk_right * 3, walk_up * 3
-    ))
-    waitmovement
-    applymovement(MULLEN_HEXMANIAC, moves(
-        walk_up * 6, walk_right * 3, walk_up * 3,
-        walk_right * 3, walk_up * 3
-    ))
-    applymovement(MULLEN_HEXMANIAC, moves(
-        walk_down * 3, walk_left * 3, walk_down * 3,
-        walk_left * 3, walk_down * 6
-    ))
-    waitmovement
-    setvar(VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 1)
-}
+mapscripts Vulias_MullenCave_MapScripts {}
 
 //// Signs and Items
 
