@@ -307,10 +307,23 @@ script GerbonBattleHall_TournamentBattle {
     }
 }
 
+script GerbonBattleHall_Tournament_RemoveAllTrainers {
+    // Remove the current trainer object
+    removeobject(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL)
+
+    // Set flag for all trainers
+    setflag(FLAG_GERBON_TOURNEY_TRAINER01)
+    setflag(FLAG_GERBON_TOURNEY_TRAINER02)
+    setflag(FLAG_GERBON_TOURNEY_TRAINER03)
+    setflag(FLAG_GERBON_TOURNEY_TRAINER04)
+    setflag(FLAG_GERBON_TOURNEY_TRAINER05)
+}
+
 script GerbonBattleHall_TournamentBattleAfter {
     lock
     delay(60)
 
+    // Player beat Julia, go to end
     if (var(VAR_GERBON_TOURNAMENT_STATE) == 6) {
         goto(GerbonBattleHall_TournamentPlayerWon)
     }
@@ -325,6 +338,7 @@ script GerbonBattleHall_TournamentBattleAfter {
     playfanfare(SE_APPLAUSE)
     waitse
     warp(MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5)
+    call(GerbonBattleHall_Tournament_RemoveAllTrainers)
     special(RemoveCameraObject)
     release
     end
@@ -389,6 +403,7 @@ script GerbonBattleHall_TournamentPlayerWon {
         release
         end
 }
+
 
 
 
