@@ -52,30 +52,48 @@ VuliasRoute102_EventScript_BrokenBridgeMan::
 
 Route102_EventScript_Trainer01::
 # 54 "data/maps/Vulias_Route102/scripts.pory"
-	trainerbattle_single TRAINER_DEANDRE, Route102_EventScript_Trainer01_Text_0, Route102_EventScript_Trainer01_Text_1
-# 59 "data/maps/Vulias_Route102/scripts.pory"
-	msgbox Route102_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
-# 60 "data/maps/Vulias_Route102/scripts.pory"
+	compare VAR_ZED_STORY_TRACKER, 10
+	goto_if_ge Route102_EventScript_Trainer01_2
+# 61 "data/maps/Vulias_Route102/scripts.pory"
+	trainerbattle_single TRAINER_JOHNSON, Route102_EventScript_Trainer01_Text_2, Route102_EventScript_Trainer01_Text_3
+Route102_EventScript_Trainer01_1:
+# 68 "data/maps/Vulias_Route102/scripts.pory"
+	msgbox Route102_EventScript_Trainer01_Text_4, MSGBOX_AUTOCLOSE
+# 69 "data/maps/Vulias_Route102/scripts.pory"
 	waitmessage
 	end
+
+Route102_EventScript_Trainer01_2:
+# 55 "data/maps/Vulias_Route102/scripts.pory"
+	trainerbattle_single TRAINER_DEANDRE, Route102_EventScript_Trainer01_Text_0, Route102_EventScript_Trainer01_Text_1
+	goto Route102_EventScript_Trainer01_1
 
 
 Route102_EventScript_Trainer02::
-# 65 "data/maps/Vulias_Route102/scripts.pory"
-	trainerbattle_single TRAINER_NANCY, Route102_EventScript_Trainer02_Text_0, Route102_EventScript_Trainer02_Text_1
-# 70 "data/maps/Vulias_Route102/scripts.pory"
-	msgbox Route102_EventScript_Trainer02_Text_2, MSGBOX_AUTOCLOSE
-# 71 "data/maps/Vulias_Route102/scripts.pory"
+# 75 "data/maps/Vulias_Route102/scripts.pory"
+	compare VAR_ZED_STORY_TRACKER, 10
+	goto_if_ge Route102_EventScript_Trainer02_2
+# 82 "data/maps/Vulias_Route102/scripts.pory"
+	trainerbattle_single TRAINER_AUTUMN, Route102_EventScript_Trainer02_Text_2, Route102_EventScript_Trainer02_Text_3
+Route102_EventScript_Trainer02_1:
+# 89 "data/maps/Vulias_Route102/scripts.pory"
+	msgbox Route102_EventScript_Trainer02_Text_4, MSGBOX_AUTOCLOSE
+# 90 "data/maps/Vulias_Route102/scripts.pory"
 	waitmessage
 	end
 
+Route102_EventScript_Trainer02_2:
+# 76 "data/maps/Vulias_Route102/scripts.pory"
+	trainerbattle_single TRAINER_NANCY, Route102_EventScript_Trainer02_Text_0, Route102_EventScript_Trainer02_Text_1
+	goto Route102_EventScript_Trainer02_1
+
 
 Route102_EventScript_Trainer03::
-# 76 "data/maps/Vulias_Route102/scripts.pory"
+# 95 "data/maps/Vulias_Route102/scripts.pory"
 	trainerbattle_single TRAINER_ALIX, Route102_EventScript_Trainer03_Text_0, Route102_EventScript_Trainer03_Text_1
-# 82 "data/maps/Vulias_Route102/scripts.pory"
+# 101 "data/maps/Vulias_Route102/scripts.pory"
 	msgbox Route102_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
-# 84 "data/maps/Vulias_Route102/scripts.pory"
+# 103 "data/maps/Vulias_Route102/scripts.pory"
 	waitmessage
 	end
 
@@ -102,39 +120,55 @@ VuliasRoute102_EventScript_BrokenBridgeMan_Text_0:
 	.string "I think I'll just stay home.$"
 
 Route102_EventScript_Trainer01_Text_0:
-# 56 "data/maps/Vulias_Route102/scripts.pory"
+# 57 "data/maps/Vulias_Route102/scripts.pory"
 	.string "I love the color of the leaves!$"
 
 Route102_EventScript_Trainer01_Text_1:
-# 57 "data/maps/Vulias_Route102/scripts.pory"
+# 58 "data/maps/Vulias_Route102/scripts.pory"
 	.string "I didn't love that so much!$"
 
 Route102_EventScript_Trainer01_Text_2:
-# 59 "data/maps/Vulias_Route102/scripts.pory"
+# 63 "data/maps/Vulias_Route102/scripts.pory"
+	.string "I have too much energy!$"
+
+Route102_EventScript_Trainer01_Text_3:
+# 64 "data/maps/Vulias_Route102/scripts.pory"
+	.string "That's enough energy!$"
+
+Route102_EventScript_Trainer01_Text_4:
+# 68 "data/maps/Vulias_Route102/scripts.pory"
 	.string "Pick on someone your own size!.$"
 
 Route102_EventScript_Trainer02_Text_0:
-# 67 "data/maps/Vulias_Route102/scripts.pory"
+# 78 "data/maps/Vulias_Route102/scripts.pory"
 	.string "What a lovely day!$"
 
 Route102_EventScript_Trainer02_Text_1:
-# 68 "data/maps/Vulias_Route102/scripts.pory"
+# 79 "data/maps/Vulias_Route102/scripts.pory"
 	.string "And a lovely battle!$"
 
 Route102_EventScript_Trainer02_Text_2:
-# 70 "data/maps/Vulias_Route102/scripts.pory"
+# 84 "data/maps/Vulias_Route102/scripts.pory"
+	.string "I just got here, but I'll battle!$"
+
+Route102_EventScript_Trainer02_Text_3:
+# 85 "data/maps/Vulias_Route102/scripts.pory"
+	.string "A great way to start a picnick!$"
+
+Route102_EventScript_Trainer02_Text_4:
+# 89 "data/maps/Vulias_Route102/scripts.pory"
 	.string "I love spending time on this path.$"
 
 Route102_EventScript_Trainer03_Text_0:
-# 78 "data/maps/Vulias_Route102/scripts.pory"
+# 97 "data/maps/Vulias_Route102/scripts.pory"
 	.string "My Pokemon sensed you, they want\n"
 	.string "to battle!$"
 
 Route102_EventScript_Trainer03_Text_1:
-# 80 "data/maps/Vulias_Route102/scripts.pory"
+# 99 "data/maps/Vulias_Route102/scripts.pory"
 	.string "Hmm, maybe they were just hungry?$"
 
 Route102_EventScript_Trainer03_Text_2:
-# 82 "data/maps/Vulias_Route102/scripts.pory"
+# 101 "data/maps/Vulias_Route102/scripts.pory"
 	.string "Hold on Meditite, I think I've got a few\n"
 	.string "berries in here somewhere...$"
