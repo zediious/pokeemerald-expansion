@@ -1461,7 +1461,7 @@ void GenerateQuestLocation(s32 questId)
 				StringCopy(gStringVar2, gText_MainQuestMap_01);
 			}
 			// Palladium Tournament underway
-			else if (mainStoryTracker == 8 | mainStoryTracker == 9)
+			else if (mainStoryTracker == 8 || mainStoryTracker == 9)
 			{
 				StringCopy(gStringVar2, gText_MainQuestMap_04);
 			}
