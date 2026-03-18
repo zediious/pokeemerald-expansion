@@ -397,7 +397,7 @@ VuliasMullenCave_EventScript_Trainer05_Text_1:
 
 VuliasMullenCave_EventScript_Trainer05_Text_2:
 # 83 "data/maps/Vulias_MullenCave/scripts.pory"
-	.string "Sure'y I can find some way to just {COLOR RED}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
+	.string "Surely I can find some way to just {COLOR RED}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
 	.string "across this water...$"
 
 VuliasMullenCave_EventScript_Trainer06_Text_0:
@@ -427,7 +427,7 @@ VuliasMullenCave_EventScript_Trainer07_Text_2:
 
 VuliasMullenCave_EventScript_Trainer08_Text_0:
 # 116 "data/maps/Vulias_MullenCave/scripts.pory"
-	.string "{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my\n"
+	.string "{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my\n"
 	.string "students? Let us see how you fare\l"
 	.string "against me!$"
 

@@ -80,7 +80,7 @@ script VuliasMullenCave_EventScript_Trainer05{
         this water, I just know it!",
         "I can't swim!"
     )
-    msgbox("Sure'y I can find some way to just {COLOR RED}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+    msgbox("Surely I can find some way to just {COLOR RED}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
             across this water...", MSGBOX_AUTOCLOSE)
     waitmessage
     end
@@ -113,7 +113,7 @@ script VuliasMullenCave_EventScript_Trainer07{
 script VuliasMullenCave_EventScript_Trainer08{
     trainerbattle_single(
         TRAINER_KOJI_1,
-        "{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my
+        "{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my
         students? Let us see how you fare
         against me!",
         "Hoho! Very impressive!",
