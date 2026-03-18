@@ -169,13 +169,14 @@ script VuliasMullenCave_EventScript_Trainer10{
 // Player speaks with Jordan who is blocking way to bridge
 script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
     lock
+    delay(60)
     faceplayer
     applymovement(MULLED_CAVE_JORDAN_01, moves(
         emote_exclamation_mark,
         face_right
     ))
-    playse(SE_PIN)
     waitmovement
+    playse(SE_PIN)
 
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Who's the-
     
