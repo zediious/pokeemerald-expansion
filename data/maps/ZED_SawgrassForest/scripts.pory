@@ -29,6 +29,9 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
             
             Let's explore the place, maybe we'll find
             a rare Pokemon!
+
+            I'll keep your party healthy. You'll be
+            able to catch Pokemon still, too!
             
             Are you ready to go?", MSGBOX_YESNO)
     }

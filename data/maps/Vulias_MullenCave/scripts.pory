@@ -92,7 +92,10 @@ script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
             cave is surpisingly serene.
             
             Anyways, want to tag along through the
-            rest of Mullen Cave?", MSGBOX_YESNO)
+            rest of Mullen Cave?
+            
+            I'll keep your party healthy. You'll be
+            able to catch Pokemon still, too!", MSGBOX_YESNO)
 
     if (var(VAR_RESULT) == YES) {
         msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's get moving! The
