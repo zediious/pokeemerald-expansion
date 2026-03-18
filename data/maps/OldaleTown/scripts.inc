@@ -48,15 +48,15 @@ GerbonTown_BattleHallDisables::
 # 27 "data/maps/OldaleTown/scripts.pory"
 	removeobject GERBON_PALLADIUM_BLOCKER_2, MAP_OLDALE_TOWN
 # 30 "data/maps/OldaleTown/scripts.pory"
-	setflag GERBONTOURNEY_TRAINER01
+	setflag FLAG_GERBON_TOURNEY_TRAINER01
 # 31 "data/maps/OldaleTown/scripts.pory"
-	setflag GERBONTOURNEY_TRAINER02
+	setflag FLAG_GERBON_TOURNEY_TRAINER02
 # 32 "data/maps/OldaleTown/scripts.pory"
-	setflag GERBONTOURNEY_TRAINER03
+	setflag FLAG_GERBON_TOURNEY_TRAINER03
 # 33 "data/maps/OldaleTown/scripts.pory"
-	setflag GERBONTOURNEY_TRAINER04
+	setflag FLAG_GERBON_TOURNEY_TRAINER04
 # 34 "data/maps/OldaleTown/scripts.pory"
-	setflag GERBONTOURNEY_TRAINER05
+	setflag FLAG_GERBON_TOURNEY_TRAINER05
 # 37 "data/maps/OldaleTown/scripts.pory"
 	setvar VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1
 	end
