@@ -456,6 +456,8 @@ GerbonTownTourney_JordanAfter::
 # 374 "data/maps/OldaleTown/scripts.pory"
 	setflag FLAG_ROUTE102_STAIRBLOCKERS
 # 376 "data/maps/OldaleTown/scripts.pory"
+	questupdated 0
+# 378 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 

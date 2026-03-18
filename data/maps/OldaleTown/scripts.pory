@@ -373,6 +373,8 @@ script GerbonTownTourney_JordanAfter {
     // Disable the cops blocking Mullen Cave
     setflag(FLAG_ROUTE102_STAIRBLOCKERS)
 
+    questupdated(0)
+
     release
     end
 }
