@@ -70,180 +70,263 @@ VuliasMullenCave_EventScript_Trainer04::
 	end
 
 
-VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking::
-# 78 "data/maps/Vulias_MullenCave/scripts.pory"
-	lock
-# 79 "data/maps/Vulias_MullenCave/scripts.pory"
-	faceplayer
-# 80 "data/maps/Vulias_MullenCave/scripts.pory"
-	applymovement MULLED_CAVE_JORDAN_01, VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Movement_0
-# 84 "data/maps/Vulias_MullenCave/scripts.pory"
-	playse SE_PIN
+VuliasMullenCave_EventScript_Trainer05::
+# 77 "data/maps/Vulias_MullenCave/scripts.pory"
+	trainerbattle_single TRAINER_GARRISON, VuliasMullenCave_EventScript_Trainer05_Text_0, VuliasMullenCave_EventScript_Trainer05_Text_1
+# 83 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox VuliasMullenCave_EventScript_Trainer05_Text_2, MSGBOX_AUTOCLOSE
 # 85 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasMullenCave_EventScript_Trainer06::
+# 90 "data/maps/Vulias_MullenCave/scripts.pory"
+	trainerbattle_single TRAINER_CALVIN_1, VuliasMullenCave_EventScript_Trainer06_Text_0, VuliasMullenCave_EventScript_Trainer06_Text_1
+# 95 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox VuliasMullenCave_EventScript_Trainer06_Text_2, MSGBOX_AUTOCLOSE
+# 97 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasMullenCave_EventScript_Trainer07::
+# 102 "data/maps/Vulias_MullenCave/scripts.pory"
+	trainerbattle_single TRAINER_BILLY, VuliasMullenCave_EventScript_Trainer07_Text_0, VuliasMullenCave_EventScript_Trainer07_Text_1
+# 107 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox VuliasMullenCave_EventScript_Trainer07_Text_2, MSGBOX_AUTOCLOSE
+# 108 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasMullenCave_EventScript_Trainer08::
+# 114 "data/maps/Vulias_MullenCave/scripts.pory"
+	trainerbattle_single TRAINER_KOJI_1, VuliasMullenCave_EventScript_Trainer08_Text_0, VuliasMullenCave_EventScript_Trainer08_Text_1, ViluasMullenCave_EventScript_Trainer08_BlackBeltGive
+# 122 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox VuliasMullenCave_EventScript_Trainer08_Text_2, MSGBOX_AUTOCLOSE
+# 123 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+	end
+
+
+ViluasMullenCave_EventScript_Trainer08_BlackBeltGive::
+# 129 "data/maps/Vulias_MullenCave/scripts.pory"
+	lock
+# 130 "data/maps/Vulias_MullenCave/scripts.pory"
+	goto_if_set FLAG_MULLEN_SENSEI_DEFEATED, ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_1
+# 134 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_Text_0
+# 136 "data/maps/Vulias_MullenCave/scripts.pory"
+	giveitem ITEM_BLACK_BELT, 1
+# 137 "data/maps/Vulias_MullenCave/scripts.pory"
+	setflag FLAG_MULLEN_SENSEI_DEFEATED
+# 138 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+# 139 "data/maps/Vulias_MullenCave/scripts.pory"
+	release
+	end
+
+ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_1:
+# 131 "data/maps/Vulias_MullenCave/scripts.pory"
+	release
+	end
+
+
+VuliasMullenCave_EventScript_Trainer09::
+# 145 "data/maps/Vulias_MullenCave/scripts.pory"
+	trainerbattle_single TRAINER_DEVAN, VuliasMullenCave_EventScript_Trainer09_Text_0, VuliasMullenCave_EventScript_Trainer09_Text_1
+# 150 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox VuliasMullenCave_EventScript_Trainer09_Text_2, MSGBOX_AUTOCLOSE
+# 151 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasMullenCave_EventScript_Trainer10::
+# 156 "data/maps/Vulias_MullenCave/scripts.pory"
+	trainerbattle_single TRAINER_MELINA, VuliasMullenCave_EventScript_Trainer10_Text_0, VuliasMullenCave_EventScript_Trainer10_Text_1
+# 161 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox VuliasMullenCave_EventScript_Trainer10_Text_2, MSGBOX_AUTOCLOSE
+# 163 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking::
+# 171 "data/maps/Vulias_MullenCave/scripts.pory"
+	lock
+# 172 "data/maps/Vulias_MullenCave/scripts.pory"
+	faceplayer
+# 173 "data/maps/Vulias_MullenCave/scripts.pory"
+	applymovement MULLED_CAVE_JORDAN_01, VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Movement_0
+# 177 "data/maps/Vulias_MullenCave/scripts.pory"
+	playse SE_PIN
+# 178 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmovement
-# 87 "data/maps/Vulias_MullenCave/scripts.pory"
+# 180 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_0, MSGBOX_YESNO
-# 100 "data/maps/Vulias_MullenCave/scripts.pory"
+# 193 "data/maps/Vulias_MullenCave/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_1
-# 115 "data/maps/Vulias_MullenCave/scripts.pory"
+# 208 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_3
-# 120 "data/maps/Vulias_MullenCave/scripts.pory"
+# 213 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmessage
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	applymovement MULLED_CAVE_JORDAN_01, VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Movement_1
-# 122 "data/maps/Vulias_MullenCave/scripts.pory"
+# 215 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmovement
-# 123 "data/maps/Vulias_MullenCave/scripts.pory"
+# 216 "data/maps/Vulias_MullenCave/scripts.pory"
 	setflag FLAG_MULLED_CAVE_JORDAN_01
-# 124 "data/maps/Vulias_MullenCave/scripts.pory"
+# 217 "data/maps/Vulias_MullenCave/scripts.pory"
 	removeobject MULLED_CAVE_JORDAN_01
-# 125 "data/maps/Vulias_MullenCave/scripts.pory"
+# 218 "data/maps/Vulias_MullenCave/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 11
-# 126 "data/maps/Vulias_MullenCave/scripts.pory"
+# 219 "data/maps/Vulias_MullenCave/scripts.pory"
 	release
 	end
 
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_1:
-# 101 "data/maps/Vulias_MullenCave/scripts.pory"
+# 194 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_1
-# 104 "data/maps/Vulias_MullenCave/scripts.pory"
+# 197 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmessage
-# 105 "data/maps/Vulias_MullenCave/scripts.pory"
+# 198 "data/maps/Vulias_MullenCave/scripts.pory"
 	delay 30
-# 106 "data/maps/Vulias_MullenCave/scripts.pory"
+# 199 "data/maps/Vulias_MullenCave/scripts.pory"
 	playse MUS_RG_OBTAIN_KEY_ITEM
-# 107 "data/maps/Vulias_MullenCave/scripts.pory"
+# 200 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_2
-# 108 "data/maps/Vulias_MullenCave/scripts.pory"
+# 201 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitse
-# 109 "data/maps/Vulias_MullenCave/scripts.pory"
+# 202 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmessage
-# 110 "data/maps/Vulias_MullenCave/scripts.pory"
+# 203 "data/maps/Vulias_MullenCave/scripts.pory"
 	call MulledCave_DetermineJordanTeam
-# 111 "data/maps/Vulias_MullenCave/scripts.pory"
+# 204 "data/maps/Vulias_MullenCave/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 11
-# 112 "data/maps/Vulias_MullenCave/scripts.pory"
+# 205 "data/maps/Vulias_MullenCave/scripts.pory"
 	release
 	end
 
 
 MulledCave_DetermineJordanTeam::
-# 132 "data/maps/Vulias_MullenCave/scripts.pory"
+# 225 "data/maps/Vulias_MullenCave/scripts.pory"
 	compare VAR_STARTER_MON, 0
 	goto_if_eq MulledCave_DetermineJordanTeam_1
-# 140 "data/maps/Vulias_MullenCave/scripts.pory"
+# 233 "data/maps/Vulias_MullenCave/scripts.pory"
 	compare VAR_STARTER_MON, 1
 	goto_if_eq MulledCave_DetermineJordanTeam_2
-# 148 "data/maps/Vulias_MullenCave/scripts.pory"
+# 241 "data/maps/Vulias_MullenCave/scripts.pory"
 	compare VAR_STARTER_MON, 2
 	goto_if_eq MulledCave_DetermineJordanTeam_3
-# 156 "data/maps/Vulias_MullenCave/scripts.pory"
+# 249 "data/maps/Vulias_MullenCave/scripts.pory"
 	compare VAR_STARTER_MON, 3
 	goto_if_eq MulledCave_DetermineJordanTeam_4
 	return
 
 MulledCave_DetermineJordanTeam_1:
-# 133 "data/maps/Vulias_MullenCave/scripts.pory"
+# 226 "data/maps/Vulias_MullenCave/scripts.pory"
 	setfollowernpc MULLED_CAVE_JORDAN_01, FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE, MullenCave_EventScript_JordanFollower, PARTNER_JORDAN_PANPOUR_02
 	return
 
 MulledCave_DetermineJordanTeam_2:
-# 141 "data/maps/Vulias_MullenCave/scripts.pory"
+# 234 "data/maps/Vulias_MullenCave/scripts.pory"
 	setfollowernpc MULLED_CAVE_JORDAN_01, FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE, MullenCave_EventScript_JordanFollower, PARTNER_JORDAN_PANSEAR_02
 	return
 
 MulledCave_DetermineJordanTeam_3:
-# 149 "data/maps/Vulias_MullenCave/scripts.pory"
+# 242 "data/maps/Vulias_MullenCave/scripts.pory"
 	setfollowernpc MULLED_CAVE_JORDAN_01, FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE, MullenCave_EventScript_JordanFollower, PARTNER_JORDAN_PANSAGE_02
 	return
 
 MulledCave_DetermineJordanTeam_4:
-# 157 "data/maps/Vulias_MullenCave/scripts.pory"
+# 250 "data/maps/Vulias_MullenCave/scripts.pory"
 	setfollowernpc MULLED_CAVE_JORDAN_01, FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE, MullenCave_EventScript_JordanFollower, PARTNER_JORDAN_INNAPE_02
 	return
 
 
 MullenCave_EventScript_JordanFollower::
-# 168 "data/maps/Vulias_MullenCave/scripts.pory"
+# 261 "data/maps/Vulias_MullenCave/scripts.pory"
 	lock
-# 169 "data/maps/Vulias_MullenCave/scripts.pory"
+# 262 "data/maps/Vulias_MullenCave/scripts.pory"
 	faceplayer
-# 170 "data/maps/Vulias_MullenCave/scripts.pory"
+# 263 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox MullenCave_EventScript_JordanFollower_Text_0
-# 173 "data/maps/Vulias_MullenCave/scripts.pory"
+# 266 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmessage
-# 174 "data/maps/Vulias_MullenCave/scripts.pory"
+# 267 "data/maps/Vulias_MullenCave/scripts.pory"
 	release
 	end
 
 
 MullenCave_EventScript_NoLeaveWhileFollower::
-# 180 "data/maps/Vulias_MullenCave/scripts.pory"
+# 273 "data/maps/Vulias_MullenCave/scripts.pory"
 	checkfollowernpc
-# 181 "data/maps/Vulias_MullenCave/scripts.pory"
+# 274 "data/maps/Vulias_MullenCave/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq MullenCave_EventScript_NoLeaveWhileFollower_2
 MullenCave_EventScript_NoLeaveWhileFollower_1:
 	end
 
 MullenCave_EventScript_NoLeaveWhileFollower_2:
-# 182 "data/maps/Vulias_MullenCave/scripts.pory"
+# 275 "data/maps/Vulias_MullenCave/scripts.pory"
 	lock
-# 183 "data/maps/Vulias_MullenCave/scripts.pory"
+# 276 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox MullenCave_EventScript_NoLeaveWhileFollower_Text_0
-# 185 "data/maps/Vulias_MullenCave/scripts.pory"
+# 278 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmessage
-# 186 "data/maps/Vulias_MullenCave/scripts.pory"
+# 279 "data/maps/Vulias_MullenCave/scripts.pory"
 	applymovement 0xFF, MullenCave_EventScript_NoLeaveWhileFollower_Movement_0
-# 187 "data/maps/Vulias_MullenCave/scripts.pory"
+# 280 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmovement
-# 188 "data/maps/Vulias_MullenCave/scripts.pory"
+# 281 "data/maps/Vulias_MullenCave/scripts.pory"
 	release
 	goto MullenCave_EventScript_NoLeaveWhileFollower_1
 
 
-# 80 "data/maps/Vulias_MullenCave/scripts.pory"
+# 173 "data/maps/Vulias_MullenCave/scripts.pory"
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Movement_0:
-# 81 "data/maps/Vulias_MullenCave/scripts.pory"
+# 174 "data/maps/Vulias_MullenCave/scripts.pory"
 	emote_exclamation_mark
-# 82 "data/maps/Vulias_MullenCave/scripts.pory"
+# 175 "data/maps/Vulias_MullenCave/scripts.pory"
 	face_right
 	step_end
 
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Movement_1:
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
-# 121 "data/maps/Vulias_MullenCave/scripts.pory"
+# 214 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_left
 	step_end
 
-# 186 "data/maps/Vulias_MullenCave/scripts.pory"
+# 279 "data/maps/Vulias_MullenCave/scripts.pory"
 MullenCave_EventScript_NoLeaveWhileFollower_Movement_0:
-# 186 "data/maps/Vulias_MullenCave/scripts.pory"
+# 279 "data/maps/Vulias_MullenCave/scripts.pory"
 	walk_up
 	step_end
 
@@ -301,8 +384,91 @@ VuliasMullenCave_EventScript_Trainer04_Text_2:
 	.string "I'm sure there are tons of rare Pokemon\n"
 	.string "deeper in the cave!$"
 
+VuliasMullenCave_EventScript_Trainer05_Text_0:
+# 79 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "There's something important across\n"
+	.string "this water, I just know it!$"
+
+VuliasMullenCave_EventScript_Trainer05_Text_1:
+# 81 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "I can't swim!$"
+
+VuliasMullenCave_EventScript_Trainer05_Text_2:
+# 83 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Sure'y I can find some way to just {COLOR RED}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
+	.string "across this water...$"
+
+VuliasMullenCave_EventScript_Trainer06_Text_0:
+# 92 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "I will crush the rock before my rival!$"
+
+VuliasMullenCave_EventScript_Trainer06_Text_1:
+# 93 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Quit distracting me!$"
+
+VuliasMullenCave_EventScript_Trainer06_Text_2:
+# 95 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "I must work had to get my {COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
+	.string "from sensei!$"
+
+VuliasMullenCave_EventScript_Trainer07_Text_0:
+# 104 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Bah! Are you here to userp me? Never!$"
+
+VuliasMullenCave_EventScript_Trainer07_Text_1:
+# 105 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Maybe I'm not cut out for this...$"
+
+VuliasMullenCave_EventScript_Trainer07_Text_2:
+# 107 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Go ahead then, up the stairs you go!$"
+
+VuliasMullenCave_EventScript_Trainer08_Text_0:
+# 116 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "{COLOR Green}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my\n"
+	.string "students? Let us see how you fare\l"
+	.string "against me!$"
+
+VuliasMullenCave_EventScript_Trainer08_Text_1:
+# 119 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Hoho! Very impressive!$"
+
+VuliasMullenCave_EventScript_Trainer08_Text_2:
+# 122 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Go forth and practice your skills!$"
+
+ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_Text_0:
+# 134 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "{COLOR Green}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this\n"
+	.string "{COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!$"
+
+VuliasMullenCave_EventScript_Trainer09_Text_0:
+# 147 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Watch your step!$"
+
+VuliasMullenCave_EventScript_Trainer09_Text_1:
+# 148 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Ah, I've tripped!$"
+
+VuliasMullenCave_EventScript_Trainer09_Text_2:
+# 150 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "I suppose I should watch my step too!$"
+
+VuliasMullenCave_EventScript_Trainer10_Text_0:
+# 158 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Out of the way, I'm running here!$"
+
+VuliasMullenCave_EventScript_Trainer10_Text_1:
+# 159 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "I suppose I did want to battle...$"
+
+VuliasMullenCave_EventScript_Trainer10_Text_2:
+# 161 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "Either way, you should watch where you\n"
+	.string "are going!$"
+
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_0:
-# 87 "data/maps/Vulias_MullenCave/scripts.pory"
+# 180 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Who's the-\p"
 	.string "{PLAYER}! Wow, you got me this time, I\n"
 	.string "nearly jumped out of my socks! I was a\l"
@@ -314,29 +480,29 @@ VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_0:
 	.string "able to catch Pokemon still, too!$"
 
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_1:
-# 101 "data/maps/Vulias_MullenCave/scripts.pory"
+# 194 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's get moving! The\n"
 	.string "exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shouldn't be too far\l"
 	.string "far, {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} won't be far then!$"
 
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_2:
-# 107 "data/maps/Vulias_MullenCave/scripts.pory"
+# 200 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "Jordan is now your follower!$"
 
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Text_3:
-# 115 "data/maps/Vulias_MullenCave/scripts.pory"
+# 208 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all good! I'm sure you\n"
 	.string "want to catch some Pokemon eh?\p"
 	.string "I'll see you at exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. We'll\n"
 	.string "be close to {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} then!$"
 
 MullenCave_EventScript_JordanFollower_Text_0:
-# 170 "data/maps/Vulias_MullenCave/scripts.pory"
+# 263 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "There are plenty of local legends about\n"
 	.string "this cave, but no one has been able to\l"
 	.string "find the caverns that are spoken of.$"
 
 MullenCave_EventScript_NoLeaveWhileFollower_Text_0:
-# 183 "data/maps/Vulias_MullenCave/scripts.pory"
+# 276 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's try to make it to the\n"
 	.string "exit! No use going back now!$"

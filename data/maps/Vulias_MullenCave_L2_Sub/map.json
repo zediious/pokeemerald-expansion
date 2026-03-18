@@ -1,0 +1,56 @@
+{
+  "id": "MAP_VULIAS_MULLEN_CAVE_L2_SUB",
+  "name": "Vulias_MullenCave_L2_Sub",
+  "layout": "LAYOUT_VULIAS_MULLEN_CAVE_L2_SUB",
+  "music": "MUS_MT_PYRE",
+  "region_map_section": "MAPSEC_MULLEN_CAVE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 11,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 4,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "VuliasMullenCave_EventScript_Trainer05",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_MULLEN_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_MULLEN_CAVE_L2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_MULLEN_CAVE_L2",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

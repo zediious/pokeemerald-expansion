@@ -1185,6 +1185,8 @@
   ],
   "gMapGroup_ZEDDungeons": [
     "Vulias_MullenCave",
-    "Vulias_MullenCave_B1"
+    "Vulias_MullenCave_B1",
+    "Vulias_MullenCave_L2",
+    "Vulias_MullenCave_L2_Sub"
   ]
 }

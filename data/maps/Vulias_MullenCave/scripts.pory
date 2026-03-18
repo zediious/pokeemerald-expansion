@@ -73,6 +73,99 @@ script VuliasMullenCave_EventScript_Trainer04{
     end
 }
 
+script VuliasMullenCave_EventScript_Trainer05{
+    trainerbattle_single(
+        TRAINER_GARRISON,
+        "There's something important across
+        this water, I just know it!",
+        "I can't swim!"
+    )
+    msgbox("Sure'y I can find some way to just {COLOR RED}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+            across this water...", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasMullenCave_EventScript_Trainer06{
+    trainerbattle_single(
+        TRAINER_CALVIN_1,
+        "I will crush the rock before my rival!",
+        "Quit distracting me!"
+    )
+    msgbox("I must work had to get my {COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+            from sensei!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasMullenCave_EventScript_Trainer07{
+    trainerbattle_single(
+        TRAINER_BILLY,
+        "Bah! Are you here to userp me? Never!",
+        "Maybe I'm not cut out for this..."
+    )
+    msgbox("Go ahead then, up the stairs you go!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Sensei at top of L2 platforms, gives Black Belt
+script VuliasMullenCave_EventScript_Trainer08{
+    trainerbattle_single(
+        TRAINER_KOJI_1,
+        "{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my
+        students? Let us see how you fare
+        against me!",
+        "Hoho! Very impressive!",
+        ViluasMullenCave_EventScript_Trainer08_BlackBeltGive
+    )
+    msgbox("Go forth and practice your skills!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Give Black Belt after defeating Trainer08
+script ViluasMullenCave_EventScript_Trainer08_BlackBeltGive {
+    lock
+    if (flag(FLAG_MULLEN_SENSEI_DEFEATED)) {
+        release
+        end
+    } else {
+        msgbox("{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this
+        {COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
+        giveitem(ITEM_BLACK_BELT, 1)
+        setflag(FLAG_MULLEN_SENSEI_DEFEATED)
+        waitmessage
+        release
+        end
+    }
+}
+
+script VuliasMullenCave_EventScript_Trainer09{
+    trainerbattle_single(
+        TRAINER_DEVAN,
+        "Watch your step!",
+        "Ah, I've tripped!"
+    )
+    msgbox("I suppose I should watch my step too!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasMullenCave_EventScript_Trainer10{
+    trainerbattle_single(
+        TRAINER_MELINA,
+        "Out of the way, I'm running here!",
+        "I suppose I did want to battle..."
+    )
+    msgbox("Either way, you should watch where you
+            are going!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+/// Jordan Story and Follower
+
 // Player speaks with Jordan who is blocking way to bridge
 script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
     lock

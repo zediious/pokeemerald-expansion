@@ -9493,6 +9493,27 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Vulias_Route110_OldRodHouse/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Route110_OldRodHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_MULLEN_CAVE_L2",
+      "name": "Vulias_MullenCave_L2_Layout",
+      "width": 22,
+      "height": 49,
+      "primary_tileset": "gTileset_CavesMain",
+      "secondary_tileset": "gTileset_CavesMainSecondary",
+      "border_filepath": "data/layouts/Vulias_MullenCave_L2/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_MullenCave_L2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_MULLEN_CAVE_L2_SUB",
+      "name": "Vulias_MullenCave_L2_Sub_Layout",
+      "width": 25,
+      "height": 35,
+      "primary_tileset": "gTileset_CavesMain",
+      "secondary_tileset": "gTileset_CavesMainSecondary",
+      "border_filepath": "data/layouts/Vulias_MullenCave_L2_Sub/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_MullenCave_L2_Sub/map.bin"
+    },
     }
   ]
 }

@@ -94,7 +94,7 @@
 #define FLAG_MULLED_QUICK_BALL                  0x48 // Quick ball item in Mulled cave
 #define FLAG_MULLED_CAVE_JORDAN_01              0x49 // First Jordan in Mulled Cave
 #define FLAG_MULLED_CHARCOAL                    0x4A // Charcoal item in Mullen CAve
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
+#define FLAG_MULLEN_SENSEI_DEFEATED             0x4B // Defeated the Sensei in L2
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
 #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
