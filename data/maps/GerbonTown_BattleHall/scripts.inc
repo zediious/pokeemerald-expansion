@@ -175,7 +175,7 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 157 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	delay 60
 # 158 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	warp MAP_OLDALE_TOWN, 28, 10
+	warp MAP_OLDALE_TOWN, 28, 14
 	end
 
 
@@ -449,7 +449,7 @@ GerbonBattleHall_TournamentPlayerWon::
 # 387 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 388 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	warp MAP_OLDALE_TOWN, 28, 10
+	warp MAP_OLDALE_TOWN, 28, 14
 # 389 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	release
 	end

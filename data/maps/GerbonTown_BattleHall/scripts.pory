@@ -155,7 +155,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     addobject(GERBON_PALLADIUM_BLOCKER_1, MAP_OLDALE_TOWN)
     addobject(GERBON_PALLADIUM_BLOCKER_2, MAP_OLDALE_TOWN)
     delay(60)
-    warp(MAP_OLDALE_TOWN, 28, 10)
+    warp(MAP_OLDALE_TOWN, 28, 14)
     end
 }
 
@@ -385,7 +385,7 @@ script GerbonBattleHall_TournamentPlayerWon {
         clearflag(FLAG_GERBON_TOWN_BLOCKERS)
         setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
         clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
-        warp(MAP_OLDALE_TOWN, 28, 10)
+        warp(MAP_OLDALE_TOWN, 28, 14)
         release
         end
 }
