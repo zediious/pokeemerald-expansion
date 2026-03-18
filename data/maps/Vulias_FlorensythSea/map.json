@@ -3,7 +3,7 @@
   "name": "Vulias_FlorensythSea",
   "layout": "LAYOUT_VULIAS_FLORENSYTH_SEA",
   "music": "MUS_ROUTE119",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_Florensyth_Sea",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
   "map_type": "MAP_TYPE_NONE",
