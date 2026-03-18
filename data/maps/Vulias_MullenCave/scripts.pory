@@ -1,1 +1,88 @@
-mapscripts Vulias_MullenCave_MapScripts {}
+mapscripts Vulias_MullenCave_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 1: VuliasMullenCave_MapScript_HexManiacTrainerPathingTrigger
+    ]
+}
+
+// Trigger custom path for hex maniac trainer
+script VuliasMullenCave_MapScript_HexManiacTrainerPathingTrigger {
+    setvar(VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 0)
+    applymovement(MULLEN_HEXMANIAC, moves(
+        walk_up * 6, walk_right * 3, walk_up * 3,
+        walk_right * 3, walk_up * 3
+    ))
+    waitmovement
+    applymovement(MULLEN_HEXMANIAC, moves(
+        walk_up * 6, walk_right * 3, walk_up * 3,
+        walk_right * 3, walk_up * 3
+    ))
+    applymovement(MULLEN_HEXMANIAC, moves(
+        walk_down * 3, walk_left * 3, walk_down * 3,
+        walk_left * 3, walk_down * 6
+    ))
+    waitmovement
+    setvar(VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER, 1)
+}
+
+//// Signs and Items
+
+// Poke Ball with Quick Ball
+script VuliasMullenCave_EventScript_QuickBall {
+    lock
+    giveitem(ITEM_QUICK_BALL, 1)
+    removeobject(MULLED_QUICK_BALL)
+    setflag(FLAG_MULLED_QUICK_BALL)
+    release
+    end
+}
+
+//// Route trainers
+script VuliasMullenCave_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_LEAH,
+        "Madness upon thee!",
+        "Upon me you say?."
+    )
+    msgbox("Not a bad read kid.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasMullenCave_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_HUEY,
+        "I was looking for the Woltia City Docks,
+        but I think I lost my way!",
+        "Ah, then I definitely lost my way."
+    )
+    msgbox("Don't be like me, read signs!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasMullenCave_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_MAKAYLA,
+        "This cave houses an ancient power. Me!",
+        "Ah well, it really does house an ancient
+        power!"
+    )
+    msgbox("There are many legends of the horrors
+            deep within Mulled Cave.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasMullenCave_EventScript_Trainer04{
+    trainerbattle_single(
+        TRAINER_ED,
+        "I'm trying to find the deeper sections
+        of Mulled Cave, but it's nowhere to be
+        found!",
+        "Maybe if we bring in some power tools..."
+    )
+    msgbox("I'm sure there are tons of rare Pokemon
+            deeper in the cave!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}

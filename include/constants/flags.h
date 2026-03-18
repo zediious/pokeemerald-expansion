@@ -91,7 +91,7 @@
 #define FLAG_ROUTE102_EXPERT_BELT               0x45 // Expert Belt on Route 102
 #define FLAG_ROUTE102_STAIRBLOCKERS             0x46 // Police blocking stairs to Mulled Cave
 #define FLAG_ROUTE110_GOTOLDROD                 0x47 // Player got old rod from Route 110
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
+#define FLAG_MULLED_QUICK_BALL                  0x48 // Quick ball item in Mulled cave
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
@@ -563,7 +563,7 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09) // Route 110 Pearl
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A) // Route 102 Heavy Ball
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x0B) // Route 102 Sitrus Berry
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x0C)
+#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x0C) // Mullen Cave Heart Scale
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_1        (FLAG_HIDDEN_ITEMS_START + 0x0D)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x0E)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL           (FLAG_HIDDEN_ITEMS_START + 0x0F)
