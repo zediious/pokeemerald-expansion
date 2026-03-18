@@ -9417,7 +9417,7 @@
     {
       "id": "LAYOUT_VULIAS_ROUTE110",
       "name": "Vulias_Route110_Layout",
-      "width": 100,
+      "width": 80,
       "height": 74,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",

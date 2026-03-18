@@ -17,6 +17,11 @@
       "map": "MAP_OLDALE_TOWN",
       "offset": 7,
       "direction": "left"
+    },
+    {
+      "map": "MAP_VULIAS_ROUTE110",
+      "offset": 30,
+      "direction": "left"
     }
   ],
   "object_events": [],
