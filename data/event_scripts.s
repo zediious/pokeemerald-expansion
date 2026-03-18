@@ -1770,3 +1770,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_MullenCave/scripts.inc"
 
 	.include "data/maps/Vulias_MullenCave_B1/scripts.inc"
+
+	.include "data/maps/Vulias_Route110_OldRodHouse/scripts.inc"

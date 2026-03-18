@@ -1180,7 +1180,8 @@
     "Vulias_Route102"
   ],
   "gMapGroup_ZEDMiscInt": [
-    "Vulias_Route110_PokemonCenter"
+    "Vulias_Route110_PokemonCenter",
+    "Vulias_Route110_OldRodHouse"
   ],
   "gMapGroup_ZEDDungeons": [
     "Vulias_MullenCave",

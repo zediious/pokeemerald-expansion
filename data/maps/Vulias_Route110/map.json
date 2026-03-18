@@ -157,6 +157,13 @@
       "elevation": 0,
       "dest_map": "MAP_VULIAS_ROUTE110_POKEMON_CENTER",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 31,
+      "y": 58,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE110_OLD_ROD_HOUSE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

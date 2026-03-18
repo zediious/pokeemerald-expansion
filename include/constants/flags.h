@@ -90,7 +90,7 @@
 #define FLAG_GERBON_FIRSTSHOW_GOLEM             0x44 // First show golem
 #define FLAG_ROUTE102_EXPERT_BELT               0x45 // Expert Belt on Route 102
 #define FLAG_ROUTE102_STAIRBLOCKERS             0x46 // Police blocking stairs to Mulled Cave
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
+#define FLAG_ROUTE110_GOTOLDROD                 0x47 // Player got old rod from Route 110
 #define FLAG_UNUSED_0x048    0x48 // Unused Flag
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
