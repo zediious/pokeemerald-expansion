@@ -124,7 +124,7 @@ script VuliasMullenCave_EventScript_Trainer08{
     end
 }
 
-// Give Black Belt after defeating Trainer08
+// Give Rock Smash after defeating Trainer08
 script ViluasMullenCave_EventScript_Trainer08_BlackBeltGive {
     lock
     if (flag(FLAG_MULLEN_SENSEI_DEFEATED)) {
@@ -132,8 +132,8 @@ script ViluasMullenCave_EventScript_Trainer08_BlackBeltGive {
         end
     } else {
         msgbox("{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this
-        {COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
-        giveitem(ITEM_BLACK_BELT, 1)
+        {COLOR RED}TM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
+        giveitem(ITEM_HM_ROCK_SMASH, 1)
         setflag(FLAG_MULLEN_SENSEI_DEFEATED)
         waitmessage
         release

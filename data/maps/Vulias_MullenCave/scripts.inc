@@ -118,7 +118,7 @@ ViluasMullenCave_EventScript_Trainer08_BlackBeltGive::
 # 134 "data/maps/Vulias_MullenCave/scripts.pory"
 	msgbox ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_Text_0
 # 136 "data/maps/Vulias_MullenCave/scripts.pory"
-	giveitem ITEM_BLACK_BELT, 1
+	giveitem ITEM_HM_ROCK_SMASH, 1
 # 137 "data/maps/Vulias_MullenCave/scripts.pory"
 	setflag FLAG_MULLEN_SENSEI_DEFEATED
 # 138 "data/maps/Vulias_MullenCave/scripts.pory"
@@ -496,7 +496,7 @@ VuliasMullenCave_EventScript_Trainer08_Text_2:
 ViluasMullenCave_EventScript_Trainer08_BlackBeltGive_Text_0:
 # 134 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this\n"
-	.string "{COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!$"
+	.string "{COLOR RED}TM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!$"
 
 VuliasMullenCave_EventScript_Trainer09_Text_0:
 # 147 "data/maps/Vulias_MullenCave/scripts.pory"
