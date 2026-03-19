@@ -206,12 +206,14 @@ script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
         release
         end
     } else {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all good! I'm sure you
-                want to catch some Pokemon eh?
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all good! We can travel
+                together another time, yeah?
                 
                 I'll see you at exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. We'll
                 be close to {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} then!")
         waitmessage
+        delay(60)
+        closemessage
         applymovement(MULLED_CAVE_JORDAN_01, moves(walk_left * 13))
         waitmovement
         setflag(FLAG_MULLED_CAVE_JORDAN_01)
