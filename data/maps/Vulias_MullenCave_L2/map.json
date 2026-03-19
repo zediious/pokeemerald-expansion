@@ -103,6 +103,43 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "11",
+      "script": "MullenCave_EventScript_JordanLeaveAtEnd"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "11",
+      "script": "MullenCave_EventScript_JordanLeaveAtEnd"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "11",
+      "script": "MullenCave_EventScript_JordanLeaveAtEnd"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "11",
+      "script": "MullenCave_EventScript_JordanLeaveAtEnd"
+    }
+  ],
   "bg_events": []
 }

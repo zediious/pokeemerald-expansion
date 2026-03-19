@@ -288,6 +288,50 @@ MullenCave_EventScript_NoLeaveWhileFollower_2:
 	goto MullenCave_EventScript_NoLeaveWhileFollower_1
 
 
+MullenCave_EventScript_JordanLeaveAtEnd::
+# 291 "data/maps/Vulias_MullenCave/scripts.pory"
+	checkfollowernpc
+# 292 "data/maps/Vulias_MullenCave/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq MullenCave_EventScript_JordanLeaveAtEnd_1
+# 320 "data/maps/Vulias_MullenCave/scripts.pory"
+	release
+	end
+
+MullenCave_EventScript_JordanLeaveAtEnd_1:
+# 293 "data/maps/Vulias_MullenCave/scripts.pory"
+	lock
+# 294 "data/maps/Vulias_MullenCave/scripts.pory"
+	applymovement 0xFF, MullenCave_EventScript_JordanLeaveAtEnd_Movement_0
+# 295 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmovement
+# 296 "data/maps/Vulias_MullenCave/scripts.pory"
+	msgbox MullenCave_EventScript_JordanLeaveAtEnd_Text_0
+# 307 "data/maps/Vulias_MullenCave/scripts.pory"
+	waitmessage
+# 308 "data/maps/Vulias_MullenCave/scripts.pory"
+	delay 20
+# 309 "data/maps/Vulias_MullenCave/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 310 "data/maps/Vulias_MullenCave/scripts.pory"
+	destroyfollowernpc
+# 311 "data/maps/Vulias_MullenCave/scripts.pory"
+	setflag FLAG_MULLED_CAVE_JORDAN_01
+# 312 "data/maps/Vulias_MullenCave/scripts.pory"
+	delay 60
+# 313 "data/maps/Vulias_MullenCave/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 314 "data/maps/Vulias_MullenCave/scripts.pory"
+	delay 30
+# 315 "data/maps/Vulias_MullenCave/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 12
+# 316 "data/maps/Vulias_MullenCave/scripts.pory"
+	questupdated 0
+# 317 "data/maps/Vulias_MullenCave/scripts.pory"
+	release
+	end
+
+
 # 174 "data/maps/Vulias_MullenCave/scripts.pory"
 VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking_Movement_0:
 # 175 "data/maps/Vulias_MullenCave/scripts.pory"
@@ -508,3 +552,15 @@ MullenCave_EventScript_NoLeaveWhileFollower_Text_0:
 # 277 "data/maps/Vulias_MullenCave/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's try to make it to the\n"
 	.string "exit! No use going back now!$"
+
+MullenCave_EventScript_JordanLeaveAtEnd_Text_0:
+# 296 "data/maps/Vulias_MullenCave/scripts.pory"
+	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Looks like this is the end!\n"
+	.string "sure was a bit more difficult than the\l"
+	.string "{COLOR RED}Ferry Fearow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} we took to get to my house\l"
+	.string "from Woltia, but a bit more fun I would\l"
+	.string "say!\p"
+	.string "I'll go on ahead, and meet you at Woltia\n"
+	.string "City! Just {COLOR RED}go west through Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\l"
+	.string "and you'll get there.\p"
+	.string "See you soon!$"

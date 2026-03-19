@@ -283,3 +283,40 @@ script MullenCave_EventScript_NoLeaveWhileFollower {
     }
     end
 }
+
+// Triggers at end of cave to have Jordan leave, met at Woltia City
+script MullenCave_EventScript_JordanLeaveAtEnd {
+    checkfollowernpc
+    if (var(VAR_RESULT) == YES) {
+        lock
+        applymovement(0xFF, moves(face_up))
+        waitmovement
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Looks like this is the end!
+                sure was a bit more difficult than the
+                {COLOR RED}Ferry Fearow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} we took to get to my house
+                from Woltia, but a bit more fun I would
+                say!
+                
+                I'll go on ahead, and meet you at Woltia
+                City! Just {COLOR RED}go west through Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+                and you'll get there.
+                
+                See you soon!")
+        waitmessage
+        delay(20)
+        fadescreen(FADE_TO_BLACK)
+        destroyfollowernpc
+        setflag(FLAG_MULLED_CAVE_JORDAN_01)
+        delay(60)
+        fadescreen(FADE_FROM_BLACK)
+        delay(30)
+        setvar(VAR_ZED_STORY_TRACKER, 12)
+        questupdated(0)
+        release
+        end
+    } else {
+        release
+        end
+    }
+    
+}
