@@ -432,3 +432,6 @@ const u16 gMetatileAttributes_AutumnCity[] = INCBIN_U16("data/tilesets/primary/a
 
 const u16 gMetatiles_AutumnCitySecond[] = INCBIN_U16("data/tilesets/secondary/autumn_city_second/metatiles.bin");
 const u16 gMetatileAttributes_AutumnCitySecond[] = INCBIN_U16("data/tilesets/secondary/autumn_city_second/metatile_attributes.bin");
+
+const u16 gMetatiles_DesertVillage[] = INCBIN_U16("data/tilesets/secondary/desert_village/metatiles.bin");
+const u16 gMetatileAttributes_DesertVillage[] = INCBIN_U16("data/tilesets/secondary/desert_village/metatile_attributes.bin");
