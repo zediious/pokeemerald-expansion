@@ -3162,3 +3162,41 @@ const u16 gTilesetPalettes_AutumnRuins[][16] =
 };
 
 const u32 gTilesetTiles_AutumnRuins[] = INCBIN_U32("data/tilesets/secondary/autumn_ruins/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_AutumnCity[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/autumn_city/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_AutumnCity[] = INCBIN_U32("data/tilesets/primary/autumn_city/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_AutumnCitySecond[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/autumn_city_second/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_AutumnCitySecond[] = INCBIN_U32("data/tilesets/secondary/autumn_city_second/tiles.4bpp.lz");

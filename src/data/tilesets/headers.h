@@ -1607,3 +1607,25 @@ const struct Tileset gTileset_AutumnRuins =
     .metatileAttributes = gMetatileAttributes_AutumnRuins,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_AutumnCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_AutumnCity,
+    .palettes = gTilesetPalettes_AutumnCity,
+    .metatiles = gMetatiles_AutumnCity,
+    .metatileAttributes = gMetatileAttributes_AutumnCity,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_AutumnCitySecond =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AutumnCitySecond,
+    .palettes = gTilesetPalettes_AutumnCitySecond,
+    .metatiles = gMetatiles_AutumnCitySecond,
+    .metatileAttributes = gMetatileAttributes_AutumnCitySecond,
+    .callback = NULL,
+};
