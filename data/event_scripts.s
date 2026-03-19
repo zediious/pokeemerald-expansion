@@ -1780,3 +1780,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Route103/scripts.inc"
 
 	.include "data/maps/Vulias_Woltia_City/scripts.inc"
+
+	.include "data/maps/Vulias_Igris_Desert/scripts.inc"

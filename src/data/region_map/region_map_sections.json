@@ -1650,6 +1650,10 @@
     {
       "id": "MAPSEC_VULIAS_WOLTIA_CITY",
       "name": "Woltia City"
+    },
+    {
+      "id": "MAPSEC_VULIAS_IGRIS_DESERT",
+      "name": "Igris Desert"
     }
   ]
 }

@@ -9533,6 +9533,16 @@
       "secondary_tileset": "gTileset_AutumnCitySecond",
       "border_filepath": "data/layouts/Vulias_Woltia_City/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Woltia_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_DESERT",
+      "name": "Vulias_Igris_Desert_Layout",
+      "width": 40,
+      "height": 75,
+      "primary_tileset": "gTileset_DesertMain",
+      "secondary_tileset": "gTileset_DesertVillage",
+      "border_filepath": "data/layouts/Vulias_Igris_Desert/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_Desert/map.bin"
     }
   ]
 }
