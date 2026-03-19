@@ -18,7 +18,7 @@ IgrisDesert_EventScript_AngryKrokorok::
 # 12 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmoncry
 # 13 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_AngryKrokorok_Movement_0, face_up
+	applymovement 0xFF, IgrisDesert_EventScript_AngryKrokorok_Movement_0
 # 14 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 15 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -34,6 +34,8 @@ IgrisDesert_EventScript_AngryKrokorok::
 IgrisDesert_EventScript_AngryKrokorok_Movement_0:
 # 13 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	jump_down
+# 13 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	face_up
 	step_end
 
 IgrisDesert_EventScript_AngryKrokorok_Text_0:

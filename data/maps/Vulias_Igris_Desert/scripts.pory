@@ -10,7 +10,7 @@ script IgrisDesert_EventScript_AngryKrokorok {
     playmoncry(SPECIES_KROKOROK, CRY_MODE_NORMAL)
     msgbox("V-V Vruuu")
     waitmoncry
-    applymovement(0xFF, moves(jump_down),face_up)
+    applymovement(0xFF, moves(jump_down,face_up))
     waitmovement
     msgbox("You barely jump out of the way of a Bite
             attack! Better steer clear!
