@@ -1,1 +1,21 @@
 mapscripts Vulias_Igris_Desert_MapScripts {}
+
+// Krokorok angry jump and smack
+script IgrisDesert_EventScript_AngryKrokorok {
+    lock
+    faceplayer
+    msgbox("The Krokorok looks extremely angry, it
+            seems to be protecting the eggs!")
+    waitmessage
+    playmoncry(SPECIES_KROKOROK, CRY_MODE_NORMAL)
+    msgbox("V-V Vruuu")
+    waitmoncry
+    applymovement(0xFF, moves(jump_down),face_up)
+    waitmovement
+    msgbox("You barely jump out of the way of a Bite
+            attack! Better steer clear!
+    ")
+    waitmessage
+    release
+    end
+}

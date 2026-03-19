@@ -9537,7 +9537,7 @@
     {
       "id": "LAYOUT_VULIAS_IGRIS_DESERT",
       "name": "Vulias_Igris_Desert_Layout",
-      "width": 40,
+      "width": 60,
       "height": 75,
       "primary_tileset": "gTileset_DesertMain",
       "secondary_tileset": "gTileset_DesertVillage",
