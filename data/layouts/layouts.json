@@ -9519,18 +9519,18 @@
       "name": "Vulias_Route103_Layout",
       "width": 64,
       "height": 33,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_AutumnRuins",
+      "primary_tileset": "gTileset_AutumnCity",
+      "secondary_tileset": "gTileset_AutumnCitySecond",
       "border_filepath": "data/layouts/Vulias_Route103/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Route103/map.bin"
     },
     {
       "id": "LAYOUT_VULIAS_WOLTIA_CITY",
       "name": "Vulias_Woltia_City_Layout",
-      "width": 70,
-      "height": 72,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_AutumnRuins",
+      "width": 24,
+      "height": 55,
+      "primary_tileset": "gTileset_AutumnCity",
+      "secondary_tileset": "gTileset_AutumnCitySecond",
       "border_filepath": "data/layouts/Vulias_Woltia_City/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Woltia_City/map.bin"
     }
