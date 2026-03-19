@@ -1466,9 +1466,13 @@ void GenerateQuestLocation(s32 questId)
 				StringCopy(gStringVar2, gText_MainQuestMap_04);
 			}
 			// Player won tourney, on way to Woltia through Mulled Cave
-			else if (mainStoryTracker == 10)
+			else if (mainStoryTracker == 10 || mainStoryTracker == 11)
 			{
 				StringCopy(gStringVar2, gText_MainQuestMap_05);
+			}
+			else if (mainStoryTracker == 12)
+			{
+				StringCopy(gStringVar2, gText_MainQuestMap_06);
 			}
 			else {
 				StringCopy(gStringVar2, sSideQuests[questId].map);
@@ -1560,9 +1564,13 @@ void UpdateQuestFlavorText(s32 questId)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_05);
 		}
-		else if (mainStoryTracker == 10)
+		else if (mainStoryTracker == 10 || mainStoryTracker == 11)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_06);
+		}
+		else if (mainStoryTracker == 12)
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_07);
 		}
 	}
 	else
@@ -1676,9 +1684,13 @@ void DetermineSpriteType(s32 questId)
 			{
 				spriteId = OBJ_EVENT_GFX_ROXANNE;
 			}
-			else if (mainStoryTracker >= 10)
+			else if (mainStoryTracker == 10 || mainStoryTracker == 11)
 			{
 				spriteId = OBJ_EVENT_GFX_POKE_BALL;
+			}
+			else if (mainStoryTracker >= 12)
+			{
+				spriteId = OBJ_EVENT_GFX_STEVEN;
 			}
 			else {
 				spriteId = sSideQuests[questId].sprite;
