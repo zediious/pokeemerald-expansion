@@ -299,7 +299,7 @@ script GerbonBattleHall_TournamentBattle {
         trainerbattle_single(
             TRAINER_ROXANNE_1,
             "Congratulations on making it this far!
-            Unfortunately, I'm going to have to
+            Unfortunately, I'm going to have to end
             your train here!",
             "Shows what I know!",
             event_script=GerbonBattleHall_TournamentBattleAfter,
@@ -330,7 +330,7 @@ script GerbonBattleHall_TournamentBattleAfter {
 
     msgbox("DING DING DING ...
     
-            Congragulations {PLAYER}! What a
+            Congratulations {PLAYER}! What a
             battle that was!
             
             The next match will begin soon!" )

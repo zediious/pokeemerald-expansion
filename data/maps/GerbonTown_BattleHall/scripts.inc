@@ -763,7 +763,7 @@ GerbonBattleHall_TournamentBattle_Text_9:
 GerbonBattleHall_TournamentBattle_Text_10:
 # 301 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "Congratulations on making it this far!\n"
-	.string "Unfortunately, I'm going to have to\l"
+	.string "Unfortunately, I'm going to have to end\l"
 	.string "your train here!$"
 
 GerbonBattleHall_TournamentBattle_Text_11:
@@ -773,7 +773,7 @@ GerbonBattleHall_TournamentBattle_Text_11:
 GerbonBattleHall_TournamentBattleAfter_Text_0:
 # 331 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "DING DING DING ...\p"
-	.string "Congragulations {PLAYER}! What a\n"
+	.string "Congratulations {PLAYER}! What a\n"
 	.string "battle that was!\p"
 	.string "The next match will begin soon!$"
 
