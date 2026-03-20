@@ -441,6 +441,14 @@ void QuestMenu_DynamicUpdate_Description(s32 questId)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_07);
 		}
+		else if (mainStoryTracker == 15) // Spoke to Jordan at Aerodrome, on way to Old Ruin
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_08);
+		}
+		else if (mainStoryTracker == 16) // Had Old Ruin encounter, ready to start Woltia tourney
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_09);
+		}
 	}
 	else
 	{
@@ -478,9 +486,13 @@ void QuestMenu_DynamicUpdate_Map(s32 questId)
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_05);
 		}
-		else if (mainStoryTracker >= 12) // Player made it through Mulled Cave to Route 103
+		else if (mainStoryTracker >= 12 && mainStoryTracker < 16) // Player made it through Mulled Cave to Route 103
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_06);
+		}
+		else if (mainStoryTracker == 16) // Player ready to start tourney after Old Ruin encounter
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_07);
 		}
 		else {
 			StringCopy(gStringVar2, sSideQuests[questId].map);
@@ -506,7 +518,7 @@ u8 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
 		{
 			spriteId = OBJ_EVENT_GFX_STEVEN;
 		}
-		else if (mainStoryTracker >= 6 || mainStoryTracker <= 9) // Awoke at Jordan's ready to start first tournament, and tournament underway
+		else if (mainStoryTracker >= 6 && mainStoryTracker <= 9) // Awoke at Jordan's ready to start first tournament, and tournament underway
 		{
 			spriteId = OBJ_EVENT_GFX_ROXANNE;
 		}
@@ -514,9 +526,13 @@ u8 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
 		{
 			spriteId = OBJ_EVENT_GFX_POKE_BALL;
 		}
-		else if (mainStoryTracker >= 12) // Player made it through Mulled Cave to Route 103
+		else if (mainStoryTracker >= 12 && mainStoryTracker < 16) // Player made it through Mulled Cave to Route 103
 		{
 			spriteId = OBJ_EVENT_GFX_STEVEN;
+		}
+		else if (mainStoryTracker == 16) // Player ready to start tourney after Old Ruin encounter
+		{
+			spriteId = OBJ_EVENT_GFX_WINONA;
 		}
 		else {
 			spriteId = sSideQuests[questId].sprite;
