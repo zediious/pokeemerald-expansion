@@ -397,6 +397,143 @@ static const u8 sQuestMenuWindowFontColors[][4] =
 
 //Functions begin here
 
+////////////////////////BEGIN DYNAMIC DESCRIPTION, MAP/////////////////////////
+///////////////////////////AND SPRITE CUSTOMIZATION////////////////////////////
+
+// Replace quest descriptions, maps, and sprites, or any combination of the
+// three, based on a variable. Each relevant function is called when
+// drawing the menu.
+
+// Only `QuestMenu_DynamicUpdate_Sprite` has a return value, it must
+// return a spriteId.
+
+void QuestMenu_DynamicUpdate_Description(s32 questId)
+{
+	// Main Quest (ID: 0)
+	if (questId == 0) 
+	{
+		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
+		if (mainStoryTracker == 1 || mainStoryTracker == 2) // Player on way to Palladium, not finished battle with Jordan yet
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_01);
+		}
+		else if (mainStoryTracker == 3 || mainStoryTracker == 4) // Player finished battle with Jordan at Palladium, on way to Route 110
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_02);
+		}
+		else if (mainStoryTracker == 5) // Player got through Sawgrass Forest, going through Route 110
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_03);
+		}
+		else if (mainStoryTracker == 6 || mainStoryTracker == 7) // Awoke at Jordan's ready to start first tournament
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_04);
+		}
+		else if (mainStoryTracker == 8 || mainStoryTracker == 9) // Palladium Tournament underway
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_05);
+		}
+		else if (mainStoryTracker == 10 || mainStoryTracker == 11) // Player won tourney, on way to Woltia through Mulled Cave
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_06);
+		}
+		else if (mainStoryTracker >= 12 && mainStoryTracker <= 14) // Player made it through Mulled Cave to Route 103
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_07);
+		}
+	}
+	else
+	{
+		StringCopy(gStringVar1, sSideQuests[questId].desc);
+	}
+}
+
+void QuestMenu_DynamicUpdate_Map(s32 questId)
+{
+	// For certain quests, set the location based on story var
+	if (questId == 0) 
+	{
+		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
+		if (mainStoryTracker == 1 || mainStoryTracker == 2) // Player on way to Palladium, not finished battle with Jordan yet
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_01);
+		}
+		else if (mainStoryTracker == 3 || mainStoryTracker == 4) // Player finished battle with Jordan at Palladium, on way to and/or through Sawgrass Forest
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_02);
+		} 
+		else if (mainStoryTracker == 5) // Player got through Sawgrass Forest, going through Route 110
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_03);
+		}
+		else if (mainStoryTracker == 6 || mainStoryTracker == 7) // Awoke at Jordan's ready to start first tournament
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_01);
+		}
+		else if (mainStoryTracker == 8 || mainStoryTracker == 9) // Palladium Tournament underway
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_04);
+		}
+		else if (mainStoryTracker == 10 || mainStoryTracker == 11) // Player won tourney, on way to Woltia through Mulled Cave
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_05);
+		}
+		else if (mainStoryTracker == 12) // Player made it through Mulled Cave to Route 103
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_06);
+		}
+		else {
+			StringCopy(gStringVar2, sSideQuests[questId].map);
+		}
+	}
+	else
+	{
+		StringCopy(gStringVar2, sSideQuests[questId].map);
+	}
+}
+
+u8 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
+{
+	// Determine sprite ID for certain quests, based on story var state
+	if (questId == 0) 
+	{
+		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
+		if (mainStoryTracker == 1 || mainStoryTracker == 2) // Player on way to Palladium, not finished battle with Jordan yet
+		{
+			spriteId = OBJ_EVENT_GFX_POKE_BALL;
+		}
+		else if (mainStoryTracker >= 3 && mainStoryTracker <= 5) // Player finished battle with Jordan at Palladium, on way to Route 110
+		{
+			spriteId = OBJ_EVENT_GFX_STEVEN;
+		}
+		else if (mainStoryTracker >= 6 || mainStoryTracker <= 9) // Awoke at Jordan's ready to start first tournament, and tournament underway
+		{
+			spriteId = OBJ_EVENT_GFX_ROXANNE;
+		}
+		else if (mainStoryTracker == 10 || mainStoryTracker == 11) // Player won tourney, on way to Woltia through Mulled Cave
+		{
+			spriteId = OBJ_EVENT_GFX_POKE_BALL;
+		}
+		else if (mainStoryTracker >= 12) // Player made it through Mulled Cave to Route 103
+		{
+			spriteId = OBJ_EVENT_GFX_STEVEN;
+		}
+		else {
+			spriteId = sSideQuests[questId].sprite;
+		}
+	}
+	else
+	{
+		spriteId = sSideQuests[questId].sprite;
+	}
+
+	return spriteId;
+}
+
+
+////////////////////////END DYNAMIC DESCRIPTION, MAP///////////////////////////
+///////////////////////////AND SPRITE CUSTOMIZATION////////////////////////////
+
 //ported from firered by ghoulslash
 void QuestMenu_Init(u8 a0, MainCallback callback)
 {
@@ -1445,53 +1582,10 @@ void GenerateAndPrintQuestDetails(s32 questId)
 void GenerateQuestLocation(s32 questId)
 {
 	if (!IsSubquestMode())
-	{
-		// For certain quests, set the location based on story var
-		if (questId == 0) 
-		{
-			u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
-			// Player on way to Palladium, not finished battle with Jordan yet
-			if (mainStoryTracker == 1 || mainStoryTracker == 2)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_01);
-			}
-			// Player finished battle with Jordan at Palladium, on way to and/or through Sawgrass Forest
-			else if (mainStoryTracker == 3 || mainStoryTracker == 4)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_02);
-			} 
-			// Player got through Sawgrass Forest, on way through Route 110
-			else if (mainStoryTracker == 5)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_03);
-			}
-			// Awoke at Jordan's ready to start first tournament
-			else if (mainStoryTracker == 6 || mainStoryTracker == 7)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_01);
-			}
-			// Palladium Tournament underway
-			else if (mainStoryTracker == 8 || mainStoryTracker == 9)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_04);
-			}
-			// Player won tourney, on way to Woltia through Mulled Cave
-			else if (mainStoryTracker == 10 || mainStoryTracker == 11)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_05);
-			}
-			else if (mainStoryTracker == 12)
-			{
-				StringCopy(gStringVar2, gText_MainQuestMap_06);
-			}
-			else {
-				StringCopy(gStringVar2, sSideQuests[questId].map);
-			}
-		}
-		else
-		{
-			StringCopy(gStringVar2, sSideQuests[questId].map);
-		}
+	{	
+		// If a given quest has dynamic locations, use those.
+		// Otherwise, use the constant
+		QuestMenu_DynamicUpdate_Map(questId);
 	}
 	else
 	{
@@ -1545,48 +1639,9 @@ void GenerateQuestFlavorText(s32 questId)
 }
 void UpdateQuestFlavorText(s32 questId)
 {	
-	// Track certain quests, update the description based on tracker var for said quests
-
-	// Main Quest (ID: 0)
-	if (questId == 0) 
-	{
-		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
-		// Player on way to Palladium, not finished battle with Jordan yet
-		if (mainStoryTracker == 1 || mainStoryTracker == 2)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_01);
-		}
-		// Player finished battle with Jordan at Palladium, on way to Route 110
-		else if (mainStoryTracker == 3 || mainStoryTracker == 4)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_02);
-		}
-		// Player got through Sawgrass Forest, going through Route 110
-		else if (mainStoryTracker == 5)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_03);
-		}
-		else if (mainStoryTracker == 6 || mainStoryTracker == 7)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_04);
-		}
-		else if (mainStoryTracker == 8 || mainStoryTracker == 9)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_05);
-		}
-		else if (mainStoryTracker == 10 || mainStoryTracker == 11)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_06);
-		}
-		else if (mainStoryTracker >= 12 && mainStoryTracker <= 14)
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_07);
-		}
-	}
-	else
-	{
-		StringCopy(gStringVar1, sSideQuests[questId].desc);
-	}
+	// If a quest has dynamic description updates, apply them
+	// Otherwise, use the constant.
+	QuestMenu_DynamicUpdate_Description(questId);
 
 }
 void PrintQuestFlavorText(s32 questId)
@@ -1675,41 +1730,9 @@ void DetermineSpriteType(s32 questId)
 
 	if (IsSubquestMode() == FALSE)
 	{	
-
-		// Determine sprite ID for certain quests, based on story var state
-		if (questId == 0) 
-		{
-			u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
-			// Player on way to Palladium, not finished battle with Jordan yet
-			if (mainStoryTracker == 1 || mainStoryTracker == 2)
-			{
-				spriteId = OBJ_EVENT_GFX_POKE_BALL;
-			}
-			// Player finished battle with Jordan at Palladium, on way to Route 110
-			else if (mainStoryTracker >= 3 && mainStoryTracker <= 5)
-			{
-				spriteId = OBJ_EVENT_GFX_STEVEN;
-			}
-			else if (mainStoryTracker >= 6 || mainStoryTracker <= 9)
-			{
-				spriteId = OBJ_EVENT_GFX_ROXANNE;
-			}
-			else if (mainStoryTracker == 10 || mainStoryTracker == 11)
-			{
-				spriteId = OBJ_EVENT_GFX_POKE_BALL;
-			}
-			else if (mainStoryTracker >= 12)
-			{
-				spriteId = OBJ_EVENT_GFX_STEVEN;
-			}
-			else {
-				spriteId = sSideQuests[questId].sprite;
-			}
-		}
-		else
-		{
-			spriteId = sSideQuests[questId].sprite;
-		}
+		// If sprite has dynamic updates, use those
+		// Otherwise, use the constant
+		spriteId = QuestMenu_DynamicUpdate_Sprite(questId, spriteId);
 
 		spriteType = sSideQuests[questId].spritetype;
 
