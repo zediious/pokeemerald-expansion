@@ -445,7 +445,7 @@ void QuestMenu_DynamicUpdate_Description(s32 questId)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_08);
 		}
-		else if (mainStoryTracker == 16) // Had Old Ruin encounter, ready to start Woltia tourney
+		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Had Old Ruin encounter, ready to start Woltia tourney
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_09);
 		}
@@ -490,7 +490,7 @@ void QuestMenu_DynamicUpdate_Map(s32 questId)
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_06);
 		}
-		else if (mainStoryTracker == 16) // Player ready to start tourney after Old Ruin encounter
+		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Player ready to start tourney after Old Ruin encounter
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_07);
 		}
@@ -530,7 +530,7 @@ u8 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
 		{
 			spriteId = OBJ_EVENT_GFX_STEVEN;
 		}
-		else if (mainStoryTracker == 16) // Player ready to start tourney after Old Ruin encounter
+		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Player ready to start tourney after Old Ruin encounter
 		{
 			spriteId = OBJ_EVENT_GFX_WINONA;
 		}
