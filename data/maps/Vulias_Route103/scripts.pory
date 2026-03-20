@@ -23,6 +23,7 @@ script VuliasRoute103_EventScript_LostMonQuestTrigger {
     waitmovement
     setvar(VAR_ZED_STORY_TRACKER, 13)
     setflag(FLAG_IGRISDESERT_JORDAN_01)
+    setflag(FLAG_IGRIS_TOGEPI_AND_BEAUTY)
     startquest(1)
     waitmessage
     release

@@ -86,7 +86,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
     msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}For the last time, stand on guard
             while I-")
     playse(SE_PIN)
-    applymovement(IGRIS_KOWTOWADMIN_01, moves(face_right))
+    applymovement(IGRIS_KOWTOWADMIN_01, moves(emote_exclamation_mark, face_right))
     msgbox("{COLOR GREEN}Kowtow Admin: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You're not my team!
             
             
@@ -97,7 +97,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
     clearflag(FLAG_IGRISDESERT_JORDAN_01)
     addobject(IGRIS_JORDAN_01)
     playse(SE_PIN)
-    applymovement(0xFF, moves(face_right))
+    applymovement(0xFF, moves(emote_exclamation_mark, face_right))
     waitmovement
     waitmessage
     applymovement(0xFF, moves(walk_up, face_down))
@@ -124,7 +124,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
 
 script IgrisDesert_KowtowAdmin_AfterBattle {
     lock
-    msgbox("H ave not had to use one of these for
+    msgbox("Have not had to use one of these for
             quite some time...
             
             Smokescreen!")
@@ -167,7 +167,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     waitmessage
     playmoncry(SPECIES_TOGEPI, CRY_MODE_NORMAL)
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_faster_right, face_left))
-    applymovement(0xFF, moves(walk_faster_right, walk_faster_down, face_up))
+    applymovement(0xFF, moves(walk_right, walk_down, face_up))
     waitmovement
     applymovement(IGRIS_TOGEPI, moves(walk_right * 2))
     waitmovement
@@ -194,6 +194,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     delay(30)
     setflag(FLAG_IGRIS_TOGEPI_AND_BEAUTY)
     removeobject(TOGEPI_BEAUTY_DESERT)
+    removeobject(IGRIS_TOGEPI)
     fadescreen(FADE_FROM_BLACK)
     applymovement(0xFF, moves(face_left))
     applymovement(IGRIS_JORDAN_01, moves(face_right))
@@ -212,16 +213,16 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
         looking for you, when I found that lady
         outside.
 
-        We should
-        make our way over there! Just head
-        south of the desert, and then west!
-        I'll see you there!"
+        We should make our way over there!
+        Just head south of the desert, and 
+        then west! I'll see you there!"
     )
     applymovement(IGRIS_JORDAN_01, moves(
         walk_up, walk_right * 6, walk_down * 10
     ))
     waitmovement
     setflag(FLAG_IGRISDESERT_JORDAN_01)
+    destroyfollowernpc
     removeobject(IGRIS_JORDAN_01)
     setvar(VAR_ZED_STORY_TRACKER, 14)
     completequest(1)

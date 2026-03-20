@@ -43,7 +43,7 @@
     {
       "local_id": "IGRIS_KOWTOW_01_04",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 15,
+      "x": 16,
       "y": 67,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -71,7 +71,7 @@
     {
       "local_id": "IGRIS_KOWTOW_01_03",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 21,
+      "x": 22,
       "y": 71,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -175,8 +175,8 @@
       "x": 29,
       "y": 58,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "13",
       "script": "IgrisDesert_EventScript_KowtowAdmin"
     },
     {
@@ -184,8 +184,8 @@
       "x": 29,
       "y": 57,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "13",
       "script": "IgrisDesert_EventScript_KowtowAdminTopTileMove"
     }
   ],

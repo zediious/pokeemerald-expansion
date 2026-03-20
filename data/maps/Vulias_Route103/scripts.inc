@@ -32,31 +32,33 @@ VuliasRoute103_EventScript_LostMonQuestTrigger::
 # 25 "data/maps/Vulias_Route103/scripts.pory"
 	setflag FLAG_IGRISDESERT_JORDAN_01
 # 26 "data/maps/Vulias_Route103/scripts.pory"
-	startquest 1
+	setflag FLAG_IGRIS_TOGEPI_AND_BEAUTY
 # 27 "data/maps/Vulias_Route103/scripts.pory"
-	waitmessage
+	startquest 1
 # 28 "data/maps/Vulias_Route103/scripts.pory"
+	waitmessage
+# 29 "data/maps/Vulias_Route103/scripts.pory"
 	release
 	end
 
 
 VuliasRoute103_EventScript_LostMonWomanSpeak::
-# 34 "data/maps/Vulias_Route103/scripts.pory"
+# 35 "data/maps/Vulias_Route103/scripts.pory"
 	goto_if_set FLAG_ROUTE103_SAVED_TOGEPI, VuliasRoute103_EventScript_LostMonWomanSpeak_1
-# 37 "data/maps/Vulias_Route103/scripts.pory"
-	lock
 # 38 "data/maps/Vulias_Route103/scripts.pory"
-	faceplayer
+	lock
 # 39 "data/maps/Vulias_Route103/scripts.pory"
+	faceplayer
+# 40 "data/maps/Vulias_Route103/scripts.pory"
 	msgbox VuliasRoute103_EventScript_LostMonWomanSpeak_Text_0
-# 47 "data/maps/Vulias_Route103/scripts.pory"
-	waitmessage
 # 48 "data/maps/Vulias_Route103/scripts.pory"
+	waitmessage
+# 49 "data/maps/Vulias_Route103/scripts.pory"
 	release
 	end
 
 VuliasRoute103_EventScript_LostMonWomanSpeak_1:
-# 35 "data/maps/Vulias_Route103/scripts.pory"
+# 36 "data/maps/Vulias_Route103/scripts.pory"
 	nop
 	return
 
@@ -100,7 +102,7 @@ VuliasRoute103_EventScript_LostMonQuestTrigger_Text_0:
 	.string "lose my Togepi!$"
 
 VuliasRoute103_EventScript_LostMonWomanSpeak_Text_0:
-# 39 "data/maps/Vulias_Route103/scripts.pory"
+# 40 "data/maps/Vulias_Route103/scripts.pory"
 	.string "{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please, save my\n"
 	.string "Togepi! I don't know how I could go on\l"
 	.string "without her!\p"
