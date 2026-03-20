@@ -65,6 +65,7 @@
 #include "battle.h"
 #include "constants/event_objects.h"
 #include "constants/map_types.h"
+#include "constants/field_move.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
@@ -2319,16 +2320,61 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
         return FALSE;
 
     move = FieldMove_GetMoveId(fieldMove);
+
+    // Make sure player has the HM in bag
+    u32 count;
+    switch (move)
+    {
+        case MOVE_CUT:
+            count = CountTotalItemQuantityInBag(ITEM_HM01);
+            break;
+        case MOVE_FLY:
+            count = CountTotalItemQuantityInBag(ITEM_HM02);
+            break;
+        case MOVE_SURF:
+            count = CountTotalItemQuantityInBag(ITEM_HM03);
+            break;
+        case MOVE_STRENGTH:
+            count = CountTotalItemQuantityInBag(ITEM_HM04);
+            break;
+        case MOVE_FLASH:
+            count = CountTotalItemQuantityInBag(ITEM_HM05);
+            break;
+        case MOVE_ROCK_SMASH:
+            count = CountTotalItemQuantityInBag(ITEM_HM06);
+            break;
+        case MOVE_WATERFALL:
+            count = CountTotalItemQuantityInBag(ITEM_HM07);
+            break;
+        case MOVE_DIVE:
+            count = CountTotalItemQuantityInBag(ITEM_HM08);
+            break;
+        default:
+            return FALSE;
+    }
+    
+    if (count == 0) {
+        return FALSE;
+    }
+
     for (u32 i = 0; i < PARTY_SIZE; i++)
     {
         u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
         if (!species)
             break;
-        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && MonKnowsMove(&gPlayerParty[i], move) == TRUE)
-        {
-            gSpecialVar_Result = i;
-            gSpecialVar_0x8004 = species;
-            break;
+
+        if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)) {
+            // Get teachable learnset of species, return if species can learn the move
+            const u16 *learnset2 = GetSpeciesTeachableLearnset(species);
+            for (u32 j = 0; learnset2[j] != MOVE_UNAVAILABLE;j++)
+            {
+                if (learnset2[j] == move)
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    break;
+                }
+            }
         }
     }
 
