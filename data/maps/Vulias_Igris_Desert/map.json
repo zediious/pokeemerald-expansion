@@ -43,7 +43,7 @@
     {
       "local_id": "IGRIS_KOWTOW_01_04",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 16,
+      "x": 17,
       "y": 67,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -71,7 +71,7 @@
     {
       "local_id": "IGRIS_KOWTOW_01_03",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 22,
+      "x": 23,
       "y": 71,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
