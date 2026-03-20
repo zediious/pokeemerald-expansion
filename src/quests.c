@@ -478,7 +478,7 @@ void QuestMenu_DynamicUpdate_Map(s32 questId)
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_05);
 		}
-		else if (mainStoryTracker == 12) // Player made it through Mulled Cave to Route 103
+		else if (mainStoryTracker >= 12) // Player made it through Mulled Cave to Route 103
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_06);
 		}
