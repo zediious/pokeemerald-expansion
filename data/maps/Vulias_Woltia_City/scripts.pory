@@ -1,1 +1,136 @@
-mapscripts Vulias_Woltia_City_MapScripts {}
+mapscripts Vulias_Woltia_City_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ZED_STORY_TRACKER, 16: Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney
+        VAR_ZED_STORY_TRACKER, 14: Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers
+    ]
+}
+
+script Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers {
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
+    end
+}
+
+script Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney {
+    setvar(VAR_ZED_STORY_TRACKER, 17)
+    addobject(WOLTIA_JORDAN_TRIGGERTOURNEY)
+    end
+}
+
+// Player talk to Jordan if they try to go in Aerodrome early
+script WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter {
+    lock
+    applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(emote_exclamation_mark, face_right))
+    delay(20)
+    applymovement(0xFF, moves(walk_down, face_left))
+    waitmovement
+    goto(WoltiaCity_EventScript_JordanTriggerOldRuinVisit)
+}
+
+// Start Old Ruin visit before tourney by speaking to Jordan outside hall
+// As well, start tourney after Old ruin encounter
+script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
+    if (var(VAR_ZED_STORY_TRACKER) == 17) {
+        lock
+        faceplayer
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ready to go? They are letting
+                in tournament entrants now!", MSGBOX_YESNO)
+        waitmessage
+        if (var(VAR_RESULT) == YES) {
+            setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
+            setflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
+            setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
+            setflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
+            setflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
+            msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Nice! I'm excited about this!
+            
+                    You bet we'll see each other at the end!
+                    I won't let you get me this time!")
+            waitmessage
+            setvar(VAR_WOLTIA_TOURNAMENT_STATE, 1)
+            warp(MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 5)
+            release
+            end
+        }
+    }
+    else {
+        lock
+        faceplayer
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Heya! The tournament is still
+                not set to start for a little bit, we
+                have some time to kill.
+                
+                Let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, right
+                there next to {COLOR RED}The Aerodrome{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
+                
+                Oh, by the way, that's the name of the
+                {COLOR RED}Battle Hall{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} here in Woltia City, pretty
+                cool huh?
+                
+                Lead the way! It's just up ahead!")
+        waitmessage
+        // Not battling with partner here.
+        setfollowernpc(
+            WOLTIA_JORDAN_TRIGGERTOURNEY,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            WoltiaCity_EventScript_JordanFollowerKeeganEncounter,
+            PARTNER_JORDAN_PANSEAR_03
+        )
+        setvar(VAR_ZED_STORY_TRACKER, 15)
+        questupdated(0)
+        release
+        end
+    }
+    
+    
+}
+
+script WoltiaCity_EventScript_JordanFollowerKeeganEncounter {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Let's go to the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+            It's just to right of the giant building
+            right there!")
+    waitmessage
+    release
+    end
+}
+
+// Prevent leaving top half of city during encounter
+script WoltiaCity_EventScript_NoLeaveWhileFollower {
+    checkfollowernpc
+    if (var(VAR_RESULT) == YES) {
+        lock
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Where you going? It won't take
+                long, let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+                
+                It's just to right of the giant building
+                on the north side of the city!")
+        waitmessage
+        applymovement(0xFF, moves(walk_up))
+        waitmovement
+        release
+    }
+    end
+}
+
+// Same as above but south. This is very lazy
+script WoltiaCity_EventScript_NoLeaveWhileFollowerSouth {
+    checkfollowernpc
+    if (var(VAR_RESULT) == YES) {
+        lock
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Where you going? It won't take
+                long, let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+                
+                It's just to right of the giant building
+                on the north side of the city!")
+        waitmessage
+        applymovement(0xFF, moves(walk_down))
+        waitmovement
+        release
+    }
+    end
+}

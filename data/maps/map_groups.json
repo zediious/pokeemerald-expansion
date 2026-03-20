@@ -77,7 +77,8 @@
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_ZEDTownsAndRoutes",
     "gMapGroup_ZEDMiscInt",
-    "gMapGroup_ZEDDungeons"
+    "gMapGroup_ZEDDungeons",
+    "gMapGroup_ZEDIndoorWoltia"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1191,5 +1192,10 @@
     "Vulias_MullenCave_B1",
     "Vulias_MullenCave_L2",
     "Vulias_MullenCave_L2_Sub"
+  ],
+  "gMapGroup_ZEDIndoorWoltia": [
+    "WoltiaCity_BattleHall",
+    "WoltiaCity_OldRuin",
+    "WoltiaCity_BattleHall_PrepRoom"
   ]
 }

@@ -1,0 +1,66 @@
+mapscripts WoltiaCity_OldRuin_MapScripts {}
+
+script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
+    lock
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_up * 2, walk_left, walk_up))
+    applymovement(0xFF, moves(walk_right, face_up))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wow, the carvings here are
+            so cool! I wonder when all of this
+            was created?")
+    waitmessage
+    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A very long time ago, when power
+            meant...something more.")
+    waitmessage
+    delay(30)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark, face_up))
+    applymovement(0xFF, moves(emote_exclamation_mark, face_up))
+    applymovement(WOLTIA_RUIN_KEEGAN, moves(walk_down * 4, face_left))
+    waitmovement
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_right))
+    waitmovement
+    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The legends of Vulias carry much
+            weight. They may be an avenue to one's
+            greatest desires.
+            
+            If they are willing to do what is
+            necessary.")
+    waitmessage
+    delay(60)
+    applymovement(WOLTIA_RUIN_KEEGAN, moves(walk_down * 2, face_right))
+    waitmovement
+    msgbox("The mysterious man sizes you up
+            from head to toe.")
+    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hmm. As well, it helps when others
+            don't stand in your way.")
+    waitmessage
+    delay(60)
+    applymovement(WOLTIA_RUIN_KEEGAN, moves(walk_down))
+    waitmovement
+    setflag(FLAG_WOLTIA_RUIN_KEEGAN)
+    removeobject(WOLTIA_RUIN_KEEGAN)
+    playse(SE_EXIT)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down, walk_right, walk_down, face_right))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was...weird, to say the
+            least. Do you know what he was going on
+            about? I sure don't.
+            
+            Anyways, I guess we'll come look around
+            more another time, the tournament must
+            be starting soon!
+            
+            See you at {COLOR RED}The Aerodrome!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down))
+    waitmovement
+    destroyfollowernpc
+    playse(SE_EXIT)
+    setvar(VAR_ZED_STORY_TRACKER, 16)
+    waitse
+    delay(30)
+    clearflag(FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY)
+    questupdated(0)
+    release
+    end
+}

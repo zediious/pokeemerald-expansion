@@ -9543,6 +9543,36 @@
       "secondary_tileset": "gTileset_DesertVillage",
       "border_filepath": "data/layouts/Vulias_Igris_Desert/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Desert/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOLTIA_CITY_BATTLE_HALL",
+      "name": "WoltiaCity_BattleHall_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_DojoInterior",
+      "border_filepath": "data/layouts/WoltiaCity_BattleHall/border.bin",
+      "blockdata_filepath": "data/layouts/WoltiaCity_BattleHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOLTIA_CITY_OLD_RUIN",
+      "name": "WoltiaCity_OldRuin_Layout",
+      "width": 22,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/WoltiaCity_OldRuin/border.bin",
+      "blockdata_filepath": "data/layouts/WoltiaCity_OldRuin/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM",
+      "name": "WoltiaCity_BattleHall_PrepRoom_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_DojoInterior",
+      "border_filepath": "data/layouts/WoltiaCity_BattleHall_PrepRoom/border.bin",
+      "blockdata_filepath": "data/layouts/WoltiaCity_BattleHall_PrepRoom/map.bin"
     }
   ]
 }

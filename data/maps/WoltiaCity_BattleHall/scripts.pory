@@ -1,0 +1,261 @@
+mapscripts WoltiaCity_BattleHall_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_WOLTIA_TOURNAMENT_STATE, 2: WoltiaBattleHall_TournamentBattleTrigger
+        VAR_WOLTIA_TOURNAMENT_STATE, 3: WoltiaBattleHall_TournamentBattleTrigger
+        VAR_WOLTIA_TOURNAMENT_STATE, 4: WoltiaBattleHall_TournamentBattleTrigger
+        VAR_WOLTIA_TOURNAMENT_STATE, 5: WoltiaBattleHall_TournamentBattleTrigger
+        VAR_WOLTIA_TOURNAMENT_STATE, 6: WoltiaBattleHall_TournamentBattleTrigger
+    ]
+}
+
+/// Woltia Tournament Battles
+
+// Trigger battle
+script WoltiaBattleHall_TournamentBattleTrigger {
+    if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT, TRAINER_PERRY)
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WOLTIATOURNEY_TRAINER01)
+        clearflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
+        addobject(WOLTIATOURNEY_TRAINER01)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT, TRAINER_TED)
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WOLTIATOURNEY_TRAINER02)
+        clearflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
+        addobject(WOLTIATOURNEY_TRAINER02)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT, TRAINER_WADE)
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WOLTIATOURNEY_TRAINER03)
+        clearflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
+        addobject(WOLTIATOURNEY_TRAINER03)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
+        // Not actually Jordan's starter, but used to buffer his name
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT, TRAINER_MAY_ROUTE_110_TREECKO)
+        clearflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WOLTIATOURNEY_TRAINER04)
+        addobject(WOLTIATOURNEY_TRAINER04)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 6) {
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT, TRAINER_WINONA_1)
+        setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WOLTIATOURNEY_TRAINER05)
+        clearflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
+        addobject(WOLTIATOURNEY_TRAINER05)
+    }
+    goto(WoltiaBattleHall_TournamentBattle)
+    }
+
+// Shared battle script
+script WoltiaBattleHall_TournamentBattle {
+    lock
+    delay(60)
+    buffertrainername(STR_VAR_1, VAR_WOLTIA_TOURNAMENT_OPPONENT)
+    msgbox("DING DING DING ...
+    
+            Avid battlers, step up!
+            
+            {PLAYER} VS {STR_VAR_1}!" )
+    waitmessage
+
+    // Move camera to "center" stage
+    special(SpawnCameraObject)
+    applymovement(LOCALID_CAMERA, moves(
+        walk_right * 4,
+        walk_down
+    ))
+    waitmovement
+
+    // Player and trainer walk towards center
+    applymovement(0xFF, moves(
+        walk_right * 3
+    ))
+    applymovement(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, moves(
+        walk_left * 3
+    ))
+    waitmovement
+    delay(30)
+
+    // Begin battle VS current trainer
+      if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
+        trainerbattle_single(
+            TRAINER_PERRY,
+            "We're gonna have a rockin time!",
+            "I've been rocked!",
+            event_script=WoltiaBattleHall_TournamentBattleAfter,
+        )
+        }
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {
+        trainerbattle_single(
+            TRAINER_TED,
+            "My Pokemon and I are unstoppable!",
+            "Immovable object, you know how it goes.",
+            event_script=WoltiaBattleHall_TournamentBattleAfter,
+        )
+    }
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {
+        trainerbattle_single(
+            TRAINER_WADE,
+            "The fruits of my labor will show!",
+            "My fruits!",
+            event_script=WoltiaBattleHall_TournamentBattleAfter,
+        )
+    }
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! We both made it to
+                the end! It all comes down to this!")
+        waitmessage
+
+        // Determine Jordan starter
+        if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+            trainerbattle_single(
+                TRAINER_BRENDAN_ROUTE_119_TORCHIC,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=WoltiaBattleHall_TournamentBattleAfter,
+            )
+        }
+        elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+            trainerbattle_single(
+                TRAINER_MAY_ROUTE_110_MUDKIP,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=WoltiaBattleHall_TournamentBattleAfter,
+            )
+        }
+        elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+            trainerbattle_single(
+                TRAINER_MAY_ROUTE_119_MUDKIP,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=WoltiaBattleHall_TournamentBattleAfter,
+            )
+        }
+        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
+            trainerbattle_single(
+                TRAINER_MAY_ROUTE_110_TREECKO,
+                "Don't hold back, because I wont!",
+                "You just keep blowing me away!",
+                event_script=WoltiaBattleHall_TournamentBattleAfter,
+            )
+        }
+    }
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 6) {
+        trainerbattle_single(
+            TRAINER_WINONA_1,
+            "Congratulations on making it this far!
+            Unfortunately, I'm going to have to
+            your train here!",
+            "Shows what I know!",
+            event_script=WoltiaBattleHall_TournamentBattleAfter,
+        )
+    }
+}
+
+script WoltiaBattleHall_Tournament_RemoveAllTrainers {
+    // Remove the current trainer object
+    removeobject(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL)
+
+    // Set flag for all trainers
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
+}
+
+script WoltiaBattleHall_TournamentBattleAfter {
+    lock
+    delay(60)
+
+    // Player beat Candace, go to end
+    if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 6) {
+        goto(WoltiaBattleHall_TournamentPlayerWon)
+    }
+
+    msgbox("DING DING DING ...
+    
+            Congratulations {PLAYER}! What a
+            battle that was!
+            
+            The next match will begin soon!" )
+    waitmessage
+    playfanfare(SE_APPLAUSE)
+    waitse
+    fadescreen(FADE_TO_BLACK)
+    delay(30)
+    warp(MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 6)
+    call(WoltiaBattleHall_Tournament_RemoveAllTrainers)
+    special(RemoveCameraObject)
+    release
+    end
+}
+
+script WoltiaBattleHall_TournamentPlayerWon {
+        msgbox("DING DING DING DING DING DING
+    
+            {PLAYER} has defeated the standing
+            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Candace!
+
+            They now take the crown! What an upset!" )
+        waitmessage
+        playfanfare(SE_APPLAUSE)
+        setvar(VAR_WOLTIA_TOURNAMENT_STATE, 7)
+        waitfanfare
+        applymovement(WOLTIATOURNEY_TRAINER05, moves(walk_left * 2))
+        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I had so much fun! That was an
+        amazing battle! I'm sure most would be
+        unhappy in my shoes, but I can't stop
+        smiling!
+        
+        You're the new Rep Trainer for Woltia
+        City! Congratulations! Here is the 
+        Aerodrome Ribbon, the mark of your
+        status.")
+        waitmessage
+
+        setflag(FLAG_BADGE02_GET)
+        playfanfare(MUS_OBTAIN_BADGE)
+        msgbox("You got the Aerodrome Ribbon!", MSGBOX_SIGN)
+        waitfanfare
+        waitmessage
+
+        // Let player know about level cap
+        playfanfare(MUS_LEVEL_UP)
+        msgbox("The level cap has been raised to 30
+        
+                You can now use {COLOR RED}Rock Smash!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}", MSGBOX_SIGN)
+        waitfanfare
+        waitmessage
+        
+        delay(30)
+        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little
+                something extra from me, I think you'll
+                find some good use for it.")
+        waitmessage
+
+        giveitem(ITEM_TM_AERIAL_ACE, 1)
+        waitmessage
+
+        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move can't miss! It
+                helps you get out of some sticky
+                situations! I didn't help me
+                enough against you!
+                
+                Thank you for the wonderful battle!")
+        waitmessage
+        setvar(VAR_ZED_STORY_TRACKER, 18)
+        delay(30)
+        setflag(FLAG_ANGRY_KROKOROK_01)
+        warp(MAP_VULIAS_WOLTIA_CITY, 11, 17)
+        release
+        end
+}
+
+
+
+

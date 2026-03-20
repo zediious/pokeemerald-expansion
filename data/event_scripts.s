@@ -1782,3 +1782,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Woltia_City/scripts.inc"
 
 	.include "data/maps/Vulias_Igris_Desert/scripts.inc"
+
+	.include "data/maps/WoltiaCity_BattleHall/scripts.inc"
+
+	.include "data/maps/WoltiaCity_OldRuin/scripts.inc"
+
+	.include "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.inc"

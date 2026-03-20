@@ -6559,13 +6559,21 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Life Dew
 - Hypnosis
 
-Cetoddle
+Cetitan
 Level: 24
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Ice Shard
 - Take Down
 - Rest
 - Flail
+
+Octillery
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Octazooka
+- Aurora Beam
+- Wrap
+- Mud Shot
 
 === TRAINER_CARTER ===
 Name: CARTER

@@ -1,0 +1,86 @@
+mapscripts WoltiaCity_BattleHall_PrepRoom_MapScripts {}
+
+script WoltiaBattleHall_PrepRoom_Healer {
+    lock
+    faceplayer
+    msgbox(
+        "Hello, I can restore your tired
+        Pokémon to full health.
+        
+        Would you like to rest your Pokémon?"
+    , MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        incrementgamestat(GAME_STAT_USED_POKECENTER)
+        special(HealPlayerParty)
+        msgbox(
+            "All done. Keep safe!"
+        )
+    }
+    else {
+        msgbox("Keep safe!")
+    }
+    release
+    end
+}
+
+script WoltiaBattleHall_PrepRoom_HealerChansey {
+    lock
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    msgbox("Chans-eee")
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}
+
+script WoltiaBattleHall_PrepRoom_MatchStarterWoman {
+    lock
+    faceplayer
+
+    if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 1) {
+        msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Are you ready to start
+                your first match?", MSGBOX_YESNO)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
+        msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Are you ready to start
+                your second match?", MSGBOX_YESNO)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {
+        msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Are you ready to start
+                your third match?", MSGBOX_YESNO)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {
+        msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Are you ready to start
+                your fourth match?", MSGBOX_YESNO)
+    }
+
+    elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
+        msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Are you ready to start
+                your final match against the current
+                {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Candace?", MSGBOX_YESNO)
+    }
+
+    if (var(VAR_RESULT) == YES) {
+            msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Let's go!")
+            waitmessage
+
+              if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 1) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 2)}
+            elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 3)}
+            elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 4)}
+            elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 5)}
+            elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 6)}
+
+            warp(MAP_WOLTIA_CITY_BATTLE_HALL, 5, 5)
+            release
+            end
+        }
+    elif (var(VAR_RESULT) == NO) {
+            msgbox("{COLOR GREEN}Organizer: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Don't dilly dally!")
+            waitmessage
+            release
+            end
+        }
+}

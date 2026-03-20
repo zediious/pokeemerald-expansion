@@ -128,7 +128,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY    0x68  // Jordan ready to start Tourney in Woltia
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -263,7 +263,7 @@
 #define FLAG_RECEIVED_TM_ROAR                0xE7
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
 
-#define FLAG_UNUSED_0x0E9                    0xE9 // Unused Flag
+#define FLAG_WOLTIA_RUIN_KEEGAN                    0xE9 // Kowtow Boss Old ruin Woltia
 
 #define FLAG_RECEIVED_TM_REST                0xEA
 #define FLAG_RECEIVED_TM_ATTRACT             0xEB
@@ -524,12 +524,12 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_WOLTIA_TOURNEY_TRAINER01        0x1DE // Woltia Tournament Trainer 01
+#define FLAG_WOLTIA_TOURNEY_TRAINER02        0x1DF // Woltia Tournament Trainer 02
+#define FLAG_WOLTIA_TOURNEY_TRAINER03        0x1E0 // Woltia Tournament Trainer 03
+#define FLAG_WOLTIA_TOURNEY_TRAINER04        0x1E1 // Woltia Tournament Trainer 04
+#define FLAG_WOLTIA_TOURNEY_TRAINER05        0x1E2 // Woltia Tournament Trainer 05
+#define FLAG_ANGRY_KROKOROK_01               0x1E3 // Krokorok blocking majority of Igris Desert
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
