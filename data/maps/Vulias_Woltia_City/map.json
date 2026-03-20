@@ -101,6 +101,13 @@
       "elevation": 0,
       "dest_map": "MAP_WOLTIA_CITY_OLD_RUIN",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_WOLTIA_CITY_POKEMON_CENTER",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

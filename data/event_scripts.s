@@ -1788,3 +1788,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/WoltiaCity_OldRuin/scripts.inc"
 
 	.include "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.inc"
+
+	.include "data/maps/WoltiaCity_PokemonCenter/scripts.inc"

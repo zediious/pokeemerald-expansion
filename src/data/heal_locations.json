@@ -341,6 +341,12 @@
       "map": "MAP_VULIAS_ROUTE110",
       "x": 21,
       "y": 57
+    },
+    {
+      "id": "HEAL_LOCATION_VULIAS_WOLTIA_CITY",
+      "map": "MAP_VULIAS_WOLTIA_CITY",
+      "x": 17,
+      "y": 41
     }
   ]
 }

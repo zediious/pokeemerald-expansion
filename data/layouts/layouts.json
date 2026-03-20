@@ -9573,6 +9573,16 @@
       "secondary_tileset": "gTileset_DojoInterior",
       "border_filepath": "data/layouts/WoltiaCity_BattleHall_PrepRoom/border.bin",
       "blockdata_filepath": "data/layouts/WoltiaCity_BattleHall_PrepRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOLTIA_CITY_POKEMON_CENTER",
+      "name": "WoltiaCity_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/WoltiaCity_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/WoltiaCity_PokemonCenter/map.bin"
     }
   ]
 }
