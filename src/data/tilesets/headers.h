@@ -1640,3 +1640,14 @@ const struct Tileset gTileset_DesertVillage =
     .metatileAttributes = gMetatileAttributes_DesertVillage,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_DojoInterior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DojoInterior,
+    .palettes = gTilesetPalettes_DojoInterior,
+    .metatiles = gMetatiles_DojoInterior,
+    .metatileAttributes = gMetatileAttributes_DojoInterior,
+    .callback = NULL,
+};
