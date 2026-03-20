@@ -5039,54 +5039,54 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Feint Attack
 
 === TRAINER_WINONA_1 ===
-Name: WINONA
+Name: Candace
 Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
-Items: Hyper Potion / Hyper Potion
+Items: Super Potion / Super Potion
 Double Battle: No
-AI: Basic Trainer / Risky
+AI: Smart Trainer / Risky
 
-Swablu
-Level: 29
+Kilowattrel @ Sitrus Berry
+Level: 26
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Perish Song
-- Mirror Move
-- Safeguard
-- Aerial Ace
-
-Tropius
-Level: 29
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Synthesis
-
-Pelipper
-Level: 30
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Water Gun
-- Supersonic
-- Protect
-- Aerial Ace
+- Volt Switch
+- Roost
+- Air Cutter
+- Quick Attack
 
 Skarmory
-Level: 31
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Sand Attack
-- Fury Attack
-- Steel Wing
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Slash
+- Metal Claw
 - Aerial Ace
+- Agility
 
-Altaria @ Oran Berry
-Level: 33
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Dragon Breath
-- Dragon Dance
+Rufflet
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Scary Face
+- Hone Claws
 - Aerial Ace
+- Tailwind
+
+Tropius
+Level: 25
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- Magical Leaf
+- Stomp
+- Aerial Ace
+- Leech Seed
+
+Gyarados
+Level: 24
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+- Waterfall
+- Crunch
+- Twister
+- Rain Dance
 
 === TRAINER_TATE_AND_LIZA_1 ===
 Name: TATE&LIZA
@@ -5197,7 +5197,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Double Team
 
 === TRAINER_TED ===
-Name: TED
+Name: Ted
 Class: School Kid
 Pic: School Kid M
 Gender: Male
@@ -5205,9 +5205,29 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Ralts
-Level: 17
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Pikachu
+Level: 22
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Spark
+- Thunder Wave
+- Quick Attack
+- Double Team
+
+Mienfoo
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Low Kick
+- Fury Swipes
+- Detect
+- Knock Off
+
+Luxio
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Thunder Fang
+- Roar
+- Bite
+- Leer
 
 === TRAINER_PAUL ===
 Name: PAUL
@@ -6531,9 +6551,21 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kirlia
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Psybeam
+- Draining Kiss
+- Life Dew
+- Hypnosis
+
+Cetoddle
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Ice Shard
+- Take Down
+- Rest
+- Flail
 
 === TRAINER_CARTER ===
 Name: CARTER
@@ -7379,7 +7411,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ember
 
 === TRAINER_PERRY ===
-Name: PERRY
+Name: Perry
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
@@ -7388,8 +7420,20 @@ Double Battle: No
 AI: Check Bad Move
 
 Wingull
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Water Pulse
+- Wing Attack
+- Supersonic
+- Quick Attack
+
+Noctowl
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Extrasensory
+- Air Slash
+- Defog
+- Confuse Ray
 
 === TRAINER_HUGH ===
 Name: HUGH
@@ -9788,25 +9832,45 @@ Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
-Name: BRENDAN
+Name: Jordan
 Class: Rival
-Pic: Brendan
+Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Lombre
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Simipour
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Water Pulse
+- Draining Kiss
+- Tickle
+- Whirlpool
 
-Slugma
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Carkol
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Ancient Power
+- Rock Polish
+- Smokescreen
+- Take Down
 
-Marshtomp
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Electrike
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Thunder Fang
+- Bite
+- Quick Attack
+- Howl
+
+Capsakid
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Trailblaze
+- Headbutt
+- Sunny Day
+- Bite
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
 Name: MAY
@@ -9822,55 +9886,95 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
-Name: MAY
+Name: Jordan
 Class: Rival
-Pic: May
-Gender: Female
-Music: Female
+Pic: Steven
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Simisear
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Flame Wheel
+- Force Palm
+- Foresight
+- Fire Spin
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Carkol
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Ancient Power
+- Rock Polish
+- Smokescreen
+- Take Down
 
-Grovyle
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Electrike
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Thunder Fang
+- Bite
+- Quick Attack
+- Howl
+
+Capsakid
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Trailblaze
+- Headbutt
+- Sunny Day
+- Bite
 
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
-Name: MAY
+Name: Jordan
 Class: Rival
-Pic: May
-Gender: Female
-Music: Female
+Pic: Steven
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Slugma
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Simisage
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Razor Leaf
+- Bite
+- Tearful Look
+- Leech Seed
 
-Lombre
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Carkol
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Ancient Power
+- Rock Polish
+- Smokescreen
+- Take Down
 
-Grovyle
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Electrike
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Thunder Fang
+- Bite
+- Quick Attack
+- Howl
+
+Capsakid
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Trailblaze
+- Headbutt
+- Sunny Day
+- Bite
 
 === TRAINER_MAY_ROUTE_103_TREECKO ===
-Name: MAY
+Name: Jordan
 Class: Rival
-Pic: May
-Gender: Female
-Music: Female
+Pic: Steven
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Torchic
 Level: 5
@@ -9885,17 +9989,37 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Innape
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Take Down
+- Confusion
+- Rock Smash
+- Taunt
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Carkol
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Ancient Power
+- Rock Polish
+- Smokescreen
+- Take Down
 
-Combusken
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Electrike
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Thunder Fang
+- Bite
+- Quick Attack
+- Howl
+
+Capsakid
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Trailblaze
+- Headbutt
+- Sunny Day
+- Bite
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
 Name: MAY
