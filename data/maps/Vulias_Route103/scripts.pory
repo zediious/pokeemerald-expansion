@@ -1,1 +1,52 @@
 mapscripts Vulias_Route103_MapScripts {}
+
+// Person who lost mon runs up to player
+script VuliasRoute103_EventScript_LostMonQuestTrigger {
+    lock
+    applymovement(ROUTE103_DISTRESSED_BEAUTY, moves(face_right, emote_exclamation_mark))
+    waitmovement
+    playse(SE_PIN)
+    waitse
+    applymovement(ROUTE103_DISTRESSED_BEAUTY, moves(walk_fast_right * 4))
+    waitmovement
+    msgbox("{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please help! You look
+            like a Pokemon Trainer! Some mean
+            people in black outfits stole my
+            {COLOR RED}Togepi{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! They ran off into the
+            {COLOR RED}Igris Desert{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the north!
+            
+            Oh, you must chase them, please! I can't
+            lose my Togepi!")
+    waitmessage
+    closemessage
+    applymovement(ROUTE103_DISTRESSED_BEAUTY, moves(walk_down, face_up))
+    waitmovement
+    setvar(VAR_ZED_STORY_TRACKER, 13)
+    setflag(FLAG_IGRISDESERT_JORDAN_01)
+    startquest(1)
+    waitmessage
+    release
+    end
+}
+
+// Speaking to distressed woman
+script VuliasRoute103_EventScript_LostMonWomanSpeak {
+    if (flag(FLAG_ROUTE103_SAVED_TOGEPI)) {
+        nop // This cannot happen
+    } else {
+        lock
+        faceplayer
+        msgbox("{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please, save my
+                Togepi! I don't know how I could go on
+                without her!
+                
+                If you do, I might be able to help
+                you {COLOR RED}cut down{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} trees!
+                
+                Some way that's worth more than gold!")
+        waitmessage
+        release
+        end
+    }
+    
+}

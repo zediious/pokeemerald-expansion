@@ -95,10 +95,10 @@
 #define FLAG_MULLED_CAVE_JORDAN_01              0x49 // First Jordan in Mulled Cave
 #define FLAG_MULLED_CHARCOAL                    0x4A // Charcoal item in Mullen CAve
 #define FLAG_MULLEN_SENSEI_DEFEATED             0x4B // Defeated the Sensei in L2
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_ROUTE103_SAVED_TOGEPI              0x4C // Saved Togepi for woman on Route 103
+#define FLAG_IGRISDESERT_KOWTOW_01              0x4D // Kowtow Group in Igris Desert 01
+#define FLAG_IGRISDESERT_JORDAN_01              0x4E // Jordan during Kowtow Encounter 01 of desert
+#define FLAG_IGRIS_TOGEPI_AND_BEAUTY            0x4F // Beauty and her Togepi in Igris and Route 103
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50

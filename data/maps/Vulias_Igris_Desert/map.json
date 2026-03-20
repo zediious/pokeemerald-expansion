@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IgrisDesert_EventScript_AngryKrokorok",
-      "flag": "0"
+      "flag": "FLAG_IGRISDESERT_JORDAN_01"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(KROKOROK)",
@@ -41,6 +41,7 @@
       "flag": "0"
     },
     {
+      "local_id": "IGRIS_KOWTOW_01_04",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 15,
       "y": 67,
@@ -50,10 +51,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "NULL",
-      "flag": "0"
+      "script": "IgrisDesert_EventScript_KowtowEnc01Trainer01",
+      "flag": "FLAG_IGRISDESERT_KOWTOW_01"
     },
     {
+      "local_id": "IGRIS_KOWTOW_01_01",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 33,
       "y": 65,
@@ -63,10 +65,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "10",
-      "script": "NULL",
-      "flag": "0"
+      "script": "IgrisDesert_EventScript_KowtowEnc01Trainer03",
+      "flag": "FLAG_IGRISDESERT_KOWTOW_01"
     },
     {
+      "local_id": "IGRIS_KOWTOW_01_03",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
       "x": 21,
       "y": 71,
@@ -76,13 +79,14 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
-      "script": "NULL",
-      "flag": "0"
+      "script": "IgrisDesert_EventScript_KowtowEnc01Trainer02",
+      "flag": "FLAG_IGRISDESERT_KOWTOW_01"
     },
     {
+      "local_id": "IGRIS_KOWTOWADMIN_01",
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 28,
-      "y": 57,
+      "y": 58,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
       "movement_range_x": 0,
@@ -90,9 +94,10 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_IGRISDESERT_KOWTOW_01"
     },
     {
+      "local_id": "IGRIS_KOWTOW_01_02",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 34,
       "y": 66,
@@ -102,13 +107,14 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "NULL",
-      "flag": "0"
+      "script": "IgrisDesert_EventScript_KowtowEnc01Trainer04",
+      "flag": "FLAG_IGRISDESERT_KOWTOW_01"
     },
     {
+      "local_id": "IGRIS_TOGEPI",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TOGEPI)",
       "x": 28,
-      "y": 56,
+      "y": 57,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
       "movement_range_x": 0,
@@ -116,7 +122,35 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_IGRIS_TOGEPI_AND_BEAUTY"
+    },
+    {
+      "local_id": "IGRIS_JORDAN_01",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "x": 35,
+      "y": 64,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_IGRISDESERT_JORDAN_01"
+    },
+    {
+      "local_id": "TOGEPI_BEAUTY_DESERT",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 35,
+      "y": 65,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_IGRIS_TOGEPI_AND_BEAUTY"
     }
   ],
   "warp_events": [
@@ -135,6 +169,25 @@
       "dest_warp_id": "3"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "IgrisDesert_EventScript_KowtowAdmin"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 57,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "IgrisDesert_EventScript_KowtowAdminTopTileMove"
+    }
+  ],
   "bg_events": []
 }

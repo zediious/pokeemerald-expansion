@@ -19,3 +19,255 @@ script IgrisDesert_EventScript_AngryKrokorok {
     release
     end
 }
+
+//// Team Kowtow Encounter 01 Trainers
+
+// Double Battle 01
+script IgrisDesert_EventScript_KowtowEnc01Trainer01{
+    trainerbattle_single(
+        TRAINER_GRUNT_AQUA_HIDEOUT_3,
+        "Here to save the Togepi eh?",
+        "All for a little egg?"
+    )
+    msgbox("Go, not like I can do anything.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Double Battle 01
+script IgrisDesert_EventScript_KowtowEnc01Trainer02{
+    trainerbattle_single(
+        TRAINER_GRUNT_SEAFLOOR_CAVERN_4,
+        "Wasting your time!",
+        "I'm wasting my time?"
+    )
+    msgbox("Don't twist my words!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert_EventScript_KowtowEnc01Trainer03{
+    trainerbattle_single(
+        TRAINER_GRUNT_SEAFLOOR_CAVERN_2,
+        "Not so sneaky!",
+        "What, you were not trying to be
+        sneaky?"
+    )
+    msgbox("Well, I still caught you!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert_EventScript_KowtowEnc01Trainer04{
+    trainerbattle_single(
+        TRAINER_GRUNT_SEAFLOOR_CAVERN_3,
+        "Stay away from the boss!",
+        "Or, don't I suppose."
+    )
+    msgbox("Jeez, these Pawniard need to toughen
+            up.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Admin has been reached
+
+// Move player down if they approached from top tile
+script IgrisDesert_EventScript_KowtowAdminTopTileMove {
+    lock
+    applymovement(0xFF, moves(walk_down,face_left))
+    waitmovement
+    release
+    goto(IgrisDesert_EventScript_KowtowAdmin)
+}
+
+script IgrisDesert_EventScript_KowtowAdmin {
+    lock
+    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}For the last time, stand on guard
+            while I-")
+    playse(SE_PIN)
+    applymovement(IGRIS_KOWTOWADMIN_01, moves(face_right))
+    msgbox("{COLOR GREEN}Kowtow Admin: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You're not my team!
+            
+            
+            What, here to serve some Justice? That
+            won't be served so easily!")
+    waitmessage
+    msgbox("{COLOR GREEN}Distant Voice: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}..wait!")
+    clearflag(FLAG_IGRISDESERT_JORDAN_01)
+    addobject(IGRIS_JORDAN_01)
+    playse(SE_PIN)
+    applymovement(0xFF, moves(face_right))
+    waitmovement
+    waitmessage
+    applymovement(0xFF, moves(walk_up, face_down))
+    applymovement(IGRIS_JORDAN_01, moves(walk_up * 6, walk_left * 6, face_up))
+    waitmovement
+    call(IgrisDesert_DetermineJordanTeam01)
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm glad I caught up
+            with you! can't let you boot these scum
+            down without me eh?")
+    waitmessage
+    applymovement(IGRIS_KOWTOWADMIN_01, moves(jump_in_place_right * 2))
+    waitmovement
+    msgbox("{COLOR GREEN}Kowtow Admin: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh, you're a big talker
+            huh!")
+    waitmessage
+    trainerbattle_single(
+        TRAINER_GRUNT_SEAFLOOR_CAVERN_1,
+        "You won't be able to talk after this!",
+        "I can't believe that! Now I can't
+        talk!",
+        IgrisDesert_KowtowAdmin_AfterBattle
+    )
+}
+
+script IgrisDesert_KowtowAdmin_AfterBattle {
+    lock
+    msgbox("H ave not had to use one of these for
+            quite some time...
+            
+            Smokescreen!")
+    waitmessage
+
+    // "Smoke bomb"
+    playse(SE_M_DOUBLE_TEAM)
+    fadescreen(FADE_TO_BLACK)
+    setflag(FLAG_IGRISDESERT_KOWTOW_01)
+    removeobject(IGRIS_KOWTOWADMIN_01)
+    removeobject(IGRIS_KOWTOW_01_01)
+    removeobject(IGRIS_KOWTOW_01_02)
+    removeobject(IGRIS_KOWTOW_01_03)
+    removeobject(IGRIS_KOWTOW_01_04)
+    waitse
+    delay(120)
+    fadescreen(FADE_FROM_BLACK)
+
+    msgbox(
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}They got away again!
+        We need to start preparing for that
+        smoke bomb, pack some goggles along
+        with us, or something.
+        
+        We're sure to come across them again
+        with the fact that we've seen them
+        twice on our trip so far.
+        
+        This Togepi! It must be the one that
+        lady was in shambles over! "
+    )
+    waitmessage
+    playse(SE_PIN)
+    applymovement(0xFF, moves(emote_exclamation_mark, face_right))
+    applymovement(IGRIS_JORDAN_01, moves(emote_exclamation_mark, face_right))
+    applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_fast_up * 8, walk_fast_left * 5))
+    waitmovement
+    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My Togepi! thank goodness
+            you are safe!")
+    waitmessage
+    playmoncry(SPECIES_TOGEPI, CRY_MODE_NORMAL)
+    applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_faster_right, face_left))
+    applymovement(0xFF, moves(walk_faster_right, walk_faster_down, face_up))
+    waitmovement
+    applymovement(IGRIS_TOGEPI, moves(walk_right * 2))
+    waitmovement
+    playmoncry(SPECIES_TOGEPI, CRY_MODE_NORMAL)
+    waitse
+    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh I am so glad to see you!
+            You are never leaving my arms again
+            my precious!")
+    applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_down, face_left))
+    waitmovement
+    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I can hardly thank you
+            enough for what you've done! I hope
+            that this will suffice!")
+    waitmessage
+    giveitem(ITEM_HM_CUT, 1)
+    waitmessage
+    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You'll be able to cut down
+            many small trees you find with that!
+            
+            Thank you again, maybe I'll see you in
+            Woltia City!")
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    delay(30)
+    setflag(FLAG_IGRIS_TOGEPI_AND_BEAUTY)
+    removeobject(TOGEPI_BEAUTY_DESERT)
+    fadescreen(FADE_FROM_BLACK)
+    applymovement(0xFF, moves(face_left))
+    applymovement(IGRIS_JORDAN_01, moves(face_right))
+    msgbox(
+        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well that turned out well! You
+        got yourself a Cut HM as well!
+        
+        ...
+        
+        Well, I can't get you everything myself
+        can I! I only recently got one of those
+        myself...
+        
+        Anyways, the tournament in Woltia city
+        is set to start later today! I came
+        looking for you, when I found that lady
+        outside.
+
+        We should
+        make our way over there! Just head
+        south of the desert, and then west!
+        I'll see you there!"
+    )
+    applymovement(IGRIS_JORDAN_01, moves(
+        walk_up, walk_right * 6, walk_down * 10
+    ))
+    waitmovement
+    setflag(FLAG_IGRISDESERT_JORDAN_01)
+    removeobject(IGRIS_JORDAN_01)
+    setvar(VAR_ZED_STORY_TRACKER, 14)
+    completequest(1)
+    delay(30)
+    questupdated(0)
+    release
+    end
+}
+
+script IgrisDesert_DetermineJordanTeam01 {
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        setfollowernpc(
+            IGRIS_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower01,
+            PARTNER_JORDAN_PANPOUR_03
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        setfollowernpc(
+            IGRIS_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower01,
+            PARTNER_JORDAN_PANSEAR_03
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        setfollowernpc(
+            IGRIS_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower01,
+            PARTNER_JORDAN_PANSAGE_03
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        setfollowernpc(
+            IGRIS_JORDAN_01,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower01,
+            PARTNER_JORDAN_INNAPE_03
+        )
+    }
+}
+
+// Jordan follower script
+script IgrisDesert_EventScript_JordanFollower01 {
+    nop
+}
+

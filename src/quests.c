@@ -291,6 +291,16 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      NULL,
 	      0
 	),
+	side_quest(
+	      gText_SideQuestName_2,
+	      gText_SideQuestDesc_2,
+	      gText_SideQuestDoneDesc_2,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_SPECIES(TOGEPI),
+	      OBJECT,
+	      NULL,
+	      0
+	),
 };
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -1568,7 +1578,7 @@ void UpdateQuestFlavorText(s32 questId)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_06);
 		}
-		else if (mainStoryTracker == 12)
+		else if (mainStoryTracker >= 12 && mainStoryTracker <= 14)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_07);
 		}
