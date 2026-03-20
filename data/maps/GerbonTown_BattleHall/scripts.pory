@@ -83,11 +83,11 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     waitmovement
     waitmoncry
 
-    // Candace tells mon to use U-turn
+    // Candace tells mon to use Volt Switch
     applymovement(GERBONBATTLEHALL_CANDACE_01, moves(jump_in_place_left * 2))
 
     msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No good! Use your
-            U-Turn Kilowattrel!")
+            Volt Switch Kilowattrel!")
 
     waitmessage
     playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
@@ -375,7 +375,9 @@ script GerbonBattleHall_TournamentPlayerWon {
 
         // Let player know about level cap
         playfanfare(MUS_LEVEL_UP)
-        msgbox("The level cap has been raised to 23!", MSGBOX_SIGN)
+        msgbox("The level cap has been raised to 25!
+        
+                You can now use {COLOR RED}Cut!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}", MSGBOX_SIGN)
         waitfanfare
         waitmessage
         
