@@ -86,11 +86,13 @@ script VuliasMullenCave_EventScript_Trainer05{
     end
 }
 
+// Student 1
 script VuliasMullenCave_EventScript_Trainer06{
     trainerbattle_single(
         TRAINER_CALVIN_1,
         "I will crush the rock before my rival!",
-        "Quit distracting me!"
+        "Quit distracting me!",
+        VuliasMullenCave_StudentEnd
     )
     msgbox("I must work had to get my {COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
             from sensei!", MSGBOX_AUTOCLOSE)
@@ -98,41 +100,59 @@ script VuliasMullenCave_EventScript_Trainer06{
     end
 }
 
+// Student 2
 script VuliasMullenCave_EventScript_Trainer07{
     trainerbattle_single(
         TRAINER_BILLY,
         "Bah! Are you here to userp me? Never!",
-        "Maybe I'm not cut out for this..."
+        "Maybe I'm not cut out for this...",
+        VuliasMullenCave_StudentEnd
     )
     msgbox("Go ahead then, up the stairs you go!", MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
 
-// Sensei at top of L2 platforms, gives Black Belt
-script VuliasMullenCave_EventScript_Trainer08{
-    trainerbattle_single(
-        TRAINER_KOJI_1,
-        "{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my
-        students? Let us see how you fare
-        against me!",
-        "Hoho! Very impressive!",
-        ViluasMullenCave_EventScript_Trainer08_BlackBeltGive
-    )
-    msgbox("Go forth and practice your skills!", MSGBOX_AUTOCLOSE)
-    waitmessage
+script VuliasMullenCave_StudentEnd {
+    addvar(VAR_MULLEN_CAVE_SENSEI_PROGRESS, 1)
     end
 }
 
+// Sensei at top of L2 platforms, gives Black Belt
+script VuliasMullenCave_EventScript_Trainer08{
+    if (var(VAR_MULLEN_CAVE_SENSEI_PROGRESS) == 2) {
+        trainerbattle_single(
+            TRAINER_KOJI_1,
+            "{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my
+            students? Let us see how you fare
+            against me!",
+            "Hoho! Very impressive!",
+            ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive
+        )
+        msgbox("Go forth and practice your skills!", MSGBOX_AUTOCLOSE)
+        waitmessage
+        end
+    } else {
+        lock
+        faceplayer
+        msgbox("{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You think you can
+                face me? Prove yourself, by defeating
+                my {COLOR RED}two students{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} first!")
+        waitmessage
+        release
+        end
+    }
+}
+
 // Give Rock Smash after defeating Trainer08
-script ViluasMullenCave_EventScript_Trainer08_BlackBeltGive {
+script ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive {
     lock
     if (flag(FLAG_MULLEN_SENSEI_DEFEATED)) {
         release
         end
     } else {
         msgbox("{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this
-        {COLOR RED}TM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
+        {COLOR RED}HM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
         giveitem(ITEM_HM_ROCK_SMASH, 1)
         setflag(FLAG_MULLEN_SENSEI_DEFEATED)
         waitmessage

@@ -129,7 +129,7 @@
 #define VAR_GERBON_TOURNAMENT_STATE                      0x406B // State of the Gerbon tournament
 #define VAR_GERBON_TOURNAMENT_OPPONENT                   0x406C // Current opponent enum
 #define VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL             0x406D // Current opponent localid
-#define VAR_MULLEN_CAVE_MANIAC_PATH_TRIGGER              0x406E // Unused Var
+#define VAR_MULLEN_CAVE_SENSEI_PROGRESS                  0x406E // Progress to fight with sensei
 #define VAR_ROUTE116_STATE                               0x406F
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var
 #define VAR_ROUTE118_STATE                               0x4071
