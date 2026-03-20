@@ -1,11 +1,12 @@
 mapscripts Vulias_Woltia_City_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_ZED_STORY_TRACKER, 16: Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney
-        VAR_ZED_STORY_TRACKER, 14: Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers
+        VAR_WOLTIA_DISABLETRAINERS_TRIGGER, 0: Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers
     ]
 }
 
 script Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers {
+    setvar(VAR_WOLTIA_DISABLETRAINERS_TRIGGER, 1)
     setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
     setflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
     setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
