@@ -1266,7 +1266,7 @@ const u8 gText_MainQuestDesc_03[] = _("We got through Sawgrass Forest! Now\nI ne
 const u8 gText_MainQuestDesc_04[] = _("It's the morning of the Palladium\ntournament! Jordan is waiting at Gerbon\nTown for me, I can take time to train.");
 const u8 gText_MainQuestDesc_05[] = _("The Palladium Tournament is\nunderway!.");
 const u8 gText_MainQuestDesc_06[] = _("After winning the Palladium tourney,\nJordan and I are off to the next one\nin Woltia City, through Mullen Cave.");
-const u8 gText_MainQuestDesc_07[] = _("I've made my way through Mulled Cave.\nJWoltia City is just ahead, west\nthrough Route 103!");
+const u8 gText_MainQuestDesc_07[] = _("I've made my way through Mulled Cave.\nWoltia City is just ahead, west\nthrough Route 103!");
 
 
 const u8 gText_SideQuestDesc_1[] = _("Description 1");
