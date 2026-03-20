@@ -32,7 +32,7 @@ VuliasRoute103_EventScript_LostMonQuestTrigger::
 # 25 "data/maps/Vulias_Route103/scripts.pory"
 	setflag FLAG_IGRISDESERT_JORDAN_01
 # 26 "data/maps/Vulias_Route103/scripts.pory"
-	setflag FLAG_IGRIS_TOGEPI_AND_BEAUTY
+	setflag FLAG_IGRIS_BEAUTY
 # 27 "data/maps/Vulias_Route103/scripts.pory"
 	startquest 1
 # 28 "data/maps/Vulias_Route103/scripts.pory"

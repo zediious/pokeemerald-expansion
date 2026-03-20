@@ -98,7 +98,7 @@
 #define FLAG_ROUTE103_SAVED_TOGEPI              0x4C // Saved Togepi for woman on Route 103
 #define FLAG_IGRISDESERT_KOWTOW_01              0x4D // Kowtow Group in Igris Desert 01
 #define FLAG_IGRISDESERT_JORDAN_01              0x4E // Jordan during Kowtow Encounter 01 of desert
-#define FLAG_IGRIS_TOGEPI_AND_BEAUTY            0x4F // Beauty and her Togepi in Igris and Route 103
+#define FLAG_IGRIS_BEAUTY                       0x4F // Beauty in Igris
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -106,8 +106,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_IGRIS_TOGEPI                       0x54  // Togepi in Igris
+#define FLAG_ROUTE103_BEAUTY                    0x55  // Beauty on Route 103
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57

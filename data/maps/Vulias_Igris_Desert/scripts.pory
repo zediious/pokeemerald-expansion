@@ -11,6 +11,7 @@ script IgrisDesert_EventScript_AngryKrokorok {
     msgbox("V-V Vruuu")
     waitmoncry
     applymovement(0xFF, moves(jump_down,face_up))
+    playse(SE_BIKE_HOP)
     waitmovement
     msgbox("You barely jump out of the way of a Bite
             attack! Better steer clear!
@@ -93,21 +94,24 @@ script IgrisDesert_EventScript_KowtowAdmin {
             What, here to serve some Justice? That
             won't be served so easily!")
     waitmessage
-    msgbox("{COLOR GREEN}Distant Voice: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}..wait!")
+    msgbox("{COLOR GREEN}Distant Voice: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}...wait!")
     clearflag(FLAG_IGRISDESERT_JORDAN_01)
     addobject(IGRIS_JORDAN_01)
     playse(SE_PIN)
-    applymovement(0xFF, moves(emote_exclamation_mark, face_right))
-    waitmovement
-    waitmessage
-    applymovement(0xFF, moves(walk_up, face_down))
     applymovement(IGRIS_JORDAN_01, moves(walk_up * 6, walk_left * 6, face_up))
+    applymovement(0xFF, moves(emote_exclamation_mark, face_right))
+    waitmessage
+    delay(60)
+    applymovement(0xFF, moves(walk_up, face_down))
+    
     waitmovement
     call(IgrisDesert_DetermineJordanTeam01)
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm glad I caught up
-            with you! can't let you boot these scum
+            with you! Can't let you boot these scum
             down without me eh?")
     waitmessage
+    applymovement(0xFF, moves(face_left))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
     applymovement(IGRIS_KOWTOWADMIN_01, moves(jump_in_place_right * 2))
     waitmovement
     msgbox("{COLOR GREEN}Kowtow Admin: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh, you're a big talker
@@ -143,6 +147,11 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     delay(120)
     fadescreen(FADE_FROM_BLACK)
 
+    clearflag(FLAG_IGRIS_BEAUTY)
+    addobject(TOGEPI_BEAUTY_DESERT)
+    applymovement(0xFF, moves(face_down))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
+
     msgbox(
         "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}They got away again!
         We need to start preparing for that
@@ -159,7 +168,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     waitmessage
     playse(SE_PIN)
     applymovement(0xFF, moves(emote_exclamation_mark, face_right))
-    applymovement(IGRIS_JORDAN_01, moves(emote_exclamation_mark, face_right))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark, face_right))
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_fast_up * 8, walk_fast_left * 5))
     waitmovement
     msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My Togepi! thank goodness
@@ -191,13 +200,14 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
             Woltia City!")
     waitmessage
     fadescreen(FADE_TO_BLACK)
-    delay(30)
-    setflag(FLAG_IGRIS_TOGEPI_AND_BEAUTY)
+    setflag(FLAG_IGRIS_BEAUTY)
+    setflag(FLAG_IGRIS_TOGEPI)
+    setflag(FLAG_ROUTE103_BEAUTY)
     removeobject(TOGEPI_BEAUTY_DESERT)
     removeobject(IGRIS_TOGEPI)
     fadescreen(FADE_FROM_BLACK)
     applymovement(0xFF, moves(face_left))
-    applymovement(IGRIS_JORDAN_01, moves(face_right))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_right))
     msgbox(
         "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well that turned out well! You
         got yourself a Cut HM as well!
@@ -208,7 +218,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
         can I! I only recently got one of those
         myself...
         
-        Anyways, the tournament in Woltia city
+        Anyways, the tournament in Woltia City
         is set to start later today! I came
         looking for you, when I found that lady
         outside.
@@ -217,7 +227,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
         Just head south of the desert, and 
         then west! I'll see you there!"
     )
-    applymovement(IGRIS_JORDAN_01, moves(
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(
         walk_up, walk_right * 6, walk_down * 10
     ))
     waitmovement
@@ -226,8 +236,6 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     removeobject(IGRIS_JORDAN_01)
     setvar(VAR_ZED_STORY_TRACKER, 14)
     completequest(1)
-    delay(30)
-    questupdated(0)
     release
     end
 }
