@@ -216,6 +216,7 @@ script WoltiaBattleHall_TournamentBattleAfter {
 
 script WoltiaBattleHall_TournamentPlayerWon {
         playse(SE_DING_DONG)
+        waitse
         playse(SE_DING_DONG)
         msgbox("DING DING DING DING DING DING
     
@@ -266,7 +267,7 @@ script WoltiaBattleHall_TournamentPlayerWon {
 
         msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move can't miss! It
                 helps you get out of some sticky
-                situations! I didn't help me
+                situations! It didn't help me
                 enough against you!
                 
                 Thank you for the wonderful battle!")

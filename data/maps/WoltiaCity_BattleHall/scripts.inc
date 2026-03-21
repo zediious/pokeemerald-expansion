@@ -285,72 +285,74 @@ WoltiaBattleHall_TournamentPlayerWon::
 # 218 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	playse SE_DING_DONG
 # 219 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playse SE_DING_DONG
+	waitse
 # 220 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playse SE_DING_DONG
+# 221 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_0
-# 226 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
 # 227 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playfanfare SE_APPLAUSE
+	waitmessage
 # 228 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setvar VAR_WOLTIA_TOURNAMENT_STATE, 7
+	playfanfare SE_APPLAUSE
 # 229 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitfanfare
+	setvar VAR_WOLTIA_TOURNAMENT_STATE, 7
 # 230 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	applymovement WOLTIATOURNEY_TRAINER05, WoltiaBattleHall_TournamentPlayerWon_Movement_0
+	waitfanfare
 # 231 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	applymovement WOLTIATOURNEY_TRAINER05, WoltiaBattleHall_TournamentPlayerWon_Movement_0
+# 232 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_1
-# 234 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playmoncry SPECIES_KILOWATTREL, CRY_MODE_NORMAL
 # 235 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_2
+	playmoncry SPECIES_KILOWATTREL, CRY_MODE_NORMAL
 # 236 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_2
+# 237 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
-# 238 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 239 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_3
-# 242 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 243 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
-# 244 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_BADGE02_GET
 # 245 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playfanfare MUS_OBTAIN_BADGE
+	setflag FLAG_BADGE02_GET
 # 246 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_4, MSGBOX_SIGN
+	playfanfare MUS_OBTAIN_BADGE
 # 247 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitfanfare
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_4, MSGBOX_SIGN
 # 248 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 251 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playfanfare MUS_LEVEL_UP
-# 252 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_5, MSGBOX_SIGN
-# 255 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitfanfare
+# 249 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
+# 252 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playfanfare MUS_LEVEL_UP
+# 253 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_5, MSGBOX_SIGN
 # 256 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitfanfare
+# 257 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
-# 258 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	delay 30
 # 259 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_6
-# 262 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 264 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	giveitem ITEM_TM_AERIAL_ACE, 1
-# 265 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 267 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_7
-# 273 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 274 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 18
-# 275 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	delay 30
+# 260 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_6
+# 263 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
+# 265 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	giveitem ITEM_TM_AERIAL_ACE, 1
+# 266 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
+# 268 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_7
+# 274 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
+# 275 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 18
 # 276 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_ANGRY_KROKOROK_01
+	delay 30
 # 277 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+	setflag FLAG_ANGRY_KROKOROK_01
 # 278 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+# 279 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	release
 	end
 
@@ -389,11 +391,11 @@ WoltiaBattleHall_TournamentBattle_Movement_2:
 	walk_left
 	step_end
 
-# 230 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 231 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 WoltiaBattleHall_TournamentPlayerWon_Movement_0:
-# 230 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 231 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	walk_left
-# 230 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 231 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	walk_left
 	step_end
 
@@ -461,48 +463,48 @@ WoltiaBattleHall_TournamentBattleAfter_Text_0:
 	.string "The next match will begin soon!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_0:
-# 220 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 221 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "DING DING DING DING DING DING\p"
 	.string "{PLAYER} has defeated the standing\n"
 	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Candace!\p"
 	.string "They now take the crown! What an upset!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_1:
-# 231 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 232 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a great battle!\n"
 	.string "I think Kilowattrel wants to have\l"
 	.string "another go at you!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_2:
-# 235 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 236 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "Caww!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_3:
-# 238 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 239 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "You're the new Rep Trainer for Woltia\n"
 	.string "City! Congratulations! Here is the \l"
 	.string "Aerodrome Ribbon, the mark of your\l"
 	.string "status.$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_4:
-# 246 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 247 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "You got the Aerodrome Ribbon!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_5:
-# 252 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 253 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "The level cap has been raised to 30\p"
 	.string "You can now use {COLOR RED}Rock Smash!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_6:
-# 259 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 260 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little\n"
 	.string "something extra from me, I think you'll\l"
 	.string "find some good use for it.$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_7:
-# 267 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 268 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move can't miss! It\n"
 	.string "helps you get out of some sticky\l"
-	.string "situations! I didn't help me\l"
+	.string "situations! It didn't help me\l"
 	.string "enough against you!\p"
 	.string "Thank you for the wonderful battle!$"
