@@ -233,6 +233,7 @@ script GerbonBattleHall_TournamentBattle {
 
     // Begin battle VS current trainer
       if (var(VAR_GERBON_TOURNAMENT_STATE) == 2) {
+        cleartrainerflag(TRAINER_MARC)
         trainerbattle_single(
             TRAINER_MARC,
             "We're gonna have a rockin time!",
@@ -241,6 +242,7 @@ script GerbonBattleHall_TournamentBattle {
         )
         }
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 3) {
+        cleartrainerflag(TRAINER_CRISTIAN)
         trainerbattle_single(
             TRAINER_CRISTIAN,
             "My Pokemon and I are unstoppable!",
@@ -249,6 +251,7 @@ script GerbonBattleHall_TournamentBattle {
         )
     }
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 4) {
+        cleartrainerflag(TRAINER_BRYAN)
         trainerbattle_single(
             TRAINER_BRYAN,
             "The fruits of my labor will show!",
@@ -263,6 +266,7 @@ script GerbonBattleHall_TournamentBattle {
 
         // Determine Jordan starter
         if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+            cleartrainerflag(TRAINER_BRENDAN_ROUTE_110_TORCHIC)
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_110_TORCHIC,
                 "Don't hold back, because I wont!",
@@ -271,6 +275,7 @@ script GerbonBattleHall_TournamentBattle {
             )
         }
         elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+            cleartrainerflag(TRAINER_BRENDAN_ROUTE_119_TREECKO)
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_119_TREECKO,
                 "Don't hold back, because I wont!",
@@ -279,6 +284,7 @@ script GerbonBattleHall_TournamentBattle {
             )
         }
         elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+            cleartrainerflag(TRAINER_BRENDAN_ROUTE_103_TORCHIC)
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_103_TORCHIC,
                 "Don't hold back, because I wont!",
@@ -287,6 +293,7 @@ script GerbonBattleHall_TournamentBattle {
             )
         }
         elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
+            cleartrainerflag(TRAINER_BRENDAN_ROUTE_110_TREECKO)
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_110_TREECKO,
                 "Don't hold back, because I wont!",
@@ -296,6 +303,7 @@ script GerbonBattleHall_TournamentBattle {
         }
     }
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 6) {
+        cleartrainerflag(TRAINER_ROXANNE_1)
         trainerbattle_single(
             TRAINER_ROXANNE_1,
             "Congratulations on making it this far!

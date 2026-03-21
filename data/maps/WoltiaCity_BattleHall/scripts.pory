@@ -10,8 +10,25 @@ mapscripts WoltiaCity_BattleHall_MapScripts {
 
 /// Woltia Tournament Battles
 
+script WoltiaBattleHall_Tournament_RemoveAllTrainers {
+    // Set flag for all trainers
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
+    setflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
+    
+    // Remove all trainers
+    removeobject(WOLTIATOURNEY_TRAINER01)
+    removeobject(WOLTIATOURNEY_TRAINER02)
+    removeobject(WOLTIATOURNEY_TRAINER03)
+    removeobject(WOLTIATOURNEY_TRAINER04)
+    removeobject(WOLTIATOURNEY_TRAINER05)
+}
+
 // Trigger battle
 script WoltiaBattleHall_TournamentBattleTrigger {
+    call(WoltiaBattleHall_Tournament_RemoveAllTrainers)
     if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
         setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT, TRAINER_PERRY)
         setvar(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WOLTIATOURNEY_TRAINER01)
@@ -83,6 +100,7 @@ script WoltiaBattleHall_TournamentBattle {
 
     // Begin battle VS current trainer
       if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
+        cleartrainerflag(TRAINER_PERRY)
         trainerbattle_single(
             TRAINER_PERRY,
             "You won't be able to keep up!",
@@ -91,6 +109,7 @@ script WoltiaBattleHall_TournamentBattle {
         )
         }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {
+        cleartrainerflag(TRAINER_TED)
         trainerbattle_single(
             TRAINER_TED,
             "I've seen all the scenarios! There's no
@@ -101,6 +120,7 @@ script WoltiaBattleHall_TournamentBattle {
         )
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {
+        cleartrainerflag(TRAINER_WADE)
         trainerbattle_single(
             TRAINER_WADE,
             "No one has better catches than me!",
@@ -116,6 +136,7 @@ script WoltiaBattleHall_TournamentBattle {
 
         // Determine Jordan starter
         if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+            cleartrainerflag(TRAINER_BRENDAN_ROUTE_119_TORCHIC)
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_119_TORCHIC,
                 "Don't hold back, because I wont!",
@@ -124,6 +145,7 @@ script WoltiaBattleHall_TournamentBattle {
             )
         }
         elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+            cleartrainerflag(TRAINER_MAY_ROUTE_110_MUDKIP)
             trainerbattle_single(
                 TRAINER_MAY_ROUTE_110_MUDKIP,
                 "Don't hold back, because I wont!",
@@ -132,6 +154,7 @@ script WoltiaBattleHall_TournamentBattle {
             )
         }
         elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+            cleartrainerflag(TRAINER_MAY_ROUTE_119_MUDKIP)
             trainerbattle_single(
                 TRAINER_MAY_ROUTE_119_MUDKIP,
                 "Don't hold back, because I wont!",
@@ -140,6 +163,7 @@ script WoltiaBattleHall_TournamentBattle {
             )
         }
         elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
+            cleartrainerflag(TRAINER_MAY_ROUTE_110_TREECKO)
             trainerbattle_single(
                 TRAINER_MAY_ROUTE_110_TREECKO,
                 "Don't hold back, because I wont!",
@@ -149,6 +173,7 @@ script WoltiaBattleHall_TournamentBattle {
         }
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 6) {
+        cleartrainerflag(TRAINER_WINONA_1)
         trainerbattle_single(
             TRAINER_WINONA_1,
             "It's been a long time since someone
@@ -158,22 +183,6 @@ script WoltiaBattleHall_TournamentBattle {
             event_script=WoltiaBattleHall_TournamentBattleAfter,
         )
     }
-}
-
-script WoltiaBattleHall_Tournament_RemoveAllTrainers {
-    // All trainers
-    removeobject(WOLTIATOURNEY_TRAINER01)
-    removeobject(WOLTIATOURNEY_TRAINER02)
-    removeobject(WOLTIATOURNEY_TRAINER03)
-    removeobject(WOLTIATOURNEY_TRAINER04)
-    removeobject(WOLTIATOURNEY_TRAINER05)
-
-    // Set flag for all trainers
-    setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
-    setflag(FLAG_WOLTIA_TOURNEY_TRAINER02)
-    setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
-    setflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
-    setflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
 }
 
 script WoltiaBattleHall_TournamentBattleAfter {
