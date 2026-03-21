@@ -29,6 +29,7 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     delay(60)
     applymovement(WOLTIA_RUIN_KEEGAN, moves(walk_down * 2, face_right))
     waitmovement
+    applymovement(0xFF, moves(face_left))
     msgbox("The mysterious man sizes you up
             from head to toe.")
     msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hmm. As well, it helps when others
