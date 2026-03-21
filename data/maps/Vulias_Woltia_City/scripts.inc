@@ -183,9 +183,9 @@ WoltiaCity_JordanGoToIgris::
 # 143 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
 # 144 "data/maps/Vulias_Woltia_City/scripts.pory"
-	faceplayer
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
 # 145 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement 0xFF, WoltiaCity_JordanGoToIgris_Movement_0
+	applymovement 0xFF, WoltiaCity_JordanGoToIgris_Movement_1
 # 146 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
 # 147 "data/maps/Vulias_Woltia_City/scripts.pory"
@@ -193,7 +193,7 @@ WoltiaCity_JordanGoToIgris::
 # 161 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
 # 162 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_1
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_2
 # 163 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
 # 164 "data/maps/Vulias_Woltia_City/scripts.pory"
@@ -237,14 +237,20 @@ WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0:
 	walk_down
 	step_end
 
-# 145 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 144 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_0:
+# 144 "data/maps/Vulias_Woltia_City/scripts.pory"
+	face_right
+	step_end
+
+# 145 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_JordanGoToIgris_Movement_1:
 # 145 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_left
 	step_end
 
 # 162 "data/maps/Vulias_Woltia_City/scripts.pory"
-WoltiaCity_JordanGoToIgris_Movement_1:
+WoltiaCity_JordanGoToIgris_Movement_2:
 # 162 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
 # 162 "data/maps/Vulias_Woltia_City/scripts.pory"

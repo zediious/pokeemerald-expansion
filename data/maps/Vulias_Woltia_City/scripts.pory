@@ -141,7 +141,7 @@ script WoltiaCity_EventScript_NoLeaveWhileFollowerSouth {
 script WoltiaCity_JordanGoToIgris {
     setvar(VAR_ZED_STORY_TRACKER, 19)
     lock
-    faceplayer
+    applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(face_right))
     applymovement(0xFF, moves(face_left))
     waitmovement
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You did it again {PLAYER}!
