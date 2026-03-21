@@ -1269,6 +1269,7 @@ const u8 gText_MainQuestDesc_06[] = _("After winning the Palladium tourney,\nJor
 const u8 gText_MainQuestDesc_07[] = _("I've made my way through Mulled Cave.\nWoltia City is just ahead, west\nthrough Route 103!");
 const u8 gText_MainQuestDesc_08[] = _("Jordan I and I are visiting the Old\nRuin in Woltia City, before the\ntournament begins!");
 const u8 gText_MainQuestDesc_09[] = _("After a strange encounter at the Old\nRuins, the tournament is about\nto start at the Aerodrome!!");
+const u8 gText_MainQuestDesc_10[] = _("I've won the Aerodrome Tournament!\nNow, Jordan and I are to travel \nthrough the Igris Desert!");
 
 
 const u8 gText_SideQuestDesc_1[] = _("Description 1");
@@ -1344,6 +1345,7 @@ const u8 gText_MainQuestMap_04[] = _("The Palladium");
 const u8 gText_MainQuestMap_05[] = _("Mulled Cave");
 const u8 gText_MainQuestMap_06[] = _("Woltia City");
 const u8 gText_MainQuestMap_07[] = _("The Aerodrome");
+const u8 gText_MainQuestMap_08[] = _("Igris Desert");
 
 const u8 gText_SideQuestMap1[] = _("Map 1");
 const u8 gText_SideQuestMap2[] = _("Igris Desert");

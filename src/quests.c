@@ -445,9 +445,13 @@ void QuestMenu_DynamicUpdate_Description(s32 questId)
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_08);
 		}
-		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Had Old Ruin encounter, ready to start Woltia tourney
+		else if (mainStoryTracker >= 16 && mainStoryTracker <= 18) // Had Old Ruin encounter, ready to start Woltia tourney
 		{
 			StringCopy(gStringVar1, gText_MainQuestDesc_09);
+		}
+		else if (mainStoryTracker >= 19) // Woltia Tourney completed, on way through Igris Desert
+		{
+			StringCopy(gStringVar1, gText_MainQuestDesc_10);
 		}
 	}
 	else
@@ -494,6 +498,10 @@ void QuestMenu_DynamicUpdate_Map(s32 questId)
 		{
 			StringCopy(gStringVar2, gText_MainQuestMap_07);
 		}
+		else if (mainStoryTracker >= 19) // Woltia Tourney completed, on way through Igris Desert
+		{
+			StringCopy(gStringVar2, gText_MainQuestMap_08);
+		}
 		else {
 			StringCopy(gStringVar2, sSideQuests[questId].map);
 		}
@@ -533,6 +541,10 @@ u8 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
 		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Player ready to start tourney after Old Ruin encounter
 		{
 			spriteId = OBJ_EVENT_GFX_WINONA;
+		}
+		else if (mainStoryTracker >= 19) // Woltia Tourney completed, on way through Igris Desert
+		{
+			spriteId = OBJ_EVENT_GFX_SPECIES(KROKOROK);
 		}
 		else {
 			spriteId = sSideQuests[questId].sprite;
