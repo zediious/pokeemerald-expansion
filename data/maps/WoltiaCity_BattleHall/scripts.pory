@@ -85,30 +85,33 @@ script WoltiaBattleHall_TournamentBattle {
       if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
         trainerbattle_single(
             TRAINER_PERRY,
-            "We're gonna have a rockin time!",
-            "I've been rocked!",
+            "You won't be able to keep up!",
+            "I guess we're slower than I thought!",
             event_script=WoltiaBattleHall_TournamentBattleAfter,
         )
         }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {
         trainerbattle_single(
             TRAINER_TED,
-            "My Pokemon and I are unstoppable!",
-            "Immovable object, you know how it goes.",
+            "I've seen all the scenarios! There's no
+            way I could lose!",
+            "Huh, I guess I didn't learn about that
+            one.",
             event_script=WoltiaBattleHall_TournamentBattleAfter,
         )
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {
         trainerbattle_single(
             TRAINER_WADE,
-            "The fruits of my labor will show!",
-            "My fruits!",
+            "No one has better catches than me!",
+            "Ah, who is no one anyways?",
             event_script=WoltiaBattleHall_TournamentBattleAfter,
         )
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! We both made it to
-                the end! It all comes down to this!")
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I knew we would 
+                both make it again! I've got another
+                chance to show what I can do!")
         waitmessage
 
         // Determine Jordan starter
@@ -116,7 +119,7 @@ script WoltiaBattleHall_TournamentBattle {
             trainerbattle_single(
                 TRAINER_BRENDAN_ROUTE_119_TORCHIC,
                 "Don't hold back, because I wont!",
-                "You just keep blowing me away!",
+                "What is the secret {PLAYER}!",
                 event_script=WoltiaBattleHall_TournamentBattleAfter,
             )
         }
@@ -124,7 +127,7 @@ script WoltiaBattleHall_TournamentBattle {
             trainerbattle_single(
                 TRAINER_MAY_ROUTE_110_MUDKIP,
                 "Don't hold back, because I wont!",
-                "You just keep blowing me away!",
+                "What is the secret {PLAYER}!",
                 event_script=WoltiaBattleHall_TournamentBattleAfter,
             )
         }
@@ -132,7 +135,7 @@ script WoltiaBattleHall_TournamentBattle {
             trainerbattle_single(
                 TRAINER_MAY_ROUTE_119_MUDKIP,
                 "Don't hold back, because I wont!",
-                "You just keep blowing me away!",
+                "What is the secret {PLAYER}!",
                 event_script=WoltiaBattleHall_TournamentBattleAfter,
             )
         }
@@ -140,7 +143,7 @@ script WoltiaBattleHall_TournamentBattle {
             trainerbattle_single(
                 TRAINER_MAY_ROUTE_110_TREECKO,
                 "Don't hold back, because I wont!",
-                "You just keep blowing me away!",
+                "What is the secret {PLAYER}!",
                 event_script=WoltiaBattleHall_TournamentBattleAfter,
             )
         }
@@ -148,10 +151,10 @@ script WoltiaBattleHall_TournamentBattle {
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 6) {
         trainerbattle_single(
             TRAINER_WINONA_1,
-            "Congratulations on making it this far!
-            Unfortunately, I'm going to have to
-            your train here!",
-            "Shows what I know!",
+            "It's been a long time since someone
+            could best me, let's see if you're 
+            worth your salt.",
+            "Very salty!",
             event_script=WoltiaBattleHall_TournamentBattleAfter,
         )
     }
@@ -215,12 +218,14 @@ script WoltiaBattleHall_TournamentPlayerWon {
         setvar(VAR_WOLTIA_TOURNAMENT_STATE, 7)
         waitfanfare
         applymovement(WOLTIATOURNEY_TRAINER05, moves(walk_left * 2))
-        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I had so much fun! That was an
-        amazing battle! I'm sure most would be
-        unhappy in my shoes, but I can't stop
-        smiling!
+        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a great battle!
+                I think Kilowattrel wants to have
+                another go at you!")
+        playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
+        msgbox("Caww!")
+        waitmessage
         
-        You're the new Rep Trainer for Woltia
+        msgbox("You're the new Rep Trainer for Woltia
         City! Congratulations! Here is the 
         Aerodrome Ribbon, the mark of your
         status.")
@@ -259,7 +264,7 @@ script WoltiaBattleHall_TournamentPlayerWon {
         setvar(VAR_ZED_STORY_TRACKER, 18)
         delay(30)
         setflag(FLAG_ANGRY_KROKOROK_01)
-        warp(MAP_VULIAS_WOLTIA_CITY, 11, 17)
+        warp(MAP_VULIAS_WOLTIA_CITY, 11, 15)
         release
         end
 }
