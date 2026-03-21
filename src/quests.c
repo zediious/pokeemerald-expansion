@@ -512,7 +512,7 @@ void QuestMenu_DynamicUpdate_Map(s32 questId)
 	}
 }
 
-u8 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
+u16 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
 {
 	// Determine sprite ID for certain quests, based on story var state
 	if (questId == 0) 
