@@ -73,8 +73,9 @@ script WoltiaBattleHall_PrepRoom_MatchStarterWoman {
             elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 5)}
             elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {setvar(VAR_WOLTIA_TOURNAMENT_STATE, 6)}
 
+            lock
+            removeobject(WOLTIA_TOURNEY_ORGANIZER)
             warp(MAP_WOLTIA_CITY_BATTLE_HALL, 5, 5)
-            release
             end
         }
     elif (var(VAR_RESULT) == NO) {

@@ -345,6 +345,8 @@ script GerbonBattleHall_TournamentBattleAfter {
     waitmessage
     playfanfare(SE_APPLAUSE)
     waitse
+    addobject(GERBON_TOURNEY_ORGANIZER, MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM)
+    delay(30)
     warp(MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5)
     call(GerbonBattleHall_Tournament_RemoveAllTrainers)
     special(RemoveCameraObject)

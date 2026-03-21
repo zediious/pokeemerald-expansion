@@ -41,6 +41,7 @@
       "flag": "0"
     },
     {
+      "local_id": "GERBON_TOURNEY_ORGANIZER",
       "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
       "x": 7,
       "y": 2,

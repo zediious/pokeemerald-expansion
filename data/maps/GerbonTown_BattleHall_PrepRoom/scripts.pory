@@ -73,8 +73,9 @@ script GerbonBattleHall_PrepRoom_MatchStarterWoman {
             elif (var(VAR_GERBON_TOURNAMENT_STATE) == 4) {setvar(VAR_GERBON_TOURNAMENT_STATE, 5)}
             elif (var(VAR_GERBON_TOURNAMENT_STATE) == 5) {setvar(VAR_GERBON_TOURNAMENT_STATE, 6)}
 
+            lock
+            removeobject(GERBON_TOURNEY_ORGANIZER)
             warp(MAP_GERBON_TOWN_BATTLE_HALL, 5, 3)
-            release
             end
         }
     elif (var(VAR_RESULT) == NO) {

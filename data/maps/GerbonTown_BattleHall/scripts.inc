@@ -408,12 +408,16 @@ GerbonBattleHall_TournamentBattleAfter_1:
 # 347 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitse
 # 348 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	warp MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5
+	addobject GERBON_TOURNEY_ORGANIZER, MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM
 # 349 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	call GerbonBattleHall_Tournament_RemoveAllTrainers
+	delay 30
 # 350 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	special RemoveCameraObject
+	warp MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5
 # 351 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	call GerbonBattleHall_Tournament_RemoveAllTrainers
+# 352 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	special RemoveCameraObject
+# 353 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	release
 	end
 
@@ -424,67 +428,67 @@ GerbonBattleHall_TournamentBattleAfter_2:
 
 
 GerbonBattleHall_TournamentPlayerWon::
-# 356 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 358 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	msgbox GerbonBattleHall_TournamentPlayerWon_Text_0
-# 362 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitmessage
-# 363 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	playfanfare SE_APPLAUSE
 # 364 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setvar VAR_GERBON_TOURNAMENT_STATE, 7
+	waitmessage
 # 365 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitfanfare
+	playfanfare SE_APPLAUSE
 # 366 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement GERBONTOURNEY_TRAINER05, GerbonBattleHall_TournamentPlayerWon_Movement_0
+	setvar VAR_GERBON_TOURNAMENT_STATE, 7
 # 367 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	waitfanfare
+# 368 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	applymovement GERBONTOURNEY_TRAINER05, GerbonBattleHall_TournamentPlayerWon_Movement_0
+# 369 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	msgbox GerbonBattleHall_TournamentPlayerWon_Text_1
-# 376 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitmessage
 # 378 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setflag FLAG_BADGE01_GET
-# 379 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	playfanfare MUS_OBTAIN_BADGE
+	waitmessage
 # 380 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	msgbox GerbonBattleHall_TournamentPlayerWon_Text_2, MSGBOX_SIGN
+	setflag FLAG_BADGE01_GET
 # 381 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitfanfare
+	playfanfare MUS_OBTAIN_BADGE
 # 382 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitmessage
-# 385 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	playfanfare MUS_LEVEL_UP
-# 386 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	msgbox GerbonBattleHall_TournamentPlayerWon_Text_3, MSGBOX_SIGN
-# 389 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	msgbox GerbonBattleHall_TournamentPlayerWon_Text_2, MSGBOX_SIGN
+# 383 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitfanfare
-# 390 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 384 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmessage
+# 387 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	playfanfare MUS_LEVEL_UP
+# 388 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	msgbox GerbonBattleHall_TournamentPlayerWon_Text_3, MSGBOX_SIGN
+# 391 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	waitfanfare
 # 392 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	waitmessage
+# 394 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	delay 30
-# 393 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 395 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	msgbox GerbonBattleHall_TournamentPlayerWon_Text_4
-# 396 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitmessage
 # 398 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	waitmessage
+# 400 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	giveitem ITEM_TM_ROCK_TOMB, 1
-# 399 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitmessage
 # 401 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	msgbox GerbonBattleHall_TournamentPlayerWon_Text_5
-# 406 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmessage
-# 407 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 9
+# 403 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	msgbox GerbonBattleHall_TournamentPlayerWon_Text_5
 # 408 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	delay 30
+	waitmessage
 # 409 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_BLOCKERS
+	setvar VAR_ZED_STORY_TRACKER, 9
 # 410 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	delay 30
 # 411 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	clearflag FLAG_GERBON_TOWN_BLOCKERS
 # 412 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	warp MAP_OLDALE_TOWN, 28, 14
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 413 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+# 414 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	warp MAP_OLDALE_TOWN, 28, 14
+# 415 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	release
 	end
 
@@ -693,11 +697,11 @@ GerbonBattleHall_TournamentBattle_Movement_2:
 	walk_left
 	step_end
 
-# 366 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 368 "data/maps/GerbonTown_BattleHall/scripts.pory"
 GerbonBattleHall_TournamentPlayerWon_Movement_0:
-# 366 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 368 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	walk_left
-# 366 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 368 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	walk_left
 	step_end
 
@@ -794,14 +798,14 @@ GerbonBattleHall_TournamentBattleAfter_Text_0:
 	.string "The next match will begin soon!$"
 
 GerbonBattleHall_TournamentPlayerWon_Text_0:
-# 356 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 358 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "DING DING DING DING DING DING\p"
 	.string "{PLAYER} has defeated the standing\n"
 	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Julia!\p"
 	.string "They now take the crown! What an upset!$"
 
 GerbonBattleHall_TournamentPlayerWon_Text_1:
-# 367 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 369 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I had so much fun! That was an\n"
 	.string "amazing battle! I'm sure most would be\l"
 	.string "unhappy in my shoes, but I can't stop\l"
@@ -812,22 +816,22 @@ GerbonBattleHall_TournamentPlayerWon_Text_1:
 	.string "status.$"
 
 GerbonBattleHall_TournamentPlayerWon_Text_2:
-# 380 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 382 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "You got the Palladium Ribbon!$"
 
 GerbonBattleHall_TournamentPlayerWon_Text_3:
-# 386 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 388 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "The level cap has been raised to 25!\p"
 	.string "You can now use {COLOR RED}Cut!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 GerbonBattleHall_TournamentPlayerWon_Text_4:
-# 393 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 395 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little\n"
 	.string "something extra from me, I think you'll\l"
 	.string "find some good use for it.$"
 
 GerbonBattleHall_TournamentPlayerWon_Text_5:
-# 401 "data/maps/GerbonTown_BattleHall/scripts.pory"
+# 403 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	.string "{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move hits nice and hard, and\n"
 	.string "it slows down your opponent to boot!\p"
 	.string "Anyways, keep on getting better! I know\n"
