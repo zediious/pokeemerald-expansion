@@ -102,6 +102,7 @@ WoltiaBattleHall_TournamentBattle::
 # 57 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	buffertrainername STR_VAR_1, VAR_WOLTIA_TOURNAMENT_OPPONENT
 # 58 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playse SE_DING_DONG
 	msgbox WoltiaBattleHall_TournamentBattle_Text_0
 # 63 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
@@ -229,7 +230,7 @@ WoltiaBattleHall_TournamentBattleAfter::
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 6
 	goto_if_eq WoltiaBattleHall_TournamentBattleAfter_2
 WoltiaBattleHall_TournamentBattleAfter_1:
-# 180 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playse SE_DING_DONG
 	msgbox WoltiaBattleHall_TournamentBattleAfter_Text_0
 # 186 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
@@ -258,7 +259,9 @@ WoltiaBattleHall_TournamentBattleAfter_2:
 
 
 WoltiaBattleHall_TournamentPlayerWon::
-# 199 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playse SE_DING_DONG
+# 209 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playse SE_DING_DONG
 	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_0
 # 205 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage

@@ -55,6 +55,7 @@ script WoltiaBattleHall_TournamentBattle {
     lock
     delay(60)
     buffertrainername(STR_VAR_1, VAR_WOLTIA_TOURNAMENT_OPPONENT)
+    playse(SE_DING_DONG)
     msgbox("DING DING DING ...
     
             Avid battlers, step up!
@@ -181,6 +182,7 @@ script WoltiaBattleHall_TournamentBattleAfter {
         goto(WoltiaBattleHall_TournamentPlayerWon)
     }
 
+    playse(SE_DING_DONG)
     msgbox("DING DING DING ...
     
             Congratulations {PLAYER}! What a
@@ -200,6 +202,8 @@ script WoltiaBattleHall_TournamentBattleAfter {
 }
 
 script WoltiaBattleHall_TournamentPlayerWon {
+        playse(SE_DING_DONG)
+        playse(SE_DING_DONG)
         msgbox("DING DING DING DING DING DING
     
             {PLAYER} has defeated the standing
