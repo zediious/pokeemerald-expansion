@@ -1,23 +1,11 @@
-mapscripts Vulias_Igris_Desert_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_ZED_STORY_TRACKER, 19: IgrisDesert_RemoveKrokorokEggs01
-    ]
-}
-
-// Remove the Krokorok Eggs if Woltia Tourney beaten\
-script IgrisDesert_RemoveKrokorokEggs01 {
-    setvar(VAR_ZED_STORY_TRACKER, 20)
-    setmetatile(19, 51, 0x000, 0)
-    setmetatile(20, 51, 0x000, 0)
-    end
-}
+mapscripts Vulias_Igris_Desert_MapScripts {}
 
 // Krokorok angry jump and smack
 script IgrisDesert_EventScript_AngryKrokorok {
     lock
     faceplayer
     msgbox("The Krokorok looks extremely angry, it
-            seems to be protecting the eggs!")
+            seems to be protecting it's young!")
     waitmessage
     playmoncry(SPECIES_KROKOROK, CRY_MODE_NORMAL)
     msgbox("V-V Vruuu")
