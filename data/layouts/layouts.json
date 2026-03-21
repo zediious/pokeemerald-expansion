@@ -9540,7 +9540,7 @@
       "width": 60,
       "height": 75,
       "primary_tileset": "gTileset_DesertMain",
-      "secondary_tileset": "gTileset_DesertVillage",
+      "secondary_tileset": "gTileset_DesertPyramidExt",
       "border_filepath": "data/layouts/Vulias_Igris_Desert/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Desert/map.bin"
     },
