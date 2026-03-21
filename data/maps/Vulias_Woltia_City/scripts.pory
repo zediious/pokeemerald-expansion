@@ -1,6 +1,7 @@
 mapscripts Vulias_Woltia_City_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_ZED_STORY_TRACKER, 16: Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney
+        VAR_ZED_STORY_TRACKER, 18: WoltiaCity_JordanGoToIgris
         VAR_WOLTIA_DISABLETRAINERS_TRIGGER, 0: Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers
     ]
 }
@@ -133,5 +134,37 @@ script WoltiaCity_EventScript_NoLeaveWhileFollowerSouth {
         waitmovement
         release
     }
+    end
+}
+
+// Player won tourney, Jordan heads off to Igris Desert
+script WoltiaCity_JordanGoToIgris {
+    setvar(VAR_ZED_STORY_TRACKER, 19)
+    lock
+    faceplayer
+    applymovement(0xFF, moves(face_left))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You did it again {PLAYER}!
+            I've just got to keep getting stronger
+            so I can beat you one day! Your
+            Pokemon really love you, it shows.
+            
+            Anyways, let's not waste any more time!
+            The next Battle Hall is in Liordun
+            Town, which is a litle bit past
+            the Igris Desert. The desert is pretty
+            big though, it might take us some time!
+            
+            I'm going to go ahead of you, but we'll
+            probably see each other there! Catch
+            you later!")
+    waitmessage
+    applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(walk_down * 12))
+    waitmovement
+    delay(30)
+    setflag(FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY)
+    removeobject(WOLTIA_JORDAN_TRIGGERTOURNEY)
+    questupdated(0)
+    release
     end
 }
