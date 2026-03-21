@@ -215,5 +215,22 @@
       "script": "IgrisDesert_EventScript_KowtowAdminTopTileMove"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 56,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "IgrisDesert_EventScript_PalentoVillageSign"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "IgrisDesert_EventScript_PalentoVillageSign"
+    }
+  ]
 }

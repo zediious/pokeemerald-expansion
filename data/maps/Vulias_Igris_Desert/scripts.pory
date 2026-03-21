@@ -1,5 +1,14 @@
 mapscripts Vulias_Igris_Desert_MapScripts {}
 
+// Signs and Items
+
+// Palento Village
+script IgrisDesert_EventScript_PalentoVillageSign{
+    lockall
+    msgbox("{RIGHT_ARROW} Palento Village")
+    releaseall
+}
+
 // Krokorok angry jump and smack
 script IgrisDesert_EventScript_AngryKrokorok {
     lock
