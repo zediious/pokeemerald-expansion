@@ -157,8 +157,12 @@ script WoltiaBattleHall_TournamentBattle {
 }
 
 script WoltiaBattleHall_Tournament_RemoveAllTrainers {
-    // Remove the current trainer object
-    removeobject(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL)
+    // All trainers
+    removeobject(WOLTIATOURNEY_TRAINER01)
+    removeobject(WOLTIATOURNEY_TRAINER02)
+    removeobject(WOLTIATOURNEY_TRAINER03)
+    removeobject(WOLTIATOURNEY_TRAINER04)
+    removeobject(WOLTIATOURNEY_TRAINER05)
 
     // Set flag for all trainers
     setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)

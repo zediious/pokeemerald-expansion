@@ -197,17 +197,25 @@ WoltiaBattleHall_TournamentBattle_14:
 
 
 WoltiaBattleHall_Tournament_RemoveAllTrainers::
-# 161 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	removeobject VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL
-# 164 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER01
 # 165 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER02
+	removeobject WOLTIATOURNEY_TRAINER01
 # 166 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER03
+	removeobject WOLTIATOURNEY_TRAINER02
 # 167 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER04
+	removeobject WOLTIATOURNEY_TRAINER03
 # 168 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	removeobject WOLTIATOURNEY_TRAINER04
+# 169 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	removeobject WOLTIATOURNEY_TRAINER05
+# 172 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER01
+# 173 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER02
+# 174 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER03
+# 175 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER04
+# 176 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setflag FLAG_WOLTIA_TOURNEY_TRAINER05
 	return
 
