@@ -441,3 +441,9 @@ const u16 gMetatileAttributes_DojoInterior[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_DesertPyramidExt[] = INCBIN_U16("data/tilesets/secondary/desert_pyramid_ext/metatiles.bin");
 const u16 gMetatileAttributes_DesertPyramidExt[] = INCBIN_U16("data/tilesets/secondary/desert_pyramid_ext/metatile_attributes.bin");
+
+const u16 gMetatiles_PyramidInteriorPrimary[] = INCBIN_U16("data/tilesets/primary/pyramid_interior_primary/metatiles.bin");
+const u16 gMetatileAttributes_PyramidInteriorPrimary[] = INCBIN_U16("data/tilesets/primary/pyramid_interior_primary/metatile_attributes.bin");
+
+const u16 gMetatiles_PyramidInteriorSecondary[] = INCBIN_U16("data/tilesets/secondary/pyramid_interior_secondary/metatiles.bin");
+const u16 gMetatileAttributes_PyramidInteriorSecondary[] = INCBIN_U16("data/tilesets/secondary/pyramid_interior_secondary/metatile_attributes.bin");

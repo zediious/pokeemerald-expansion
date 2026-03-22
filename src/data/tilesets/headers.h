@@ -1662,3 +1662,25 @@ const struct Tileset gTileset_DesertPyramidExt =
     .metatileAttributes = gMetatileAttributes_DesertPyramidExt,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PyramidInteriorPrimary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PyramidInteriorPrimary,
+    .palettes = gTilesetPalettes_PyramidInteriorPrimary,
+    .metatiles = gMetatiles_PyramidInteriorPrimary,
+    .metatileAttributes = gMetatileAttributes_PyramidInteriorPrimary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PyramidInteriorSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PyramidInteriorSecondary,
+    .palettes = gTilesetPalettes_PyramidInteriorSecondary,
+    .metatiles = gMetatiles_PyramidInteriorSecondary,
+    .metatileAttributes = gMetatileAttributes_PyramidInteriorSecondary,
+    .callback = NULL,
+};
