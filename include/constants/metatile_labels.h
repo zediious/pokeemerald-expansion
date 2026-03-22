@@ -171,6 +171,9 @@
 // gTileset_DepartmentStore
 #define METATILE_DepartmentStore_ElevatorDoor  0x28D
 
+// gTileset_DesertMain
+#define METATILE_DesertMain_MuddySlope_Frame1  0x08E
+
 // gTileset_Dewford
 #define METATILE_Dewford_Door              0x225
 #define METATILE_Dewford_Door_BattleTower  0x25D
