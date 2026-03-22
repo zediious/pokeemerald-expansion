@@ -316,7 +316,7 @@ script IgrisDesert_DetermineJordanTeam02 {
             PARTNER_JORDAN_PANSAGE_04
         )
     }
-    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+    else { // Starter is Innape
         setfollowernpc(
             JORDAN_IGRIS_02,
             FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
@@ -389,6 +389,7 @@ script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06 {
 // Applied by above triggers, then Jordan talk script started
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger {
     playse(SE_PIN)
+    applymovement(JORDAN_IGRIS_02, moves(emote_exclamation_mark))
     delay(60)
 
     // Go to correct spot based on trigger
@@ -438,6 +439,7 @@ script IgrisDesert_EventScript_SpeakJordanBecomeFollower02 {
         call(IgrisDesert_DetermineJordanTeam02)
         setvar(VAR_ZED_STORY_TRACKER, 20)
         release
+        end
     } else {
         msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Alright, come back soon!
                 We absolutely must check out the
