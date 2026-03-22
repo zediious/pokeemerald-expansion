@@ -1658,6 +1658,10 @@
     {
       "id": "MAPSEC_PALENTO_VILLAGE",
       "name": "Palento Village"
+    },
+    {
+      "id": "MAPSEC_RUVEL_PYRAMID",
+      "name": "Ruvel Pyramid"
     }
   ]
 }

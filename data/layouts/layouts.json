@@ -9593,6 +9593,16 @@
       "secondary_tileset": "gTileset_DesertVillage",
       "border_filepath": "data/layouts/Vulias_Palento_Village/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Palento_Village/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_RUVEL_PYRAMID",
+      "name": "Vulias_Ruvel_Pyramid_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_PyramidInteriorPrimary",
+      "secondary_tileset": "gTileset_PyramidInteriorSecondary",
+      "border_filepath": "data/layouts/Vulias_Ruvel_Pyramid/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Ruvel_Pyramid/map.bin"
     }
   ]
 }

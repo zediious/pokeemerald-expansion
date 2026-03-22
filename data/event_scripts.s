@@ -1792,3 +1792,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/WoltiaCity_PokemonCenter/scripts.inc"
 
 	.include "data/maps/Vulias_Palento_Village/scripts.inc"
+
+	.include "data/maps/Vulias_Ruvel_Pyramid/scripts.inc"
