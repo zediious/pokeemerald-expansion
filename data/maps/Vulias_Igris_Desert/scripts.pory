@@ -289,3 +289,189 @@ script IgrisDesert_EventScript_JordanFollower01 {
     nop
 }
 
+//// Second visit, entire second section available
+
+script IgrisDesert_DetermineJordanTeam02 {
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        setfollowernpc(
+            JORDAN_IGRIS_02,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower02,
+            PARTNER_JORDAN_PANPOUR_04
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        setfollowernpc(
+            JORDAN_IGRIS_02,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower02,
+            PARTNER_JORDAN_PANSEAR_04
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        setfollowernpc(
+            JORDAN_IGRIS_02,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower02,
+            PARTNER_JORDAN_PANSAGE_04
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        setfollowernpc(
+            JORDAN_IGRIS_02,
+            FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+            IgrisDesert_EventScript_JordanFollower02,
+            PARTNER_JORDAN_INNAPE_04
+        )
+    }
+}
+
+
+// Jordan follower script 02
+script IgrisDesert_EventScript_JordanFollower02 {
+    lock
+    faceplayer
+    msgbox("This Pyramid is another one of those
+            things I've heard up, but never gone to
+            see.
+            
+            You being here as given me cause to
+            check these things out! Thanks
+            {PLAYER}!")
+    waitmessage
+    release
+    end
+}
+
+// Triggers for if player tries to go west or north before speaking to Jordan
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01 {
+    lock
+    applymovement(0xFF, moves(walk_right))
+    setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 0)
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
+}
+
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger02 {
+    lock
+    applymovement(0xFF, moves(walk_right))
+    setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 1)
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
+}
+
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03 {
+    lock
+    applymovement(0xFF, moves(walk_down))
+    setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 2)
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
+}
+
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger04 {
+    lock
+    applymovement(0xFF, moves(walk_down))
+    setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 3)
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
+}
+
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger05 {
+    lock
+    applymovement(0xFF, moves(walk_down))
+    setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 4)
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
+}
+
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06 {
+    lock
+    applymovement(0xFF, moves(walk_down))
+    setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 5)
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
+}
+
+// Applied by above triggers, then Jordan talk script started
+script IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger {
+    playse(SE_PIN)
+    delay(60)
+
+    // Go to correct spot based on trigger
+    if (var(VAR_IGRIS_JORDAN02_PLAYERPOS) == 0) {
+        applymovement(JORDAN_IGRIS_02, moves(walk_down * 2, walk_left * 3))
+    } elif (var(VAR_IGRIS_JORDAN02_PLAYERPOS) == 1) {
+        applymovement(JORDAN_IGRIS_02, moves(walk_down, walk_left * 3))
+    } elif (var(VAR_IGRIS_JORDAN02_PLAYERPOS) == 2) {
+        applymovement(JORDAN_IGRIS_02, moves(walk_right * 2, walk_up * 2))
+    } elif (var(VAR_IGRIS_JORDAN02_PLAYERPOS) == 3) {
+        applymovement(JORDAN_IGRIS_02, moves(walk_right * 3, walk_up * 2))
+    } elif (var(VAR_IGRIS_JORDAN02_PLAYERPOS) == 4) {
+        applymovement(JORDAN_IGRIS_02, moves(walk_right * 4, walk_up * 2))
+    } elif (var(VAR_IGRIS_JORDAN02_PLAYERPOS) == 5) {
+        applymovement(JORDAN_IGRIS_02, moves(walk_right * 5, walk_up * 2))
+    }
+
+    waitmovement
+    goto(IgrisDesert_EventScript_SpeakJordanBecomeFollower02)
+}
+
+// Called if you just talk to Jordan
+script IgrisDesert_EventScript_SpeakJordanBecomeFollower02 {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I've been waiting
+            for you! There's this really cool looking
+            {COLOR RED}Pyramid{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the west, past this 
+            mountain range. I was waiting for you
+            so that we could check it out
+            together!
+            
+            Are you ready to go? I'll keep your
+            team healthy, and you'll be able to
+            catch Pokemon!", MSGBOX_YESNO)
+    waitmessage
+    if (var(VAR_RESULT) == YES) {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great, let's get going!
+                The Pyramid is to the west, up those
+                stairs through the mountain range.")
+        waitmessage
+        delay(30)
+        playse(MUS_RG_OBTAIN_KEY_ITEM)
+        msgbox("Jordan is now your follower!")
+        waitse
+        waitmessage
+        call(IgrisDesert_DetermineJordanTeam02)
+        setvar(VAR_ZED_STORY_TRACKER, 20)
+        release
+    } else {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Alright, come back soon!
+                We absolutely must check out the
+                Pyramid before we move on!")
+        waitmessage
+        release
+        end
+    }
+}
+
+// Cannot leave desert from north or south until Pyramid after Jordan is follower
+script IgrisDesert_EventScript_JordanFollower02NoLeaveNorth {
+    lock
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the
+            Pyramid before anything else! If you
+            a Pokemon Center or Mart, we can go
+            to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
+    waitmessage
+    applymovement(0xFF, moves(walk_down))
+    waitmovement
+    release
+    end
+}
+
+script IgrisDesert_EventScript_JordanFollower02NoLeaveSouth {
+    lock
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the
+            Pyramid before anything else! If you
+            a Pokemon Center or Mart, we can go
+            to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
+    waitmessage
+    applymovement(0xFF, moves(walk_up))
+    waitmovement
+    release
+    end
+}
+

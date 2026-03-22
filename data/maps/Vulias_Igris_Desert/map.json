@@ -183,6 +183,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_ANGRY_KROKOROK_01"
+    },
+    {
+      "local_id": "JORDAN_IGRIS_02",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "x": 44,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollower02",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -219,6 +233,114 @@
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "13",
       "script": "IgrisDesert_EventScript_KowtowAdminTopTileMove"
+    },
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "19",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06"
+    },
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "19",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger05"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "19",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger04"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "19",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "19",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger02"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "19",
+      "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 51,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 51,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSouth"
     }
   ],
   "bg_events": [
