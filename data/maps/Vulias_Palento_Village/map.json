@@ -1,0 +1,26 @@
+{
+  "id": "MAP_VULIAS_PALENTO_VILLAGE",
+  "name": "Vulias_Palento_Village",
+  "layout": "LAYOUT_VULIAS_PALENTO_VILLAGE",
+  "music": "MUS_FALLARBOR",
+  "region_map_section": "MAPSEC_PALENTO_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_VULIAS_IGRIS_DESERT",
+      "offset": 11,
+      "direction": "left"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

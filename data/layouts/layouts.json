@@ -9583,6 +9583,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/WoltiaCity_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/WoltiaCity_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_PALENTO_VILLAGE",
+      "name": "Vulias_Palento_Village_Layout",
+      "width": 39,
+      "height": 30,
+      "primary_tileset": "gTileset_DesertMain",
+      "secondary_tileset": "gTileset_DesertVillage",
+      "border_filepath": "data/layouts/Vulias_Palento_Village/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Palento_Village/map.bin"
     }
   ]
 }

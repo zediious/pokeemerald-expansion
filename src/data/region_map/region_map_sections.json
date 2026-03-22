@@ -1654,6 +1654,10 @@
     {
       "id": "MAPSEC_VULIAS_IGRIS_DESERT",
       "name": "Igris Desert"
+    },
+    {
+      "id": "MAPSEC_PALENTO_VILLAGE",
+      "name": "Palento Village"
     }
   ]
 }
