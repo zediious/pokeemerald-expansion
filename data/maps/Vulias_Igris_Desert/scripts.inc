@@ -565,7 +565,7 @@ IgrisDesert_EventScript_JordanFollower02NoLeaveSouth::
 # 468 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 469 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0
+	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Text_0
 # 473 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 474 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -1075,6 +1075,13 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_3:
 
 IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0:
 # 456 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the\n"
+	.string "Pyramid before anything else! If you\l"
+	.string "need a Pokemon Center or Mart, we can\l"
+	.string "go to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.$"
+
+IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Text_0:
+# 469 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the\n"
 	.string "Pyramid before anything else! If you\l"
 	.string "a Pokemon Center or Mart, we can go\l"

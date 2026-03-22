@@ -455,8 +455,8 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveNorth {
     lock
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the
             Pyramid before anything else! If you
-            a Pokemon Center or Mart, we can go
-            to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
+            need a Pokemon Center or Mart, we can
+            go to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
     waitmessage
     applymovement(0xFF, moves(walk_down))
     waitmovement
