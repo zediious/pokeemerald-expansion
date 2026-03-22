@@ -9537,7 +9537,7 @@
     {
       "id": "LAYOUT_VULIAS_IGRIS_DESERT",
       "name": "Vulias_Igris_Desert_Layout",
-      "width": 60,
+      "width": 66,
       "height": 77,
       "primary_tileset": "gTileset_DesertMain",
       "secondary_tileset": "gTileset_DesertPyramidExt",
@@ -9588,7 +9588,7 @@
       "id": "LAYOUT_VULIAS_PALENTO_VILLAGE",
       "name": "Vulias_Palento_Village_Layout",
       "width": 39,
-      "height": 30,
+      "height": 32,
       "primary_tileset": "gTileset_DesertMain",
       "secondary_tileset": "gTileset_DesertVillage",
       "border_filepath": "data/layouts/Vulias_Palento_Village/border.bin",
