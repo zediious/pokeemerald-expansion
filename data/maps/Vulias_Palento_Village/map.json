@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_VULIAS_IGRIS_DESERT",
-      "offset": 11,
+      "offset": 9,
       "direction": "left"
     }
   ],
