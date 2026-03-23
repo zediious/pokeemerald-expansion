@@ -168,7 +168,7 @@ SawgrassForest_JordanLeave_5:
 # 124 "data/maps/ZED_SawgrassForest/scripts.pory"
 	release
 # 125 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 127 "data/maps/ZED_SawgrassForest/scripts.pory"
 	destroyfollowernpc
 # 128 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -473,7 +473,7 @@ SawgrassVillage_Grunt2_Loss:
 
 Sawgrass_Kowtow_Whiteout::
 # 395 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 396 "data/maps/ZED_SawgrassForest/scripts.pory"
 	special SetCB2WhiteOut
 	return
@@ -489,7 +489,7 @@ Sawgrass_Kowtow_AfterBattle::
 # 405 "data/maps/ZED_SawgrassForest/scripts.pory"
 	playse SE_M_DOUBLE_TEAM
 # 406 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 407 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setflag FLAG_SAWGRASSFOREST_KOWTOW
 # 408 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -501,7 +501,7 @@ Sawgrass_Kowtow_AfterBattle::
 # 411 "data/maps/ZED_SawgrassForest/scripts.pory"
 	delay 120
 # 412 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 414 "data/maps/ZED_SawgrassForest/scripts.pory"
 	call SawgrassForest_KowtowScene_FollowPlayerFace
 # 416 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -532,7 +532,7 @@ Sawgrass_Kowtow_AfterBattle_1:
 # 447 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmessage
 # 448 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 449 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
 # 450 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -540,7 +540,7 @@ Sawgrass_Kowtow_AfterBattle_1:
 # 451 "data/maps/ZED_SawgrassForest/scripts.pory"
 	delay 120
 # 452 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 454 "data/maps/ZED_SawgrassForest/scripts.pory"
 	call SawgrassForest_KowtowScene_FollowPlayerFace
 # 456 "data/maps/ZED_SawgrassForest/scripts.pory"

@@ -188,7 +188,7 @@ Route101_EventScript_TrainerTeachLesson_8:
 
 Route101_EventScript_TrainerTeachEnd::
 # 119 "data/maps/Route101/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 120 "data/maps/Route101/scripts.pory"
 	removeobject ZED_Route101_CatchTeacher
 # 121 "data/maps/Route101/scripts.pory"
@@ -196,7 +196,7 @@ Route101_EventScript_TrainerTeachEnd::
 # 122 "data/maps/Route101/scripts.pory"
 	setflag FLAG_ROUTE101_TEACHER
 # 123 "data/maps/Route101/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 124 "data/maps/Route101/scripts.pory"
 	fadedefaultbgm
 # 125 "data/maps/Route101/scripts.pory"

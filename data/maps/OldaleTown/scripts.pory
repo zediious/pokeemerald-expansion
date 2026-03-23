@@ -283,11 +283,11 @@ script GerbonTown_OutdoorBattleEnd {
             See you soon!")
     waitmessage
     closemessage
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
     removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE)
     delay(30)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     // Disable blockers of Sawngrass Village south exit
     setflag(FLAG_SAWGRASS_SOUTH_BLOCKERS)

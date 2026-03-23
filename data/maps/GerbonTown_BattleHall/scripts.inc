@@ -157,7 +157,7 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 148 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	delay 60
 # 149 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 150 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	setflag FLAG_GERBON_BATTLEHALL_JORDAN01
 # 151 "data/maps/GerbonTown_BattleHall/scripts.pory"

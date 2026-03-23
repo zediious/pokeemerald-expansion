@@ -168,11 +168,11 @@ script LittlerootTown_EventScript_TrainerTeachCatch01 {
                 
                 I'll meet you at the east side of
                 the route.")
-        fadescreen(FADE_TO_BLACK)
+        fadescreenswapbuffers(FADE_TO_BLACK)
         removeobject(ZED_Sawgrass_CatchTeacher)
         setflag(FLAG_SAWGRASS_TEACHER)
         setvar(VAR_ROUTE101CATCH_PROGRESS, 1)
-        fadescreen(FADE_FROM_BLACK)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
         release
         end
     }

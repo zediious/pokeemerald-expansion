@@ -378,7 +378,7 @@ GerbonTown_OutdoorBattleEnd::
 # 285 "data/maps/OldaleTown/scripts.pory"
 	closemessage
 # 286 "data/maps/OldaleTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 287 "data/maps/OldaleTown/scripts.pory"
 	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 288 "data/maps/OldaleTown/scripts.pory"
@@ -386,7 +386,7 @@ GerbonTown_OutdoorBattleEnd::
 # 289 "data/maps/OldaleTown/scripts.pory"
 	delay 30
 # 290 "data/maps/OldaleTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 293 "data/maps/OldaleTown/scripts.pory"
 	setflag FLAG_SAWGRASS_SOUTH_BLOCKERS
 # 294 "data/maps/OldaleTown/scripts.pory"

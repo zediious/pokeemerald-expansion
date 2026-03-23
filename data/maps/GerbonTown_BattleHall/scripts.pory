@@ -146,7 +146,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     applymovement(GERBON_BATTLEHALL_JORDAN_01, moves(walk_right, walk_up))
     waitmovement
     delay(60)
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_GERBON_BATTLEHALL_JORDAN01)
     removeobject(GERBON_BATTLEHALL_JORDAN_01)
     clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)

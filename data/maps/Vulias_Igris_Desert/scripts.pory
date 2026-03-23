@@ -145,7 +145,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
 
     // "Smoke bomb"
     playse(SE_M_DOUBLE_TEAM)
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_IGRISDESERT_KOWTOW_01)
     removeobject(IGRIS_KOWTOWADMIN_01)
     removeobject(IGRIS_KOWTOW_01_01)
@@ -154,7 +154,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     removeobject(IGRIS_KOWTOW_01_04)
     waitse
     delay(120)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     clearflag(FLAG_IGRIS_BEAUTY)
     addobject(TOGEPI_BEAUTY_DESERT)
@@ -208,13 +208,13 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
             Thank you again, maybe I'll see you in
             Woltia City!")
     waitmessage
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_IGRIS_BEAUTY)
     setflag(FLAG_IGRIS_TOGEPI)
     setflag(FLAG_ROUTE103_BEAUTY)
     removeobject(TOGEPI_BEAUTY_DESERT)
     removeobject(IGRIS_TOGEPI)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
     applymovement(0xFF, moves(face_left))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_right))
     msgbox(

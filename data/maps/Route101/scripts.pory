@@ -116,11 +116,11 @@ script Route101_EventScript_TrainerTeachLesson{
 }
 
 script Route101_EventScript_TrainerTeachEnd {
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     removeobject(ZED_Route101_CatchTeacher)
     setvar(VAR_ROUTE101CATCH_PROGRESS, 2)
     setflag(FLAG_ROUTE101_TEACHER)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
     fadedefaultbgm
     release
     end

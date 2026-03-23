@@ -122,7 +122,7 @@ script SawgrassForest_JordanLeave {
             msgbox("Alright, but hurry back!")
             waitmessage
             release
-            fadescreen(FADE_TO_BLACK)
+            fadescreenswapbuffers(FADE_TO_BLACK)
             // Move Jordan back to the entrance to the forest
             destroyfollowernpc
             addobject(SAWGRASSFOREST_JORDAN_01)
@@ -392,7 +392,7 @@ SawgrassVillage_Grunt2_Loss:
 `
 
 script Sawgrass_Kowtow_Whiteout {
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     special(SetCB2WhiteOut)
 }
 
@@ -403,13 +403,13 @@ script Sawgrass_Kowtow_AfterBattle {
 
     // "Smoke bomb"
     playse(SE_M_DOUBLE_TEAM)
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_SAWGRASSFOREST_KOWTOW)
     removeobject(SAWGRASS_KOWTOW_01)
     removeobject(SAWGRASS_KOWTOW_02)
     waitse
     delay(120)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
 
@@ -445,11 +445,11 @@ script Sawgrass_Kowtow_AfterBattle {
 
     // Woman leaves
     waitmessage
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setflag(FLAG_SAWGRASSFOREST_MUGGEDWOMAN)
     removeobject(SAWGRASS_MUGGED_WOMAN)
     delay(120)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
 

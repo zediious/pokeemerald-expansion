@@ -188,7 +188,7 @@ VuliasRoute110_PlayerArrivedToJordan::
 # 182 "data/maps/Vulias_Route110/scripts.pory"
 	waitmessage
 # 183 "data/maps/Vulias_Route110/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 184 "data/maps/Vulias_Route110/scripts.pory"
 	delay 30
 # 185 "data/maps/Vulias_Route110/scripts.pory"

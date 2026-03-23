@@ -180,7 +180,7 @@ script VuliasRoute110_PlayerArrivedToJordan {
             make us a proper supper!")
 
     waitmessage
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     delay(30)
     playfanfare(MUS_RG_POKE_FLUTE)
     waitfanfare

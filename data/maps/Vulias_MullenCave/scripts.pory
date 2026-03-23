@@ -86,6 +86,9 @@ script VuliasMullenCave_EventScript_Trainer05{
     end
 }
 
+//// SENSEI and STUDENTS
+/// Rock Smash HM
+
 // Student 1
 script VuliasMullenCave_EventScript_Trainer06{
     trainerbattle_single(
@@ -94,8 +97,8 @@ script VuliasMullenCave_EventScript_Trainer06{
         "Quit distracting me!",
         VuliasMullenCave_StudentEnd
     )
-    msgbox("I must work had to get my {COLOR RED}Black Belt{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
-            from sensei!", MSGBOX_AUTOCLOSE)
+    msgbox("MY sensei is the best {COLOR RED}Rock Smasher{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+            around!", MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
@@ -118,7 +121,7 @@ script VuliasMullenCave_StudentEnd {
     end
 }
 
-// Sensei at top of L2 platforms, gives Black Belt
+// Sensei at top of L2 platforms, gives Rock Smash HM
 script VuliasMullenCave_EventScript_Trainer08{
     if (var(VAR_MULLEN_CAVE_SENSEI_PROGRESS) == 2) {
         trainerbattle_single(
@@ -129,6 +132,10 @@ script VuliasMullenCave_EventScript_Trainer08{
             "Hoho! Very impressive!",
             ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive
         )
+        release
+        end
+        
+    } elif (var(VAR_MULLEN_CAVE_SENSEI_PROGRESS) == 3) {
         msgbox("Go forth and practice your skills!", MSGBOX_AUTOCLOSE)
         waitmessage
         end
@@ -144,7 +151,7 @@ script VuliasMullenCave_EventScript_Trainer08{
     }
 }
 
-// Give Rock Smash after defeating Trainer08
+// Give Rock Smash after defeating Trainer08 Sensei
 script ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive {
     lock
     if (flag(FLAG_MULLEN_SENSEI_DEFEATED)) {
@@ -155,11 +162,14 @@ script ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive {
         {COLOR RED}HM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
         giveitem(ITEM_HM_ROCK_SMASH, 1)
         setflag(FLAG_MULLEN_SENSEI_DEFEATED)
+        setvar(VAR_MULLEN_CAVE_SENSEI_PROGRESS, 3)
         waitmessage
         release
         end
     }
 }
+
+//// END SENSEI and STUDENTS
 
 script VuliasMullenCave_EventScript_Trainer09{
     trainerbattle_single(
@@ -326,11 +336,11 @@ script MullenCave_EventScript_JordanLeaveAtEnd {
                 See you soon!")
         waitmessage
         delay(20)
-        fadescreen(FADE_TO_BLACK)
+        fadescreenswapbuffers(FADE_TO_BLACK)
         destroyfollowernpc
         setflag(FLAG_MULLED_CAVE_JORDAN_01)
         delay(60)
-        fadescreen(FADE_FROM_BLACK)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
         delay(30)
         setvar(VAR_ZED_STORY_TRACKER, 12)
         questupdated(0)

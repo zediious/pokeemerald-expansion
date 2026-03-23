@@ -162,7 +162,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 147 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	playse SE_M_DOUBLE_TEAM
 # 148 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 149 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setflag FLAG_IGRISDESERT_KOWTOW_01
 # 150 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -180,7 +180,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 156 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	delay 120
 # 157 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 159 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	clearflag FLAG_IGRIS_BEAUTY
 # 160 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -242,7 +242,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 210 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 211 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 212 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setflag FLAG_IGRIS_BEAUTY
 # 213 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -254,7 +254,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 216 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	removeobject IGRIS_TOGEPI
 # 217 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 218 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdmin_Movement_3
 # 219 "data/maps/Vulias_Igris_Desert/scripts.pory"

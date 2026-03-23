@@ -224,7 +224,7 @@ LittlerootTown_EventScript_TrainerTeachCatch01_1:
 # 165 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_2
 # 171 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 172 "data/maps/LittlerootTown/scripts.pory"
 	removeobject ZED_Sawgrass_CatchTeacher
 # 173 "data/maps/LittlerootTown/scripts.pory"
@@ -232,7 +232,7 @@ LittlerootTown_EventScript_TrainerTeachCatch01_1:
 # 174 "data/maps/LittlerootTown/scripts.pory"
 	setvar VAR_ROUTE101CATCH_PROGRESS, 1
 # 175 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 176 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end

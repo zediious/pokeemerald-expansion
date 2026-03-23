@@ -260,7 +260,7 @@ WoltiaBattleHall_TournamentBattleAfter_1:
 # 206 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitse
 # 207 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 208 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	addobject WOLTIA_TOURNEY_ORGANIZER, MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM
 # 209 "data/maps/WoltiaCity_BattleHall/scripts.pory"
