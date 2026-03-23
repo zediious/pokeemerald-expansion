@@ -209,6 +209,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
             Woltia City!")
     waitmessage
     fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(60)
     setflag(FLAG_IGRIS_BEAUTY)
     setflag(FLAG_IGRIS_TOGEPI)
     setflag(FLAG_ROUTE103_BEAUTY)
