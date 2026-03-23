@@ -105,7 +105,41 @@ script RuvelPyramid01_DoCofagrigusBattle {
     elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
         call(RuvelPyramid01_RawScript_StartMultiwild_Innape)
     }
+}
 
+// `multi_wild` has no Poryscript shorthand
+// This is called in `RuvelPyramid01_DoCofagrigusBattle`
+raw `
+RuvelPyramid01_RawScript_StartMultiwild_Pansage::
+    multi_fixed_wild PARTNER_JORDAN_PANSAGE_04
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid01_RawScript_StartMultiwild_Panpour::
+    multi_fixed_wild PARTNER_JORDAN_PANPOUR_04
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid01_RawScript_StartMultiwild_Pansear::
+    multi_fixed_wild PARTNER_JORDAN_PANSEAR_04
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid01_RawScript_StartMultiwild_Innape::
+    multi_fixed_wild PARTNER_JORDAN_INNAPE_04
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid01_RawScript_AfterMultiWildDirect::
+    switch VAR_RESULT
+	case 1, RuvelPyramid01_Cofagrigus_AfterBattle
+	goto RuvelPyramid01_Cofagrigus_Whiteout
+`
+
+// Called by raw script if battle is not successful
+script RuvelPyramid01_Cofagrigus_Whiteout {
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    special(SetCB2WhiteOut)
+}
+
+// Called by raw script if battle is successful
+script RuvelPyramid01_Cofagrigus_AfterBattle {
     lock
     clearflag(FLAG_NO_RUNNING)
     clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
@@ -142,21 +176,7 @@ script RuvelPyramid01_DoCofagrigusBattle {
     end
 }
 
-// `multi_wild` has no Poryscript shorthand
-// This is called in `RuvelPyramid01_DoCofagrigusBattle`
-raw `
-RuvelPyramid01_RawScript_StartMultiwild_Pansage::
-    multi_wild PARTNER_JORDAN_PANSAGE_04
-
-RuvelPyramid01_RawScript_StartMultiwild_Panpour::
-    multi_wild PARTNER_JORDAN_PANPOUR_04
-
-RuvelPyramid01_RawScript_StartMultiwild_Pansear::
-    multi_wild PARTNER_JORDAN_PANSEAR_04
-
-RuvelPyramid01_RawScript_StartMultiwild_Innape::
-    multi_wild PARTNER_JORDAN_INNAPE_04
-`
+//// END COFAGRIGUS PUZZLE
 
 // Spike trap
 script RuvelPyramid01_SpikeTrap {

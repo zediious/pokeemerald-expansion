@@ -124,49 +124,17 @@ RuvelPyramid01_DoCofagrigusBattle_1:
 	createmon 1, 0, SPECIES_COFAGRIGUS, 30
 # 96 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_STARTER_MON, 0
-	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_6
+	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_5
 # 99 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_STARTER_MON, 1
-	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_7
+	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_6
 # 102 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_STARTER_MON, 2
-	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_8
+	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_7
 # 105 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_STARTER_MON, 3
-	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_9
-RuvelPyramid01_DoCofagrigusBattle_5:
-# 109 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	lock
-# 110 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	clearflag FLAG_NO_RUNNING
-# 111 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	clearflag FLAG_ALWAYS_BATTLE_PARTNER
-# 112 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	delay 30
-# 113 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	msgbox RuvelPyramid01_DoCofagrigusBattle_Text_1, MSGBOX_AUTOCLOSE
-# 114 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	waitmessage
-# 117 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	goto_if_set FLAG_RUVELPYRAMID_WHICHCOFA, RuvelPyramid01_DoCofagrigusBattle_15
-# 122 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	removeobject HIDDEN_COFAGRIGUS_01
-# 123 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setmetatile 1, 7, 0x05B, 1
-# 124 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setmetatile 1, 6, 0x064, 1
-RuvelPyramid01_DoCofagrigusBattle_14:
-# 126 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	special DrawWholeMapView
-# 127 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	delay 60
-# 130 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	compare VAR_RUVELCOFAGRIGUS_FOUND, 2
-	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_19
-RuvelPyramid01_DoCofagrigusBattle_18:
-# 141 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	release
-	end
+	goto_if_eq RuvelPyramid01_DoCofagrigusBattle_8
+	return
 
 RuvelPyramid01_DoCofagrigusBattle_2:
 # 77 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
@@ -177,166 +145,227 @@ RuvelPyramid01_DoCofagrigusBattle_2:
 	setmetatile 18, 10, 0x030, 0
 	goto RuvelPyramid01_DoCofagrigusBattle_1
 
-RuvelPyramid01_DoCofagrigusBattle_6:
+RuvelPyramid01_DoCofagrigusBattle_5:
 # 97 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	call RuvelPyramid01_RawScript_StartMultiwild_Panpour
-	goto RuvelPyramid01_DoCofagrigusBattle_5
+	return
 
-RuvelPyramid01_DoCofagrigusBattle_7:
+RuvelPyramid01_DoCofagrigusBattle_6:
 # 100 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	call RuvelPyramid01_RawScript_StartMultiwild_Pansear
-	goto RuvelPyramid01_DoCofagrigusBattle_5
+	return
 
-RuvelPyramid01_DoCofagrigusBattle_8:
+RuvelPyramid01_DoCofagrigusBattle_7:
 # 103 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	call RuvelPyramid01_RawScript_StartMultiwild_Pansage
-	goto RuvelPyramid01_DoCofagrigusBattle_5
+	return
 
-RuvelPyramid01_DoCofagrigusBattle_9:
+RuvelPyramid01_DoCofagrigusBattle_8:
 # 106 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	call RuvelPyramid01_RawScript_StartMultiwild_Innape
-	goto RuvelPyramid01_DoCofagrigusBattle_5
-
-RuvelPyramid01_DoCofagrigusBattle_15:
-# 118 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	removeobject HIDDEN_COFAGRIGUS_02
-# 119 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setmetatile 18, 11, 0x05B, 1
-# 120 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setmetatile 18, 10, 0x064, 1
-	goto RuvelPyramid01_DoCofagrigusBattle_14
-
-RuvelPyramid01_DoCofagrigusBattle_19:
-# 131 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setflag FLAG_RUVELPYRAMID_COFAPUZZLE
-# 132 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	call RuvelPyramid01_RemoveBlockage
-# 133 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	playse SE_M_ROCK_THROW
-# 134 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	waitse
-# 135 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	delay 60
-# 136 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	msgbox RuvelPyramid01_DoCofagrigusBattle_Text_2
-# 138 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	waitmessage
-	goto RuvelPyramid01_DoCofagrigusBattle_18
+	return
 
 
-# 147 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 112 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 
-# 148 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 113 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_RawScript_StartMultiwild_Pansage::
-# 149 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-    multi_wild PARTNER_JORDAN_PANSAGE_04
-# 150 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 114 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    multi_fixed_wild PARTNER_JORDAN_PANSAGE_04
+# 115 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+# 116 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 
-# 151 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 117 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_RawScript_StartMultiwild_Panpour::
-# 152 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-    multi_wild PARTNER_JORDAN_PANPOUR_04
-# 153 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 118 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    multi_fixed_wild PARTNER_JORDAN_PANPOUR_04
+# 119 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+# 120 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 
-# 154 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 121 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_RawScript_StartMultiwild_Pansear::
-# 155 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-    multi_wild PARTNER_JORDAN_PANSEAR_04
-# 156 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 122 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    multi_fixed_wild PARTNER_JORDAN_PANSEAR_04
+# 123 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+# 124 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 
-# 157 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 125 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_RawScript_StartMultiwild_Innape::
+# 126 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    multi_fixed_wild PARTNER_JORDAN_INNAPE_04
+# 127 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    goto(RuvelPyramid01_RawScript_AfterMultiWildDirect)
+# 128 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+
+# 129 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+RuvelPyramid01_RawScript_AfterMultiWildDirect::
+# 130 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+    switch VAR_RESULT
+# 131 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	case 1, RuvelPyramid01_Cofagrigus_AfterBattle
+# 132 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	goto RuvelPyramid01_Cofagrigus_Whiteout
+
+RuvelPyramid01_Cofagrigus_Whiteout::
+# 137 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 138 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	special SetCB2WhiteOut
+	return
+
+
+RuvelPyramid01_Cofagrigus_AfterBattle::
+# 143 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	lock
+# 144 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	clearflag FLAG_NO_RUNNING
+# 145 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	clearflag FLAG_ALWAYS_BATTLE_PARTNER
+# 146 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	delay 30
+# 147 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	msgbox RuvelPyramid01_Cofagrigus_AfterBattle_Text_0, MSGBOX_AUTOCLOSE
+# 148 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	waitmessage
+# 151 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	goto_if_set FLAG_RUVELPYRAMID_WHICHCOFA, RuvelPyramid01_Cofagrigus_AfterBattle_2
+# 156 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	removeobject HIDDEN_COFAGRIGUS_01
+# 157 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setmetatile 1, 7, 0x05B, 1
 # 158 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-    multi_wild PARTNER_JORDAN_INNAPE_04
+	setmetatile 1, 6, 0x064, 1
+RuvelPyramid01_Cofagrigus_AfterBattle_1:
+# 160 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	special DrawWholeMapView
+# 161 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	delay 60
+# 164 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	compare VAR_RUVELCOFAGRIGUS_FOUND, 2
+	goto_if_eq RuvelPyramid01_Cofagrigus_AfterBattle_6
+RuvelPyramid01_Cofagrigus_AfterBattle_5:
+# 175 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	release
+	end
+
+RuvelPyramid01_Cofagrigus_AfterBattle_2:
+# 152 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	removeobject HIDDEN_COFAGRIGUS_02
+# 153 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setmetatile 18, 11, 0x05B, 1
+# 154 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setmetatile 18, 10, 0x064, 1
+	goto RuvelPyramid01_Cofagrigus_AfterBattle_1
+
+RuvelPyramid01_Cofagrigus_AfterBattle_6:
+# 165 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setflag FLAG_RUVELPYRAMID_COFAPUZZLE
+# 166 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	call RuvelPyramid01_RemoveBlockage
+# 167 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	playse SE_M_ROCK_THROW
+# 168 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	waitse
+# 169 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	delay 60
+# 170 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	msgbox RuvelPyramid01_Cofagrigus_AfterBattle_Text_1
+# 172 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	waitmessage
+	goto RuvelPyramid01_Cofagrigus_AfterBattle_5
+
 
 RuvelPyramid01_SpikeTrap::
-# 163 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 183 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	lock
-# 164 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 184 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	random 3
-# 165 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 185 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq RuvelPyramid01_SpikeTrap_2
-# 167 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 187 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq RuvelPyramid01_SpikeTrap_3
-# 169 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 189 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq RuvelPyramid01_SpikeTrap_4
-# 171 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 191 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq RuvelPyramid01_SpikeTrap_5
 RuvelPyramid01_SpikeTrap_1:
-# 174 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 194 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	playse SE_PIN
-# 175 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 195 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	waitse
-# 176 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 196 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	waitmovement
-# 177 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 197 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_4
-# 183 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 203 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	waitmovement
-# 184 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 204 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	warp MAP_VULIAS_RUVEL_PYRAMID_1, 12, 14
-# 185 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 205 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	release
 	end
 
 RuvelPyramid01_SpikeTrap_2:
-# 166 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 186 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_0
 	goto RuvelPyramid01_SpikeTrap_1
 
 RuvelPyramid01_SpikeTrap_3:
-# 168 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 188 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_1
 	goto RuvelPyramid01_SpikeTrap_1
 
 RuvelPyramid01_SpikeTrap_4:
-# 170 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 190 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_2
 	goto RuvelPyramid01_SpikeTrap_1
 
 RuvelPyramid01_SpikeTrap_5:
-# 172 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 192 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_3
 	goto RuvelPyramid01_SpikeTrap_1
 
 
-# 166 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 186 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_SpikeTrap_Movement_0:
-# 166 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 186 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_right
 	step_end
 
-# 168 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 188 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_SpikeTrap_Movement_1:
-# 168 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 188 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_down
 	step_end
 
-# 170 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 190 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_SpikeTrap_Movement_2:
-# 170 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 190 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_left
 	step_end
 
-# 172 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 192 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_SpikeTrap_Movement_3:
-# 172 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 192 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_up
 	step_end
 
-# 177 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 197 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RuvelPyramid01_SpikeTrap_Movement_4:
-# 178 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 198 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_in_place_down
-# 179 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 199 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_in_place_right
-# 180 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 200 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_in_place_up
-# 181 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 201 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	jump_in_place_left
 	step_end
 
@@ -350,11 +379,11 @@ RuvelPyramid01_DoCofagrigusBattle_Text_0:
 	.string "You investigate the coffin...\p"
 	.string "It's moving!$"
 
-RuvelPyramid01_DoCofagrigusBattle_Text_1:
-# 113 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+RuvelPyramid01_Cofagrigus_AfterBattle_Text_0:
+# 147 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	.string "The Cofagrigus seems to be fading away$"
 
-RuvelPyramid01_DoCofagrigusBattle_Text_2:
-# 136 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+RuvelPyramid01_Cofagrigus_AfterBattle_Text_1:
+# 170 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	.string "You hear a shifting sound throughout\n"
 	.string "the Pyramid...$"
