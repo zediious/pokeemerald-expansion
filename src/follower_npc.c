@@ -1679,8 +1679,9 @@ u32 GetFollowerNPCBattlePartner(void)
 
 bool32 IsNPCFollowerWildBattle(void)
 {
-    if (FollowerNPCIsBattlePartner() && FNPC_FLAG_PARTNER_WILD_BATTLES != 0
+    if ((FollowerNPCIsBattlePartner() && FNPC_FLAG_PARTNER_WILD_BATTLES != 0
      && (FNPC_FLAG_PARTNER_WILD_BATTLES == FNPC_ALWAYS || FlagGet(FNPC_FLAG_PARTNER_WILD_BATTLES)))
+    || FlagGet(FLAG_ALWAYS_BATTLE_PARTNER))
         return TRUE;
 
     return FALSE;

@@ -750,7 +750,7 @@
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
+#define FLAG_ALWAYS_BATTLE_PARTNER              0x2BA // Force battle partner during wild battles.
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
