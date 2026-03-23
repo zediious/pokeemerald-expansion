@@ -33,6 +33,7 @@ script JumpToRuvelPyramid {
         setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
         setflag(FLAG_GERBON_CRASH_KID)
         setflag(FLAG_GERBONSOUTH_BLOCKERS)
+        setflag(FLAG_ANGRY_KROKOROK_01)
 
         setflag(FLAG_BADGE01_GET)
         setflag(FLAG_BADGE02_GET)
