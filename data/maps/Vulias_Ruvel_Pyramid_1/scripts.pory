@@ -91,6 +91,8 @@ script RuvelPyramid01_DoCofagrigusBattle {
     // Start 2v1 battle VS Cofagrigus
     // No running
     setflag(FLAG_NO_RUNNING)
+    setflag(FLAG_NO_CATCHING)
+    setflag(FLAG_SMART_WILD_MON)
     setflag(FLAG_ALWAYS_BATTLE_PARTNER)
     createmon(1, 0, SPECIES_COFAGRIGUS, 30)
     if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
@@ -142,6 +144,8 @@ script RuvelPyramid01_Cofagrigus_Whiteout {
 script RuvelPyramid01_Cofagrigus_AfterBattle {
     lock
     clearflag(FLAG_NO_RUNNING)
+    clearflag(FLAG_NO_CATCHING)
+    clearflag(FLAG_SMART_WILD_MON)
     clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
     delay(30)
     msgbox("The Cofagrigus seems to be fading away", MSGBOX_AUTOCLOSE)

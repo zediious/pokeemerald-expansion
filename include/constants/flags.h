@@ -748,8 +748,8 @@
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
+#define FLAG_SMART_WILD_MON                     0x2B8 // Wild Pokemon become smart
+#define FLAG_NO_CATCHING                        0x2B9 // Disable catching in Wild Battles
 #define FLAG_ALWAYS_BATTLE_PARTNER              0x2BA // Force battle partner during wild battles.
 #define FLAG_NO_RUNNING                         0x2BB // Prevent running from wild battles
 
