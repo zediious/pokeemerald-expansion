@@ -164,9 +164,9 @@ AI: Basic Trainer
 Innape
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
+- Headbutt
 - Astonish
-- Leer
+- Taunt
 - Round
 
 Carkol
@@ -296,10 +296,10 @@ AI: Basic Trainer
 Innape
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Astonish
-- Leer
-- Round
+- Headbutt
+- Confusion
+- Rock Smash
+- Taunt
 
 Carkol
 Level: 22
@@ -426,12 +426,12 @@ Back Pic: Steven
 AI: Basic Trainer
 
 Innape
-Level: 23
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Astonish
-- Leer
-- Round
+- Take Down
+- Confusion
+- Rock Smash
+- Taunt
 
 Lucario
 Level: 25
