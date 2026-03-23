@@ -9607,8 +9607,8 @@
     {
       "id": "LAYOUT_VULIAS_RUVEL_PYRAMID_1",
       "name": "Vulias_Ruvel_Pyramid_1_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_PyramidInteriorPrimary",
       "secondary_tileset": "gTileset_PyramidInteriorSecondary",
       "border_filepath": "data/layouts/Vulias_Ruvel_Pyramid_1/border.bin",
