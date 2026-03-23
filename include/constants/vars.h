@@ -176,7 +176,7 @@
 #define VAR_RUSTURF_TUNNEL_STATE                         0x409A
 #define VAR_IGRIS_JORDAN02_PLAYERPOS                     0x409B // Track player pos during second jordan encounter in Igris
 #define VAR_ELITE_4_STATE                                0x409C
-#define VAR_UNUSED_0x409D                                0x409D // Unused Var
+#define VAR_RUVELCOFAGRIGUS_FOUND                        0x409D // Amount of Cofagrigus found in Ruvel Pyramid
 #define VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE      0x409E
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0

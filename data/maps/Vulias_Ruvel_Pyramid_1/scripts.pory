@@ -1,1 +1,187 @@
-mapscripts Vulias_Ruvel_Pyramid_1_MapScripts {}
+mapscripts Vulias_Ruvel_Pyramid_1_MapScripts {
+    MAP_SCRIPT_ON_RESUME: RuvelPyramid01_SetFloorState
+}
+
+// Set obects to state they should be in
+script RuvelPyramid01_SetFloorState {
+    // Replace blockage with normal tiles if puzzle done
+    if (flag(FLAG_RUVELPYRAMID_COFAPUZZLE)) {
+        goto(RuvelPyramid01_RemoveBlockage)
+    }
+    
+    // Always hide the Cofagrigus
+    setflag(FLAG_RUVELPYRAMID_COFAGRIGUS01)
+    setflag(FLAG_RUVELPYRAMID_COFAGRIGUS02)
+
+}
+
+// Remove blockages to Ruvel_Pyramid_2
+script RuvelPyramid01_RemoveBlockage {
+    setmetatile(3, 6, 0x04E, 0)
+    setmetatile(3, 5, 0x04E, 0)
+    setmetatile(18, 7, 0x04E, 0)
+    setmetatile(18, 6, 0x04E, 0)
+    setmetatile(21, 8, 0x04E, 0)
+    setmetatile(21, 7, 0x04E, 0)
+    special(DrawWholeMapView)
+}
+
+// Investigate a normal coffin
+script RuvelPyramid01_NormalCoffinInvestigate{
+    lock
+    msgbox("You investigate the coffin...
+    
+            It's securely shut.")
+    release
+    end
+}
+
+// Battle Cofagrigus 1
+script RuvelPyramid01_CofagrigusBattle01 {
+    if (!flag(FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND)) {
+        lock
+        clearflag(FLAG_RUVELPYRAMID_WHICHCOFA)
+        setflag(FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND)
+        goto(RuvelPyramid01_DoCofagrigusBattle)
+        release
+    } else {
+        goto(RuvelPyramid01_NormalCoffinInvestigate)
+    }
+    end
+}
+
+// Battle Cofagrigus 1
+script RuvelPyramid01_CofagrigusBattle02 {
+    if (!flag(FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND)) {
+        lock
+        setflag(FLAG_RUVELPYRAMID_WHICHCOFA)
+        setflag(FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND)
+        goto(RuvelPyramid01_DoCofagrigusBattle)
+        release
+    } else {
+        goto(RuvelPyramid01_NormalCoffinInvestigate)
+    }
+    end
+}
+
+// Shared battle script
+script RuvelPyramid01_DoCofagrigusBattle {
+    addvar(VAR_RUVELCOFAGRIGUS_FOUND, 1)
+    msgbox("You investigate the coffin...
+    
+            It's moving!")
+    waitmessage
+
+    // Replace sarcophagus tiles with normal wall and floor
+    if (flag(FLAG_RUVELPYRAMID_WHICHCOFA)) {
+        addobject(HIDDEN_COFAGRIGUS_02)
+        setmetatile(18, 11, 0x04E, 0)
+        setmetatile(18, 10, 0x030, 0)
+    } else {
+        addobject(HIDDEN_COFAGRIGUS_01)
+        setmetatile(1, 7, 0x04E, 0)
+        setmetatile(1, 6, 0x030, 0)
+    }
+    special(DrawWholeMapView)
+
+    playmoncry(SPECIES_COFAGRIGUS, CRY_MODE_NORMAL)
+    waitmoncry
+    delay(30)
+
+    // Start 2v1 battle VS Cofagrigus
+    // No running
+    setflag(FLAG_NO_RUNNING)
+    setflag(FLAG_ALWAYS_BATTLE_PARTNER)
+    createmon(1, 0, SPECIES_COFAGRIGUS, 30)
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        call(RuvelPyramid01_RawScript_StartMultiwild_Panpour)
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        call(RuvelPyramid01_RawScript_StartMultiwild_Pansear)
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        call(RuvelPyramid01_RawScript_StartMultiwild_Pansage)
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        call(RuvelPyramid01_RawScript_StartMultiwild_Innape)
+    }
+
+    lock
+    clearflag(FLAG_NO_RUNNING)
+    clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
+    delay(30)
+    msgbox("The Cofagrigus seems to be fading away", MSGBOX_AUTOCLOSE)
+    waitmessage
+
+    // Replace the original sarcophagus tiles and remove Cofagrigus
+    if (flag(FLAG_RUVELPYRAMID_WHICHCOFA)) {
+        removeobject(HIDDEN_COFAGRIGUS_02)
+        setmetatile(18, 11, 0x05B, 1)
+        setmetatile(18, 10, 0x064, 1)
+    } else {
+        removeobject(HIDDEN_COFAGRIGUS_01)
+        setmetatile(1, 7, 0x05B, 1)
+        setmetatile(1, 6, 0x064, 1)
+    }
+    special(DrawWholeMapView)
+    delay(60)
+
+    // Clear obstacles if second Cofagrigus defeated
+    if (var(VAR_RUVELCOFAGRIGUS_FOUND) == 2) {
+        setflag(FLAG_RUVELPYRAMID_COFAPUZZLE)
+        call(RuvelPyramid01_RemoveBlockage)
+        playse(SE_M_ROCK_THROW)
+        waitse
+        delay(60)
+        msgbox("You hear a shifting sound throughout
+                the Pyramid...")
+        waitmessage
+
+    }
+    release
+    end
+}
+
+// `multi_wild` has no Poryscript shorthand
+// This is called in `RuvelPyramid01_DoCofagrigusBattle`
+raw `
+RuvelPyramid01_RawScript_StartMultiwild_Pansage::
+    multi_wild PARTNER_JORDAN_PANSAGE_04
+
+RuvelPyramid01_RawScript_StartMultiwild_Panpour::
+    multi_wild PARTNER_JORDAN_PANPOUR_04
+
+RuvelPyramid01_RawScript_StartMultiwild_Pansear::
+    multi_wild PARTNER_JORDAN_PANSEAR_04
+
+RuvelPyramid01_RawScript_StartMultiwild_Innape::
+    multi_wild PARTNER_JORDAN_INNAPE_04
+`
+
+// Spike trap
+script RuvelPyramid01_SpikeTrap {
+    lock
+    random(3)
+    if (var(VAR_RESULT) == 0) {
+        applymovement(0xFF, moves(jump_right))
+    } elif (var(VAR_RESULT) == 1) {
+        applymovement(0xFF, moves(jump_down))
+    } elif (var(VAR_RESULT) == 2) {
+        applymovement(0xFF, moves(jump_left))
+    } elif (var(VAR_RESULT) == 3) {
+        applymovement(0xFF, moves(jump_up))
+    }
+    playse(SE_PIN)
+    waitse
+    waitmovement
+    applymovement(0xFF, moves(
+        jump_in_place_down,
+        jump_in_place_right,
+        jump_in_place_up,
+        jump_in_place_left
+    ))
+    waitmovement
+    warp(MAP_VULIAS_RUVEL_PYRAMID_1, 12, 14)
+    release
+    end
+}

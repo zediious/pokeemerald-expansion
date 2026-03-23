@@ -711,12 +711,12 @@
 #define FLAG_UNUSED_0x290  0x290 // Unused Flag
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
-#define FLAG_UNUSED_0x298  0x298 // Unused Flag
+#define FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND    0x293 // First cofagrigus found
+#define FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND    0x294 // Second cofagrigus found
+#define FLAG_RUVELPYRAMID_COFAGRIGUS01          0x295 // First cofagrigus
+#define FLAG_RUVELPYRAMID_COFAGRIGUS02          0x296 // Second cofagrigus
+#define FLAG_RUVELPYRAMID_COFAPUZZLE            0x297 // Whether Ruvel Cofagrigus puzzle is solved
+#define FLAG_RUVELPYRAMID_WHICHCOFA             0x298 // Identifies last Cofagrigus player interacted with
 #define FLAG_UNUSED_0x299  0x299 // Unused Flag
 #define FLAG_UNUSED_0x29A  0x29A // Unused Flag
 #define FLAG_UNUSED_0x29B  0x29B // Unused Flag
