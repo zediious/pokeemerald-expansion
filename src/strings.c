@@ -1306,7 +1306,7 @@ const u8 gText_SideQuestDesc_30[] = _("Description 30");
 //completed quest description
 const u8 gText_SideQuestDoneDesc_1[] = _("You have explored the Vulias region!");
 const u8 gText_SideQuestDoneDesc_2[] = _("I saved Togepi from the Igris Desert, and\ngot the Cut HM!");
-const u8 gText_SideQuestDoneDesc_3[] = _("We saved a child from a Gothorita, who had\nentranced them!");
+const u8 gText_SideQuestDoneDesc_3[] = _("We saved a child from a Gothorita, who\nhad entranced them!");
 const u8 gText_SideQuestDoneDesc_4[] = _("Completed Quest 4");
 const u8 gText_SideQuestDoneDesc_5[] = _("Completed Quest 5");
 const u8 gText_SideQuestDoneDesc_6[] = _("Completed Quest 6");
