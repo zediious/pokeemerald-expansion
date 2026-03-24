@@ -221,19 +221,19 @@ RuvelPyramid02_Gothorita_AfterBattle::
 # 139 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitse
 # 140 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 20
+	delay 5
 # 141 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	playse SE_BIKE_HOP
 # 142 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitse
 # 143 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 20
+	delay 5
 # 144 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	playse SE_BIKE_HOP
 # 145 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitse
 # 146 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 20
+	delay 5
 # 147 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	playse SE_BIKE_HOP
 # 148 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
