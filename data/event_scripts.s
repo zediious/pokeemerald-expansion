@@ -1798,3 +1798,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Ruvel_Pyramid_1/scripts.inc"
 
 	.include "data/maps/Vulias_Ruvel_Pyramid_2/scripts.inc"
+
+	.include "data/maps/Vulias_Igris_Desert_2/scripts.inc"

@@ -17,6 +17,11 @@
       "map": "MAP_VULIAS_PALENTO_VILLAGE",
       "offset": -11,
       "direction": "right"
+    },
+    {
+      "map": "MAP_VULIAS_IGRIS_DESERT_2",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [

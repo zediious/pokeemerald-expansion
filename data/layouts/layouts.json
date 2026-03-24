@@ -9623,6 +9623,16 @@
       "secondary_tileset": "gTileset_PyramidInteriorSecondary",
       "border_filepath": "data/layouts/Vulias_Ruvel_Pyramid_2/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Ruvel_Pyramid_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_DESERT_2",
+      "name": "Vulias_Igris_Desert_2_Layout",
+      "width": 66,
+      "height": 77,
+      "primary_tileset": "gTileset_DesertMain",
+      "secondary_tileset": "gTileset_DesertPyramidExt",
+      "border_filepath": "data/layouts/Vulias_Igris_Desert_2/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_Desert_2/map.bin"
     }
   ]
 }
