@@ -14,6 +14,8 @@ script RuvelPyramid02_GothoritaEncounterSaveKidTrigger {
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There's a kid! And it looks
             like there's a Pokemon with it!")
     waitmessage
+    delay(60)
+    closemessage
 
     // Gothorita sees player and goes up to them, kid hides at far end of room
     applymovement(RUVEL_GOTHORITA_01, moves(emote_exclamation_mark))
@@ -26,6 +28,7 @@ script RuvelPyramid02_GothoritaEncounterSaveKidTrigger {
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This doesn't look good...")
     waitmessage
     delay(20)
+    closemessage
     playmoncry(SPECIES_GOTHORITA, CRY_MODE_NORMAL)
     msgbox("Weeew-widi!")
     waitmessage
@@ -99,6 +102,8 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     playmoncry(SPECIES_GOTHORITA, CRY_MODE_NORMAL)
     msgbox("Weeew-widi!")
     waitmessage
+    delay(30)
+    closemessage
     waitmoncry
     applymovement(RUVEL_GOTHORITA_01, moves(
         walk_down * 2, walk_left * 2, jump_2_left, walk_fast_left * 5
@@ -116,14 +121,28 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     msgbox("The childs face changes from sadness
             from the Gothorita leaving, to horror.", MSGBOX_SIGN)
     waitmessage
+    delay(30)
+    closemessage
     msgbox("{COLOR GREEN}Missing Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wahhhhh!! Where am I!
             I want my mommy!")
+    waitmessage
+    delay(30)
+    closemessage
     applymovement(RUVEL_LOSTKID_01, moves(
         face_right, face_down, face_up, walk_fast_right * 2,
         face_down, face_left, face_up, face_right,
         jump_in_place_right, jump_in_place_down, jump_in_place_left,
         jump_in_place_up, emote_exclamation_mark
     ))
+    delay(30)
+    playse(SE_BIKE_HOP)
+    playse(SE_BIKE_HOP)
+    waitse
+    playse(SE_BIKE_HOP)
+    waitse
+    playse(SE_BIKE_HOP)
+    waitse
+    playse(SE_BIKE_HOP)
     waitmessage
     waitmovement
     delay(30)
@@ -133,6 +152,7 @@ script RuvelPyramid02_Gothorita_AfterBattle {
             my mommy!")
     waitmessage
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(jump_in_place_down))
+    playse(SE_BIKE_HOP)
     waitmovement
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Don't worry kid! We'll get you
             out of here, and to your mom!
@@ -142,7 +162,11 @@ script RuvelPyramid02_Gothorita_AfterBattle {
 
     // Jordan, Player, and Kid organize to walk out with kid in middle, start walking
     clearflag(FLAG_RUVELPYRAMIDEXT_LOSTKID)
-    setvar(VAR_ZED_STORY_TRACKER, 22)
+    clearflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3)
+    clearflag(FLAG_RUVELPYRAMIDEXT_JORDAN)
+    setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2)
+    setflag(FLAG_IGRIS_JORDAN_02)
+    setvar(VAR_ZED_STORY_TRACKER, 23)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_up * 3, walk_right, face_left))
     waitmovement
     applymovement(RUVEL_LOSTKID_01, moves(walk_right, face_left))
@@ -155,5 +179,7 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     delay(20)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left * 5))
     delay(30)
+    destroyfollowernpc
+    removeobject(RUVEL_LOSTKID_01)
     warp(MAP_VULIAS_IGRIS_DESERT, 13, 16)
 }

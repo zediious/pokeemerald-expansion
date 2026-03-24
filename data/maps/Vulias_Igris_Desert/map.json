@@ -209,7 +209,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "IgrisDesert_EVentScript_PyramidGentleman01",
+      "script": "IgrisDesert_EventScript_PyramidGentleman01",
       "flag": "FLAG_RUVELPYRAMIDEXT_GENTLEMAN"
     },
     {
@@ -239,6 +239,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_RUVELPYRAMIDEXT_LOSTKID"
+    },
+    {
+      "local_id": "IGRIS_LOSTCHILD_MOM_2",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 14,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "IgrisDesert_EventScript_DistressedMomWaiting",
+      "flag": "FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2"
+    },
+    {
+      "local_id": "IGRIS_LOSTCHILD_MOM_3",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3"
+    },
+    {
+      "local_id": "IGRIS_JORDAN_AFTERKIDSAVED",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "x": 14,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_RUVELPYRAMIDEXT_JORDAN"
     }
   ],
   "warp_events": [
@@ -396,8 +438,8 @@
       "x": 12,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
       "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft"
     },
     {
@@ -405,8 +447,8 @@
       "x": 13,
       "y": 16,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
       "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter"
     },
     {
@@ -414,8 +456,8 @@
       "x": 14,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
       "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight"
     }
   ],

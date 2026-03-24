@@ -723,9 +723,9 @@
 #define FLAG_RUVELPYRAMIDEXT_GENTLEMAN          0x29C // Gentleman who runs for help
 #define FLAG_RUVELPYRAMIDEXT_LOSTKID            0x29D // Lost kid outside after being found
 #define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM         0x29E // Mother of lost child
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
+#define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2        0x29F // Mother of lost child waiting for child to be found
+#define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3        0x2A0 // Mother of lost child after child is found
+#define FLAG_RUVELPYRAMIDEXT_JORDAN             0x2A1 // Jordan after teleported out of pyramid
 #define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
 #define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
 #define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag

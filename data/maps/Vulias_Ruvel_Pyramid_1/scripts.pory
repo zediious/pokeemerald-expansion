@@ -155,6 +155,7 @@ script RuvelPyramid01_Cofagrigus_AfterBattle {
     clearflag(FLAG_NO_CATCHING)
     clearflag(FLAG_SMART_WILD_MON)
     clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
+    special(HealPlayerParty)
     delay(30)
     msgbox("The Cofagrigus seems to be fading away", MSGBOX_AUTOCLOSE)
     waitmessage
@@ -222,7 +223,10 @@ script RuvelPyramid01_SpikeTrap {
 script RubelPyramid01_PoliceWarnTrigger {
     lock
     applymovement(RUVEL_COP_01, moves(face_right, emote_exclamation_mark))
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement
+    waitse
     delay(30)
     msgbox("{COLOR GREEN}Policeman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You! No one is allowed
             past this point!
@@ -239,7 +243,8 @@ script RubelPyramid01_PoliceWarnTrigger {
             Be careful, watch out for the spikes!
             Most of the traps deeper in the
             Pyramid are still active!")
-    setvar(VAR_ZED_STORY_TRACKER, 21)
+    waitmessage
+    setvar(VAR_ZED_STORY_TRACKER, 22)
     applymovement(RUVEL_COP_01, moves(face_down))
     release
     end

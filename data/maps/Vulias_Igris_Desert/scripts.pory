@@ -1,14 +1,19 @@
 mapscripts Vulias_Igris_Desert_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: IgrisDesert_OnTransition_SetState
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_ZED_STORY_TRACKER, 22: IgrisDesert_FoundChildWarpedOutside
+        VAR_ZED_STORY_TRACKER, 23: IgrisDesert_FoundChildWarpedOutside
     ]
 }
 
 // Hide hidden-by-defaults, etc
 script IgrisDesert_OnTransition_SetState {
-    if (var(VAR_ZED_STORY_TRACKER) < 22) {
+    if (var(VAR_ZED_STORY_TRACKER) < 23) {
         setflag(FLAG_RUVELPYRAMIDEXT_LOSTKID)
+    }
+    if (var(VAR_ZED_STORY_TRACKER) < 21) {
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2)
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3)
+        setflag(FLAG_RUVELPYRAMIDEXT_JORDAN)
     }
 }
 
@@ -507,6 +512,7 @@ script IgrisDesert_EventScript_PyramidGentleman01 {
 script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_up))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, face_up))
     waitmovement
     goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
 }
@@ -514,6 +520,7 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft {
 script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_up))
     waitmovement
     goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
 }
@@ -521,6 +528,7 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter {
 script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left, face_up))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, face_up))
     waitmovement
     goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
 }
@@ -539,16 +547,16 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
             were taken by a {COLOR RED}Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Pyramid!
             My goodness, someone please help!")
     waitmessage
-    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down * 2, walk_right, face_left))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, face_left))
     delay(20)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, walk_right, face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_left))
     waitmovement
     setobjectxy(RUVELPYRAMIDEXT_GENTLEMAN, 13, 20)
     applymovement(RUVELPYRAMIDEXT_GENTLEMAN, moves(walk_fast_up * 5))
     waitmovement
     msgbox("{COLOR GREEN}Gentleman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A lost child you say?
             I shall rush to the Pokemon Center at
-            once more assistance!")
+            once for more assistance!")
     waitmessage
     applymovement(RUVELPYRAMIDEXT_GENTLEMAN, moves(walk_fast_down * 5))
     waitmovement
@@ -565,7 +573,9 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     waitmessage
     applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_down * 3))
     waitmovement
-    setobjectmovementtype(IGRIS_LOSTCHILD_MOM, MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT)
+    removeobject(IGRIS_LOSTCHILD_MOM)
+    addobject(IGRIS_LOSTCHILD_MOM_2)
+    clearflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well, another reason to check
@@ -575,17 +585,31 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
             Let's not waste any time!")
     waitmessage
     startquest(2)
+    setvar(VAR_ZED_STORY_TRACKER, 21)
+    release
+    end
+}
+
+// Mom waiting for kid to be saved
+script IgrisDesert_EventScript_DistressedMomWaiting {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Distressed Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please don't
+            tarry, who knows what my poor child
+            could be going through right now?
+            
+            Oh no...
+            
+            The woman breaks down crying. Better
+            get a move on!")
+    waitmessage
     release
     end
 }
 
 // Player warped back out after finding the lost kid
 script IgrisDesert_FoundChildWarpedOutside {
-    setvar(VAR_ZED_STORY_TRACKER, 23)
-    fadescreenswapbuffers(FADE_TO_BLACK)
-    setobjectxy(IGRIS_LOSTCHILD_MOM, 12 ,17)
-    delay(60)
-    fadescreenswapbuffers(FADE_FROM_BLACK)
+    setvar(VAR_ZED_STORY_TRACKER, 24)
     delay(30)
     msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh thank goodness you're
             okay my sweet! I've been losing my mind
@@ -595,7 +619,7 @@ script IgrisDesert_FoundChildWarpedOutside {
             me! That mean Pokemon took me to a dark
             scary room and they saved me!")
     waitmessage
-    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_right, face_up))
+    applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_right, face_up))
     waitmovement
     msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I could never repay
             you for what you've done for me and
@@ -610,16 +634,18 @@ script IgrisDesert_FoundChildWarpedOutside {
             He put it away in his Bag.", MSGBOX_SIGN)
     waitmessage
     waitse
-    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_left, face_up))
+    applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_left, face_up))
     msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Now, come along, and stay
             very close!")
     waitmessage
     msgbox("{COLOR GREEN}Found Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Yes mommy!")
-    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_down * 9))
+    applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_down * 9))
     applymovement(IGRIS_LOSTKID_FOUND, moves(walk_down * 9))
     waitmovement
     removeobject(IGRIS_LOSTKID_FOUND)
-    removeobject(IGRIS_LOSTCHILD_MOM)
+    removeobject(IGRIS_LOSTCHILD_MOM_3)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    applymovement(IGRIS_JORDAN_AFTERKIDSAVED, moves(face_left))
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a handful! I'm glad we
             were able to save that kid. Not to
             mention, we were able to go into
@@ -635,14 +661,15 @@ script IgrisDesert_FoundChildWarpedOutside {
             Palento Village for a bit.
             
             You can go on ahead, I'll catch up!
-            See you l;ater {PLAYER}!")
+            See you later {PLAYER}!")
     waitmessage
-    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, walk_down * 9))
+    applymovement(IGRIS_JORDAN_AFTERKIDSAVED, moves(walk_down * 9))
     waitmovement
     destroyfollowernpc
     delay(30)
-    removeobject(JORDAN_IGRIS_02)
-    questupdated(0)
+    setvar(VAR_ZED_STORY_TRACKER, 24)
+    removeobject(IGRIS_JORDAN_AFTERKIDSAVED)
+    completequest(2)
     release
     end
 }

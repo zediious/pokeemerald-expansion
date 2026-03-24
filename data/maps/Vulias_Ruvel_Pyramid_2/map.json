@@ -98,7 +98,7 @@
       "y": 21,
       "elevation": 0,
       "var": "VAR_ZED_STORY_TRACKER",
-      "var_value": "21",
+      "var_value": "22",
       "script": "RuvelPyramid02_GothoritaEncounterSaveKidTrigger"
     }
   ],
