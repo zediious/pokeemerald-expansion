@@ -219,116 +219,120 @@ RuvelPyramid02_Gothorita_AfterBattle::
 # 138 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	playse SE_BIKE_HOP
 # 139 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	playse SE_BIKE_HOP
-# 140 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitse
+# 140 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	delay 20
 # 141 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	playse SE_BIKE_HOP
 # 142 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitse
 # 143 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	playse SE_BIKE_HOP
+	delay 20
 # 144 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitse
+	playse SE_BIKE_HOP
 # 145 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	playse SE_BIKE_HOP
+	waitse
 # 146 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmessage
+	delay 20
 # 147 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmovement
-# 148 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 30
-# 149 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement RUVEL_LOSTKID_01, RuvelPyramid02_Gothorita_AfterBattle_Movement_3
-# 150 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmovement
-# 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	msgbox RuvelPyramid02_Gothorita_AfterBattle_Text_2
-# 153 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmessage
-# 154 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_Gothorita_AfterBattle_Movement_4
-# 155 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	playse SE_BIKE_HOP
-# 156 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmovement
-# 157 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	msgbox RuvelPyramid02_Gothorita_AfterBattle_Text_3
-# 161 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 148 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmessage
-# 164 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKID
-# 165 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3
-# 166 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	clearflag FLAG_RUVELPYRAMIDEXT_JORDAN
-# 167 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
-# 168 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	setflag FLAG_IGRIS_JORDAN_02
-# 169 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 23
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_Gothorita_AfterBattle_Movement_5
-# 171 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 149 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmovement
+# 150 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	delay 30
+# 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	applymovement RUVEL_LOSTKID_01, RuvelPyramid02_Gothorita_AfterBattle_Movement_3
+# 152 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmovement
+# 153 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	msgbox RuvelPyramid02_Gothorita_AfterBattle_Text_2
+# 155 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmessage
+# 156 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_Gothorita_AfterBattle_Movement_4
+# 157 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	playse SE_BIKE_HOP
+# 158 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmovement
+# 159 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	msgbox RuvelPyramid02_Gothorita_AfterBattle_Text_3
+# 163 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmessage
+# 166 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKID
+# 167 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3
+# 168 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	clearflag FLAG_RUVELPYRAMIDEXT_JORDAN
+# 169 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
+# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	setflag FLAG_IGRIS_JORDAN_02
+# 171 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 23
 # 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement RUVEL_LOSTKID_01, RuvelPyramid02_Gothorita_AfterBattle_Movement_6
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_Gothorita_AfterBattle_Movement_5
 # 173 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmovement
 # 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_Gothorita_AfterBattle_Movement_7
+	applymovement RUVEL_LOSTKID_01, RuvelPyramid02_Gothorita_AfterBattle_Movement_6
 # 175 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmovement
 # 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement RUVEL_LOSTKID_01, RuvelPyramid02_Gothorita_AfterBattle_Movement_8
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_Gothorita_AfterBattle_Movement_7
 # 177 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 20
+	waitmovement
 # 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_Gothorita_AfterBattle_Movement_9
+	applymovement RUVEL_LOSTKID_01, RuvelPyramid02_Gothorita_AfterBattle_Movement_8
 # 179 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	delay 20
 # 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_Gothorita_AfterBattle_Movement_10
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_Gothorita_AfterBattle_Movement_9
 # 181 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 30
+	delay 20
 # 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	destroyfollowernpc
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_Gothorita_AfterBattle_Movement_10
 # 183 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	removeobject RUVEL_LOSTKID_01
+	delay 30
 # 184 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	destroyfollowernpc
+# 185 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	removeobject RUVEL_LOSTKID_01
+# 186 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DESERT, 13, 16
 	return
 
 
 RuvelPyramid02_CatchableCofagrigusEncounter::
-# 189 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	lock
-# 190 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	msgbox RuvelPyramid02_CatchableCofagrigusEncounter_Text_0, MSGBOX_SIGN
 # 191 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmessage
+	lock
 # 192 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	closemessage
+	msgbox RuvelPyramid02_CatchableCofagrigusEncounter_Text_0, MSGBOX_SIGN
 # 193 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 60
+	waitmessage
 # 194 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	setflag FLAG_SMART_WILD_MON
+	closemessage
 # 195 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	playmoncry SPECIES_COFAGRIGUS, CRY_MODE_NORMAL
+	delay 60
 # 196 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmoncry
+	setflag FLAG_SMART_WILD_MON
 # 197 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 30
+	playmoncry SPECIES_COFAGRIGUS, CRY_MODE_NORMAL
+# 198 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmoncry
 # 199 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	delay 30
+# 201 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	createmon 1, 0, SPECIES_COFAGRIGUS, 30, ITEM_SPELL_TAG, hpIv = 31, atkIv = 0, defIv = 31, speedIv = 0, spAtkIv = 31, spDefIv = 0
-# 202 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	dowildbattle
-# 203 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	removeobject RUVEL_CATCHABLE_COFA
 # 204 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	clearflag FLAG_SMART_WILD_MON
+	dowildbattle
 # 205 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	removeobject RUVEL_CATCHABLE_COFA
+# 206 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	clearflag FLAG_SMART_WILD_MON
+# 207 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	release
 	end
 
@@ -433,99 +437,99 @@ RuvelPyramid02_Gothorita_AfterBattle_Movement_2:
 	emote_exclamation_mark
 	step_end
 
-# 149 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_3:
-# 149 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_fast_up
-# 149 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 154 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 156 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_4:
-# 154 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 156 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	jump_in_place_down
 	step_end
 
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_5:
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_right
-# 170 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	face_left
 	step_end
 
-# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_6:
-# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_right
-# 172 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	face_left
 	step_end
 
-# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_7:
-# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_down
-# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_down
-# 174 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	face_up
 	step_end
 
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_8:
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_left
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 176 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
 	step_end
 
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_9:
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
-# 178 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_up
 	step_end
 
-# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_Gothorita_AfterBattle_Movement_10:
-# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_left
-# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_left
-# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_left
-# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_left
-# 180 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 182 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	walk_left
 	step_end
 
@@ -553,16 +557,16 @@ RuvelPyramid02_Gothorita_AfterBattle_Text_1:
 	.string "I want my mommy!$"
 
 RuvelPyramid02_Gothorita_AfterBattle_Text_2:
-# 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 153 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	.string "{COLOR GREEN}Missing Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please bring me to\n"
 	.string "my mommy!$"
 
 RuvelPyramid02_Gothorita_AfterBattle_Text_3:
-# 157 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 159 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Don't worry kid! We'll get you\n"
 	.string "out of here, and to your mom!\p"
 	.string "Stay between us!$"
 
 RuvelPyramid02_CatchableCofagrigusEncounter_Text_0:
-# 190 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 192 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	.string "The Cofagrigus eyes you steadily...$"

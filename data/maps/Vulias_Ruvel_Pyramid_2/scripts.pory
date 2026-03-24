@@ -136,12 +136,14 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     ))
     delay(30)
     playse(SE_BIKE_HOP)
+    waitse
+    delay(20)
     playse(SE_BIKE_HOP)
     waitse
+    delay(20)
     playse(SE_BIKE_HOP)
     waitse
-    playse(SE_BIKE_HOP)
-    waitse
+    delay(20)
     playse(SE_BIKE_HOP)
     waitmessage
     waitmovement
