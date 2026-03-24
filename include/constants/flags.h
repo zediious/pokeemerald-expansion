@@ -717,12 +717,12 @@
 #define FLAG_RUVELPYRAMID_COFAGRIGUS02          0x296 // Second cofagrigus
 #define FLAG_RUVELPYRAMID_COFAPUZZLE            0x297 // Whether Ruvel Cofagrigus puzzle is solved
 #define FLAG_RUVELPYRAMID_WHICHCOFA             0x298 // Identifies last Cofagrigus player interacted with
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
+#define FLAG_RUVELPYRAMID_GOTHORITA01           0x299 // First Gothorita encounter in Ruvel Pyramid
+#define FLAG_RUVELPYRAMID_LOSTKID01             0x29A // Lost kid in Ruvel Pyramid inside
 #define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
+#define FLAG_RUVELPYRAMIDEXT_GENTLEMAN          0x29C // Gentleman who runs for help
+#define FLAG_RUVELPYRAMIDEXT_LOSTKID            0x29D // Lost kid outside after being found
+#define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM         0x29E // Mother of lost child
 #define FLAG_UNUSED_0x29F  0x29F // Unused Flag
 #define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
 #define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag

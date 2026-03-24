@@ -197,6 +197,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IgrisDesert_EventScript_SpeakJordanBecomeFollower02",
       "flag": "FLAG_IGRIS_JORDAN_02"
+    },
+    {
+      "local_id": "RUVELPYRAMIDEXT_GENTLEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 15,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "IgrisDesert_EVentScript_PyramidGentleman01",
+      "flag": "FLAG_RUVELPYRAMIDEXT_GENTLEMAN"
+    },
+    {
+      "local_id": "IGRIS_LOSTCHILD_MOM",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM"
+    },
+    {
+      "local_id": "IGRIS_LOSTKID_FOUND",
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 12,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_RUVELPYRAMIDEXT_LOSTKID"
     }
   ],
   "warp_events": [
@@ -348,6 +390,33 @@
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "20",
       "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight"
     }
   ],
   "bg_events": [

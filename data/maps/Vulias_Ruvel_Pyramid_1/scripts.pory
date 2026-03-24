@@ -72,17 +72,21 @@ script RuvelPyramid01_DoCofagrigusBattle {
             It's moving!")
     waitmessage
 
-    // Replace sarcophagus tiles with normal wall and floor
+    // Replace sarcophagus tiles with normal wall and floor and emote
+    // the Cofagrigus
     if (flag(FLAG_RUVELPYRAMID_WHICHCOFA)) {
         addobject(HIDDEN_COFAGRIGUS_02)
         setmetatile(18, 11, 0x04E, 0)
         setmetatile(18, 10, 0x030, 0)
+        special(DrawWholeMapView)
+        applymovement(HIDDEN_COFAGRIGUS_02, moves(walk_in_place_fast_down * 3, jump_in_place_down))
     } else {
         addobject(HIDDEN_COFAGRIGUS_01)
         setmetatile(1, 7, 0x04E, 0)
         setmetatile(1, 6, 0x030, 0)
+        special(DrawWholeMapView)
+        applymovement(HIDDEN_COFAGRIGUS_01, moves(walk_in_place_fast_down * 3, jump_in_place_down))
     }
-    special(DrawWholeMapView)
 
     playmoncry(SPECIES_COFAGRIGUS, CRY_MODE_NORMAL)
     waitmoncry
@@ -109,7 +113,7 @@ script RuvelPyramid01_DoCofagrigusBattle {
     }
 }
 
-// `multi_wild` has no Poryscript shorthand
+// `multi_fixed_wild` has no Poryscript shorthand
 // This is called in `RuvelPyramid01_DoCofagrigusBattle`
 raw `
 RuvelPyramid01_RawScript_StartMultiwild_Pansage::
@@ -136,6 +140,10 @@ RuvelPyramid01_RawScript_AfterMultiWildDirect::
 
 // Called by raw script if battle is not successful
 script RuvelPyramid01_Cofagrigus_Whiteout {
+    clearflag(FLAG_NO_RUNNING)
+    clearflag(FLAG_NO_CATCHING)
+    clearflag(FLAG_SMART_WILD_MON)
+    clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
     fadescreenswapbuffers(FADE_TO_BLACK)
     special(SetCB2WhiteOut)
 }
@@ -206,6 +214,45 @@ script RuvelPyramid01_SpikeTrap {
     ))
     waitmovement
     warp(MAP_VULIAS_RUVEL_PYRAMID_1, 12, 14)
+    release
+    end
+}
+
+// Police warning player as they pass into dangerous area
+script RubelPyramid01_PoliceWarnTrigger {
+    lock
+    applymovement(RUVEL_COP_01, moves(face_right, emote_exclamation_mark))
+    waitmovement
+    delay(30)
+    msgbox("{COLOR GREEN}Policeman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You! No one is allowed
+            past this point!
+            
+            ...
+            
+            Ah, you're helping to find the child?
+            I've been standing watch to see if we
+            see the {COLOR RED}Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} that ran off with the
+            kid, but no one actually saw what it
+            looks like. I've radioed in for more
+            support already.
+            
+            Be careful, watch out for the spikes!
+            Most of the traps deeper in the
+            Pyramid are still active!")
+    setvar(VAR_ZED_STORY_TRACKER, 21)
+    applymovement(RUVEL_COP_01, moves(face_down))
+    release
+    end
+}
+
+// Talk to police after warning
+script RubelPyramid01_PoliceTalk {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Policewoman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Remember, watch out for
+            the spikes! You'll need to come back
+            here for medical assistance if you
+            do end up getting stuck by one!")
     release
     end
 }

@@ -1,4 +1,16 @@
-mapscripts Vulias_Igris_Desert_MapScripts {}
+mapscripts Vulias_Igris_Desert_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: IgrisDesert_OnTransition_SetState
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ZED_STORY_TRACKER, 22: IgrisDesert_FoundChildWarpedOutside
+    ]
+}
+
+// Hide hidden-by-defaults, etc
+script IgrisDesert_OnTransition_SetState {
+    if (var(VAR_ZED_STORY_TRACKER) < 22) {
+        setflag(FLAG_RUBELPYRAMIDEXT_LOSTKID)
+    }
+}
 
 // Signs and Items
 
@@ -478,3 +490,159 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveSouth {
     end
 }
 
+// Gentleman near Pyramid
+script IgrisDesert_EventScript_PyramidGentleman01 {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Gentleman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}What a distinguished
+            landmark this is! Why, I simply must
+            spend as much time here as I can!")
+    waitmessage
+    release
+    end
+}
+
+// Below two trigger `IgrisDesert_EventScript_MotherRunningOutPyramid` if player
+// approached from the side
+script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft {
+    lock
+    applymovement(0xFF, moves(walk_right, face_up))
+    waitmovement
+    goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
+}
+
+script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter {
+    lock
+    applymovement(0xFF, moves(walk_up))
+    waitmovement
+    goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
+}
+
+script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight {
+    lock
+    applymovement(0xFF, moves(walk_left, face_up))
+    waitmovement
+    goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
+}
+
+// Trigger mother running out of Pyramid
+script IgrisDesert_EventScript_MotherRunningOutPyramid {
+    lock
+    applymovement(0xFF, moves(emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_faster_down * 5, walk_in_place_fast_down))
+    waitmovement
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(emote_exclamation_mark))
+    delay(60)
+    msgbox("{COLOR GREEN}Distressed Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My little girl! They
+            were taken by a {COLOR RED}Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Pyramid!
+            My goodness, someone please help!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down * 2, walk_right, face_left))
+    delay(20)
+    applymovement(0xFF, moves(walk_down, walk_right, face_left))
+    waitmovement
+    setobjectxy(RUVELPYRAMIDEXT_GENTLEMAN, 13, 20)
+    applymovement(RUVELPYRAMIDEXT_GENTLEMAN, moves(walk_fast_up * 5))
+    waitmovement
+    msgbox("{COLOR GREEN}Gentleman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A lost child you say?
+            I shall rush to the Pokemon Center at
+            once more assistance!")
+    waitmessage
+    applymovement(RUVELPYRAMIDEXT_GENTLEMAN, moves(walk_fast_down * 5))
+    waitmovement
+    removeobject(RUVELPYRAMIDEXT_GENTLEMAN)
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_faster_down, face_right))
+    waitmovement
+    msgbox("{COLOR GREEN}Distressed Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please, try to find
+            my little girl! She was taken into the
+            closed off areas of the Pyramid by an
+            unknown Pokemon!
+            
+            There are all manner of deadly traps
+            within...oh my poor child!")
+    waitmessage
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_down * 3))
+    waitmovement
+    setobjectmovementtype(IGRIS_LOSTCHILD_MOM, MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT)
+    applymovement(0xFF, moves(face_down))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well, another reason to check
+            out the Pyramid! Although, I suppose
+            saving a child does come first.
+            
+            Let's not waste any time!")
+    waitmessage
+    startquest(2)
+    release
+    end
+}
+
+// Player warped back out after finding the lost kid
+script IgrisDesert_FoundChildWarpedOutside {
+    setvar(VAR_ZED_STORY_TRACKER, 23)
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    setobjectxy(IGRIS_LOSTCHILD_MOM, 12 ,17)
+    delay(60)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    delay(30)
+    msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh thank goodness you're
+            okay my sweet! I've been losing my mind
+            over you!")
+    waitmessage
+    msgbox("{COLOR GREEN}Found Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Those nice people saved
+            me! That mean Pokemon took me to a dark
+            scary room and they saved me!")
+    waitmessage
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_right, face_up))
+    waitmovement
+    msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I could never repay
+            you for what you've done for me and
+            my child. The least I can do is give
+            you each one of these")
+    waitmessage
+    giveitem(ITEM_NUGGET, 1)
+    waitmessage
+    playse(MUS_OBTAIN_ITEM)
+    msgbox("Jordan recieved a Nugget!
+    
+            He put it away in his Bag.", MSGBOX_SIGN)
+    waitmessage
+    waitse
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_left, face_up))
+    msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Now, come along, and stay
+            very close!")
+    waitmessage
+    msgbox("{COLOR GREEN}Found Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Yes mommy!")
+    applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_down * 9))
+    applymovement(IGRIS_LOSTKID_FOUND, moves(walk_down * 9))
+    waitmovement
+    removeobject(IGRIS_LOSTKID_FOUND)
+    removeobject(IGRIS_LOSTCHILD_MOM)
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a handful! I'm glad we
+            were able to save that kid. Not to
+            mention, we were able to go into
+            the forbidden areas of the
+            Pyramid!
+            
+            I wonder if they will let us go back
+            in now?
+            
+            Well, I think I've had enough
+            Pyramid spelunking for today, I'm
+            going to go rest up at
+            Palento Village for a bit.
+            
+            You can go on ahead, I'll catch up!
+            See you l;ater {PLAYER}!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, walk_down * 9))
+    waitmovement
+    destroyfollowernpc
+    delay(30)
+    removeobject(JORDAN_IGRIS_02)
+    questupdated(0)
+    release
+    end
+}

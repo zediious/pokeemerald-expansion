@@ -9613,6 +9613,16 @@
       "secondary_tileset": "gTileset_PyramidInteriorSecondary",
       "border_filepath": "data/layouts/Vulias_Ruvel_Pyramid_1/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Ruvel_Pyramid_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_RUVEL_PYRAMID_2",
+      "name": "Vulias_Ruvel_Pyramid_2_Layout",
+      "width": 40,
+      "height": 35,
+      "primary_tileset": "gTileset_PyramidInteriorPrimary",
+      "secondary_tileset": "gTileset_PyramidInteriorSecondary",
+      "border_filepath": "data/layouts/Vulias_Ruvel_Pyramid_2/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Ruvel_Pyramid_2/map.bin"
     }
   ]
 }

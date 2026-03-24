@@ -1,0 +1,159 @@
+mapscripts Vulias_Ruvel_Pyramid_2_MapScripts {}
+
+// Player triggers Gothorita encounter to save kid
+script RuvelPyramid02_GothoritaEncounterSaveKidTrigger {
+    lock
+
+    // Player and Jordan see kid and Gothorita
+    applymovement(0xFF, moves(emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    waitmovement
+    waitse
+    delay(30)
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There's a kid! And it looks
+            like there's a Pokemon with it!")
+    waitmessage
+
+    // Gothorita sees player and goes up to them, kid hides at far end of room
+    applymovement(RUVEL_GOTHORITA_01, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    waitmovement
+    waitse
+    applymovement(RUVEL_GOTHORITA_01, moves(walk_up * 3))
+    applymovement(RUVEL_LOSTKID_01, moves(walk_down, walk_left, face_up))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This doesn't look good...")
+    waitmessage
+    delay(20)
+    playmoncry(SPECIES_GOTHORITA, CRY_MODE_NORMAL)
+    msgbox("Weeew-widi!")
+    waitmessage
+    waitmoncry
+
+    // Start battle with Gothorita, Jordan helps
+    setflag(FLAG_NO_RUNNING)
+    setflag(FLAG_NO_CATCHING)
+    setflag(FLAG_SMART_WILD_MON)
+    setflag(FLAG_ALWAYS_BATTLE_PARTNER)
+    createmon(1, 0, SPECIES_GOTHORITA, 32)
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        call(RuvelPyramid02_RawScript_StartMultiwild_Panpour)
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        call(RuvelPyramid02_RawScript_StartMultiwild_Pansear)
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        call(RuvelPyramid02_RawScript_StartMultiwild_Pansage)
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innape
+        call(RuvelPyramid02_RawScript_StartMultiwild_Innape)
+    }
+}
+
+// `multi_fixed_wild` has no Poryscript shorthand
+// This is called in `RuvelPyramid02_GothoritaEncounterSaveKidTrigger`
+raw `
+RuvelPyramid02_RawScript_StartMultiwild_Pansage::
+    multi_fixed_wild PARTNER_JORDAN_PANSAGE_04
+    goto(RuvelPyramid02_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid02_RawScript_StartMultiwild_Panpour::
+    multi_fixed_wild PARTNER_JORDAN_PANPOUR_04
+    goto(RuvelPyramid02_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid02_RawScript_StartMultiwild_Pansear::
+    multi_fixed_wild PARTNER_JORDAN_PANSEAR_04
+    goto(RuvelPyramid02_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid02_RawScript_StartMultiwild_Innape::
+    multi_fixed_wild PARTNER_JORDAN_INNAPE_04
+    goto(RuvelPyramid02_RawScript_AfterMultiWildDirect)
+
+RuvelPyramid02_RawScript_AfterMultiWildDirect::
+    switch VAR_RESULT
+	case 1, RuvelPyramid02_Gothorita_AfterBattle
+	goto RuvelPyramid02_Gothorita_Whiteout
+`
+
+// Called by raw script if battle is not successful
+script RuvelPyramid02_Gothorita_Whiteout {
+    clearflag(FLAG_NO_RUNNING)
+    clearflag(FLAG_NO_CATCHING)
+    clearflag(FLAG_SMART_WILD_MON)
+    clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    special(SetCB2WhiteOut)
+}
+
+// Called by raw script if battle is successful
+script RuvelPyramid02_Gothorita_AfterBattle {
+    clearflag(FLAG_NO_RUNNING)
+    clearflag(FLAG_NO_CATCHING)
+    clearflag(FLAG_SMART_WILD_MON)
+    clearflag(FLAG_ALWAYS_BATTLE_PARTNER)
+    delay(30)
+    
+    // Gothorita hops over left boulder and runs out of view
+    // Kid is unhappy about this in entranced state
+    playmoncry(SPECIES_GOTHORITA, CRY_MODE_NORMAL)
+    msgbox("Weeew-widi!")
+    waitmessage
+    waitmoncry
+    applymovement(RUVEL_GOTHORITA_01, moves(
+        walk_down * 2, walk_left * 2, jump_2_left, walk_fast_left * 5
+    ))
+    delay(60)
+    applymovement(RUVEL_LOSTKID_01, moves(
+        walk_up * 2, walk_left * 2, jump_in_place_left * 3
+    ))
+    waitmovement(RUVEL_GOTHORITA_01)
+    removeobject(RUVEL_GOTHORITA_01)
+    waitmovement(RUVEL_LOSTKID_01)
+    delay(60)
+
+    // Kid is released from trance
+    msgbox("The childs face changes from sadness
+            from the Gothorita leaving, to horror.", MSGBOX_SIGN)
+    waitmessage
+    msgbox("{COLOR GREEN}Missing Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wahhhhh!! Where am I!
+            I want my mommy!")
+    applymovement(RUVEL_LOSTKID_01, moves(
+        face_right, face_down, face_up, walk_fast_right * 2,
+        face_down, face_left, face_up, face_right,
+        jump_in_place_right, jump_in_place_down, jump_in_place_left,
+        jump_in_place_up, emote_exclamation_mark
+    ))
+    waitmessage
+    waitmovement
+    delay(30)
+    applymovement(RUVEL_LOSTKID_01, moves(walk_fast_up * 2))
+    waitmovement
+    msgbox("{COLOR GREEN}Missing Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please bring me to
+            my mommy!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(jump_in_place_down))
+    waitmovement
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Don't worry kid! We'll get you
+            out of here, and to your mom!
+            
+            Stay between us!")
+    waitmessage
+
+    // Jordan, Player, and Kid organize to walk out with kid in middle, start walking
+    clearflag(FLAG_RUBELPYRAMIDEXT_LOSTKID)
+    setvar(VAR_ZED_STORY_TRACKER, 22)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_up * 3, walk_right, face_left))
+    waitmovement
+    applymovement(RUVEL_LOSTKID_01, moves(walk_right, face_left))
+    waitmovement
+    applymovement(0xFF, moves(walk_down * 2, face_up))
+    waitmovement
+    applymovement(RUVEL_LOSTKID_01, moves(walk_left, walk_up * 5))
+    delay(20)
+    applymovement(0xFF, moves(walk_up * 8))
+    delay(20)
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left * 5))
+    delay(30)
+    warp(MAP_VULIAS_IGRIS_DESERT, 13, 16)
+}
