@@ -37347,64 +37347,64 @@
             "encounter_rate": 7,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 24,
+                "max_level": 25,
+                "species": "SPECIES_RHYHORN"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 24,
+                "max_level": 25,
+                "species": "SPECIES_TRAPINCH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 24,
+                "max_level": 25,
+                "species": "SPECIES_DIGLETT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SANDILE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 25,
+                "max_level": 26,
+                "species": "SPECIES_LYCANROC"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 25,
+                "max_level": 26,
+                "species": "SPECIES_CACNEA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 26,
+                "max_level": 26,
+                "species": "SPECIES_GLIGAR"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 26,
+                "max_level": 27,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 26,
+                "max_level": 27,
+                "species": "SPECIES_DONPHAN"
+              },
+              {
+                "min_level": 26,
+                "max_level": 27,
+                "species": "SPECIES_GIBLE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
                 "species": "SPECIES_KROKOROK"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
               }
             ]
           }
@@ -37416,64 +37416,64 @@
             "encounter_rate": 7,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
                 "species": "SPECIES_BALTOY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_SANDYGAST"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
                 "species": "SPECIES_BALTOY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 25,
+                "max_level": 25,
                 "species": "SPECIES_BALTOY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_SANDYGAST"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
                 "species": "SPECIES_BALTOY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 25,
+                "max_level": 25,
                 "species": "SPECIES_BALTOY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 25,
+                "max_level": 25,
                 "species": "SPECIES_BALTOY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BALTOY"
+                "min_level": 27,
+                "max_level": 27,
+                "species": "SPECIES_HONEDGE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BALTOY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BALTOY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BALTOY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BALTOY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BALTOY"
+                "min_level": 27,
+                "max_level": 27,
+                "species": "SPECIES_YAMASK"
               }
             ]
           }
