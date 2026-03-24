@@ -98,7 +98,7 @@ Route101_EventScript_TrainerTeachLesson::
 # 74 "data/maps/Route101/scripts.pory"
 	delay 60
 # 75 "data/maps/Route101/scripts.pory"
-	applymovement 0xFF, PlayerMovePlayerOnRight
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerMovePlayerOnRight
 # 76 "data/maps/Route101/scripts.pory"
 	waitmovement
 Route101_EventScript_TrainerTeachLesson_1:
@@ -125,7 +125,7 @@ Route101_EventScript_TrainerTeachLesson_1:
 # 90 "data/maps/Route101/scripts.pory"
 	applymovement ZED_Route101_CatchTeacher, Route101_EventScript_TrainerTeachLesson_Movement_0
 # 91 "data/maps/Route101/scripts.pory"
-	applymovement 0xFF, PlayerMoveInCircles
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerMoveInCircles
 # 92 "data/maps/Route101/scripts.pory"
 	waitmovement
 # 93 "data/maps/Route101/scripts.pory"
@@ -139,7 +139,7 @@ Route101_EventScript_TrainerTeachLesson_1:
 # 97 "data/maps/Route101/scripts.pory"
 	waitmovement
 # 98 "data/maps/Route101/scripts.pory"
-	applymovement 0xFF, Route101_EventScript_TrainerTeachLesson_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_EventScript_TrainerTeachLesson_Movement_1
 # 99 "data/maps/Route101/scripts.pory"
 	getpartysize
 # 100 "data/maps/Route101/scripts.pory"
@@ -164,7 +164,7 @@ Route101_EventScript_TrainerTeachLesson_2:
 # 62 "data/maps/Route101/scripts.pory"
 	delay 60
 # 63 "data/maps/Route101/scripts.pory"
-	applymovement 0xFF, PlayerMovePlayerOnLeft
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerMovePlayerOnLeft
 # 64 "data/maps/Route101/scripts.pory"
 	waitmovement
 	goto Route101_EventScript_TrainerTeachLesson_1
@@ -175,7 +175,7 @@ Route101_EventScript_TrainerTeachLesson_3:
 # 68 "data/maps/Route101/scripts.pory"
 	delay 60
 # 69 "data/maps/Route101/scripts.pory"
-	applymovement 0xFF, PlayerMovePlayerOnBottom
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerMovePlayerOnBottom
 # 70 "data/maps/Route101/scripts.pory"
 	waitmovement
 	goto Route101_EventScript_TrainerTeachLesson_1

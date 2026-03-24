@@ -309,7 +309,7 @@ script MullenCave_EventScript_NoLeaveWhileFollower {
         msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's try to make it to the
                 exit! No use going back now!")
         waitmessage
-        applymovement(0xFF, moves(walk_up))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
         waitmovement
         release
     }
@@ -321,7 +321,7 @@ script MullenCave_EventScript_JordanLeaveAtEnd {
     checkfollowernpc
     if (var(VAR_RESULT) == YES) {
         lock
-        applymovement(0xFF, moves(face_up))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
         waitmovement
         msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Looks like this is the end!
                 sure was a bit more difficult than the

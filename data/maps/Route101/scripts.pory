@@ -60,19 +60,19 @@ script Route101_EventScript_TrainerTeachLesson{
     if (var(VAR_ROUTE101CATCH_PLAYERPOSITION) == 0){
         applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnLeft)
         delay(60)
-        applymovement(0xFF, PlayerMovePlayerOnLeft)
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMovePlayerOnLeft)
         waitmovement
     }
     elif (var(VAR_ROUTE101CATCH_PLAYERPOSITION) == 1) {
         applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown)
         delay(60)
-        applymovement(0xFF, PlayerMovePlayerOnBottom)
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMovePlayerOnBottom)
         waitmovement
     }
     else {
         applymovement(ZED_Route101_CatchTeacher, TrainerMovePlayerOnRightOrDown)
         delay(60)
-        applymovement(0xFF, PlayerMovePlayerOnRight)
+        applymovement(OBJ_EVENT_ID_PLAYER, PlayerMovePlayerOnRight)
         waitmovement
     }
 
@@ -88,14 +88,14 @@ script Route101_EventScript_TrainerTeachLesson{
     waitmessage
     closemessage
     applymovement(ZED_Route101_CatchTeacher, moves(face_up))
-    applymovement(0xFF, PlayerMoveInCircles)
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveInCircles)
     waitmovement
     setwildbattle(SPECIES_WURMPLE, 2)
     dowildbattle
     lock
     applymovement(ZED_Route101_CatchTeacher, TrainerMoveToPlayer)
     waitmovement
-    applymovement(0xFF, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     getpartysize
     if (var(VAR_RESULT) > VAR_ROUTE101CATCH_PARTYSIZE) {
         msgbox("Awesome, you caught it! Keep at it, and

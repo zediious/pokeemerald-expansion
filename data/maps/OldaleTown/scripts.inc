@@ -317,7 +317,7 @@ GerbonTownBattleHall_OutdoorBattleStart::
 # 198 "data/maps/OldaleTown/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 3
 # 199 "data/maps/OldaleTown/scripts.pory"
-	applymovement 0xFF, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_EventScript_BlockingBattleScene_Movement_1
 # 200 "data/maps/OldaleTown/scripts.pory"
 	waitmovement
 # 201 "data/maps/OldaleTown/scripts.pory"
@@ -370,7 +370,7 @@ GerbonTown_OutdoorBattleEnd::
 # 256 "data/maps/OldaleTown/scripts.pory"
 	faceplayer
 # 257 "data/maps/OldaleTown/scripts.pory"
-	applymovement 0xFF, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_EventScript_BlockingBattleScene_Movement_1
 # 258 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_OutdoorBattleEnd_Text_0
 # 284 "data/maps/OldaleTown/scripts.pory"

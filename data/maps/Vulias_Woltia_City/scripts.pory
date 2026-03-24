@@ -27,7 +27,7 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter {
     lock
     applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(emote_exclamation_mark, face_right))
     delay(20)
-    applymovement(0xFF, moves(walk_down, face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, face_left))
     waitmovement
     goto(WoltiaCity_EventScript_JordanTriggerOldRuinVisit)
 }
@@ -112,7 +112,7 @@ script WoltiaCity_EventScript_NoLeaveWhileFollower {
                 It's just to right of the giant building
                 on the north side of the city!")
         waitmessage
-        applymovement(0xFF, moves(walk_up))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
         waitmovement
         release
     }
@@ -130,7 +130,7 @@ script WoltiaCity_EventScript_NoLeaveWhileFollowerSouth {
                 It's just to right of the giant building
                 on the north side of the city!")
         waitmessage
-        applymovement(0xFF, moves(walk_down))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
         waitmovement
         release
     }
@@ -142,7 +142,7 @@ script WoltiaCity_JordanGoToIgris {
     setvar(VAR_ZED_STORY_TRACKER, 19)
     lock
     applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(face_right))
-    applymovement(0xFF, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You did it again {PLAYER}!
             I've just got to keep getting stronger

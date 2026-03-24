@@ -195,18 +195,18 @@ script RuvelPyramid01_SpikeTrap {
     lock
     random(3)
     if (var(VAR_RESULT) == 0) {
-        applymovement(0xFF, moves(jump_right))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_right))
     } elif (var(VAR_RESULT) == 1) {
-        applymovement(0xFF, moves(jump_down))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_down))
     } elif (var(VAR_RESULT) == 2) {
-        applymovement(0xFF, moves(jump_left))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_left))
     } elif (var(VAR_RESULT) == 3) {
-        applymovement(0xFF, moves(jump_up))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_up))
     }
     playse(SE_PIN)
     waitse
     waitmovement
-    applymovement(0xFF, moves(
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
         jump_in_place_down,
         jump_in_place_right,
         jump_in_place_up,

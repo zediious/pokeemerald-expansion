@@ -17,7 +17,7 @@ SawgrassForest_MapScript_OnFrameMakeJordanFollower::
 # 11 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setobjectxy SAWGRASSFOREST_JORDAN_01, 5, 4
 # 12 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, SawgrassForest_MapScript_OnFrameMakeJordanFollower_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_MapScript_OnFrameMakeJordanFollower_Movement_0
 # 13 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmovement
 # 14 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -148,7 +148,7 @@ SawgrassForest_JordanLeave_1:
 	compare VAR_RESULT, YES
 	goto_if_eq SawgrassForest_JordanLeave_5
 # 135 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, SawgrassForest_JordanLeave_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_JordanLeave_Movement_0
 # 136 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmovement
 # 137 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -312,7 +312,7 @@ SawgrassForest_KowtowEncounter::
 # 268 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setvar VAR_KOWTOW_ENCOUNTERS, 1
 # 269 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, SawgrassForest_MapScript_OnFrameMakeJordanFollower_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_MapScript_OnFrameMakeJordanFollower_Movement_1
 # 270 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_MapScript_OnFrameMakeJordanFollower_Movement_1
 # 271 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -517,7 +517,7 @@ Sawgrass_Kowtow_AfterBattle::
 # 431 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Sawgrass_Kowtow_AfterBattle_Movement_1
 # 432 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, Sawgrass_Kowtow_AfterBattle_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Sawgrass_Kowtow_AfterBattle_Movement_1
 Sawgrass_Kowtow_AfterBattle_1:
 # 434 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmovement
@@ -559,7 +559,7 @@ Sawgrass_Kowtow_AfterBattle_2:
 # 425 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Sawgrass_Kowtow_AfterBattle_Movement_1
 # 426 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, Sawgrass_Kowtow_AfterBattle_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Sawgrass_Kowtow_AfterBattle_Movement_1
 	goto Sawgrass_Kowtow_AfterBattle_1
 
 
@@ -569,14 +569,14 @@ SawgrassForest_KowtowScene_FollowPlayerFace::
 # 492 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_7
 # 493 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, SawgrassForest_KowtowEncounter_Movement_6
+	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_KowtowEncounter_Movement_6
 	return
 
 SawgrassForest_KowtowScene_FollowPlayerFace_1:
 # 488 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_6
 # 489 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement 0xFF, SawgrassForest_KowtowEncounter_Movement_7
+	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_KowtowEncounter_Movement_7
 	return
 
 

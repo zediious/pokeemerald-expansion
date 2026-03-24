@@ -9,7 +9,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
     setflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
     addobject(SAWGRASSFOREST_JORDAN_01)
     setobjectxy(SAWGRASSFOREST_JORDAN_01, 5, 4)
-    applymovement(0xFF, moves(walk_down * 2, face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down * 2, face_left))
     waitmovement
     applymovement(SAWGRASSFOREST_JORDAN_01, moves(emote_exclamation_mark))
     waitmovement
@@ -132,7 +132,7 @@ script SawgrassForest_JordanLeave {
             warp(MAP_LITTLEROOT_TOWN, 3, 25)
             end
         } else {
-            applymovement(0xFF, moves(walk_down))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
             waitmovement
             release
             end
@@ -266,7 +266,7 @@ script SawgrassForest_EventScript_KowtowEncounterTrigger02 {
 script SawgrassForest_KowtowEncounter {
     lock
     setvar(VAR_KOWTOW_ENCOUNTERS, 1)
-    applymovement(0xFF, moves(emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
     waitmovement
 
@@ -423,13 +423,13 @@ script Sawgrass_Kowtow_AfterBattle {
         applymovement(SAWGRASS_MUGGED_WOMAN, moves(walk_down * 3, walk_right * 4))
         delay(30)
         applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
-        applymovement(0xFF, moves(face_left))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     }
     else {
         applymovement(SAWGRASS_MUGGED_WOMAN, moves(walk_down * 2, walk_right * 4))
         delay(30)
         applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
-        applymovement(0xFF, moves(face_left))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     }
     waitmovement
     msgbox("{COLOR GREEN}Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Thank you for dealing with them!
@@ -486,10 +486,10 @@ script Sawgrass_Kowtow_AfterBattle {
 script SawgrassForest_KowtowScene_FollowPlayerFace {
     if (flag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)) {
         applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_down))
-        applymovement(0xFF, moves(face_up))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     }
     else {
         applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
-        applymovement(0xFF, moves(face_down))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     }
 }

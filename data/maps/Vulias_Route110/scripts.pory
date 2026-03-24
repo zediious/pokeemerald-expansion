@@ -121,7 +121,7 @@ script VuliasRoute110_EventScript_WonderingMan {
 
 script VuliasRoute110_FirstArrivalWithJordanTrigger01 {
     lock
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     delay(20)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, walk_down * 3, walk_left, face_up))
     waitmovement
@@ -130,7 +130,7 @@ script VuliasRoute110_FirstArrivalWithJordanTrigger01 {
 
 script VuliasRoute110_FirstArrivalWithJordanTrigger02 {
     lock
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     delay(20)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left, walk_down * 3, walk_right, face_up))
     waitmovement

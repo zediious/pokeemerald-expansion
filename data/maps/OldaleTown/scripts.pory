@@ -196,7 +196,7 @@ movement GerbonTown_CrashKid_RunAway {
 script GerbonTownBattleHall_OutdoorBattleStart {
     lock
     setvar(VAR_ZED_STORY_TRACKER, 3)
-    applymovement(0xFF, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! That was the best
         match I've seen yet! I am glad you were
@@ -254,7 +254,7 @@ script GerbonTownBattleHall_OutdoorBattleStart {
 script GerbonTown_OutdoorBattleEnd {
     lock
     faceplayer
-    applymovement(0xFF, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You must have been
             practicing, I thought I had that in
             the bag!

@@ -140,7 +140,7 @@ WoltiaBattleHall_TournamentBattle::
 # 89 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmovement
 # 92 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	applymovement 0xFF, WoltiaBattleHall_TournamentBattle_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaBattleHall_TournamentBattle_Movement_1
 # 95 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	applymovement VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, WoltiaBattleHall_TournamentBattle_Movement_2
 # 98 "data/maps/WoltiaCity_BattleHall/scripts.pory"

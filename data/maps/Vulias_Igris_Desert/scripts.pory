@@ -8,7 +8,7 @@ mapscripts Vulias_Igris_Desert_MapScripts {
 // Hide hidden-by-defaults, etc
 script IgrisDesert_OnTransition_SetState {
     if (var(VAR_ZED_STORY_TRACKER) < 22) {
-        setflag(FLAG_RUBELPYRAMIDEXT_LOSTKID)
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKID)
     }
 }
 
@@ -31,7 +31,7 @@ script IgrisDesert_EventScript_AngryKrokorok {
     playmoncry(SPECIES_KROKOROK, CRY_MODE_NORMAL)
     msgbox("V-V Vruuu")
     waitmoncry
-    applymovement(0xFF, moves(jump_down,face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_down,face_up))
     playse(SE_BIKE_HOP)
     waitmovement
     msgbox("You barely jump out of the way of a Bite
@@ -97,7 +97,7 @@ script IgrisDesert_EventScript_KowtowEnc01Trainer04{
 // Move player down if they approached from top tile
 script IgrisDesert_EventScript_KowtowAdminTopTileMove {
     lock
-    applymovement(0xFF, moves(walk_down,face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down,face_left))
     waitmovement
     release
     goto(IgrisDesert_EventScript_KowtowAdmin)
@@ -120,10 +120,10 @@ script IgrisDesert_EventScript_KowtowAdmin {
     addobject(IGRIS_JORDAN_01)
     playse(SE_PIN)
     applymovement(IGRIS_JORDAN_01, moves(walk_up * 6, walk_left * 6, face_up))
-    applymovement(0xFF, moves(emote_exclamation_mark, face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_right))
     waitmessage
     delay(60)
-    applymovement(0xFF, moves(walk_up, face_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, face_down))
     
     waitmovement
     call(IgrisDesert_DetermineJordanTeam01)
@@ -131,7 +131,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
             with you! Can't let you boot these scum
             down without me eh?")
     waitmessage
-    applymovement(0xFF, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
     applymovement(IGRIS_KOWTOWADMIN_01, moves(jump_in_place_right * 2))
     waitmovement
@@ -170,7 +170,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
 
     clearflag(FLAG_IGRIS_BEAUTY)
     addobject(TOGEPI_BEAUTY_DESERT)
-    applymovement(0xFF, moves(face_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
 
     msgbox(
@@ -188,7 +188,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     )
     waitmessage
     playse(SE_PIN)
-    applymovement(0xFF, moves(emote_exclamation_mark, face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_right))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark, face_right))
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_fast_up * 8, walk_fast_left * 5))
     waitmovement
@@ -197,7 +197,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     waitmessage
     playmoncry(SPECIES_TOGEPI, CRY_MODE_NORMAL)
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_faster_right, face_left))
-    applymovement(0xFF, moves(walk_right, walk_down, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, walk_down, face_up))
     waitmovement
     applymovement(IGRIS_TOGEPI, moves(walk_right * 2))
     waitmovement
@@ -228,7 +228,7 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     removeobject(TOGEPI_BEAUTY_DESERT)
     removeobject(IGRIS_TOGEPI)
     fadescreenswapbuffers(FADE_FROM_BLACK)
-    applymovement(0xFF, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_right))
     msgbox(
         "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well that turned out well! You
@@ -359,42 +359,42 @@ script IgrisDesert_EventScript_JordanFollower02 {
 // Triggers for if player tries to go west or north before speaking to Jordan
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01 {
     lock
-    applymovement(0xFF, moves(walk_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
     setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 0)
     goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
 }
 
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger02 {
     lock
-    applymovement(0xFF, moves(walk_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
     setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 1)
     goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
 }
 
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03 {
     lock
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 2)
     goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
 }
 
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger04 {
     lock
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 3)
     goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
 }
 
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger05 {
     lock
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 4)
     goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
 }
 
 script IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06 {
     lock
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     setvar(VAR_IGRIS_JORDAN02_PLAYERPOS, 5)
     goto(IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger)
 }
@@ -471,7 +471,7 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveNorth {
             need a Pokemon Center or Mart, we can
             go to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
     waitmessage
-    applymovement(0xFF, moves(walk_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     waitmovement
     release
     end
@@ -484,7 +484,7 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveSouth {
             a Pokemon Center or Mart, we can go
             to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
     waitmessage
-    applymovement(0xFF, moves(walk_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement
     release
     end
@@ -506,21 +506,21 @@ script IgrisDesert_EventScript_PyramidGentleman01 {
 // approached from the side
 script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft {
     lock
-    applymovement(0xFF, moves(walk_right, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_up))
     waitmovement
     goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
 }
 
 script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter {
     lock
-    applymovement(0xFF, moves(walk_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement
     goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
 }
 
 script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight {
     lock
-    applymovement(0xFF, moves(walk_left, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left, face_up))
     waitmovement
     goto(IgrisDesert_EventScript_MotherRunningOutPyramid)
 }
@@ -528,7 +528,7 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight {
 // Trigger mother running out of Pyramid
 script IgrisDesert_EventScript_MotherRunningOutPyramid {
     lock
-    applymovement(0xFF, moves(emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
     playse(SE_PIN)
     applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_faster_down * 5, walk_in_place_fast_down))
@@ -541,7 +541,7 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     waitmessage
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down * 2, walk_right, face_left))
     delay(20)
-    applymovement(0xFF, moves(walk_down, walk_right, face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, walk_right, face_left))
     waitmovement
     setobjectxy(RUVELPYRAMIDEXT_GENTLEMAN, 13, 20)
     applymovement(RUVELPYRAMIDEXT_GENTLEMAN, moves(walk_fast_up * 5))
@@ -566,7 +566,7 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_down * 3))
     waitmovement
     setobjectmovementtype(IGRIS_LOSTCHILD_MOM, MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT)
-    applymovement(0xFF, moves(face_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well, another reason to check
             out the Pyramid! Although, I suppose

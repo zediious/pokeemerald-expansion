@@ -64,7 +64,7 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
         emote_exclamation_mark
     ))
     delay(60)
-    applymovement(0xFF, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     applymovement(JordanInHome, moves(
         walk_up,
         walk_left * 3,

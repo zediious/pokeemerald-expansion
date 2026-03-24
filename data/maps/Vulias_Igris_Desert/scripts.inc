@@ -19,7 +19,7 @@ IgrisDesert_OnTransition_SetState::
 
 IgrisDesert_OnTransition_SetState_1:
 # 11 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setflag FLAG_RUBELPYRAMIDEXT_LOSTKID
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKID
 	return
 
 
@@ -49,7 +49,7 @@ IgrisDesert_EventScript_AngryKrokorok::
 # 33 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmoncry
 # 34 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_AngryKrokorok_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_AngryKrokorok_Movement_0
 # 35 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	playse SE_BIKE_HOP
 # 36 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -107,7 +107,7 @@ IgrisDesert_EventScript_KowtowAdminTopTileMove::
 # 99 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 100 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdminTopTileMove_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_KowtowAdminTopTileMove_Movement_0
 # 101 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 102 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -141,13 +141,13 @@ IgrisDesert_EventScript_KowtowAdmin::
 # 122 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement IGRIS_JORDAN_01, IgrisDesert_EventScript_KowtowAdmin_Movement_1
 # 123 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdmin_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_KowtowAdmin_Movement_0
 # 124 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 125 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	delay 60
 # 126 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdmin_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_KowtowAdmin_Movement_2
 # 128 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 129 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -157,7 +157,7 @@ IgrisDesert_EventScript_KowtowAdmin::
 # 133 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 134 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdmin_Movement_3
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_KowtowAdmin_Movement_3
 # 135 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_KowtowAdmin_Movement_3
 # 136 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -207,7 +207,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 172 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	addobject TOGEPI_BEAUTY_DESERT
 # 173 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_KowtowAdmin_AfterBattle_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_0
 # 174 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_1
 # 176 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -217,7 +217,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 190 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	playse SE_PIN
 # 191 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdmin_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_KowtowAdmin_Movement_0
 # 192 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_KowtowAdmin_Movement_0
 # 193 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -233,7 +233,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 199 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement TOGEPI_BEAUTY_DESERT, IgrisDesert_KowtowAdmin_AfterBattle_Movement_3
 # 200 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_KowtowAdmin_AfterBattle_Movement_4
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_4
 # 201 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 202 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -279,7 +279,7 @@ IgrisDesert_KowtowAdmin_AfterBattle::
 # 230 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
 # 231 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_KowtowAdmin_Movement_3
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_KowtowAdmin_Movement_3
 # 232 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_6
 # 233 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -393,7 +393,7 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01::
 # 361 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 362 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
 # 363 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 0
 # 364 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -405,7 +405,7 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger02::
 # 368 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 369 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
 # 370 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 1
 # 371 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -417,7 +417,7 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03::
 # 375 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 376 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 377 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 2
 # 378 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -429,7 +429,7 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger04::
 # 382 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 383 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 384 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 3
 # 385 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -441,7 +441,7 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger05::
 # 389 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 390 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 391 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 4
 # 392 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -453,7 +453,7 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06::
 # 396 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 397 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 398 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 5
 # 399 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -576,7 +576,7 @@ IgrisDesert_EventScript_JordanFollower02NoLeaveNorth::
 # 473 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 474 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 475 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 476 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -592,7 +592,7 @@ IgrisDesert_EventScript_JordanFollower02NoLeaveSouth::
 # 486 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 487 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
 # 488 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 489 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -618,7 +618,7 @@ IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft::
 # 508 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 509 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
 # 510 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 511 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -630,7 +630,7 @@ IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter::
 # 515 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 516 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
 # 517 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 518 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -642,7 +642,7 @@ IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight::
 # 522 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 523 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight_Movement_0
 # 524 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 525 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -654,7 +654,7 @@ IgrisDesert_EventScript_MotherRunningOutPyramid::
 # 530 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 531 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
 # 532 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
 # 533 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -676,7 +676,7 @@ IgrisDesert_EventScript_MotherRunningOutPyramid::
 # 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	delay 20
 # 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_2
 # 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
@@ -710,7 +710,7 @@ IgrisDesert_EventScript_MotherRunningOutPyramid::
 # 568 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setobjectmovementtype IGRIS_LOSTCHILD_MOM, MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT
 # 569 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement 0xFF, IgrisDesert_KowtowAdmin_AfterBattle_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_0
 # 570 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_1
 # 571 "data/maps/Vulias_Igris_Desert/scripts.pory"

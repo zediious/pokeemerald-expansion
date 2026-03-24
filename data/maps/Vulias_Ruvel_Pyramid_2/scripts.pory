@@ -5,7 +5,7 @@ script RuvelPyramid02_GothoritaEncounterSaveKidTrigger {
     lock
 
     // Player and Jordan see kid and Gothorita
-    applymovement(0xFF, moves(emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
     playse(SE_PIN)
     waitmovement
@@ -141,17 +141,17 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     waitmessage
 
     // Jordan, Player, and Kid organize to walk out with kid in middle, start walking
-    clearflag(FLAG_RUBELPYRAMIDEXT_LOSTKID)
+    clearflag(FLAG_RUVELPYRAMIDEXT_LOSTKID)
     setvar(VAR_ZED_STORY_TRACKER, 22)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_up * 3, walk_right, face_left))
     waitmovement
     applymovement(RUVEL_LOSTKID_01, moves(walk_right, face_left))
     waitmovement
-    applymovement(0xFF, moves(walk_down * 2, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down * 2, face_up))
     waitmovement
     applymovement(RUVEL_LOSTKID_01, moves(walk_left, walk_up * 5))
     delay(20)
-    applymovement(0xFF, moves(walk_up * 8))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 8))
     delay(20)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_left * 5))
     delay(30)

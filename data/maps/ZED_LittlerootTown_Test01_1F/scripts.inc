@@ -55,7 +55,7 @@ LittlerootTown_EventScript_JordanRememberTrainers::
 # 66 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	delay 60
 # 67 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	applymovement 0xFF, LittlerootTown_EventScript_JordanRememberTrainers_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_EventScript_JordanRememberTrainers_Movement_0
 # 68 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_1
 # 74 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"

@@ -8,7 +8,7 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter::
 # 5 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_0
 # 6 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	applymovement 0xFF, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_1
 # 7 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	waitmovement
 # 8 "data/maps/WoltiaCity_OldRuin/scripts.pory"
@@ -24,7 +24,7 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter::
 # 16 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_2
 # 17 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	applymovement 0xFF, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_2
 # 18 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	applymovement WOLTIA_RUIN_KEEGAN, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_3
 # 19 "data/maps/WoltiaCity_OldRuin/scripts.pory"
@@ -44,7 +44,7 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter::
 # 31 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	waitmovement
 # 32 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	applymovement 0xFF, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_6
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_6
 # 33 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	msgbox WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_3
 # 35 "data/maps/WoltiaCity_OldRuin/scripts.pory"

@@ -128,7 +128,7 @@ VuliasRoute110_FirstArrivalWithJordanTrigger01::
 # 123 "data/maps/Vulias_Route110/scripts.pory"
 	lock
 # 124 "data/maps/Vulias_Route110/scripts.pory"
-	applymovement 0xFF, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0
 # 125 "data/maps/Vulias_Route110/scripts.pory"
 	delay 20
 # 126 "data/maps/Vulias_Route110/scripts.pory"
@@ -144,7 +144,7 @@ VuliasRoute110_FirstArrivalWithJordanTrigger02::
 # 132 "data/maps/Vulias_Route110/scripts.pory"
 	lock
 # 133 "data/maps/Vulias_Route110/scripts.pory"
-	applymovement 0xFF, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, VuliasRoute110_FirstArrivalWithJordanTrigger01_Movement_0
 # 134 "data/maps/Vulias_Route110/scripts.pory"
 	delay 20
 # 135 "data/maps/Vulias_Route110/scripts.pory"

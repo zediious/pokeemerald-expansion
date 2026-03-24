@@ -325,7 +325,7 @@ RuvelPyramid01_SpikeTrap_1:
 # 208 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	waitmovement
 # 209 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_4
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid01_SpikeTrap_Movement_4
 # 215 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	waitmovement
 # 216 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
@@ -336,22 +336,22 @@ RuvelPyramid01_SpikeTrap_1:
 
 RuvelPyramid01_SpikeTrap_2:
 # 198 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid01_SpikeTrap_Movement_0
 	goto RuvelPyramid01_SpikeTrap_1
 
 RuvelPyramid01_SpikeTrap_3:
 # 200 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid01_SpikeTrap_Movement_1
 	goto RuvelPyramid01_SpikeTrap_1
 
 RuvelPyramid01_SpikeTrap_4:
 # 202 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid01_SpikeTrap_Movement_2
 	goto RuvelPyramid01_SpikeTrap_1
 
 RuvelPyramid01_SpikeTrap_5:
 # 204 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement 0xFF, RuvelPyramid01_SpikeTrap_Movement_3
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid01_SpikeTrap_Movement_3
 	goto RuvelPyramid01_SpikeTrap_1
 
 

@@ -316,7 +316,7 @@ MullenCave_EventScript_NoLeaveWhileFollower_2:
 # 311 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmessage
 # 312 "data/maps/Vulias_MullenCave/scripts.pory"
-	applymovement 0xFF, MullenCave_EventScript_NoLeaveWhileFollower_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, MullenCave_EventScript_NoLeaveWhileFollower_Movement_0
 # 313 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmovement
 # 314 "data/maps/Vulias_MullenCave/scripts.pory"
@@ -338,7 +338,7 @@ MullenCave_EventScript_JordanLeaveAtEnd_1:
 # 323 "data/maps/Vulias_MullenCave/scripts.pory"
 	lock
 # 324 "data/maps/Vulias_MullenCave/scripts.pory"
-	applymovement 0xFF, MullenCave_EventScript_JordanLeaveAtEnd_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, MullenCave_EventScript_JordanLeaveAtEnd_Movement_0
 # 325 "data/maps/Vulias_MullenCave/scripts.pory"
 	waitmovement
 # 326 "data/maps/Vulias_MullenCave/scripts.pory"

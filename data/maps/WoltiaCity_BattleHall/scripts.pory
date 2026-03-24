@@ -89,7 +89,7 @@ script WoltiaBattleHall_TournamentBattle {
     waitmovement
 
     // Player and trainer walk towards center
-    applymovement(0xFF, moves(
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
         walk_right * 3
     ))
     applymovement(VAR_WOLTIA_TOURNAMENT_OPPONENT_LOCAL, moves(

@@ -18,7 +18,7 @@ script GerbonTownBattleHall_EventScript_FirstEnterWatchLeft {
             The match is about to begin!")
 
     waitmessage
-    applymovement(0xFF, moves(
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
             walk_up * 6
         )
     )
@@ -36,7 +36,7 @@ script GerbonTownBattleHall_EventScript_FirstEnterWatchRight {
             The match is about to begin!")
 
     waitmessage
-    applymovement(0xFF, moves(
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
             walk_up * 5,
             walk_left,
             walk_up
@@ -124,7 +124,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     waitmovement
     special(RemoveCameraObject)
     setvar(VAR_ZED_STORY_TRACKER, 2)
-    applymovement(0xFF, moves(face_down, emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down, emote_exclamation_mark))
     playse(SE_PIN)
     waitmovement
 
@@ -142,7 +142,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
             Let's keep watching!")
 
     waitmessage
-    applymovement(0xFF, moves(face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     applymovement(GERBON_BATTLEHALL_JORDAN_01, moves(walk_right, walk_up))
     waitmovement
     delay(60)
@@ -222,7 +222,7 @@ script GerbonBattleHall_TournamentBattle {
     waitmovement
 
     // Player and trainer walk towards center
-    applymovement(0xFF, moves(
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
         walk_right * 3
     ))
     applymovement(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, moves(

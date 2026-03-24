@@ -45,7 +45,7 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter::
 # 29 "data/maps/Vulias_Woltia_City/scripts.pory"
 	delay 20
 # 30 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement 0xFF, WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_1
 # 31 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
 # 32 "data/maps/Vulias_Woltia_City/scripts.pory"
@@ -144,7 +144,7 @@ WoltiaCity_EventScript_NoLeaveWhileFollower_2:
 # 114 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
 # 115 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement 0xFF, WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0
 # 116 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
 # 117 "data/maps/Vulias_Woltia_City/scripts.pory"
@@ -169,7 +169,7 @@ WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_2:
 # 132 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
 # 133 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement 0xFF, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
 # 134 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
 # 135 "data/maps/Vulias_Woltia_City/scripts.pory"
@@ -185,7 +185,7 @@ WoltiaCity_JordanGoToIgris::
 # 144 "data/maps/Vulias_Woltia_City/scripts.pory"
 	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
 # 145 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement 0xFF, WoltiaCity_JordanGoToIgris_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
 # 146 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
 # 147 "data/maps/Vulias_Woltia_City/scripts.pory"

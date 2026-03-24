@@ -6,7 +6,7 @@ RuvelPyramid02_GothoritaEncounterSaveKidTrigger::
 # 5 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	lock
 # 8 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement 0xFF, RuvelPyramid02_GothoritaEncounterSaveKidTrigger_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_GothoritaEncounterSaveKidTrigger_Movement_0
 # 9 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, RuvelPyramid02_GothoritaEncounterSaveKidTrigger_Movement_0
 # 10 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
@@ -217,7 +217,7 @@ RuvelPyramid02_Gothorita_AfterBattle::
 # 141 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmessage
 # 144 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	clearflag FLAG_RUBELPYRAMIDEXT_LOSTKID
+	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKID
 # 145 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 22
 # 146 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
@@ -229,7 +229,7 @@ RuvelPyramid02_Gothorita_AfterBattle::
 # 149 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmovement
 # 150 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement 0xFF, RuvelPyramid02_Gothorita_AfterBattle_Movement_7
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_Gothorita_AfterBattle_Movement_7
 # 151 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	waitmovement
 # 152 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
@@ -237,7 +237,7 @@ RuvelPyramid02_Gothorita_AfterBattle::
 # 153 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	delay 20
 # 154 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	applymovement 0xFF, RuvelPyramid02_Gothorita_AfterBattle_Movement_9
+	applymovement OBJ_EVENT_ID_PLAYER, RuvelPyramid02_Gothorita_AfterBattle_Movement_9
 # 155 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	delay 20
 # 156 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"

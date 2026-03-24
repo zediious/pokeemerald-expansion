@@ -27,7 +27,7 @@ GerbonTownBattleHall_EventScript_FirstEnterWatchLeft::
 # 20 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmessage
 # 21 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement 0xFF, GerbonTownBattleHall_EventScript_FirstEnterWatchLeft_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTownBattleHall_EventScript_FirstEnterWatchLeft_Movement_0
 # 25 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmovement
 # 26 "data/maps/GerbonTown_BattleHall/scripts.pory"
@@ -45,7 +45,7 @@ GerbonTownBattleHall_EventScript_FirstEnterWatchRight::
 # 38 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmessage
 # 39 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement 0xFF, GerbonTownBattleHall_EventScript_FirstEnterWatchRight_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTownBattleHall_EventScript_FirstEnterWatchRight_Movement_0
 # 45 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmovement
 # 46 "data/maps/GerbonTown_BattleHall/scripts.pory"
@@ -139,7 +139,7 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 126 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 2
 # 127 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement 0xFF, GerbonTownBattleHall_CandaceAndJulia01_Movement_11
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTownBattleHall_CandaceAndJulia01_Movement_11
 # 128 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	playse SE_PIN
 # 129 "data/maps/GerbonTown_BattleHall/scripts.pory"
@@ -149,7 +149,7 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 144 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmessage
 # 145 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement 0xFF, GerbonTownBattleHall_CandaceAndJulia01_Movement_12
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTownBattleHall_CandaceAndJulia01_Movement_12
 # 146 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	applymovement GERBON_BATTLEHALL_JORDAN_01, GerbonTownBattleHall_CandaceAndJulia01_Movement_13
 # 147 "data/maps/GerbonTown_BattleHall/scripts.pory"
@@ -274,7 +274,7 @@ GerbonBattleHall_TournamentBattle::
 # 222 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmovement
 # 225 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement 0xFF, GerbonBattleHall_TournamentBattle_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonBattleHall_TournamentBattle_Movement_1
 # 228 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	applymovement VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GerbonBattleHall_TournamentBattle_Movement_2
 # 231 "data/maps/GerbonTown_BattleHall/scripts.pory"
