@@ -347,6 +347,12 @@
       "map": "MAP_VULIAS_WOLTIA_CITY",
       "x": 17,
       "y": 41
+    },
+    {
+      "id": "HEAL_LOCATION_VULIAS_PALENTO_VILLAGE",
+      "map": "MAP_VULIAS_PALENTO_VILLAGE",
+      "x": 21,
+      "y": 29
     }
   ]
 }

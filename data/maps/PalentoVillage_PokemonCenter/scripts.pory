@@ -1,0 +1,69 @@
+mapscripts PalentoVillage_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PalentoVillage_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script PalentoVillage_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_VULIAS_PALENTO_VILLAGE)
+    end
+}
+
+script PalentoVillage_Pokecenter_Nurse {
+    setvar(VAR_0x800B, 2)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+
+script PalentoVillage_HealerChansey {
+    lock
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    msgbox("Chans-eee")
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}
+
+// Poke Mart within same counter as Center here
+script PalentoVillage_PokeMart_Employee {
+    lock
+    msgbox("Welcome!
+            How may I serve you?")
+    waitmessage
+    pokemart(PalentoVillage_MartItems)
+    msgbox("Please come again!")
+    waitmessage
+    release
+    end
+}
+
+mart PalentoVillage_MartItems {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_AWAKENING
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+}
+
+// Jordan resting
+script PalentoVillagePokeCenter_JordanResting {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi {PLAYER}!
+            This Pokemon Center is pretty cool
+            right? Both the mart and the nurse
+            all in one place
+            
+            I wish all of them were like that...")
+    waitmessage
+    release
+    end
+}

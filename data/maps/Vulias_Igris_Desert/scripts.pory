@@ -14,6 +14,7 @@ script IgrisDesert_OnTransition_SetState {
         setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2)
         setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3)
         setflag(FLAG_RUVELPYRAMIDEXT_JORDAN)
+        setflag(FLAG_PALENTOPOKECENTER_JORDAN01)
     }
 }
 
@@ -666,6 +667,7 @@ script IgrisDesert_FoundChildWarpedOutside {
     applymovement(IGRIS_JORDAN_AFTERKIDSAVED, moves(walk_down * 9))
     waitmovement
     destroyfollowernpc
+    clearflag(FLAG_PALENTOPOKECENTER_JORDAN01)
     delay(30)
     setvar(VAR_ZED_STORY_TRACKER, 24)
     removeobject(IGRIS_JORDAN_AFTERKIDSAVED)

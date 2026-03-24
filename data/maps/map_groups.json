@@ -78,7 +78,8 @@
     "gMapGroup_ZEDTownsAndRoutes",
     "gMapGroup_ZEDMiscInt",
     "gMapGroup_ZEDDungeons",
-    "gMapGroup_ZEDIndoorWoltia"
+    "gMapGroup_ZEDIndoorWoltia",
+    "gMapGroup_ZEDIndoorPalento"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1203,5 +1204,8 @@
     "WoltiaCity_OldRuin",
     "WoltiaCity_BattleHall_PrepRoom",
     "WoltiaCity_PokemonCenter"
+  ],
+  "gMapGroup_ZEDIndoorPalento": [
+    "PalentoVillage_PokemonCenter"
   ]
 }
