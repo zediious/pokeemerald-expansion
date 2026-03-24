@@ -301,6 +301,38 @@ RuvelPyramid02_Gothorita_AfterBattle::
 	return
 
 
+RuvelPyramid02_CatchableCofagrigusEncounter::
+# 189 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	lock
+# 190 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	msgbox RuvelPyramid02_CatchableCofagrigusEncounter_Text_0, MSGBOX_SIGN
+# 191 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmessage
+# 192 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	closemessage
+# 193 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	delay 60
+# 194 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	setflag FLAG_SMART_WILD_MON
+# 195 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	playmoncry SPECIES_COFAGRIGUS, CRY_MODE_NORMAL
+# 196 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmoncry
+# 197 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	delay 30
+# 199 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	createmon 1, 0, SPECIES_COFAGRIGUS, 30, ITEM_SPELL_TAG, hpIv = 31, atkIv = 0, defIv = 31, speedIv = 0, spAtkIv = 31, spDefIv = 0
+# 202 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	dowildbattle
+# 203 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	removeobject RUVEL_CATCHABLE_COFA
+# 204 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	clearflag FLAG_SMART_WILD_MON
+# 205 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	release
+	end
+
+
 # 8 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 RuvelPyramid02_GothoritaEncounterSaveKidTrigger_Movement_0:
 # 8 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
@@ -530,3 +562,7 @@ RuvelPyramid02_Gothorita_AfterBattle_Text_3:
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Don't worry kid! We'll get you\n"
 	.string "out of here, and to your mom!\p"
 	.string "Stay between us!$"
+
+RuvelPyramid02_CatchableCofagrigusEncounter_Text_0:
+# 190 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	.string "The Cofagrigus eyes you steadily...$"

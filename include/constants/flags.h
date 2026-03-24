@@ -726,7 +726,7 @@
 #define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2        0x29F // Mother of lost child waiting for child to be found
 #define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3        0x2A0 // Mother of lost child after child is found
 #define FLAG_RUVELPYRAMIDEXT_JORDAN             0x2A1 // Jordan after teleported out of pyramid
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
+#define FLAG_RUVEL_CATCHABLE_COFA               0x2A2 // Catchable Cofagrigus encounter
 #define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
 #define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
 #define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag

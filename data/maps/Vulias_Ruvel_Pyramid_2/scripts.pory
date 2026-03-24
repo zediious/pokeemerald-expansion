@@ -183,3 +183,25 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     removeobject(RUVEL_LOSTKID_01)
     warp(MAP_VULIAS_IGRIS_DESERT, 13, 16)
 }
+
+// Catchable Cofagrigus encounter deeper within
+script RuvelPyramid02_CatchableCofagrigusEncounter {
+    lock
+    msgbox("The Cofagrigus eyes you steadily...", MSGBOX_SIGN)
+    waitmessage
+    closemessage
+    delay(60)
+    setflag(FLAG_SMART_WILD_MON)
+    playmoncry(SPECIES_COFAGRIGUS, CRY_MODE_NORMAL)
+    waitmoncry
+    delay(30)
+    // setwildbattle(SPECIES_COFAGRIGUS, 30, ITEM_SPELL_TAG)
+    createmon(
+        1, 0, SPECIES_COFAGRIGUS, 30, ITEM_SPELL_TAG,
+        hpIv=31, atkIv=0, defIv=31, speedIv=0, spAtkIv=31, spDefIv=0)
+    dowildbattle
+    removeobject(RUVEL_CATCHABLE_COFA)
+    clearflag(FLAG_SMART_WILD_MON)
+    release
+    end
+}
