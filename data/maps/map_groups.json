@@ -1188,7 +1188,8 @@
   ],
   "gMapGroup_ZEDMiscInt": [
     "Vulias_Route110_PokemonCenter",
-    "Vulias_Route110_OldRodHouse"
+    "Vulias_Route110_OldRodHouse",
+    "Vulias_Igris_DigDungeonBuffer"
   ],
   "gMapGroup_ZEDDungeons": [
     "Vulias_MullenCave",
@@ -1197,7 +1198,8 @@
     "Vulias_MullenCave_L2_Sub",
     "Vulias_Ruvel_Pyramid",
     "Vulias_Ruvel_Pyramid_1",
-    "Vulias_Ruvel_Pyramid_2"
+    "Vulias_Ruvel_Pyramid_2",
+    "Vulias_Igris_Underground"
   ],
   "gMapGroup_ZEDIndoorWoltia": [
     "WoltiaCity_BattleHall",

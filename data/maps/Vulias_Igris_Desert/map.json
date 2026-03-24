@@ -309,6 +309,13 @@
       "elevation": 0,
       "dest_map": "MAP_VULIAS_RUVEL_PYRAMID",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 53,
+      "y": 73,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -9643,6 +9643,26 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PalentoVillage_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/PalentoVillage_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_DIG_DUNGEON_BUFFER",
+      "name": "Vulias_Igris_DigDungeonBuffer_Layout",
+      "width": 2,
+      "height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Vulias_Igris_DigDungeonBuffer/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_DigDungeonBuffer/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_UNDERGROUND",
+      "name": "Vulias_Igris_Underground_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Vulias_Igris_Underground/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_Underground/map.bin"
     }
   ]
 }

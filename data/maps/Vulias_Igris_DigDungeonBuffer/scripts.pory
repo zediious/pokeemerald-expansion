@@ -1,0 +1,17 @@
+mapscripts Vulias_Igris_DigDungeonBuffer_MapScripts {
+    MAP_SCRIPT_ON_RESUME: IgrisDigDungeonBuffer_DecideWarp
+}
+
+// If player has Dig, send them to the dungeon. Otherwise, spit them
+// out back into Igris Desert
+script IgrisDigDungeonBuffer_DecideWarp {
+    checkitem(ITEM_TM_DIG, 1)
+    if (var(VAR_RESULT) == TRUE) {
+        // send to dig dungeon
+        warp(MAP_VULIAS_IGRIS_UNDERGROUND, 9, 15)
+    } else {
+        // send back to Igris Desert
+        setvar(VAR_IGRIS_DIGDUNGEON_DOHOP, 1)
+        warp(MAP_VULIAS_IGRIS_DESERT, 43, 51)
+    }
+}
