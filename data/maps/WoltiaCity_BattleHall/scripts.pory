@@ -250,7 +250,7 @@ script WoltiaBattleHall_TournamentPlayerWon {
 
         // Let player know about level cap
         playfanfare(MUS_LEVEL_UP)
-        msgbox("The level cap has been raised to 30
+        msgbox("The level cap has been raised to 34
         
                 You can now use {COLOR RED}Rock Smash!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}", MSGBOX_SIGN)
         waitfanfare

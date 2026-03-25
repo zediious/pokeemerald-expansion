@@ -492,7 +492,7 @@ WoltiaBattleHall_TournamentPlayerWon_Text_4:
 
 WoltiaBattleHall_TournamentPlayerWon_Text_5:
 # 253 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	.string "The level cap has been raised to 30\p"
+	.string "The level cap has been raised to 34\p"
 	.string "You can now use {COLOR RED}Rock Smash!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_6:
