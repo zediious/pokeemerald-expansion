@@ -13,7 +13,10 @@ script IgrisDesert_SandHoleSpitOutOnEntry {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_2_up, jump_up, face_down))
     waitmovement
     msgbox("You were thrown out back into the
-            Desert!", MSGBOX_SIGN)
+            Desert!
+            
+            Perhaps if you could {COLOR RED}Dig{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} better, you
+            could find yourself somewhere else!", MSGBOX_SIGN)
     waitmessage
     release
     end
