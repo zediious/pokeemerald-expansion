@@ -1684,3 +1684,14 @@ const struct Tileset gTileset_PyramidInteriorSecondary =
     .metatileAttributes = gMetatileAttributes_PyramidInteriorSecondary,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_DesertMisc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DesertMisc,
+    .palettes = gTilesetPalettes_DesertMisc,
+    .metatiles = gMetatiles_DesertMisc,
+    .metatileAttributes = gMetatileAttributes_DesertMisc,
+    .callback = NULL,
+};

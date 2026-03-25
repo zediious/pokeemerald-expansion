@@ -447,3 +447,6 @@ const u16 gMetatileAttributes_PyramidInteriorPrimary[] = INCBIN_U16("data/tilese
 
 const u16 gMetatiles_PyramidInteriorSecondary[] = INCBIN_U16("data/tilesets/secondary/pyramid_interior_secondary/metatiles.bin");
 const u16 gMetatileAttributes_PyramidInteriorSecondary[] = INCBIN_U16("data/tilesets/secondary/pyramid_interior_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_DesertMisc[] = INCBIN_U16("data/tilesets/secondary/desert_misc/metatiles.bin");
+const u16 gMetatileAttributes_DesertMisc[] = INCBIN_U16("data/tilesets/secondary/desert_misc/metatile_attributes.bin");

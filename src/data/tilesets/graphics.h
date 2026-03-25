@@ -3295,3 +3295,22 @@ const u16 gTilesetPalettes_PyramidInteriorSecondary[][16] =
 };
 
 const u32 gTilesetTiles_PyramidInteriorSecondary[] = INCBIN_U32("data/tilesets/secondary/pyramid_interior_secondary/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_DesertMisc[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/desert_misc/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_DesertMisc[] = INCBIN_U32("data/tilesets/secondary/desert_misc/tiles.4bpp.lz");
