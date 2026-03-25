@@ -9627,10 +9627,10 @@
     {
       "id": "LAYOUT_VULIAS_IGRIS_DESERT_2",
       "name": "Vulias_Igris_Desert_2_Layout",
-      "width": 66,
-      "height": 77,
+      "width": 76,
+      "height": 83,
       "primary_tileset": "gTileset_DesertMain",
-      "secondary_tileset": "gTileset_DesertPyramidExt",
+      "secondary_tileset": "gTileset_DesertMisc",
       "border_filepath": "data/layouts/Vulias_Igris_Desert_2/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Desert_2/map.bin"
     },
