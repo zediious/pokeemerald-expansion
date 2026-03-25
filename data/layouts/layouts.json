@@ -9663,6 +9663,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Vulias_Igris_Underground/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Underground/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_ROUTE104",
+      "name": "Vulias_Route104_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Vulias_Route104/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Route104/map.bin"
     }
   ]
 }

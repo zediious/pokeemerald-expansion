@@ -1806,3 +1806,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.inc"
 
 	.include "data/maps/Vulias_Igris_Underground/scripts.inc"
+
+	.include "data/maps/Vulias_Route104/scripts.inc"

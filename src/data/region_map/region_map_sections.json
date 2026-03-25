@@ -1666,6 +1666,10 @@
     {
       "id": "MAPSEC_IGRIS_UNDERGROUND",
       "name": "Igris Underground"
+    },
+    {
+      "id": "MAPSEC_VULIAS_ROUTE104",
+      "name": "Route 104"
     }
   ]
 }
