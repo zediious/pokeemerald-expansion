@@ -64,6 +64,29 @@ struct QuestMenuStaticResources
 	u16 storedRowPosition;
 };
 
+// New structs for quest progression definitions
+struct QuestStoryDescRange
+{
+    u32 min;
+    u32 max;
+    const u8 *text;
+};
+
+struct QuestStoryMapRange
+{
+    u32 min;
+    u32 max;
+    const u8 *text;
+};
+
+struct QuestStorySpriteRange
+{
+    u32 min;
+    u32 max;
+    u16 spriteId;
+};
+// End New structs for quest progression definitions
+
 // RAM
 EWRAM_DATA static struct QuestMenuResources *sStateDataPtr = NULL;
 EWRAM_DATA static u8 *sBg1TilemapBuffer = NULL;
@@ -315,6 +338,67 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
+////////////////////////BEGIN DYNAMIC DESCRIPTION, MAP/////////////////////////
+///////////////////////////AND SPRITE CUSTOMIZATION////////////////////////////
+
+// This customization is equipped to handle one dynamic quest (ID 0) currently.
+
+// To customize:
+// Add an additional entry to a given struct array.
+// Param 1: Start range for variable
+// Param 2: End range for variable
+// Param 3: Replacement value
+
+// When the quest menu is drawn, the relevant description, map, and sprite
+// will be used based on the story variable state.
+
+// If nothing matches the current quest var, the hard-coded values
+// in the quest struct above will be used instead.
+
+// Define dynamic descriptions
+static const struct QuestStoryDescRange sMainQuestDescRanges[] =
+{
+	{1,  2,   gText_MainQuestDesc_01},
+	{3,  4,   gText_MainQuestDesc_02},
+	{5,  5,   gText_MainQuestDesc_03},
+	{6,  7,   gText_MainQuestDesc_04},
+	{8,  9,   gText_MainQuestDesc_05},
+	{10, 11,  gText_MainQuestDesc_06},
+	{12, 14,  gText_MainQuestDesc_07},
+	{15, 15,  gText_MainQuestDesc_08},
+	{16, 18,  gText_MainQuestDesc_09},
+	{19, 99,  gText_MainQuestDesc_10},
+};
+
+// Define dynamic locations
+static const struct QuestStoryMapRange sMainQuestMapRanges[] =
+{
+	{1,  2,   gText_MainQuestMap_01},
+	{3,  4,   gText_MainQuestMap_02},
+	{5,  5,   gText_MainQuestMap_03},
+	{6,  7,   gText_MainQuestMap_01},
+	{8,  9,   gText_MainQuestMap_04},
+	{10, 11,  gText_MainQuestMap_05},
+	{12, 16,  gText_MainQuestMap_06},
+	{16, 17,  gText_MainQuestMap_07},
+	{19, 99,  gText_MainQuestMap_08},
+};
+
+// Define dynamic sprites
+static const struct QuestStorySpriteRange sMainQuestSpriteRanges[] =
+{
+	{1,  2,   OBJ_EVENT_GFX_POKE_BALL},
+	{3,  5,   OBJ_EVENT_GFX_STEVEN},
+	{6,  9,   OBJ_EVENT_GFX_ROXANNE},
+	{10, 11,  OBJ_EVENT_GFX_POKE_BALL},
+	{12, 16,  OBJ_EVENT_GFX_STEVEN},
+	{16, 17,  OBJ_EVENT_GFX_WINONA},
+	{19, 99,  OBJ_EVENT_GFX_SPECIES(KROKOROK)},
+};
+
+////////////////////////END DYNAMIC DESCRIPTION, MAP///////////////////////////
+///////////////////////////AND SPRITE CUSTOMIZATION////////////////////////////
+
 //BG layer defintions
 static const struct BgTemplate sQuestMenuBgTemplates[2] =
 {
@@ -407,62 +491,57 @@ static const u8 sQuestMenuWindowFontColors[][4] =
 
 //Functions begin here
 
-////////////////////////BEGIN DYNAMIC DESCRIPTION, MAP/////////////////////////
-///////////////////////////AND SPRITE CUSTOMIZATION////////////////////////////
+static const u8 *GetMainQuestDescByStory(u32 storyTrackerVar)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sMainQuestDescRanges); i++)
+    {
+        if (storyTrackerVar >= sMainQuestDescRanges[i].min
+         && storyTrackerVar <= sMainQuestDescRanges[i].max)
+        {
+            return sMainQuestDescRanges[i].text;
+        }
+    }
 
-// Replace quest descriptions, maps, and sprites, or any combination of the
-// three, based on a variable. Each relevant function is called when
-// drawing the menu.
+    return gText_MainTextPlaceholder;
+}
 
-// Only `QuestMenu_DynamicUpdate_Sprite` has a return value, it must
-// return a spriteId.
+static const u8 *GetMainQuestMapByStory(u32 storyTrackerVar)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sMainQuestMapRanges); i++)
+    {
+        if (storyTrackerVar >= sMainQuestMapRanges[i].min
+         && storyTrackerVar <= sMainQuestMapRanges[i].max)
+        {
+            return sMainQuestMapRanges[i].text;
+        }
+    }
+
+    return gText_MainTextPlaceholder;
+}
+
+static const u16 GetMainQuestSpriteByStory(u32 storyTrackerVar)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sMainQuestSpriteRanges); i++)
+    {
+        if (storyTrackerVar >= sMainQuestSpriteRanges[i].min
+         && storyTrackerVar <= sMainQuestSpriteRanges[i].max)
+        {
+            return sMainQuestSpriteRanges[i].spriteId;
+        }
+    }
+
+    return (const u16) OBJ_EVENT_GFX_POKE_BALL;
+}
 
 void QuestMenu_DynamicUpdate_Description(s32 questId)
 {
-	// Main Quest (ID: 0)
 	if (questId == 0) 
 	{
 		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
-		if (mainStoryTracker == 1 || mainStoryTracker == 2) // Player on way to Palladium, not finished battle with Jordan yet
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_01);
-		}
-		else if (mainStoryTracker == 3 || mainStoryTracker == 4) // Player finished battle with Jordan at Palladium, on way to Route 110
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_02);
-		}
-		else if (mainStoryTracker == 5) // Player got through Sawgrass Forest, going through Route 110
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_03);
-		}
-		else if (mainStoryTracker == 6 || mainStoryTracker == 7) // Awoke at Jordan's ready to start first tournament
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_04);
-		}
-		else if (mainStoryTracker == 8 || mainStoryTracker == 9) // Palladium Tournament underway
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_05);
-		}
-		else if (mainStoryTracker == 10 || mainStoryTracker == 11) // Player won tourney, on way to Woltia through Mulled Cave
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_06);
-		}
-		else if (mainStoryTracker >= 12 && mainStoryTracker <= 14) // Player made it through Mulled Cave to Route 103
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_07);
-		}
-		else if (mainStoryTracker == 15) // Spoke to Jordan at Aerodrome, on way to Old Ruin
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_08);
-		}
-		else if (mainStoryTracker >= 16 && mainStoryTracker <= 18) // Had Old Ruin encounter, ready to start Woltia tourney
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_09);
-		}
-		else if (mainStoryTracker >= 19) // Woltia Tourney completed, on way through Igris Desert
-		{
-			StringCopy(gStringVar1, gText_MainQuestDesc_10);
-		}
+		StringCopy(gStringVar1, GetMainQuestDescByStory(mainStoryTracker));
 	}
 	else
 	{
@@ -472,49 +551,10 @@ void QuestMenu_DynamicUpdate_Description(s32 questId)
 
 void QuestMenu_DynamicUpdate_Map(s32 questId)
 {
-	// For certain quests, set the location based on story var
 	if (questId == 0) 
 	{
 		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
-		if (mainStoryTracker == 1 || mainStoryTracker == 2) // Player on way to Palladium, not finished battle with Jordan yet
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_01);
-		}
-		else if (mainStoryTracker == 3 || mainStoryTracker == 4) // Player finished battle with Jordan at Palladium, on way to and/or through Sawgrass Forest
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_02);
-		} 
-		else if (mainStoryTracker == 5) // Player got through Sawgrass Forest, going through Route 110
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_03);
-		}
-		else if (mainStoryTracker == 6 || mainStoryTracker == 7) // Awoke at Jordan's ready to start first tournament
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_01);
-		}
-		else if (mainStoryTracker == 8 || mainStoryTracker == 9) // Palladium Tournament underway
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_04);
-		}
-		else if (mainStoryTracker == 10 || mainStoryTracker == 11) // Player won tourney, on way to Woltia through Mulled Cave
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_05);
-		}
-		else if (mainStoryTracker >= 12 && mainStoryTracker < 16) // Player made it through Mulled Cave to Route 103
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_06);
-		}
-		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Player ready to start tourney after Old Ruin encounter
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_07);
-		}
-		else if (mainStoryTracker >= 19) // Woltia Tourney completed, on way through Igris Desert
-		{
-			StringCopy(gStringVar2, gText_MainQuestMap_08);
-		}
-		else {
-			StringCopy(gStringVar2, sSideQuests[questId].map);
-		}
+		StringCopy(gStringVar2, GetMainQuestMapByStory(mainStoryTracker));
 	}
 	else
 	{
@@ -522,43 +562,13 @@ void QuestMenu_DynamicUpdate_Map(s32 questId)
 	}
 }
 
-u16 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
-{
-	// Determine sprite ID for certain quests, based on story var state
+u16 QuestMenu_DynamicUpdate_Sprite(s32 questId)
+{	
+	u16 spriteId;
 	if (questId == 0) 
 	{
 		u32 mainStoryTracker = VarGet(VAR_ZED_STORY_TRACKER);
-		if (mainStoryTracker == 1 || mainStoryTracker == 2) // Player on way to Palladium, not finished battle with Jordan yet
-		{
-			spriteId = OBJ_EVENT_GFX_POKE_BALL;
-		}
-		else if (mainStoryTracker >= 3 && mainStoryTracker <= 5) // Player finished battle with Jordan at Palladium, on way to Route 110
-		{
-			spriteId = OBJ_EVENT_GFX_STEVEN;
-		}
-		else if (mainStoryTracker >= 6 && mainStoryTracker <= 9) // Awoke at Jordan's ready to start first tournament, and tournament underway
-		{
-			spriteId = OBJ_EVENT_GFX_ROXANNE;
-		}
-		else if (mainStoryTracker == 10 || mainStoryTracker == 11) // Player won tourney, on way to Woltia through Mulled Cave
-		{
-			spriteId = OBJ_EVENT_GFX_POKE_BALL;
-		}
-		else if (mainStoryTracker >= 12 && mainStoryTracker < 16) // Player made it through Mulled Cave to Route 103
-		{
-			spriteId = OBJ_EVENT_GFX_STEVEN;
-		}
-		else if (mainStoryTracker == 16 || mainStoryTracker == 17) // Player ready to start tourney after Old Ruin encounter
-		{
-			spriteId = OBJ_EVENT_GFX_WINONA;
-		}
-		else if (mainStoryTracker >= 19) // Woltia Tourney completed, on way through Igris Desert
-		{
-			spriteId = OBJ_EVENT_GFX_SPECIES(KROKOROK);
-		}
-		else {
-			spriteId = sSideQuests[questId].sprite;
-		}
+		spriteId = GetMainQuestSpriteByStory(mainStoryTracker);
 	}
 	else
 	{
@@ -568,10 +578,7 @@ u16 QuestMenu_DynamicUpdate_Sprite(s32 questId, u16 spriteId)
 	return spriteId;
 }
 
-
-////////////////////////END DYNAMIC DESCRIPTION, MAP///////////////////////////
-///////////////////////////AND SPRITE CUSTOMIZATION////////////////////////////
-
+// Begin original quest code from ghoulslash
 //ported from firered by ghoulslash
 void QuestMenu_Init(u8 a0, MainCallback callback)
 {
@@ -1770,7 +1777,7 @@ void DetermineSpriteType(s32 questId)
 	{	
 		// If sprite has dynamic updates, use those
 		// Otherwise, use the constant
-		spriteId = QuestMenu_DynamicUpdate_Sprite(questId, spriteId);
+		spriteId = QuestMenu_DynamicUpdate_Sprite(questId);
 
 		spriteType = sSideQuests[questId].spritetype;
 
