@@ -1259,6 +1259,8 @@ const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //// DYNAMIC QUEST DESCRIPTIONS AND LOCATIONS
 
+const u8 gText_MainTextPlaceholder[] = _("Missing variable state!");
+
 // DYNAMIC QUEST DESCRIPTIONS
 const u8 gText_MainQuestDesc_01[] = _("Jordan recommends I go east to Gerbon\nTown to visit The Palladium!");
 const u8 gText_MainQuestDesc_02[] = _("To get stronger, Jordan and I should\ngo to Sawgrass Forest. Jordan claims\nthere is a good place to train there!");
