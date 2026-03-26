@@ -1628,9 +1628,15 @@ void GenerateQuestLocation(s32 questId)
 {
 	if (!IsSubquestMode())
 	{	
-		// If a given quest has dynamic locations, use those.
-		// Otherwise, use the constant
-		QuestMenu_DynamicUpdate_Map(questId);
+		// Only show location if unlocked
+		if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
+		{
+			// If a given quest has dynamic locations, use those.
+			// Otherwise, use the constant
+			QuestMenu_DynamicUpdate_Map(questId);
+		} else {
+			StringCopy(gStringVar2, sText_Unk);
+		}
 	}
 	else
 	{
@@ -1775,14 +1781,22 @@ void DetermineSpriteType(s32 questId)
 
 	if (IsSubquestMode() == FALSE)
 	{	
-		// If sprite has dynamic updates, use those
-		// Otherwise, use the constant
-		spriteId = QuestMenu_DynamicUpdate_Sprite(questId);
-
 		spriteType = sSideQuests[questId].spritetype;
+		// Only show set icon if unlocked, otherwise Poke Ball
+		if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
+		{
+			// If sprite has dynamic updates, use those
+			// Otherwise, use the constant
+			spriteId = QuestMenu_DynamicUpdate_Sprite(questId);
 
-		QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
-		                       spriteType);
+			QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot,
+								spriteType);
+		} else {
+			QuestMenu_CreateSprite((const u16) OBJ_EVENT_GFX_POKE_BALL,
+									sStateDataPtr->spriteIconSlot,
+									spriteType);
+		}
+		
 	}
 	else if (IsSubquestCompletedState(questId) == TRUE)
 	{
