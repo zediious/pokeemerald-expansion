@@ -9658,9 +9658,9 @@
       "id": "LAYOUT_VULIAS_IGRIS_UNDERGROUND",
       "name": "Vulias_Igris_Underground_Layout",
       "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "height": 25,
+      "primary_tileset": "gTileset_IgrisUnderground",
+      "secondary_tileset": "gTileset_Igris_Ruins",
       "border_filepath": "data/layouts/Vulias_Igris_Underground/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Underground/map.bin"
     },
@@ -9673,6 +9673,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Vulias_Route104/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Route104/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_UNDERGROUND_2",
+      "name": "Vulias_Igris_Underground_2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_IgrisUnderground",
+      "secondary_tileset": "gTileset_Igris_Ruins",
+      "border_filepath": "data/layouts/Vulias_Igris_Underground_2/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_Underground_2/map.bin"
     }
   ]
 }
