@@ -2192,6 +2192,8 @@ extern const u8 gText_SideQuestName_30[];
 
 //// DYNAMIC QUEST DESCRIPTIONS AND LOCATIONS
 
+extern const u8 gText_MainTextPlaceholder[];
+
 // DYNAMIC QUEST DESCRIPTIONS
 extern const u8 gText_MainQuestDesc_01[];
 extern const u8 gText_MainQuestDesc_02[];
