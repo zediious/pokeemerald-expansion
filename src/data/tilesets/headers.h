@@ -1706,3 +1706,14 @@ const struct Tileset gTileset_IgrisUnderground =
     .metatileAttributes = gMetatileAttributes_IgrisUnderground,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Igris_Ruins =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Igris_Ruins,
+    .palettes = gTilesetPalettes_Igris_Ruins,
+    .metatiles = gMetatiles_Igris_Ruins,
+    .metatileAttributes = gMetatileAttributes_Igris_Ruins,
+    .callback = NULL,
+};

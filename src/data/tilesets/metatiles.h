@@ -453,3 +453,6 @@ const u16 gMetatileAttributes_DesertMisc[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_IgrisUnderground[] = INCBIN_U16("data/tilesets/primary/igris_underground/metatiles.bin");
 const u16 gMetatileAttributes_IgrisUnderground[] = INCBIN_U16("data/tilesets/primary/igris_underground/metatile_attributes.bin");
+
+const u16 gMetatiles_Igris_Ruins[] = INCBIN_U16("data/tilesets/secondary/igris_ruins/metatiles.bin");
+const u16 gMetatileAttributes_Igris_Ruins[] = INCBIN_U16("data/tilesets/secondary/igris_ruins/metatile_attributes.bin");
