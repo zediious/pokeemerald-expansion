@@ -1257,9 +1257,9 @@ const u8 gText_SideQuestName_28[] = _("Side Quest 28");
 const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
-//descriptions
+//// DYNAMIC QUEST DESCRIPTIONS AND LOCATIONS
 
-// Main Quest
+// DYNAMIC QUEST DESCRIPTIONS
 const u8 gText_MainQuestDesc_01[] = _("Jordan recommends I go east to Gerbon\nTown to visit The Palladium!");
 const u8 gText_MainQuestDesc_02[] = _("To get stronger, Jordan and I should\ngo to Sawgrass Forest. Jordan claims\nthere is a good place to train there!");
 const u8 gText_MainQuestDesc_03[] = _("We got through Sawgrass Forest! Now\nI need to go through Route 110 back\nto Gerbon Town, Jordan is waiting!");
@@ -1271,6 +1271,19 @@ const u8 gText_MainQuestDesc_08[] = _("Jordan I and I are visiting the Old\nRuin
 const u8 gText_MainQuestDesc_09[] = _("After a strange encounter at the Old\nRuins, the tournament is about\nto start at the Aerodrome!!");
 const u8 gText_MainQuestDesc_10[] = _("I've won the Aerodrome Tournament!\nNow, Jordan and I are to travel \nthrough the Igris Desert!");
 
+// DYNAMIC QUEST LOCATIONS
+const u8 gText_MainQuestMap_01[] = _("Gerbon Town");
+const u8 gText_MainQuestMap_02[] = _("Sawgrass Forest");
+const u8 gText_MainQuestMap_03[] = _("Route 110");
+const u8 gText_MainQuestMap_04[] = _("The Palladium");
+const u8 gText_MainQuestMap_05[] = _("Mulled Cave");
+const u8 gText_MainQuestMap_06[] = _("Woltia City");
+const u8 gText_MainQuestMap_07[] = _("The Aerodrome");
+const u8 gText_MainQuestMap_08[] = _("Igris Desert");
+
+//// END DYNAMIC QUEST DESCRIPTIONS AND LOCATIONS
+
+//descriptions
 
 const u8 gText_SideQuestDesc_1[] = _("Description 1");
 const u8 gText_SideQuestDesc_2[] = _("Mysterious people stole a woman's\nTogepi! It's up to me to save it from\nthe Igris Desert!");
@@ -1336,16 +1349,6 @@ const u8 gText_SideQuestDoneDesc_29[] = _("Completed Quest 29");
 const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 
 //map
-
-// Main Quest
-const u8 gText_MainQuestMap_01[] = _("Gerbon Town");
-const u8 gText_MainQuestMap_02[] = _("Sawgrass Forest");
-const u8 gText_MainQuestMap_03[] = _("Route 110");
-const u8 gText_MainQuestMap_04[] = _("The Palladium");
-const u8 gText_MainQuestMap_05[] = _("Mulled Cave");
-const u8 gText_MainQuestMap_06[] = _("Woltia City");
-const u8 gText_MainQuestMap_07[] = _("The Aerodrome");
-const u8 gText_MainQuestMap_08[] = _("Igris Desert");
 
 const u8 gText_SideQuestMap1[] = _("Map 1");
 const u8 gText_SideQuestMap2[] = _("Igris Desert");

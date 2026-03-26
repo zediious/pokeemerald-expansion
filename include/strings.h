@@ -2190,9 +2190,9 @@ extern const u8 gText_SideQuestName_28[];
 extern const u8 gText_SideQuestName_29[];
 extern const u8 gText_SideQuestName_30[];
 
-//descriptions
+//// DYNAMIC QUEST DESCRIPTIONS AND LOCATIONS
 
-// Main Quest
+// DYNAMIC QUEST DESCRIPTIONS
 extern const u8 gText_MainQuestDesc_01[];
 extern const u8 gText_MainQuestDesc_02[];
 extern const u8 gText_MainQuestDesc_03[];
@@ -2203,6 +2203,20 @@ extern const u8 gText_MainQuestDesc_07[];
 extern const u8 gText_MainQuestDesc_08[];
 extern const u8 gText_MainQuestDesc_09[];
 extern const u8 gText_MainQuestDesc_10[];
+
+// DYNAMIC QUEST LOCATIONS
+extern const u8 gText_MainQuestMap_01[];
+extern const u8 gText_MainQuestMap_02[];
+extern const u8 gText_MainQuestMap_03[];
+extern const u8 gText_MainQuestMap_04[];
+extern const u8 gText_MainQuestMap_05[];
+extern const u8 gText_MainQuestMap_06[];
+extern const u8 gText_MainQuestMap_07[];
+extern const u8 gText_MainQuestMap_08[];
+
+//// END DYNAMIC QUEST DESCRIPTIONS AND LOCATIONS
+
+//descriptions
 
 extern const u8 gText_SideQuestDesc_1[];
 extern const u8 gText_SideQuestDesc_2[];
@@ -2268,16 +2282,6 @@ extern const u8 gText_SideQuestDoneDesc_29[];
 extern const u8 gText_SideQuestDoneDesc_30[];
 
 //map
-
-// Main Quest
-extern const u8 gText_MainQuestMap_01[];
-extern const u8 gText_MainQuestMap_02[];
-extern const u8 gText_MainQuestMap_03[];
-extern const u8 gText_MainQuestMap_04[];
-extern const u8 gText_MainQuestMap_05[];
-extern const u8 gText_MainQuestMap_06[];
-extern const u8 gText_MainQuestMap_07[];
-extern const u8 gText_MainQuestMap_08[];
 
 extern const u8 gText_SideQuestMap1[];
 extern const u8 gText_SideQuestMap2[];
