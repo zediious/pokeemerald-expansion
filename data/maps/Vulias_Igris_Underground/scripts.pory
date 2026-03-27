@@ -1,1 +1,36 @@
-mapscripts Vulias_Igris_Underground_MapScripts {}
+mapscripts Vulias_Igris_Underground_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: IgrisDesertUnder1_OnTransition_SetState
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_IGRIS_UNDER_DOHOPLEFT, 1: IgrisUnder_SandHoleSpitOutOnEntryLeft
+    ]
+}
+
+script IgrisDesertUnder1_OnTransition_SetState {
+    setvar(VAR_IGRIS_DIGBUFFER_DOTELE, 0)
+}
+
+script IgrisUnder_SandHoleSpitOutOnEntryLeft {
+    setvar(VAR_IGRIS_UNDER_DOHOPLEFT, 0)
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_2_left, jump_left, face_right))
+    waitmovement
+    msgbox("Thanks to your Dig, you were able to
+            navigate into an underground cave!", MSGBOX_SIGN)
+    waitmessage
+    release
+    end
+}
+
+script IgrisUnder_WarpOutSouth {
+    lock
+    setflag(FLAG_LEAVING_IGRIS_UNDER_SOUTH)
+    warp(MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2)
+    release
+}
+
+script IgrisUnder_WarpOutNorth {
+    lock
+    setflag(FLAG_LEAVING_IGRIS_UNDER_NORTH)
+    warp(MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2)
+    release
+}

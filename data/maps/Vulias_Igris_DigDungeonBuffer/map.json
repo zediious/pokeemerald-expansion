@@ -16,8 +16,8 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 0,
-      "y": 0,
+      "x": 1,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER",
       "dest_warp_id": "0"

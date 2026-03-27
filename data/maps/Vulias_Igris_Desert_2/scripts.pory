@@ -1,1 +1,25 @@
-mapscripts Vulias_Igris_Desert_2_MapScripts {}
+mapscripts Vulias_Igris_Desert_2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: IgrisDesert2_OnTransition_SetState
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_IGRIS_DIGDUNGEON_DOHOP, 1: IgrisDesert2_SandHoleSpitOutOnEntry
+    ]
+}
+
+script IgrisDesert2_OnTransition_SetState {
+    setvar(VAR_IGRIS_DIGBUFFER_DOTELE, 0)
+    setflag(FLAG_ENTERING_IGRISUNDER_NORTH)
+}
+
+// Player jumps two blocks up if entering from dig dungeon buffer
+script IgrisDesert2_SandHoleSpitOutOnEntry {
+    setvar(VAR_IGRIS_DIGDUNGEON_DOHOP, 0)
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_2_up, jump_up, face_down))
+    waitmovement
+    msgbox("You were thrown out back into the
+            Desert!", MSGBOX_SIGN)
+    clearflag(FLAG_LEAVING_IGRIS_UNDER_NORTH)
+    waitmessage
+    release
+    end
+}

@@ -14,7 +14,25 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
-  "warp_events": [],
-  "coord_events": [],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_IGRIS_UNDERGROUND",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "IgrisUnder_WarpOutNorth"
+    }
+  ],
   "bg_events": []
 }

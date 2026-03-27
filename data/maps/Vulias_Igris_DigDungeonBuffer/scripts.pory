@@ -1,17 +1,70 @@
 mapscripts Vulias_Igris_DigDungeonBuffer_MapScripts {
-    MAP_SCRIPT_ON_RESUME: IgrisDigDungeonBuffer_DecideWarp
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_IGRIS_DIGBUFFER_DOTELE, 0: IgrisDigDungeonBuffer_DecideWarp
+    ]
 }
 
 // If player has Dig, send them to the dungeon. Otherwise, spit them
 // out back into Igris Desert
 script IgrisDigDungeonBuffer_DecideWarp {
+    setvar(VAR_IGRIS_DIGBUFFER_DOTELE, 1)
+
+    // Animated the player being sucked into sand hole
+    lock
+    call(SpinPlayer360)
+    call(SpinPlayer360)
+    call(SpinPlayer360)
+    call(SpinPlayer360)
+    call(SpinPlayer360)
+    call(SpinPlayer360)
+
+    // If leaving Igris Under, spit out on right side
+    if (flag(FLAG_LEAVING_IGRIS_UNDER_SOUTH)) {
+        setvar(VAR_IGRIS_DIGDUNGEON_DOHOP, 1)
+        warp(MAP_VULIAS_IGRIS_DESERT, 43, 51)
+        end
+    }
+
+    if (flag(FLAG_LEAVING_IGRIS_UNDER_NORTH)) {
+        setvar(VAR_IGRIS_DIGDUNGEON_DOHOP, 1)
+        warp(MAP_VULIAS_IGRIS_DESERT_2, 15, 75)
+        end
+    }
+
     checkitem(ITEM_TM_DIG, 1)
     if (var(VAR_RESULT) == TRUE) {
-        // send to dig dungeon
-        warp(MAP_VULIAS_IGRIS_UNDERGROUND, 9, 15)
+        if (flag(FLAG_ENTERING_IGRISUNDER_NORTH)) {
+            // send to north
+            setvar(VAR_IGRIS_UNDER_DOHOPLEFT, 1)
+            clearflag(FLAG_ENTERING_IGRISUNDER_NORTH)
+            warp(MAP_VULIAS_IGRIS_UNDERGROUND_2, 15, 3)
+        } else {
+            // send to south
+            setvar(VAR_IGRIS_UNDER_DOHOPLEFT, 1)
+            warp(MAP_VULIAS_IGRIS_UNDERGROUND, 15, 22)
+        }
+        
     } else {
         // send back to Igris Desert
         setvar(VAR_IGRIS_DIGDUNGEON_DOHOP, 1)
         warp(MAP_VULIAS_IGRIS_DESERT, 43, 51)
     }
+    release
+    end
+}
+
+// Player slides in 4x4 square while rotating 360
+script SpinPlayer360 {
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left, slide_up))
+    playse(SE_M_DIG)
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, slide_right))
+    playse(SE_M_DIG)
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right, slide_down))
+    playse(SE_M_DIG)
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down, slide_left))
+    playse(SE_M_DIG)
+    waitmovement
 }

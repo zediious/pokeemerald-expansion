@@ -187,7 +187,7 @@
 #define VAR_TRICK_HOUSE_BEING_WATCHED_STATE              0x40A5
 #define VAR_TRICK_HOUSE_FOUND_TRICK_MASTER               0x40A6
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE                   0x40A7
-#define VAR_UNUSED_0x40A8                                0x40A8 // Unused Var
+#define VAR_IGRIS_UNDER_DOHOPLEFT                        0x40A8 // Whether to do spit/hop out of sand hole to left on entry to Igris Underground
 #define VAR_CYCLING_CHALLENGE_STATE                      0x40A9
 #define VAR_SLATEPORT_MUSEUM_1F_STATE                    0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE                   0x40AB
@@ -206,7 +206,7 @@
 #define VAR_UNUSED_0x40B8                                0x40B8 // Unused Var
 #define VAR_MT_PYRE_STATE                                0x40B9
 #define VAR_NEW_MAUVILLE_STATE                           0x40BA
-#define VAR_UNUSED_0x40BB                                0x40BB // Unused Var
+#define VAR_IGRIS_DIGBUFFER_DOTELE                       0x40BB // Frame table var for dig dungeon scene
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON                0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER                      0x40BD
 #define VAR_GLASS_WORKSHOP_STATE                         0x40BE

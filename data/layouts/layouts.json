@@ -9647,10 +9647,10 @@
     {
       "id": "LAYOUT_VULIAS_IGRIS_DIG_DUNGEON_BUFFER",
       "name": "Vulias_Igris_DigDungeonBuffer_Layout",
-      "width": 2,
-      "height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 4,
+      "height": 3,
+      "primary_tileset": "gTileset_IgrisUnderground",
+      "secondary_tileset": "gTileset_Igris_Ruins",
       "border_filepath": "data/layouts/Vulias_Igris_DigDungeonBuffer/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_DigDungeonBuffer/map.bin"
     },

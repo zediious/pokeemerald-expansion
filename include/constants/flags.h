@@ -728,9 +728,9 @@
 #define FLAG_RUVELPYRAMIDEXT_JORDAN             0x2A1 // Jordan after teleported out of pyramid
 #define FLAG_RUVEL_CATCHABLE_COFA               0x2A2 // Catchable Cofagrigus encounter
 #define FLAG_PALENTOPOKECENTER_JORDAN01         0x2A3 // Jordan in Palento Pokecenter after Pyramid
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
+#define FLAG_LEAVING_IGRIS_UNDER_SOUTH          0x2A4 // Set when leaving Igris Underground to south end
+#define FLAG_LEAVING_IGRIS_UNDER_NORTH          0x2A5 // Set when leaving Igris Underground to north end
+#define FLAG_ENTERING_IGRISUNDER_NORTH          0x2A6 // Indicate player is entering Igris Underground from North
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 #define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
 #define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag

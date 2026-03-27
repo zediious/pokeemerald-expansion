@@ -12,11 +12,18 @@ script IgrisDesert_SandHoleSpitOutOnEntry {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_2_up, jump_up, face_down))
     waitmovement
-    msgbox("You were thrown out back into the
-            Desert!
-            
-            Perhaps if you could {COLOR RED}Dig{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} better, you
-            could find yourself somewhere else!", MSGBOX_SIGN)
+    if (!flag(FLAG_LEAVING_IGRIS_UNDER_SOUTH)) {
+        msgbox("You were thrown out back into the
+                Desert!
+                
+                Perhaps if you could {COLOR RED}Dig{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} better, you
+                could find yourself somewhere else!", MSGBOX_SIGN)
+    } else {
+       msgbox("You were thrown out back into the
+                Desert!", MSGBOX_SIGN) 
+        clearflag(FLAG_LEAVING_IGRIS_UNDER_SOUTH)
+    }
+    
     waitmessage
     release
     end
@@ -33,6 +40,8 @@ script IgrisDesert_OnTransition_SetState {
         setflag(FLAG_RUVELPYRAMIDEXT_JORDAN)
         setflag(FLAG_PALENTOPOKECENTER_JORDAN01)
     }
+    setvar(VAR_IGRIS_DIGBUFFER_DOTELE, 0)
+    clearflag(FLAG_ENTERING_IGRISUNDER_NORTH)
 }
 
 // Signs and Items
