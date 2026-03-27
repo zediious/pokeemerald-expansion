@@ -522,6 +522,25 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveSouth {
     end
 }
 
+// Cannot go into Igris Underground sand pit
+script IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Woah, watch out! We'll get
+            sucked into that sand pit!
+            
+            ...
+            
+            You want to go in? Well, can you do
+            that another time? I don't think I'm
+            up for that just yet.")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement
+    release
+    end
+}
+
 // Gentleman near Pyramid
 script IgrisDesert_EventScript_PyramidGentleman01 {
     lock

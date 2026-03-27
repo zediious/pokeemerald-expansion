@@ -471,6 +471,51 @@
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "20",
       "script": "IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 71,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 71,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 71,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit"
+    },
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 71,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 71,
+      "elevation": 0,
+      "var": "VAR_ZED_STORY_TRACKER",
+      "var_value": "20",
+      "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit"
     }
   ],
   "bg_events": [
