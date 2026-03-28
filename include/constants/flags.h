@@ -733,7 +733,7 @@
 #define FLAG_ENTERING_IGRISUNDER_NORTH          0x2A6 // Indicate player is entering Igris Underground from North
 #define FLAG_MTNTUNNEL_OLDMAN_JOURNAL           0x2A7 // Old man's journal in Mountain tunnel
 #define FLAG_IGRISUNDER_PLAYERISDIGGER          0x2A8 // Player can get into Igris Underground while owning Dig TM and a mon that can learn it.
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
+#define FLAG_MTNTUNNEL_DIGTM                    0x2A9 // Dig TM item in Mountain Tunnel
 #define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag

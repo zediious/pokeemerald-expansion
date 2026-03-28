@@ -15,3 +15,13 @@ script MountainTunnel_JournalPickup {
     release
     end
 }
+
+// Dig TM
+script MountainTunnel_DigTMItem {
+    lock
+    giveitem(ITEM_TM28, 1)
+    waitmessage
+    removeobject(MountainTunnel_DigTM)
+    release
+    end
+}

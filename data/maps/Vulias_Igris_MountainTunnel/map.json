@@ -15,19 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 13,
-      "y": 25,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 3,
       "y": 18,
@@ -105,6 +92,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MountainTunnel_JournalPickup",
       "flag": "FLAG_MTNTUNNEL_OLDMAN_JOURNAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 30,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_1"
     }
   ],
   "warp_events": [
@@ -114,6 +114,13 @@
       "elevation": 0,
       "dest_map": "MAP_VULIAS_IGRIS_DESERT_2",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 30,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_IGRIS_MOUNTAIN_TUNNEL_S1",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

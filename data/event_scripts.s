@@ -1814,3 +1814,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Igris_MountainTunnel/scripts.inc"
 
 	.include "data/maps/Vulias_Igris_OldManHouse/scripts.inc"
+
+	.include "data/maps/Vulias_Igris_MountainTunnel_S1/scripts.inc"

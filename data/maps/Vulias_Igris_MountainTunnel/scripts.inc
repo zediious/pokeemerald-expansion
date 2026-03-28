@@ -17,7 +17,16 @@ MountainTunnel_JournalPickup::
 	questmenu QUEST_MENU_SET_REWARD, 3
 # 14 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	questupdated 3
-# 15 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+MountainTunnel_DigTMItem::
+# 24 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	lock
+# 25 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	giveitem ITEM_TM28, 1
+# 26 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	waitmessage
+# 27 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	removeobject MountainTunnel_DigTM
+# 28 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	release
 	end
 
