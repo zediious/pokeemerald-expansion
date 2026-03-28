@@ -335,39 +335,39 @@ IgrisDesert2_OldManSpeak_GoodFriendship_1:
 IgrisDesert2_OldManSpeak_TeachDigBetter::
 # 296 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	msgbox IgrisDesert2_OldManSpeak_TeachDigBetter_Text_0
-# 308 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	waitmessage
 # 309 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	setflag FLAG_IGRISUNDER_PLAYERISDIGGER
+	waitmessage
 # 310 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	setflag FLAG_IGRISUNDER_PLAYERISDIGGER
 # 311 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
 # 312 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	delay 60
+	closemessage
 # 313 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	delay 60
 # 314 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	msgbox IgrisDesert2_OldManSpeak_TeachDigBetter_Text_1
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 315 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	waitmessage
+	msgbox IgrisDesert2_OldManSpeak_TeachDigBetter_Text_1
 # 316 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	playse MUS_RG_OBTAIN_KEY_ITEM
+	waitmessage
 # 317 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	playse MUS_RG_OBTAIN_KEY_ITEM
+# 318 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	msgbox IgrisDesert2_OldManSpeak_TeachDigBetter_Text_2, MSGBOX_SIGN
-# 320 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	waitse
 # 321 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	waitmessage
+	waitse
 # 322 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	msgbox IgrisDesert2_OldManSpeak_TeachDigBetter_Text_3
-# 329 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	waitmessage
+# 323 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_OldManSpeak_TeachDigBetter_Text_3
 # 330 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	applymovement IGRIS_OLDMAN_INHOME, IgrisDesert2_OldManSpeak_Movement_0
+	waitmessage
 # 331 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	setvar VAR_IGRIS_OLDMAN_STATE, 4
+	applymovement IGRIS_OLDMAN_INHOME, IgrisDesert2_OldManSpeak_Movement_0
 # 332 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	setvar VAR_IGRIS_OLDMAN_STATE, 4
+# 333 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	release
 	end
 
@@ -595,20 +595,21 @@ IgrisDesert2_OldManSpeak_TeachDigBetter_Text_0:
 	.string "know the proper technique\p"
 	.string "Settle down a moment, allow me to\n"
 	.string "show you. You should easily be able\l"
-	.string "to teach this to any Pokemon as well.$"
+	.string "to teach this to any Pokemon that can\l"
+	.string "learn Dig as well.$"
 
 IgrisDesert2_OldManSpeak_TeachDigBetter_Text_1:
-# 314 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+# 315 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	.string "And never open your eyes!$"
 
 IgrisDesert2_OldManSpeak_TeachDigBetter_Text_2:
-# 317 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+# 318 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	.string "You can now enter the Igris\n"
 	.string "Underground from the swirling sand\l"
 	.string "pits in the desert.$"
 
 IgrisDesert2_OldManSpeak_TeachDigBetter_Text_3:
-# 322 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+# 323 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	.string "{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all there is to it! Be\n"
 	.string "sure that at least one of your Pokemon\l"
 	.string "can learn Dig, otherwise you'll get\l"

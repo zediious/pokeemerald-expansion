@@ -304,7 +304,8 @@ script IgrisDesert2_OldManSpeak_TeachDigBetter {
             
             Settle down a moment, allow me to
             show you. You should easily be able
-            to teach this to any Pokemon as well.")
+            to teach this to any Pokemon that can
+            learn Dig as well.")
     waitmessage
     setflag(FLAG_IGRISUNDER_PLAYERISDIGGER)
     fadescreenswapbuffers(FADE_TO_BLACK)
