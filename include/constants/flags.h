@@ -745,7 +745,7 @@
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
+#define FLAG_NO_WHITEOUT                        0x2B5 // Prevent whiteout when set
 #define FLAG_TERA_ORB_NO_COST                   0x2B6 // Tera orb remains charged always
 #define FLAG_TERA_ORB_CHARGED                   0x2B7 // Tera orb charged flag
 #define FLAG_SMART_WILD_MON                     0x2B8 // Wild Pokemon become smart

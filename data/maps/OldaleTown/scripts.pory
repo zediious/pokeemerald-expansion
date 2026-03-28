@@ -201,57 +201,76 @@ script GerbonTownBattleHall_OutdoorBattleStart {
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! That was the best
         match I've seen yet! I am glad you were
         able to see it!
-
+        
         Awhh, it's got me hyped up! Let's
-        battle right now {PLAYER}!", MSGBOX_YESNO)
+        battle right now {PLAYER}!")
+    waitmessage
+
+    goto(GerbonTown_OutdoorBattleJordanAsk)
+
+}
+
+script GerbonTown_OutdoorBattleJordanAsk {
+    msgbox("Don't worry if you lose, I'll heal
+        your Pokemon right away!", MSGBOX_YESNO)
 
     // Choose rival Pokemon based on starter
     if (var(VAR_RESULT) == YES) {
-        if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
-            trainerbattle_single(
-                TRAINER_BRENDAN_ROUTE_103_TREECKO,
-                "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
-                talking about! Let's go!",
-                "Wow {PLAYER}, I didn't know you could
-                battle like that!",
-                event_script=GerbonTown_OutdoorBattleEnd
-            )
-        }
-        elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
-            trainerbattle_single(
-                TRAINER_BRENDAN_ROUTE_110_MUDKIP,
-                "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
-                talking about! Let's go!",
-                "Wow {PLAYER}, I didn't know you could
-                battle like that!",
-                event_script=GerbonTown_OutdoorBattleEnd
-            )
-        }
-        elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
-            trainerbattle_single(
-                TRAINER_BRENDAN_ROUTE_119_MUDKIP,
-                "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
-                talking about! Let's go!",
-                "Wow {PLAYER}, I didn't know you could
-                battle like that!",
-                event_script=GerbonTown_OutdoorBattleEnd
-            )
-        }
-        elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
-            trainerbattle_single(
-                TRAINER_BRENDAN_ROUTE_103_MUDKIP,
-                "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's what I'm
-                talking about! Let's go!",
-                "Wow {PLAYER}, I didn't know you could
-                battle like that!",
-                event_script=GerbonTown_OutdoorBattleEnd
-            )
-        }
+        goto(GerbonTown_OutdoorBattleTrigger)
+    } else{
+        msgbox("No fun! Come on, a real quick battle!")
+        waitmessage
+        goto(GerbonTown_OutdoorBattleJordanAsk)
     }
-    end
+}
+
+script GerbonTown_OutdoorBattleTrigger{
+    setflag(FLAG_NO_WHITEOUT)
+    if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
+        trainerbattle_single(
+            TRAINER_BRENDAN_ROUTE_103_TREECKO,
+            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
+            talking about! Let's go!",
+            "Wow {PLAYER}, I didn't know you could
+            battle like that!",
+            event_script=GerbonTown_OutdoorBattleEnd
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
+        trainerbattle_single(
+            TRAINER_BRENDAN_ROUTE_110_MUDKIP,
+            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
+            talking about! Let's go!",
+            "Wow {PLAYER}, I didn't know you could
+            battle like that!",
+            event_script=GerbonTown_OutdoorBattleEnd
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
+        trainerbattle_single(
+            TRAINER_BRENDAN_ROUTE_119_MUDKIP,
+            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
+            talking about! Let's go!",
+            "Wow {PLAYER}, I didn't know you could
+            battle like that!",
+            event_script=GerbonTown_OutdoorBattleEnd
+        )
+    }
+    elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
+        trainerbattle_single(
+            TRAINER_BRENDAN_ROUTE_103_MUDKIP,
+            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's what I'm
+            talking about! Let's go!",
+            "Wow {PLAYER}, I didn't know you could
+            battle like that!",
+            event_script=GerbonTown_OutdoorBattleEnd
+        )
+    }
 }
 
 script GerbonTown_OutdoorBattleEnd {
+    clearflag(FLAG_NO_WHITEOUT)
+    special(HealPlayerParty)
     lock
     faceplayer
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
