@@ -8,15 +8,30 @@ MountainTunnel_JournalPickup::
 # 6 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	removeobject MTNTUNNEL_OLDMAN_JOURNAL
 # 7 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 8 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	msgbox MountainTunnel_JournalPickup_Text_0, MSGBOX_SIGN
-# 11 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+# 9 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	waitfanfare
+# 10 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	waitmessage
+# 11 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	fadedefaultbgm
 # 12 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	setvar VAR_IGRIS_OLDMAN_STATE, 2
-# 13 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	questmenu QUEST_MENU_SET_REWARD, 3
+	msgbox MountainTunnel_JournalPickup_Text_1, MSGBOX_SIGN
 # 14 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	waitmessage
+# 15 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	setvar VAR_IGRIS_OLDMAN_STATE, 2
+# 16 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	questmenu QUEST_MENU_SET_REWARD, 3
+# 17 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	questupdated 3
+# 18 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	release
+	end
+
+
 MountainTunnel_DigTMItem::
 # 24 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	lock
@@ -32,7 +47,10 @@ MountainTunnel_DigTMItem::
 
 
 MountainTunnel_JournalPickup_Text_0:
-# 7 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	.string "You found the Old Man's Journal!\p"
+# 8 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	.string "You found the Old Man's Journal!$"
+
+MountainTunnel_JournalPickup_Text_1:
+# 12 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	.string "You placed it in your backpack. Better\n"
 	.string "not read it!$"

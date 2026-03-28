@@ -4,9 +4,12 @@ mapscripts Vulias_Igris_MountainTunnel_MapScripts {}
 script MountainTunnel_JournalPickup {
     lock
     removeobject(MTNTUNNEL_OLDMAN_JOURNAL)
-    msgbox("You found the Old Man's Journal!
-    
-            You placed it in your backpack. Better
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("You found the Old Man's Journal!", MSGBOX_SIGN)
+    waitfanfare
+    waitmessage
+    fadedefaultbgm
+    msgbox("You placed it in your backpack. Better
             not read it!", MSGBOX_SIGN)
     waitmessage
     setvar(VAR_IGRIS_OLDMAN_STATE, 2)
