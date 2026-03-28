@@ -274,11 +274,19 @@ script GerbonTown_OutdoorBattleEnd {
     lock
     faceplayer
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You must have been
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You must have been
             practicing, I thought I had that in
-            the bag!
-            
-            I've been thinking, maybe we should try
+            the bag!")
+        waitmessage
+    } else {
+       msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Whew, that was a close one!
+                Looks like my training has paid off! I
+                bet you didn't expect that huh?")
+        waitmessage 
+    }
+    msgbox("I've been thinking, maybe we should try
             to challenge the {COLOR RED}Representative
             Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon Town. That's Julia,
             one of the trainers we just watched!
