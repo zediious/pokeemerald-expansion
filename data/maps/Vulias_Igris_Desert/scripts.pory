@@ -720,3 +720,66 @@ script IgrisDesert_FoundChildWarpedOutside {
     release
     end
 }
+
+//// Route Trainers
+script IgrisDesert_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_FLINT,
+        "I can't get the sand out of my eyes!",
+        "It's everywhere!."
+    )
+    msgbox("It's very irritating too!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_JONAH,
+        "Such a beautiful desert I could stay
+        here for hours!",
+        "Ah, maybe I'll go rest a bit."
+    )
+    msgbox("Second thought, I can't take my eyes
+            off of this place!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Likely Double Battle
+script IgrisDesert_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_MARLENE,
+        "I could see you coming, but not you I!",
+        "I still lost!"
+    )
+    msgbox("Maybe I'll get the next passerby. You're
+            too tough!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert_EventScript_Trainer04{
+    trainerbattle_single(
+        TRAINER_ALVARO,
+        "Hah! You are not prepared for this!",
+        "Hah! I was not prepared for this!"
+    )
+    msgbox("I thought I was prepared for this...", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+// End Likely Double Battle
+
+script IgrisDesert_EventScript_Trainer05{
+    trainerbattle_single(
+        TRAINER_HEIDI,
+        "There's less sand in this valley-
+        pftttt!",
+        "False hope..."
+    )
+    msgbox("Why did I even come here? This is no
+            place for a picnic!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
