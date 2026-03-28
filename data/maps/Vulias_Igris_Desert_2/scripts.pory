@@ -23,3 +23,312 @@ script IgrisDesert2_SandHoleSpitOutOnEntry {
     release
     end
 }
+
+// Player speaks to Tera Orb-posessing Old Man in home
+script IgrisDesert2_OldManSpeak {
+    lock
+    faceplayer
+    if (var(VAR_IGRIS_OLDMAN_STATE) == 0) // Not accepted quest by bringing Pokemon w/ Friendship >= 100
+    {
+        bufferleadmonspeciesname(STR_VAR_1)
+        
+        msgbox("{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ah hello!
+        
+        ...your {STR_VAR_1}...")
+        waitmessage
+
+        specialvar(VAR_RESULT, GetLeadMonFriendship)
+        switch (var(VAR_RESULT)) {
+            case 1: // Friendship > 0 and < 50
+                msgbox("They seem to have spent a little time
+                        with you, but don't fully trust you.")
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_LeaveBadFriendship)
+            case 2: // Friendship >= 50 and < 100
+                msgbox("There is a friendship here, but there is
+                        still something missing...")
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_LeaveBadFriendship)
+            case 3: // Friendship >= 100 and < 140
+                msgbox("They appear to like you quite a lot!
+                        You must have some understanding of
+                        what it means to be a Pokemon trainer!")
+                waitmessage
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_GoodFriendship)
+            case 4: // Friendship >= 150 and < 200
+                msgbox("It's clear they trust you deeply, the
+                        look in their eyes says it all.")
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_GoodFriendship)
+            case 5: // Friendship >= 200 and < 255
+                msgbox("Why, it simply adores you! It's rare that
+                        I see such a strong bond between a
+                        trainer and Pokemon.")
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_GoodFriendship)
+            case 6: // Friendship == 255
+                msgbox("The bond you two share...it is palpable.
+                        I daresay you two could take on the
+                        world together.")
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_GoodFriendship)
+            default: // Should be 0
+                msgbox("Why, they don't seem to like you very
+                        very much at all!")
+                waitmessage
+                goto(IgrisDesert2_OldManSpeak_LeaveBadFriendship)
+        }
+
+    } 
+    elif (var(VAR_IGRIS_OLDMAN_STATE) == 1) // Player has agreed to get journal but not gotten it yet.
+    {
+        msgbox("The tunnel is found through the {COLOR RED}ladder
+                on the cliff that is behind my home{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
+                
+                Make sure you prepare your Pokemon!")
+        applymovement(IGRIS_OLDMAN_INHOME, moves(face_right))
+        waitmovement
+        release
+        end
+    }
+    elif (var(VAR_IGRIS_OLDMAN_STATE) == 2) // Returned after retrieving the Old Man's journal, get Tera Orb
+    {
+        msgbox("You show the old man the dusty journal
+        
+                {COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Without a doubt, that's my
+                journal! I cannot thank you enough for
+                retreiving it!
+                
+                As well...if you were able to make it
+                past the trainers down there, you
+                have an undoubtedly strong bond
+                with with your Pokemon.
+                
+                ...
+                
+                What do you think Skeledirge? Are
+                they ready for such a thing?")
+        waitmessage
+
+        // SKELEDIRGE thinks so
+        applymovement(IGRIS_OLDMANMON_INHOME, moves(
+            face_down,
+            jump_in_place_down * 3
+        ))
+        waitmovement
+        playmoncry(SPECIES_SKELEDIRGE, CRY_MODE_NORMAL)
+        msgbox("Wohhhhhhhhh")
+        waitmoncry
+        waitmessage
+        applymovement(IGRIS_OLDMANMON_INHOME, moves(face_left))
+        waitmovement
+
+        msgbox("{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No room to argue with that!
+                Here, take this {COLOR RED}Tera Orb{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
+
+        giveitem(ITEM_TERA_ORB, 1)
+        msgbox("{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The {COLOR RED}Tera Orb{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is a very special
+                object. It allows you and your Pokemon
+                to draw on 'Terestal' energy that is
+                found in the environment.
+                
+                That energy is not quite as strong here
+                as my home region of {COLOR RED}Paldea{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but
+                it exists! There is something here that
+                is giving off that energy.
+                
+                Anyways, if you use your orb while in
+                battle, your Pokemon will Terastallize!
+                It will take on a gemstone-like look,
+                and you'll find that it hits harder
+                with different typed attacks!
+                
+                There is a lot more to learn, but I think
+                it's best if you get out there and 
+                give it a try.")
+        setvar(VAR_IGRIS_OLDMAN_STATE, 3)
+        checkitem(ITEM_TM_DIG, 1)
+        completequest(3)
+        if (var(VAR_RESULT) == TRUE) {
+            goto(IgrisDesert2_OldManSpeak_TeachDigBetter)
+        }
+        release
+        end
+    }
+    elif (var(VAR_IGRIS_OLDMAN_STATE) == 3) // Came back with Dig TM
+    {   
+        checkitem(ITEM_TM_DIG, 1)
+        if (var(VAR_RESULT) == TRUE) {
+            goto(IgrisDesert2_OldManSpeak_TeachDigBetter)
+        } else {
+            msgbox("{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hello! If you ever come across
+            the {COLOR RED}Dig TM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, I can teach you something
+            about traveling in the Igris Desert!
+            
+            You ought to be able to find it
+            around here somewhere...")
+            waitmessage
+            release
+            end
+        }
+    }
+    else // Old Man wishes player luck on their journey
+    {
+        msgbox("{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Enjoy your journey! You're only
+                young for so long!")
+        waitmessage
+        applymovement(IGRIS_OLDMANMON_INHOME, moves(
+            face_down,
+            jump_in_place_down
+        ))
+        waitmovement
+        playmoncry(SPECIES_SKELEDIRGE, CRY_MODE_NORMAL)
+        msgbox("Wohhhhhhhhh")
+        waitmoncry
+        waitmessage
+        applymovement(IGRIS_OLDMANMON_INHOME, moves(face_left))
+        waitmovement
+        release
+        end
+    }
+}
+
+// Old Man tells player to fuck off
+script IgrisDesert2_OldManSpeak_LeaveBadFriendship {
+    msgbox("This won't do. Come back when your {COLOR RED}lead
+            Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shows it
+            trusts you.")
+    applymovement(IGRIS_OLDMAN_INHOME, moves(face_right))
+    waitmovement
+    release
+    end
+}
+
+// Old Man gives player quest
+script IgrisDesert2_OldManSpeak_GoodFriendship {
+    msgbox("I think you're the person I've been
+            looking for.")
+    waitmessage
+    applymovement(IGRIS_OLDMANMON_INHOME, moves(
+        face_down,
+        jump_in_place_down
+    ))
+    waitmovement
+    playmoncry(SPECIES_SKELEDIRGE, CRY_MODE_NORMAL)
+    msgbox("Wohhhhhhhhh")
+    applymovement(IGRIS_OLDMAN_INHOME, moves(face_up))
+    waitmoncry
+    waitmessage
+    applymovement(IGRIS_OLDMANMON_INHOME, moves(face_left))
+    waitmovement
+    faceplayer
+    msgbox("Hoho, Skeledirge agrees as well it would
+            seem!
+            
+            Now then, if you would hear an old man
+            out, I would like to ask something of
+            you.", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Good, thank you!
+        
+                There is an old tunnel, which can be
+                found through the {COLOR RED}ladder on
+                the cliff that is behind my home{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. A few
+                years past, I made a trek there with my
+                dear Skeledirge.
+
+                Much of the tunnels there are collapsed
+                however it was a worthwhile trip.
+                
+                However, my old bones ache, and I could
+                barely muster the strength to leave!
+                
+                Upon my return, exhausted, I found I
+                left my journal behind! I recalled
+                setting it down to write, I must have
+                left it right there. Rather quickly,
+                I began to deteriorate further. There
+                is no chance I could retrieve it on my
+                own, even with Skeledirge. They've
+                gotten old too!")
+        waitmessage
+
+        // SKELEDIRGE agrees
+        applymovement(IGRIS_OLDMANMON_INHOME, moves(
+            face_down,
+            jump_in_place_down
+        ))
+        waitmovement
+        playmoncry(SPECIES_SKELEDIRGE, CRY_MODE_NORMAL)
+        msgbox("Wohhhhhhhhh")
+        waitmoncry
+        waitmessage
+        applymovement(IGRIS_OLDMANMON_INHOME, moves(face_left))
+        waitmovement
+        msgbox("That journal is important to me, I have
+                kept it since I was a young lad. I would
+                appreciate it if you could retrieve it
+                for me from the {COLOR RED}Mountain Tunnel.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+                
+                Surely, I'll have something for you in
+                return!")
+        waitmessage
+        setvar(VAR_IGRIS_OLDMAN_STATE, 1)
+        startquest(3)
+        release
+        end
+    } else {
+        msgbox("Ah, I understand. Places to be, I'm sure!
+        
+                Keep this old man in your mind the next
+                time you're in the Igris Desert!")
+        waitmessage
+        applymovement(IGRIS_OLDMAN_INHOME, moves(face_right))
+        waitmovement
+        release
+        end
+    }
+}
+
+// Old man teaches how to dig, or tells player to come back when they have the TM
+script IgrisDesert2_OldManSpeak_TeachDigBetter {
+    msgbox("Hmm, I see you also have the
+            {COLOR RED}Dig TM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
+            
+            I can teach you how use that move to
+            get around the Igris Desert easier.
+            There are tunnels underground that you
+            can access with Dig, but you need to
+            know the proper technique
+            
+            Settle down a moment, allow me to
+            show you. You should easily be able
+            to teach this to any Pokemon as well.")
+    waitmessage
+    setflag(FLAG_IGRISUNDER_PLAYERISDIGGER)
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    closemessage
+    delay(60)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    msgbox("And never open your eyes!")
+    waitmessage
+    playse(MUS_RG_OBTAIN_KEY_ITEM)
+    msgbox("You can now enter the Igris
+            Underground from the swirling sand
+            pits in the desert.", MSGBOX_SIGN)
+    waitse
+    waitmessage
+    msgbox("{COLOR GREEN}Old Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all there is to it! Be
+            sure that at least one of your Pokemon
+            can learn Dig, otherwise you'll get
+            spat back out into the Desert!
+            
+            Good luck out there, though I'm
+            not sure you'll need it!")
+    waitmessage
+    applymovement(IGRIS_OLDMAN_INHOME, moves(face_right))
+    setvar(VAR_IGRIS_OLDMAN_STATE, 4)
+    release
+    end
+}

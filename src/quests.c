@@ -334,6 +334,16 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      NULL,
 	      0
 	),
+	side_quest(
+	      gText_SideQuestName_4,
+	      gText_SideQuestDesc_4,
+	      gText_SideQuestDoneDesc_4,
+	      gText_SideQuestMap4,
+	      OBJ_EVENT_GFX_JOURNAL,
+	      OBJECT,
+	      NULL,
+	      0
+	),
 };
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////

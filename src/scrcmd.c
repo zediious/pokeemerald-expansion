@@ -2349,6 +2349,9 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
         case MOVE_DIVE:
             count = CountTotalItemQuantityInBag(ITEM_HM08);
             break;
+        case MOVE_DIG:
+            count = CountTotalItemQuantityInBag(ITEM_TM28);
+            break;
         default:
             return FALSE;
     }
@@ -2367,9 +2370,9 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
             // Get teachable learnset of species, return if species can learn the move
             const u16 *learnset2 = GetSpeciesTeachableLearnset(species);
             for (u32 j = 0; learnset2[j] != MOVE_UNAVAILABLE;j++)
-            {
+            {   
                 if (learnset2[j] == move)
-                {
+                {   
                     gSpecialVar_Result = i;
                     gSpecialVar_0x8004 = species;
                     break;

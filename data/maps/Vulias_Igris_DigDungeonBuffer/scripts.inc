@@ -31,10 +31,11 @@ IgrisDigDungeonBuffer_DecideWarp::
 # 28 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	goto_if_set FLAG_LEAVING_IGRIS_UNDER_NORTH, IgrisDigDungeonBuffer_DecideWarp_5
 # 34 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	checkitem ITEM_TM_DIG, 1
+	checkfieldmove FIELD_MOVE_DIG, FALSE
 # 35 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	compare VAR_RESULT, TRUE
-	goto_if_eq IgrisDigDungeonBuffer_DecideWarp_8
+	compare VAR_0x8004, FALSE
+	goto_if_ne IgrisDigDungeonBuffer_DecideWarp_10
+IgrisDigDungeonBuffer_DecideWarp_9:
 # 49 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	setvar VAR_IGRIS_DIGDUNGEON_DOHOP, 1
 # 50 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
@@ -60,14 +61,19 @@ IgrisDigDungeonBuffer_DecideWarp_5:
 
 IgrisDigDungeonBuffer_DecideWarp_8:
 # 36 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	goto_if_set FLAG_ENTERING_IGRISUNDER_NORTH, IgrisDigDungeonBuffer_DecideWarp_11
+	goto_if_set FLAG_ENTERING_IGRISUNDER_NORTH, IgrisDigDungeonBuffer_DecideWarp_13
 # 43 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	setvar VAR_IGRIS_UNDER_DOHOPLEFT, 1
 # 44 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	warp MAP_VULIAS_IGRIS_UNDERGROUND, 15, 22
 	goto IgrisDigDungeonBuffer_DecideWarp_7
 
-IgrisDigDungeonBuffer_DecideWarp_11:
+IgrisDigDungeonBuffer_DecideWarp_10:
+# 35 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	goto_if_set FLAG_IGRISUNDER_PLAYERISDIGGER, IgrisDigDungeonBuffer_DecideWarp_8
+	goto IgrisDigDungeonBuffer_DecideWarp_9
+
+IgrisDigDungeonBuffer_DecideWarp_13:
 # 38 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	setvar VAR_IGRIS_UNDER_DOHOPLEFT, 1
 # 39 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"

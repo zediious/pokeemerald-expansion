@@ -731,8 +731,8 @@
 #define FLAG_LEAVING_IGRIS_UNDER_SOUTH          0x2A4 // Set when leaving Igris Underground to south end
 #define FLAG_LEAVING_IGRIS_UNDER_NORTH          0x2A5 // Set when leaving Igris Underground to north end
 #define FLAG_ENTERING_IGRISUNDER_NORTH          0x2A6 // Indicate player is entering Igris Underground from North
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
+#define FLAG_MTNTUNNEL_OLDMAN_JOURNAL           0x2A7 // Old man's journal in Mountain tunnel
+#define FLAG_IGRISUNDER_PLAYERISDIGGER          0x2A8 // Player can get into Igris Underground while owning Dig TM and a mon that can learn it.
 #define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
 #define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
@@ -746,8 +746,8 @@
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
+#define FLAG_TERA_ORB_NO_COST                   0x2B6 // Tera orb remains charged always
+#define FLAG_TERA_ORB_CHARGED                   0x2B7 // Tera orb charged flag
 #define FLAG_SMART_WILD_MON                     0x2B8 // Wild Pokemon become smart
 #define FLAG_NO_CATCHING                        0x2B9 // Disable catching in Wild Battles
 #define FLAG_ALWAYS_BATTLE_PARTNER              0x2BA // Force battle partner during wild battles.

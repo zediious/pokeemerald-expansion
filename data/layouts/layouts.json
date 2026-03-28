@@ -9683,6 +9683,26 @@
       "secondary_tileset": "gTileset_Igris_Ruins",
       "border_filepath": "data/layouts/Vulias_Igris_Underground_2/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Underground_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_MOUNTAIN_TUNNEL",
+      "name": "Vulias_Igris_MountainTunnel_Layout",
+      "width": 51,
+      "height": 27,
+      "primary_tileset": "gTileset_CavesMain",
+      "secondary_tileset": "gTileset_CavesMainSecondary",
+      "border_filepath": "data/layouts/Vulias_Igris_MountainTunnel/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_MountainTunnel/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_IGRIS_OLD_MAN_HOUSE",
+      "name": "Vulias_Igris_OldManHouse_Layout",
+      "width": 6,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Vulias_Igris_OldManHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Igris_OldManHouse/map.bin"
     }
   ]
 }

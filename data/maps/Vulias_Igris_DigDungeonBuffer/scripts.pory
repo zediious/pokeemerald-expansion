@@ -31,8 +31,8 @@ script IgrisDigDungeonBuffer_DecideWarp {
         end
     }
 
-    checkitem(ITEM_TM_DIG, 1)
-    if (var(VAR_RESULT) == TRUE) {
+    checkfieldmove(FIELD_MOVE_DIG, FALSE)
+    if (var(VAR_0x8004) != FALSE && flag(FLAG_IGRISUNDER_PLAYERISDIGGER)) {
         if (flag(FLAG_ENTERING_IGRISUNDER_NORTH)) {
             // send to north
             setvar(VAR_IGRIS_UNDER_DOHOPLEFT, 1)

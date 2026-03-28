@@ -1,0 +1,17 @@
+mapscripts Vulias_Igris_MountainTunnel_MapScripts {}
+
+// Journal - player pics up and thye "have" it.
+script MountainTunnel_JournalPickup {
+    lock
+    removeobject(MTNTUNNEL_OLDMAN_JOURNAL)
+    msgbox("You found the Old Man's Journal!
+    
+            You placed it in your backpack. Better
+            not read it!", MSGBOX_SIGN)
+    waitmessage
+    setvar(VAR_IGRIS_OLDMAN_STATE, 2)
+    questmenu(QUEST_MENU_SET_REWARD, 3)
+    questupdated(3)
+    release
+    end
+}
