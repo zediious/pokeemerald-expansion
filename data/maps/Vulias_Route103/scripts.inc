@@ -63,6 +63,36 @@ VuliasRoute103_EventScript_LostMonWomanSpeak_1:
 	return
 
 
+VuliasRoute103_EventScript_Trainer01::
+# 57 "data/maps/Vulias_Route103/scripts.pory"
+	trainerbattle_single TRAINER_HALEY_1, VuliasRoute103_EventScript_Trainer01_Text_0, VuliasRoute103_EventScript_Trainer01_Text_1
+# 62 "data/maps/Vulias_Route103/scripts.pory"
+	msgbox VuliasRoute103_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
+# 63 "data/maps/Vulias_Route103/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasRoute103_EventScript_Trainer02::
+# 68 "data/maps/Vulias_Route103/scripts.pory"
+	trainerbattle_single TRAINER_ISABEL_5, VuliasRoute103_EventScript_Trainer02_Text_0, VuliasRoute103_EventScript_Trainer02_Text_1
+# 73 "data/maps/Vulias_Route103/scripts.pory"
+	msgbox VuliasRoute103_EventScript_Trainer02_Text_2, MSGBOX_AUTOCLOSE
+# 75 "data/maps/Vulias_Route103/scripts.pory"
+	waitmessage
+	end
+
+
+VuliasRoute103_EventScript_Trainer03::
+# 80 "data/maps/Vulias_Route103/scripts.pory"
+	trainerbattle_single TRAINER_ABIGAIL_1, VuliasRoute103_EventScript_Trainer03_Text_0, VuliasRoute103_EventScript_Trainer03_Text_1
+# 86 "data/maps/Vulias_Route103/scripts.pory"
+	msgbox VuliasRoute103_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
+# 89 "data/maps/Vulias_Route103/scripts.pory"
+	waitmessage
+	end
+
+
 # 6 "data/maps/Vulias_Route103/scripts.pory"
 VuliasRoute103_EventScript_LostMonQuestTrigger_Movement_0:
 # 6 "data/maps/Vulias_Route103/scripts.pory"
@@ -109,3 +139,43 @@ VuliasRoute103_EventScript_LostMonWomanSpeak_Text_0:
 	.string "If you do, I might be able to help\n"
 	.string "you {COLOR RED}cut down{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} trees!\p"
 	.string "Some way that's worth more than gold!$"
+
+VuliasRoute103_EventScript_Trainer01_Text_0:
+# 59 "data/maps/Vulias_Route103/scripts.pory"
+	.string "The flowers are so lovely!$"
+
+VuliasRoute103_EventScript_Trainer01_Text_1:
+# 60 "data/maps/Vulias_Route103/scripts.pory"
+	.string "Awh man! Pick me a flower!.$"
+
+VuliasRoute103_EventScript_Trainer01_Text_2:
+# 62 "data/maps/Vulias_Route103/scripts.pory"
+	.string "There's plenty around, choose one!$"
+
+VuliasRoute103_EventScript_Trainer02_Text_0:
+# 70 "data/maps/Vulias_Route103/scripts.pory"
+	.string "My Pokemon love it out here!$"
+
+VuliasRoute103_EventScript_Trainer02_Text_1:
+# 71 "data/maps/Vulias_Route103/scripts.pory"
+	.string "It seems yours do to!.$"
+
+VuliasRoute103_EventScript_Trainer02_Text_2:
+# 73 "data/maps/Vulias_Route103/scripts.pory"
+	.string "Always be sure to let your Pokemon\n"
+	.string "enjoy their time!$"
+
+VuliasRoute103_EventScript_Trainer03_Text_0:
+# 82 "data/maps/Vulias_Route103/scripts.pory"
+	.string "Careful, coming through!$"
+
+VuliasRoute103_EventScript_Trainer03_Text_1:
+# 83 "data/maps/Vulias_Route103/scripts.pory"
+	.string "What, there is no bike path\n"
+	.string "around here!$"
+
+VuliasRoute103_EventScript_Trainer03_Text_2:
+# 86 "data/maps/Vulias_Route103/scripts.pory"
+	.string "I wish there was a bike path...I have\n"
+	.string "to go all the way to the other side of\l"
+	.string "Vulias to go to the {COLOR RED}Eastern Highway{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.$"

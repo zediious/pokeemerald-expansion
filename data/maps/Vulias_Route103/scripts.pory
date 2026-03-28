@@ -51,3 +51,41 @@ script VuliasRoute103_EventScript_LostMonWomanSpeak {
     }
     
 }
+
+//// Route Trainers
+script VuliasRoute103_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_HALEY_1,
+        "The flowers are so lovely!",
+        "Awh man! Pick me a flower!."
+    )
+    msgbox("There's plenty around, choose one!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasRoute103_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_ISABEL_5,
+        "My Pokemon love it out here!",
+        "It seems yours do to!."
+    )
+    msgbox("Always be sure to let your Pokemon
+            enjoy their time!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script VuliasRoute103_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_ABIGAIL_1,
+        "Careful, coming through!",
+        "What, there is no bike path
+        around here!"
+    )
+    msgbox("I wish there was a bike path...I have
+            to go all the way to the other side of
+            Vulias to go to the {COLOR RED}Eastern Highway{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
