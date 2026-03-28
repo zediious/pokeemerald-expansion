@@ -340,6 +340,20 @@
       "flag": "0"
     },
     {
+      "local_id": "IGRIS_WARNSAND_KID",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 54,
+      "y": 58,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 33,
       "y": 16,
@@ -581,6 +595,150 @@
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "20",
       "script": "IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "0",
+      "script": "IgrisDesert_SandPitWarningTrigger_01"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "2",
+      "script": "IgrisDesert_SandPitWarningTrigger_01"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "1",
+      "script": "IgrisDesert_SandPitWarningTrigger_01"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "3",
+      "script": "IgrisDesert_SandPitWarningTrigger_01"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "0",
+      "script": "IgrisDesert_SandPitWarningTrigger_02"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "0",
+      "script": "IgrisDesert_SandPitWarningTrigger_03"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "0",
+      "script": "IgrisDesert_SandPitWarningTrigger_04"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "1",
+      "script": "IgrisDesert_SandPitWarningTrigger_02"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "1",
+      "script": "IgrisDesert_SandPitWarningTrigger_03"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "1",
+      "script": "IgrisDesert_SandPitWarningTrigger_04"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "2",
+      "script": "IgrisDesert_SandPitWarningTrigger_02"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "2",
+      "script": "IgrisDesert_SandPitWarningTrigger_03"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "2",
+      "script": "IgrisDesert_SandPitWarningTrigger_04"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "3",
+      "script": "IgrisDesert_SandPitWarningTrigger_02"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "3",
+      "script": "IgrisDesert_SandPitWarningTrigger_03"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_IGRIS_OLDMAN_STATE",
+      "var_value": "3",
+      "script": "IgrisDesert_SandPitWarningTrigger_04"
     }
   ],
   "bg_events": [

@@ -336,6 +336,88 @@ script IgrisDesert_EventScript_JordanFollower01 {
 
 //// Second visit, entire second section available
 
+// Kid warns of sand pits when nearing for first time. Triggers for spot player walked from
+script IgrisDesert_SandPitWarningTrigger_01 {
+    if (!flag(FLAG_IGRIS_WARNEDSANDPIT)) {
+        lock
+        applymovement(IGRIS_WARNSAND_KID, moves(emote_exclamation_mark, face_left))
+        delay(10)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        delay(20)
+        applymovement(IGRIS_WARNSAND_KID, moves(walk_left * 3))
+        setvar(VAR_TEMP_F, 3)
+        goto(IgrisDesert_SandPitWarning)
+    }
+}
+
+script IgrisDesert_SandPitWarningTrigger_02 {
+    if (!flag(FLAG_IGRIS_WARNEDSANDPIT)) {
+       lock
+        applymovement(IGRIS_WARNSAND_KID, moves(emote_exclamation_mark, face_left))
+        delay(10)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        delay(20)
+        applymovement(IGRIS_WARNSAND_KID, moves(walk_left * 2))
+        setvar(VAR_TEMP_F, 2)
+        goto(IgrisDesert_SandPitWarning) 
+    }
+}
+
+script IgrisDesert_SandPitWarningTrigger_03 {
+    if (!flag(FLAG_IGRIS_WARNEDSANDPIT)) {
+        lock
+        applymovement(IGRIS_WARNSAND_KID, moves(emote_exclamation_mark, face_left))
+        delay(10)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        delay(20)
+        applymovement(IGRIS_WARNSAND_KID, moves(walk_left))
+        setvar(VAR_TEMP_F, 1)
+        goto(IgrisDesert_SandPitWarning)
+    }
+}
+
+script IgrisDesert_SandPitWarningTrigger_04 {
+    if (!flag(FLAG_IGRIS_WARNEDSANDPIT)) {
+        lock
+        applymovement(IGRIS_WARNSAND_KID, moves(emote_exclamation_mark, face_left))
+        delay(10)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        delay(20)
+        setvar(VAR_TEMP_F, 0)
+        goto(IgrisDesert_SandPitWarning)
+    }
+}
+
+script IgrisDesert_SandPitWarning {
+    msgbox("{COLOR GREEN}School Kid: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wait! Be careful if you go
+            that way! The sand pit over there will
+            suck you up!
+            
+            You have to be very skilled, and know
+            the right techniques to properly
+            navigate through one of those.
+            
+            I would steer cleer!")
+    waitmessage
+
+    if (var(VAR_TEMP_F) == 1) {
+        applymovement(IGRIS_WARNSAND_KID, moves(walk_right, face_down))
+    }
+    elif (var(VAR_TEMP_F) == 2) {
+        applymovement(IGRIS_WARNSAND_KID, moves(walk_right * 2, face_down))
+    }
+    elif (var(VAR_TEMP_F) == 3) {
+        applymovement(IGRIS_WARNSAND_KID, moves(walk_right * 3, face_down))
+    }
+    waitmovement
+
+    setvar(VAR_TEMP_F, 0)
+    setflag(FLAG_IGRIS_WARNEDSANDPIT)
+    release
+    end
+}
+
+
 script IgrisDesert_DetermineJordanTeam02 {
     if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
         setfollowernpc(

@@ -719,7 +719,7 @@
 #define FLAG_RUVELPYRAMID_WHICHCOFA             0x298 // Identifies last Cofagrigus player interacted with
 #define FLAG_RUVELPYRAMID_GOTHORITA01           0x299 // First Gothorita encounter in Ruvel Pyramid
 #define FLAG_RUVELPYRAMID_LOSTKID01             0x29A // Lost kid in Ruvel Pyramid inside
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
+#define FLAG_IGRIS_WARNEDSANDPIT                0x29B // Player was warned of sand pits
 #define FLAG_RUVELPYRAMIDEXT_GENTLEMAN          0x29C // Gentleman who runs for help
 #define FLAG_RUVELPYRAMIDEXT_LOSTKID            0x29D // Lost kid outside after being found
 #define FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM         0x29E // Mother of lost child
