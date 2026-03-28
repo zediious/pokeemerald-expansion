@@ -39,3 +39,13 @@ script Route110_Pokecenter_Nurse {
     release
     end
 }
+
+script Route110PokeCenter_HealerChansey {
+    lock
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    msgbox("Chans-eee")
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}

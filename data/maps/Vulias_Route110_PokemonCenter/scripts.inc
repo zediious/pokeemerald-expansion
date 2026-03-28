@@ -25,3 +25,25 @@ Route110_Pokecenter_Nurse::
 	release
 	end
 
+
+Route110PokeCenter_HealerChansey::
+# 44 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	lock
+# 45 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
+# 46 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	msgbox Route110PokeCenter_HealerChansey_Text_0
+# 47 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	waitmoncry
+# 48 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	waitmessage
+# 49 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	closemessage
+# 50 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	release
+	return
+
+
+Route110PokeCenter_HealerChansey_Text_0:
+# 46 "data/maps/Vulias_Route110_PokemonCenter/scripts.pory"
+	.string "Chans-eee$"
