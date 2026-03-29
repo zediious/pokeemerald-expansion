@@ -405,3 +405,49 @@ script GerbonTownTourney_JordanAfter {
     release
     end
 }
+
+//// Other NPCs in exteriors and interiors
+
+// Exterior NPCs
+
+// Triathelete house with Linoone - gives Macho Brace
+script GerbonTown_EventScript_TriathleteHouseMan {
+    lock
+    faceplayer
+    if (!flag(FLAG_GERBON_GOT_MACHO)) {
+        msgbox("It's important to train yourself, and
+            your Pokemon! Look at Linoone go!")
+        waitmessage
+        playmoncry(SPECIES_LINOONE, CRY_MODE_NORMAL)
+        msgbox("Greeee-ah")
+        waitmoncry
+        waitmessage
+        msgbox("Here, this can help you make your
+                Pokemon as strong as they can be!")
+        waitmessage
+        giveitem(ITEM_MACHO_BRACE, 1)
+        setflag(FLAG_GERBON_GOT_MACHO)
+        msgbox("If a Pokemon holds that, they'll get
+                much stronger than normal! Use it to
+                make sure you're always ready for the
+                next opponent!")
+        waitmessage
+    } else {
+        msgbox("Keep on training my friend!")
+        waitmessage
+    }
+    
+    release
+    end
+}
+
+script GerbonTown_EventScript_TriathleteHouseLinoone {
+    lock
+    faceplayer
+    playmoncry(SPECIES_LINOONE, CRY_MODE_NORMAL)
+    msgbox("Greeee-ah")
+    waitmoncry
+    waitmessage
+    release
+    end
+}

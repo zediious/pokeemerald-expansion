@@ -506,6 +506,68 @@ GerbonTownTourney_JordanAfter::
 	end
 
 
+GerbonTown_EventScript_TriathleteHouseMan::
+# 415 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 416 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 417 "data/maps/OldaleTown/scripts.pory"
+	goto_if_unset FLAG_GERBON_GOT_MACHO, GerbonTown_EventScript_TriathleteHouseMan_2
+# 436 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_4
+# 437 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+GerbonTown_EventScript_TriathleteHouseMan_1:
+# 440 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+GerbonTown_EventScript_TriathleteHouseMan_2:
+# 418 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_0
+# 420 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 421 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_LINOONE, CRY_MODE_NORMAL
+# 422 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_1
+# 423 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 424 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 425 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_2
+# 427 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 428 "data/maps/OldaleTown/scripts.pory"
+	giveitem ITEM_MACHO_BRACE, 1
+# 429 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBON_GOT_MACHO
+# 430 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_3
+# 434 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+	goto GerbonTown_EventScript_TriathleteHouseMan_1
+
+
+GerbonTown_EventScript_TriathleteHouseLinoone::
+# 445 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 446 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 447 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_LINOONE, CRY_MODE_NORMAL
+# 448 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_1
+# 449 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 450 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 451 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+
 # 107 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_0:
 # 107 "data/maps/OldaleTown/scripts.pory"
@@ -715,3 +777,28 @@ GerbonTownTourney_JordanAfter_Text_0:
 	.string "find lots of new partners. Maybe I'll\l"
 	.string "see you while I'm there. Catch you\l"
 	.string "later {PLAYER}!$"
+
+GerbonTown_EventScript_TriathleteHouseMan_Text_0:
+# 418 "data/maps/OldaleTown/scripts.pory"
+	.string "It's important to train yourself, and\n"
+	.string "your Pokemon! Look at Linoone go!$"
+
+GerbonTown_EventScript_TriathleteHouseMan_Text_1:
+# 422 "data/maps/OldaleTown/scripts.pory"
+	.string "Greeee-ah$"
+
+GerbonTown_EventScript_TriathleteHouseMan_Text_2:
+# 425 "data/maps/OldaleTown/scripts.pory"
+	.string "Here, this can help you make your\n"
+	.string "Pokemon as strong as they can be!$"
+
+GerbonTown_EventScript_TriathleteHouseMan_Text_3:
+# 430 "data/maps/OldaleTown/scripts.pory"
+	.string "If a Pokemon holds that, they'll get\n"
+	.string "much stronger than normal! Use it to\l"
+	.string "make sure you're always ready for the\l"
+	.string "next opponent!$"
+
+GerbonTown_EventScript_TriathleteHouseMan_Text_4:
+# 436 "data/maps/OldaleTown/scripts.pory"
+	.string "Keep on training my friend!$"

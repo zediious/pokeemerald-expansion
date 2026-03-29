@@ -1820,3 +1820,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Igris_Underground_1_2/scripts.inc"
 
 	.include "data/maps/Vulias_Route101_House/scripts.inc"
+
+	.include "data/maps/GerbonTown_House01/scripts.inc"
