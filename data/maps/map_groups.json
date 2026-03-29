@@ -1191,7 +1191,8 @@
     "Vulias_Route110_PokemonCenter",
     "Vulias_Route110_OldRodHouse",
     "Vulias_Igris_DigDungeonBuffer",
-    "Vulias_Igris_OldManHouse"
+    "Vulias_Igris_OldManHouse",
+    "Vulias_Route101_House"
   ],
   "gMapGroup_ZEDDungeons": [
     "Vulias_MullenCave",

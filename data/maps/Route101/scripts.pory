@@ -244,3 +244,51 @@ script Route101_EventScript_ScaredTrainer {
     release
     end
 }
+
+// House
+
+script Route101_EventScript_HouseDad {
+    lock
+    faceplayer
+    msgbox("I wish my boy would become a Pokemon
+            Trainer. He spends his days watching
+            TV instead!
+            
+            There is much to love about a bond
+            with a Pokemon!")
+    waitmessage
+    release
+    end
+}
+
+script Route101_EventScript_HouseMom {
+    lock
+    faceplayer
+    msgbox("It's amazing, our Munchlax has better
+            table manners than the rest of us!")
+    waitmessage
+    release
+    end
+}
+
+script Route101_EventScript_HouseKid {
+    lock
+    faceplayer
+    msgbox("I love to watch Pokemon Battles on TV!
+            The {COLOR RED}Rep Trainers{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to
+            be like them someday!")
+    waitmessage
+    release
+    end
+}
+
+script Route101_EventScript_HouseMunchlax {
+    lock
+    faceplayer
+    playmoncry(SPECIES_MUNCHLAX, CRY_MODE_NORMAL)
+    msgbox("Ah-ooo-wa")
+    waitmoncry
+    waitmessage
+    release
+    end
+}

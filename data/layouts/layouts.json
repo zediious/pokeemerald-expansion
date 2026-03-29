@@ -9723,6 +9723,16 @@
       "secondary_tileset": "gTileset_Igris_Ruins",
       "border_filepath": "data/layouts/Vulias_Igris_Underground_1_2/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Igris_Underground_1_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_ROUTE101_HOUSE",
+      "name": "Vulias_Route101_House_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Vulias_Route101_House/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Route101_House/map.bin"
     }
   ]
 }

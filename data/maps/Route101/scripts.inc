@@ -436,6 +436,66 @@ Route101_EventScript_ScaredTrainer::
 	end
 
 
+Route101_EventScript_HouseDad::
+# 251 "data/maps/Route101/scripts.pory"
+	lock
+# 252 "data/maps/Route101/scripts.pory"
+	faceplayer
+# 253 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_HouseDad_Text_0
+# 259 "data/maps/Route101/scripts.pory"
+	waitmessage
+# 260 "data/maps/Route101/scripts.pory"
+	release
+	end
+
+
+Route101_EventScript_HouseMom::
+# 265 "data/maps/Route101/scripts.pory"
+	lock
+# 266 "data/maps/Route101/scripts.pory"
+	faceplayer
+# 267 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_HouseMom_Text_0
+# 269 "data/maps/Route101/scripts.pory"
+	waitmessage
+# 270 "data/maps/Route101/scripts.pory"
+	release
+	end
+
+
+Route101_EventScript_HouseKid::
+# 275 "data/maps/Route101/scripts.pory"
+	lock
+# 276 "data/maps/Route101/scripts.pory"
+	faceplayer
+# 277 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_HouseKid_Text_0
+# 280 "data/maps/Route101/scripts.pory"
+	waitmessage
+# 281 "data/maps/Route101/scripts.pory"
+	release
+	end
+
+
+Route101_EventScript_HouseMunchlax::
+# 286 "data/maps/Route101/scripts.pory"
+	lock
+# 287 "data/maps/Route101/scripts.pory"
+	faceplayer
+# 288 "data/maps/Route101/scripts.pory"
+	playmoncry SPECIES_MUNCHLAX, CRY_MODE_NORMAL
+# 289 "data/maps/Route101/scripts.pory"
+	msgbox Route101_EventScript_HouseMunchlax_Text_0
+# 290 "data/maps/Route101/scripts.pory"
+	waitmoncry
+# 291 "data/maps/Route101/scripts.pory"
+	waitmessage
+# 292 "data/maps/Route101/scripts.pory"
+	release
+	end
+
+
 # 90 "data/maps/Route101/scripts.pory"
 Route101_EventScript_TrainerTeachLesson_Movement_0:
 # 90 "data/maps/Route101/scripts.pory"
@@ -547,3 +607,26 @@ Route101_EventScript_ScaredTrainer_Text_0:
 	.string "to contend with wild Pokemon.\p"
 	.string "That sure beats dealing with all those\n"
 	.string "tough trainers!$"
+
+Route101_EventScript_HouseDad_Text_0:
+# 253 "data/maps/Route101/scripts.pory"
+	.string "I wish my boy would become a Pokemon\n"
+	.string "Trainer. He spends his days watching\l"
+	.string "TV instead!\p"
+	.string "There is much to love about a bond\n"
+	.string "with a Pokemon!$"
+
+Route101_EventScript_HouseMom_Text_0:
+# 267 "data/maps/Route101/scripts.pory"
+	.string "It's amazing, our Munchlax has better\n"
+	.string "table manners than the rest of us!$"
+
+Route101_EventScript_HouseKid_Text_0:
+# 277 "data/maps/Route101/scripts.pory"
+	.string "I love to watch Pokemon Battles on TV!\n"
+	.string "The {COLOR RED}Rep Trainers{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to\l"
+	.string "be like them someday!$"
+
+Route101_EventScript_HouseMunchlax_Text_0:
+# 289 "data/maps/Route101/scripts.pory"
+	.string "Ah-ooo-wa$"
