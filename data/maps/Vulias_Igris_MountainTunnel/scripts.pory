@@ -28,3 +28,72 @@ script MountainTunnel_DigTMItem {
     release
     end
 }
+
+//// Route Trainers
+script MountainTunnel_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_ELI,
+        "There are so many collapsed tunnels
+         here!",
+        "Careful, you'll make this one collapse!"
+    )
+    msgbox("Eh, it seems sturdy enough I suppose.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script MountainTunnel_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_RHETT,
+        "I move swiftly through this cave!",
+        "Owe, my toe!"
+    )
+    msgbox("There are a lot of rocks on the ground,
+            maybe I should train somewhere else.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Double Battle
+script MountainTunnel_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_DARCY,
+        "We've been training all day, let's see
+        the fruits it bore!",
+        "Not enough!"
+    )
+    msgbox("Like they say, there's always a bigger
+            fish.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script MountainTunnel_EventScript_Trainer04{
+    trainerbattle_single(
+        TRAINER_LEONEL,
+        "I'm not even tired yet, I could go for
+        hours!",
+        "Huh, now I feel spent..."
+    )
+    msgbox("I guess the adrenaline was keeping me
+            going, I need a nap.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// End Double Battle
+
+//// Other NPC
+script MountainTunnel_LedgeKid {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Ledge Kid: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ah man! if only I could just
+            hop up that ledge!
+            
+            I have to go all the way around! I think
+            I'll just go home.")
+    waitmessage
+    applymovement(MTNTUNNEL_LEDGEKID, moves(face_left))
+    release
+    end
+}
