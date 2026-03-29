@@ -9743,6 +9743,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/GerbonTown_House01/border.bin",
       "blockdata_filepath": "data/layouts/GerbonTown_House01/map.bin"
+    },
+    {
+      "id": "LAYOUT_GERBON_TOWN_HOUSE02",
+      "name": "GerbonTown_House02_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/GerbonTown_House02/border.bin",
+      "blockdata_filepath": "data/layouts/GerbonTown_House02/map.bin"
     }
   ]
 }

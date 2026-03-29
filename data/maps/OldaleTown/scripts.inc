@@ -568,6 +568,38 @@ GerbonTown_EventScript_TriathleteHouseLinoone::
 	end
 
 
+GerbonTown_EventScript_ExpertHouseMan::
+# 457 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 458 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 459 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_ExpertHouseMan_Text_0
+# 462 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 463 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+
+GerbonTown_EventScript_ExpertHouseSlaking::
+# 468 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 469 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 470 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_SLAKING, CRY_MODE_NORMAL
+# 471 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_ExpertHouseSlaking_Text_0
+# 475 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 476 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 477 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+
 # 107 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_0:
 # 107 "data/maps/OldaleTown/scripts.pory"
@@ -802,3 +834,15 @@ GerbonTown_EventScript_TriathleteHouseMan_Text_3:
 GerbonTown_EventScript_TriathleteHouseMan_Text_4:
 # 436 "data/maps/OldaleTown/scripts.pory"
 	.string "Keep on training my friend!$"
+
+GerbonTown_EventScript_ExpertHouseMan_Text_0:
+# 459 "data/maps/OldaleTown/scripts.pory"
+	.string "Hoho, I do love retirement! Why, after a\n"
+	.string "lifetime of work, nothing is better\l"
+	.string "than nothing at all!$"
+
+GerbonTown_EventScript_ExpertHouseSlaking_Text_0:
+# 471 "data/maps/OldaleTown/scripts.pory"
+	.string "Grahh-uh!\p"
+	.string "It looks as though you have woken up\n"
+	.string "the Slaking, not a good idea!$"

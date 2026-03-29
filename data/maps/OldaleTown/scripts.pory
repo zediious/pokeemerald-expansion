@@ -451,3 +451,29 @@ script GerbonTown_EventScript_TriathleteHouseLinoone {
     release
     end
 }
+
+// Expert house with Slaking
+script GerbonTown_EventScript_ExpertHouseMan {
+    lock
+    faceplayer
+    msgbox("Hoho, I do love retirement! Why, after a
+            lifetime of work, nothing is better
+            than nothing at all!")
+    waitmessage
+    release
+    end
+}
+
+script GerbonTown_EventScript_ExpertHouseSlaking {
+    lock
+    faceplayer
+    playmoncry(SPECIES_SLAKING, CRY_MODE_NORMAL)
+    msgbox("Grahh-uh!
+    
+            It looks as though you have woken up
+            the Slaking, not a good idea!")
+    waitmoncry
+    waitmessage
+    release
+    end 
+}

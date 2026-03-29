@@ -163,7 +163,8 @@
     "OldaleTown_Mart",
     "GerbonTown_BattleHall",
     "GerbonTown_BattleHall_PrepRoom",
-    "GerbonTown_House01"
+    "GerbonTown_House01",
+    "GerbonTown_House02"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
