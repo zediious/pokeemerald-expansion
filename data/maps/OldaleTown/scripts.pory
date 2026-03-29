@@ -477,3 +477,40 @@ script GerbonTown_EventScript_ExpertHouseSlaking {
     release
     end 
 }
+
+// Couple house with Pichu
+script GerbonTown_EventScript_CoupleHouse01Man {
+    lock
+    faceplayer
+    msgbox("We love to watch the feature matches,
+            but our little Pichu doesn't like
+            battling!")
+    waitmessage
+    release
+    end
+}
+
+script GerbonTown_EventScript_CoupleHouse01Woman {
+    lock
+    faceplayer
+    msgbox("Even though our Pichu doesn't battle,
+            we wouldn't change them for the world!")
+    waitmessage
+    playmoncry(SPECIES_PICHU, CRY_MODE_NORMAL)
+    msgbox("Pi-chu!")
+    waitmoncry
+    waitmessage
+    release
+    end 
+}
+
+script GerbonTown_EventScript_CoupleHouse01Pichu {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PICHU, CRY_MODE_NORMAL)
+    msgbox("Pi-chu!")
+    waitmoncry
+    waitmessage
+    release
+    end 
+}

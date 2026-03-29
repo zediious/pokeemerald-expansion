@@ -600,6 +600,60 @@ GerbonTown_EventScript_ExpertHouseSlaking::
 	end
 
 
+GerbonTown_EventScript_CoupleHouse01Man::
+# 483 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 484 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 485 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Man_Text_0
+# 488 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 489 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+
+GerbonTown_EventScript_CoupleHouse01Woman::
+# 494 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 495 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 496 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_0
+# 498 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 499 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
+# 500 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_1
+# 501 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 502 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 503 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+
+GerbonTown_EventScript_CoupleHouse01Pichu::
+# 508 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 509 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 510 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
+# 511 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_1
+# 512 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 513 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 514 "data/maps/OldaleTown/scripts.pory"
+	release
+	end
+
+
 # 107 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_0:
 # 107 "data/maps/OldaleTown/scripts.pory"
@@ -846,3 +900,18 @@ GerbonTown_EventScript_ExpertHouseSlaking_Text_0:
 	.string "Grahh-uh!\p"
 	.string "It looks as though you have woken up\n"
 	.string "the Slaking, not a good idea!$"
+
+GerbonTown_EventScript_CoupleHouse01Man_Text_0:
+# 485 "data/maps/OldaleTown/scripts.pory"
+	.string "We love to watch the feature matches,\n"
+	.string "but our little Pichu doesn't like\l"
+	.string "battling!$"
+
+GerbonTown_EventScript_CoupleHouse01Woman_Text_0:
+# 496 "data/maps/OldaleTown/scripts.pory"
+	.string "Even though our Pichu doesn't battle,\n"
+	.string "we wouldn't change them for the world!$"
+
+GerbonTown_EventScript_CoupleHouse01Woman_Text_1:
+# 500 "data/maps/OldaleTown/scripts.pory"
+	.string "Pi-chu!$"

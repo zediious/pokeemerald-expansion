@@ -1824,3 +1824,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/GerbonTown_House01/scripts.inc"
 
 	.include "data/maps/GerbonTown_House02/scripts.inc"
+
+	.include "data/maps/GerbonTown_House03/scripts.inc"
