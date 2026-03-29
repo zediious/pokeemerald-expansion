@@ -734,7 +734,7 @@
 #define FLAG_MTNTUNNEL_OLDMAN_JOURNAL           0x2A7 // Old man's journal in Mountain tunnel
 #define FLAG_IGRISUNDER_PLAYERISDIGGER          0x2A8 // Player can get into Igris Underground while owning Dig TM and a mon that can learn it.
 #define FLAG_MTNTUNNEL_DIGTM                    0x2A9 // Dig TM item in Mountain Tunnel
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
+#define FLAG_IGRISDESERT_PASSED                 0x2AA // Used to raise level cap between Ribbon/Gym 2 and 3
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
