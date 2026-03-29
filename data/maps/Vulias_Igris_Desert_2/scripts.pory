@@ -333,3 +333,114 @@ script IgrisDesert2_OldManSpeak_TeachDigBetter {
     release
     end
 }
+
+//// Route Trainers
+script IgrisDesert2_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_ANDRES_1,
+        "These ruins are ancient, no one knows
+        how long they've stood for!",
+        "One step closer!"
+    )
+    msgbox("What you don't think that battle
+            helped? It revitalized me, now I
+            can continue my research!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert2_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_ANDREW,
+        "These waters are great to fish at, the
+        water is so clear!",
+        "Argh! Almost had that one!"
+    )
+    msgbox("I was reeling that in our whole
+            battle!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Likely Double Battle
+script IgrisDesert2_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_JACKSON_1,
+        "Keeping the desert safe for the
+        Pokemon is very important, but you
+        have to be able to defend yourself!",
+        "I think you'll be just fine!"
+    )
+    msgbox("Some of the Pokemon in the Igris
+            Desert can be dangerous!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert2_EventScript_Trainer04{
+    trainerbattle_single(
+        TRAINER_CATHERINE_1,
+        "Don't you dare leave any trash around!
+        We work hard to keep the desert
+        pristine!",
+        "Better pick up your potion bottles!"
+    )
+    msgbox("Litterers are the worst! Pick up after
+            yourself!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+// End Likely Double Battle
+
+script IgrisDesert2_EventScript_Trainer05{
+    trainerbattle_single(
+        TRAINER_JOSH,
+        "Surprise! These cacti are great for
+        hiding behind!",
+        "What, you would have battled anyways?"
+    )
+    msgbox("Most people try to avoid battling, for
+            some reason. I wonder why?", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert2_EventScript_Trainer06{
+    trainerbattle_single(
+        TRAINER_NATE,
+        "Heading to the {COLOR RED}Mountain Tunnel{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are we?
+        I'll ensure you're prepared!",
+        "Nothing else needs said!"
+    )
+    msgbox("Powerful trainers spend time in the
+            {COLOR RED}Mountain Tunnel{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, be sure that you have
+            enough supplies!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script IgrisDesert2_EventScript_Trainer07{
+    trainerbattle_single(
+        TRAINER_HENRY,
+        "Bah! I thought I would be alone up here!",
+        "Back to fishing!"
+    )
+    msgbox("Do you often bother random fishermen
+            while they are fishing? We come out
+            here for peace and quiet!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Other NPC
+
+script IgrisDesert2_EventScript_ManWorriedSandPit {
+    lock
+    faceplayer
+    msgbox("{COLOR GREEN}Worried Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I want to cross that
+            bridge, but I'm worried I'll get sucked
+            into that sand pit!")
+    waitmessage
+    release
+    end
+}

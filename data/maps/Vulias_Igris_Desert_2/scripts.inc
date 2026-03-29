@@ -372,6 +372,90 @@ IgrisDesert2_OldManSpeak_TeachDigBetter::
 	end
 
 
+IgrisDesert2_EventScript_Trainer01::
+# 339 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_ANDRES_1, IgrisDesert2_EventScript_Trainer01_Text_0, IgrisDesert2_EventScript_Trainer01_Text_1
+# 345 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
+# 348 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_Trainer02::
+# 353 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_ANDREW, IgrisDesert2_EventScript_Trainer02_Text_0, IgrisDesert2_EventScript_Trainer02_Text_1
+# 359 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer02_Text_2, MSGBOX_AUTOCLOSE
+# 361 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_Trainer03::
+# 367 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_JACKSON_1, IgrisDesert2_EventScript_Trainer03_Text_0, IgrisDesert2_EventScript_Trainer03_Text_1
+# 374 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
+# 376 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_Trainer04::
+# 381 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_CATHERINE_1, IgrisDesert2_EventScript_Trainer04_Text_0, IgrisDesert2_EventScript_Trainer04_Text_1
+# 388 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer04_Text_2, MSGBOX_AUTOCLOSE
+# 390 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_Trainer05::
+# 396 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_JOSH, IgrisDesert2_EventScript_Trainer05_Text_0, IgrisDesert2_EventScript_Trainer05_Text_1
+# 402 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer05_Text_2, MSGBOX_AUTOCLOSE
+# 404 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_Trainer06::
+# 409 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_NATE, IgrisDesert2_EventScript_Trainer06_Text_0, IgrisDesert2_EventScript_Trainer06_Text_1
+# 415 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer06_Text_2, MSGBOX_AUTOCLOSE
+# 418 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_Trainer07::
+# 423 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	trainerbattle_single TRAINER_HENRY, IgrisDesert2_EventScript_Trainer07_Text_0, IgrisDesert2_EventScript_Trainer07_Text_1
+# 428 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_Trainer07_Text_2, MSGBOX_AUTOCLOSE
+# 431 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+	end
+
+
+IgrisDesert2_EventScript_ManWorriedSandPit::
+# 438 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	lock
+# 439 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	faceplayer
+# 440 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	msgbox IgrisDesert2_EventScript_ManWorriedSandPit_Text_0
+# 443 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	waitmessage
+# 444 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	release
+	end
+
+
 # 17 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 IgrisDesert2_SandHoleSpitOutOnEntry_Movement_0:
 # 17 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
@@ -616,3 +700,111 @@ IgrisDesert2_OldManSpeak_TeachDigBetter_Text_3:
 	.string "spat back out into the Desert!\p"
 	.string "Good luck out there, though I'm\n"
 	.string "not sure you'll need it!$"
+
+IgrisDesert2_EventScript_Trainer01_Text_0:
+# 341 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "These ruins are ancient, no one knows\n"
+	.string "how long they've stood for!$"
+
+IgrisDesert2_EventScript_Trainer01_Text_1:
+# 343 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "One step closer!$"
+
+IgrisDesert2_EventScript_Trainer01_Text_2:
+# 345 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "What you don't think that battle\n"
+	.string "helped? It revitalized me, now I\l"
+	.string "can continue my research!$"
+
+IgrisDesert2_EventScript_Trainer02_Text_0:
+# 355 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "These waters are great to fish at, the\n"
+	.string "water is so clear!$"
+
+IgrisDesert2_EventScript_Trainer02_Text_1:
+# 357 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Argh! Almost had that one!$"
+
+IgrisDesert2_EventScript_Trainer02_Text_2:
+# 359 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "I was reeling that in our whole\n"
+	.string "battle!$"
+
+IgrisDesert2_EventScript_Trainer03_Text_0:
+# 369 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Keeping the desert safe for the\n"
+	.string "Pokemon is very important, but you\l"
+	.string "have to be able to defend yourself!$"
+
+IgrisDesert2_EventScript_Trainer03_Text_1:
+# 372 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "I think you'll be just fine!$"
+
+IgrisDesert2_EventScript_Trainer03_Text_2:
+# 374 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Some of the Pokemon in the Igris\n"
+	.string "Desert can be dangerous!$"
+
+IgrisDesert2_EventScript_Trainer04_Text_0:
+# 383 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Don't you dare leave any trash around!\n"
+	.string "We work hard to keep the desert\l"
+	.string "pristine!$"
+
+IgrisDesert2_EventScript_Trainer04_Text_1:
+# 386 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Better pick up your potion bottles!$"
+
+IgrisDesert2_EventScript_Trainer04_Text_2:
+# 388 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Litterers are the worst! Pick up after\n"
+	.string "yourself!$"
+
+IgrisDesert2_EventScript_Trainer05_Text_0:
+# 398 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Surprise! These cacti are great for\n"
+	.string "hiding behind!$"
+
+IgrisDesert2_EventScript_Trainer05_Text_1:
+# 400 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "What, you would have battled anyways?$"
+
+IgrisDesert2_EventScript_Trainer05_Text_2:
+# 402 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Most people try to avoid battling, for\n"
+	.string "some reason. I wonder why?$"
+
+IgrisDesert2_EventScript_Trainer06_Text_0:
+# 411 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Heading to the {COLOR RED}Mountain Tunnel{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are we?\n"
+	.string "I'll ensure you're prepared!$"
+
+IgrisDesert2_EventScript_Trainer06_Text_1:
+# 413 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Nothing else needs said!$"
+
+IgrisDesert2_EventScript_Trainer06_Text_2:
+# 415 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Powerful trainers spend time in the\n"
+	.string "{COLOR RED}Mountain Tunnel{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, be sure that you have\l"
+	.string "enough supplies!$"
+
+IgrisDesert2_EventScript_Trainer07_Text_0:
+# 425 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Bah! I thought I would be alone up here!$"
+
+IgrisDesert2_EventScript_Trainer07_Text_1:
+# 426 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Back to fishing!$"
+
+IgrisDesert2_EventScript_Trainer07_Text_2:
+# 428 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "Do you often bother random fishermen\n"
+	.string "while they are fishing? We come out\l"
+	.string "here for peace and quiet!$"
+
+IgrisDesert2_EventScript_ManWorriedSandPit_Text_0:
+# 440 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
+	.string "{COLOR GREEN}Worried Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I want to cross that\n"
+	.string "bridge, but I'm worried I'll get sucked\l"
+	.string "into that sand pit!$"
