@@ -152,6 +152,35 @@ script LittlerootTown_EventScript_WifeCookingForSkitty_Skitty {
     release
 }
 
+script LittlerootTown_EventScript_KidOutside {
+    lock
+    faceplayer
+    msgbox("I love my {COLOR RED}Bunnelbly{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, they always play
+            with me!")
+    waitmessage
+    playmoncry(SPECIES_BUNNELBY, CRY_MODE_NORMAL)
+    msgbox("Oiii-wa")
+    waitmoncry
+    waitmessage
+    release
+    applymovement(SAWGRASS_KID_OUTSIDE, moves(face_right))
+    waitmovement
+    end
+}
+
+script LittlerootTown_EventScript_KidOutsideBunnelby {
+    lock
+    faceplayer
+    playmoncry(SPECIES_BUNNELBY, CRY_MODE_NORMAL)
+    msgbox("Oiii-wa")
+    waitmoncry
+    waitmessage
+    release
+    applymovement(SAWGRASS_KID_OUTSIDE_MON, moves(face_left))
+    waitmovement
+    end
+}
+
 
 script LittlerootTown_EventScript_TrainerTeachCatch01 {
     lock

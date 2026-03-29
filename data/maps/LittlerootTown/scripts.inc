@@ -200,40 +200,88 @@ LittlerootTown_EventScript_WifeCookingForSkitty_Skitty::
 	return
 
 
-LittlerootTown_EventScript_TrainerTeachCatch01::
-# 157 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_EventScript_KidOutside::
+# 156 "data/maps/LittlerootTown/scripts.pory"
 	lock
-# 158 "data/maps/LittlerootTown/scripts.pory"
+# 157 "data/maps/LittlerootTown/scripts.pory"
 	faceplayer
-# 159 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_0, MSGBOX_YESNO
+# 158 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_KidOutside_Text_0
+# 160 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 161 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_BUNNELBY, CRY_MODE_NORMAL
 # 162 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_KidOutside_Text_1
+# 163 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 164 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 165 "data/maps/LittlerootTown/scripts.pory"
+	release
+# 166 "data/maps/LittlerootTown/scripts.pory"
+	applymovement SAWGRASS_KID_OUTSIDE, LittlerootTown_EventScript_KidOutside_Movement_0
+# 167 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement
+	end
+
+
+LittlerootTown_EventScript_KidOutsideBunnelby::
+# 172 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 173 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 174 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_BUNNELBY, CRY_MODE_NORMAL
+# 175 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_KidOutside_Text_1
+# 176 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 177 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 178 "data/maps/LittlerootTown/scripts.pory"
+	release
+# 179 "data/maps/LittlerootTown/scripts.pory"
+	applymovement SAWGRASS_KID_OUTSIDE_MON, LittlerootTown_EventScript_JordanTalk01_Movement_0
+# 180 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement
+	end
+
+
+LittlerootTown_EventScript_TrainerTeachCatch01::
+# 186 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 187 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 188 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_0, MSGBOX_YESNO
+# 191 "data/maps/LittlerootTown/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_EventScript_TrainerTeachCatch01_1
-# 180 "data/maps/LittlerootTown/scripts.pory"
+# 209 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_3
-# 182 "data/maps/LittlerootTown/scripts.pory"
+# 211 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
 LittlerootTown_EventScript_TrainerTeachCatch01_1:
-# 163 "data/maps/LittlerootTown/scripts.pory"
+# 192 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_1
-# 164 "data/maps/LittlerootTown/scripts.pory"
+# 193 "data/maps/LittlerootTown/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
-# 165 "data/maps/LittlerootTown/scripts.pory"
+# 194 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_TrainerTeachCatch01_Text_2
-# 171 "data/maps/LittlerootTown/scripts.pory"
+# 200 "data/maps/LittlerootTown/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
-# 172 "data/maps/LittlerootTown/scripts.pory"
+# 201 "data/maps/LittlerootTown/scripts.pory"
 	removeobject ZED_Sawgrass_CatchTeacher
-# 173 "data/maps/LittlerootTown/scripts.pory"
+# 202 "data/maps/LittlerootTown/scripts.pory"
 	setflag FLAG_SAWGRASS_TEACHER
-# 174 "data/maps/LittlerootTown/scripts.pory"
+# 203 "data/maps/LittlerootTown/scripts.pory"
 	setvar VAR_ROUTE101CATCH_PROGRESS, 1
-# 175 "data/maps/LittlerootTown/scripts.pory"
+# 204 "data/maps/LittlerootTown/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
-# 176 "data/maps/LittlerootTown/scripts.pory"
+# 205 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
@@ -248,6 +296,12 @@ LittlerootTown_EventScript_JordanTalk01_Movement_0:
 LittlerootTown_EventScript_BlockageSailor_Movement_0:
 # 71 "data/maps/LittlerootTown/scripts.pory"
 	face_up
+	step_end
+
+# 166 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_EventScript_KidOutside_Movement_0:
+# 166 "data/maps/LittlerootTown/scripts.pory"
+	face_right
 	step_end
 
 LittlerootTown_EventScript_JordanSign_Text_0:
@@ -328,18 +382,27 @@ LittlerootTown_EventScript_WifeCookingForSkitty_Skitty_Text_0:
 # 148 "data/maps/LittlerootTown/scripts.pory"
 	.string "Meeow!$"
 
+LittlerootTown_EventScript_KidOutside_Text_0:
+# 158 "data/maps/LittlerootTown/scripts.pory"
+	.string "I love my {COLOR RED}Bunnelbly{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, they always play\n"
+	.string "with me!$"
+
+LittlerootTown_EventScript_KidOutside_Text_1:
+# 162 "data/maps/LittlerootTown/scripts.pory"
+	.string "Oiii-wa$"
+
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_0:
-# 159 "data/maps/LittlerootTown/scripts.pory"
+# 188 "data/maps/LittlerootTown/scripts.pory"
 	.string "{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I see you only have one\n"
 	.string "Pokemon. Do you want to learn how\l"
 	.string "to catch more?$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_1:
-# 163 "data/maps/LittlerootTown/scripts.pory"
+# 192 "data/maps/LittlerootTown/scripts.pory"
 	.string "Great. Here, have a Poke Ball.$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_2:
-# 165 "data/maps/LittlerootTown/scripts.pory"
+# 194 "data/maps/LittlerootTown/scripts.pory"
 	.string "I challenge you to catch one on\n"
 	.string "your own, on your way through\l"
 	.string "Route 101.\p"
@@ -347,6 +410,6 @@ LittlerootTown_EventScript_TrainerTeachCatch01_Text_2:
 	.string "the route.$"
 
 LittlerootTown_EventScript_TrainerTeachCatch01_Text_3:
-# 180 "data/maps/LittlerootTown/scripts.pory"
+# 209 "data/maps/LittlerootTown/scripts.pory"
 	.string "Got it, I suppose you'll figure it out on\n"
 	.string "your own.$"
