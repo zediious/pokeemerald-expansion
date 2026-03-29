@@ -32,8 +32,15 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     msgbox("The mysterious man sizes you up
             from head to toe.")
-    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hmm. As well, it helps when others
-            don't stand in your way.")
+    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You're the new {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of
+        Gerbon Town, are you not? I saw your
+        'battle'. Pathetic.
+        
+        They sit in the stands, they cheer, and
+        they clap. And you all call it battle.
+        
+        This world has forgotten what that
+        word truly means.")
     waitmessage
     delay(60)
     applymovement(WOLTIA_RUIN_KEEGAN, moves(walk_down))
@@ -44,12 +51,13 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down, walk_right, walk_down, face_right))
     waitmovement
     msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was...weird, to say the
-            least. Do you know what he was going on
-            about? I sure don't.
+            least. How can he call your battle
+            pathetic? Who does he think he is?
             
             Anyways, I guess we'll come look around
             more another time, the tournament must
-            be starting soon!
+            be starting soon! Don't let that sour
+            your mood!
             
             See you at {COLOR RED}The Aerodrome!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
