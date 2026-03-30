@@ -4,17 +4,30 @@ mapscripts Vulias_Igris_MountainTunnel_MapScripts {}
 script MountainTunnel_JournalPickup {
     lock
     removeobject(MTNTUNNEL_OLDMAN_JOURNAL)
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("You found the Old Man's Journal!", MSGBOX_SIGN)
-    waitfanfare
-    waitmessage
-    fadedefaultbgm
-    msgbox("You placed it in your backpack. Better
-            not read it!", MSGBOX_SIGN)
-    waitmessage
-    setvar(VAR_IGRIS_OLDMAN_STATE, 2)
-    questmenu(QUEST_MENU_SET_REWARD, 3)
-    questupdated(3)
+    giveitem(ITEM_OLDMAN_JOURNAL, 1)
+
+    // If the player has not started the quest yet, don't update
+    // the quest, and change the message said. As well, set flag
+    // such that old man will accept journal as quest is started
+    if (var(VAR_IGRIS_OLDMAN_STATE) == 0) {
+        msgbox("You found an old journal! It doesn't
+                seem to be in great condition, it's
+                best not to open it!", MSGBOX_SIGN)
+        waitfanfare
+        waitmessage
+        fadedefaultbgm
+        setflag(FLAG_OLDMANJOURNAL_EARLY)
+    } else {
+        msgbox("You found the Old Man's Journal!
+                Better not read it!", MSGBOX_SIGN)
+        waitfanfare
+        waitmessage
+        fadedefaultbgm
+        setvar(VAR_IGRIS_OLDMAN_STATE, 2)
+        questmenu(QUEST_MENU_SET_REWARD, 3)
+        questupdated(3)
+    }
+
     release
     end
 }
