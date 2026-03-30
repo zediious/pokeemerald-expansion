@@ -1662,6 +1662,9 @@ extern const u32 gItemIcon_Gem[];
 extern const u16 gItemIconPalette_Ruby[];
 extern const u16 gItemIconPalette_Sapphire[];
 
+extern const u32 gItemIcon_Journal[];
+extern const u16 gItemIconPalette_Journal[];
+
 // GEN IX ITEMS
 extern const u32 gItemIcon_AbilityShield[];
 extern const u16 gItemIconPalette_AbilityShield[];

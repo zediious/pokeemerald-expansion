@@ -15913,6 +15913,22 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Lucarionite,
         .iconPalette = gItemIconPalette_Lucarionite,
     },
+
+    [ITEM_OLDMAN_JOURNAL] =
+    {
+        .name = ITEM_NAME("Journal"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An old journal\n"
+            "found in an old\n"
+            "mining tunnel."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Journal,
+        .iconPalette = gItemIconPalette_Journal,
+    },
 };
 
 #undef ITEM_NAME
