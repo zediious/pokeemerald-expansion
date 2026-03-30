@@ -1,5 +1,9 @@
 mapscripts ZED_DEBUG_ROOM_MapScripts {}
 
+// Scripts below on events in debug room to jump to parts of the story.
+// Also serves as a form of docs on flags/vars set during the story
+// Notably, neither gives Rock Smash or clers the sensei
+
 script GoToDebugRoom {
     lock
     msgbox("Want debug room?", MSGBOX_YESNO)
@@ -30,7 +34,6 @@ script JumpToPreWoltiaTourney {
 
         setflag(FLAG_BADGE01_GET)
 
-        giveitem(ITEM_HM_CUT, 1)
         giveitem(ITEM_TM_ROCK_TOMB, 1)
 
         giveitem(ITEM_EXP_CANDY_XL, 20)
@@ -103,6 +106,73 @@ script JumpToRuvelPyramid {
 
         setrespawn(HEAL_LOCATION_VULIAS_WOLTIA_CITY)
         warp(MAP_VULIAS_IGRIS_DESERT, 19, 52)
+    }
+    
+    release
+    end
+}
+
+script JumpToIgrisPart2 {
+    lock
+    msgbox("Jump to post-ruvel pyramid?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        setvar(VAR_ZED_STORY_TRACKER, 24)
+        setflag(FLAG_ROUTE103_SAVED_TOGEPI)
+        setflag(FLAG_IGRISDESERT_KOWTOW_01)
+        setflag(FLAG_IGRISDESERT_JORDAN_01)
+        setflag(FLAG_IGRIS_BEAUTY)
+        setflag(FLAG_IGRIS_TOGEPI)
+        setflag(FLAG_ROUTE103_BEAUTY)
+        setflag(FLAG_ROUTE102_STAIRBLOCKERS)
+        setflag(FLAG_SAWGRASSFOREST_KOWTOW)
+        setflag(FLAG_SAWGRASSFOREST_MUGGEDWOMAN)
+        setflag(FLAG_ROUTE110_JORDAN)
+        setflag(FLAG_JORDANINHOME)
+        setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
+        setflag(FLAG_MULLED_CAVE_JORDAN_01)
+        setflag(FLAG_SAWGRASSFOREST_JORDANFOLLOWER)
+        setflag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)
+        setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
+        setflag(FLAG_GERBON_CRASH_KID)
+        setflag(FLAG_GERBONSOUTH_BLOCKERS)
+        setflag(FLAG_ANGRY_KROKOROK_01)
+        setflag(FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND)
+        setflag(FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND)
+        setflag(FLAG_RUVELPYRAMID_COFAPUZZLE)
+        setflag(FLAG_RUVELPYRAMID_GOTHORITA01)
+        setflag(FLAG_RUVELPYRAMID_LOSTKID01)
+        setflag(FLAG_RUVELPYRAMIDEXT_GENTLEMAN)
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKID)
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM)
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2)
+        setflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3)
+        setflag(FLAG_RUVELPYRAMIDEXT_JORDAN)
+        setflag(FLAG_IGRIS_JORDAN_02)
+        clearflag(FLAG_PALENTOPOKECENTER_JORDAN01)
+
+        setflag(FLAG_BADGE01_GET)
+        setflag(FLAG_BADGE02_GET)
+
+        giveitem(ITEM_HM_CUT, 1)
+        giveitem(ITEM_TM_ROCK_TOMB, 1)
+        giveitem(ITEM_TM_AERIAL_ACE, 1)
+
+        giveitem(ITEM_EXP_CANDY_XL, 20)
+        giveitem(ITEM_MAX_REPEL, 20)
+        giveitem(ITEM_GREAT_BALL, 20)
+        giveitem(ITEM_SUPER_POTION, 20)
+        giveitem(ITEM_FULL_HEAL, 20)
+
+        givemon(SPECIES_SIMISEAR, 30)
+        givemon(SPECIES_SIMISAGE, 30)
+        givemon(SPECIES_SIMIPOUR, 30)
+        givemon(SPECIES_INNAPE, 30)
+        givemon(SPECIES_FLAMIGO, 30)
+
+        delay(30)
+
+        setrespawn(HEAL_LOCATION_VULIAS_PALENTO_VILLAGE)
+        warp(MAP_VULIAS_IGRIS_DESERT, 47, 10)
     }
     
     release
