@@ -99,25 +99,35 @@ MountainTunnel_EventScript_Trainer04::
 	end
 
 
-MountainTunnel_LedgeKid::
-# 101 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	lock
-# 102 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	faceplayer
-# 103 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	msgbox MountainTunnel_LedgeKid_Text_0
-# 108 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+MountainTunnel_EventScript_Trainer05::
+# 99 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	trainerbattle_single TRAINER_TOMMY, MountainTunnel_EventScript_Trainer05_Text_0, MountainTunnel_EventScript_Trainer05_Text_1
+# 105 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	msgbox MountainTunnel_EventScript_Trainer05_Text_2, MSGBOX_AUTOCLOSE
+# 107 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	waitmessage
-# 109 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	end
+
+
+MountainTunnel_LedgeKid::
+# 114 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	lock
+# 115 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	faceplayer
+# 116 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	msgbox MountainTunnel_LedgeKid_Text_0
+# 121 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	waitmessage
+# 122 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	applymovement MTNTUNNEL_LEDGEKID, MountainTunnel_LedgeKid_Movement_0
-# 110 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+# 123 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	release
 	end
 
 
-# 109 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+# 122 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 MountainTunnel_LedgeKid_Movement_0:
-# 109 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+# 122 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	face_left
 	step_end
 
@@ -186,8 +196,22 @@ MountainTunnel_EventScript_Trainer04_Text_2:
 	.string "I guess the adrenaline was keeping me\n"
 	.string "going, I need a nap.$"
 
-MountainTunnel_LedgeKid_Text_0:
+MountainTunnel_EventScript_Trainer05_Text_0:
+# 101 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	.string "I'm a little worried this room will cave\n"
+	.string "in too!$"
+
+MountainTunnel_EventScript_Trainer05_Text_1:
 # 103 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	.string "I guess we're safe if that didn't do it!$"
+
+MountainTunnel_EventScript_Trainer05_Text_2:
+# 105 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	.string "I probably shouldn't just stand around\n"
+	.string "in here though, right?$"
+
+MountainTunnel_LedgeKid_Text_0:
+# 116 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	.string "{COLOR GREEN}Ledge Kid: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ah man! if only I could just\n"
 	.string "hop up that ledge!\p"
 	.string "I have to go all the way around! I think\n"

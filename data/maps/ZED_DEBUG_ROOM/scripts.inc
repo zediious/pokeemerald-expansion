@@ -196,7 +196,7 @@ JumpToIgrisPart2::
 	compare VAR_RESULT, YES
 	goto_if_eq JumpToIgrisPart2_2
 JumpToIgrisPart2_1:
-# 177 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 178 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	release
 	end
 
@@ -264,42 +264,44 @@ JumpToIgrisPart2_2:
 # 149 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	setflag FLAG_RUVELPYRAMIDEXT_JORDAN
 # 150 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRIS_JORDAN_02
+# 151 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
-# 152 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_BADGE01_GET
 # 153 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_BADGE01_GET
+# 154 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	setflag FLAG_BADGE02_GET
-# 155 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_HM_CUT, 1
 # 156 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_ROCK_TOMB, 1
+	giveitem ITEM_HM_CUT, 1
 # 157 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TM_ROCK_TOMB, 1
+# 158 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_TM_AERIAL_ACE, 1
-# 159 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
 # 160 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_MAX_REPEL, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
 # 161 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_GREAT_BALL, 20
+	giveitem ITEM_MAX_REPEL, 20
 # 162 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_SUPER_POTION, 20
+	giveitem ITEM_GREAT_BALL, 20
 # 163 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_SUPER_POTION, 20
+# 164 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_FULL_HEAL, 20
-# 165 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISEAR, 30
 # 166 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISAGE, 30
+	givemon SPECIES_SIMISEAR, 30
 # 167 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMIPOUR, 30
+	givemon SPECIES_SIMISAGE, 30
 # 168 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_INNAPE, 30
+	givemon SPECIES_SIMIPOUR, 30
 # 169 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_INNAPE, 30
+# 170 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	givemon SPECIES_FLAMIGO, 30
-# 171 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 172 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	delay 30
-# 173 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setrespawn HEAL_LOCATION_VULIAS_PALENTO_VILLAGE
 # 174 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setrespawn HEAL_LOCATION_VULIAS_PALENTO_VILLAGE
+# 175 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DESERT, 47, 10
 	goto JumpToIgrisPart2_1
 

@@ -94,6 +94,19 @@ script MountainTunnel_EventScript_Trainer04{
     end
 }
 
+// Kid in Dig Room
+script MountainTunnel_EventScript_Trainer05{
+    trainerbattle_single(
+        TRAINER_TOMMY,
+        "I'm a little worried this room will cave
+        in too!",
+        "I guess we're safe if that didn't do it!"
+    )
+    msgbox("I probably shouldn't just stand around
+            in here though, right?", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
 // End Double Battle
 
 //// Other NPC
