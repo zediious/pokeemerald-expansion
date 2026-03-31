@@ -34,6 +34,8 @@ script JumpToPreWoltiaTourney {
 
         setflag(FLAG_BADGE01_GET)
 
+        giveitem(ITEM_EXP_SHARE, 1)
+
         giveitem(ITEM_TM_ROCK_TOMB, 1)
 
         giveitem(ITEM_EXP_CANDY_XL, 20)
@@ -85,6 +87,8 @@ script JumpToRuvelPyramid {
 
         setflag(FLAG_BADGE01_GET)
         setflag(FLAG_BADGE02_GET)
+
+        giveitem(ITEM_EXP_SHARE, 1)
 
         giveitem(ITEM_HM_CUT, 1)
         giveitem(ITEM_TM_ROCK_TOMB, 1)
@@ -152,6 +156,8 @@ script JumpToIgrisPart2 {
 
         setflag(FLAG_BADGE01_GET)
         setflag(FLAG_BADGE02_GET)
+
+        giveitem(ITEM_EXP_SHARE, 1)
 
         giveitem(ITEM_HM_CUT, 1)
         giveitem(ITEM_TM_ROCK_TOMB, 1)
