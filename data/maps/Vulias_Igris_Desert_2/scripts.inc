@@ -301,7 +301,7 @@ IgrisDesert2_OldManSpeak_GoodFriendship_5:
 
 IgrisDesert2_OldManSpeak_EarlyJournal::
 # 242 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
-	applymovement IGRIS_OLDMANMON_INHOME, IgrisDesert2_OldManSpeak_EarlyJournal_Movement_0
+	applymovement IGRIS_OLDMAN_INHOME, IgrisDesert2_OldManSpeak_EarlyJournal_Movement_0
 # 243 "data/maps/Vulias_Igris_Desert_2/scripts.pory"
 	waitmovement
 # 244 "data/maps/Vulias_Igris_Desert_2/scripts.pory"

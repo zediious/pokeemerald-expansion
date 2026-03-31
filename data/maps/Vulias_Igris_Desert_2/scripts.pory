@@ -239,7 +239,7 @@ script IgrisDesert2_OldManSpeak_GoodFriendship {
 
 // Player found Journal already, complete the quest as it begins
 script IgrisDesert2_OldManSpeak_EarlyJournal {
-    applymovement(IGRIS_OLDMANMON_INHOME, moves(emote_exclamation_mark))
+    applymovement(IGRIS_OLDMAN_INHOME, moves(emote_exclamation_mark))
     waitmovement
     delay(60)
     msgbox("Oh my! You say you already ventured to
