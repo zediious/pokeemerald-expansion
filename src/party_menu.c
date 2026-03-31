@@ -48,6 +48,7 @@
 #include "palette.h"
 #include "party_menu.h"
 #include "player_pc.h"
+#include "pokedex_plus_hgss.h"
 #include "pokemon.h"
 #include "pokemon_icon.h"
 #include "pokemon_jump.h"
@@ -85,6 +86,7 @@ enum {
     MENU_SUMMARY,
     MENU_SWITCH,
     MENU_CANCEL1,
+    MENU_POKEDEX,
     MENU_ITEM,
     MENU_GIVE,
     MENU_TAKE_ITEM,
@@ -3380,8 +3382,13 @@ static void CursorCb_Item(u8 taskId)
     gTasks[taskId].data[0] = 0xFF;
     gTasks[taskId].func = Task_HandleSelectionMenuInput;
 }
+
 static void CursorCb_Pokedex(u8 taskId)
 {
+    PlaySE(SE_SELECT);
+    gSpeciesToLoad = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
+    sPartyMenuInternal->exitCallback = CB2_OpenPokedexPlusHGSSToMon;
+    Task_ClosePartyMenu(taskId);
 }
 
 static void CursorCb_Give(u8 taskId)
