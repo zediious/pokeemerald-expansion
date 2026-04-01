@@ -22,7 +22,7 @@
 
 static struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
-static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex);
+static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil);
 
 struct TrainerMon *ScaleTrainerMons(struct Trainer tempTrainer, struct TrainerMon *scaledParty, bool32 evolveExcluded)
 {
@@ -81,7 +81,7 @@ struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct Tr
         // Evolve to a third evolution if applicable
         const struct Evolution *parentEvolutions = GetSpeciesEvolutions(evolutions[j].targetSpecies);
         if (parentEvolutions != NULL) {
-            trainerMon = EvolveParentTrainerMon(evolutions, parentEvolutions, trainerMon, j);
+            trainerMon = EvolveParentTrainerMon(evolutions, parentEvolutions, trainerMon, j, levelCeil);
             return trainerMon;
         }
 
@@ -171,7 +171,7 @@ struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, str
     }
 }
 
-struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex)
+struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil)
 {
     // If a mon has a highest evo that is by level,but in between has evos that are not level-based
     // always evolve to the highest evo that is by level. i.e, Azurill -> Marill -> Azumarill.
@@ -191,6 +191,25 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
                 return trainerMon;
             }
         }
+
+        // If the original mon's next evo is lvl based, but the parent mon evo
+        // is NOT level based, set the species to the middle evo is the player's
+        // level ceiling is <= 40. Otherwise, use the final evo.
+        // Example: Geodude -> Graveler -> Golem
+        if ((parentEvolutions[p].method != EVO_NONE)
+        &&  (parentEvolutions[p].method != EVO_LEVEL)
+        &&  (evolutions[evoIndex].method == EVO_LEVEL))
+        {
+            if ((parentEvolutions[p].param <= trainerMon.lvl) && (levelCeil >= 40)) { // Use the 3rd non-level based evo
+                trainerMon.species = parentEvolutions[p].targetSpecies;
+                return trainerMon;
+            }
+            else if ((evolutions[evoIndex].param <= trainerMon.lvl)) { // Use the 2nd level-based evo
+                trainerMon.species = evolutions[evoIndex].targetSpecies;
+                return trainerMon;
+            }
+        }
+
         // If the Pokemon has a second and third evolution that is not level based, randomize between the
         // three potential Pokemon with a weight that has a logarithmic curve away from final evo
         else if ((evolutions[evoIndex].method != EVO_NONE)
@@ -215,8 +234,14 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
         else if ((evolutions[evoIndex].method == EVO_LEVEL)
         &&       (parentEvolutions[p].method == EVO_LEVEL))
         {
-            if ((parentEvolutions[p].param <= trainerMon.lvl)) {
+            if ((parentEvolutions[p].param <= trainerMon.lvl)) // Evolve to the third form
+            {
                 trainerMon.species = parentEvolutions[p].targetSpecies;
+                return trainerMon;
+            }
+            else if ((evolutions[evoIndex].param <= trainerMon.lvl)) // Evolve to the second form
+            {
+                trainerMon.species = evolutions[evoIndex].targetSpecies;
                 return trainerMon;
             }
         }
