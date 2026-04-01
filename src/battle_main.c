@@ -2150,6 +2150,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                         scaledParty[e].lvl = compareLevel;
 
                         // Evolve pokemon if applicable
+
+                        // Don't evolve if Pokemon has a held Everstone or Eviolite
+                        if (scaledParty[e].heldItem == ITEM_EVIOLITE || scaledParty[e].heldItem == ITEM_EVERSTONE) {continue;}
+
                         const struct Evolution *evolutions = GetSpeciesEvolutions(scaledParty[e].species);
                         if (evolutions == NULL) {continue;}
 
