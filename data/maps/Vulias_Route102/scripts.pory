@@ -51,19 +51,11 @@ script VuliasRoute102_EventScript_BrokenBridgeMan {
 
 //// Route trainers
 script Route102_EventScript_Trainer01{
-    if (var(VAR_ZED_STORY_TRACKER) >= 10)  {
-        trainerbattle_single(
-            TRAINER_DEANDRE,
-            "I love the color of the leaves!",
-            "I didn't love that so much!"
-        )
-    } else {
-        trainerbattle_single(
-            TRAINER_JOHNSON,
-            "I have too much energy!",
-            "That's enough energy!"
-        )
-    }
+    trainerbattle_single(
+        TRAINER_JOHNSON,
+        "I have too much energy!",
+        "That's enough energy!"
+    )
     
     msgbox("Pick on someone your own size!.", MSGBOX_AUTOCLOSE)
     waitmessage
@@ -71,20 +63,11 @@ script Route102_EventScript_Trainer01{
 }
 
 script Route102_EventScript_Trainer02{
-    
-    if (var(VAR_ZED_STORY_TRACKER) >= 10) {
-        trainerbattle_single(
-            TRAINER_NANCY,
-            "What a lovely day!",
-            "And a lovely battle!"
-        )
-    } else {
-        trainerbattle_single(
-            TRAINER_AUTUMN,
-            "I just got here, but I'll battle!",
-            "A great way to start a picnick!"
-        )
-    }
+    trainerbattle_single(
+        TRAINER_AUTUMN,
+        "I just got here, but I'll battle!",
+        "A great way to start a picnick!"
+    )
 
     msgbox("I love spending time on this path.", MSGBOX_AUTOCLOSE)
     waitmessage
