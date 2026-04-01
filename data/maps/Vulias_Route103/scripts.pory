@@ -9,11 +9,11 @@ script VuliasRoute103_EventScript_LostMonQuestTrigger {
     waitse
     applymovement(ROUTE103_DISTRESSED_BEAUTY, moves(walk_fast_right * 4))
     waitmovement
-    msgbox("{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please help! You look
-            like a Pokemon Trainer! Some mean
-            people in black outfits stole my
-            {COLOR RED}Togepi{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! They ran off into the
-            {COLOR RED}Igris Desert{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the north!
+    setspeaker("Distressed Woman")
+    msgbox("Please help! You look like a Pokemon
+            Trainer! Some mean people in black
+            outfits stole my {COLOR RED}Togepi{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! They ran
+            off into the {COLOR RED}Igris Desert{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the north!
             
             Oh, you must chase them, please! I can't
             lose my Togepi!")
@@ -37,9 +37,9 @@ script VuliasRoute103_EventScript_LostMonWomanSpeak {
     } else {
         lock
         faceplayer
-        msgbox("{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please, save my
-                Togepi! I don't know how I could go on
-                without her!
+        setspeaker("Distressed Woman")
+        msgbox("Please, save my Togepi! I don't know how
+                I could go on without her!
                 
                 If you do, I might be able to help
                 you {COLOR RED}cut down{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} trees!

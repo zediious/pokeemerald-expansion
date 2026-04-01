@@ -13,6 +13,7 @@ script GerbonTownBattleHall_EventScript_FirstEnterWatchLeft {
     lock
     setvar(VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER, 1)
 
+    setspeaker("Announcer")
     msgbox("DING DING DING ...
     
             The match is about to begin!")
@@ -31,6 +32,7 @@ script GerbonTownBattleHall_EventScript_FirstEnterWatchRight {
     lock
     setvar(VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER, 1)
 
+    setspeaker("Announcer")
     msgbox("DING DING DING ...
     
             The match is about to begin!")
@@ -58,8 +60,8 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     // Julia tells Golem to use Stone Edge
     applymovement(GERBONBATTLEHALL_JULIA_01, moves(jump_in_place_right))
 
-    msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Golem! Use your
-            Stone Edge attack!")
+    setspeaker("Julia")
+    msgbox("Golem! Use your Stone Edge attack!")
 
     waitmessage
     // Golem misses the attack
@@ -86,8 +88,9 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     // Candace tells mon to use Volt Switch
     applymovement(GERBONBATTLEHALL_CANDACE_01, moves(jump_in_place_left * 2))
 
-    msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}No good! Use your
-            Volt Switch Kilowattrel!")
+    setspeaker("Candace")
+    msgbox("No good! Use your Volt Switch
+            Kilowattrel!")
 
     waitmessage
     playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
@@ -101,8 +104,8 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     removeobject(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL)
     delay(60)
 
-    msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Alright, now is your
-            time! Go Mantine!")
+    setspeaker("Candace")
+    msgbox("Alright, now's your time! Go Mantine!")
 
     // Mantine appears, and gets into place
     clearflag(GERBONBATTLEHALL_CANDACE_01_MANTINE)
@@ -128,8 +131,9 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     playse(SE_PIN)
     waitmovement
 
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I didn't mean to
-            surprise you!
+    setspeaker("Jordan")
+    msgbox("{PLAYER}! I didn't mean to surpise
+            you!
             
             ... ... ...
             
@@ -355,6 +359,7 @@ script GerbonBattleHall_TournamentBattleAfter {
 }
 
 script GerbonBattleHall_TournamentPlayerWon {
+        setspeaker("Announcer")
         msgbox("DING DING DING DING DING DING
     
             {PLAYER} has defeated the standing
@@ -366,7 +371,8 @@ script GerbonBattleHall_TournamentPlayerWon {
         setvar(VAR_GERBON_TOURNAMENT_STATE, 7)
         waitfanfare
         applymovement(GERBONTOURNEY_TRAINER05, moves(walk_left * 2))
-        msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I had so much fun! That was an
+        setspeaker("Julia")
+        msgbox("I had so much fun! That was an
         amazing battle! I'm sure most would be
         unhappy in my shoes, but I can't stop
         smiling!
@@ -392,16 +398,18 @@ script GerbonBattleHall_TournamentPlayerWon {
         waitmessage
         
         delay(30)
-        msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little
-                something extra from me, I think you'll
-                find some good use for it.")
+        setspeaker("Julia")
+        msgbox("Also, here's a little something extra
+                from me, I think you'll find some good
+                use for it.")
         waitmessage
 
         giveitem(ITEM_TM_ROCK_TOMB, 1)
         waitmessage
 
-        msgbox("{COLOR GREEN}Julia: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move hits nice and hard, and
-                it slows down your opponent to boot!
+        setspeaker("Jordan")
+        msgbox("That move hits nice and hard, and it
+                slows down your opponent to boot!
                 
                 Anyways, keep on getting better! I know
                 you'll make waves around here!")

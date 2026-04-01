@@ -21,9 +21,10 @@ script Route101_MapScript_CatchTrainerDisable{
 script Route101_EventScript_TrainerTeachCatch02{
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You finally made it. Did you
-            manage to catch anything with that
-            Poke Ball I gave you?
+    setspeaker("Trainer")
+    msgbox("You finally made it. Did you manage to
+            catch anything with that Poke Ball I
+            gave you?
             
             Checks bag...")
     waitmessage
@@ -235,6 +236,7 @@ script Route101_EventScript_Trainer03{
 script Route101_EventScript_ScaredTrainer {
     lock
     faceplayer
+    setspeaker("Scared Trainer")
     msgbox("The southern side of a Route is usually
             free of trainers, but you'll be forced
             to contend with wild Pokemon.
@@ -250,6 +252,7 @@ script Route101_EventScript_ScaredTrainer {
 script Route101_EventScript_HouseDad {
     lock
     faceplayer
+    setspeaker("Man")
     msgbox("I wish my boy would become a Pokemon
             Trainer. He spends his days watching
             TV instead!
@@ -264,6 +267,7 @@ script Route101_EventScript_HouseDad {
 script Route101_EventScript_HouseMom {
     lock
     faceplayer
+    setspeaker("Woman")
     msgbox("It's amazing, our Munchlax has better
             table manners than the rest of us!")
     waitmessage
@@ -274,6 +278,7 @@ script Route101_EventScript_HouseMom {
 script Route101_EventScript_HouseKid {
     lock
     faceplayer
+    setspeaker("Youngster")
     msgbox("I love to watch Pokemon Battles on TV!
             The {COLOR RED}Rep Trainers{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to
             be like them someday!")
@@ -286,6 +291,7 @@ script Route101_EventScript_HouseMunchlax {
     lock
     faceplayer
     playmoncry(SPECIES_MUNCHLAX, CRY_MODE_NORMAL)
+    setspeaker("Munchlax")
     msgbox("Ah-ooo-wa")
     waitmoncry
     waitmessage

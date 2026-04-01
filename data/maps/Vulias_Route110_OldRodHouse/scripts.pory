@@ -6,24 +6,27 @@ script VuliasRoute110_EventScript_FishermanGiveOldRod {
     faceplayer
     
     if (flag(FLAG_ROUTE110_GOTOLDROD)) {
-       msgbox("{COLOR GREEN}Fisherman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Have you caught anything
-                with that {COLOR RED}Old Rod{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} yet? Give it a try!")
+        setspeaker("Fisherman")
+        msgbox("Have you caught anything with that
+                {COLOR RED}Old Rod{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} yet? Give it a try!")
         waitmessage
         release
         end
     }
 
-    msgbox("{COLOR GREEN}Fisherman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You! Are you a fan of
-            fishing? It's only the greatest thing in
-            the world!", MSGBOX_YESNO)
+    setspeaker("Fisherman")
+    msgbox("You! Are you a fan of fishing? It's only
+            the greatest thing in the world!", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
-        msgbox("{COLOR GREEN}Fisherman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Jolly good stuff! I know!
-                You'll make good use of this!")
+        setspeaker("Fisherman")
+        msgbox("Jolly good stuff! I know! You'll make
+                good use of this!")
         giveitem(ITEM_OLD_ROD, 1)
         setflag(FLAG_ROUTE110_GOTOLDROD)
         waitmessage
-        msgbox("{COLOR GREEN}Fisherman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Walk up to some water, and
-                use the {COLOR RED}Old Rod{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to pull up a Water
+        setspeaker("Fisherman")
+        msgbox("Walk up to some water, and use the
+                {COLOR RED}Old Rod{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to pull up a Water
                 Pokemon!
                 
                 Catch some big ones for me!")
@@ -31,8 +34,9 @@ script VuliasRoute110_EventScript_FishermanGiveOldRod {
         release
         end
     } else {
-        msgbox("{COLOR GREEN}Fisherman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ah, well, I suppose fishing
-                isn't for everyone!")
+        setspeaker("Fisherman")
+        msgbox("Ah, well, I suppose fishing isn't for
+                everyone!")
         waitmessage
         release
         end

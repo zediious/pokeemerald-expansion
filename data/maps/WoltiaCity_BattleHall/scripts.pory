@@ -73,6 +73,7 @@ script WoltiaBattleHall_TournamentBattle {
     delay(60)
     buffertrainername(STR_VAR_1, VAR_WOLTIA_TOURNAMENT_OPPONENT)
     playse(SE_DING_DONG)
+    setspeaker("Announcer")
     msgbox("DING DING DING ...
     
             Avid battlers, step up!
@@ -129,9 +130,10 @@ script WoltiaBattleHall_TournamentBattle {
         )
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I knew we would 
-                both make it again! I've got another
-                chance to show what I can do!")
+        setspeaker("Jordan")
+        msgbox("{PLAYER}! I knew we would both make
+                it again! I've got another chance to
+                show you what I can do!")
         waitmessage
 
         // Determine Jordan starter
@@ -195,6 +197,7 @@ script WoltiaBattleHall_TournamentBattleAfter {
     }
 
     playse(SE_DING_DONG)
+    setspeaker("Announcer")
     msgbox("DING DING DING ...
     
             Congratulations {PLAYER}! What a
@@ -218,6 +221,7 @@ script WoltiaBattleHall_TournamentPlayerWon {
         playse(SE_DING_DONG)
         waitse
         playse(SE_DING_DONG)
+        setspeaker("Announcer")
         msgbox("DING DING DING DING DING DING
     
             {PLAYER} has defeated the standing
@@ -229,13 +233,13 @@ script WoltiaBattleHall_TournamentPlayerWon {
         setvar(VAR_WOLTIA_TOURNAMENT_STATE, 7)
         waitfanfare
         applymovement(WOLTIATOURNEY_TRAINER05, moves(walk_left * 2))
-        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a great battle!
-                I think Kilowattrel wants to have
-                another go at you!")
-        playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
-        msgbox("Caww!")
+        setspeaker("Candace")
+        msgbox("That was a great battle! I think
+                Kilowattrel wants to have another go at
+                you!")
         waitmessage
         
+        setspeaker("Candace")
         msgbox("You're the new Rep Trainer for Woltia
         City! Congratulations! Here is the 
         Aerodrome Ribbon, the mark of your
@@ -257,18 +261,19 @@ script WoltiaBattleHall_TournamentPlayerWon {
         waitmessage
         
         delay(30)
-        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Also, here's a little
-                something extra from me, I think you'll
-                find some good use for it.")
+        setspeaker("Candace")
+        msgbox("Also, here's a little something extra
+                from me, I think you'll find some good
+                use for it.")
         waitmessage
 
         giveitem(ITEM_TM_AERIAL_ACE, 1)
         waitmessage
 
-        msgbox("{COLOR GREEN}Candace: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That move can't miss! It
-                helps you get out of some sticky
-                situations! It didn't help me
-                enough against you!
+        setspeaker("Candace")
+        msgbox("That move can't miss! It helps you get
+                out of some sticky situations! It
+                didn't help me enough against you!
                 
                 Thank you for the wonderful battle!")
         waitmessage

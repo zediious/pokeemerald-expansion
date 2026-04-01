@@ -74,10 +74,11 @@ script GerbonTown_EventScript_HiddenItemBall {
 // Dudes that block that Palladium doors
 script GerbonTown_EventScript_PalladiumBlockers {
     lock
-    msgbox("{COLOR GREEN}Palladium Guard: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Not allowed in when
-            there's no match going on.
+    setspeaker("Guard")
+    msgbox("Not allowed in when there's no match
+            going on.
             
-            Come another time.")
+            Come back another time.")
     waitmessage
     release
     end
@@ -87,8 +88,9 @@ script GerbonTown_EventScript_PalladiumBlockers {
 script GerbonTown_EventScript_MadWoman {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Angry Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}These trainers! Breaking
-            out into a battle wherever they please!
+    setspeaker("Angry Woman")
+    msgbox("These trainers! Breaking out into a
+            battle wherever they please!
             
             Don't they know they're blocking
             the way? They won't listen!")
@@ -100,8 +102,8 @@ script GerbonTown_EventScript_MadWoman {
 // Battle scene blocking south exit
 script GerbonTown_EventScript_BlockingBattleScene {
     lock
-    msgbox("{COLOR GREEN}Battler 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Lillipup! Use your Tackle
-            attack!")
+    setspeaker("Battler 1")
+    msgbox("Lillipup! Use your Tackle attack!")
     waitmessage
     playmoncry(SPECIES_LILLIPUP, CRY_MODE_NORMAL)
     applymovement(GERBON_BLOCKER_BATTLER1_MON, moves(jump_in_place_right))
@@ -112,7 +114,8 @@ script GerbonTown_EventScript_BlockingBattleScene {
     playmoncry(SPECIES_SALANDIT, CRY_MODE_NORMAL)
     waitmoncry
     waitmovement
-    msgbox("{COLOR GREEN}Battler 2: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Salandit, don't take that!
+    setspeaker("Battler 2")
+    msgbox("Salandit, don't take that!
             Use your Scratch attack!")
     waitmessage
     playmoncry(SPECIES_SALANDIT, CRY_MODE_NORMAL)
@@ -154,7 +157,9 @@ script GerbonTown_EventScript_KidRunIntoPlayer {
 
     playse(SE_PIN)
     delay(60)
-    msgbox("{COLOR GREEN}Reckless Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Ouch, that hurt!
+    setspeaker("Reckless Child")
+    msgbox("Ouch, that hurt!
+
             I'm sorry, I'm just so excited for the
             battle in the {COLOR RED}Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, it's going to be
             so cool!
@@ -198,9 +203,10 @@ script GerbonTownBattleHall_OutdoorBattleStart {
     setvar(VAR_ZED_STORY_TRACKER, 3)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! That was the best
-        match I've seen yet! I am glad you were
-        able to see it!
+    setspeaker("Jordan")
+    msgbox("{PLAYER}! That was the best match
+        I've seen yet! I am glad you were able
+        to see it!
         
         Awhh, it's got me hyped up! Let's
         battle right now {PLAYER}!")
@@ -211,6 +217,7 @@ script GerbonTownBattleHall_OutdoorBattleStart {
 }
 
 script GerbonTown_OutdoorBattleJordanAsk {
+    setspeaker("Jordan")
     msgbox("Don't worry if you lose, I'll heal
         your Pokemon right away!", MSGBOX_YESNO)
 
@@ -275,15 +282,15 @@ script GerbonTown_OutdoorBattleEnd {
     faceplayer
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     specialvar(VAR_RESULT, GetBattleOutcome)
+    setspeaker("Jordan")
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You must have been
-            practicing, I thought I had that in
-            the bag!")
+        msgbox("You must have been practicing, I
+                thought I had that in the bag!")
         waitmessage
     } else {
-       msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Whew, that was a close one!
-                Looks like my training has paid off! I
-                bet you didn't expect that huh?")
+       msgbox("Whew, that was a close one! Looks like
+                my training has paid off! I bet you
+                didn't expect that huh?")
         waitmessage 
     }
     msgbox("I've been thinking, maybe we should try
@@ -332,9 +339,10 @@ script GerbonTown_OutdoorBattleEnd {
 script GerbonTownTourney_JordanStartOutside {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are! It's time to
-            start the tournament! I should explain
-            exactly how it works, eh?
+    setspeaker("Jordan")
+    msgbox("There you are! It's time to start the
+            tournament! I should explain exactly
+            how it works, eh? That would be helpful.
             
             16 trainers are entering, and you will
             battle a total of four trainers.
@@ -367,11 +375,11 @@ script GerbonTownTourney_JordanStartOutside {
 script GerbonTownTourney_JordanAfter {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was amazing! I'm a little
-            miffed that I didn't win, but I can't
-            deny what I bore witness to! I said it
-            before, but you must have really been
-            practicing!
+    setspeaker("Jordan")
+    msgbox("That was amazing! I'm a little miffed
+            that I didn't win, but I can't deny what
+            I bore witness to! I said it before, but
+            you must have really been practicing!
             
             Don't worry though, because I'm going
             to get you next time! That's right!
@@ -414,14 +422,17 @@ script GerbonTownTourney_JordanAfter {
 script GerbonTown_EventScript_TriathleteHouseMan {
     lock
     faceplayer
+    setspeaker("Athlete")
     if (!flag(FLAG_GERBON_GOT_MACHO)) {
         msgbox("It's important to train yourself, and
             your Pokemon! Look at Linoone go!")
         waitmessage
         playmoncry(SPECIES_LINOONE, CRY_MODE_NORMAL)
+        setspeaker("Linoone")
         msgbox("Greeee-ah")
         waitmoncry
         waitmessage
+        setspeaker("Athlete")
         msgbox("Here, this can help you make your
                 Pokemon as strong as they can be!")
         waitmessage
@@ -445,6 +456,7 @@ script GerbonTown_EventScript_TriathleteHouseLinoone {
     lock
     faceplayer
     playmoncry(SPECIES_LINOONE, CRY_MODE_NORMAL)
+    setspeaker("Linoone")
     msgbox("Greeee-ah")
     waitmoncry
     waitmessage
@@ -456,6 +468,7 @@ script GerbonTown_EventScript_TriathleteHouseLinoone {
 script GerbonTown_EventScript_ExpertHouseMan {
     lock
     faceplayer
+    setspeaker("Old Man")
     msgbox("Hoho, I do love retirement! Why, after a
             lifetime of work, nothing is better
             than nothing at all!")
@@ -468,6 +481,7 @@ script GerbonTown_EventScript_ExpertHouseSlaking {
     lock
     faceplayer
     playmoncry(SPECIES_SLAKING, CRY_MODE_NORMAL)
+    setspeaker("Slaking")
     msgbox("Grahh-uh!
     
             It looks as though you have woken up
@@ -482,6 +496,7 @@ script GerbonTown_EventScript_ExpertHouseSlaking {
 script GerbonTown_EventScript_CoupleHouse01Man {
     lock
     faceplayer
+    setspeaker("Man")
     msgbox("We love to watch the feature matches,
             but our little Pichu doesn't like
             battling!")
@@ -493,6 +508,7 @@ script GerbonTown_EventScript_CoupleHouse01Man {
 script GerbonTown_EventScript_CoupleHouse01Woman {
     lock
     faceplayer
+    setspeaker("Woman")
     msgbox("Even though our Pichu doesn't battle,
             we wouldn't change them for the world!")
     waitmessage
@@ -508,6 +524,7 @@ script GerbonTown_EventScript_CoupleHouse01Pichu {
     lock
     faceplayer
     playmoncry(SPECIES_PICHU, CRY_MODE_NORMAL)
+    setspeaker("Pichu")
     msgbox("Pi-chu!")
     waitmoncry
     waitmessage

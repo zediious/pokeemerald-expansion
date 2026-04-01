@@ -11,8 +11,9 @@ script RuvelPyramid02_GothoritaEncounterSaveKidTrigger {
     waitmovement
     waitse
     delay(30)
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There's a kid! And it looks
-            like there's a Pokemon with it!")
+    setspeaker("Jordan")
+    msgbox("There's a kid! And it looks like there's a
+            Pokemon with them!")
     waitmessage
     delay(60)
     closemessage
@@ -25,11 +26,13 @@ script RuvelPyramid02_GothoritaEncounterSaveKidTrigger {
     applymovement(RUVEL_GOTHORITA_01, moves(walk_up * 3))
     applymovement(RUVEL_LOSTKID_01, moves(walk_down, walk_left, face_up))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This doesn't look good...")
+    setspeaker("Jordan")
+    msgbox("This doesn't look good...")
     waitmessage
     delay(20)
     closemessage
     playmoncry(SPECIES_GOTHORITA, CRY_MODE_NORMAL)
+    setspeaker("Gothorita")
     msgbox("Weeew-widi!")
     waitmessage
     waitmoncry
@@ -100,6 +103,7 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     // Gothorita hops over left boulder and runs out of view
     // Kid is unhappy about this in entranced state
     playmoncry(SPECIES_GOTHORITA, CRY_MODE_NORMAL)
+    setspeaker("Gothorita")
     msgbox("Weeew-widi!")
     waitmessage
     delay(30)
@@ -123,8 +127,8 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     waitmessage
     delay(30)
     closemessage
-    msgbox("{COLOR GREEN}Missing Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wahhhhh!! Where am I!
-            I want my mommy!")
+    setspeaker("Missing Child")
+    msgbox("Wahhhhh!! Where am I! I want my mommy!")
     waitmessage
     delay(30)
     closemessage
@@ -150,14 +154,15 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     delay(30)
     applymovement(RUVEL_LOSTKID_01, moves(walk_fast_up * 2))
     waitmovement
-    msgbox("{COLOR GREEN}Missing Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please bring me to
-            my mommy!")
+    setspeaker("Missing Child")
+    msgbox("Please bring me to my mommy!")
     waitmessage
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(jump_in_place_down))
     playse(SE_BIKE_HOP)
     waitmovement
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Don't worry kid! We'll get you
-            out of here, and to your mom!
+    setspeaker("Jordan")
+    msgbox("Don't worry kid! We'll get you out of
+            here, and to your mom!
             
             Stay between us!")
     waitmessage

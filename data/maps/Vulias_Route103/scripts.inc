@@ -18,7 +18,9 @@ VuliasRoute103_EventScript_LostMonQuestTrigger::
 # 11 "data/maps/Vulias_Route103/scripts.pory"
 	waitmovement
 # 12 "data/maps/Vulias_Route103/scripts.pory"
-	msgbox VuliasRoute103_EventScript_LostMonQuestTrigger_Text_0
+	setspeaker VuliasRoute103_EventScript_LostMonQuestTrigger_Text_0
+# 13 "data/maps/Vulias_Route103/scripts.pory"
+	msgbox VuliasRoute103_EventScript_LostMonQuestTrigger_Text_1
 # 20 "data/maps/Vulias_Route103/scripts.pory"
 	waitmessage
 # 21 "data/maps/Vulias_Route103/scripts.pory"
@@ -50,6 +52,8 @@ VuliasRoute103_EventScript_LostMonWomanSpeak::
 # 39 "data/maps/Vulias_Route103/scripts.pory"
 	faceplayer
 # 40 "data/maps/Vulias_Route103/scripts.pory"
+	setspeaker VuliasRoute103_EventScript_LostMonQuestTrigger_Text_0
+# 41 "data/maps/Vulias_Route103/scripts.pory"
 	msgbox VuliasRoute103_EventScript_LostMonWomanSpeak_Text_0
 # 48 "data/maps/Vulias_Route103/scripts.pory"
 	waitmessage
@@ -123,19 +127,21 @@ VuliasRoute103_EventScript_LostMonQuestTrigger_Movement_2:
 
 VuliasRoute103_EventScript_LostMonQuestTrigger_Text_0:
 # 12 "data/maps/Vulias_Route103/scripts.pory"
-	.string "{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please help! You look\n"
-	.string "like a Pokemon Trainer! Some mean\l"
-	.string "people in black outfits stole my\l"
-	.string "{COLOR RED}Togepi{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! They ran off into the\l"
-	.string "{COLOR RED}Igris Desert{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the north!\p"
+	.string "Distressed Woman$"
+
+VuliasRoute103_EventScript_LostMonQuestTrigger_Text_1:
+# 13 "data/maps/Vulias_Route103/scripts.pory"
+	.string "Please help! You look like a Pokemon\n"
+	.string "Trainer! Some mean people in black\l"
+	.string "outfits stole my {COLOR RED}Togepi{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! They ran\l"
+	.string "off into the {COLOR RED}Igris Desert{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the north!\p"
 	.string "Oh, you must chase them, please! I can't\n"
 	.string "lose my Togepi!$"
 
 VuliasRoute103_EventScript_LostMonWomanSpeak_Text_0:
-# 40 "data/maps/Vulias_Route103/scripts.pory"
-	.string "{COLOR GREEN}Distressed Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please, save my\n"
-	.string "Togepi! I don't know how I could go on\l"
-	.string "without her!\p"
+# 41 "data/maps/Vulias_Route103/scripts.pory"
+	.string "Please, save my Togepi! I don't know how\n"
+	.string "I could go on without her!\p"
 	.string "If you do, I might be able to help\n"
 	.string "you {COLOR RED}cut down{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} trees!\p"
 	.string "Some way that's worth more than gold!$"

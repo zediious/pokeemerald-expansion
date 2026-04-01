@@ -5,12 +5,14 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_up * 2, walk_left, walk_up))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_up))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wow, the carvings here are
+    setspeaker("Jordan")
+    msgbox("Wow, the carvings here are
             so cool! I wonder when all of this
             was created?")
     waitmessage
-    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A very long time ago, when power
-            meant...something more.")
+    setspeaker("???")
+    msgbox("A very long time ago, when power meant...
+            something more.")
     waitmessage
     delay(30)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark, face_up))
@@ -19,7 +21,8 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     waitmovement
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_right))
     waitmovement
-    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The legends of Vulias carry much
+    setspeaker("???")
+    msgbox("The legends of Vulias carry much
             weight. They may be an avenue to one's
             greatest desires.
             
@@ -32,9 +35,10 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     msgbox("The mysterious man sizes you up
             from head to toe.")
-    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You're the new {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of
-        Gerbon Town, are you not? I saw your
-        'battle'. Pathetic.
+    setspeaker("???")
+    msgbox("You're the new {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon
+        Town, are you not? I saw your 'battle'.
+        Pathetic.
         
         They sit in the stands, they cheer, and
         they clap. And you all call it battle.
@@ -50,9 +54,10 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     playse(SE_EXIT)
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_down, walk_right, walk_down, face_right))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was...weird, to say the
-            least. How can he call your battle
-            pathetic? Who does he think he is?
+    setspeaker("Jordan")
+    msgbox("That was...weird, to say the least.
+            How can he call your battle pathetic?
+            Who does he think he is?
             
             Anyways, I guess we'll come look around
             more another time, the tournament must

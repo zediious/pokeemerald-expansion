@@ -42,7 +42,9 @@ VuliasRoute102_EventScript_BrokenBridgeMan::
 # 35 "data/maps/Vulias_Route102/scripts.pory"
 	faceplayer
 # 36 "data/maps/Vulias_Route102/scripts.pory"
-	msgbox VuliasRoute102_EventScript_BrokenBridgeMan_Text_0
+	setspeaker VuliasRoute102_EventScript_BrokenBridgeMan_Text_0
+# 37 "data/maps/Vulias_Route102/scripts.pory"
+	msgbox VuliasRoute102_EventScript_BrokenBridgeMan_Text_1
 # 47 "data/maps/Vulias_Route102/scripts.pory"
 	waitmessage
 # 48 "data/maps/Vulias_Route102/scripts.pory"
@@ -109,9 +111,12 @@ VuliasRoute102_EventScript_CrossroadSign_Text_0:
 
 VuliasRoute102_EventScript_BrokenBridgeMan_Text_0:
 # 36 "data/maps/Vulias_Route102/scripts.pory"
-	.string "{COLOR GREEN}Concerned Hiker: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bah! And I prepared\n"
-	.string "all night for this trip! The {COLOR RED}bridge{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} has\l"
-	.string "collapsed!\p"
+	.string "Concerned Hiker$"
+
+VuliasRoute102_EventScript_BrokenBridgeMan_Text_1:
+# 37 "data/maps/Vulias_Route102/scripts.pory"
+	.string "Bah! And I prepared all night for this\n"
+	.string "trip! The {COLOR RED}bridge{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} has collapsed!\p"
 	.string "I called the service men, but I know\n"
 	.string "they take a long time to fix these\l"
 	.string "things. I suppose my only detour\l"

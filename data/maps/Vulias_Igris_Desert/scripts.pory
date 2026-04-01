@@ -137,17 +137,20 @@ script IgrisDesert_EventScript_KowtowAdminTopTileMove {
 
 script IgrisDesert_EventScript_KowtowAdmin {
     lock
-    msgbox("{COLOR GREEN}???: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}For the last time, stand on guard
+    setspeaker("???")
+    msgbox("For the last time, stand on guard
             while I-")
     playse(SE_PIN)
     applymovement(IGRIS_KOWTOWADMIN_01, moves(emote_exclamation_mark, face_right))
-    msgbox("{COLOR GREEN}Kowtow Admin: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You're not my team!
+    setspeaker("Kowtow Admin")
+    msgbox("You're not my team!
             
             
             What, here to serve some Justice? That
             won't be served so easily!")
     waitmessage
-    msgbox("{COLOR GREEN}Distant Voice: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}...wait!")
+    setspeaker("Distant Voice")
+    msgbox("{PLAYER}...wait!")
     clearflag(FLAG_IGRISDESERT_JORDAN_01)
     addobject(IGRIS_JORDAN_01)
     playse(SE_PIN)
@@ -159,16 +162,16 @@ script IgrisDesert_EventScript_KowtowAdmin {
     
     waitmovement
     call(IgrisDesert_DetermineJordanTeam01)
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm glad I caught up
-            with you! Can't let you boot these scum
-            down without me eh?")
+    setspeaker("Jordan")
+    msgbox("I'm glad I caught up with you! Can't let
+            you boot these scum down without me!")
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
     applymovement(IGRIS_KOWTOWADMIN_01, moves(jump_in_place_right * 2))
     waitmovement
-    msgbox("{COLOR GREEN}Kowtow Admin: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh, you're a big talker
-            huh!")
+    setspeaker("Kowtow Admin")
+    msgbox("Oh, you're a big talker huh!")
     waitmessage
     trainerbattle_single(
         TRAINER_GRUNT_SEAFLOOR_CAVERN_1,
@@ -181,6 +184,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
 
 script IgrisDesert_KowtowAdmin_AfterBattle {
     lock
+    setspeaker("Kowtow Admin")
     msgbox("Have not had to use one of these for
             quite some time...
             
@@ -205,8 +209,9 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
 
+    setspeaker("Jordan")
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}They got away again!
+        "They got away again!
         We need to start preparing for that
         smoke bomb, pack some goggles along
         with us, or something.
@@ -224,8 +229,9 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark, face_right))
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_fast_up * 8, walk_fast_left * 5))
     waitmovement
-    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My Togepi! thank goodness
-            you are safe!")
+    setspeaker("Happy Woman")
+    msgbox("My Togepi! thank goodness you are
+            safe!")
     waitmessage
     playmoncry(SPECIES_TOGEPI, CRY_MODE_NORMAL)
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_faster_right, face_left))
@@ -235,19 +241,21 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     waitmovement
     playmoncry(SPECIES_TOGEPI, CRY_MODE_NORMAL)
     waitse
-    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh I am so glad to see you!
-            You are never leaving my arms again
-            my precious!")
+    setspeaker("Happy Woman")
+    msgbox("Oh I am so glad to see you! You are
+            never leaving my arms again my
+            precious!")
     applymovement(TOGEPI_BEAUTY_DESERT, moves(walk_down, face_left))
     waitmovement
-    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I can hardly thank you
-            enough for what you've done! I hope
-            that this will suffice!")
+    setspeaker("Happy Woman")
+    msgbox("I can hardly thank you enough for what
+            you've done! I hope this will suffice!")
     waitmessage
     giveitem(ITEM_HM_CUT, 1)
     waitmessage
-    msgbox("{COLOR GREEN}Happy Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You'll be able to cut down
-            many small trees you find with that!
+    setspeaker("Happy Woman")
+    msgbox("You'll be able to cut down many small
+            trees you find with that!
             
             Thank you again, maybe I'll see you in
             Woltia City!")
@@ -262,8 +270,9 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
     fadescreenswapbuffers(FADE_FROM_BLACK)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_right))
+    setspeaker("Jordan")
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well that turned out well! You
+        "Well that turned out well! You
         got yourself a Cut HM as well!
         
         ...
@@ -389,9 +398,10 @@ script IgrisDesert_SandPitWarningTrigger_04 {
 }
 
 script IgrisDesert_SandPitWarning {
-    msgbox("{COLOR GREEN}School Kid: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Wait! Be careful if you go
-            that way! The sand pit over there will
-            suck you up!
+    setspeaker("School Kid")
+    msgbox("Wait! Be careful if you go that way!
+            The sand pit over there will suck you
+            up!
             
             You have to be very skilled, and know
             the right techniques to properly
@@ -458,6 +468,7 @@ script IgrisDesert_DetermineJordanTeam02 {
 script IgrisDesert_EventScript_JordanFollower02 {
     lock
     faceplayer
+    setspeaker("Jordan")
     msgbox("This Pyramid is another one of those
             things I've heard up, but never gone to
             see.
@@ -542,21 +553,22 @@ script IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger {
 script IgrisDesert_EventScript_SpeakJordanBecomeFollower02 {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! I've been waiting
-            for you! There's this really cool looking
+    setspeaker("Jordan")
+    msgbox("{PLAYER}! I've been waiting for you!
+            There's this really cool looking
             {COLOR RED}Pyramid{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the west, past this 
-            mountain range. I was waiting for you
-            so that we could check it out
+            mountain range. Let's check it out
             together!
             
             Are you ready to go? I'll keep your
             team healthy, and you'll be able to
             catch Pokemon!", MSGBOX_YESNO)
     waitmessage
+    setspeaker("Jordan")
     if (var(VAR_RESULT) == YES) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great, let's get going!
-                The Pyramid is to the west, up those
-                stairs through the mountain range.")
+        msgbox("Great, let's get going! The Pyramid is to
+                the west, up those stairs through the
+                mountain range.")
         waitmessage
         delay(30)
         playse(MUS_RG_OBTAIN_KEY_ITEM)
@@ -568,7 +580,7 @@ script IgrisDesert_EventScript_SpeakJordanBecomeFollower02 {
         release
         end
     } else {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Alright, come back soon!
+        msgbox("Alright, come back soon!
                 We absolutely must check out the
                 Pyramid before we move on!")
         waitmessage
@@ -580,10 +592,11 @@ script IgrisDesert_EventScript_SpeakJordanBecomeFollower02 {
 // Cannot leave desert from north or south until Pyramid after Jordan is follower
 script IgrisDesert_EventScript_JordanFollower02NoLeaveNorth {
     lock
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the
-            Pyramid before anything else! If you
-            need a Pokemon Center or Mart, we can
-            go to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
+    setspeaker("Jordan")
+    msgbox("Hey, let's check out the Pyramid before
+            anything else! If you need a Pokemon
+            Center or Mart, we can go to {COLOR RED}Palento
+            Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     waitmovement
@@ -593,10 +606,11 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveNorth {
 
 script IgrisDesert_EventScript_JordanFollower02NoLeaveSouth {
     lock
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's check out the
-            Pyramid before anything else! If you
-            a Pokemon Center or Mart, we can go
-            to {COLOR RED}Palento Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
+    setspeaker("Jordan")
+    msgbox("Hey, let's check out the Pyramid before
+            anything else! If you need a Pokemon
+            Center or Mart, we can go to {COLOR RED}Palento
+            Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.")
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement
@@ -608,8 +622,9 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveSouth {
 script IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Woah, watch out! We'll get
-            sucked into that sand pit!
+    setspeaker("Jordan")
+    msgbox("Woah, watch out! We'll get sucked into
+            that sand pit!
             
             ...
             
@@ -627,9 +642,10 @@ script IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit {
 script IgrisDesert_EventScript_PyramidGentleman01 {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Gentleman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}What a distinguished
-            landmark this is! Why, I simply must
-            spend as much time here as I can!")
+    setspeaker("Gentleman")
+    msgbox("What a distinguished landmark this is!
+            Why, I simply must spend as much time
+            here as I can!")
     waitmessage
     release
     end
@@ -671,8 +687,9 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     waitmovement
     applymovement(IGRIS_LOSTCHILD_MOM, moves(emote_exclamation_mark))
     delay(60)
-    msgbox("{COLOR GREEN}Distressed Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My little girl! They
-            were taken by a {COLOR RED}Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Pyramid!
+    setspeaker("Distressed Mother")
+    msgbox("My little girl! They were taken by a
+            {COLOR RED}Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Pyramid!
             My goodness, someone please help!")
     waitmessage
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(walk_right, face_left))
@@ -682,7 +699,8 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     setobjectxy(RUVELPYRAMIDEXT_GENTLEMAN, 13, 20)
     applymovement(RUVELPYRAMIDEXT_GENTLEMAN, moves(walk_fast_up * 5))
     waitmovement
-    msgbox("{COLOR GREEN}Gentleman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A lost child you say?
+    setspeaker("Gentleman")
+    msgbox("A lost child you say?
             I shall rush to the Pokemon Center at
             once for more assistance!")
     waitmessage
@@ -691,10 +709,10 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     removeobject(RUVELPYRAMIDEXT_GENTLEMAN)
     applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_faster_down, face_right))
     waitmovement
-    msgbox("{COLOR GREEN}Distressed Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please, try to find
-            my little girl! She was taken into the
-            closed off areas of the Pyramid by an
-            unknown Pokemon!
+    setspeaker("Distressed Mother")
+    msgbox("Please, try to find my little girl! She
+            was taken into the closed off areas of
+            the Pyramid by an unknown Pokemon!
             
             There are all manner of deadly traps
             within...oh my poor child!")
@@ -706,9 +724,10 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     clearflag(FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_up))
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Well, another reason to check
-            out the Pyramid! Although, I suppose
-            saving a child does come first.
+    setspeaker("Jordan")
+    msgbox("Well, another reason to check out the
+            Pyramid! Although, I suppose saving a
+            child does come first.
             
             Let's not waste any time!")
     waitmessage
@@ -722,9 +741,10 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
 script IgrisDesert_EventScript_DistressedMomWaiting {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Distressed Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Please don't
-            tarry, who knows what my poor child
-            could be going through right now?
+    setspeaker("Distressed Mother")
+    msgbox("Please don't tarry, who knows what my
+            poor child could be going through as we
+            speak?
             
             Oh no...
             
@@ -739,34 +759,40 @@ script IgrisDesert_EventScript_DistressedMomWaiting {
 script IgrisDesert_FoundChildWarpedOutside {
     setvar(VAR_ZED_STORY_TRACKER, 24)
     delay(30)
-    msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oh thank goodness you're
-            okay my sweet! I've been losing my mind
-            over you!")
+    setspeaker("Happy Mother")
+    msgbox("Oh thank goodness you're okay, my
+            sweet! I've been losing my mind over
+            you!")
     waitmessage
-    msgbox("{COLOR GREEN}Found Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Those nice people saved
-            me! That mean Pokemon took me to a dark
-            scary room and they saved me!")
+    setspeaker("Found Child")
+    msgbox("Those nice people saved me! That mean
+            Pokemon took me to a dark scary room
+            and they saved me!")
     waitmessage
     applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_right, face_up))
     waitmovement
-    msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I could never repay
-            you for what you've done for me and
-            my child. The least I can do is give
-            you each one of these")
+    setspeaker("Happy Mother")
+    msgbox("I could never repay you for what you've
+            done for me and my child. The least I
+            can do is give you each one of these.")
     waitmessage
     giveitem(ITEM_NUGGET, 1)
     waitmessage
-    playse(MUS_OBTAIN_ITEM)
+    applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_right, face_up))
+    waitmovement
+    playfanfare(MUS_OBTAIN_ITEM)
     msgbox("Jordan recieved a Nugget!
     
             He put it away in his Bag.", MSGBOX_SIGN)
+    waitfanfare
     waitmessage
     waitse
-    applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_left, face_up))
-    msgbox("{COLOR GREEN}Happy Mother: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Now, come along, and stay
-            very close!")
+    applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_left * 2, face_up))
+    setspeaker("Happy Mother")
+    msgbox("Now, come along, and stay very close!")
     waitmessage
-    msgbox("{COLOR GREEN}Found Child: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Yes mommy!")
+    setspeaker("Found Child")
+    msgbox("Yes mommy!")
     applymovement(IGRIS_LOSTCHILD_MOM_3, moves(walk_down * 9))
     applymovement(IGRIS_LOSTKID_FOUND, moves(walk_down * 9))
     waitmovement
@@ -774,11 +800,11 @@ script IgrisDesert_FoundChildWarpedOutside {
     removeobject(IGRIS_LOSTCHILD_MOM_3)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     applymovement(IGRIS_JORDAN_AFTERKIDSAVED, moves(face_left))
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That was a handful! I'm glad we
-            were able to save that kid. Not to
-            mention, we were able to go into
-            the forbidden areas of the
-            Pyramid!
+    setspeaker("Jordan")
+    msgbox("That was a handful! I'm glad we were
+            able to save that kid. Not to mention,
+            we were able to go into the forbidden
+            areas of the Pyramid!
             
             I wonder if they will let us go back
             in now?

@@ -26,9 +26,10 @@ script LittlerootTown_EventScript_JordanTalk01 {
     lock
     faceplayer
     bufferspeciesname(STR_VAR_1, VAR_STARTER_SPECIES)
-    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I worked all week, so I just
-            want to relax today. Sorry! I know you
-            and {STR_VAR_1} will enjoy it!")
+    setspeaker("Jordan")
+    msgbox("I worked all week, so I just want to
+            relax today. Sorry! I know you and
+            {STR_VAR_1} will enjoy it!")
     applymovement(JordanInHome, moves(face_left))
     waitmovement()
     release
@@ -37,8 +38,9 @@ script LittlerootTown_EventScript_JordanTalk01 {
 script LittlerootTown_EventScript_ElderTalk01 {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Elder:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sawgrass Village has been around
-            for many years, in many different forms.
+    setspeaker("Elder")
+    msgbox("Sawgrass Village has been around for
+            many years, in many different forms.
             
             War and volcanic eruptions have forced
             us to rebuild three times in my lifetime
@@ -53,8 +55,9 @@ script LittlerootTown_EventScript_ElderTalk01 {
 script LittlerootTown_EventScript_ArtistTalk01 {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Artist:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} This place is beautiful! My next
-            piece will simply be inspired!")
+    setspeaker("Artist")
+    msgbox("This place is beautiful! My next piece
+            will simply be inspired!")
     waitmessage()
     release
 }
@@ -62,6 +65,7 @@ script LittlerootTown_EventScript_ArtistTalk01 {
 script LittlerootTown_EventScript_BlockageSailor {
     lock
     faceplayer
+    setspeaker("Suspicious Man")
     msgbox("Sorry, this way is closed for now.
 
             There's...uhhhh...something going on
@@ -76,6 +80,7 @@ script LittlerootTown_EventScript_BlockageSailor {
 script LittlerootTown_EventScript_BlockageAzumarill {
     lock
     faceplayer
+    setspeaker("Houndoom")
     msgbox("Raaaaa!")
     playmoncry(SPECIES_HOUNDOOM, CRY_MODE_NORMAL)
     waitmoncry
@@ -86,11 +91,13 @@ script LittlerootTown_EventScript_BlockageAzumarill {
 
 script LittlerootTown_EventScript_TiredLady {
     lock
+    setspeaker("Old Woman")
     msgbox("My Poochyena has so much energy, I just
             can't run anymore!
             
             Look at him, he's still going!")
     closemessage
+    setspeaker("Poochyena")
     msgbox("Rah!")
     playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
     waitmoncry
@@ -102,6 +109,7 @@ script LittlerootTown_EventScript_TiredLady {
 script LittlerootTown_EventScript_TiredLady_Pooch {
     lock
     playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+    setspeaker("Poochyena")
     msgbox("Rah!")
     waitmoncry
     waitmessage
@@ -112,6 +120,7 @@ script LittlerootTown_EventScript_TiredLady_Pooch {
 script LittlerootTown_EventScript_HusbandLament {
     lock
     faceplayer
+    setspeaker("Man")
     msgbox("Skitty's got it made. I have to make my
             own meals!")
     waitmessage
@@ -121,6 +130,7 @@ script LittlerootTown_EventScript_HusbandLament {
 script LittlerootTown_EventScript_WifeCookingForSkitty {
     lock
     faceplayer
+    setspeaker("Skitty's Mom")
     if (flag(FLAG_GOT_SOOTHE_BELL_SAWGRASS)) {
         msgbox("Skitty loves me for the food, but she's
                 holding a Soothe Bell too!
@@ -145,6 +155,7 @@ script LittlerootTown_EventScript_WifeCookingForSkitty {
 script LittlerootTown_EventScript_WifeCookingForSkitty_Skitty {
     lock
     playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
+    setspeaker("Skitty")
     msgbox("Meeow!")
     waitmoncry
     waitmessage
@@ -155,10 +166,12 @@ script LittlerootTown_EventScript_WifeCookingForSkitty_Skitty {
 script LittlerootTown_EventScript_KidOutside {
     lock
     faceplayer
+    setspeaker("Child")
     msgbox("I love my {COLOR RED}Bunnelbly{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, they always play
             with me!")
     waitmessage
     playmoncry(SPECIES_BUNNELBY, CRY_MODE_NORMAL)
+    setspeaker("Bunnelby")
     msgbox("Oiii-wa")
     waitmoncry
     waitmessage
@@ -172,6 +185,7 @@ script LittlerootTown_EventScript_KidOutsideBunnelby {
     lock
     faceplayer
     playmoncry(SPECIES_BUNNELBY, CRY_MODE_NORMAL)
+    setspeaker("Bunnelby")
     msgbox("Oiii-wa")
     waitmoncry
     waitmessage
@@ -185,9 +199,9 @@ script LittlerootTown_EventScript_KidOutsideBunnelby {
 script LittlerootTown_EventScript_TrainerTeachCatch01 {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Trainer:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} I see you only have one
-            Pokemon. Do you want to learn how
-            to catch more?", MSGBOX_YESNO)
+    setspeaker("Trainer")
+    msgbox("I see you only have one Pokemon. Do you
+            want to learn how to catch more?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES){
         msgbox("Great. Here, have a Poke Ball.")
         giveitem(ITEM_POKE_BALL, 1)

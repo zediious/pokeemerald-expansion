@@ -22,8 +22,9 @@ script LittlerootTown_EventScript_JordanAwakenStart {
         walk_left
     ))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Are you okay? You were tossing
-            and turning for the past few minutes.
+    setspeaker("Jordan")
+    msgbox("Are you okay? You were tossing and
+            turning for the past few minutes.
             Anyways, I bet you're ready to get
             going, those feature matches are the
             coolest thing in the world!
@@ -33,8 +34,8 @@ script LittlerootTown_EventScript_JordanAwakenStart {
             Gerbon Town, just east of here.
             
             I'm tuckered out today, but I'll go
-            to the other {COLOR RED}Battle Stadiums{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}with you
-            tomorrow!."
+            to the other {COLOR RED}Battle Stadiums{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} with you
+            tomorrow!"
     )
     waitmessage
     closemessage
@@ -72,7 +73,8 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
         face_left
     ))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Sorry, I forgot to tell you!
+    setspeaker("Jordan")
+    msgbox("Sorry, I forgot to tell you!
             The trainers around here don't mess
             around, you'll face a pretty tough
             challenge!
@@ -87,9 +89,8 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
     closemessage
     giveitem(ITEM_POTION, 10)
     giveitem(ITEM_FULL_HEAL, 5)
-    msgbox("Those should cover our meal at the
-            Woltia City train station, that you
-            paid for.
+    msgbox("Those should cover our meal in
+            Woltia City, that you paid for.
             
             ...
             
@@ -133,9 +134,10 @@ script SawgrassVillage_AwakenAfterRoute110 {
         walk_left
     ))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Good morning {PLAYER}! You
-            better have gotten good sleep, because
-            today, we're gonna have great battles!
+    setspeaker("Jordan")
+    msgbox("Good morning {PLAYER}! You better
+            have gotten good sleep, because today,
+            we're gonna have great battles!
             
             The tournament to decide the next 
             {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The

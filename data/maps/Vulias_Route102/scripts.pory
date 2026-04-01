@@ -33,9 +33,9 @@ script VuliasRoute102_EventScript_HiddenItemBall {
 script VuliasRoute102_EventScript_BrokenBridgeMan {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Concerned Hiker: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Bah! And I prepared
-            all night for this trip! The {COLOR RED}bridge{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} has
-            collapsed!
+    setspeaker("Concerned Hiker")
+    msgbox("Bah! And I prepared all night for this
+            trip! The {COLOR RED}bridge{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} has collapsed!
             
             I called the service men, but I know
             they take a long time to fix these

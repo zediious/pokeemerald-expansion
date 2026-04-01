@@ -108,8 +108,8 @@ script VuliasRoute110_EventScript_Trainer04{
 script VuliasRoute110_EventScript_WonderingMan {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Wondering Man: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I wonder how I can get
-            up that cliff...
+    setspeaker("Wondering Man")
+    msgbox("I wonder how I can get up that cliff...
             
             Confound it! I just can't {COLOR RED}Rock Climb!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
@@ -139,10 +139,11 @@ script VuliasRoute110_FirstArrivalWithJordanTrigger02 {
 
 // Player arrived for first time with Jordan follower
 script VuliasRoute110_FirstArrivalWithJordan {
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We made it through! I don't
-            know about you, but my Pokemon got
-            much more powerful from that! I wonder
-            if they got as scared as I did...
+    setspeaker("Jordan")
+    msgbox("We made it through! I don't know about
+            you, but my Pokemon got much more
+            powerful from that! I wonder if they
+            got as scared as I did...
             
             Anyways, I want to do a little solo
             training, so I'll go on ahead.
@@ -169,10 +170,11 @@ script VuliasRoute110_FirstArrivalWithJordan {
 script VuliasRoute110_PlayerArrivedToJordan {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are! How did your
-            training go? Mine have gotten so much
-            stronger, but they're tired! Speaking
-            of which, I'm also tired!
+    setspeaker("Jordan")
+    msgbox("There you are! How did your training go?
+            Mine have gotten so much stronger, but
+            they're tired! Speaking of which, I'm
+            also tired!
             
             The tournament starts tomorrow, so we
             better make sure we're well rested.

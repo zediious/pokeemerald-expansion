@@ -17,15 +17,17 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
 
     // Different message if player entered already
     if (flag(FLAG_SAWGRASSFOREST_PLAYERLEFT))
-    {
+    {   
+        setspeaker("Jordan")
         msgbox("You're back! Ready to go?", MSGBOX_YESNO)
     }
     else
-    {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There you are {PLAYER}, I've
-            been waiting! There's all sorts of
-            Pokemon in this forest, not to mention
-            other trainers.
+    {   
+        setspeaker("Jordan")
+        msgbox("There you are {PLAYER}, I've been
+            waiting! There's all sorts of Pokemon
+            in this forest, not to mention other
+            trainers.
             
             Let's explore the place, maybe we'll find
             a rare Pokemon!
@@ -102,6 +104,7 @@ script SawgrassForest_DetermineJordanTeam {
 script SawgrassForest_EventScript_JordanFollower {
     lock
     faceplayer
+    setspeaker("Jordan")
     msgbox("This place is a lot spookier than
             I remember...
             
@@ -116,6 +119,7 @@ script SawgrassForest_JordanLeave {
     if (var(VAR_ZED_STORY_TRACKER) == 4 && !flag(FLAG_SAWGRASSFOREST_JORDANNOTRIGGER)) {
         lock
         faceplayer
+        setspeaker("Jordan")
         msgbox("Do you want to take a break?
                 I'll be waiting for you.", MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
@@ -278,8 +282,9 @@ script SawgrassForest_KowtowEncounter {
     }
     waitmovement
 
+    setspeaker("Jordan")
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}What's going on here!"
+        "What's going on here!"
     )
 
     applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_down))
@@ -297,50 +302,59 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmovement
 
+    setspeaker("Kowtow Grunt 1")
     msgbox(
-        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}What are you doing
-            here! I guess that guy we paid to block
-            the entrance tucked tail."
+        "What are you doing here! I guess that
+        guy we paid to block the entrance
+        tucked tail."
     )
     waitmessage
 
     applymovement(SAWGRASS_KOWTOW_01, moves(face_down))
     applymovement(SAWGRASS_KOWTOW_02, moves(face_up))
 
+    setspeaker("Kowtow Grunt 1")
     msgbox(
-        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I guess we'll just have
-            to take them, down ourselves, the boss
-            don't got to know we messed up a little
-            bit!"
+        "I guess we'll just have to take them
+        down ourselves, the boss don't got to
+        know we messed up a little bit!"
     )
     waitmessage
 
+    setspeaker("Kowtow Grunt 2")
     msgbox(
-        "{COLOR GREEN}Kowtow Grunt 2: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Sure, sure, until his
-            {COLOR RED}Kingambit{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares us down for so long
-            that we break into a sweat!"
+        "Sure, sure, until his {COLOR RED}Kingambit{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares
+        us down for so long that we break into
+        a sweat!"
     )
+    waitmessage
+
+    delay(60)
+    msgbox("The two continue to bicker for some
+        time.")
     waitmessage
 
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
 
+    setspeaker("Jordan")
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Sheesh, the trash might take
-            itself out if they keep arguing."
+        "Sheesh, the trash might take itself out
+        if they keep arguing."
     )
     waitmessage
 
+    setspeaker("Kowtow Grunt 1")
     msgbox(
-        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Quit being a..."
+        "Quit being a..."
     )
     waitmessage
 
     applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_right))
     applymovement(SAWGRASS_KOWTOW_02, moves(emote_exclamation_mark, face_right))
 
+    setspeaker("Kowtow Grunt 1")
     msgbox(
-        "{COLOR GREEN}Kowtow Grunt 1: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Who are you calling
-            trash!"
+        "Who are you calling trash!"
     )
     waitmessage
 
@@ -398,6 +412,7 @@ script Sawgrass_Kowtow_Whiteout {
 
 script Sawgrass_Kowtow_AfterBattle {
     lock
+    setspeaker("Kowtow Grunt 1")
     msgbox("No good, use the smokescreen!")
     waitmessage
 
@@ -413,8 +428,9 @@ script Sawgrass_Kowtow_AfterBattle {
 
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
 
+    setspeaker("Jordan")
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}They got away!"
+        "They got away!"
     )
     waitmessage
 
@@ -432,16 +448,18 @@ script Sawgrass_Kowtow_AfterBattle {
         applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     }
     waitmovement
-    msgbox("{COLOR GREEN}Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Thank you for dealing with them!
+    setspeaker("Woman")
+    msgbox("Thank you for dealing with them!
             They did take my money, but I was
             worried for my life!
             
             Here, have this! I insist!")
     waitmessage
     giveitem(ITEM_EXP_SHARE, 1)
-    msgbox("{COLOR GREEN}Woman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I was going to train my Pokemon
-            with that, but I think I'm going to take
-            some time to relax. Keep it!")
+    setspeaker("Woman")
+    msgbox("I was going to train my Pokemon with
+            that, but I think I'm going to take some
+            time to relax. Keep it!")
 
     // Woman leaves
     waitmessage
@@ -453,10 +471,10 @@ script Sawgrass_Kowtow_AfterBattle {
 
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
 
+    setspeaker("Jordan")
     msgbox(
-        "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Argh! I can't believe
-        we let those {COLOR RED}Team Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} members
-        get away!
+        "Argh! I can't believe we let those
+        {COLOR RED}Team Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} members get away!
         
         They're a gang of criminals, and they
         have started to cause more trouble

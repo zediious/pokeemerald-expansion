@@ -228,8 +228,8 @@ script RubelPyramid01_PoliceWarnTrigger {
     waitmovement
     waitse
     delay(30)
-    msgbox("{COLOR GREEN}Policeman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You! No one is allowed
-            past this point!
+    setspeaker("Policeman")
+    msgbox("You! No one is allowed past this point!
             
             ...
             
@@ -254,10 +254,11 @@ script RubelPyramid01_PoliceWarnTrigger {
 script RubelPyramid01_PoliceTalk {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Policewoman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Remember, watch out for
-            the spikes! You'll need to come back
-            here for medical assistance if you
-            do end up getting stuck by one!")
+    setspeaker("Policeman")
+    msgbox("Remember, watch out for the spikes!
+            You'll need to come back here for
+            medical assistance if you do end up
+            getting stuck by one!")
     release
     end
 }

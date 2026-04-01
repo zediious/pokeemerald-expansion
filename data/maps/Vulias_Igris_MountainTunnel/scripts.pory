@@ -113,8 +113,9 @@ script MountainTunnel_EventScript_Trainer05{
 script MountainTunnel_LedgeKid {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Ledge Kid: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ah man! if only I could just
-            hop up that ledge!
+    setspeaker("Ledge Kid")
+    msgbox("Ah man! if only I could just hop up that
+            ledge!
             
             I have to go all the way around! I think
             I'll just go home.")

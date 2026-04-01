@@ -373,7 +373,9 @@ RubelPyramid01_PoliceWarnTrigger::
 # 230 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	delay 30
 # 231 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	msgbox RubelPyramid01_PoliceWarnTrigger_Text_0
+	setspeaker RubelPyramid01_PoliceWarnTrigger_Text_0
+# 232 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	msgbox RubelPyramid01_PoliceWarnTrigger_Text_1
 # 246 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	waitmessage
 # 247 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
@@ -391,8 +393,10 @@ RubelPyramid01_PoliceTalk::
 # 256 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	faceplayer
 # 257 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setspeaker RubelPyramid01_PoliceWarnTrigger_Text_0
+# 258 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	msgbox RubelPyramid01_PoliceTalk_Text_0
-# 261 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 262 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	release
 	end
 
@@ -486,8 +490,11 @@ RuvelPyramid01_Cofagrigus_AfterBattle_Text_1:
 
 RubelPyramid01_PoliceWarnTrigger_Text_0:
 # 231 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	.string "{COLOR GREEN}Policeman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You! No one is allowed\n"
-	.string "past this point!\p"
+	.string "Policeman$"
+
+RubelPyramid01_PoliceWarnTrigger_Text_1:
+# 232 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	.string "You! No one is allowed past this point!\p"
 	.string "...\p"
 	.string "Ah, you're helping to find the child?\n"
 	.string "I've been standing watch to see if we\l"
@@ -500,8 +507,8 @@ RubelPyramid01_PoliceWarnTrigger_Text_0:
 	.string "Pyramid are still active!$"
 
 RubelPyramid01_PoliceTalk_Text_0:
-# 257 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	.string "{COLOR GREEN}Policewoman: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Remember, watch out for\n"
-	.string "the spikes! You'll need to come back\l"
-	.string "here for medical assistance if you\l"
-	.string "do end up getting stuck by one!$"
+# 258 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	.string "Remember, watch out for the spikes!\n"
+	.string "You'll need to come back here for\l"
+	.string "medical assistance if you do end up\l"
+	.string "getting stuck by one!$"

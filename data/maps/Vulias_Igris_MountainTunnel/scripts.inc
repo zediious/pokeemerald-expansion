@@ -115,19 +115,21 @@ MountainTunnel_LedgeKid::
 # 115 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	faceplayer
 # 116 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	msgbox MountainTunnel_LedgeKid_Text_0
-# 121 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	waitmessage
+	setspeaker MountainTunnel_LedgeKid_Text_0
+# 117 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	msgbox MountainTunnel_LedgeKid_Text_1
 # 122 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	applymovement MTNTUNNEL_LEDGEKID, MountainTunnel_LedgeKid_Movement_0
+	waitmessage
 # 123 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	applymovement MTNTUNNEL_LEDGEKID, MountainTunnel_LedgeKid_Movement_0
+# 124 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	release
 	end
 
 
-# 122 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+# 123 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 MountainTunnel_LedgeKid_Movement_0:
-# 122 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+# 123 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
 	face_left
 	step_end
 
@@ -212,7 +214,11 @@ MountainTunnel_EventScript_Trainer05_Text_2:
 
 MountainTunnel_LedgeKid_Text_0:
 # 116 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
-	.string "{COLOR GREEN}Ledge Kid: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ah man! if only I could just\n"
-	.string "hop up that ledge!\p"
+	.string "Ledge Kid$"
+
+MountainTunnel_LedgeKid_Text_1:
+# 117 "data/maps/Vulias_Igris_MountainTunnel/scripts.pory"
+	.string "Ah man! if only I could just hop up that\n"
+	.string "ledge!\p"
 	.string "I have to go all the way around! I think\n"
 	.string "I'll just go home.$"

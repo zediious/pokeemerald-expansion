@@ -124,9 +124,10 @@ script VuliasMullenCave_StudentEnd {
 // Sensei at top of L2 platforms, gives Rock Smash HM
 script VuliasMullenCave_EventScript_Trainer08{
     if (var(VAR_MULLEN_CAVE_SENSEI_PROGRESS) == 2) {
+        setspeaker("Sensei")
         trainerbattle_single(
             TRAINER_KOJI_1,
-            "{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}So, you have defeated my
+            "So, you have defeated my
             students? Let us see how you fare
             against me!",
             "Hoho! Very impressive!",
@@ -136,15 +137,17 @@ script VuliasMullenCave_EventScript_Trainer08{
         end
         
     } elif (var(VAR_MULLEN_CAVE_SENSEI_PROGRESS) == 3) {
+        setspeaker("Sensei")
         msgbox("Go forth and practice your skills!", MSGBOX_AUTOCLOSE)
         waitmessage
         end
     } else {
         lock
         faceplayer
-        msgbox("{COLOR GREEN}Sensei: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You think you can
-                face me? Prove yourself, by defeating
-                my {COLOR RED}two students{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} first!")
+        setspeaker("Sensei")
+        msgbox("You think you can face me? Prove
+                yourself, by defeating my {COLOR RED}two
+                students{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} first!")
         waitmessage
         release
         end
@@ -158,8 +161,9 @@ script ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive {
         release
         end
     } else {
-        msgbox("{COLOR GREEN}Sensei:{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} You are a true warrior, this
-        {COLOR RED}HM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall serve you well!")
+        setspeaker("Sensei")
+        msgbox("You are a true warrior, this {COLOR RED}HM{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shall
+                serve you well!")
         giveitem(ITEM_HM_ROCK_SMASH, 1)
         setflag(FLAG_MULLEN_SENSEI_DEFEATED)
         setvar(VAR_MULLEN_CAVE_SENSEI_PROGRESS, 3)
@@ -208,7 +212,8 @@ script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
     waitmovement
     playse(SE_PIN)
 
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Who's the-
+    setspeaker("Jordan")
+    msgbox("Who's the-
     
             {PLAYER}! Wow, you got me this time, I
             nearly jumped out of my socks! I was a
@@ -221,9 +226,10 @@ script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
             I'll keep your party healthy. You'll be
             able to catch Pokemon still, too!", MSGBOX_YESNO)
 
+    setspeaker("Jordan")
     if (var(VAR_RESULT) == YES) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's get moving! The
-                exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shouldn't be too far
+        msgbox("Great! Let's get moving! The exit to 
+                {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} shouldn't be too far
                 far, {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} won't be far then!")
         waitmessage
         delay(30)
@@ -236,8 +242,8 @@ script VuliasMullenCave_EventScript_SpeakJordanAtBridgeBlocking {
         release
         end
     } else {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's all good! We can travel
-                together another time, yeah?
+        msgbox("That's all good! We can travel together
+                another time, yeah?
                 
                 I'll see you at exit to {COLOR RED}Route 103{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. We'll
                 be close to {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} then!")
@@ -293,6 +299,7 @@ script MulledCave_DetermineJordanTeam {
 script MullenCave_EventScript_JordanFollower {
     lock
     faceplayer
+    setspeaker("Jordan")
     msgbox("There are plenty of local legends about
             this cave, but no one has been able to
             find the caverns that are spoken of.")
@@ -306,7 +313,8 @@ script MullenCave_EventScript_NoLeaveWhileFollower {
     checkfollowernpc
     if (var(VAR_RESULT) == YES) {
         lock
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, let's try to make it to the
+        setspeaker("Jordan")
+        msgbox("Hey, let's try to make it to the
                 exit! No use going back now!")
         waitmessage
         applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
@@ -323,9 +331,10 @@ script MullenCave_EventScript_JordanLeaveAtEnd {
         lock
         applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
         waitmovement
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Looks like this is the end!
-                sure was a bit more difficult than the
-                {COLOR RED}Ferry Fearow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} we took to get to my house
+        setspeaker("Jordan")
+        msgbox("Looks like this is the end! Sure was a
+                bit more difficult than the {COLOR RED}Ferry
+                Fearow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} we took to get to my house
                 from Woltia, but a bit more fun I would
                 say!
                 

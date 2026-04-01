@@ -35,11 +35,12 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter {
 // Start Old Ruin visit before tourney by speaking to Jordan outside hall
 // As well, start tourney after Old ruin encounter
 script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
+    setspeaker("Jordan")
     if (var(VAR_ZED_STORY_TRACKER) == 17) {
         lock
         faceplayer
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ready to go? They are letting
-                in tournament entrants now!", MSGBOX_YESNO)
+        msgbox("Ready to go? They are letting in
+                tournament entrants now!", MSGBOX_YESNO)
         waitmessage
         if (var(VAR_RESULT) == YES) {
             setflag(FLAG_WOLTIA_TOURNEY_TRAINER01)
@@ -47,7 +48,8 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
             setflag(FLAG_WOLTIA_TOURNEY_TRAINER03)
             setflag(FLAG_WOLTIA_TOURNEY_TRAINER04)
             setflag(FLAG_WOLTIA_TOURNEY_TRAINER05)
-            msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Nice! I'm excited about this!
+            setspeaker("Jordan")
+            msgbox("Nice! I'm excited about this!
             
                     You bet we'll see each other at the end!
                     I won't let you get me this time!")
@@ -56,14 +58,20 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
             warp(MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 5)
             release
             end
+        } else {
+            setspeaker("Jordan")
+            msgbox("Got it! You should definitly hurry, I
+                    don't want you to miss it!")
+            release
+            end
         }
     }
     else {
         lock
         faceplayer
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Heya! The tournament is still
-                not set to start for a little bit, we
-                have some time to kill.
+        msgbox("Heya! The tournament is still not set to
+                start for a little bit, we have some time
+                to kill.
                 
                 Let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, right
                 there next to {COLOR RED}The Aerodrome{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
@@ -93,9 +101,10 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
 script WoltiaCity_EventScript_JordanFollowerKeeganEncounter {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Let's go to the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
-            It's just to right of the giant building
-            right there!")
+    setspeaker("Jordan")
+    msgbox("Let's go to the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! It's just to
+            the right of the giant building right
+            there!")
     waitmessage
     release
     end
@@ -106,8 +115,9 @@ script WoltiaCity_EventScript_NoLeaveWhileFollower {
     checkfollowernpc
     if (var(VAR_RESULT) == YES) {
         lock
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Where you going? It won't take
-                long, let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+        setspeaker("Jordan")
+        msgbox("Where you going? It won't take long,
+                let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
                 
                 It's just to right of the giant building
                 on the north side of the city!")
@@ -124,8 +134,9 @@ script WoltiaCity_EventScript_NoLeaveWhileFollowerSouth {
     checkfollowernpc
     if (var(VAR_RESULT) == YES) {
         lock
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Where you going? It won't take
-                long, let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+        setspeaker("Jordan")
+        msgbox("Where you going? It won't take long,
+                let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
                 
                 It's just to right of the giant building
                 on the north side of the city!")
@@ -144,7 +155,8 @@ script WoltiaCity_JordanGoToIgris {
     applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(face_right))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You did it again {PLAYER}!
+    setspeaker("Jordan")
+    msgbox("You did it again {PLAYER}!
             I've just got to keep getting stronger
             so I can beat you one day! Your
             Pokemon really love you, it shows.
