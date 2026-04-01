@@ -2142,8 +2142,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             if (levelCeil >= 10)
             {
                 for (u32 e = 0; e < tempTrainer.partySize; e++) 
-                {
-                    u8 compareLevel = (levelCeil - (Random() % 3));
+                {   
+                    // Set level to (player mon max - [0-3])
+                    // Don't set if calced level is lower than set level
+                    u8 compareLevel = (levelCeil - (Random() % 4));
                     if (scaledParty[e].lvl < compareLevel) {
                         scaledParty[e].lvl = compareLevel;
 
