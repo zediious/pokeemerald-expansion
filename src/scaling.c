@@ -24,7 +24,7 @@ static struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, st
 static struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex);
 
-struct TrainerMon *ScaleTrainerMons(struct Trainer tempTrainer, struct TrainerMon *scaledParty)
+struct TrainerMon *ScaleTrainerMons(struct Trainer tempTrainer, struct TrainerMon *scaledParty, bool32 evolveExcluded)
 {
      // Get player's highest level mon
     u8 levelCeil = 0;
@@ -46,6 +46,9 @@ struct TrainerMon *ScaleTrainerMons(struct Trainer tempTrainer, struct TrainerMo
                 scaledParty[e].lvl = compareLevel;
 
                 // Evolve pokemon if applicable
+
+                // Don't evolve if evolveExcluded was passed TRUE
+                if (evolveExcluded) {continue;}
 
                 // Don't evolve if Pokemon has a held Everstone or Eviolite
                 if (scaledParty[e].heldItem == ITEM_EVIOLITE || scaledParty[e].heldItem == ITEM_EVERSTONE) {continue;}

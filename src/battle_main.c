@@ -489,6 +489,16 @@ static const u16 ExcludeScalingTrainers[] =
     TRAINER_WINONA_1,
 };
 
+// List of trainers that are excluded from evolution during scaling.
+// The levels of the mons will still scale, but they will not evolve.
+// Duplicates between this and `ExcludeScalingTrainers` are not needed.
+static const u16 ExcludeScalingEvoTrainers[] =
+{
+    //Sensei's students, should always have Tyrogue
+    TRAINER_CALVIN_1,
+    TRAINER_BILLY,
+};
+
 const u8 gStatusConditionString_PoisonJpn[] = _("どく$$$$$");
 const u8 gStatusConditionString_SleepJpn[] = _("ねむり$$$$");
 const u8 gStatusConditionString_ParalysisJpn[] = _("まひ$$$$$");
@@ -2118,6 +2128,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     {   
         // Do not scale if trainer among exclusions
         bool32 isExcluded = FALSE;
+        bool32 evolveExcluded = FALSE;
         u32 t;
         for (t = 0; t < ARRAY_COUNT(ExcludeScalingTrainers); t++) {
             if (trainerNum == ExcludeScalingTrainers[t]) {
@@ -2127,12 +2138,21 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
         }
         
         if (!isExcluded) {
+
+            // Check if trainer should be excluded from scaling-induced evolution
+            for (t = 0; t < ARRAY_COUNT(ExcludeScalingEvoTrainers); t++) {
+            if (trainerNum == ExcludeScalingEvoTrainers[t]) {
+                evolveExcluded = TRUE;
+                break;
+            }
+        }
+
             // Make a copy of tempTrainer party
             struct TrainerMon scaledParty[tempTrainer.partySize];
             memcpy(scaledParty, tempTrainer.party, tempTrainer.partySize * sizeof(struct TrainerMon));
 
             // Scale the party if applicable, returns un-modified party if not.
-            tempTrainer.party = ScaleTrainerMons(tempTrainer, scaledParty);
+            tempTrainer.party = ScaleTrainerMons(tempTrainer, scaledParty, evolveExcluded);
             retVal = CreateNPCTrainerPartyFromTrainer(party, &tempTrainer, firstTrainer, gBattleTypeFlags);
         } else {
             retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
