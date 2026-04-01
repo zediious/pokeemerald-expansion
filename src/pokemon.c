@@ -3786,6 +3786,19 @@ const struct Evolution *GetSpeciesEvolutions(u16 species)
     return evolutions;
 }
 
+const u8 GetSpeciesEvolutionCount(u16 species)
+{
+    const struct Evolution *evolutions = gSpeciesInfo[SanitizeSpeciesId(species)].evolutions;
+    if (evolutions == NULL) {return 0;}
+
+    u8 evolutionCount = 0;
+    for (u32 j = 0; evolutions[j].method != EVOLUTIONS_END; j++)
+    {
+        evolutionCount += 1;
+    }
+    return evolutionCount;
+}
+
 const u16 *GetSpeciesFormTable(u16 species)
 {
     const u16 *formTable = gSpeciesInfo[SanitizeSpeciesId(species)].formSpeciesIdTable;

@@ -48,6 +48,7 @@
 #include "recorded_battle.h"
 #include "roamer.h"
 #include "safari_zone.h"
+#include "scaling.h"
 #include "scanline_effect.h"
 #include "script.h"
 #include "sound.h"
@@ -2130,57 +2131,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             struct TrainerMon scaledParty[tempTrainer.partySize];
             memcpy(scaledParty, tempTrainer.party, tempTrainer.partySize * sizeof(struct TrainerMon));
 
-            // Get player's highest level mon
-            u8 levelCeil = 0;
-            for (u32 i = 0; i < PARTY_SIZE; i++)
-            {
-                u8 monLevel = (u8) GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
-                if (levelCeil < monLevel) {levelCeil = monLevel;}
-            }
-
-            // Don't scale if no player mon is at least level 10
-            if (levelCeil >= 10)
-            {
-                for (u32 e = 0; e < tempTrainer.partySize; e++) 
-                {   
-                    // Set level to (player mon max - [0-3])
-                    // Don't set if calced level is lower than set level
-                    u8 compareLevel = (levelCeil - (Random() % 4));
-                    if (scaledParty[e].lvl < compareLevel) {
-                        scaledParty[e].lvl = compareLevel;
-
-                        // Evolve pokemon if applicable
-
-                        // Don't evolve if Pokemon has a held Everstone or Eviolite
-                        if (scaledParty[e].heldItem == ITEM_EVIOLITE || scaledParty[e].heldItem == ITEM_EVERSTONE) {continue;}
-
-                        const struct Evolution *evolutions = GetSpeciesEvolutions(scaledParty[e].species);
-                        if (evolutions == NULL) {continue;}
-
-                        for (u32 j = 0; evolutions[j].method != EVOLUTIONS_END; j++) {
-                            // Always evolve level-based evo if at or above level
-                            if ((evolutions[j].method == EVO_LEVEL) && (evolutions[j].param <= scaledParty[e].lvl)) {
-                                scaledParty[e].species = evolutions[j].targetSpecies;
-                                break;
-                            }
-
-                            // If not a level-based evo, evolve the Pokemon on 50% chance
-                            if ((evolutions[j].method != EVO_NONE) && (evolutions[j].method != EVO_LEVEL)) {
-                                if ((Random() % 2) == 0) {
-                                    scaledParty[e].species = evolutions[j].targetSpecies;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // Set the party to now-modified party
-                tempTrainer.party = scaledParty;
-                retVal = CreateNPCTrainerPartyFromTrainer(party, &tempTrainer, firstTrainer, gBattleTypeFlags);
-            } else {
-                retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
-            }
+            // Scale the party if applicable, returns un-modified party if not.
+            tempTrainer.party = ScaleTrainerMons(tempTrainer, scaledParty);
+            retVal = CreateNPCTrainerPartyFromTrainer(party, &tempTrainer, firstTrainer, gBattleTypeFlags);
         } else {
             retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
         }
