@@ -4170,10 +4170,11 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 else
                 {
                     // If not a grass move, utilize poison point chance to apply frostbite
-                    if (GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_4 ? RandomPercentage(RNG_POISON_POINT, 30) : RandomChance(RNG_POISON_POINT, 1, 3)) {
+                    if (RandomPercentage(RNG_POISON_POINT, 30)) {
                         goto FROZEN_BODY;
                     }
                 }
+                break;
                 
                 FROZEN_BODY:
                 {
