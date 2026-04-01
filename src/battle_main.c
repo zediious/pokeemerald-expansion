@@ -2146,6 +2146,26 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     u8 compareLevel = (levelCeil - (Random() % 3));
                     if (scaledParty[e].lvl < compareLevel) {
                         scaledParty[e].lvl = compareLevel;
+
+                        // Evolve pokemon if applicable
+                        const struct Evolution *evolutions = GetSpeciesEvolutions(scaledParty[e].species);
+                        if (evolutions == NULL) {continue;}
+
+                        for (u32 j = 0; evolutions[j].method != EVOLUTIONS_END; j++) {
+                            // Always evolve level-based evo if at or above level
+                            if ((evolutions[j].method == EVO_LEVEL) && (evolutions[j].param <= scaledParty[e].lvl)) {
+                                scaledParty[e].species = evolutions[j].targetSpecies;
+                                break;
+                            }
+
+                            // If not a level-based evo, evolve the Pokemon on 50% chance
+                            if ((evolutions[j].method != EVO_NONE) && (evolutions[j].method != EVO_LEVEL)) {
+                                if ((Random() % 2) == 0) {
+                                    scaledParty[e].species = evolutions[j].targetSpecies;
+                                    break;
+                                }
+                            }
+                        }
                     }
                 }
 
