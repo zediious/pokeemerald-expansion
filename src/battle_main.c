@@ -456,6 +456,38 @@ static void (*const sEndTurnFuncsTable[])(void) =
     [B_OUTCOME_MON_TELEPORTED]    = HandleEndTurn_FinishBattle,
 };
 
+// List of trainers that are excluded from scaling
+static const u16 ExcludeScalingTrainers[] = 
+{   
+    // Kowtow Sawgrass 01
+    TRAINER_GRUNT_AQUA_HIDEOUT_1,
+    TRAINER_GRUNT_AQUA_HIDEOUT_2,
+    // Palladium
+    TRAINER_MARC,
+    TRAINER_CRISTIAN,
+    TRAINER_BRYAN,
+    TRAINER_BRENDAN_ROUTE_110_TREECKO,
+    TRAINER_BRENDAN_ROUTE_119_TREECKO,
+    TRAINER_BRENDAN_ROUTE_103_TORCHIC,
+    TRAINER_BRENDAN_ROUTE_110_TORCHIC,
+    TRAINER_ROXANNE_1,
+    // Kowtow Igris 01
+    TRAINER_GRUNT_AQUA_HIDEOUT_3,
+    TRAINER_GRUNT_SEAFLOOR_CAVERN_4,
+    TRAINER_GRUNT_SEAFLOOR_CAVERN_2,
+    TRAINER_GRUNT_SEAFLOOR_CAVERN_3,
+    TRAINER_GRUNT_SEAFLOOR_CAVERN_1,
+    // Aerodrome
+    TRAINER_PERRY,
+    TRAINER_TED,
+    TRAINER_WADE,
+    TRAINER_BRENDAN_ROUTE_119_TORCHIC,
+    TRAINER_MAY_ROUTE_110_MUDKIP,
+    TRAINER_MAY_ROUTE_119_MUDKIP,
+    TRAINER_MAY_ROUTE_103_TREECKO,
+    TRAINER_WINONA_1,
+};
+
 const u8 gStatusConditionString_PoisonJpn[] = _("どく$$$$$");
 const u8 gStatusConditionString_SleepJpn[] = _("ねむり$$$$");
 const u8 gStatusConditionString_ParalysisJpn[] = _("まひ$$$$$");
@@ -2066,10 +2098,11 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 retVal;
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
+    struct Trainer tempTrainer;
+    memcpy(&tempTrainer, GetTrainerStructFromId(trainerNum), sizeof(struct Trainer));
+
     if (GetTrainerStructFromId(trainerNum)->overrideTrainer)
     {
-        struct Trainer tempTrainer;
-        memcpy(&tempTrainer, GetTrainerStructFromId(trainerNum), sizeof(struct Trainer));
         const struct Trainer *origTrainer = GetTrainerStructFromId(tempTrainer.overrideTrainer);
 
         tempTrainer.party = origTrainer->party;
@@ -2081,8 +2114,52 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
         retVal = CreateNPCTrainerPartyFromTrainer(party, (const struct Trainer *)(&tempTrainer), firstTrainer, gBattleTypeFlags);
     }
     else
-    {
-        retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+    {   
+        // Do not scale if trainer among exclusions
+        bool32 isExcluded = FALSE;
+        u32 t;
+        for (t = 0; t < ARRAY_COUNT(ExcludeScalingTrainers); t++) {
+            if (trainerNum == ExcludeScalingTrainers[t]) {
+                isExcluded = TRUE;
+                break;
+            }
+        }
+        
+        if (!isExcluded) {
+            // Make a copy of tempTrainer party
+            struct TrainerMon scaledParty[tempTrainer.partySize];
+            memcpy(scaledParty, tempTrainer.party, tempTrainer.partySize * sizeof(struct TrainerMon));
+
+            // Get player's highest level mon
+            u8 levelCeil = 0;
+            for (u32 i = 0; i < PARTY_SIZE; i++)
+            {
+                u8 monLevel = (u8) GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+                if (levelCeil < monLevel) {levelCeil = monLevel;}
+            }
+
+            // Don't scale if no player mon is at least level 10
+            if (levelCeil >= 10)
+            {
+                for (u32 e = 0; e < tempTrainer.partySize; e++) 
+                {
+                    u8 compareLevel = (levelCeil - (Random() % 3));
+                    if (scaledParty[e].lvl < compareLevel) {
+                        scaledParty[e].lvl = compareLevel;
+                    }
+                }
+
+                // Set the party to now-modified party
+                tempTrainer.party = scaledParty;
+                retVal = CreateNPCTrainerPartyFromTrainer(party, &tempTrainer, firstTrainer, gBattleTypeFlags);
+            } else {
+                retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+            }
+        } else {
+            retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+        }
+        
+
     }
     return retVal;
 }
