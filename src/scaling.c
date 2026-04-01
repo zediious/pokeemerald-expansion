@@ -127,7 +127,7 @@ struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, str
         }
     }
 
-    struct Evolution chosenEvo = evolutions[(Random() % (evolutionCount - 1))];
+    struct Evolution chosenEvo = evolutions[(Random() % (evolutionCount))];
     switch (chosenEvo.method) {
         default: // 50% chance to evolve, unless player's highest mon is >= lvl 30. Always evolve then.
                  // However, don't attempt to evolve if the player is <= lvl 20
