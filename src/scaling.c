@@ -86,7 +86,7 @@ struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct Tr
         }
 
         // The below are reached if level criteria for third evolutions is not met
-        // or there is no third evolution with a lvl method
+        // or there is no third evolution
 
         // Always evolve level-based evo if at or above level
         if ((evolutions[j].method == EVO_LEVEL) && (evolutions[j].param <= trainerMon.lvl)) {
@@ -94,14 +94,14 @@ struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct Tr
             return trainerMon;
         }
 
-        // If not a level-based evo, evolve the Pokemon on 50% chance
-        // We only reach here if the mon does not have a third evo that is
-        // level based, or if player is not at level for that mon to have
-        // evolved yet. (i.e Azurill -> Marill -> Azumarill)
+        // If not a level-based evo, evolve the Pokemon on 50% chance if the
+        // player's level ceiling is >= 20.
         if ((evolutions[j].method != EVO_NONE) && (evolutions[j].method != EVO_LEVEL)) {
 
-            if ((Random() % 2) == 0) {
+            if (((Random() % 2) == 0) && (levelCeil >= 20)) {
                 trainerMon.species = evolutions[j].targetSpecies;
+                return trainerMon;
+            } else {
                 return trainerMon;
             }
         }
