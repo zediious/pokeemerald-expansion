@@ -2,6 +2,6 @@
 
 Pokemon Emerald romhack built on [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion).
 
-This will feature a unique region and story.
+This features a unique region and story, there is quite a bit of work going into the world building.
 
-No idea what the Pokemon roster, etc will be. I have a story in mind that I may write about more here as progress is made.
+Story dialogue exists in `.pory` files in the codebase and can be seen if you want, but I won't put out story documents until I decide to demo this.
