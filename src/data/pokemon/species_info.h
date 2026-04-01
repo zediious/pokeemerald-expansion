@@ -309,6 +309,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         // .formChangeTable = sSimisearFormChangeTable,
         // .formSpeciesIdTable = sSimisearFormSpeciesIdTable,
         FOOTPRINT(Simisear)
+        OVERWORLD(
+            sPicTable_Simisear,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Simisear,
+            gShinyOverworldPalette_Simisear
+        )
     },
     [SPECIES_BONOSAGE] =
     {
@@ -355,6 +364,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         // .formChangeTable = sSimisageFormChangeTable,
         // .formSpeciesIdTable = sSimisageFormSpeciesIdTable,
         FOOTPRINT(Simisage)
+        OVERWORLD(
+            sPicTable_Simisage,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Simisage,
+            gShinyOverworldPalette_Simisage
+        )
     },
     [SPECIES_PONGAPOUR] =
     {
@@ -401,6 +419,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         // .formChangeTable = sSimipourFormChangeTable,
         // .formSpeciesIdTable = sSimipourFormSpeciesIdTable,
         FOOTPRINT(Simipour)
+        OVERWORLD(
+            sPicTable_Simipour,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Simipour,
+            gShinyOverworldPalette_Simipour
+        )
     },
     [SPECIES_INNONK] =
     {
