@@ -24,7 +24,7 @@ static struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, st
 static struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil);
 
-struct TrainerMon *ScaleTrainerMons(struct Trainer tempTrainer, struct TrainerMon *scaledParty, bool32 evolveExcluded)
+struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledParty, bool32 evolveExcluded)
 {
      // Get player's highest level mon
     u8 levelCeil = 0;
@@ -37,7 +37,7 @@ struct TrainerMon *ScaleTrainerMons(struct Trainer tempTrainer, struct TrainerMo
     // Don't scale if no player mon is at least level 10
     if (levelCeil >= 10)
     {
-        for (u32 e = 0; e < tempTrainer.partySize; e++) 
+        for (u32 e = 0; e < partySize; e++) 
         {   
             // Set level to (player mon max - [0-3])
             // Don't set if calced level is lower than set level

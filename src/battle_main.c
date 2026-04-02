@@ -1972,6 +1972,33 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u32 personalityValue;
     s32 i;
     u8 monsCount;
+    struct Trainer tempTrainer;
+
+    // Scale levels of trainer mons, and evolve them if applicable
+    if (!FlagGet(FLAG_SCALING_EXCLUDE_SCALE)) {
+
+        // Check if trainer should be excluded from scaling-induced evolution
+        bool32 evolveExcluded = FALSE;
+        if (FlagGet(FLAG_SCALING_EXCLUDE_EVO)) {
+            evolveExcluded = TRUE;
+        }
+
+        // Make a copy of trainer and their party
+        struct TrainerMon scaledParty[trainer->partySize];
+        memcpy(scaledParty, trainer->party, trainer->partySize * sizeof(struct TrainerMon));
+        memcpy(&tempTrainer, trainer, sizeof(struct Trainer));
+
+        // Scale the party if applicable, returns un-modified party if not.
+        tempTrainer.party = ScaleTrainerMons(trainer->partySize, scaledParty, evolveExcluded);
+        trainer = &tempTrainer;
+    }
+
+    // Clear temporary flags
+    FlagClear(FLAG_SCALING_EXCLUDE_SCALE);
+    FlagClear(FLAG_SCALING_EXCLUDE_EVO);
+
+    // End scaling
+
     if (battleTypeFlags & BATTLE_TYPE_TRAINER && !(battleTypeFlags & (BATTLE_TYPE_FRONTIER
                                                                         | BATTLE_TYPE_EREADER_TRAINER
                                                                         | BATTLE_TYPE_TRAINER_HILL)))
@@ -2109,11 +2136,28 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 retVal;
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
-    struct Trainer tempTrainer;
-    memcpy(&tempTrainer, GetTrainerStructFromId(trainerNum), sizeof(struct Trainer));
+
+    // Set flags to not scale or evolve during scaling if among exclusions
+    u32 t;
+    for (t = 0; t < ARRAY_COUNT(ExcludeScalingTrainers); t++) {
+        if (trainerNum == ExcludeScalingTrainers[t]) {
+            FlagSet(FLAG_SCALING_EXCLUDE_SCALE);
+            break;
+        }
+    }
+
+    for (t = 0; t < ARRAY_COUNT(ExcludeScalingEvoTrainers); t++) {
+        if (trainerNum == ExcludeScalingEvoTrainers[t]) {
+            FlagSet(FLAG_SCALING_EXCLUDE_EVO);
+            break;
+        }
+    }
+    // End exclusion checks
 
     if (GetTrainerStructFromId(trainerNum)->overrideTrainer)
     {
+        struct Trainer tempTrainer;
+        memcpy(&tempTrainer, GetTrainerStructFromId(trainerNum), sizeof(struct Trainer));
         const struct Trainer *origTrainer = GetTrainerStructFromId(tempTrainer.overrideTrainer);
 
         tempTrainer.party = origTrainer->party;
@@ -2126,39 +2170,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     }
     else
     {   
-        // Do not scale if trainer among exclusions
-        bool32 isExcluded = FALSE;
-        bool32 evolveExcluded = FALSE;
-        u32 t;
-        for (t = 0; t < ARRAY_COUNT(ExcludeScalingTrainers); t++) {
-            if (trainerNum == ExcludeScalingTrainers[t]) {
-                isExcluded = TRUE;
-                break;
-            }
-        }
-        
-        if (!isExcluded) {
-
-            // Check if trainer should be excluded from scaling-induced evolution
-            for (t = 0; t < ARRAY_COUNT(ExcludeScalingEvoTrainers); t++) {
-            if (trainerNum == ExcludeScalingEvoTrainers[t]) {
-                evolveExcluded = TRUE;
-                break;
-            }
-        }
-
-            // Make a copy of tempTrainer party
-            struct TrainerMon scaledParty[tempTrainer.partySize];
-            memcpy(scaledParty, tempTrainer.party, tempTrainer.partySize * sizeof(struct TrainerMon));
-
-            // Scale the party if applicable, returns un-modified party if not.
-            tempTrainer.party = ScaleTrainerMons(tempTrainer, scaledParty, evolveExcluded);
-            retVal = CreateNPCTrainerPartyFromTrainer(party, &tempTrainer, firstTrainer, gBattleTypeFlags);
-        } else {
-            retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
-        }
-        
-
+        retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
     }
     return retVal;
 }
