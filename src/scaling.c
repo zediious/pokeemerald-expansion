@@ -193,14 +193,15 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
         }
 
         // If the original mon's next evo is lvl based, but the parent mon evo
-        // is NOT level based, set the species to the middle evo is the player's
-        // level ceiling is <= 40. Otherwise, use the final evo.
+        // is NOT level based, set the species to the final evo if the player's
+        // level ceiling is >= 40.
+        // Otherwise, use the middle evo if it meets the lvl criteria.
         // Example: Geodude -> Graveler -> Golem
         if ((parentEvolutions[p].method != EVO_NONE)
         &&  (parentEvolutions[p].method != EVO_LEVEL)
         &&  (evolutions[evoIndex].method == EVO_LEVEL))
         {
-            if ((parentEvolutions[p].param <= trainerMon.lvl) && (levelCeil >= 40)) { // Use the 3rd non-level based evo
+            if ((levelCeil >= 40)) { // Use the 3rd non-level based evo
                 trainerMon.species = parentEvolutions[p].targetSpecies;
                 return trainerMon;
             }
