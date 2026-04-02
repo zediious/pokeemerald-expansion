@@ -175,8 +175,9 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
 {
     // If a mon has a highest evo that is by level,but in between has evos that are not level-based
     // always evolve to the highest evo that is by level. i.e, Azurill -> Marill -> Azumarill.
-    // If an Azurill is defined, and player comes with mon level >= 18, it wil always be Azumarill.
-    // Only if player comes before level 18 will they see 50% Marill/Azurill.
+    // If a Happiny is defined, and player comes with mon level >= 29, it wil always be Blissey as
+    // the min level for the scaled mon would be 25 (this hack has levels attached to friendship evos)
+    // Only if player comes between level 20-25 will they see 50% Happiny/Chansey. 
     // This assumes only three-stage evolutions, not four.
     for (u32 p = 0; parentEvolutions[p].method != EVOLUTIONS_END; p++) {
         // if original mon next evo is not lvl based but parent mon evo is
@@ -190,6 +191,11 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
                 trainerMon.species = parentEvolutions[p].targetSpecies;
                 return trainerMon;
             }
+            if (levelCeil >= 20) {
+                trainerMon.species = evolutions[evoIndex].targetSpecies;
+                return trainerMon;
+            }
+            else {return trainerMon;}
         }
 
         // If the original mon's next evo is lvl based, but the parent mon evo
