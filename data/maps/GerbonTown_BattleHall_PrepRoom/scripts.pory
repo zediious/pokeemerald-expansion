@@ -15,6 +15,7 @@ script GerbonBattleHall_PrepRoom_Healer {
         playfanfare(MUS_RG_HEAL)
         waitfanfare
         delay(30)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
         incrementgamestat(GAME_STAT_USED_POKECENTER)
         special(HealPlayerParty)
         setspeaker("Nurse")
@@ -26,6 +27,7 @@ script GerbonBattleHall_PrepRoom_Healer {
         setspeaker("Nurse")
         msgbox("Keep safe!")
     }
+    waitmessage
     release
     end
 }
