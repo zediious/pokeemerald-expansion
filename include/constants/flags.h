@@ -666,13 +666,13 @@
 
 #define FLAG_SCALING_EXCLUDE_SCALE              0x264 // Used during trainer party creation to exclude a trainer from scaling
 #define FLAG_SCALING_EXCLUDE_EVO                0x265 // Used during trainer party creation to exclude a trainer evolution during scaling
-#define FLAG_UNUSED_0x266  0x266 // Dexnav
-#define FLAG_UNUSED_0x267  0x267 // Dexnav
-#define FLAG_UNUSED_0x268  0x268 // Dexnav
-#define FLAG_UNUSED_0x269  0x269 // Dexnav
-#define FLAG_UNUSED_0x26A  0x26A // Dexnav
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
+#define FLAG_UNUSED_0x266                       0x266 // Dexnav
+#define FLAG_UNUSED_0x267                       0x267 // Dexnav
+#define FLAG_UNUSED_0x268                       0x268 // Dexnav
+#define FLAG_UNUSED_0x269                       0x269 // Dexnav
+#define FLAG_UNUSED_0x26A                       0x26A // Dexnav
+#define FLAG_EXP_SHARE                          0x26B // EXP Share
+#define FLAG_ORAS_DOWSING                       0x26C // Dowsing Machine
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
