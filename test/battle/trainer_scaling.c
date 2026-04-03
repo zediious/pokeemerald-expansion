@@ -459,3 +459,83 @@ TEST("CreateNPCTrainerPartyForTrainer does not evolve Shedinja or Ninjask from N
     EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_NINCADA);
     Free(testParty);
 }
+
+////// These tests are regarding the level scaling itself.
+
+TEST("CreateNPCTrainerPartyForTrainer will never scale trainer mon level to player ceiling if more than one mon is in trainer party")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 24;
+    u32 loopCounter = 0;
+    u32 choiceOneCounter = 0;
+    u32 choiceTwoCounter = 0;
+    u32 choiceThreeCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        // Even though the party in this test is two mons, we only needed to do so to trigger
+        // the level spacing. One mon sets to levelCeil always. So we only check one mon.
+        switch (GetMonData(&testParty[0], MON_DATA_LEVEL)) {
+            case 23:
+                choiceOneCounter += 1;
+                break;
+            case 22:
+                choiceTwoCounter += 1;
+                break;
+            case 21:
+                choiceThreeCounter += 1;
+                break;
+
+            default:
+                EXPECT(1 > 2); // Indicates the level was out of range
+        }
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceOneCounter > 0);
+    EXPECT(choiceTwoCounter > 0);
+    EXPECT(choiceThreeCounter > 0);
+
+    Free(testParty);
+}
+
+TEST("CreatENPCTrainerPartyForTrainer will always scale trainer mon level to player ceiling if trainer only has one mon in party")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 67, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 23;
+    u32 loopCounter = 0;
+    u32 choiceCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        switch (GetMonData(&testParty[0], MON_DATA_LEVEL)) {
+            case 67:
+                choiceCounter += 1;
+                break;
+
+            default:
+                EXPECT(1 > 2); // Indicates the level was out of range
+        }
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceCounter > 0);
+
+    Free(testParty);
+}

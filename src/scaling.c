@@ -39,13 +39,19 @@ struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledPart
     {
         for (u32 e = 0; e < partySize; e++) 
         {   
-            // Set level to (player mon max - [0-3])
+            u8 compareLevel;
+            if (partySize == 1) // If the trainer has only one Pokemon, set compare to levelCeil
+            {
+                compareLevel = levelCeil;
+            }
+            else // If not, set compare to ((levelCeil - 1) - [1-3])
+            {
+                compareLevel = ((levelCeil - 1) - (Random() % 3));
+            } 
+
             // Don't set if calced level is lower than set level
-            u8 compareLevel = (levelCeil - (Random() % 4));
             if (scaledParty[e].lvl < compareLevel) {
                 scaledParty[e].lvl = compareLevel;
-
-                // Evolve pokemon if applicable
 
                 // Don't evolve if evolveExcluded was passed TRUE
                 if (evolveExcluded) {continue;}
@@ -56,7 +62,8 @@ struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledPart
                 const struct Evolution *evolutions = GetSpeciesEvolutions(scaledParty[e].species);
                 u8 evolutionCount = GetSpeciesEvolutionCount(scaledParty[e].species);
                 if (evolutions == NULL) {continue;}
-
+                
+                // Evolve the Pokemon if applicable
                 scaledParty[e] = EvolveTrainerMon(evolutions, scaledParty[e], levelCeil, evolutionCount);
             }
         }
