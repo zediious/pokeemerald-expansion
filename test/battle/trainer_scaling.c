@@ -779,3 +779,18 @@ TEST("Will never lower a trainer mon level, and will not evolve them if so")
     EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_TORCHIC);
     Free(testParty);
 }
+
+TEST("Will not scale trainer mons if player level ceiling < 10")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 9, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 25;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) == 1);
+    Free(testParty);
+}
+
