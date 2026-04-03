@@ -26,6 +26,23 @@ script RuvelPyramid01_RemoveBlockage {
     special(DrawWholeMapView)
 }
 
+// Investigate the blockages
+script RuvelPyramid01_BlockageInvestigate{
+    if (!(flag(FLAG_RUVELPYRAMID_COFAPUZZLE))) {
+        lock
+        msgbox("There is a large stone block in the way.
+                There appears to be a chain attached
+                to it from the ceiling, which leads
+                to some ancient mechanism.
+                
+                What could be found around here that
+                may operate that chain?")
+        waitmessage
+        release
+    }
+    end
+}
+
 // Investigate a normal coffin
 script RuvelPyramid01_NormalCoffinInvestigate{
     lock
