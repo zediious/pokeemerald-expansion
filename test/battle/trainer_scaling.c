@@ -312,7 +312,50 @@ TEST("CreateNPCTrainerPartyForTrainer selects Eevee and evos when evolving")
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer selects Tyrogue and evos when evolving")
+// Tyrogue
+TEST("Tyrogue does not evolve with levelCeil < 20")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 19, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 21;
+    u32 loopCounter = 0;
+    u32 choiceOneCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        switch (GetMonData(&testParty[0], MON_DATA_SPECIES)) {
+            case SPECIES_HITMONTOP:
+                EXPECT(3 > 4); // Indicates a Hitmontop that is <= level 20
+                break;
+            case SPECIES_HITMONLEE:
+                EXPECT(3 > 4); // Indicates a Hitmonlee that is <= level 20
+                break;
+            case SPECIES_HITMONCHAN:
+                EXPECT(3 > 4); // Indicates a Hitmonchan that is <= level 20
+                break;
+            case SPECIES_TYROGUE:
+                choiceOneCounter += 1;
+                break;
+            default:
+                EXPECT(1 > 2); // We shouldn't be here
+        }
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceOneCounter > 0);
+
+    Free(testParty);
+}
+
+// Tyrogue
+TEST("Selects only evos of Tyrogue when evolving at level >= 20")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
@@ -323,7 +366,6 @@ TEST("CreateNPCTrainerPartyForTrainer selects Tyrogue and evos when evolving")
     u32 choiceOneCounter = 0;
     u32 choiceTwoCounter = 0;
     u32 choiceThreeCounter = 0;
-    u32 choiceFourCounter = 0;
     
     struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
@@ -342,15 +384,11 @@ TEST("CreateNPCTrainerPartyForTrainer selects Tyrogue and evos when evolving")
                 choiceThreeCounter += 1;
                 break;
             case SPECIES_TYROGUE:
-                choiceFourCounter += 1;
+                EXPECT(3 > 4); // Indicates a Tyrogue that is >= level 20
                 break;
             default:
                 EXPECT(1 > 2); // We shouldn't be here
         }
-
-        if ((choiceOneCounter > 0)   && (choiceTwoCounter > 0)
-        &&  (choiceThreeCounter > 0) && (choiceFourCounter > 0))
-        {break;}
 
         loopCounter += 1;
     }
@@ -358,7 +396,6 @@ TEST("CreateNPCTrainerPartyForTrainer selects Tyrogue and evos when evolving")
     EXPECT(choiceOneCounter > 0);
     EXPECT(choiceTwoCounter > 0);
     EXPECT(choiceThreeCounter > 0);
-    EXPECT(choiceFourCounter > 0);
 
     Free(testParty);
 }
