@@ -23,11 +23,15 @@
 // There are cases where there's a variable chance for different species to be evolved into. We'll iterate
 // a large number of times and ensure that each was selected at least once, breaking when that is the case.
 // This could in theory fail, but is VERY unlikely
+//
+// Note that every test here uses `CreateNPCTrainerPartyForTrainer `
 
 // ---------
 
 //// Test EVO_LEVEL -> !EVO_LEVEL lines such as Geodude -> Graveler -> Golem
-TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution to 3rd stage")
+
+// Geodude
+TEST("Evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution to 3rd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 45, 0, OTID_STRUCT_PRESET(0));
@@ -41,7 +45,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> ! EVO_LEVEL) type ev
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution lines to 2nd stage")
+// Geodude
+TEST("Evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution lines to 2nd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 39, 0, OTID_STRUCT_PRESET(0));
@@ -55,7 +60,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> ! EVO_LEVEL) type ev
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer does not evolve (EVO_LEVEL -> ! EVO_LEVEL) type evolution if level not met for 2nd stage")
+// Geodude
+TEST("Does not evolve (EVO_LEVEL -> ! EVO_LEVEL) type evolution if level not met for 2nd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
@@ -70,7 +76,9 @@ TEST("CreateNPCTrainerPartyForTrainer does not evolve (EVO_LEVEL -> ! EVO_LEVEL)
 }
 
 //// Test ! EVO_LEVEL -> EVO_LEVEL lines such as Happiny -> Chansey -> Blissey
-TEST("CreateNPCTrainerPartyForTrainer evolves (! EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
+
+// Happiny
+TEST("Evolves (! EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 25, 0, OTID_STRUCT_PRESET(0));
@@ -84,7 +92,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves (! EVO_LEVEL -> EVO_LEVEL) type ev
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer selects 1st or 2nd stage in (! EVO_LEVEL -> EVO_LEVEL) type evolution if not reaching 3rd stage")
+// Happiny
+TEST("Selects 1st or 2nd stage in (! EVO_LEVEL -> EVO_LEVEL) type evolution if not reaching 3rd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 17, 0, OTID_STRUCT_PRESET(0));
@@ -122,7 +131,9 @@ TEST("CreateNPCTrainerPartyForTrainer selects 1st or 2nd stage in (! EVO_LEVEL -
 }
 
 //// Test EVO_LEVEL -> EVO_LEVEL lines such as Charmander -> Charmeleon -> Charizard
-TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
+
+// Charmander
+TEST("Evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
@@ -136,7 +147,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> EVO_LEVEL) type evol
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 2nd stage")
+// Charmander
+TEST("Evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 2nd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
@@ -150,7 +162,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves (EVO_LEVEL -> EVO_LEVEL) type evol
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer does not evolve (EVO_LEVEL -> EVO_LEVEL) type evolution if level not met for 2nd stage")
+// Charmander
+TEST("Does not evolve (EVO_LEVEL -> EVO_LEVEL) type evolution if level not met for 2nd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 15, 0, OTID_STRUCT_PRESET(0));
@@ -165,7 +178,9 @@ TEST("CreateNPCTrainerPartyForTrainer does not evolve (EVO_LEVEL -> EVO_LEVEL) t
 }
 
 //// Test 2 stage EVO_LEVEL lines such as Hippopotas -> Hippowdon
-TEST("CreateNPCTrainerPartyForTrainer evolves 2 stage EVO_LEVEL type evolution to 2rd stage")
+
+// Hippopotas
+TEST("Evolves 2 stage EVO_LEVEL type evolution to 2rd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 38, 0, OTID_STRUCT_PRESET(0));
@@ -179,7 +194,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves 2 stage EVO_LEVEL type evolution t
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer does not evolve 2 stage EVO_LEVEL type evolution if level not met for 2nd stage")
+// Hippopotas
+TEST("Does not evolve 2 stage EVO_LEVEL type evolution if level not met for 2nd stage")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 33, 0, OTID_STRUCT_PRESET(0));
@@ -194,7 +210,9 @@ TEST("CreateNPCTrainerPartyForTrainer does not evolve 2 stage EVO_LEVEL type evo
 }
 
 //// Test 2 stage ! EVO_LEVEL lines such as Capsakid -> Scovillain
-TEST("CreateNPCTrainerPartyForTrainer selects either stage in two stage ! EVO_LEVEL type evolution")
+
+// Capsakid
+TEST("Selects either stage in two stage ! EVO_LEVEL type evolution")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
@@ -234,7 +252,9 @@ TEST("CreateNPCTrainerPartyForTrainer selects either stage in two stage ! EVO_LE
 ////// Test different types of divergent/branching evolutions such as Eevee, Tyrogue, Kirlia, Gloom, Applin etc.
 
 //// Test 2 stage evos that have multiple potential divergents, like Eevee and Tyrogue
-TEST("CreateNPCTrainerPartyForTrainer selects Eevee and evos when evolving")
+
+// Eevee
+TEST("Selects Eevee and evos when evolving")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
@@ -401,7 +421,9 @@ TEST("Selects only evos of Tyrogue when evolving at level >= 20")
 }
 
 //// Test three stages evos that have a divergence in their !EVO_LEVEL final evo, like Oddish and Ralts lines
-TEST("CreateNPCTrainerPartyForTrainer evolves to either ! EVO_LEVEL 3rd evo in 3 stage evo where 3rd evo is a divergent")
+
+// Oddish
+TEST("Evolves to either ! EVO_LEVEL 3rd evo in 3 stage evo where 3rd evo is a divergent")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
@@ -557,7 +579,9 @@ TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only
 }
 
 //// Test three stage evos where all are !EVO_LEVEL, such as Porygon -> Porygon2 -> Porygon-Z
-TEST("CreateNPCTrainerPartyForTrainer selects either ! EVO_LEVEL stage or does not evolve when all stages of 3 stage evo are ! EVO_LEVEL")
+
+// Porygon
+TEST("Selects either ! EVO_LEVEL stage or does not evolve when all stages of 3 stage evo are ! EVO_LEVEL")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
@@ -602,8 +626,10 @@ TEST("CreateNPCTrainerPartyForTrainer selects either ! EVO_LEVEL stage or does n
     Free(testParty);
 }
 
-//// This is a test for Nincada, evolves to either Nijask or Shedinja 50% of the time
-TEST("CreateNPCTrainerPartyForTrainer evolves Shedinja or Ninjask from Nincada when player level ceiling >= 20")
+//// These tests are for Nincada, evolves to either Nijask or Shedinja 50% of the time
+
+// Nincada
+TEST("Evolves Shedinja or Ninjask from Nincada when player level ceiling >= 20")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
@@ -644,7 +670,8 @@ TEST("CreateNPCTrainerPartyForTrainer evolves Shedinja or Ninjask from Nincada w
     Free(testParty);
 }
 
-TEST("CreateNPCTrainerPartyForTrainer does not evolve Shedinja or Ninjask from Nincada when player level ceiling <= 20")
+// Nincada
+TEST("Does not evolve Shedinja or Ninjask from Nincada when player level ceiling <= 20")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 19, 0, OTID_STRUCT_PRESET(0));
@@ -660,7 +687,7 @@ TEST("CreateNPCTrainerPartyForTrainer does not evolve Shedinja or Ninjask from N
 
 ////// These tests are regarding the level scaling itself.
 
-TEST("CreateNPCTrainerPartyForTrainer will never scale trainer mon level to player ceiling if more than one mon is in trainer party")
+TEST("Will never scale trainer mon level to player ceiling if more than one mon is in trainer party")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
@@ -705,7 +732,7 @@ TEST("CreateNPCTrainerPartyForTrainer will never scale trainer mon level to play
     Free(testParty);
 }
 
-TEST("CreatENPCTrainerPartyForTrainer will always scale trainer mon level to player ceiling if trainer only has one mon in party")
+TEST("Will always scale trainer mon level to player ceiling if trainer only has one mon in party")
 {
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 67, 0, OTID_STRUCT_PRESET(0));
