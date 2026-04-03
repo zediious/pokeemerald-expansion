@@ -794,3 +794,21 @@ TEST("Will not scale trainer mons if player level ceiling < 10")
     Free(testParty);
 }
 
+TEST("Will not evolve Pokemon holding an Everstone or Eviolite, but will scale them")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 50, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 26;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) > 45);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_LEVEL) > 45);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) < 50);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_LEVEL) < 50);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_SQUIRTLE);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_SPECIES) == SPECIES_SQUIRTLE);
+    Free(testParty);
+}
