@@ -3792,7 +3792,7 @@ const u8 GetSpeciesEvolutionCount(u16 species)
     if (evolutions == NULL) {return 0;}
 
     u8 evolutionCount = 0;
-    for (u32 j = 0; evolutions[j].method != EVOLUTIONS_END; j++)
+    for (u32 j = 0; (evolutions[j].method != EVOLUTIONS_END && evolutions[j].method != EVO_TRADE); j++) // Exclude trade evos
     {
         evolutionCount += 1;
     }

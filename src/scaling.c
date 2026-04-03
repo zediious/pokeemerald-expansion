@@ -245,12 +245,12 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
             static const u8 sThreeNonLvlEvoWeights[] = { 8, 7, 5 };
             u8 evoResult = RandomWeightedIndex((u8 *)sThreeNonLvlEvoWeights, ARRAY_COUNT(sThreeNonLvlEvoWeights));
             switch (evoResult) {
-                case 5:
+                case 2:
                     return trainerMon; // No evolution
-                case 7: 
+                case 1: 
                     trainerMon.species = evolutions[evoIndex].targetSpecies; // Evo to next from original mon
                     return trainerMon;
-                case 8:
+                case 0:
                     trainerMon.species = parentEvolutions[p].targetSpecies; // Evo to third form
                     return trainerMon;
             }

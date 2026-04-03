@@ -404,6 +404,52 @@ TEST("CreateNPCTrainerPartyForTrainer evolves to either ! EVO_LEVEL 3rd evo in 3
     Free(testParty);
 }
 
+//// Test three stage evos where all are !EVO_LEVEL, such as Porygon -> Porygon2 -> Porygon-Z
+TEST("CreateNPCTrainerPartyForTrainer selects either ! EVO_LEVEL stage or does not evolve when all stages of 3 stage evo are ! EVO_LEVEL")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 27;
+    u32 loopCounter = 0;
+    u32 choiceOneCounter = 0;
+    u32 choiceTwoCounter = 0;
+    u32 choiceThreeCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        switch (GetMonData(&testParty[0], MON_DATA_SPECIES)) {
+            case SPECIES_PORYGON:
+                choiceOneCounter += 1;
+                break;
+            case SPECIES_PORYGON2:
+                choiceTwoCounter += 1;
+                break;
+            case SPECIES_PORYGON_Z:
+                choiceThreeCounter += 1;
+                break;
+            default:
+                EXPECT(1 > 2); // We shouldn't be here
+        }
+
+        if ((choiceOneCounter > 0) && (choiceTwoCounter > 0) && (choiceThreeCounter > 0))
+        {break;}
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceOneCounter > 0);
+    EXPECT(choiceTwoCounter > 0);
+    EXPECT(choiceThreeCounter > 0);
+
+    Free(testParty);
+}
+
 //// This is a test for Nincada, evolves to either Nijask or Shedinja 50% of the time
 TEST("CreateNPCTrainerPartyForTrainer evolves Shedinja or Ninjask from Nincada when player level ceiling >= 20")
 {
