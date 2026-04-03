@@ -849,3 +849,20 @@ TEST("FLAG_SCALING_EXCLUDE_EVO being set allows Pokemon to scale, but it cannot 
     Free(testParty);
 }
 
+//// Other tests
+
+TEST("Pokemon with no evolution do not evolve into anything with levelCeil == 100")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 100, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 30;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) == 100);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_SMEARGLE);
+    Free(testParty);
+}
+
