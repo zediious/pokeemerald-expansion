@@ -404,6 +404,121 @@ TEST("CreateNPCTrainerPartyForTrainer evolves to either ! EVO_LEVEL 3rd evo in 3
     Free(testParty);
 }
 
+// Ralts
+TEST("Evolves to either ! EVO_LEVEL or EVO_LEVEL 3rd evo in 3 stage evo where 3rd evo is a divergent and 2nd stage can evolve")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 34, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 29;
+    u32 loopCounter = 0;
+    u32 choiceOneCounter = 0;
+    u32 choiceTwoCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        switch (GetMonData(&testParty[0], MON_DATA_SPECIES)) {
+            case SPECIES_GARDEVOIR:
+                choiceOneCounter += 1;
+                break;
+            case SPECIES_GALLADE:
+                choiceTwoCounter += 1;
+                break;
+            case SPECIES_KIRLIA || SPECIES_RALTS:
+                EXPECT(3 > 4); // Indicates a Ralts or Kirlia >= level 30
+            default:
+                EXPECT(1 > 2); // We shouldn't be here
+        }
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceOneCounter > 0);
+    EXPECT(choiceTwoCounter > 0);
+
+    Free(testParty);
+}
+
+// Ralts
+TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only chooses ! EVO_LEVEL or 2nd stage if levelCeil >= 20 and <= 30")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 29, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 29;
+    u32 loopCounter = 0;
+    u32 choiceOneCounter = 0;
+    u32 choiceTwoCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        switch (GetMonData(&testParty[0], MON_DATA_SPECIES)) {
+            case SPECIES_KIRLIA:
+                choiceOneCounter += 1;
+                break;
+            case SPECIES_GALLADE:
+                choiceTwoCounter += 1;
+                break;
+            case SPECIES_GARDEVOIR || SPECIES_RALTS:
+                EXPECT(3 > 4); // Indicates a Ralts or Kirlia >= level 30
+            default:
+                EXPECT(1 > 2); // We shouldn't be here
+        }
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceOneCounter > 0);
+    EXPECT(choiceTwoCounter > 0);
+
+    Free(testParty);
+}
+
+// Ralts
+TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only chooses 1st stage if 1st stage cannot evolve to EVO_LEVEL 2nd stage")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 19, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    u32 currTrainer = 29;
+    u32 loopCounter = 0;
+    u32 choiceOneCounter = 0;
+    
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+
+    while (loopCounter < 200)
+    {   
+        CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+        switch (GetMonData(&testParty[0], MON_DATA_SPECIES)) {
+            case SPECIES_RALTS:
+                choiceOneCounter += 1;
+                break;
+            case SPECIES_GARDEVOIR || SPECIES_KIRLIA || SPECIES_GALLADE:
+                EXPECT(3 > 4); // Indicates a Ralts or Kirlia >= level 30
+            default:
+                EXPECT(1 > 2); // We shouldn't be here
+        }
+
+        loopCounter += 1;
+    }
+
+    EXPECT(choiceOneCounter > 0);
+
+    Free(testParty);
+}
+
 //// Test three stage evos where all are !EVO_LEVEL, such as Porygon -> Porygon2 -> Porygon-Z
 TEST("CreateNPCTrainerPartyForTrainer selects either ! EVO_LEVEL stage or does not evolve when all stages of 3 stage evo are ! EVO_LEVEL")
 {

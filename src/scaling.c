@@ -180,6 +180,29 @@ struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, str
 
 struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil)
 {
+
+    //If the parent mon has branching evolutions, make sure the 1st -> 2nd stage evolution can occur, then recurse
+    u8 evolutionCount = GetSpeciesEvolutionCount(evolutions[evoIndex].targetSpecies);
+    if (evolutionCount > 1) {
+
+        switch (evolutions[evoIndex].method) {
+            default:
+                if (((Random() % 2) == 0) && (levelCeil >= 20)) { // If not level based, check levelCeil and 50%
+                    trainerMon.species = evolutions[evoIndex].targetSpecies;
+                    trainerMon = EvolveTrainerMon(parentEvolutions, trainerMon, levelCeil, evolutionCount);
+                    return trainerMon;
+                } else {return trainerMon;} // No evolution
+            case EVO_LEVEL:
+                if (evolutions[evoIndex].param <= trainerMon.lvl) { // If level based, ensure mon meets the level
+                    trainerMon.species = evolutions[evoIndex].targetSpecies;
+                    trainerMon = EvolveTrainerMon(parentEvolutions, trainerMon, levelCeil, evolutionCount);
+                    return trainerMon;
+                }  else {return trainerMon;} // No evolution
+            case EVO_NONE:
+                return trainerMon;
+        }
+    }
+
     // If a mon has a highest evo that is by level,but in between has evos that are not level-based
     // always evolve to the highest evo that is by level. i.e, Azurill -> Marill -> Azumarill.
     // If a Happiny is defined, and player comes with mon level >= 29, it wil always be Blissey as
