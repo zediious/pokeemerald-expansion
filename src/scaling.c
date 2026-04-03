@@ -207,7 +207,18 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
         &&  (parentEvolutions[p].method != EVO_LEVEL)
         &&  (evolutions[evoIndex].method == EVO_LEVEL))
         {
-            if ((levelCeil >= 40)) { // Use the 3rd non-level based evo
+            if ((levelCeil >= 40)) { // Use a 3rd non-level based evo
+
+                // If the parent mon has a divergent evolution, send to EvolveBranchTrainerMon and return from here
+                // Example being Oddish -> Gloom -> [Vileplume,Bellossom]
+                if (GetSpeciesEvolutionCount(evolutions[evoIndex].targetSpecies) > 1) {
+                    trainerMon.species = evolutions[evoIndex].targetSpecies;
+                    u8 evolutionCount = GetSpeciesEvolutionCount(evolutions[evoIndex].targetSpecies);
+                    trainerMon = EvolveTrainerMon(parentEvolutions, trainerMon, levelCeil, evolutionCount);
+                    return trainerMon;
+                }
+                
+                // Evolve to single 3rd stage
                 trainerMon.species = parentEvolutions[p].targetSpecies;
                 return trainerMon;
             }
