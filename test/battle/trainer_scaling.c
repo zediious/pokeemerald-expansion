@@ -866,3 +866,56 @@ TEST("Pokemon with no evolution do not evolve into anything with levelCeil == 10
     Free(testParty);
 }
 
+// For reasons I'm unsure of, the party for this test is not generated in the order it's defined
+// in `trainer_control.partt`, but it does generate in the same order each time, which is below
+// and is inferred in the test.
+
+// 0 evolved species: Charmander
+// 1 evolved species: Geodude
+// 2 evolved species: Hippopotas
+// 3 evolved species: Ralts
+// 4 evolved species: Smeargle
+// 5 evolved species: Oddish
+
+TEST("Test that a full party of six that all evolve differently scale and evolve as expected")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 70, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 31;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) < 70);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) > 65);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) != SPECIES_CHARMELEON);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_CHARIZARD);
+
+    EXPECT(GetMonData(&testParty[1], MON_DATA_LEVEL) < 70);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_LEVEL) > 65);
+    EXPECT(GetMonData(&testParty[1], MON_DATA_SPECIES) == SPECIES_GOLEM);
+
+    EXPECT(GetMonData(&testParty[2], MON_DATA_LEVEL) < 70);
+    EXPECT(GetMonData(&testParty[2], MON_DATA_LEVEL) > 65);
+    EXPECT(GetMonData(&testParty[2], MON_DATA_SPECIES) == SPECIES_HIPPOWDON);
+
+    EXPECT(GetMonData(&testParty[3], MON_DATA_LEVEL) < 70);
+    EXPECT(GetMonData(&testParty[3], MON_DATA_LEVEL) > 65);
+    EXPECT(GetMonData(&testParty[3], MON_DATA_SPECIES) != SPECIES_RALTS);
+    EXPECT(GetMonData(&testParty[3], MON_DATA_SPECIES) != SPECIES_KIRLIA);
+    EXPECT((GetMonData(&testParty[3], MON_DATA_SPECIES) == SPECIES_GARDEVOIR) || (GetMonData(&testParty[3], MON_DATA_SPECIES) == SPECIES_GALLADE));
+
+    EXPECT(GetMonData(&testParty[4], MON_DATA_LEVEL) < 70);
+    EXPECT(GetMonData(&testParty[4], MON_DATA_LEVEL) > 65);
+    EXPECT(GetMonData(&testParty[4], MON_DATA_SPECIES) == SPECIES_SMEARGLE);
+
+    EXPECT(GetMonData(&testParty[5], MON_DATA_LEVEL) < 70);
+    EXPECT(GetMonData(&testParty[5], MON_DATA_LEVEL) > 65);
+    EXPECT(GetMonData(&testParty[5], MON_DATA_SPECIES) != SPECIES_ODDISH);
+    EXPECT(GetMonData(&testParty[5], MON_DATA_SPECIES) != SPECIES_GLOOM);
+    EXPECT((GetMonData(&testParty[5], MON_DATA_SPECIES) == SPECIES_VILEPLUME) || (GetMonData(&testParty[5], MON_DATA_SPECIES) == SPECIES_BELLOSSOM));
+
+    Free(testParty);
+}
