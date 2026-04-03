@@ -764,3 +764,18 @@ TEST("Will always scale trainer mon level to player ceiling if trainer only has 
 
     Free(testParty);
 }
+
+TEST("Will never lower a trainer mon level, and will not evolve them if so")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 25, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 28;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) == 70);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_TORCHIC);
+    Free(testParty);
+}
