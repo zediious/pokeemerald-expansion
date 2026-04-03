@@ -1,5 +1,6 @@
 #include "global.h"
 #include "test/test.h"
+#include "test/battle.h"
 #include "battle.h"
 #include "battle_main.h"
 #include "data.h"
@@ -812,3 +813,39 @@ TEST("Will not evolve Pokemon holding an Everstone or Eviolite, but will scale t
     EXPECT(GetMonData(&testParty[1], MON_DATA_SPECIES) == SPECIES_SQUIRTLE);
     Free(testParty);
 }
+
+//// These tests verify that exclusion flags are properly handled
+
+TEST("FLAG_SCALING_EXCLUDE_SCALE being set prevents Pokemon from scaling at all")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 90, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    FLAG_SET(FLAG_SCALING_EXCLUDE_SCALE);
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 16;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) == 5);
+    Free(testParty);
+}
+
+TEST("FLAG_SCALING_EXCLUDE_EVO being set allows Pokemon to scale, but it cannot evolve")
+{
+    struct Pokemon playerMon;
+    CreateMon(&playerMon, SPECIES_AIPOM, 90, 0, OTID_STRUCT_PRESET(0));
+    gPlayerParty[0] = playerMon;
+
+    FLAG_SET(FLAG_SCALING_EXCLUDE_EVO);
+
+    SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
+    u32 currTrainer = 16;
+    struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
+    CreateNPCTrainerPartyFromTrainer(testParty, GetTrainerStructFromId(currTrainer), TRUE, BATTLE_TYPE_TRAINER);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_LEVEL) == 90);
+    EXPECT(GetMonData(&testParty[0], MON_DATA_SPECIES) == SPECIES_CHARMANDER);
+    Free(testParty);
+}
+
