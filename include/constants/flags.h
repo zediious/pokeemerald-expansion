@@ -710,7 +710,7 @@
 #define FLAG_UNUSED_0x28F  0x28F // Unused Flag
 #define FLAG_UNUSED_0x290  0x290 // Unused Flag
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
+#define FLAG_WOLTIA_AERO_BLOCKER                0x292 // Sailor who blocks entrance to Aerodrome in Woltia
 #define FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND    0x293 // First cofagrigus found
 #define FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND    0x294 // Second cofagrigus found
 #define FLAG_RUVELPYRAMID_COFAGRIGUS01          0x295 // First cofagrigus

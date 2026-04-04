@@ -359,12 +359,14 @@ WoltiaBattleHall_TournamentPlayerWon::
 # 280 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 18
 # 281 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	delay 30
+	addobject WOLTIA_AERODROME_BLOCKER
 # 282 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_ANGRY_KROKOROK_01
+	delay 30
 # 283 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+	setflag FLAG_ANGRY_KROKOROK_01
 # 284 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+# 285 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	release
 	end
 

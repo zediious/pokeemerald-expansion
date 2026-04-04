@@ -127,18 +127,22 @@ SawgrassVillage_AwakenAfterRoute110::
 # 156 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	removeobject JordanInHome
 # 157 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setflag FLAG_GERBON_TOWN_BLOCKERS
+	clearflag FLAG_GERBON_TOWN_BLOCKERS
 # 158 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	clearflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	addobject GERBON_PALLADIUM_BLOCKER_1
 # 159 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitse
+	addobject GERBON_PALLADIUM_BLOCKER_2
 # 160 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	fadedefaultbgm
+	clearflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 161 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	delay 30
+	waitse
 # 162 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	questupdated 0
+	fadedefaultbgm
 # 163 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	delay 30
+# 164 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	questupdated 0
+# 165 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 

@@ -154,7 +154,9 @@ script SawgrassVillage_AwakenAfterRoute110 {
     playse(SE_DOOR)
     setflag(FLAG_JORDANINHOME)
     removeobject(JordanInHome)
-    setflag(FLAG_GERBON_TOWN_BLOCKERS)
+    clearflag(FLAG_GERBON_TOWN_BLOCKERS)
+    addobject(GERBON_PALLADIUM_BLOCKER_1)
+    addobject(GERBON_PALLADIUM_BLOCKER_2)
     clearflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
     waitse
     fadedefaultbgm
