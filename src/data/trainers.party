@@ -4219,7 +4219,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Kadabra
 Level: 41
@@ -6089,7 +6089,7 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Gligar
 Level: 32
@@ -9654,7 +9654,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Basic Trainer
+AI: Smart Trainer
 
 Innonk
 Level: 7
@@ -9677,7 +9677,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Basic Trainer
+AI: Smart Trainer
 
 Pansear
 Level: 7
@@ -9701,7 +9701,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Basic Trainer
+AI: Smart Trainer
 
 Pansage
 Level: 7
@@ -9725,7 +9725,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
 Panpour
 Level: 7
@@ -13416,7 +13416,7 @@ Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Hariyama
 Level: 31
@@ -14192,7 +14192,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer / Double Battle
 
 Meowstic-F
 Level: 27
@@ -17193,6 +17193,7 @@ Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
+AI: Basic Trainer / Double Battle
 
 Meowstic
 Level: 27
