@@ -98,9 +98,9 @@ SINGLE_BATTLE_TEST("Photosynthesis never applies if the fire type move missed")
 {
     GIVEN {
         PLAYER(SPECIES_COMBUSKEN);
-        OPPONENT(SPECIES_BONOSAGE) { Ability(ABILITY_PHOTOSYNTHESIS); }
+        OPPONENT(SPECIES_BONOSAGE) { Ability(ABILITY_PHOTOSYNTHESIS); MaxHP(1000); HP(1000); }
     } WHEN {
-        TURN { MOVE(player, MOVE_FLARE_BLITZ, hit: FALSE); }
+        TURN { MOVE(opponent, MOVE_PROTECT); MOVE(player, MOVE_FLARE_BLITZ, hit: FALSE); }
     } SCENE {
         EXPECT(gBattleMons[1].maxHP == gBattleMons[1].hp);
         NONE_OF {
