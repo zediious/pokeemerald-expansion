@@ -469,13 +469,20 @@ script IgrisDesert_EventScript_JordanFollower02 {
     lock
     faceplayer
     setspeaker("Jordan")
-    msgbox("This Pyramid is another one of those
+    if ((var(VAR_ZED_STORY_TRACKER) >= 21) && (var(VAR_ZED_STORY_TRACKER) <= 23)) { // Ruvel Quest
+        msgbox("We should get moving! Pokemon are the
+                best thing in the world, but some of
+                them can be really dangerous!")
+    } else {
+        msgbox("This Pyramid is another one of those
             things I've heard up, but never gone to
             see.
             
             You being here as given me cause to
             check these things out! Thanks
             {PLAYER}!")
+    }
+    
     waitmessage
     release
     end

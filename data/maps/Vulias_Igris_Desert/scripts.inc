@@ -598,559 +598,575 @@ IgrisDesert_EventScript_JordanFollower02::
 # 471 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
 # 472 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_JordanFollower02_Text_0
-# 479 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	compare VAR_ZED_STORY_TRACKER, 21
+	goto_if_ge IgrisDesert_EventScript_JordanFollower02_4
+IgrisDesert_EventScript_JordanFollower02_3:
+# 477 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_JordanFollower02_Text_1
+IgrisDesert_EventScript_JordanFollower02_1:
+# 486 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 480 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 487 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
+IgrisDesert_EventScript_JordanFollower02_2:
+# 473 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_JordanFollower02_Text_0
+	goto IgrisDesert_EventScript_JordanFollower02_1
+
+IgrisDesert_EventScript_JordanFollower02_4:
+# 472 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	compare VAR_ZED_STORY_TRACKER, 23
+	goto_if_le IgrisDesert_EventScript_JordanFollower02_2
+	goto IgrisDesert_EventScript_JordanFollower02_3
+
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01::
-# 486 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	lock
-# 487 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
-# 488 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 0
-# 489 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
-	return
-
-
-IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger02::
 # 493 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 494 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
 # 495 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 1
+	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 0
 # 496 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
 	return
 
 
-IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03::
+IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger02::
 # 500 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 501 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0
 # 502 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 2
+	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 1
 # 503 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
 	return
 
 
-IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger04::
+IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03::
 # 507 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 508 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 509 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 3
+	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 2
 # 510 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
 	return
 
 
-IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger05::
+IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger04::
 # 514 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 515 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 516 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 4
+	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 3
 # 517 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
 	return
 
 
-IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06::
+IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger05::
 # 521 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
 # 522 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 523 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 5
+	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 4
 # 524 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
 	return
 
 
-IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger::
+IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger06::
+# 528 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	lock
 # 529 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
 # 530 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
+	setvar VAR_IGRIS_JORDAN02_PLAYERPOS, 5
 # 531 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger
+	return
+
+
+IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger::
+# 536 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	playse SE_PIN
+# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
+# 538 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	delay 60
-# 534 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_IGRIS_JORDAN02_PLAYERPOS, 0
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_2
-# 536 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_IGRIS_JORDAN02_PLAYERPOS, 1
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_3
-# 538 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_IGRIS_JORDAN02_PLAYERPOS, 2
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_4
-# 540 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 547 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_IGRIS_JORDAN02_PLAYERPOS, 3
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_5
-# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 549 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_IGRIS_JORDAN02_PLAYERPOS, 4
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_6
-# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 551 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_IGRIS_JORDAN02_PLAYERPOS, 5
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_7
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1:
-# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 555 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 549 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 556 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollower02
 	return
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_2:
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_1
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_3:
-# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_2
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_4:
-# 539 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_3
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_5:
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_4
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_6:
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_5
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_7:
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement JORDAN_IGRIS_02, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_6
 	goto IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_1
 
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollower02::
-# 554 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 561 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
-# 555 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 562 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	faceplayer
-# 556 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 563 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 557 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 564 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_0, MSGBOX_YESNO
-# 566 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 573 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 567 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 574 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 568 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 575 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq IgrisDesert_EventScript_SpeakJordanBecomeFollower02_1
-# 583 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 590 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_3
-# 586 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 593 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 587 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 594 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollower02_1:
-# 569 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_1
-# 572 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
-# 573 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	delay 30
-# 574 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	playse MUS_RG_OBTAIN_KEY_ITEM
-# 575 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_2
 # 576 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitse
-# 577 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
-# 578 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	call IgrisDesert_DetermineJordanTeam02
+	msgbox IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_1
 # 579 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 20
+	waitmessage
 # 580 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	delay 30
+# 581 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	playse MUS_RG_OBTAIN_KEY_ITEM
+# 582 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_2
+# 583 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitse
+# 584 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 585 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	call IgrisDesert_DetermineJordanTeam02
+# 586 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 20
+# 587 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_JordanFollower02NoLeaveNorth::
-# 594 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	lock
-# 595 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 596 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0
-# 600 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
 # 601 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+	lock
 # 602 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
+	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
 # 603 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0
+# 607 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 608 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0
+# 609 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 610 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_JordanFollower02NoLeaveSouth::
-# 608 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	lock
-# 609 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 610 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0
-# 614 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
 # 615 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
+	lock
 # 616 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
+	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
 # 617 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0
+# 621 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 622 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
+# 623 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 624 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit::
-# 623 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 630 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
-# 624 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 631 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_1
-# 625 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 632 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 626 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 633 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit_Text_0
-# 634 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 641 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 635 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 642 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
-# 636 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 643 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 637 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 644 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_PyramidGentleman01::
-# 643 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	lock
-# 644 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	faceplayer
-# 645 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_PyramidGentleman01_Text_0
-# 646 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_PyramidGentleman01_Text_1
-# 649 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
 # 650 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	lock
+# 651 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	faceplayer
+# 652 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_EventScript_PyramidGentleman01_Text_0
+# 653 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_PyramidGentleman01_Text_1
+# 656 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 657 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft::
-# 657 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 664 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
-# 658 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 665 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
-# 659 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 666 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
-# 660 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 667 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 661 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 668 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_MotherRunningOutPyramid
 	return
 
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerCenter::
-# 665 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 672 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
-# 666 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 673 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
-# 667 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 674 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0
-# 668 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 675 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 669 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 676 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_MotherRunningOutPyramid
 	return
 
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight::
-# 673 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 680 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
-# 674 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 681 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight_Movement_0
-# 675 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 682 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight_Movement_0
-# 676 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 683 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 677 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 684 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	goto IgrisDesert_EventScript_MotherRunningOutPyramid
 	return
 
 
 IgrisDesert_EventScript_MotherRunningOutPyramid::
-# 682 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	lock
-# 683 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
-# 684 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
-# 685 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	playse SE_PIN
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_0
-# 687 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
-# 688 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
 # 689 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	delay 60
+	lock
 # 690 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_MotherRunningOutPyramid_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
 # 691 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_1
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
+# 692 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	playse SE_PIN
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_0
 # 694 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
+	waitmovement
 # 695 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_1
+	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0
 # 696 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	delay 20
+	delay 60
 # 697 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_1
+	setspeaker IgrisDesert_EventScript_MotherRunningOutPyramid_Text_0
 # 698 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
-# 699 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setobjectxy RUVELPYRAMIDEXT_GENTLEMAN, 13, 20
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement RUVELPYRAMIDEXT_GENTLEMAN, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_2
+	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_1
 # 701 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
-# 702 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_PyramidGentleman01_Text_0
-# 703 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_2
-# 706 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
+# 702 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_1
+# 703 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	delay 20
+# 704 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_1
+# 705 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 706 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setobjectxy RUVELPYRAMIDEXT_GENTLEMAN, 13, 20
 # 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement RUVELPYRAMIDEXT_GENTLEMAN, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_3
+	applymovement RUVELPYRAMIDEXT_GENTLEMAN, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_2
 # 708 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
 # 709 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	removeobject RUVELPYRAMIDEXT_GENTLEMAN
+	setspeaker IgrisDesert_EventScript_PyramidGentleman01_Text_0
 # 710 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_4
-# 711 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
-# 712 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_MotherRunningOutPyramid_Text_0
+	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_2
 # 713 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_3
-# 719 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_5
-# 721 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement RUVELPYRAMIDEXT_GENTLEMAN, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_3
+# 715 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 722 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	removeobject IGRIS_LOSTCHILD_MOM
-# 723 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	addobject IGRIS_LOSTCHILD_MOM_2
-# 724 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
-# 725 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_0
+# 716 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	removeobject RUVELPYRAMIDEXT_GENTLEMAN
+# 717 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_4
+# 718 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 719 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_EventScript_MotherRunningOutPyramid_Text_0
+# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_3
 # 726 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_1
-# 727 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 728 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_4
-# 733 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
+# 727 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTCHILD_MOM, IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_5
+# 728 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 729 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	removeobject IGRIS_LOSTCHILD_MOM
+# 730 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	addobject IGRIS_LOSTCHILD_MOM_2
+# 731 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	clearflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
+# 732 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_0
+# 733 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_1
 # 734 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	startquest 2
+	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
 # 735 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_MotherRunningOutPyramid_Text_4
+# 740 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 741 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	startquest 2
+# 742 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 21
-# 736 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 743 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_DistressedMomWaiting::
-# 742 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 749 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	lock
-# 743 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 750 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	faceplayer
-# 744 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 751 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_EventScript_MotherRunningOutPyramid_Text_0
-# 745 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 752 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_DistressedMomWaiting_Text_0
-# 753 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 760 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 754 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 761 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_FoundChildWarpedOutside::
-# 760 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 24
-# 761 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	delay 30
-# 762 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_0
-# 763 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_1
-# 766 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
 # 767 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_2
+	setvar VAR_ZED_STORY_TRACKER, 24
 # 768 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_3
-# 771 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
-# 772 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
-# 773 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
-# 774 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	delay 30
+# 769 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_0
+# 770 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_1
+# 773 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 774 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_2
 # 775 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_4
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_3
 # 778 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 # 779 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	giveitem ITEM_NUGGET, 1
-# 780 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
-# 781 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
-# 782 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 780 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 783 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 784 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_5, MSGBOX_SIGN
-# 787 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitfanfare
-# 788 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmessage
-# 789 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitse
-# 790 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_FoundChildWarpedOutside_Movement_0
-# 791 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 781 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_0
-# 792 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_6
-# 793 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 782 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_4
+# 785 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
+# 786 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	giveitem ITEM_NUGGET, 1
+# 787 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 788 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0
+# 789 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 790 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 791 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_5, MSGBOX_SIGN
 # 794 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_2
+	waitfanfare
 # 795 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_7
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_FoundChildWarpedOutside_Movement_1
-# 797 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_LOSTKID_FOUND, IgrisDesert_FoundChildWarpedOutside_Movement_1
-# 798 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	waitmovement
-# 799 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	removeobject IGRIS_LOSTKID_FOUND
-# 800 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	removeobject IGRIS_LOSTCHILD_MOM_3
-# 801 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_6
-# 802 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_JORDAN_AFTERKIDSAVED, IgrisDesert_EventScript_KowtowAdmin_Movement_3
-# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
-# 804 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_FoundChildWarpedOutside_Text_8
-# 819 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
-# 820 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	applymovement IGRIS_JORDAN_AFTERKIDSAVED, IgrisDesert_FoundChildWarpedOutside_Movement_1
-# 821 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitse
+# 797 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_FoundChildWarpedOutside_Movement_0
+# 798 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_0
+# 799 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_6
+# 800 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 801 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_FoundChildWarpedOutside_Text_2
+# 802 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_7
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTCHILD_MOM_3, IgrisDesert_FoundChildWarpedOutside_Movement_1
+# 804 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_LOSTKID_FOUND, IgrisDesert_FoundChildWarpedOutside_Movement_1
+# 805 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmovement
-# 822 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	destroyfollowernpc
-# 823 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
-# 824 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	delay 30
-# 825 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 24
+# 806 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	removeobject IGRIS_LOSTKID_FOUND
+# 807 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	removeobject IGRIS_LOSTCHILD_MOM_3
+# 808 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, IgrisDesert_KowtowAdmin_AfterBattle_Movement_6
+# 809 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	applymovement IGRIS_JORDAN_AFTERKIDSAVED, IgrisDesert_EventScript_KowtowAdmin_Movement_3
+# 810 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_EventScript_KowtowAdmin_Text_6
+# 811 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_FoundChildWarpedOutside_Text_8
 # 826 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	removeobject IGRIS_JORDAN_AFTERKIDSAVED
+	waitmessage
 # 827 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	completequest 2
+	applymovement IGRIS_JORDAN_AFTERKIDSAVED, IgrisDesert_FoundChildWarpedOutside_Movement_1
 # 828 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmovement
+# 829 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	destroyfollowernpc
+# 830 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
+# 831 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	delay 30
+# 832 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 24
+# 833 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	removeobject IGRIS_JORDAN_AFTERKIDSAVED
+# 834 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	completequest 2
+# 835 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_Trainer01::
-# 834 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 841 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_FLINT, IgrisDesert_EventScript_Trainer01_Text_0, IgrisDesert_EventScript_Trainer01_Text_1
-# 839 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 846 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
-# 840 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 847 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer02::
-# 845 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 852 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_JONAH, IgrisDesert_EventScript_Trainer02_Text_0, IgrisDesert_EventScript_Trainer02_Text_1
-# 851 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 858 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer02_Text_2, MSGBOX_AUTOCLOSE
-# 853 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 860 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer03::
-# 859 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	trainerbattle_single TRAINER_MARLENE, IgrisDesert_EventScript_Trainer03_Text_0, IgrisDesert_EventScript_Trainer03_Text_1
-# 864 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
 # 866 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	trainerbattle_single TRAINER_MARLENE, IgrisDesert_EventScript_Trainer03_Text_0, IgrisDesert_EventScript_Trainer03_Text_1
+# 871 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
+# 873 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer04::
-# 871 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 878 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_ALVARO, IgrisDesert_EventScript_Trainer04_Text_0, IgrisDesert_EventScript_Trainer04_Text_1
-# 876 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 883 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer04_Text_2, MSGBOX_AUTOCLOSE
-# 877 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 884 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer05::
-# 883 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 890 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_HEIDI, IgrisDesert_EventScript_Trainer05_Text_0, IgrisDesert_EventScript_Trainer05_Text_1
-# 889 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 896 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer05_Text_2, MSGBOX_AUTOCLOSE
-# 891 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 898 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
@@ -1415,231 +1431,231 @@ IgrisDesert_SandPitWarning_Movement_2:
 	face_down
 	step_end
 
-# 487 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 494 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger01_Movement_0:
-# 487 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 494 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
 	step_end
 
-# 501 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 508 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerTrigger03_Movement_0:
-# 501 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 508 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
 	step_end
 
-# 530 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_0:
-# 530 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_1:
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 535 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 542 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
 	step_end
 
-# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_2:
-# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 537 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 544 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
 	step_end
 
-# 539 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_3:
-# 539 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 539 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 539 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
-# 539 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 546 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
 	step_end
 
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_4:
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
-# 541 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 548 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
 	step_end
 
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_5:
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
-# 543 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 550 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
 	step_end
 
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_SpeakJordanBecomeFollowerCommonTrigger_Movement_6:
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
-# 545 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 552 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
 	step_end
 
-# 615 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 622 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_JordanFollower02NoLeaveSouth_Movement_0:
-# 615 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 622 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_up
 	step_end
 
-# 658 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 665 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerLeft_Movement_0:
-# 658 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 665 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 658 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 665 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	face_up
 	step_end
 
-# 674 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 681 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_TriggerRight_Movement_0:
-# 674 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 681 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 674 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 681 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	face_up
 	step_end
 
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_0:
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_faster_down
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_faster_down
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_faster_down
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_faster_down
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_faster_down
-# 686 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 693 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_in_place_fast_down
 	step_end
 
-# 695 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 702 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_1:
-# 695 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 702 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_right
-# 695 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 702 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	face_left
 	step_end
 
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_2:
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_up
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_up
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_up
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_up
-# 700 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_3:
-# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_down
-# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_down
-# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_down
-# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_down
-# 707 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 714 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 710 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 717 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_4:
-# 710 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 717 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_faster_down
-# 710 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 717 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	face_right
 	step_end
 
-# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 727 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_EventScript_MotherRunningOutPyramid_Movement_5:
-# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 727 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 727 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 727 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
 	step_end
 
-# 790 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 797 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_FoundChildWarpedOutside_Movement_0:
-# 790 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 797 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 790 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 797 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_left
-# 790 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 797 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	face_up
 	step_end
 
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 IgrisDesert_FoundChildWarpedOutside_Movement_1:
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
-# 796 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 803 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	walk_down
 	step_end
 
@@ -1848,7 +1864,13 @@ IgrisDesert_SandPitWarning_Text_1:
 	.string "I would steer cleer!$"
 
 IgrisDesert_EventScript_JordanFollower02_Text_0:
-# 472 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 473 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	.string "We should get moving! Pokemon are the\n"
+	.string "best thing in the world, but some of\l"
+	.string "them can be really dangerous!$"
+
+IgrisDesert_EventScript_JordanFollower02_Text_1:
+# 477 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "This Pyramid is another one of those\n"
 	.string "things I've heard up, but never gone to\l"
 	.string "see.\p"
@@ -1857,7 +1879,7 @@ IgrisDesert_EventScript_JordanFollower02_Text_0:
 	.string "{PLAYER}!$"
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_0:
-# 557 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 564 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "{PLAYER}! I've been waiting for you!\n"
 	.string "There's this really cool looking\l"
 	.string "{COLOR RED}Pyramid{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to the west, past this \l"
@@ -1868,30 +1890,30 @@ IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_0:
 	.string "catch Pokemon!$"
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_1:
-# 569 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 576 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Great, let's get going! The Pyramid is to\n"
 	.string "the west, up those stairs through the\l"
 	.string "mountain range.$"
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_2:
-# 575 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 582 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Jordan is now your follower!$"
 
 IgrisDesert_EventScript_SpeakJordanBecomeFollower02_Text_3:
-# 583 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 590 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Alright, come back soon!\n"
 	.string "We absolutely must check out the\l"
 	.string "Pyramid before we move on!$"
 
 IgrisDesert_EventScript_JordanFollower02NoLeaveNorth_Text_0:
-# 596 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 603 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Hey, let's check out the Pyramid before\n"
 	.string "anything else! If you need a Pokemon\l"
 	.string "Center or Mart, we can go to {COLOR RED}Palento\l"
 	.string "Village{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.$"
 
 IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit_Text_0:
-# 626 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 633 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Woah, watch out! We'll get sucked into\n"
 	.string "that sand pit!\p"
 	.string "...\p"
@@ -1900,33 +1922,33 @@ IgrisDesert_EventScript_JordanFollower02NoLeaveSandpit_Text_0:
 	.string "up for that just yet.$"
 
 IgrisDesert_EventScript_PyramidGentleman01_Text_0:
-# 645 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 652 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Gentleman$"
 
 IgrisDesert_EventScript_PyramidGentleman01_Text_1:
-# 646 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 653 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "What a distinguished landmark this is!\n"
 	.string "Why, I simply must spend as much time\l"
 	.string "here as I can!$"
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_Text_0:
-# 690 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 697 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Distressed Mother$"
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_Text_1:
-# 691 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 698 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "My little girl! They were taken by a\n"
 	.string "{COLOR RED}Pokemon{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Pyramid!\l"
 	.string "My goodness, someone please help!$"
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_Text_2:
-# 703 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 710 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "A lost child you say?\n"
 	.string "I shall rush to the Pokemon Center at\l"
 	.string "once for more assistance!$"
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_Text_3:
-# 713 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 720 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Please, try to find my little girl! She\n"
 	.string "was taken into the closed off areas of\l"
 	.string "the Pyramid by an unknown Pokemon!\p"
@@ -1934,14 +1956,14 @@ IgrisDesert_EventScript_MotherRunningOutPyramid_Text_3:
 	.string "within...oh my poor child!$"
 
 IgrisDesert_EventScript_MotherRunningOutPyramid_Text_4:
-# 728 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 735 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Well, another reason to check out the\n"
 	.string "Pyramid! Although, I suppose saving a\l"
 	.string "child does come first.\p"
 	.string "Let's not waste any time!$"
 
 IgrisDesert_EventScript_DistressedMomWaiting_Text_0:
-# 745 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 752 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Please don't tarry, who knows what my\n"
 	.string "poor child could be going through as we\l"
 	.string "speak?\p"
@@ -1950,46 +1972,46 @@ IgrisDesert_EventScript_DistressedMomWaiting_Text_0:
 	.string "get a move on!$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_0:
-# 762 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 769 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Happy Mother$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_1:
-# 763 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 770 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Oh thank goodness you're okay, my\n"
 	.string "sweet! I've been losing my mind over\l"
 	.string "you!$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_2:
-# 767 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 774 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Found Child$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_3:
-# 768 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 775 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Those nice people saved me! That mean\n"
 	.string "Pokemon took me to a dark scary room\l"
 	.string "and they saved me!$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_4:
-# 775 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 782 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I could never repay you for what you've\n"
 	.string "done for me and my child. The least I\l"
 	.string "can do is give you each one of these.$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_5:
-# 784 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 791 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Jordan recieved a Nugget!\p"
 	.string "He put it away in his Bag.$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_6:
-# 792 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 799 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Now, come along, and stay very close!$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_7:
-# 795 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 802 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Yes mommy!$"
 
 IgrisDesert_FoundChildWarpedOutside_Text_8:
-# 804 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 811 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "That was a handful! I'm glad we were\n"
 	.string "able to save that kid. Not to mention,\l"
 	.string "we were able to go into the forbidden\l"
@@ -2004,66 +2026,66 @@ IgrisDesert_FoundChildWarpedOutside_Text_8:
 	.string "See you later {PLAYER}!$"
 
 IgrisDesert_EventScript_Trainer01_Text_0:
-# 836 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 843 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I can't get the sand out of my eyes!$"
 
 IgrisDesert_EventScript_Trainer01_Text_1:
-# 837 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 844 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "It's everywhere!.$"
 
 IgrisDesert_EventScript_Trainer01_Text_2:
-# 839 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 846 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "It's very irritating too!$"
 
 IgrisDesert_EventScript_Trainer02_Text_0:
-# 847 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 854 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Such a beautiful desert I could stay\n"
 	.string "here for hours!$"
 
 IgrisDesert_EventScript_Trainer02_Text_1:
-# 849 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 856 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Ah, maybe I'll go rest a bit.$"
 
 IgrisDesert_EventScript_Trainer02_Text_2:
-# 851 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 858 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Second thought, I can't take my eyes\n"
 	.string "off of this place!$"
 
 IgrisDesert_EventScript_Trainer03_Text_0:
-# 861 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 868 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I could see you coming, but not you I!$"
 
 IgrisDesert_EventScript_Trainer03_Text_1:
-# 862 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 869 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I still lost!$"
 
 IgrisDesert_EventScript_Trainer03_Text_2:
-# 864 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 871 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Maybe I'll get the next passerby. You're\n"
 	.string "too tough!$"
 
 IgrisDesert_EventScript_Trainer04_Text_0:
-# 873 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 880 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Hah! You are not prepared for this!$"
 
 IgrisDesert_EventScript_Trainer04_Text_1:
-# 874 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 881 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Hah! I was not prepared for this!$"
 
 IgrisDesert_EventScript_Trainer04_Text_2:
-# 876 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 883 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I thought I was prepared for this...$"
 
 IgrisDesert_EventScript_Trainer05_Text_0:
-# 885 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 892 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "There's less sand in this valley-\n"
 	.string "pftttt!$"
 
 IgrisDesert_EventScript_Trainer05_Text_1:
-# 887 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 894 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "False hope...$"
 
 IgrisDesert_EventScript_Trainer05_Text_2:
-# 889 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 896 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Why did I even come here? This is no\n"
 	.string "place for a picnic!$"
