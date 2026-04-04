@@ -4154,29 +4154,15 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_FROZEN_BODY:
-            // Always causes Frostbite if attacker is vulnerable to contact moves, and move was of Grass typing.
             enum Ability abilityAtk = GetBattlerAbility(gBattlerAttacker);
             if (IsBattlerAlive(gBattlerAttacker)
             && !gBattleStruct->unableToUseMove
             && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
             && CanBeFrozen(gBattlerTarget, gBattlerAttacker, abilityAtk)
+            && MoveMakesContact(move)
             && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, abilityAtk, GetBattlerHoldEffect(gBattlerAttacker), move))
-            {
-                if (GetBattleMoveType(gCurrentMove) == TYPE_GRASS)
-                {
-                    // Always apply frostbite if a grass move.
-                    goto FROZEN_BODY;
-                }
-                else
-                {
-                    // If not a grass move, utilize poison point chance to apply frostbite
-                    if (RandomPercentage(RNG_POISON_POINT, 30)) {
-                        goto FROZEN_BODY;
-                    }
-                }
-                break;
-                
-                FROZEN_BODY:
+            {   
+                if (RandomPercentage(RNG_POISON_POINT, 50))
                 {
                     gEffectBattler = gBattlerAttacker;
                     gBattleScripting.battler = gBattlerTarget;

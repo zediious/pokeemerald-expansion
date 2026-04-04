@@ -2349,6 +2349,20 @@ BattleScript_EffectPhotosynthesisRestore::
 	healthbarupdate BS_TARGET, PASSIVE_HP_UPDATE
 	datahpupdate BS_TARGET, PASSIVE_HP_UPDATE
 
+BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk::
+	saveattacker
+	copybyte gBattlerAttacker, gEffectBattler
+	waitstate
+	call BattleScript_AbilityPopUp
+	setnonvolatilestatus TRIGGER_ON_ABILITY
+	waitstate
+	call BattleScript_StatUp
+	waitstate
+	statbuffchange BS_ATTACKER, STAT_CHANGE_CERTAIN, BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk_End
+BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk_End:
+	restoreattacker
+	return
+
 BattleScript_EffectAbsorb::
 	healthbarupdate BS_ATTACKER, PASSIVE_HP_UPDATE
 	datahpupdate BS_ATTACKER, PASSIVE_HP_UPDATE

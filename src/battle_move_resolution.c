@@ -3387,7 +3387,24 @@ static enum MoveEndResult MoveEndFrozenBodyAbility(void)
     {   
         gEffectBattler = gBattlerAbility = gBattlerTarget;
         SET_STATCHANGER(STAT_SPATK, 2, FALSE);
-        BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet);
+
+        enum Move move = gBattleStruct->lastTakenMoveFrom[gBattlerTarget][gBattlerAttacker];
+
+        if ((MoveMakesContact(move)))
+        {
+            if (RandomPercentage(RNG_POISON_POINT, 50))
+            {
+                BattleScriptCall(BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk); // Both raise SP ATK and frostbite
+            }
+            else
+            {
+                BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet); // Just raise SP ATK
+            }
+        }
+        else
+        {
+            BattleScriptCall(BattleScript_TargetAbilityStatRaiseRet); // Just raise SP ATK
+        }
         result = MOVEEND_RESULT_RUN_SCRIPT;
     }
 

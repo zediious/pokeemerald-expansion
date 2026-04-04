@@ -803,5 +803,7 @@ extern const u8 BattleScript_TooScaredToMove[];
 extern const u8 BattleScript_SilphScopeUnveiled[];
 
 extern const u8 BattleScript_EffectPhotosynthesisRestore[];
+extern const u8 BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk[];
+extern const u8 BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk_End[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
