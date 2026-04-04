@@ -709,6 +709,8 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
     playse(SE_PIN)
+    waitse
+    playbgm(MUS_ENCOUNTER_AQUA, 0)
     applymovement(IGRIS_LOSTCHILD_MOM, moves(walk_faster_down * 5, walk_in_place_fast_down))
     waitmovement
     applymovement(IGRIS_LOSTCHILD_MOM, moves(emote_exclamation_mark))
@@ -759,6 +761,7 @@ script IgrisDesert_EventScript_MotherRunningOutPyramid {
     waitmessage
     startquest(2)
     setvar(VAR_ZED_STORY_TRACKER, 21)
+    fadedefaultbgm
     release
     end
 }
