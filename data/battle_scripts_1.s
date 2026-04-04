@@ -2346,8 +2346,17 @@ BattleScript_EffectAbsorbLiquidOoze::
 	goto BattleScript_EffectAbsorb
 
 BattleScript_EffectPhotosynthesisRestore::
+	flushtextbox
+	saveattacker
+	copybyte gBattlerAttacker, gEffectBattler
+	call BattleScript_AbilityPopUpTarget
 	healthbarupdate BS_TARGET, PASSIVE_HP_UPDATE
 	datahpupdate BS_TARGET, PASSIVE_HP_UPDATE
+	printstring STRINGID_REGAINEDWITHPHOTOSYNTHESIS
+	waitmessage B_WAIT_TIME_LONG
+	waitstate
+	restoreattacker
+	return
 
 BattleScript_EffectFrozenBodyFrostbiteRaiseSpatk::
 	saveattacker

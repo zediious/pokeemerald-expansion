@@ -3360,7 +3360,8 @@ static enum MoveEndResult MoveEndPhotosynthesisAbility(void)
         && IsBattlerAlive(gBattlerTarget)
         && IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
         && gBattleStruct->moveDamage[gBattlerTarget] > 0
-        && !IsBattlerAtMaxHp(gBattlerTarget))
+        && !IsBattlerAtMaxHp(gBattlerTarget)
+        && !(gBattleMons[gBattlerTarget].status1 & STATUS1_BURN))
         {
             s32 healAmount = (gBattleStruct->moveDamage[gBattlerTarget] / 1.5);
             SetHealAmount(gBattlerTarget, healAmount);
