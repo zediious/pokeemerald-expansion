@@ -321,7 +321,11 @@ script GerbonBattleHall_TournamentBattle {
 
 script GerbonBattleHall_Tournament_RemoveAllTrainers {
     // Remove the current trainer object
-    removeobject(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL)
+    removeobject(GERBONTOURNEY_TRAINER01)
+    removeobject(GERBONTOURNEY_TRAINER02)
+    removeobject(GERBONTOURNEY_TRAINER03)
+    removeobject(GERBONTOURNEY_TRAINER04)
+    removeobject(GERBONTOURNEY_TRAINER05)
 
     // Set flag for all trainers
     setflag(FLAG_GERBON_TOURNEY_TRAINER01)
