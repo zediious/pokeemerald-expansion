@@ -4836,7 +4836,7 @@ Gender: Female
 Music: Female
 Items: Super Potion / Potion
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Ace Pokemon
 
 Aron
 Level: 17
@@ -4862,13 +4862,13 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Rock Throw
 - Dragon Breath
 
-Cranidos
+Minior
 Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Acrobatics
+- Rollout
 - Take Down
-- Leer
-- Rock Smash
-- Scary Face
+- Confuse Ray
 
 Stonjourner @ Oran Berry
 Level: 19
