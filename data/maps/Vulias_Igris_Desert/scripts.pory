@@ -427,6 +427,25 @@ script IgrisDesert_SandPitWarning {
     end
 }
 
+// Talk to the sand pit warning kid after he warns you.
+script IgrisDesert_SandPitWarning_TalkAfter {
+    lock
+    faceplayer
+    setspeaker("School Kid")
+    msgbox("Me? Hehe, of course I can dig in there!
+            I just...am waiting here to warn people
+            like you who can't!")
+    if (flag(FLAG_IGRISUNDER_PLAYERISDIGGER)) {
+        waitmessage
+        setspeaker("School Kid")
+        msgbox("...
+                Oh...you can dig in there? How cool!
+                I mean-yeah, cool, whatever!")
+    }
+    waitmessage
+    release
+    end
+}
 
 script IgrisDesert_DetermineJordanTeam02 {
     if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear

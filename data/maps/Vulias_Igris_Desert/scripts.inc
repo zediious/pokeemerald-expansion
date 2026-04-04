@@ -560,8 +560,36 @@ IgrisDesert_SandPitWarning_4:
 	goto IgrisDesert_SandPitWarning_1
 
 
-IgrisDesert_DetermineJordanTeam02::
+IgrisDesert_SandPitWarning_TalkAfter::
 # 432 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	lock
+# 433 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	faceplayer
+# 434 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_SandPitWarning_Text_0
+# 435 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_SandPitWarning_TalkAfter_Text_0
+# 438 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	goto_if_set FLAG_IGRISUNDER_PLAYERISDIGGER, IgrisDesert_SandPitWarning_TalkAfter_2
+IgrisDesert_SandPitWarning_TalkAfter_1:
+# 445 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 446 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	release
+	end
+
+IgrisDesert_SandPitWarning_TalkAfter_2:
+# 439 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	waitmessage
+# 440 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	setspeaker IgrisDesert_SandPitWarning_Text_0
+# 441 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_SandPitWarning_TalkAfter_Text_1
+	goto IgrisDesert_SandPitWarning_TalkAfter_1
+
+
+IgrisDesert_DetermineJordanTeam02::
+# 451 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	compare VAR_STARTER_MON, 0
 	goto_if_eq IgrisDesert_DetermineJordanTeam02_1
 # 440 "data/maps/Vulias_Igris_Desert/scripts.pory"
