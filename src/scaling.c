@@ -24,7 +24,7 @@ static struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, st
 static struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil);
 
-struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledParty, bool32 evolveExcluded)
+struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledParty, bool32 evolveExcluded, bool32 alwaysCeiling)
 {
      // Get player's highest level mon
     u8 levelCeil = 0;
@@ -40,7 +40,7 @@ struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledPart
         for (u32 e = 0; e < partySize; e++) 
         {   
             u8 compareLevel;
-            if (partySize == 1) // If the trainer has only one Pokemon, set compare to levelCeil
+            if (partySize == 1 || alwaysCeiling) // If the trainer has only one Pokemon or alwaysCeiling passed TRUE, set compare to levelCeil
             {
                 compareLevel = levelCeil;
             }

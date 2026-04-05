@@ -1980,7 +1980,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
         memcpy(&tempTrainer, trainer, sizeof(struct Trainer));
 
         // Scale the party if applicable, returns un-modified party if not.
-        tempTrainer.party = ScaleTrainerMons(trainer->partySize, scaledParty, evolveExcluded);
+        tempTrainer.party = ScaleTrainerMons(trainer->partySize, scaledParty, evolveExcluded, FALSE);
         trainer = &tempTrainer;
     }
 
