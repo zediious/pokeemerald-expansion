@@ -302,7 +302,7 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmovement
 
-    setspeaker("Kowtow Grunt 1")
+    setspeaker("Kowtow Grnt 1")
     msgbox(
         "What are you doing here! I guess that
         guy we paid to block the entrance
@@ -313,7 +313,7 @@ script SawgrassForest_KowtowEncounter {
     applymovement(SAWGRASS_KOWTOW_01, moves(face_down))
     applymovement(SAWGRASS_KOWTOW_02, moves(face_up))
 
-    setspeaker("Kowtow Grunt 1")
+    setspeaker("Kowtow Grnt 1")
     msgbox(
         "I guess we'll just have to take them
         down ourselves, the boss don't got to
@@ -321,7 +321,7 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmessage
 
-    setspeaker("Kowtow Grunt 2")
+    setspeaker("Kowtow Grnt 2")
     msgbox(
         "Sure, sure, until his {COLOR RED}Kingambit{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares
         us down for so long that we break into
@@ -343,7 +343,7 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmessage
 
-    setspeaker("Kowtow Grunt 1")
+    setspeaker("Kowtow Grnt 1")
     msgbox(
         "Quit being a..."
     )
@@ -352,7 +352,7 @@ script SawgrassForest_KowtowEncounter {
     applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_right))
     applymovement(SAWGRASS_KOWTOW_02, moves(emote_exclamation_mark, face_right))
 
-    setspeaker("Kowtow Grunt 1")
+    setspeaker("Kowtow Grnt 1")
     msgbox(
         "Who are you calling trash!"
     )
@@ -412,7 +412,7 @@ script Sawgrass_Kowtow_Whiteout {
 
 script Sawgrass_Kowtow_AfterBattle {
     lock
-    setspeaker("Kowtow Grunt 1")
+    setspeaker("Kowtow Grnt 1")
     msgbox("No good, use the smokescreen!")
     waitmessage
 

@@ -866,7 +866,7 @@ SawgrassForest_KowtowEncounter_Text_0:
 
 SawgrassForest_KowtowEncounter_Text_1:
 # 305 "data/maps/ZED_SawgrassForest/scripts.pory"
-	.string "Kowtow Grunt 1$"
+	.string "Kowtow Grnt 1$"
 
 SawgrassForest_KowtowEncounter_Text_2:
 # 307 "data/maps/ZED_SawgrassForest/scripts.pory"
@@ -882,7 +882,7 @@ SawgrassForest_KowtowEncounter_Text_3:
 
 SawgrassForest_KowtowEncounter_Text_4:
 # 324 "data/maps/ZED_SawgrassForest/scripts.pory"
-	.string "Kowtow Grunt 2$"
+	.string "Kowtow Grnt 2$"
 
 SawgrassForest_KowtowEncounter_Text_5:
 # 326 "data/maps/ZED_SawgrassForest/scripts.pory"
