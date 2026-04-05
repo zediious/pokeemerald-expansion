@@ -26,3 +26,91 @@ script WoltiaPokeCenter_HealerChansey {
     closemessage
     release
 }
+
+//// NPCs
+
+// Fisherman at top left
+script WoltiaPokemonCenter_ChairFisherman{
+    lock
+    faceplayer
+    setspeaker("Fisherman")
+    msgbox("You wouldn't think it, but the Igris
+            River is great for fishing! There are
+            some rare Pokemon in those waters!
+            
+            I've got enough sand in my eyes though,
+            I need to rest up!")
+    waitmessage
+    release
+    end
+}
+
+// Maniac at bookshelf
+script WoltiaPokemonCenter_BookshelfManiac{
+    lock
+    setspeaker("Maniac")
+    msgbox("Now...where was that volume...")
+    waitmessage
+    delay(30)
+    faceplayer
+    setspeaker("Maniac")
+    msgbox("Hey! I'm doing important work here!")
+    waitmessage
+    release
+    applymovement(WOLTIA_PKMNCENTER_MANIAC, moves(face_up))
+    end
+}
+
+// Lass at table who gives a Quick Claw
+script WoltiaPokemonCenter_TableLass{
+    lock
+    setspeaker("Lass")
+    if (!flag(FLAG_WOLTIA_LASS_QUICKCLAW)) {
+        msgbox("Think fast!")
+        waitmessage
+        giveitem(ITEM_QUICK_CLAW)
+        setflag(FLAG_WOLTIA_LASS_QUICKCLAW)
+        waitmessage
+        setspeaker("Lass")
+        msgbox("That item will help your Pokemon
+                move faster.
+                
+                ...sometimes. Can't win them all!")
+    } else {
+        msgbox("It's always better to move quicker than
+                your opponent
+                
+                ...most of the time, anyways.")
+    }
+    waitmessage
+    release
+    end
+}
+
+// Cook and Black Belt exchanging strategies before the Woltia Tournament
+script WoltiaPokemonCenter_CookBlackBeltPepTalk{
+    lock
+    setspeaker("Black Belt")
+    msgbox("I know it's been a while, but you and
+            your Pokemon have got this!
+            
+            Never keep your Pokemon out
+            if your opponent switches to
+            a Pokemon with a type advantage!")
+    waitmessage
+    setspeaker("Cook")
+    msgbox("That makes sense, but what do I do
+            instead!")
+    waitmessage
+    setspeaker("Black Belt")
+    msgbox("If you have a Pokemon who is strong
+            against the new type, switch to that
+            one!")
+    waitmessage
+    setspeaker("")
+    msgbox("The two are engrossed in their
+            discussion.")
+    waitmessage
+    release
+    end
+}

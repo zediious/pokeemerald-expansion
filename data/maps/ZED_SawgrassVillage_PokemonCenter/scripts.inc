@@ -121,6 +121,6 @@ SawgrassPokemonCenter_ChairDude_Text_0:
 
 SawgrassPokemonCenter_ChairDude_Text_1:
 # 62 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
-	.string "whew! I spent all day walking. I'm glad\n"
+	.string "Whew! I spent all day walking. I'm glad\n"
 	.string "the Pokemon Centers let you relax for\l"
 	.string "as long as you need!$"
