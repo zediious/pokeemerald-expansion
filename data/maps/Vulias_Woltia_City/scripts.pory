@@ -19,6 +19,7 @@ script Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers {
 script Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney {
     setvar(VAR_ZED_STORY_TRACKER, 17)
     addobject(WOLTIA_JORDAN_TRIGGERTOURNEY)
+    setflag(FLAG_WOLTIATOURNEY_ENABLED)
     end
 }
 

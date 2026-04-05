@@ -363,12 +363,16 @@ WoltiaBattleHall_TournamentPlayerWon::
 # 282 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setflag FLAG_GERBON_RUVELMOMKID
 # 283 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	delay 30
+	setflag FLAG_WOLTIATOURNEY_DISABLED
 # 284 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_ANGRY_KROKOROK_01
+	clearflag FLAG_WOLTIATOURNEY_ENABLED
 # 285 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+	delay 30
 # 286 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_ANGRY_KROKOROK_01
+# 287 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+# 288 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	release
 	end
 
