@@ -1254,6 +1254,14 @@
 	.4byte \products
 	.endm
 
+	@ Opens the Pokemart system with vending machine type, offering the specified products for sale.
+	@ Unable to sell
+	@ Products should be a list of .2byte item values preceded by an .align 2
+	.macro vendingpokemart products:req
+	.byte SCR_OP_VENDINGSPECIAL
+	.4byte \products
+	.endm
+
 	@ Used as the endpoint for a Pokemart item list
 	.macro pokemartlistend
 	.2byte ITEM_NONE

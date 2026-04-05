@@ -1,0 +1,87 @@
+// This common script contains functions for the Mint vending machines
+
+script Common_EventScript_MintVendingInit {
+    lock
+
+    if (!flag(FLAG_MINT_VENDING_USED)) {
+        setflag(FLAG_MINT_VENDING_USED)
+    }
+
+    msgbox("It's a vending machine that serves
+            Mints! These can change your Pokemon's
+            stats!")
+    waitmessage
+    if (flag(FLAG_BADGE02_GET))
+    {
+        vendingpokemart(MintVending_02_MartItems)
+    }
+    elif (flag(FLAG_BADGE01_GET))
+    {
+        vendingpokemart(MintVending_01_MartItems)
+    }
+    else // No Ribbons/Badges
+    {
+        vendingpokemart(MintVending_00_MartItems)
+    }
+    release
+    end
+}
+
+mart MintVending_00_MartItems
+{
+    ITEM_SERIOUS_MINT
+}
+
+mart MintVending_01_MartItems
+{
+    ITEM_RELAXED_MINT
+    ITEM_SASSY_MINT
+    ITEM_BOLD_MINT
+    ITEM_IMPISH_MINT
+    ITEM_CALM_MINT
+    ITEM_CAREFUL_MINT
+    ITEM_SERIOUS_MINT
+}
+
+mart MintVending_02_MartItems
+{
+    ITEM_JOLLY_MINT
+    ITEM_TIMID_MINT
+    ITEM_NAIVE_MINT
+    ITEM_HASTY_MINT
+    ITEM_GENTLE_MINT
+    ITEM_LAX_MINT
+    ITEM_RELAXED_MINT
+    ITEM_SASSY_MINT
+    ITEM_BOLD_MINT
+    ITEM_IMPISH_MINT
+    ITEM_CALM_MINT
+    ITEM_CAREFUL_MINT
+    ITEM_SERIOUS_MINT
+}
+
+// All Mints
+mart MintVending_08_MartItems
+{
+    ITEM_LONELY_MINT
+    ITEM_ADAMANT_MINT
+    ITEM_NAUGHTY_MINT
+    ITEM_BRAVE_MINT
+    ITEM_BOLD_MINT
+    ITEM_IMPISH_MINT
+    ITEM_LAX_MINT
+    ITEM_RELAXED_MINT
+    ITEM_MODEST_MINT
+    ITEM_MILD_MINT
+    ITEM_RASH_MINT
+    ITEM_QUIET_MINT
+    ITEM_CALM_MINT
+    ITEM_GENTLE_MINT
+    ITEM_CAREFUL_MINT
+    ITEM_SASSY_MINT
+    ITEM_TIMID_MINT
+    ITEM_HASTY_MINT
+    ITEM_JOLLY_MINT
+    ITEM_NAIVE_MINT
+    ITEM_SERIOUS_MINT
+}
