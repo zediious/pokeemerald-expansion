@@ -460,9 +460,6 @@ static void (*const sEndTurnFuncsTable[])(void) =
 // List of trainers that are excluded from scaling
 static const u16 ExcludeScalingTrainers[] = 
 {   
-    // Kowtow Sawgrass 01
-    TRAINER_GRUNT_AQUA_HIDEOUT_1,
-    TRAINER_GRUNT_AQUA_HIDEOUT_2,
     // Palladium
     TRAINER_MARC,
     TRAINER_CRISTIAN,
@@ -472,12 +469,6 @@ static const u16 ExcludeScalingTrainers[] =
     TRAINER_BRENDAN_ROUTE_103_TORCHIC,
     TRAINER_BRENDAN_ROUTE_110_TORCHIC,
     TRAINER_ROXANNE_1,
-    // Kowtow Igris 01
-    TRAINER_GRUNT_AQUA_HIDEOUT_3,
-    TRAINER_GRUNT_SEAFLOOR_CAVERN_4,
-    TRAINER_GRUNT_SEAFLOOR_CAVERN_2,
-    TRAINER_GRUNT_SEAFLOOR_CAVERN_3,
-    TRAINER_GRUNT_SEAFLOOR_CAVERN_1,
     // Aerodrome
     TRAINER_PERRY,
     TRAINER_TED,
