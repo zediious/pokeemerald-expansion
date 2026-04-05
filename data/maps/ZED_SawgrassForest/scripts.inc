@@ -324,296 +324,310 @@ SawgrassForest_KowtowEncounter::
 # 274 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_MapScript_OnFrameMakeJordanFollower_Movement_1
 # 275 "data/maps/ZED_SawgrassForest/scripts.pory"
+	playse SE_PIN
+# 276 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmovement
 # 277 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitse
+# 279 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto_if_set FLAG_SAWGRASSFOREST_KOWTOWPOSITION, SawgrassForest_KowtowEncounter_2
-# 281 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 283 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_1
 SawgrassForest_KowtowEncounter_1:
-# 283 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmovement
 # 285 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmovement
+# 287 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
-# 286 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 288 "data/maps/ZED_SawgrassForest/scripts.pory"
 	msgbox SawgrassForest_KowtowEncounter_Text_0
-# 290 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_2
-# 291 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_3
 # 292 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmovement
+	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_2
 # 293 "data/maps/ZED_SawgrassForest/scripts.pory"
-	delay 60
-# 294 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_4
-# 298 "data/maps/ZED_SawgrassForest/scripts.pory"
-	delay 30
-# 299 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_5
-# 303 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmovement
-# 305 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_KowtowEncounter_Text_1
-# 306 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_2
-# 311 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 313 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_6
-# 314 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_7
-# 316 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_KowtowEncounter_Text_1
-# 317 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_3
-# 322 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 324 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_KowtowEncounter_Text_4
-# 325 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_5
-# 330 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 332 "data/maps/ZED_SawgrassForest/scripts.pory"
-	delay 60
-# 333 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_6
-# 335 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 337 "data/maps/ZED_SawgrassForest/scripts.pory"
-	call SawgrassForest_KowtowScene_FollowPlayerFace
-# 339 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
-# 340 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_7
-# 344 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 346 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_KowtowEncounter_Text_1
-# 347 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_8
-# 350 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 352 "data/maps/ZED_SawgrassForest/scripts.pory"
-	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_3
-# 353 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_3
-# 355 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 294 "data/maps/ZED_SawgrassForest/scripts.pory"
+	playse SE_PIN
+# 295 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmovement
+# 296 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitse
+# 297 "data/maps/ZED_SawgrassForest/scripts.pory"
+	delay 60
+# 298 "data/maps/ZED_SawgrassForest/scripts.pory"
+	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_4
+# 302 "data/maps/ZED_SawgrassForest/scripts.pory"
+	delay 30
+# 303 "data/maps/ZED_SawgrassForest/scripts.pory"
+	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_5
+# 307 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmovement
+# 309 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setspeaker SawgrassForest_KowtowEncounter_Text_1
-# 356 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox SawgrassForest_KowtowEncounter_Text_9
-# 359 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 310 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_2
+# 315 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmessage
+# 317 "data/maps/ZED_SawgrassForest/scripts.pory"
+	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_6
+# 318 "data/maps/ZED_SawgrassForest/scripts.pory"
+	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_7
+# 320 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setspeaker SawgrassForest_KowtowEncounter_Text_1
+# 321 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_3
+# 326 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 328 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setspeaker SawgrassForest_KowtowEncounter_Text_4
+# 329 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_5
+# 334 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 336 "data/maps/ZED_SawgrassForest/scripts.pory"
+	delay 60
+# 337 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_6
+# 339 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 341 "data/maps/ZED_SawgrassForest/scripts.pory"
+	call SawgrassForest_KowtowScene_FollowPlayerFace
+# 343 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
+# 344 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_7
+# 348 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 350 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setspeaker SawgrassForest_KowtowEncounter_Text_1
+# 351 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_8
+# 354 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 356 "data/maps/ZED_SawgrassForest/scripts.pory"
+	applymovement SAWGRASS_KOWTOW_01, SawgrassForest_KowtowEncounter_Movement_3
+# 357 "data/maps/ZED_SawgrassForest/scripts.pory"
+	applymovement SAWGRASS_KOWTOW_02, SawgrassForest_KowtowEncounter_Movement_3
+# 358 "data/maps/ZED_SawgrassForest/scripts.pory"
+	playse SE_PIN
+# 359 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmovement
+# 360 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitse
 # 362 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setspeaker SawgrassForest_KowtowEncounter_Text_1
+# 363 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox SawgrassForest_KowtowEncounter_Text_9
+# 366 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 369 "data/maps/ZED_SawgrassForest/scripts.pory"
 	compare VAR_STARTER_MON, 0
 	goto_if_eq SawgrassForest_KowtowEncounter_5
-# 365 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 372 "data/maps/ZED_SawgrassForest/scripts.pory"
 	compare VAR_STARTER_MON, 1
 	goto_if_eq SawgrassForest_KowtowEncounter_6
-# 368 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 375 "data/maps/ZED_SawgrassForest/scripts.pory"
 	compare VAR_STARTER_MON, 2
 	goto_if_eq SawgrassForest_KowtowEncounter_7
-# 371 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 378 "data/maps/ZED_SawgrassForest/scripts.pory"
 	compare VAR_STARTER_MON, 3
 	goto_if_eq SawgrassForest_KowtowEncounter_8
 	return
 
 SawgrassForest_KowtowEncounter_2:
-# 278 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 280 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_0
 	goto SawgrassForest_KowtowEncounter_1
 
 SawgrassForest_KowtowEncounter_5:
-# 363 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 370 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto SawgrassVillage_RawScript_Start2v2_Panpour
 	return
 
 SawgrassForest_KowtowEncounter_6:
-# 366 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 373 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto SawgrassVillage_RawScript_Start2v2_Pansear
 	return
 
 SawgrassForest_KowtowEncounter_7:
-# 369 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 376 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto SawgrassVillage_RawScript_Start2v2_Pansage
 	return
 
 SawgrassForest_KowtowEncounter_8:
-# 372 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 379 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto SawgrassVillage_RawScript_Start2v2_Innape
 	return
 
 
-# 379 "data/maps/ZED_SawgrassForest/scripts.pory"
-
-# 380 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_RawScript_Start2v2_Pansage::
-# 381 "data/maps/ZED_SawgrassForest/scripts.pory"
-    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANSAGE_01
-# 382 "data/maps/ZED_SawgrassForest/scripts.pory"
-    goto(SawgrassVillage_RawScript_AfterMultiDirect)
-# 383 "data/maps/ZED_SawgrassForest/scripts.pory"
-
-# 384 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_RawScript_Start2v2_Pansear::
-# 385 "data/maps/ZED_SawgrassForest/scripts.pory"
-    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANSEAR_01
 # 386 "data/maps/ZED_SawgrassForest/scripts.pory"
-    goto(SawgrassVillage_RawScript_AfterMultiDirect)
+
 # 387 "data/maps/ZED_SawgrassForest/scripts.pory"
-
+SawgrassVillage_RawScript_Start2v2_Pansage::
 # 388 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_RawScript_Start2v2_Panpour::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANSAGE_01
 # 389 "data/maps/ZED_SawgrassForest/scripts.pory"
-    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANPOUR_01
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
 # 390 "data/maps/ZED_SawgrassForest/scripts.pory"
-    goto(SawgrassVillage_RawScript_AfterMultiDirect)
+
 # 391 "data/maps/ZED_SawgrassForest/scripts.pory"
-
+SawgrassVillage_RawScript_Start2v2_Pansear::
 # 392 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_RawScript_Start2v2_Innape::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANSEAR_01
 # 393 "data/maps/ZED_SawgrassForest/scripts.pory"
-    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_INNAPE_01
-# 394 "data/maps/ZED_SawgrassForest/scripts.pory"
     goto(SawgrassVillage_RawScript_AfterMultiDirect)
+# 394 "data/maps/ZED_SawgrassForest/scripts.pory"
+
 # 395 "data/maps/ZED_SawgrassForest/scripts.pory"
-
+SawgrassVillage_RawScript_Start2v2_Panpour::
 # 396 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_RawScript_AfterMultiDirect::
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_PANPOUR_01
 # 397 "data/maps/ZED_SawgrassForest/scripts.pory"
-    switch VAR_RESULT
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
 # 398 "data/maps/ZED_SawgrassForest/scripts.pory"
-	case 1, Sawgrass_Kowtow_AfterBattle
+
 # 399 "data/maps/ZED_SawgrassForest/scripts.pory"
-	goto Sawgrass_Kowtow_Whiteout
+SawgrassVillage_RawScript_Start2v2_Innape::
 # 400 "data/maps/ZED_SawgrassForest/scripts.pory"
-
+    multi_2_vs_2 TRAINER_GRUNT_AQUA_HIDEOUT_1, SawgrassVillage_Grunt1_Loss, TRAINER_GRUNT_AQUA_HIDEOUT_2, SawgrassVillage_Grunt2_Loss, PARTNER_JORDAN_INNAPE_01
 # 401 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_Grunt1_Loss:
+    goto(SawgrassVillage_RawScript_AfterMultiDirect)
 # 402 "data/maps/ZED_SawgrassForest/scripts.pory"
-    .string "Awh, no way!$"
-# 403 "data/maps/ZED_SawgrassForest/scripts.pory"
 
+# 403 "data/maps/ZED_SawgrassForest/scripts.pory"
+SawgrassVillage_RawScript_AfterMultiDirect::
 # 404 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassVillage_Grunt2_Loss:
+    switch VAR_RESULT
 # 405 "data/maps/ZED_SawgrassForest/scripts.pory"
+	case 1, Sawgrass_Kowtow_AfterBattle
+# 406 "data/maps/ZED_SawgrassForest/scripts.pory"
+	goto Sawgrass_Kowtow_Whiteout
+# 407 "data/maps/ZED_SawgrassForest/scripts.pory"
+
+# 408 "data/maps/ZED_SawgrassForest/scripts.pory"
+SawgrassVillage_Grunt1_Loss:
+# 409 "data/maps/ZED_SawgrassForest/scripts.pory"
+    .string "Awh, no way!$"
+# 410 "data/maps/ZED_SawgrassForest/scripts.pory"
+
+# 411 "data/maps/ZED_SawgrassForest/scripts.pory"
+SawgrassVillage_Grunt2_Loss:
+# 412 "data/maps/ZED_SawgrassForest/scripts.pory"
     .string "This ain't good!$"
 
 Sawgrass_Kowtow_Whiteout::
-# 409 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 416 "data/maps/ZED_SawgrassForest/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
-# 410 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 417 "data/maps/ZED_SawgrassForest/scripts.pory"
 	special SetCB2WhiteOut
 	return
 
 
 Sawgrass_Kowtow_AfterBattle::
-# 414 "data/maps/ZED_SawgrassForest/scripts.pory"
-	lock
-# 415 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_KowtowEncounter_Text_1
-# 416 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox Sawgrass_Kowtow_AfterBattle_Text_0
-# 417 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
-# 420 "data/maps/ZED_SawgrassForest/scripts.pory"
-	playse SE_M_DOUBLE_TEAM
 # 421 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	lock
 # 422 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_KOWTOW
+	setspeaker SawgrassForest_KowtowEncounter_Text_1
 # 423 "data/maps/ZED_SawgrassForest/scripts.pory"
-	removeobject SAWGRASS_KOWTOW_01
+	msgbox Sawgrass_Kowtow_AfterBattle_Text_0
 # 424 "data/maps/ZED_SawgrassForest/scripts.pory"
-	removeobject SAWGRASS_KOWTOW_02
-# 425 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitse
-# 426 "data/maps/ZED_SawgrassForest/scripts.pory"
-	delay 120
-# 427 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 429 "data/maps/ZED_SawgrassForest/scripts.pory"
-	call SawgrassForest_KowtowScene_FollowPlayerFace
-# 431 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
-# 432 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox Sawgrass_Kowtow_AfterBattle_Text_1
-# 435 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmessage
+# 427 "data/maps/ZED_SawgrassForest/scripts.pory"
+	playse SE_M_DOUBLE_TEAM
+# 428 "data/maps/ZED_SawgrassForest/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 429 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_KOWTOW
+# 430 "data/maps/ZED_SawgrassForest/scripts.pory"
+	removeobject SAWGRASS_KOWTOW_01
+# 431 "data/maps/ZED_SawgrassForest/scripts.pory"
+	removeobject SAWGRASS_KOWTOW_02
+# 432 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitse
+# 433 "data/maps/ZED_SawgrassForest/scripts.pory"
+	delay 120
+# 434 "data/maps/ZED_SawgrassForest/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 436 "data/maps/ZED_SawgrassForest/scripts.pory"
+	call SawgrassForest_KowtowScene_FollowPlayerFace
 # 438 "data/maps/ZED_SawgrassForest/scripts.pory"
-	goto_if_set FLAG_SAWGRASSFOREST_KOWTOWPOSITION, Sawgrass_Kowtow_AfterBattle_2
+	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
+# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox Sawgrass_Kowtow_AfterBattle_Text_1
+# 442 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
 # 445 "data/maps/ZED_SawgrassForest/scripts.pory"
+	goto_if_set FLAG_SAWGRASSFOREST_KOWTOWPOSITION, Sawgrass_Kowtow_AfterBattle_2
+# 452 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement SAWGRASS_MUGGED_WOMAN, SawgrassForest_KowtowEncounter_Movement_5
-# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 453 "data/maps/ZED_SawgrassForest/scripts.pory"
 	delay 30
-# 447 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 454 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Sawgrass_Kowtow_AfterBattle_Movement_1
-# 448 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 455 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Sawgrass_Kowtow_AfterBattle_Movement_1
 Sawgrass_Kowtow_AfterBattle_1:
-# 450 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmovement
-# 451 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker Sawgrass_Kowtow_AfterBattle_Text_2
-# 452 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox Sawgrass_Kowtow_AfterBattle_Text_3
 # 457 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
+	waitmovement
 # 458 "data/maps/ZED_SawgrassForest/scripts.pory"
-	giveitem ITEM_EXP_SHARE, 1
-# 459 "data/maps/ZED_SawgrassForest/scripts.pory"
 	setspeaker Sawgrass_Kowtow_AfterBattle_Text_2
-# 460 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox Sawgrass_Kowtow_AfterBattle_Text_4
+# 459 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox Sawgrass_Kowtow_AfterBattle_Text_3
+# 464 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
 # 465 "data/maps/ZED_SawgrassForest/scripts.pory"
-	waitmessage
+	giveitem ITEM_EXP_SHARE, 1
 # 466 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	setspeaker Sawgrass_Kowtow_AfterBattle_Text_2
 # 467 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
-# 468 "data/maps/ZED_SawgrassForest/scripts.pory"
-	removeobject SAWGRASS_MUGGED_WOMAN
-# 469 "data/maps/ZED_SawgrassForest/scripts.pory"
-	delay 120
-# 470 "data/maps/ZED_SawgrassForest/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	msgbox Sawgrass_Kowtow_AfterBattle_Text_4
 # 472 "data/maps/ZED_SawgrassForest/scripts.pory"
-	call SawgrassForest_KowtowScene_FollowPlayerFace
-# 474 "data/maps/ZED_SawgrassForest/scripts.pory"
-	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
-# 475 "data/maps/ZED_SawgrassForest/scripts.pory"
-	msgbox Sawgrass_Kowtow_AfterBattle_Text_5
-# 503 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmessage
-# 504 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 473 "data/maps/ZED_SawgrassForest/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 474 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
+# 475 "data/maps/ZED_SawgrassForest/scripts.pory"
+	removeobject SAWGRASS_MUGGED_WOMAN
+# 476 "data/maps/ZED_SawgrassForest/scripts.pory"
+	delay 120
+# 477 "data/maps/ZED_SawgrassForest/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 479 "data/maps/ZED_SawgrassForest/scripts.pory"
+	call SawgrassForest_KowtowScene_FollowPlayerFace
+# 481 "data/maps/ZED_SawgrassForest/scripts.pory"
+	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
+# 482 "data/maps/ZED_SawgrassForest/scripts.pory"
+	msgbox Sawgrass_Kowtow_AfterBattle_Text_5
+# 510 "data/maps/ZED_SawgrassForest/scripts.pory"
+	waitmessage
+# 511 "data/maps/ZED_SawgrassForest/scripts.pory"
 	release
 	end
 
 Sawgrass_Kowtow_AfterBattle_2:
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement SAWGRASS_MUGGED_WOMAN, Sawgrass_Kowtow_AfterBattle_Movement_0
-# 440 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 447 "data/maps/ZED_SawgrassForest/scripts.pory"
 	delay 30
-# 441 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 448 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, Sawgrass_Kowtow_AfterBattle_Movement_1
-# 442 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 449 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Sawgrass_Kowtow_AfterBattle_Movement_1
 	goto Sawgrass_Kowtow_AfterBattle_1
 
 
 SawgrassForest_KowtowScene_FollowPlayerFace::
-# 509 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 516 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto_if_set FLAG_SAWGRASSFOREST_KOWTOWPOSITION, SawgrassForest_KowtowScene_FollowPlayerFace_1
-# 514 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 521 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_7
-# 515 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 522 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_KowtowEncounter_Movement_6
 	return
 
 SawgrassForest_KowtowScene_FollowPlayerFace_1:
-# 510 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 517 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_6
-# 511 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 518 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_KowtowEncounter_Movement_7
 	return
 
@@ -640,101 +654,101 @@ SawgrassForest_JordanLeave_Movement_0:
 	walk_down
 	step_end
 
-# 278 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 280 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_0:
-# 278 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 280 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_up
-# 278 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 280 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_left
 	step_end
 
-# 281 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 283 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_1:
-# 281 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 283 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_down
-# 281 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 283 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_left
 	step_end
 
-# 290 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 292 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_2:
-# 290 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 292 "data/maps/ZED_SawgrassForest/scripts.pory"
 	emote_exclamation_mark
-# 290 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 292 "data/maps/ZED_SawgrassForest/scripts.pory"
 	face_down
 	step_end
 
-# 291 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 293 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_3:
-# 291 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 293 "data/maps/ZED_SawgrassForest/scripts.pory"
 	emote_exclamation_mark
-# 291 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 293 "data/maps/ZED_SawgrassForest/scripts.pory"
 	face_right
 	step_end
 
-# 294 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 298 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_4:
-# 295 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_down
-# 295 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_right
-# 295 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_down
-# 295 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_right
-# 295 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_right
-	step_end
-
 # 299 "data/maps/ZED_SawgrassForest/scripts.pory"
-SawgrassForest_KowtowEncounter_Movement_5:
-# 300 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_down
-# 300 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 299 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_right
+# 299 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_down
-# 300 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 299 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_right
-# 300 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_right
-# 300 "data/maps/ZED_SawgrassForest/scripts.pory"
-	walk_right
-# 300 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 299 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_right
 	step_end
 
-# 313 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 303 "data/maps/ZED_SawgrassForest/scripts.pory"
+SawgrassForest_KowtowEncounter_Movement_5:
+# 304 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_down
+# 304 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_down
+# 304 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_right
+# 304 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_right
+# 304 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_right
+# 304 "data/maps/ZED_SawgrassForest/scripts.pory"
+	walk_right
+	step_end
+
+# 317 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_6:
-# 313 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 317 "data/maps/ZED_SawgrassForest/scripts.pory"
 	face_down
 	step_end
 
-# 314 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 318 "data/maps/ZED_SawgrassForest/scripts.pory"
 SawgrassForest_KowtowEncounter_Movement_7:
-# 314 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 318 "data/maps/ZED_SawgrassForest/scripts.pory"
 	face_up
 	step_end
 
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 Sawgrass_Kowtow_AfterBattle_Movement_0:
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_down
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_down
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_down
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_right
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_right
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_right
-# 439 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 446 "data/maps/ZED_SawgrassForest/scripts.pory"
 	walk_right
 	step_end
 
-# 441 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 448 "data/maps/ZED_SawgrassForest/scripts.pory"
 Sawgrass_Kowtow_AfterBattle_Movement_1:
-# 441 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 448 "data/maps/ZED_SawgrassForest/scripts.pory"
 	face_left
 	step_end
 
@@ -861,80 +875,80 @@ SawgrassForest_EventScript_Trainer05_Text_2:
 	.string "I got you pretty good huh?$"
 
 SawgrassForest_KowtowEncounter_Text_0:
-# 287 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 289 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "What's going on here!$"
 
 SawgrassForest_KowtowEncounter_Text_1:
-# 305 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 309 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Kowtow Grnt 1$"
 
 SawgrassForest_KowtowEncounter_Text_2:
-# 307 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 311 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "What are you doing here! I guess that\n"
 	.string "guy we paid to block the entrance\l"
 	.string "tucked tail.$"
 
 SawgrassForest_KowtowEncounter_Text_3:
-# 318 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 322 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "I guess we'll just have to take them\n"
 	.string "down ourselves, the boss don't got to\l"
 	.string "know we messed up a little bit!$"
 
 SawgrassForest_KowtowEncounter_Text_4:
-# 324 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 328 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Kowtow Grnt 2$"
 
 SawgrassForest_KowtowEncounter_Text_5:
-# 326 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 330 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Sure, sure, until his {COLOR RED}Kingambit{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares\n"
 	.string "us down for so long that we break into\l"
 	.string "a sweat!$"
 
 SawgrassForest_KowtowEncounter_Text_6:
-# 333 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 337 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "The two continue to bicker for some\n"
 	.string "time.$"
 
 SawgrassForest_KowtowEncounter_Text_7:
-# 341 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 345 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Sheesh, the trash might take itself out\n"
 	.string "if they keep arguing.$"
 
 SawgrassForest_KowtowEncounter_Text_8:
-# 348 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 352 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Quit being a...$"
 
 SawgrassForest_KowtowEncounter_Text_9:
-# 357 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 364 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Who are you calling trash!$"
 
 Sawgrass_Kowtow_AfterBattle_Text_0:
-# 416 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 423 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "No good, use the smokescreen!$"
 
 Sawgrass_Kowtow_AfterBattle_Text_1:
-# 433 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 440 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "They got away!$"
 
 Sawgrass_Kowtow_AfterBattle_Text_2:
-# 451 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 458 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Woman$"
 
 Sawgrass_Kowtow_AfterBattle_Text_3:
-# 452 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 459 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Thank you for dealing with them!\n"
 	.string "They did take my money, but I was\l"
 	.string "worried for my life!\p"
 	.string "Here, have this! I insist!$"
 
 Sawgrass_Kowtow_AfterBattle_Text_4:
-# 460 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 467 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "I was going to train my Pokemon with\n"
 	.string "that, but I think I'm going to take some\l"
 	.string "time to relax. Keep it!$"
 
 Sawgrass_Kowtow_AfterBattle_Text_5:
-# 476 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 483 "data/maps/ZED_SawgrassForest/scripts.pory"
 	.string "Argh! I can't believe we let those\n"
 	.string "{COLOR RED}Team Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} members get away!\p"
 	.string "They're a gang of criminals, and they\n"

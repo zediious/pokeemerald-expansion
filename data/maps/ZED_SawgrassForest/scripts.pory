@@ -272,7 +272,9 @@ script SawgrassForest_KowtowEncounter {
     setvar(VAR_KOWTOW_ENCOUNTERS, 1)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(emote_exclamation_mark))
+    playse(SE_PIN)
     waitmovement
+    waitse
 
     if (flag(FLAG_SAWGRASSFOREST_KOWTOWPOSITION)) {
         applymovement(OBJ_EVENT_ID_NPC_FOLLOWER , moves(walk_up, walk_left))
@@ -289,7 +291,9 @@ script SawgrassForest_KowtowEncounter {
 
     applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_down))
     applymovement(SAWGRASS_KOWTOW_02, moves(emote_exclamation_mark, face_right))
+    playse(SE_PIN)
     waitmovement
+    waitse
     delay(60)
     applymovement(SAWGRASS_KOWTOW_01, moves(
         walk_down, walk_right, walk_down, walk_right * 2
@@ -351,6 +355,9 @@ script SawgrassForest_KowtowEncounter {
 
     applymovement(SAWGRASS_KOWTOW_01, moves(emote_exclamation_mark, face_right))
     applymovement(SAWGRASS_KOWTOW_02, moves(emote_exclamation_mark, face_right))
+    playse(SE_PIN)
+    waitmovement
+    waitse
 
     setspeaker("Kowtow Grnt 1")
     msgbox(
