@@ -489,8 +489,12 @@ script Sawgrass_Kowtow_AfterBattle {
 
         ...
         
-        What? I waas going to get you one!
+        What? I was going to get you one!
         Honest!
+
+        Don't forget to turn it on though!
+        Just open up your bag, find it in
+        your {COLOR RED}Key Items pocket, and activate it!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
         
         Anyways, we should press on, and get to
         {COLOR RED}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want

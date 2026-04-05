@@ -583,9 +583,9 @@ Sawgrass_Kowtow_AfterBattle_1:
 	setspeaker SawgrassForest_MapScript_OnFrameMakeJordanFollower_Text_0
 # 475 "data/maps/ZED_SawgrassForest/scripts.pory"
 	msgbox Sawgrass_Kowtow_AfterBattle_Text_5
-# 499 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 503 "data/maps/ZED_SawgrassForest/scripts.pory"
 	waitmessage
-# 500 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 504 "data/maps/ZED_SawgrassForest/scripts.pory"
 	release
 	end
 
@@ -602,18 +602,18 @@ Sawgrass_Kowtow_AfterBattle_2:
 
 
 SawgrassForest_KowtowScene_FollowPlayerFace::
-# 505 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 509 "data/maps/ZED_SawgrassForest/scripts.pory"
 	goto_if_set FLAG_SAWGRASSFOREST_KOWTOWPOSITION, SawgrassForest_KowtowScene_FollowPlayerFace_1
-# 510 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 514 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_7
-# 511 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 515 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_KowtowEncounter_Movement_6
 	return
 
 SawgrassForest_KowtowScene_FollowPlayerFace_1:
-# 506 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 510 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, SawgrassForest_KowtowEncounter_Movement_6
-# 507 "data/maps/ZED_SawgrassForest/scripts.pory"
+# 511 "data/maps/ZED_SawgrassForest/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, SawgrassForest_KowtowEncounter_Movement_7
 	return
 
@@ -947,8 +947,11 @@ Sawgrass_Kowtow_AfterBattle_Text_5:
 	.string "will definitely be useful! Lucky for\l"
 	.string "me, I already have one!\p"
 	.string "...\p"
-	.string "What? I waas going to get you one!\n"
+	.string "What? I was going to get you one!\n"
 	.string "Honest!\p"
+	.string "Don't forget to turn it on though!\n"
+	.string "Just open up your bag, find it in\l"
+	.string "your {COLOR RED}Key Items pocket, and activate it!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
 	.string "Anyways, we should press on, and get to\n"
 	.string "{COLOR RED}Route 110{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} soon! I don't think I want\l"
 	.string "to come back to this place.$"
