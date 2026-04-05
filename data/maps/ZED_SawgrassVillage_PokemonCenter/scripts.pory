@@ -8,29 +8,6 @@ script Sawgrass_PokemonCenter_OnTransition {
     end
 }
 
-// script TEMPLATE_RandomHealer {
-//     lock
-//     faceplayer
-//     msgbox(
-//         "Hello, I can restore your tired
-//         Pokémon to full health.
-        
-//         Would you like to rest your Pokémon?"
-//     , MSGBOX_YESNO)
-//     if (var(VAR_RESULT) == YES) {
-//         incrementgamestat(GAME_STAT_USED_POKECENTER)
-//         special(HealPlayerParty)
-//         msgbox(
-//             "All done. Keep safe!"
-//         )
-//     }
-//     else {
-//         msgbox("Keep safe!")
-//     }
-//     release
-//     end
-// }
-
 script SawgrassVillage_Pokecenter_Nurse {
     setvar(VAR_0x800B, 1)
     call(Common_EventScript_PkmnCenterNurse)
@@ -48,4 +25,44 @@ script SawgrassVillage_HealerChansey {
     waitmessage
     closemessage
     release
+}
+
+//// NPCs
+
+// Kid by bookshelf
+script SawgrassPokemonCenter_BookshelfKid {
+    lock
+    faceplayer
+    setspeaker("Kid")
+    msgbox("They always have new books here!
+            Pokemon Centers are the best!")
+    waitmessage
+    release
+    end
+}
+
+// Girl at right table
+script SawgrassPokemonCenter_TableGirl {
+    lock
+    faceplayer
+    setspeaker("Girl")
+    msgbox("If you use that PC over there, you
+            can store your Pokemon on a virtual
+            network! Technology is crazy!")
+    waitmessage
+    release
+    end
+}
+
+// Dude on chair
+script SawgrassPokemonCenter_ChairDude{
+    lock
+    faceplayer
+    setspeaker("Tired Man")
+    msgbox("whew! I spent all day walking. I'm glad
+            the Pokemon Centers let you relax for
+            as long as you need!")
+    waitmessage
+    release
+    end
 }

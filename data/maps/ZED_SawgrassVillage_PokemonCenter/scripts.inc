@@ -13,37 +13,114 @@ Sawgrass_PokemonCenter_OnTransition::
 
 
 SawgrassVillage_Pokecenter_Nurse::
-# 35 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 12 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	setvar VAR_0x800B, 1
-# 36 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 13 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	call Common_EventScript_PkmnCenterNurse
-# 37 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 14 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	waitmessage
-# 38 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 15 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	waitbuttonpress
-# 39 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 16 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	release
 	end
 
 
 SawgrassVillage_HealerChansey::
-# 44 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 21 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	lock
-# 45 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 22 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
-# 46 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 23 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	msgbox SawgrassVillage_HealerChansey_Text_0
-# 47 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 24 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	waitmoncry
-# 48 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 25 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	waitmessage
-# 49 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 26 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	closemessage
-# 50 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+# 27 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	release
 	return
 
 
-SawgrassVillage_HealerChansey_Text_0:
+SawgrassPokemonCenter_BookshelfKid::
+# 34 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	lock
+# 35 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	faceplayer
+# 36 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	setspeaker SawgrassPokemonCenter_BookshelfKid_Text_0
+# 37 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	msgbox SawgrassPokemonCenter_BookshelfKid_Text_1
+# 39 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 40 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	release
+	end
+
+
+SawgrassPokemonCenter_TableGirl::
 # 46 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	lock
+# 47 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	faceplayer
+# 48 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	setspeaker SawgrassPokemonCenter_TableGirl_Text_0
+# 49 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	msgbox SawgrassPokemonCenter_TableGirl_Text_1
+# 52 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 53 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	release
+	end
+
+
+SawgrassPokemonCenter_ChairDude::
+# 59 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	lock
+# 60 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	faceplayer
+# 61 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	setspeaker SawgrassPokemonCenter_ChairDude_Text_0
+# 62 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	msgbox SawgrassPokemonCenter_ChairDude_Text_1
+# 65 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 66 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	release
+	end
+
+
+SawgrassVillage_HealerChansey_Text_0:
+# 23 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
 	.string "Chans-eee$"
+
+SawgrassPokemonCenter_BookshelfKid_Text_0:
+# 36 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "Kid$"
+
+SawgrassPokemonCenter_BookshelfKid_Text_1:
+# 37 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "They always have new books here!\n"
+	.string "Pokemon Centers are the best!$"
+
+SawgrassPokemonCenter_TableGirl_Text_0:
+# 48 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "Girl$"
+
+SawgrassPokemonCenter_TableGirl_Text_1:
+# 49 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "If you use that PC over there, you\n"
+	.string "can store your Pokemon on a virtual\l"
+	.string "network! Technology is crazy!$"
+
+SawgrassPokemonCenter_ChairDude_Text_0:
+# 61 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "Tired Man$"
+
+SawgrassPokemonCenter_ChairDude_Text_1:
+# 62 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "whew! I spent all day walking. I'm glad\n"
+	.string "the Pokemon Centers let you relax for\l"
+	.string "as long as you need!$"
