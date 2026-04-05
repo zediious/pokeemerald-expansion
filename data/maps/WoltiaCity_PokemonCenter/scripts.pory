@@ -64,6 +64,7 @@ script WoltiaPokemonCenter_BookshelfManiac{
 // Lass at table who gives a Quick Claw
 script WoltiaPokemonCenter_TableLass{
     lock
+    faceplayer
     setspeaker("Lass")
     if (!flag(FLAG_WOLTIA_LASS_QUICKCLAW)) {
         msgbox("Think fast!")
