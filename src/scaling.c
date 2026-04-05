@@ -24,52 +24,62 @@ static struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, st
 static struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil);
 
-struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledParty, bool32 evolveExcluded, bool32 alwaysCeiling)
+struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledParty, bool32 evolveExcluded, bool32 alwaysCeiling) // Scale a party of mons
 {
-     // Get player's highest level mon
-    u8 levelCeil = 0;
-    for (u32 i = 0; i < PARTY_SIZE; i++)
-    {
-        u8 monLevel = (u8) GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
-        if (levelCeil < monLevel) {levelCeil = monLevel;}
-    }
+    // Get player's highest level mon
+    u8 levelCeil = GetPlayerLevelCeiling();
 
     // Don't scale if no player mon is at least level 10
     if (levelCeil >= 10)
     {
         for (u32 e = 0; e < partySize; e++) 
         {   
-            u8 compareLevel;
-            if (partySize == 1 || alwaysCeiling) // If the trainer has only one Pokemon or alwaysCeiling passed TRUE, set compare to levelCeil
-            {
-                compareLevel = levelCeil;
-            }
-            else // If not, set compare to ((levelCeil - 1) - [1-3])
-            {
-                compareLevel = ((levelCeil - 1) - (Random() % 3));
-            } 
-
-            // Don't set if calced level is lower than set level
-            if (scaledParty[e].lvl < compareLevel) {
-                scaledParty[e].lvl = compareLevel;
-
-                // Don't evolve if evolveExcluded was passed TRUE
-                if (evolveExcluded) {continue;}
-
-                // Don't evolve if Pokemon has a held Everstone or Eviolite
-                if (scaledParty[e].heldItem == ITEM_EVIOLITE || scaledParty[e].heldItem == ITEM_EVERSTONE) {continue;}
-
-                const struct Evolution *evolutions = GetSpeciesEvolutions(scaledParty[e].species);
-                u8 evolutionCount = GetSpeciesEvolutionCount(scaledParty[e].species);
-                if (evolutions == NULL) {continue;}
-                
-                // Evolve the Pokemon if applicable
-                scaledParty[e] = EvolveTrainerMon(evolutions, scaledParty[e], levelCeil, evolutionCount);
-            }
+            scaledParty[e] = ScaleTrainerMon(scaledParty[e], evolveExcluded, alwaysCeiling, levelCeil);
         }
     }
 
     return scaledParty;
+}
+
+struct TrainerMon *ScaleTrainerMon(struct TrainerMon *scaledMon, bool32 evolveExcluded, bool32 alwaysCeiling, u8 levelCeil) // Scale a single mon
+{   
+    // Get player's highest level mon only if not passed > 0
+    if (levelCeil != 0)
+    {
+        u8 levelCeil = GetPlayerLevelCeiling();
+    }
+    
+    // Don't scale if no player mon is at least level 10
+    if (levelCeil >= 10)
+    {
+        u8 compareLevel;
+        if (alwaysCeiling) // If alwaysCeiling passed TRUE, set compare to levelCeil
+        {
+            compareLevel = levelCeil;
+        }
+        else // If not, set compare to ((levelCeil - 1) - [1-3])
+        {
+            compareLevel = ((levelCeil - 1) - (Random() % 3));
+        } 
+
+        // Don't set if calced level is lower than set level
+        if (scaledMon.lvl < compareLevel) {
+            scaledMon.lvl = compareLevel;
+
+            // Don't evolve if evolveExcluded was passed TRUE
+            if (evolveExcluded) {continue;}
+
+            // Don't evolve if Pokemon has a held Everstone or Eviolite
+            if (scaledMon.heldItem == ITEM_EVIOLITE || scaledMon.heldItem == ITEM_EVERSTONE) {continue;}
+
+            const struct Evolution *evolutions = GetSpeciesEvolutions(scaledMon.species);
+            u8 evolutionCount = GetSpeciesEvolutionCount(scaledMon.species);
+            if (evolutions == NULL) {continue;}
+            
+            // Evolve the Pokemon if applicable
+            scaledMon = EvolveTrainerMon(evolutions, scaledMon, levelCeil, evolutionCount);
+        }
+    }
 }
 
 struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount)
@@ -297,4 +307,18 @@ struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, con
 
     // There were no evolutions
     return trainerMon;
+}
+
+u8 GetPlayerLevelCeiling()
+{
+    u8 levelCeil = 0;
+    for (u32 i = 0; i < PARTY_SIZE; i++)
+    {
+        u8 monLevel = (u8) GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        if (levelCeil < monLevel)
+        {
+            levelCeil = monLevel;
+        }
+    }
+    return levelCeil;
 }
