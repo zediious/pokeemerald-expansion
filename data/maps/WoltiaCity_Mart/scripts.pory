@@ -24,3 +24,85 @@ mart WoltiaCity_MartItems {
     ITEM_REPEL
     ITEM_SUPER_REPEL
 }
+
+//// NPCs
+
+// Vending machine scientist
+script WoltiaMart_VendingScientist
+{
+    lock
+    faceplayer
+    setspeaker("Scientist")
+    msgbox("Ah hello! I hope you've been enjoying
+            our Mint Vending Machines!")
+    waitmessage
+    setspeaker("Scientist")
+    if (!flag(FLAG_MINT_VENDING_USED))
+    {
+        msgbox("...
+        
+                What! You have not tried using one?
+                A travesty for a trainer such as
+                yourself! Your Pokemon can perform
+                much better, if you give them the
+                right mint!
+                
+                Go on, use that vending machine there!")
+    }
+    else
+    {
+        msgbox("Be sure to check our stock often! You'll
+                find higher-quality mints, the higher
+                quality of a trainer you are!")
+    }
+    waitmessage
+    release
+    end
+}
+
+// Fisherman near entrance who wishes Mart sold bait
+script WoltiaMart_LamentingFisherman{
+    lock
+    faceplayer
+    setspeaker("Fisherman")
+    msgbox("The marts don't sell fishing bait, no
+            matter how esteemed you are!
+            
+            ...
+            
+            You don't need bait to fish? Nonsense!")
+    waitmessage
+    release
+    end
+}
+
+// Hiker who gives Avalanche TM
+script WoltiaMart_ColdHiker{
+    lock
+    faceplayer
+    setspeaker("Cold Hiker")
+    if (!flag(FLAG_WOLTIA_HIKER_AVALANCE)){
+        msgbox("Brr!! It's been a whole day since I left
+                the {COLOR RED}Mjor Tundra{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but I still
+                can't stop shivering!
+                
+                I'm going to sneeze! Aaa-CHOO!")
+        waitmessage
+        setspeaker("")
+        msgbox("Something flew out of the hiker's
+                backpack, and landed in your hands!")
+        waitmessage
+        giveitem(ITEM_TM_AVALANCHE, 1)
+        setflag(FLAG_WOLTIA_HIKER_AVALANCE)
+        waitmessage
+        setspeaker("Cold Hiker")
+        msgbox("Oh, did that fall off my backpack? You
+                can have it, much too cold for me!")
+    } else {
+        msgbox("Aaa-CHO! I can't stop! I guess I need
+                to go further south...")
+    }
+    waitmessage
+    release
+    end
+}
