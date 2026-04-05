@@ -379,7 +379,7 @@
       "x": 2,
       "y": 27,
       "elevation": 0,
-      "item": "ITEM_SUPER_REPEL",
+      "item": "ITEM_CALCIUM",
       "flag": "FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL"
     }
   ]
