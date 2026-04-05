@@ -279,6 +279,7 @@ script WoltiaBattleHall_TournamentPlayerWon {
         waitmessage
         setvar(VAR_ZED_STORY_TRACKER, 18)
         addobject(WOLTIA_AERODROME_BLOCKER)
+        setflag(FLAG_GERBON_RUVELMOMKID)
         delay(30)
         setflag(FLAG_ANGRY_KROKOROK_01)
         warp(MAP_VULIAS_WOLTIA_CITY, 11, 15)

@@ -736,7 +736,7 @@
 #define FLAG_MTNTUNNEL_DIGTM                    0x2A9 // Dig TM item in Mountain Tunnel
 #define FLAG_IGRISDESERT_PASSED                 0x2AA // Used to raise level cap between Ribbon/Gym 2 and 3
 #define FLAG_OLDMANJOURNAL_EARLY                0x2AB // If the player found Old Man's journal before starting the quest
-#define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
+#define FLAG_GERBON_RUVELMOMKID                 0x2AC // The mom and lost child from Ruvel Pyrami, in Gerbon town before/after event
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
 #define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
 #define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag

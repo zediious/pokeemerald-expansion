@@ -850,6 +850,7 @@ script IgrisDesert_FoundChildWarpedOutside {
     waitmovement
     destroyfollowernpc
     clearflag(FLAG_PALENTOPOKECENTER_JORDAN01)
+    clearflag(FLAG_GERBON_RUVELMOMKID)
     delay(30)
     setvar(VAR_ZED_STORY_TRACKER, 24)
     removeobject(IGRIS_JORDAN_AFTERKIDSAVED)

@@ -1143,64 +1143,66 @@ IgrisDesert_FoundChildWarpedOutside::
 # 852 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
 # 853 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	delay 30
+	clearflag FLAG_GERBON_RUVELMOMKID
 # 854 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 24
+	delay 30
 # 855 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	removeobject IGRIS_JORDAN_AFTERKIDSAVED
+	setvar VAR_ZED_STORY_TRACKER, 24
 # 856 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	completequest 2
+	removeobject IGRIS_JORDAN_AFTERKIDSAVED
 # 857 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	completequest 2
+# 858 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	release
 	end
 
 
 IgrisDesert_EventScript_Trainer01::
-# 863 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 864 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_FLINT, IgrisDesert_EventScript_Trainer01_Text_0, IgrisDesert_EventScript_Trainer01_Text_1
-# 868 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
 # 869 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_Trainer01_Text_2, MSGBOX_AUTOCLOSE
+# 870 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer02::
-# 874 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 875 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_JONAH, IgrisDesert_EventScript_Trainer02_Text_0, IgrisDesert_EventScript_Trainer02_Text_1
-# 880 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 881 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer02_Text_2, MSGBOX_AUTOCLOSE
-# 882 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 883 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer03::
-# 888 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 889 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_MARLENE, IgrisDesert_EventScript_Trainer03_Text_0, IgrisDesert_EventScript_Trainer03_Text_1
-# 893 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 894 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer03_Text_2, MSGBOX_AUTOCLOSE
-# 895 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 896 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer04::
-# 900 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 901 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_ALVARO, IgrisDesert_EventScript_Trainer04_Text_0, IgrisDesert_EventScript_Trainer04_Text_1
-# 905 "data/maps/Vulias_Igris_Desert/scripts.pory"
-	msgbox IgrisDesert_EventScript_Trainer04_Text_2, MSGBOX_AUTOCLOSE
 # 906 "data/maps/Vulias_Igris_Desert/scripts.pory"
+	msgbox IgrisDesert_EventScript_Trainer04_Text_2, MSGBOX_AUTOCLOSE
+# 907 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
 
 IgrisDesert_EventScript_Trainer05::
-# 912 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 913 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	trainerbattle_single TRAINER_HEIDI, IgrisDesert_EventScript_Trainer05_Text_0, IgrisDesert_EventScript_Trainer05_Text_1
-# 918 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 919 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	msgbox IgrisDesert_EventScript_Trainer05_Text_2, MSGBOX_AUTOCLOSE
-# 920 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 921 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	waitmessage
 	end
 
@@ -2072,66 +2074,66 @@ IgrisDesert_FoundChildWarpedOutside_Text_8:
 	.string "See you later {PLAYER}!$"
 
 IgrisDesert_EventScript_Trainer01_Text_0:
-# 865 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 866 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I can't get the sand out of my eyes!$"
 
 IgrisDesert_EventScript_Trainer01_Text_1:
-# 866 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 867 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "It's everywhere!.$"
 
 IgrisDesert_EventScript_Trainer01_Text_2:
-# 868 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 869 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "It's very irritating too!$"
 
 IgrisDesert_EventScript_Trainer02_Text_0:
-# 876 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 877 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Such a beautiful desert I could stay\n"
 	.string "here for hours!$"
 
 IgrisDesert_EventScript_Trainer02_Text_1:
-# 878 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 879 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Ah, maybe I'll go rest a bit.$"
 
 IgrisDesert_EventScript_Trainer02_Text_2:
-# 880 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 881 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Second thought, I can't take my eyes\n"
 	.string "off of this place!$"
 
 IgrisDesert_EventScript_Trainer03_Text_0:
-# 890 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 891 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I could see you coming, but not you I!$"
 
 IgrisDesert_EventScript_Trainer03_Text_1:
-# 891 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 892 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I still lost!$"
 
 IgrisDesert_EventScript_Trainer03_Text_2:
-# 893 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 894 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Maybe I'll get the next passerby. You're\n"
 	.string "too tough!$"
 
 IgrisDesert_EventScript_Trainer04_Text_0:
-# 902 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 903 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Hah! You are not prepared for this!$"
 
 IgrisDesert_EventScript_Trainer04_Text_1:
-# 903 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 904 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Hah! I was not prepared for this!$"
 
 IgrisDesert_EventScript_Trainer04_Text_2:
-# 905 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 906 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "I thought I was prepared for this...$"
 
 IgrisDesert_EventScript_Trainer05_Text_0:
-# 914 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 915 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "There's less sand in this valley-\n"
 	.string "pftttt!$"
 
 IgrisDesert_EventScript_Trainer05_Text_1:
-# 916 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 917 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "False hope...$"
 
 IgrisDesert_EventScript_Trainer05_Text_2:
-# 918 "data/maps/Vulias_Igris_Desert/scripts.pory"
+# 919 "data/maps/Vulias_Igris_Desert/scripts.pory"
 	.string "Why did I even come here? This is no\n"
 	.string "place for a picnic!$"

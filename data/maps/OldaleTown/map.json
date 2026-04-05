@@ -27,7 +27,7 @@
   "object_events": [
     {
       "local_id": "GERBON_KID_RUNNING_CRASH",
-      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 10,
       "y": 14,
       "elevation": 0,
@@ -295,6 +295,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GerbonTownTourney_JordanStartOutside",
       "flag": "FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 18,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_RuvelKid",
+      "flag": "FLAG_GERBON_RUVELMOMKID"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GerbonTown_EventScript_RuvelKidMom",
+      "flag": "FLAG_GERBON_RUVELMOMKID"
     }
   ],
   "warp_events": [

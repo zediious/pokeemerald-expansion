@@ -361,12 +361,14 @@ WoltiaBattleHall_TournamentPlayerWon::
 # 281 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	addobject WOLTIA_AERODROME_BLOCKER
 # 282 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	delay 30
+	setflag FLAG_GERBON_RUVELMOMKID
 # 283 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_ANGRY_KROKOROK_01
+	delay 30
 # 284 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+	setflag FLAG_ANGRY_KROKOROK_01
 # 285 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
+# 286 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	release
 	end
 

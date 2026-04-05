@@ -425,6 +425,51 @@ script GerbonTownTourney_JordanAfter {
 
 // Exterior NPCs
 
+// Mom and Kid from Ruvel Pyramid
+script GerbonTown_EventScript_RuvelKid {
+    lock
+    faceplayer
+    setspeaker("Child")
+    if (var(VAR_ZED_STORY_TRACKER) < 24) {
+        msgbox("I'm so excited! My mommy is going taking
+                me to visit a {COLOR RED}Pyramid!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+                
+                I hope it's not too scary!")
+    }
+    else {
+        msgbox("It's the mister from the Pyramid! Thank
+                you for saving me from that scary
+                Pokemon! My mommy doesn't want to take
+                me on vacation anymore though!")
+    }
+    waitmessage
+    release
+    end
+}
+
+script GerbonTown_EventScript_RuvelKidMom {
+    lock
+    faceplayer
+    setspeaker("Happy Mom")
+    if (var(VAR_ZED_STORY_TRACKER) < 24) {
+        msgbox("I always make sure to let me daughter
+                see the world! It's important that
+                she has a wide range of experiences!")
+    }
+    else {
+        msgbox("My daughter's savior! Thank you again!
+                I'm glad to see you are well!
+        
+                I've decided my duaghter will not leave
+                town until she has her own Pokemon! I
+                can't allow her to experience such a
+                thing again!")
+    }
+    waitmessage
+    release
+    end
+}
+
 // Triathelete house with Linoone - gives Macho Brace
 script GerbonTown_EventScript_TriathleteHouseMan {
     lock
