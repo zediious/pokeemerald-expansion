@@ -41,3 +41,44 @@ mart GerbonTown_PostRoute110__MartItems {
     ITEM_REPEL
     ITEM_SUPER_REPEL
 }
+
+//// NPCs
+
+// School kid who wants Super Potions
+script GerbonMart_SuperPotionSchoolKid{
+    lock
+    faceplayer
+    setspeaker("School Kid")
+    msgbox("I really need some {COLOR RED}Super Potions{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but
+            they won't sell me any! Just take my
+            money!")
+    if (var(VAR_ZED_STORY_TRACKER) >= 6)
+    {
+        waitmessage
+        setspeaker("School Kid")
+        msgbox("...
+        
+                What! They sell them to you! What's so
+                special about you!")
+    }
+    waitmessage
+    release
+    applymovement(GERBON_SUPERPOTION_KID, moves(face_up))
+    end
+}
+
+// Old man at right shelves
+script GerbonMart_RightShelfOldMan{
+    lock
+    faceplayer
+    setspeaker("Old Man")
+    msgbox("If you don't want to encounter
+            any Pokemon, buy a Repel!
+            
+            The Repels around here are better than
+            in other regions. Our basic Repel lasts
+            for 500 steps, and are a great value!")
+    waitmessage
+    release
+    end
+}
