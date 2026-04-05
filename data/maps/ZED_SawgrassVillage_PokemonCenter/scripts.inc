@@ -25,3 +25,25 @@ SawgrassVillage_Pokecenter_Nurse::
 	release
 	end
 
+
+SawgrassVillage_HealerChansey::
+# 44 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	lock
+# 45 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
+# 46 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	msgbox SawgrassVillage_HealerChansey_Text_0
+# 47 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	waitmoncry
+# 48 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 49 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	closemessage
+# 50 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	release
+	return
+
+
+SawgrassVillage_HealerChansey_Text_0:
+# 46 "data/maps/ZED_SawgrassVillage_PokemonCenter/scripts.pory"
+	.string "Chans-eee$"

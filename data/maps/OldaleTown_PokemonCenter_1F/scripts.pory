@@ -1,0 +1,28 @@
+mapscripts OldaleTown_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Gerbon_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script Gerbon_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_OLDALE_TOWN)
+    end
+}
+
+script Gerbon_Pokecenter_Nurse {
+    setvar(VAR_0x800B, 1)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+
+script Gerbon_HealerChansey {
+    lock
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    msgbox("Chans-eee")
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}

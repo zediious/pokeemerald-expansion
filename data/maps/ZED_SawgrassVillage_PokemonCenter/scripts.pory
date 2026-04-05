@@ -39,3 +39,13 @@ script SawgrassVillage_Pokecenter_Nurse {
     release
     end
 }
+
+script SawgrassVillage_HealerChansey {
+    lock
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    msgbox("Chans-eee")
+    waitmoncry
+    waitmessage
+    closemessage
+    release
+}
