@@ -59,7 +59,7 @@ script SawgrassPokemonCenter_ChairDude{
     lock
     faceplayer
     setspeaker("Tired Man")
-    msgbox("whew! I spent all day walking. I'm glad
+    msgbox("Whew! I spent all day walking. I'm glad
             the Pokemon Centers let you relax for
             as long as you need!")
     waitmessage
