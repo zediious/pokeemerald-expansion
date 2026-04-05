@@ -1,6 +1,6 @@
 gText_Birch_Welcome::
 	.string "... ... ...\p"
-	.string "Am I dreaming?.\p"
+	.string "Am I dreaming?\p"
 	.string "Who am I?$"
 	.string "$"
 
