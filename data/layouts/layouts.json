@@ -9763,6 +9763,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/GerbonTown_House03/border.bin",
       "blockdata_filepath": "data/layouts/GerbonTown_House03/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOLTIA_CITY_MART",
+      "name": "WoltiaCity_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/WoltiaCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/WoltiaCity_Mart/map.bin"
     }
   ]
 }

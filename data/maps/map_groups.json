@@ -1215,7 +1215,8 @@
     "WoltiaCity_BattleHall",
     "WoltiaCity_OldRuin",
     "WoltiaCity_BattleHall_PrepRoom",
-    "WoltiaCity_PokemonCenter"
+    "WoltiaCity_PokemonCenter",
+    "WoltiaCity_Mart"
   ],
   "gMapGroup_ZEDIndoorPalento": [
     "PalentoVillage_PokemonCenter"
