@@ -23,6 +23,7 @@ mart WoltiaCity_MartItems {
     ITEM_AWAKENING
     ITEM_REPEL
     ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
 }
 
 //// NPCs
