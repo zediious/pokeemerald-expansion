@@ -2434,5 +2434,8 @@ extern const u8 gText_OakThisIsListOfPokemon[];
 extern const u8 gText_Boy[];
 extern const u8 gText_Girl[];
 
+// Vending Machine Strings
+extern const u8 gText_AnyMoreVending[];
+
 
 #endif // GUARD_STRINGS_H
