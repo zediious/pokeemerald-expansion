@@ -600,6 +600,8 @@ extern const u8 gText_MoveRelearnerJam[];
 extern const u8 gText_DadsAdvice[];
 extern const u8 gText_PlayerUsedVar2[];
 extern const u8 gText_RepelEffectsLingered[];
+extern const u8 gText_RepelEffectsEnabled[];
+extern const u8 gText_RepelEffectsDisabled[];
 extern const u8 gText_LureEffectsLingered[];
 extern const u8 gText_BoxFull[];
 extern const u8 gText_WontHaveEffect[];

@@ -2271,7 +2271,7 @@ const struct ItemInfo gItemsInfo[] =
 
 // Encounter Modifiers
 
-    [ITEM_REPEL] =
+    [ITEM_REPEL] = // This item is not usable anymore
     {
         .name = ITEM_NAME("Repel"),
         .price = (I_PRICE >= GEN_7) ? 50 : 50,
@@ -2289,14 +2289,14 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Repel,
     },
 
-    [ITEM_SUPER_REPEL] =
+    [ITEM_SUPER_REPEL] = // This item is not usable anymore
     {
         .name = ITEM_NAME("Super Repel"),
         .price = (I_PRICE >= GEN_7) ? 50 : 50,
-        .holdEffectParam = 250,
+        .holdEffectParam = 200,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
-            "Pokémon for 250\n"
+            "Pokémon for 200\n"
             "steps."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_FIELD_USE,
@@ -2307,14 +2307,14 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_SuperRepel,
     },
 
-    [ITEM_MAX_REPEL] =
+    [ITEM_MAX_REPEL] = // This item is not usable anymore
     {
         .name = ITEM_NAME("Max Repel"),
         .price = (I_PRICE >= GEN_7) ? 50 : 50,
-        .holdEffectParam = 500,
+        .holdEffectParam = 250,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
-            "Pokémon for 500\n"
+            "Pokémon for 250\n"
             "steps."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_FIELD_USE,
@@ -15931,6 +15931,23 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_Journal,
         .iconPalette = gItemIconPalette_Journal,
+    },
+    [ITEM_ULTRA_REPEL] =
+    {
+        .name = ITEM_NAME("Ultra Repel"),
+        .price = 0,
+        .holdEffectParam = 250,
+        .description = COMPOUND_STRING(
+            "A special Repel\n"
+            "that never stops\n"
+            "working."),
+        .pocket = POCKET_KEY_ITEMS,
+        .sortType = ITEM_TYPE_FIELD_USE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Repel,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Repel,
+        .iconPalette = gItemIconPalette_MaxRepel,
     },
 };
 

@@ -1012,44 +1012,9 @@ u16 GetLocalWaterMon(void)
     }
     return SPECIES_NONE;
 }
-
-bool8 UpdateRepelCounter(void)
-{
-    u16 repelLureVar = VarGet(VAR_REPEL_STEP_COUNT);
-    u16 steps = REPEL_LURE_STEPS(repelLureVar);
-    bool32 isLure = IS_LAST_USED_LURE(repelLureVar);
-
-    if (InBattlePike() || CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
-        return FALSE;
-    if (InUnionRoom() == TRUE)
-        return FALSE;
-
-    if (steps != 0)
-    {
-        steps--;
-        if (!isLure)
-        {
-            VarSet(VAR_REPEL_STEP_COUNT, steps);
-            if (steps == 0)
-            {
-                ScriptContext_SetupScript(EventScript_SprayWoreOff);
-                return TRUE;
-            }
-        }
-        else
-        {
-            VarSet(VAR_REPEL_STEP_COUNT, steps | REPEL_LURE_MASK);
-            if (steps == 0)
-            {
-                ScriptContext_SetupScript(EventScript_SprayWoreOff);
-                return TRUE;
-            }
-        }
-
-    }
-    return FALSE;
-}
-
+                                               // Repel is an infinite key item now, we'll just
+bool8 UpdateRepelCounter(void) {return FALSE;} // return FALSE here for field avatar func to maintain the hook
+                                               
 static bool8 IsWildLevelAllowedByRepel(u8 wildLevel)
 {
     u8 i;
