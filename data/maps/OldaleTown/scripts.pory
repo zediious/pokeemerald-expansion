@@ -399,7 +399,35 @@ script GerbonTownTourney_JordanAfter {
             ...
             
             I'll get you back for the rest of the
-            meal, I promise! Anyways, Woltia City
+            meal, I promi-")
+    waitmessage
+    applymovement(GERBON_TOWN_JORDAN_FIRSTBATTLE, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    waitmovement
+    waitse
+    setspeaker("Jordan")
+    msgbox("Ah I completely forgot! This ought to
+            cover that meal in full!")
+    waitmessage
+    giveitem(ITEM_ULTRA_REPEL, 1)
+    waitmessage
+    setspeaker("Jordan")
+    msgbox("That Repel is awesome! It's new tech
+            from a local company in Vulias, you
+            probably have not heard of it!
+            
+            It's like any normal Repel, but it never
+            runs out! Turn it on from your {COLOR RED}Key
+            Items{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} pouch, and it will stay on until
+            you turn it off! Very useful!
+            
+            I suppose I should have gotten you one
+            of these earlier, none of the Marts in
+            Vulias sell normal Repels anymore
+            because everyone has one of these!")
+    waitmessage
+    setspeaker("Jordan")
+    msgbox("Anyways, Woltia City
             is North and then west, through
             {COLOR RED}Route 102, and Mullen Cave{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
             
