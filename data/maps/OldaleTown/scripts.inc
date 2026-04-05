@@ -58,815 +58,817 @@ GerbonTown_BattleHallDisables::
 # 34 "data/maps/OldaleTown/scripts.pory"
 	setflag FLAG_GERBON_TOURNEY_TRAINER05
 # 37 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBONTOURNEY_ENABLED
+# 40 "data/maps/OldaleTown/scripts.pory"
 	setvar VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1
 	end
 
 
 GerbonTown_EventScript_TownSign::
-# 43 "data/maps/OldaleTown/scripts.pory"
+# 46 "data/maps/OldaleTown/scripts.pory"
 	lockall
-# 44 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_TownSign_Text_0
 # 47 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TownSign_Text_0
+# 50 "data/maps/OldaleTown/scripts.pory"
 	releaseall
 	return
 
 
 GerbonTown_EventScript_Route110Sign::
-# 52 "data/maps/OldaleTown/scripts.pory"
+# 55 "data/maps/OldaleTown/scripts.pory"
 	lockall
-# 53 "data/maps/OldaleTown/scripts.pory"
+# 56 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_Route110Sign_Text_0
-# 54 "data/maps/OldaleTown/scripts.pory"
+# 57 "data/maps/OldaleTown/scripts.pory"
 	releaseall
 	return
 
 
 GerbonTown_EventScript_KeepOffFlowers::
-# 59 "data/maps/OldaleTown/scripts.pory"
+# 62 "data/maps/OldaleTown/scripts.pory"
 	lockall
-# 60 "data/maps/OldaleTown/scripts.pory"
+# 63 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_KeepOffFlowers_Text_0
-# 61 "data/maps/OldaleTown/scripts.pory"
+# 64 "data/maps/OldaleTown/scripts.pory"
 	releaseall
 	return
 
 
 GerbonTown_EventScript_HiddenItemBall::
-# 66 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 67 "data/maps/OldaleTown/scripts.pory"
-	giveitem ITEM_EXP_CANDY_S, 2
-# 68 "data/maps/OldaleTown/scripts.pory"
-	removeobject GERBON_CANDY_BALL
 # 69 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_HIDDENITEMBALL
+	lock
 # 70 "data/maps/OldaleTown/scripts.pory"
+	giveitem ITEM_EXP_CANDY_S, 2
+# 71 "data/maps/OldaleTown/scripts.pory"
+	removeobject GERBON_CANDY_BALL
+# 72 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBON_HIDDENITEMBALL
+# 73 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_PalladiumBlockers::
-# 76 "data/maps/OldaleTown/scripts.pory"
+# 79 "data/maps/OldaleTown/scripts.pory"
 	lock
-# 77 "data/maps/OldaleTown/scripts.pory"
+# 80 "data/maps/OldaleTown/scripts.pory"
 	setspeaker GerbonTown_EventScript_PalladiumBlockers_Text_0
-# 78 "data/maps/OldaleTown/scripts.pory"
+# 81 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_PalladiumBlockers_Text_1
-# 82 "data/maps/OldaleTown/scripts.pory"
+# 85 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 83 "data/maps/OldaleTown/scripts.pory"
+# 86 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_MadWoman::
-# 89 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 90 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 91 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_MadWoman_Text_0
 # 92 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 93 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 94 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_MadWoman_Text_0
+# 95 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_MadWoman_Text_1
-# 97 "data/maps/OldaleTown/scripts.pory"
+# 100 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 98 "data/maps/OldaleTown/scripts.pory"
+# 101 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_BlockingBattleScene::
-# 104 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 105 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_BlockingBattleScene_Text_0
-# 106 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_BlockingBattleScene_Text_1
 # 107 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
+	lock
 # 108 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_LILLIPUP, CRY_MODE_NORMAL
+	setspeaker GerbonTown_EventScript_BlockingBattleScene_Text_0
 # 109 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_BLOCKER_BATTLER1_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_0
+	msgbox GerbonTown_EventScript_BlockingBattleScene_Text_1
 # 110 "data/maps/OldaleTown/scripts.pory"
-	delay 20
+	waitmessage
 # 111 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_BLOCKER_BATTLER2_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_1
-# 112 "data/maps/OldaleTown/scripts.pory"
-	delay 10
-# 113 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_BLOCKER_BATTLER2_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_2
-# 114 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_SALANDIT, CRY_MODE_NORMAL
-# 115 "data/maps/OldaleTown/scripts.pory"
-	waitmoncry
-# 116 "data/maps/OldaleTown/scripts.pory"
-	waitmovement
-# 117 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_BlockingBattleScene_Text_2
-# 118 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_BlockingBattleScene_Text_3
-# 120 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
-# 121 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_SALANDIT, CRY_MODE_NORMAL
-# 122 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_BLOCKER_BATTLER2_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_3
-# 123 "data/maps/OldaleTown/scripts.pory"
-	delay 20
-# 124 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_BLOCKER_BATTLER1_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_2
-# 125 "data/maps/OldaleTown/scripts.pory"
-	delay 10
-# 126 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_BLOCKER_BATTLER1_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_1
-# 127 "data/maps/OldaleTown/scripts.pory"
 	playmoncry SPECIES_LILLIPUP, CRY_MODE_NORMAL
-# 128 "data/maps/OldaleTown/scripts.pory"
+# 112 "data/maps/OldaleTown/scripts.pory"
+	applymovement GERBON_BLOCKER_BATTLER1_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_0
+# 113 "data/maps/OldaleTown/scripts.pory"
+	delay 20
+# 114 "data/maps/OldaleTown/scripts.pory"
+	applymovement GERBON_BLOCKER_BATTLER2_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+# 115 "data/maps/OldaleTown/scripts.pory"
+	delay 10
+# 116 "data/maps/OldaleTown/scripts.pory"
+	applymovement GERBON_BLOCKER_BATTLER2_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_2
+# 117 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_SALANDIT, CRY_MODE_NORMAL
+# 118 "data/maps/OldaleTown/scripts.pory"
 	waitmoncry
-# 129 "data/maps/OldaleTown/scripts.pory"
+# 119 "data/maps/OldaleTown/scripts.pory"
 	waitmovement
-# 130 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_BlockingBattleScene_Text_4
-# 131 "data/maps/OldaleTown/scripts.pory"
+# 120 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_BlockingBattleScene_Text_2
+# 121 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_BlockingBattleScene_Text_3
+# 123 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
+# 124 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_SALANDIT, CRY_MODE_NORMAL
+# 125 "data/maps/OldaleTown/scripts.pory"
+	applymovement GERBON_BLOCKER_BATTLER2_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_3
+# 126 "data/maps/OldaleTown/scripts.pory"
+	delay 20
+# 127 "data/maps/OldaleTown/scripts.pory"
+	applymovement GERBON_BLOCKER_BATTLER1_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_2
+# 128 "data/maps/OldaleTown/scripts.pory"
+	delay 10
+# 129 "data/maps/OldaleTown/scripts.pory"
+	applymovement GERBON_BLOCKER_BATTLER1_MON, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+# 130 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_LILLIPUP, CRY_MODE_NORMAL
+# 131 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
 # 132 "data/maps/OldaleTown/scripts.pory"
+	waitmovement
+# 133 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_BlockingBattleScene_Text_4
+# 134 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 135 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_KidTrigger01::
-# 137 "data/maps/OldaleTown/scripts.pory"
+# 140 "data/maps/OldaleTown/scripts.pory"
 	setvar VAR_GERBON_FIRST_VISIT_POSITION, 0
-# 138 "data/maps/OldaleTown/scripts.pory"
+# 141 "data/maps/OldaleTown/scripts.pory"
 	goto GerbonTown_EventScript_KidRunIntoPlayer
 	return
 
 
 GerbonTown_EventScript_KidTrigger02::
-# 142 "data/maps/OldaleTown/scripts.pory"
+# 145 "data/maps/OldaleTown/scripts.pory"
 	setvar VAR_GERBON_FIRST_VISIT_POSITION, 1
-# 143 "data/maps/OldaleTown/scripts.pory"
+# 146 "data/maps/OldaleTown/scripts.pory"
 	goto GerbonTown_EventScript_KidRunIntoPlayer
 	return
 
 
 GerbonTown_EventScript_KidRunIntoPlayer::
-# 148 "data/maps/OldaleTown/scripts.pory"
+# 151 "data/maps/OldaleTown/scripts.pory"
 	lock
-# 149 "data/maps/OldaleTown/scripts.pory"
+# 152 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_GERBON_FIRST_VISIT_POSITION, 0
 	goto_if_eq GerbonTown_EventScript_KidRunIntoPlayer_2
-# 154 "data/maps/OldaleTown/scripts.pory"
+# 157 "data/maps/OldaleTown/scripts.pory"
 	applymovement GERBON_KID_RUNNING_CRASH, GerbonTown_CrashKid_Move02
-# 155 "data/maps/OldaleTown/scripts.pory"
+# 158 "data/maps/OldaleTown/scripts.pory"
 	waitmovement
 GerbonTown_EventScript_KidRunIntoPlayer_1:
-# 158 "data/maps/OldaleTown/scripts.pory"
-	playse SE_PIN
-# 159 "data/maps/OldaleTown/scripts.pory"
-	delay 60
-# 160 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_KidRunIntoPlayer_Text_0
 # 161 "data/maps/OldaleTown/scripts.pory"
+	playse SE_PIN
+# 162 "data/maps/OldaleTown/scripts.pory"
+	delay 60
+# 163 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_KidRunIntoPlayer_Text_0
+# 164 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_KidRunIntoPlayer_Text_1
-# 171 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
-# 172 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_KID_RUNNING_CRASH, GerbonTown_CrashKid_RunAway
-# 173 "data/maps/OldaleTown/scripts.pory"
-	waitmovement
 # 174 "data/maps/OldaleTown/scripts.pory"
-	removeobject GERBON_KID_RUNNING_CRASH
+	waitmessage
 # 175 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_CRASH_KID
+	applymovement GERBON_KID_RUNNING_CRASH, GerbonTown_CrashKid_RunAway
 # 176 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_GERBON_FIRST_VISIT_TRIGGERS, 1
+	waitmovement
 # 177 "data/maps/OldaleTown/scripts.pory"
+	removeobject GERBON_KID_RUNNING_CRASH
+# 178 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBON_CRASH_KID
+# 179 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_GERBON_FIRST_VISIT_TRIGGERS, 1
+# 180 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 GerbonTown_EventScript_KidRunIntoPlayer_2:
-# 150 "data/maps/OldaleTown/scripts.pory"
+# 153 "data/maps/OldaleTown/scripts.pory"
 	applymovement GERBON_KID_RUNNING_CRASH, GerbonTown_CrashKid_Move01
-# 151 "data/maps/OldaleTown/scripts.pory"
+# 154 "data/maps/OldaleTown/scripts.pory"
 	waitmovement
 	goto GerbonTown_EventScript_KidRunIntoPlayer_1
 
 
-# 182 "data/maps/OldaleTown/scripts.pory"
-GerbonTown_CrashKid_Move01:
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 183 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_left
-# 184 "data/maps/OldaleTown/scripts.pory"
-	walk_in_place_faster_left
 # 185 "data/maps/OldaleTown/scripts.pory"
-	emote_double_exclamation_mark
-	step_end
-
-# 188 "data/maps/OldaleTown/scripts.pory"
-GerbonTown_CrashKid_Move02:
-# 189 "data/maps/OldaleTown/scripts.pory"
-	walk_faster_down
-# 190 "data/maps/OldaleTown/scripts.pory"
+GerbonTown_CrashKid_Move01:
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 190 "data/maps/OldaleTown/scripts.pory"
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 190 "data/maps/OldaleTown/scripts.pory"
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 190 "data/maps/OldaleTown/scripts.pory"
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 190 "data/maps/OldaleTown/scripts.pory"
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 190 "data/maps/OldaleTown/scripts.pory"
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 190 "data/maps/OldaleTown/scripts.pory"
+# 186 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_left
-# 191 "data/maps/OldaleTown/scripts.pory"
+# 187 "data/maps/OldaleTown/scripts.pory"
 	walk_in_place_faster_left
-# 192 "data/maps/OldaleTown/scripts.pory"
+# 188 "data/maps/OldaleTown/scripts.pory"
 	emote_double_exclamation_mark
 	step_end
 
+# 191 "data/maps/OldaleTown/scripts.pory"
+GerbonTown_CrashKid_Move02:
+# 192 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_down
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 193 "data/maps/OldaleTown/scripts.pory"
+	walk_faster_left
+# 194 "data/maps/OldaleTown/scripts.pory"
+	walk_in_place_faster_left
 # 195 "data/maps/OldaleTown/scripts.pory"
+	emote_double_exclamation_mark
+	step_end
+
+# 198 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_CrashKid_RunAway:
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
-# 196 "data/maps/OldaleTown/scripts.pory"
+# 199 "data/maps/OldaleTown/scripts.pory"
 	walk_faster_right
 	step_end
 
 GerbonTownBattleHall_OutdoorBattleStart::
-# 202 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 203 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 3
-# 204 "data/maps/OldaleTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_EventScript_BlockingBattleScene_Movement_1
 # 205 "data/maps/OldaleTown/scripts.pory"
-	waitmovement
+	lock
 # 206 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
+	setvar VAR_ZED_STORY_TRACKER, 3
 # 207 "data/maps/OldaleTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+# 208 "data/maps/OldaleTown/scripts.pory"
+	waitmovement
+# 209 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
+# 210 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTownBattleHall_OutdoorBattleStart_Text_1
-# 213 "data/maps/OldaleTown/scripts.pory"
+# 216 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 215 "data/maps/OldaleTown/scripts.pory"
+# 218 "data/maps/OldaleTown/scripts.pory"
 	goto GerbonTown_OutdoorBattleJordanAsk
 	return
 
 
 GerbonTown_OutdoorBattleJordanAsk::
-# 220 "data/maps/OldaleTown/scripts.pory"
+# 223 "data/maps/OldaleTown/scripts.pory"
 	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
-# 221 "data/maps/OldaleTown/scripts.pory"
+# 224 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_OutdoorBattleJordanAsk_Text_0, MSGBOX_YESNO
-# 225 "data/maps/OldaleTown/scripts.pory"
+# 228 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GerbonTown_OutdoorBattleJordanAsk_1
-# 228 "data/maps/OldaleTown/scripts.pory"
+# 231 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_OutdoorBattleJordanAsk_Text_1
-# 229 "data/maps/OldaleTown/scripts.pory"
+# 232 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 230 "data/maps/OldaleTown/scripts.pory"
+# 233 "data/maps/OldaleTown/scripts.pory"
 	goto GerbonTown_OutdoorBattleJordanAsk
 	return
 
 GerbonTown_OutdoorBattleJordanAsk_1:
-# 226 "data/maps/OldaleTown/scripts.pory"
+# 229 "data/maps/OldaleTown/scripts.pory"
 	goto GerbonTown_OutdoorBattleTrigger
 	return
 
 
 GerbonTown_OutdoorBattleTrigger::
-# 235 "data/maps/OldaleTown/scripts.pory"
+# 238 "data/maps/OldaleTown/scripts.pory"
 	setflag FLAG_NO_WHITEOUT
-# 236 "data/maps/OldaleTown/scripts.pory"
+# 239 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_STARTER_MON, 0
 	goto_if_eq GerbonTown_OutdoorBattleTrigger_1
-# 246 "data/maps/OldaleTown/scripts.pory"
+# 249 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_STARTER_MON, 1
 	goto_if_eq GerbonTown_OutdoorBattleTrigger_2
-# 256 "data/maps/OldaleTown/scripts.pory"
+# 259 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_STARTER_MON, 2
 	goto_if_eq GerbonTown_OutdoorBattleTrigger_3
-# 266 "data/maps/OldaleTown/scripts.pory"
+# 269 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_STARTER_MON, 3
 	goto_if_eq GerbonTown_OutdoorBattleTrigger_4
 	return
 
 GerbonTown_OutdoorBattleTrigger_1:
-# 237 "data/maps/OldaleTown/scripts.pory"
+# 240 "data/maps/OldaleTown/scripts.pory"
 	trainerbattle_single TRAINER_BRENDAN_ROUTE_103_TREECKO, GerbonTown_OutdoorBattleTrigger_Text_0, GerbonTown_OutdoorBattleTrigger_Text_1, event_script = GerbonTown_OutdoorBattleEnd
 	return
 
 GerbonTown_OutdoorBattleTrigger_2:
-# 247 "data/maps/OldaleTown/scripts.pory"
+# 250 "data/maps/OldaleTown/scripts.pory"
 	trainerbattle_single TRAINER_BRENDAN_ROUTE_110_MUDKIP, GerbonTown_OutdoorBattleTrigger_Text_0, GerbonTown_OutdoorBattleTrigger_Text_1, event_script = GerbonTown_OutdoorBattleEnd
 	return
 
 GerbonTown_OutdoorBattleTrigger_3:
-# 257 "data/maps/OldaleTown/scripts.pory"
+# 260 "data/maps/OldaleTown/scripts.pory"
 	trainerbattle_single TRAINER_BRENDAN_ROUTE_119_MUDKIP, GerbonTown_OutdoorBattleTrigger_Text_0, GerbonTown_OutdoorBattleTrigger_Text_1, event_script = GerbonTown_OutdoorBattleEnd
 	return
 
 GerbonTown_OutdoorBattleTrigger_4:
-# 267 "data/maps/OldaleTown/scripts.pory"
+# 270 "data/maps/OldaleTown/scripts.pory"
 	trainerbattle_single TRAINER_BRENDAN_ROUTE_103_MUDKIP, GerbonTown_OutdoorBattleTrigger_Text_2, GerbonTown_OutdoorBattleTrigger_Text_1, event_script = GerbonTown_OutdoorBattleEnd
 	return
 
 
 GerbonTown_OutdoorBattleEnd::
-# 279 "data/maps/OldaleTown/scripts.pory"
-	clearflag FLAG_NO_WHITEOUT
-# 280 "data/maps/OldaleTown/scripts.pory"
-	special HealPlayerParty
-# 281 "data/maps/OldaleTown/scripts.pory"
-	lock
 # 282 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
+	clearflag FLAG_NO_WHITEOUT
 # 283 "data/maps/OldaleTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+	special HealPlayerParty
 # 284 "data/maps/OldaleTown/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	lock
 # 285 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
+	faceplayer
 # 286 "data/maps/OldaleTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_EventScript_BlockingBattleScene_Movement_1
+# 287 "data/maps/OldaleTown/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 288 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
+# 289 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq GerbonTown_OutdoorBattleEnd_2
-# 291 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_OutdoorBattleEnd_Text_1
 # 294 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_OutdoorBattleEnd_Text_1
+# 297 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
 GerbonTown_OutdoorBattleEnd_1:
-# 296 "data/maps/OldaleTown/scripts.pory"
+# 299 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_OutdoorBattleEnd_Text_2
-# 318 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
-# 319 "data/maps/OldaleTown/scripts.pory"
-	closemessage
-# 320 "data/maps/OldaleTown/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
 # 321 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
-# 322 "data/maps/OldaleTown/scripts.pory"
-	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
-# 323 "data/maps/OldaleTown/scripts.pory"
-	delay 30
-# 324 "data/maps/OldaleTown/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 327 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_SAWGRASS_SOUTH_BLOCKERS
-# 328 "data/maps/OldaleTown/scripts.pory"
-	removeobject ZED_Sawgrass_Blockage_Sailor, MAP_LITTLEROOT_TOWN
-# 329 "data/maps/OldaleTown/scripts.pory"
-	removeobject ZED_Sawgrass_Blockage_Fearow, MAP_LITTLEROOT_TOWN
-# 332 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_CAP_BEFORE_FIRSTRIVAL
-# 333 "data/maps/OldaleTown/scripts.pory"
-	playfanfare MUS_LEVEL_UP
-# 334 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_OutdoorBattleEnd_Text_3, MSGBOX_SIGN
-# 335 "data/maps/OldaleTown/scripts.pory"
-	waitfanfare
-# 336 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
+# 322 "data/maps/OldaleTown/scripts.pory"
+	closemessage
+# 323 "data/maps/OldaleTown/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 324 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+# 325 "data/maps/OldaleTown/scripts.pory"
+	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
+# 326 "data/maps/OldaleTown/scripts.pory"
+	delay 30
+# 327 "data/maps/OldaleTown/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 330 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_SAWGRASS_SOUTH_BLOCKERS
+# 331 "data/maps/OldaleTown/scripts.pory"
+	removeobject ZED_Sawgrass_Blockage_Sailor, MAP_LITTLEROOT_TOWN
+# 332 "data/maps/OldaleTown/scripts.pory"
+	removeobject ZED_Sawgrass_Blockage_Fearow, MAP_LITTLEROOT_TOWN
+# 335 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_CAP_BEFORE_FIRSTRIVAL
+# 336 "data/maps/OldaleTown/scripts.pory"
+	playfanfare MUS_LEVEL_UP
+# 337 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_OutdoorBattleEnd_Text_3, MSGBOX_SIGN
+# 338 "data/maps/OldaleTown/scripts.pory"
+	waitfanfare
 # 339 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 342 "data/maps/OldaleTown/scripts.pory"
 	questupdated 0
-# 341 "data/maps/OldaleTown/scripts.pory"
+# 344 "data/maps/OldaleTown/scripts.pory"
 	release
 	return
 
 GerbonTown_OutdoorBattleEnd_2:
-# 287 "data/maps/OldaleTown/scripts.pory"
+# 290 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_OutdoorBattleEnd_Text_0
-# 289 "data/maps/OldaleTown/scripts.pory"
+# 292 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
 	goto GerbonTown_OutdoorBattleEnd_1
 
 
 GerbonTownTourney_JordanStartOutside::
-# 347 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 348 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 349 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
 # 350 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 351 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 352 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
+# 353 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTownTourney_JordanStartOutside_Text_0, MSGBOX_YESNO
-# 366 "data/maps/OldaleTown/scripts.pory"
+# 369 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GerbonTownTourney_JordanStartOutside_1
 	return
 
 GerbonTownTourney_JordanStartOutside_1:
-# 367 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTownTourney_JordanStartOutside_Text_1
-# 368 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
-# 369 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_FIRSTSHOW_JULIA
 # 370 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_FIRSTSHOW_CANDACE
+	msgbox GerbonTownTourney_JordanStartOutside_Text_1
 # 371 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_FIRSTSHOW_GOLEM
+	waitmessage
 # 372 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_CANDACE01_MON2
+	setflag FLAG_GERBON_FIRSTSHOW_JULIA
 # 373 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_GERBON_TOURNAMENT_STATE, 1
+	setflag FLAG_GERBON_FIRSTSHOW_CANDACE
 # 374 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 8
+	setflag FLAG_GERBON_FIRSTSHOW_GOLEM
 # 375 "data/maps/OldaleTown/scripts.pory"
-	warp MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5
+	setflag FLAG_CANDACE01_MON2
 # 376 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_GERBON_TOURNAMENT_STATE, 1
+# 377 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 8
+# 378 "data/maps/OldaleTown/scripts.pory"
+	warp MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5
+# 379 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTownTourney_JordanAfter::
-# 383 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 384 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 385 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
 # 386 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 387 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 388 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTownBattleHall_OutdoorBattleStart_Text_0
+# 389 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTownTourney_JordanAfter_Text_0
-# 407 "data/maps/OldaleTown/scripts.pory"
-	applymovement GERBON_TOWN_JORDAN_FIRSTBATTLE, GerbonTownTourney_JordanAfter_Movement_0
 # 410 "data/maps/OldaleTown/scripts.pory"
-	waitmovement
-# 411 "data/maps/OldaleTown/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 10
-# 412 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	applymovement GERBON_TOWN_JORDAN_FIRSTBATTLE, GerbonTownTourney_JordanAfter_Movement_0
 # 413 "data/maps/OldaleTown/scripts.pory"
-	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
+	waitmovement
+# 414 "data/maps/OldaleTown/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 10
+# 415 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 416 "data/maps/OldaleTown/scripts.pory"
+	removeobject GERBON_TOWN_JORDAN_FIRSTBATTLE
+# 419 "data/maps/OldaleTown/scripts.pory"
 	setflag FLAG_ROUTE102_STAIRBLOCKERS
-# 418 "data/maps/OldaleTown/scripts.pory"
+# 421 "data/maps/OldaleTown/scripts.pory"
 	questupdated 0
-# 420 "data/maps/OldaleTown/scripts.pory"
+# 423 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_RuvelKid::
-# 430 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 431 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 432 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_RuvelKid_Text_0
 # 433 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 434 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 435 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_RuvelKid_Text_0
+# 436 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_ZED_STORY_TRACKER, 24
 	goto_if_lt GerbonTown_EventScript_RuvelKid_2
-# 440 "data/maps/OldaleTown/scripts.pory"
+# 443 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_RuvelKid_Text_2
 GerbonTown_EventScript_RuvelKid_1:
-# 445 "data/maps/OldaleTown/scripts.pory"
+# 448 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 446 "data/maps/OldaleTown/scripts.pory"
+# 449 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 GerbonTown_EventScript_RuvelKid_2:
-# 434 "data/maps/OldaleTown/scripts.pory"
+# 437 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_RuvelKid_Text_1
 	goto GerbonTown_EventScript_RuvelKid_1
 
 
 GerbonTown_EventScript_RuvelKidMom::
-# 451 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 452 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 453 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_RuvelKidMom_Text_0
 # 454 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 455 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 456 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_RuvelKidMom_Text_0
+# 457 "data/maps/OldaleTown/scripts.pory"
 	compare VAR_ZED_STORY_TRACKER, 24
 	goto_if_lt GerbonTown_EventScript_RuvelKidMom_2
-# 460 "data/maps/OldaleTown/scripts.pory"
+# 463 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_RuvelKidMom_Text_2
 GerbonTown_EventScript_RuvelKidMom_1:
-# 468 "data/maps/OldaleTown/scripts.pory"
+# 471 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 469 "data/maps/OldaleTown/scripts.pory"
+# 472 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 GerbonTown_EventScript_RuvelKidMom_2:
-# 455 "data/maps/OldaleTown/scripts.pory"
+# 458 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_RuvelKidMom_Text_1
 	goto GerbonTown_EventScript_RuvelKidMom_1
 
 
 GerbonTown_EventScript_TriathleteHouseMan::
-# 475 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 476 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 477 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_0
 # 478 "data/maps/OldaleTown/scripts.pory"
+	lock
+# 479 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 480 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_0
+# 481 "data/maps/OldaleTown/scripts.pory"
 	goto_if_unset FLAG_GERBON_GOT_MACHO, GerbonTown_EventScript_TriathleteHouseMan_2
-# 499 "data/maps/OldaleTown/scripts.pory"
+# 502 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_6
-# 500 "data/maps/OldaleTown/scripts.pory"
+# 503 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
 GerbonTown_EventScript_TriathleteHouseMan_1:
-# 503 "data/maps/OldaleTown/scripts.pory"
+# 506 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 GerbonTown_EventScript_TriathleteHouseMan_2:
-# 479 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_1
-# 481 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
 # 482 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_LINOONE, CRY_MODE_NORMAL
-# 483 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_2
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_1
 # 484 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_3
+	waitmessage
 # 485 "data/maps/OldaleTown/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_LINOONE, CRY_MODE_NORMAL
 # 486 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
+	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_2
 # 487 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_0
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_3
 # 488 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_4
-# 490 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 489 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
+# 490 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_0
 # 491 "data/maps/OldaleTown/scripts.pory"
-	giveitem ITEM_MACHO_BRACE, 1
-# 492 "data/maps/OldaleTown/scripts.pory"
-	setflag FLAG_GERBON_GOT_MACHO
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_4
 # 493 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 494 "data/maps/OldaleTown/scripts.pory"
+	giveitem ITEM_MACHO_BRACE, 1
+# 495 "data/maps/OldaleTown/scripts.pory"
+	setflag FLAG_GERBON_GOT_MACHO
+# 496 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_5
-# 497 "data/maps/OldaleTown/scripts.pory"
+# 500 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
 	goto GerbonTown_EventScript_TriathleteHouseMan_1
 
 
 GerbonTown_EventScript_TriathleteHouseLinoone::
-# 508 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 509 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 510 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_LINOONE, CRY_MODE_NORMAL
 # 511 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_2
+	lock
 # 512 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_3
+	faceplayer
 # 513 "data/maps/OldaleTown/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_LINOONE, CRY_MODE_NORMAL
 # 514 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
+	setspeaker GerbonTown_EventScript_TriathleteHouseMan_Text_2
 # 515 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_TriathleteHouseMan_Text_3
+# 516 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 517 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 518 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_ExpertHouseMan::
-# 521 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 522 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 523 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_ExpertHouseMan_Text_0
 # 524 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_ExpertHouseMan_Text_1
+	lock
+# 525 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 526 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_ExpertHouseMan_Text_0
 # 527 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_ExpertHouseMan_Text_1
+# 530 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 528 "data/maps/OldaleTown/scripts.pory"
+# 531 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_ExpertHouseSlaking::
-# 533 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 534 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 535 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_SLAKING, CRY_MODE_NORMAL
 # 536 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_ExpertHouseSlaking_Text_0
+	lock
 # 537 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 538 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_SLAKING, CRY_MODE_NORMAL
+# 539 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_ExpertHouseSlaking_Text_0
+# 540 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_ExpertHouseSlaking_Text_1
-# 541 "data/maps/OldaleTown/scripts.pory"
+# 544 "data/maps/OldaleTown/scripts.pory"
 	waitmoncry
-# 542 "data/maps/OldaleTown/scripts.pory"
+# 545 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 543 "data/maps/OldaleTown/scripts.pory"
+# 546 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_CoupleHouse01Man::
-# 549 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 550 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 551 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_CoupleHouse01Man_Text_0
 # 552 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_CoupleHouse01Man_Text_1
+	lock
+# 553 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
+# 554 "data/maps/OldaleTown/scripts.pory"
+	setspeaker GerbonTown_EventScript_CoupleHouse01Man_Text_0
 # 555 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Man_Text_1
+# 558 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
-# 556 "data/maps/OldaleTown/scripts.pory"
+# 559 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_CoupleHouse01Woman::
-# 561 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 562 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 563 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_CoupleHouse01Woman_Text_0
 # 564 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_1
+	lock
+# 565 "data/maps/OldaleTown/scripts.pory"
+	faceplayer
 # 566 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
+	setspeaker GerbonTown_EventScript_CoupleHouse01Woman_Text_0
 # 567 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
-# 568 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_2
+	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_1
 # 569 "data/maps/OldaleTown/scripts.pory"
-	waitmoncry
-# 570 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
+# 570 "data/maps/OldaleTown/scripts.pory"
+	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
 # 571 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_2
+# 572 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 573 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 574 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
 GerbonTown_EventScript_CoupleHouse01Pichu::
-# 576 "data/maps/OldaleTown/scripts.pory"
-	lock
-# 577 "data/maps/OldaleTown/scripts.pory"
-	faceplayer
-# 578 "data/maps/OldaleTown/scripts.pory"
-	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
 # 579 "data/maps/OldaleTown/scripts.pory"
-	setspeaker GerbonTown_EventScript_CoupleHouse01Pichu_Text_0
+	lock
 # 580 "data/maps/OldaleTown/scripts.pory"
-	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_2
+	faceplayer
 # 581 "data/maps/OldaleTown/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
 # 582 "data/maps/OldaleTown/scripts.pory"
-	waitmessage
+	setspeaker GerbonTown_EventScript_CoupleHouse01Pichu_Text_0
 # 583 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_CoupleHouse01Woman_Text_2
+# 584 "data/maps/OldaleTown/scripts.pory"
+	waitmoncry
+# 585 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 586 "data/maps/OldaleTown/scripts.pory"
 	release
 	end
 
 
-# 109 "data/maps/OldaleTown/scripts.pory"
+# 112 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_0:
-# 109 "data/maps/OldaleTown/scripts.pory"
+# 112 "data/maps/OldaleTown/scripts.pory"
 	jump_in_place_right
 	step_end
 
-# 111 "data/maps/OldaleTown/scripts.pory"
+# 114 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_1:
-# 111 "data/maps/OldaleTown/scripts.pory"
+# 114 "data/maps/OldaleTown/scripts.pory"
 	face_right
 	step_end
 
-# 113 "data/maps/OldaleTown/scripts.pory"
+# 116 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_2:
-# 113 "data/maps/OldaleTown/scripts.pory"
+# 116 "data/maps/OldaleTown/scripts.pory"
 	face_left
 	step_end
 
-# 122 "data/maps/OldaleTown/scripts.pory"
+# 125 "data/maps/OldaleTown/scripts.pory"
 GerbonTown_EventScript_BlockingBattleScene_Movement_3:
-# 122 "data/maps/OldaleTown/scripts.pory"
+# 125 "data/maps/OldaleTown/scripts.pory"
 	jump_in_place_left
 	step_end
 
-# 407 "data/maps/OldaleTown/scripts.pory"
+# 410 "data/maps/OldaleTown/scripts.pory"
 GerbonTownTourney_JordanAfter_Movement_0:
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_down
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
-# 408 "data/maps/OldaleTown/scripts.pory"
+# 411 "data/maps/OldaleTown/scripts.pory"
 	walk_left
 	step_end
 
 GerbonTown_EventScript_TownSign_Text_0:
-# 44 "data/maps/OldaleTown/scripts.pory"
+# 47 "data/maps/OldaleTown/scripts.pory"
 	.string "Gerbon Town\p"
 	.string "Home of the Palladium$"
 
 GerbonTown_EventScript_Route110Sign_Text_0:
-# 53 "data/maps/OldaleTown/scripts.pory"
+# 56 "data/maps/OldaleTown/scripts.pory"
 	.string "{DOWN_ARROW} To Route 110$"
 
 GerbonTown_EventScript_KeepOffFlowers_Text_0:
-# 60 "data/maps/OldaleTown/scripts.pory"
+# 63 "data/maps/OldaleTown/scripts.pory"
 	.string "Keep off the flowers!$"
 
 GerbonTown_EventScript_PalladiumBlockers_Text_0:
-# 77 "data/maps/OldaleTown/scripts.pory"
+# 80 "data/maps/OldaleTown/scripts.pory"
 	.string "Guard$"
 
 GerbonTown_EventScript_PalladiumBlockers_Text_1:
-# 78 "data/maps/OldaleTown/scripts.pory"
+# 81 "data/maps/OldaleTown/scripts.pory"
 	.string "Not allowed in when there's no match\n"
 	.string "going on.\p"
 	.string "Come back another time.$"
 
 GerbonTown_EventScript_MadWoman_Text_0:
-# 91 "data/maps/OldaleTown/scripts.pory"
+# 94 "data/maps/OldaleTown/scripts.pory"
 	.string "Angry Woman$"
 
 GerbonTown_EventScript_MadWoman_Text_1:
-# 92 "data/maps/OldaleTown/scripts.pory"
+# 95 "data/maps/OldaleTown/scripts.pory"
 	.string "These trainers! Breaking out into a\n"
 	.string "battle wherever they please!\p"
 	.string "Don't they know they're blocking\n"
 	.string "the way? They won't listen!$"
 
 GerbonTown_EventScript_BlockingBattleScene_Text_0:
-# 105 "data/maps/OldaleTown/scripts.pory"
+# 108 "data/maps/OldaleTown/scripts.pory"
 	.string "Battler 1$"
 
 GerbonTown_EventScript_BlockingBattleScene_Text_1:
-# 106 "data/maps/OldaleTown/scripts.pory"
+# 109 "data/maps/OldaleTown/scripts.pory"
 	.string "Lillipup! Use your Tackle attack!$"
 
 GerbonTown_EventScript_BlockingBattleScene_Text_2:
-# 117 "data/maps/OldaleTown/scripts.pory"
+# 120 "data/maps/OldaleTown/scripts.pory"
 	.string "Battler 2$"
 
 GerbonTown_EventScript_BlockingBattleScene_Text_3:
-# 118 "data/maps/OldaleTown/scripts.pory"
+# 121 "data/maps/OldaleTown/scripts.pory"
 	.string "Salandit, don't take that!\n"
 	.string "Use your Scratch attack!$"
 
 GerbonTown_EventScript_BlockingBattleScene_Text_4:
-# 130 "data/maps/OldaleTown/scripts.pory"
+# 133 "data/maps/OldaleTown/scripts.pory"
 	.string "They don't seem to notice you$"
 
 GerbonTown_EventScript_KidRunIntoPlayer_Text_0:
-# 160 "data/maps/OldaleTown/scripts.pory"
+# 163 "data/maps/OldaleTown/scripts.pory"
 	.string "Reckless Child$"
 
 GerbonTown_EventScript_KidRunIntoPlayer_Text_1:
-# 161 "data/maps/OldaleTown/scripts.pory"
+# 164 "data/maps/OldaleTown/scripts.pory"
 	.string "Ouch, that hurt!\p"
 	.string "I'm sorry, I'm just so excited for the\n"
 	.string "battle in the {COLOR RED}Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, it's going to be\l"
@@ -876,11 +878,11 @@ GerbonTown_EventScript_KidRunIntoPlayer_Text_1:
 	.string "Gotta go!$"
 
 GerbonTownBattleHall_OutdoorBattleStart_Text_0:
-# 206 "data/maps/OldaleTown/scripts.pory"
+# 209 "data/maps/OldaleTown/scripts.pory"
 	.string "Jordan$"
 
 GerbonTownBattleHall_OutdoorBattleStart_Text_1:
-# 207 "data/maps/OldaleTown/scripts.pory"
+# 210 "data/maps/OldaleTown/scripts.pory"
 	.string "{PLAYER}! That was the best match\n"
 	.string "I've seen yet! I am glad you were able\l"
 	.string "to see it!\p"
@@ -888,42 +890,42 @@ GerbonTownBattleHall_OutdoorBattleStart_Text_1:
 	.string "battle right now {PLAYER}!$"
 
 GerbonTown_OutdoorBattleJordanAsk_Text_0:
-# 221 "data/maps/OldaleTown/scripts.pory"
+# 224 "data/maps/OldaleTown/scripts.pory"
 	.string "Don't worry if you lose, I'll heal\n"
 	.string "your Pokemon right away!$"
 
 GerbonTown_OutdoorBattleJordanAsk_Text_1:
-# 228 "data/maps/OldaleTown/scripts.pory"
+# 231 "data/maps/OldaleTown/scripts.pory"
 	.string "No fun! Come on, a real quick battle!$"
 
 GerbonTown_OutdoorBattleTrigger_Text_0:
-# 239 "data/maps/OldaleTown/scripts.pory"
+# 242 "data/maps/OldaleTown/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm\n"
 	.string "talking about! Let's go!$"
 
 GerbonTown_OutdoorBattleTrigger_Text_1:
-# 241 "data/maps/OldaleTown/scripts.pory"
+# 244 "data/maps/OldaleTown/scripts.pory"
 	.string "Wow {PLAYER}, I didn't know you could\n"
 	.string "battle like that!$"
 
 GerbonTown_OutdoorBattleTrigger_Text_2:
-# 269 "data/maps/OldaleTown/scripts.pory"
+# 272 "data/maps/OldaleTown/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's what I'm\n"
 	.string "talking about! Let's go!$"
 
 GerbonTown_OutdoorBattleEnd_Text_0:
-# 287 "data/maps/OldaleTown/scripts.pory"
+# 290 "data/maps/OldaleTown/scripts.pory"
 	.string "You must have been practicing, I\n"
 	.string "thought I had that in the bag!$"
 
 GerbonTown_OutdoorBattleEnd_Text_1:
-# 291 "data/maps/OldaleTown/scripts.pory"
+# 294 "data/maps/OldaleTown/scripts.pory"
 	.string "Whew, that was a close one! Looks like\n"
 	.string "my training has paid off! I bet you\l"
 	.string "didn't expect that huh?$"
 
 GerbonTown_OutdoorBattleEnd_Text_2:
-# 296 "data/maps/OldaleTown/scripts.pory"
+# 299 "data/maps/OldaleTown/scripts.pory"
 	.string "I've been thinking, maybe we should try\n"
 	.string "to challenge the {COLOR RED}Representative\l"
 	.string "Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon Town. That's Julia,\l"
@@ -944,11 +946,11 @@ GerbonTown_OutdoorBattleEnd_Text_2:
 	.string "See you soon!$"
 
 GerbonTown_OutdoorBattleEnd_Text_3:
-# 334 "data/maps/OldaleTown/scripts.pory"
+# 337 "data/maps/OldaleTown/scripts.pory"
 	.string "The level cap has been raised to 18!$"
 
 GerbonTownTourney_JordanStartOutside_Text_0:
-# 350 "data/maps/OldaleTown/scripts.pory"
+# 353 "data/maps/OldaleTown/scripts.pory"
 	.string "There you are! It's time to start the\n"
 	.string "tournament! I should explain exactly\l"
 	.string "how it works, eh? That would be helpful.\p"
@@ -964,11 +966,11 @@ GerbonTownTourney_JordanStartOutside_Text_0:
 	.string "started!$"
 
 GerbonTownTourney_JordanStartOutside_Text_1:
-# 367 "data/maps/OldaleTown/scripts.pory"
+# 370 "data/maps/OldaleTown/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's go!$"
 
 GerbonTownTourney_JordanAfter_Text_0:
-# 386 "data/maps/OldaleTown/scripts.pory"
+# 389 "data/maps/OldaleTown/scripts.pory"
 	.string "That was amazing! I'm a little miffed\n"
 	.string "that I didn't win, but I can't deny what\l"
 	.string "I bore witness to! I said it before, but\l"
@@ -988,34 +990,34 @@ GerbonTownTourney_JordanAfter_Text_0:
 	.string "later {PLAYER}!$"
 
 GerbonTown_EventScript_RuvelKid_Text_0:
-# 432 "data/maps/OldaleTown/scripts.pory"
+# 435 "data/maps/OldaleTown/scripts.pory"
 	.string "Child$"
 
 GerbonTown_EventScript_RuvelKid_Text_1:
-# 434 "data/maps/OldaleTown/scripts.pory"
+# 437 "data/maps/OldaleTown/scripts.pory"
 	.string "I'm so excited! My mommy is going taking\n"
 	.string "me to visit a {COLOR RED}Pyramid!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
 	.string "I hope it's not too scary!$"
 
 GerbonTown_EventScript_RuvelKid_Text_2:
-# 440 "data/maps/OldaleTown/scripts.pory"
+# 443 "data/maps/OldaleTown/scripts.pory"
 	.string "It's the mister from the Pyramid! Thank\n"
 	.string "you for saving me from that scary\l"
 	.string "Pokemon! My mommy doesn't want to take\l"
 	.string "me on vacation anymore though!$"
 
 GerbonTown_EventScript_RuvelKidMom_Text_0:
-# 453 "data/maps/OldaleTown/scripts.pory"
+# 456 "data/maps/OldaleTown/scripts.pory"
 	.string "Happy Mom$"
 
 GerbonTown_EventScript_RuvelKidMom_Text_1:
-# 455 "data/maps/OldaleTown/scripts.pory"
+# 458 "data/maps/OldaleTown/scripts.pory"
 	.string "I always make sure to let me daughter\n"
 	.string "see the world! It's important that\l"
 	.string "she has a wide range of experiences!$"
 
 GerbonTown_EventScript_RuvelKidMom_Text_2:
-# 460 "data/maps/OldaleTown/scripts.pory"
+# 463 "data/maps/OldaleTown/scripts.pory"
 	.string "My daughter's savior! Thank you again!\n"
 	.string "I'm glad to see you are well!\p"
 	.string "I've decided my duaghter will not leave\n"
@@ -1024,81 +1026,81 @@ GerbonTown_EventScript_RuvelKidMom_Text_2:
 	.string "thing again!$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_0:
-# 477 "data/maps/OldaleTown/scripts.pory"
+# 480 "data/maps/OldaleTown/scripts.pory"
 	.string "Athlete$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_1:
-# 479 "data/maps/OldaleTown/scripts.pory"
+# 482 "data/maps/OldaleTown/scripts.pory"
 	.string "It's important to train yourself, and\n"
 	.string "your Pokemon! Look at Linoone go!$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_2:
-# 483 "data/maps/OldaleTown/scripts.pory"
+# 486 "data/maps/OldaleTown/scripts.pory"
 	.string "Linoone$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_3:
-# 484 "data/maps/OldaleTown/scripts.pory"
+# 487 "data/maps/OldaleTown/scripts.pory"
 	.string "Greeee-ah$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_4:
-# 488 "data/maps/OldaleTown/scripts.pory"
+# 491 "data/maps/OldaleTown/scripts.pory"
 	.string "Here, this can help you make your\n"
 	.string "Pokemon as strong as they can be!$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_5:
-# 493 "data/maps/OldaleTown/scripts.pory"
+# 496 "data/maps/OldaleTown/scripts.pory"
 	.string "If a Pokemon holds that, they'll get\n"
 	.string "much stronger than normal! Use it to\l"
 	.string "make sure you're always ready for the\l"
 	.string "next opponent!$"
 
 GerbonTown_EventScript_TriathleteHouseMan_Text_6:
-# 499 "data/maps/OldaleTown/scripts.pory"
+# 502 "data/maps/OldaleTown/scripts.pory"
 	.string "Keep on training my friend!$"
 
 GerbonTown_EventScript_ExpertHouseMan_Text_0:
-# 523 "data/maps/OldaleTown/scripts.pory"
+# 526 "data/maps/OldaleTown/scripts.pory"
 	.string "Old Man$"
 
 GerbonTown_EventScript_ExpertHouseMan_Text_1:
-# 524 "data/maps/OldaleTown/scripts.pory"
+# 527 "data/maps/OldaleTown/scripts.pory"
 	.string "Hoho, I do love retirement! Why, after a\n"
 	.string "lifetime of work, nothing is better\l"
 	.string "than nothing at all!$"
 
 GerbonTown_EventScript_ExpertHouseSlaking_Text_0:
-# 536 "data/maps/OldaleTown/scripts.pory"
+# 539 "data/maps/OldaleTown/scripts.pory"
 	.string "Slaking$"
 
 GerbonTown_EventScript_ExpertHouseSlaking_Text_1:
-# 537 "data/maps/OldaleTown/scripts.pory"
+# 540 "data/maps/OldaleTown/scripts.pory"
 	.string "Grahh-uh!\p"
 	.string "It looks as though you have woken up\n"
 	.string "the Slaking, not a good idea!$"
 
 GerbonTown_EventScript_CoupleHouse01Man_Text_0:
-# 551 "data/maps/OldaleTown/scripts.pory"
+# 554 "data/maps/OldaleTown/scripts.pory"
 	.string "Man$"
 
 GerbonTown_EventScript_CoupleHouse01Man_Text_1:
-# 552 "data/maps/OldaleTown/scripts.pory"
+# 555 "data/maps/OldaleTown/scripts.pory"
 	.string "We love to watch the feature matches,\n"
 	.string "but our little Pichu doesn't like\l"
 	.string "battling!$"
 
 GerbonTown_EventScript_CoupleHouse01Woman_Text_0:
-# 563 "data/maps/OldaleTown/scripts.pory"
+# 566 "data/maps/OldaleTown/scripts.pory"
 	.string "Woman$"
 
 GerbonTown_EventScript_CoupleHouse01Woman_Text_1:
-# 564 "data/maps/OldaleTown/scripts.pory"
+# 567 "data/maps/OldaleTown/scripts.pory"
 	.string "Even though our Pichu doesn't battle,\n"
 	.string "we wouldn't change them for the world!$"
 
 GerbonTown_EventScript_CoupleHouse01Woman_Text_2:
-# 568 "data/maps/OldaleTown/scripts.pory"
+# 571 "data/maps/OldaleTown/scripts.pory"
 	.string "Pi-chu!$"
 
 GerbonTown_EventScript_CoupleHouse01Pichu_Text_0:
-# 579 "data/maps/OldaleTown/scripts.pory"
+# 582 "data/maps/OldaleTown/scripts.pory"
 	.string "Pichu$"

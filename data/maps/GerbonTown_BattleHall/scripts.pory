@@ -421,6 +421,7 @@ script GerbonBattleHall_TournamentPlayerWon {
         setvar(VAR_ZED_STORY_TRACKER, 9)
         delay(30)
         clearflag(FLAG_GERBON_TOWN_BLOCKERS)
+        clearflag(FLAG_GERBONTOURNEY_ENABLED)
         setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
         clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
         warp(MAP_OLDALE_TOWN, 28, 14)

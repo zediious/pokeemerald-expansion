@@ -26,3 +26,128 @@ script Gerbon_HealerChansey {
     closemessage
     release
 }
+
+//// NPCs
+
+// Old man by counter
+script GerbonPokemonCenter_CounterOldMan{
+    lock
+    faceplayer
+    setspeaker("Old Man")
+    msgbox("Pokemon Centers will always heal your
+            Pokemon to full health, for no charge!
+            
+            Never hesitate to use one!")
+    waitmessage
+    release
+    end
+}
+
+// Rich Boy and his Tadbulb near entrance, only there before Gerbon tournament
+script GerbonPokemonCenter_RichBoyPreTourney{
+    lock
+    faceplayer
+    setspeaker("Rich Boy")
+    msgbox("Let's go train a bit more Tadbulb!
+            {COLOR RED}The Tournament{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is going to be tough, we
+            need every edge we can get!")
+    waitmessage
+    setspeaker("Tadbulb")
+    playmoncry(SPECIES_TADBULB, CRY_MODE_NORMAL)
+    msgbox("Ie-eio-oo-wea!")
+    waitmessage
+    waitmoncry
+    release
+    end
+}
+
+script GerbonPokemonCenter_RichBoyPreTourneyMon{
+    lock
+    faceplayer
+    setspeaker("Tadbulb")
+    playmoncry(SPECIES_TADBULB, CRY_MODE_NORMAL)
+    msgbox("Ie-eio-oo-wea!")
+    waitmessage
+    waitmoncry
+    release
+    end
+}
+
+// Camper at top left chair, only there after Gerbon Tournament
+script GerbonPokemonCenter_ChairCamperPostTourney{
+    lock
+    faceplayer
+    setspeaker("Camper")
+    msgbox("I'm getting ready to go camping in
+            the Sawgrass Forest!
+            
+            ...
+            
+            You don't think it's a good place? My
+            friend told me it was! Maybe they were
+            pranking me...")
+    waitmessage
+    release
+    end
+}
+
+// Pokefan and his Pokemon at bottom-right table, gives a heart scale
+script GerbonPokemonCenter_TablePokefan{
+    lock
+    faceplayer
+    setspeaker("Pokefan")
+    msgbox("My Pokemon are so sweet, I love them so
+            dearly!")
+    waitmessage
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_CLEFFA, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_LOTAD, CRY_MODE_NORMAL)
+    msgbox("The man's Pokemon seem to concur!")
+    waitmessage
+    waitmoncry
+    if (!flag(FLAG_GERBON_POKEFAN_HEARTSCALE)) {
+        setspeaker("Pokefan")
+        msgbox("I must spread this love! Take this!")
+        waitmessage
+        giveitem(ITEM_HEART_SCALE, 1)
+        setflag(FLAG_GERBON_POKEFAN_HEARTSCALE)
+    }
+    release
+    end
+}
+
+script GerbonPokemonCenter_TablePokefanLotad{
+    lock
+    faceplayer
+    setspeaker("Lotad")
+    playmoncry(SPECIES_LOTAD, CRY_MODE_NORMAL)
+    msgbox("Ee-e!")
+    waitmessage
+    waitmoncry
+    release
+    end
+}
+
+script GerbonPokemonCenter_TablePokefanCleffa{
+    lock
+    faceplayer
+    setspeaker("Cleffa")
+    playmoncry(SPECIES_CLEFFA, CRY_MODE_NORMAL)
+    msgbox("Ee-aaa-uu!")
+    waitmessage
+    waitmoncry
+    release
+    end
+}
+
+script GerbonPokemonCenter_TablePokefanAzurill{
+    lock
+    faceplayer
+    setspeaker("Azurill")
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    msgbox("Iiiii-eiiii!")
+    waitmessage
+    waitmoncry
+    release
+    end
+}

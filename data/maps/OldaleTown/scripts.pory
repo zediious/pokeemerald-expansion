@@ -33,6 +33,9 @@ script GerbonTown_BattleHallDisables{
     setflag(FLAG_GERBON_TOURNEY_TRAINER04)
     setflag(FLAG_GERBON_TOURNEY_TRAINER05)
 
+    // Disable events that only appear after tourney completes
+    setflag(FLAG_GERBONTOURNEY_ENABLED)
+
     // Prevent from triggering again
     setvar(VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1)
     end

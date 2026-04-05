@@ -511,12 +511,14 @@ GerbonBattleHall_TournamentPlayerWon::
 # 423 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	clearflag FLAG_GERBON_TOWN_BLOCKERS
 # 424 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	clearflag FLAG_GERBONTOURNEY_ENABLED
 # 425 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 426 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	warp MAP_OLDALE_TOWN, 28, 14
+	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 427 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	warp MAP_OLDALE_TOWN, 28, 14
+# 428 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	release
 	end
 

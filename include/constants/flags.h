@@ -737,9 +737,9 @@
 #define FLAG_IGRISDESERT_PASSED                 0x2AA // Used to raise level cap between Ribbon/Gym 2 and 3
 #define FLAG_OLDMANJOURNAL_EARLY                0x2AB // If the player found Old Man's journal before starting the quest
 #define FLAG_GERBON_RUVELMOMKID                 0x2AC // The mom and lost child from Ruvel Pyrami, in Gerbon town before/after event
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
+#define FLAG_GERBONTOURNEY_DISABLED             0x2AD // Object events that are disabled after the Gerbon Tourney is completed
+#define FLAG_GERBONTOURNEY_ENABLED              0x2AE // Object events that are enabled after the Gerbon Tourney is completed
+#define FLAG_GERBON_POKEFAN_HEARTSCALE          0x2AF // Whether play got Heart Scale from Pokefan in Gerbon Town
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
