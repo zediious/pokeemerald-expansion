@@ -1,68 +1,83 @@
 OldaleTown_Mart_MapScripts::
 	.byte 0
 
-OldaleTown_Mart_EventScript_Clerk::
+
+GerbonTown_PokeMart_Employee::
+# 4 "data/maps/OldaleTown_Mart/scripts.pory"
 	lock
-	faceplayer
-	message gText_HowMayIServeYou
+# 5 "data/maps/OldaleTown_Mart/scripts.pory"
+	msgbox GerbonTown_PokeMart_Employee_Text_0
+# 7 "data/maps/OldaleTown_Mart/scripts.pory"
 	waitmessage
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_ExpandedItems
-	pokemart OldaleTown_Mart_Pokemart_Basic
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+# 8 "data/maps/OldaleTown_Mart/scripts.pory"
+	compare VAR_ZED_STORY_TRACKER, 6
+	goto_if_ge GerbonTown_PokeMart_Employee_2
+# 14 "data/maps/OldaleTown_Mart/scripts.pory"
+	pokemart GerbonTown_PreRoute110__MartItems
+GerbonTown_PokeMart_Employee_1:
+# 16 "data/maps/OldaleTown_Mart/scripts.pory"
+	msgbox GerbonTown_PokeMart_Employee_Text_1
+# 17 "data/maps/OldaleTown_Mart/scripts.pory"
+	waitmessage
+# 18 "data/maps/OldaleTown_Mart/scripts.pory"
 	release
 	end
 
-	.align 2
-OldaleTown_Mart_Pokemart_Basic:
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	pokemartlistend
+GerbonTown_PokeMart_Employee_2:
+# 10 "data/maps/OldaleTown_Mart/scripts.pory"
+	pokemart GerbonTown_PostRoute110__MartItems
+	goto GerbonTown_PokeMart_Employee_1
 
-OldaleTown_Mart_ExpandedItems::
-	pokemart OldaleTown_Mart_Pokemart_Expanded
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
 
 	.align 2
-OldaleTown_Mart_Pokemart_Expanded:
+# 22 "data/maps/OldaleTown_Mart/scripts.pory"
+GerbonTown_PreRoute110__MartItems:
+# 23 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_POKE_BALL
+# 24 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_POTION
+# 25 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_ANTIDOTE
+# 26 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_PARALYZE_HEAL
+# 27 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_BURN_HEAL
+# 28 "data/maps/OldaleTown_Mart/scripts.pory"
 	.2byte ITEM_AWAKENING
-	pokemartlistend
+# 29 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
 
-OldaleTown_Mart_EventScript_Woman::
-	lock
-	faceplayer
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_PokeBallsInStock
-	msgbox OldaleTown_Mart_Text_PokeBallsAreSoldOut, MSGBOX_DEFAULT
-	release
-	end
+	.align 2
+# 32 "data/maps/OldaleTown_Mart/scripts.pory"
+GerbonTown_PostRoute110__MartItems:
+# 33 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_POKE_BALL
+# 34 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_GREAT_BALL
+# 35 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_POTION
+# 36 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_SUPER_POTION
+# 37 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_ANTIDOTE
+# 38 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_PARALYZE_HEAL
+# 39 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_BURN_HEAL
+# 40 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_AWAKENING
+# 41 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_REPEL
+# 42 "data/maps/OldaleTown_Mart/scripts.pory"
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_NONE
 
-OldaleTown_Mart_EventScript_PokeBallsInStock::
-	msgbox OldaleTown_Mart_Text_ImGoingToBuyPokeBalls, MSGBOX_DEFAULT
-	release
-	end
+GerbonTown_PokeMart_Employee_Text_0:
+# 5 "data/maps/OldaleTown_Mart/scripts.pory"
+	.string "Welcome!\n"
+	.string "How may I serve you?$"
 
-OldaleTown_Mart_EventScript_Boy::
-	msgbox OldaleTown_Mart_Text_RestoreHPWithPotion, MSGBOX_NPC
-	end
-
-OldaleTown_Mart_Text_PokeBallsAreSoldOut:
-	.string "The clerk says they're all sold out.\n"
-	.string "I can't buy any POKé BALLS.$"
-
-OldaleTown_Mart_Text_ImGoingToBuyPokeBalls:
-	.string "I'm going to buy a bunch of POKé BALLS\n"
-	.string "and catch a bunch of POKéMON!$"
-
-OldaleTown_Mart_Text_RestoreHPWithPotion:
-	.string "If a POKéMON gets hurt and loses its HP\n"
-	.string "and faints, it won't be able to battle.\p"
-	.string "To prevent your POKéMON from fainting,\n"
-	.string "restore its HP with a POTION.$"
-
+GerbonTown_PokeMart_Employee_Text_1:
+# 16 "data/maps/OldaleTown_Mart/scripts.pory"
+	.string "Please come again!$"

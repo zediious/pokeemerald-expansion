@@ -1,0 +1,43 @@
+mapscripts OldaleTown_Mart_MapScripts {}
+
+script GerbonTown_PokeMart_Employee {
+    lock
+    msgbox("Welcome!
+            How may I serve you?")
+    waitmessage
+    if (var(VAR_ZED_STORY_TRACKER) >= 6)
+    {
+        pokemart(GerbonTown_PostRoute110__MartItems)
+    }
+    else
+    {
+        pokemart(GerbonTown_PreRoute110__MartItems)
+    }
+    msgbox("Please come again!")
+    waitmessage
+    release
+    end
+}
+
+mart GerbonTown_PreRoute110__MartItems {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_AWAKENING
+    ITEM_REPEL
+}
+
+mart GerbonTown_PostRoute110__MartItems {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_AWAKENING
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+}
