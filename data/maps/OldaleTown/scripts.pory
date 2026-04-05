@@ -328,6 +328,13 @@ script GerbonTown_OutdoorBattleEnd {
     removeobject(ZED_Sawgrass_Blockage_Sailor, MAP_LITTLEROOT_TOWN)
     removeobject(ZED_Sawgrass_Blockage_Fearow, MAP_LITTLEROOT_TOWN)
 
+    // Let player know about level cap
+    setflag(FLAG_CAP_BEFORE_FIRSTRIVAL)
+    playfanfare(MUS_LEVEL_UP)
+    msgbox("The level cap has been raised to 18!", MSGBOX_SIGN)
+    waitfanfare
+    waitmessage
+
     // Show messagebox that main quest is updated, and play chime
     questupdated(0)
 
