@@ -27,7 +27,7 @@
   "object_events": [
     {
       "local_id": "GERBON_KID_RUNNING_CRASH",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 10,
       "y": 14,
       "elevation": 0,
