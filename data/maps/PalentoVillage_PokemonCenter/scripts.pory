@@ -49,9 +49,6 @@ mart PalentoVillage_MartItems {
     ITEM_PARALYZE_HEAL
     ITEM_BURN_HEAL
     ITEM_AWAKENING
-    ITEM_REPEL
-    ITEM_SUPER_REPEL
-    ITEM_MAX_REPEL
 }
 
 // Jordan resting

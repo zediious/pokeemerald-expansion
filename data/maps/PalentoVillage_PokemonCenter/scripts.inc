@@ -81,24 +81,18 @@ PalentoVillage_MartItems:
 	.2byte ITEM_BURN_HEAL
 # 51 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.2byte ITEM_AWAKENING
-# 52 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_REPEL
-# 53 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_SUPER_REPEL
-# 54 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_NONE
 
 PalentoVillagePokeCenter_JordanResting::
-# 59 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 56 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	lock
-# 60 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 57 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	faceplayer
-# 61 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 58 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	msgbox PalentoVillagePokeCenter_JordanResting_Text_0
-# 67 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 64 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	waitmessage
-# 68 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 65 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	release
 	end
 
@@ -117,7 +111,7 @@ PalentoVillage_PokeMart_Employee_Text_1:
 	.string "Please come again!$"
 
 PalentoVillagePokeCenter_JordanResting_Text_0:
-# 61 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 58 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi {PLAYER}!\n"
 	.string "This Pokemon Center is pretty cool\l"
 	.string "right? Both the mart and the nurse\l"

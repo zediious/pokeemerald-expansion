@@ -65,12 +65,12 @@ JumpToPreWoltiaTourney_2:
 	setflag FLAG_BADGE01_GET
 # 37 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_EXP_SHARE, 1
-# 39 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 38 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_ULTRA_REPEL, 1
+# 40 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_TM_ROCK_TOMB, 1
-# 41 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
 # 42 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_MAX_REPEL, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
 # 43 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_GREAT_BALL, 20
 # 44 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
@@ -156,16 +156,16 @@ JumpToRuvelPyramid_2:
 	setflag FLAG_BADGE02_GET
 # 91 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_EXP_SHARE, 1
-# 93 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_HM_CUT, 1
+# 92 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_ULTRA_REPEL, 1
 # 94 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_ROCK_TOMB, 1
+	giveitem ITEM_HM_CUT, 1
 # 95 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TM_ROCK_TOMB, 1
+# 96 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_TM_AERIAL_ACE, 1
-# 97 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
 # 98 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_MAX_REPEL, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
 # 99 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_GREAT_BALL, 20
 # 100 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
@@ -277,16 +277,16 @@ JumpToIgrisPart2_2:
 	setflag FLAG_BADGE02_GET
 # 160 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_EXP_SHARE, 1
-# 162 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_HM_CUT, 1
+# 161 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_ULTRA_REPEL, 1
 # 163 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_ROCK_TOMB, 1
+	giveitem ITEM_HM_CUT, 1
 # 164 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TM_ROCK_TOMB, 1
+# 165 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_TM_AERIAL_ACE, 1
-# 166 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
 # 167 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_MAX_REPEL, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
 # 168 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_GREAT_BALL, 20
 # 169 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
