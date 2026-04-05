@@ -139,10 +139,12 @@ SawgrassVillage_AwakenAfterRoute110::
 # 162 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	fadedefaultbgm
 # 163 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	delay 30
+	special HealPlayerParty
 # 164 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	questupdated 0
+	delay 30
 # 165 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	questupdated 0
+# 166 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 

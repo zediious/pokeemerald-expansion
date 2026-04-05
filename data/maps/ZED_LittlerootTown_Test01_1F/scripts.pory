@@ -160,6 +160,7 @@ script SawgrassVillage_AwakenAfterRoute110 {
     clearflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
     waitse
     fadedefaultbgm
+    special(HealPlayerParty)
     delay(30)
     questupdated(0)
     release
