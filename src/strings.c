@@ -1452,3 +1452,13 @@ const u8 gText_SubQuest2_Desc20[] = _("Description Sub 20");
 
 // Vending Machine
 const u8 gText_AnyMoreVending[] = _("Do I want anything else?");
+
+// Options Page 2
+const u8 gText_SmallDot[] = _("·");
+const u8 gText_LargeDot[] = _("{EMOJI_CIRCLE}");
+const u8 gText_PageNav[] = _("{L_BUTTON}{R_BUTTON} PAGE");
+
+// New Options
+const u8 gText_SwitchBehavior[] = _("One Switch");
+const u8 gText_SwitchBehavior_Option01[] = _("No");
+const u8 gText_SwitchBehavior_Option02[] = _("Yes");

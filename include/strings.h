@@ -220,6 +220,16 @@ extern const u8 gText_FemaleSymbol[];
 extern const u8 gText_SelectorArrow3[];
 extern const u8 gText_YesNo[];
 
+// Options Page 2
+extern const u8 gText_SmallDot[];
+extern const u8 gText_LargeDot[];
+extern const u8 gText_PageNav[];
+
+// Switch Option
+extern const u8 gText_SwitchBehavior[];
+extern const u8 gText_SwitchBehavior_Option01[];
+extern const u8 gText_SwitchBehavior_Option02[];
+
 // main menu/birch speech text
 extern const u8 gText_Birch_Welcome[];
 extern const u8 gText_ThisIsAPokemon[];
