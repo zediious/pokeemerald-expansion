@@ -673,7 +673,7 @@
 #define FLAG_UNUSED_0x26A                       0x26A // Dexnav
 #define FLAG_EXP_SHARE                          0x26B // EXP Share
 #define FLAG_ORAS_DOWSING                       0x26C // Dowsing Machine
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
+#define FLAG_BATTLE_PLAYER_SWITCHED             0x26D // Indicates if player switched after KO during a battle
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag

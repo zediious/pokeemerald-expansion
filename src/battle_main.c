@@ -5528,6 +5528,7 @@ static void HandleEndTurn_BattleWon(void)
         gBattlescriptCurrInstr = BattleScript_PayDayMoneyAndPickUpItems;
     }
 
+    FlagClear(FLAG_BATTLE_PLAYER_SWITCHED);
     gBattleMainFunc = HandleEndTurn_FinishBattle;
 }
 
