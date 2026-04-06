@@ -669,8 +669,8 @@
 #define FLAG_DEXNAV_SEARCHING                   0x266 // Dexnav
 #define FLAG_DEXNAV_STARTMENU                   0x267 // Dexnav
 #define FLAG_DEXNAV_FINDHIDDENMON               0x268 // Dexnav
-#define FLAG_DEXNAV_REGISTEREDSPECIES           0x269 // Dexnav
-#define FLAG_DEXNAV_STEPSFIND                   0x26A // Dexnav
+#define FLAG_UNUSED_0x269 0x269 // Unused Flag
+#define FLAG_UNUSED_0x26A 0x26A // Unused Flag
 #define FLAG_EXP_SHARE                          0x26B // EXP Share
 #define FLAG_ORAS_DOWSING                       0x26C // Dowsing Machine
 #define FLAG_BATTLE_PLAYER_SWITCHED             0x26D // Indicates if player switched after KO during a battle
