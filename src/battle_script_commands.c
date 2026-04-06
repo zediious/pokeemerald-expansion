@@ -11635,6 +11635,28 @@ void BS_JumpIfMoreThanHalfHP(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_JumpIfFlagSet(void)
+{
+    NATIVE_ARGS(u16 flag, const u8 *jumpInstr);
+
+    if (FlagGet(cmd->flag))
+        gBattlescriptCurrInstr = cmd->jumpInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_FlagSet(void)
+{
+    NATIVE_ARGS(u16 flag);
+    FlagSet(cmd->flag);
+}
+
+void BS_FlagClear(void)
+{
+    NATIVE_ARGS(u16 flag);
+    FlagClear(cmd->flag);
+}
+
 void BS_DoStockpileStatChangesWearOff(void)
 {
     NATIVE_ARGS(u8 battler, const u8 *statChangeInstr);
