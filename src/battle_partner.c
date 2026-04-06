@@ -5,6 +5,7 @@
 #include "battle_frontier.h"
 #include "data.h"
 #include "frontier_util.h"
+#include "scaling.h"
 #include "difficulty.h"
 #include "string_util.h"
 #include "text.h"
@@ -37,10 +38,16 @@ void FillPartnerParty(u16 trainerId)
     {
         for (i = 0; i < 3; i++)
             ZeroMonData(&gPlayerParty[i + 3]);
-
+        
+        // Scale the partner's pokemon
+        struct TrainerMon *partyData;
+        struct Trainer partnerTrainer = gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)];
+        struct TrainerMon scaledParty[partnerTrainer.partySize];
+        memcpy(scaledParty, partnerTrainer.party, partnerTrainer.partySize * sizeof(struct TrainerMon));
+        partyData = ScaleTrainerMons(partnerTrainer.partySize, scaledParty, FALSE, TRUE);
+         
         for (i = 0; i < 3 && i < gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].partySize; i++)
         {
-            const struct TrainerMon *partyData = gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].party;
             const u8 *partnerName = gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName;
 
             for (k = 0; partnerName[k] != EOS && k < 3; k++)
