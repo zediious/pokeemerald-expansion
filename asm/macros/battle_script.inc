@@ -1260,20 +1260,20 @@
 	.4byte \jumpInstr
 	.endm
 
-	.macro jumpifflagset flag:req jumpInstr:req
+	.macro jumpifflagset flag:req, jumpInstr:req
 	callnative BS_JumpIfFlagSet
-	.byte \flag
+	.2byte \flag
 	.4byte \jumpInstr
 	.endm
 
 	.macro flagset flag:req
 	callnative BS_FlagSet
-	.byte \flag
+	.2byte \flag
 	.endm
 
 	.macro flagclear flag:req
 	callnative BS_FlagClear
-	.byte \flag
+	.2byte \flag
 	.endm
 
 	.macro itemrestorehp jumpInstr:req, restoreBattlerInstr:req

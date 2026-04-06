@@ -11649,12 +11649,14 @@ void BS_FlagSet(void)
 {
     NATIVE_ARGS(u16 flag);
     FlagSet(cmd->flag);
+    gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
 void BS_FlagClear(void)
 {
     NATIVE_ARGS(u16 flag);
     FlagClear(cmd->flag);
+    gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
 void BS_DoStockpileStatChangesWearOff(void)
