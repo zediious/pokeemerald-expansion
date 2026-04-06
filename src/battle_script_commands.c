@@ -11659,6 +11659,25 @@ void BS_FlagClear(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
+void BS_DetermineSwitchBehavior(void)
+{
+    NATIVE_ARGS(const u8 *jumpInstr01);
+
+    switch (VarGet(VAR_SWITCHBEHAVIOR_SETTING))
+    {
+        case 1: // Player can only switch Pokemon after KO once per battle
+            if (FlagGet(FLAG_BATTLE_PLAYER_SWITCHED))
+                gBattlescriptCurrInstr = cmd->jumpInstr01;
+            else
+                gBattlescriptCurrInstr = cmd->nextInstr;
+            break;
+
+        default: // Vanilla behavior
+            gBattlescriptCurrInstr = cmd->nextInstr;
+            break;
+    }
+}
+
 void BS_DoStockpileStatChangesWearOff(void)
 {
     NATIVE_ARGS(u8 battler, const u8 *statChangeInstr);

@@ -1276,6 +1276,11 @@
 	.2byte \flag
 	.endm
 
+	.macro determineswitchbehavior jumpInstr01:req
+	callnative BS_DetermineSwitchBehavior
+	.4byte \jumpInstr01
+	.endm
+
 	.macro itemrestorehp jumpInstr:req, restoreBattlerInstr:req
 	callnative BS_ItemRestoreHP
 	.4byte \jumpInstr
