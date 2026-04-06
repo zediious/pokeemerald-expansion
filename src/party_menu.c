@@ -1438,6 +1438,10 @@ void Task_HandleChooseMonInput(u8 taskId)
                 MoveCursorToConfirm();
             }
             break;
+        case SELECT_BUTTON:
+            PlaySE(SE_SELECT);
+            CursorCb_Switch(taskId);
+            break;
         }
     }
 }
@@ -1712,6 +1716,9 @@ static u16 PartyMenuButtonHandler(s8 *slotPtr)
 
     if (JOY_NEW(START_BUTTON))
         return START_BUTTON;
+
+    if (JOY_NEW(SELECT_BUTTON))
+        return SELECT_BUTTON;
 
     if (movementDir && gPlayerPartyCount != 0)
     {
