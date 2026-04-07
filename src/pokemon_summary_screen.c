@@ -1231,7 +1231,7 @@ void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, 
         sMonSummaryScreen->lockMovesFlag = TRUE;
         break;
     case SUMMARY_MODE_SELECT_MOVE:
-        sMonSummaryScreen->minPageIndex = PSS_PAGE_BATTLE_MOVES;
+        sMonSummaryScreen->minPageIndex = PSS_PAGE_SKILLS;
         sMonSummaryScreen->maxPageIndex = PSS_PAGE_COUNT - 1;
         sMonSummaryScreen->lockMonFlag = TRUE;
         break;
@@ -1241,6 +1241,11 @@ void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, 
         sMonSummaryScreen->currPageIndex = PSS_PAGE_BATTLE_MOVES;
     else if (mode == SUMMARY_MODE_RELEARNER_CONTEST)
         sMonSummaryScreen->currPageIndex = PSS_PAGE_CONTEST_MOVES;
+    else if (mode == SUMMARY_MODE_SELECT_MOVE)
+    {
+        sMonSummaryScreen->currPageIndex = PSS_PAGE_BATTLE_MOVES;
+        sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
+    }  
     else
         sMonSummaryScreen->currPageIndex = sMonSummaryScreen->minPageIndex;
 
