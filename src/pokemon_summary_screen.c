@@ -2351,23 +2351,63 @@ static void PssScrollLeft(u8 taskId) // Scroll left
     // to fix a specific lag in writing to the stat label
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
         ChangeStatLabel(SUMMARY_SKILLS_MODE_STATS);
+
+    // If in SUMMARY_MODE_SELECT_MOVE, this function needs to behave similarly to
+    // PssScrollRight to support scrolling left as a first action. Otherwise, we use
+    // original functionality that does not expect scrolling left as a first action.
+    if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+    {
     if (data[0] == 0)
     {
         if (sMonSummaryScreen->bgDisplayOrder == 0)
+            {
             data[1] = 2;
+                SetBgAttribute(2, BG_ATTR_PRIORITY, 1);
+                SetBgAttribute(1, BG_ATTR_PRIORITY, 2);
+                SetBgTilemapBuffer(1, sMonSummaryScreen->bgTilemapBuffers[sMonSummaryScreen->currPageIndex][0]);
+                ScheduleBgCopyTilemapToVram(2);
+            }
         else
+            {
             data[1] = 1;
+                SetBgAttribute(1, BG_ATTR_PRIORITY, 1);
+                SetBgAttribute(2, BG_ATTR_PRIORITY, 2);
+                SetBgTilemapBuffer(2, sMonSummaryScreen->bgTilemapBuffers[sMonSummaryScreen->currPageIndex][0]);
+                ScheduleBgCopyTilemapToVram(1);        
+            }
+
         ChangeBgX(data[1], 0x10000, BG_COORD_SET);
+            ShowBg(1);
+            ShowBg(2);
     }
+
     ChangeBgX(data[1], 0x2000, BG_COORD_SUB);
     data[0] += 32;
     if (data[0] > 0xFF)
         gTasks[taskId].func = PssScrollLeftEnd;
+    }
+    else
+    {
+        if (data[0] == 0)
+        {
+            if (sMonSummaryScreen->bgDisplayOrder == 0)
+                data[1] = 2;
+            else
+                data[1] = 1;
+            ChangeBgX(data[1], 0x10000, BG_COORD_SET);
+        }
+        ChangeBgX(data[1], 0x2000, BG_COORD_SUB);
+        data[0] += 32;
+        if (data[0] > 0xFF)
+            gTasks[taskId].func = PssScrollLeftEnd;
+    }
 }
 
 static void PssScrollLeftEnd(u8 taskId) // display left
 {
     s16 *data = gTasks[taskId].data;
+    if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE)
+    {
     if (sMonSummaryScreen->bgDisplayOrder == 0)
     {
         SetBgAttribute(1, BG_ATTR_PRIORITY, 1);
@@ -2387,6 +2427,7 @@ static void PssScrollLeftEnd(u8 taskId) // display left
     }
     ShowBg(1);
     ShowBg(2);
+    }
     sMonSummaryScreen->bgDisplayOrder ^= 1;
     data[1] = 0;
     data[0] = 0;
