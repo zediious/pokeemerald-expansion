@@ -1610,6 +1610,20 @@ static void SetDefaultTilemaps(void)
         ShowBg(1);
         ShowBg(2);
     }
+    else if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+    {
+        sMonSummaryScreen->bgDisplayOrder = 2;
+        SetBgTilemapBuffer(2, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_SKILLS][0]);
+        SetBgTilemapBuffer(1, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][0]);
+        SetBgAttribute(1, BG_ATTR_PRIORITY, 1);
+        SetBgAttribute(2, BG_ATTR_PRIORITY, 2);
+        ChangeBgX(1, 0x10000, BG_COORD_SET);
+        ChangeBgX(2, 0x10000, BG_COORD_SET);
+        ScheduleBgCopyTilemapToVram(1);
+        ScheduleBgCopyTilemapToVram(2);
+        ShowBg(1);
+        ShowBg(2);
+    }
     else if (sMonSummaryScreen->mode == SUMMARY_MODE_RELEARNER_CONTEST)
     {
         sMonSummaryScreen->bgDisplayOrder = 1;
@@ -2357,34 +2371,34 @@ static void PssScrollLeft(u8 taskId) // Scroll left
     // original functionality that does not expect scrolling left as a first action.
     if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
     {
-    if (data[0] == 0)
-    {
-        if (sMonSummaryScreen->bgDisplayOrder == 0)
+        if (data[0] == 0)
+        {
+            if (sMonSummaryScreen->bgDisplayOrder == 0)
             {
-            data[1] = 2;
+                data[1] = 2;
                 SetBgAttribute(2, BG_ATTR_PRIORITY, 1);
                 SetBgAttribute(1, BG_ATTR_PRIORITY, 2);
                 SetBgTilemapBuffer(1, sMonSummaryScreen->bgTilemapBuffers[sMonSummaryScreen->currPageIndex][0]);
                 ScheduleBgCopyTilemapToVram(2);
             }
-        else
+            else
             {
-            data[1] = 1;
+                data[1] = 1;
                 SetBgAttribute(1, BG_ATTR_PRIORITY, 1);
                 SetBgAttribute(2, BG_ATTR_PRIORITY, 2);
                 SetBgTilemapBuffer(2, sMonSummaryScreen->bgTilemapBuffers[sMonSummaryScreen->currPageIndex][0]);
                 ScheduleBgCopyTilemapToVram(1);        
             }
 
-        ChangeBgX(data[1], 0x10000, BG_COORD_SET);
+            ChangeBgX(data[1], 0x10000, BG_COORD_SET);
             ShowBg(1);
             ShowBg(2);
-    }
+        }
 
-    ChangeBgX(data[1], 0x2000, BG_COORD_SUB);
-    data[0] += 32;
-    if (data[0] > 0xFF)
-        gTasks[taskId].func = PssScrollLeftEnd;
+        ChangeBgX(data[1], 0x2000, BG_COORD_SUB);
+        data[0] += 32;
+        if (data[0] > 0xFF)
+            gTasks[taskId].func = PssScrollLeftEnd;
     }
     else
     {
@@ -2408,25 +2422,25 @@ static void PssScrollLeftEnd(u8 taskId) // display left
     s16 *data = gTasks[taskId].data;
     if (sMonSummaryScreen->mode != SUMMARY_MODE_SELECT_MOVE)
     {
-    if (sMonSummaryScreen->bgDisplayOrder == 0)
-    {
-        SetBgAttribute(1, BG_ATTR_PRIORITY, 1);
-        SetBgAttribute(2, BG_ATTR_PRIORITY, 2);
-        ScheduleBgCopyTilemapToVram(2);
-    }
-    else
-    {
-        SetBgAttribute(2, BG_ATTR_PRIORITY, 1);
-        SetBgAttribute(1, BG_ATTR_PRIORITY, 2);
-        ScheduleBgCopyTilemapToVram(1);
-    }
-    if (sMonSummaryScreen->currPageIndex > 1)
-    {
-        SetBgTilemapBuffer(data[1], sMonSummaryScreen->bgTilemapBuffers[sMonSummaryScreen->currPageIndex - 1][0]);
-        ChangeBgX(data[1], 0x10000, BG_COORD_SET);
-    }
-    ShowBg(1);
-    ShowBg(2);
+        if (sMonSummaryScreen->bgDisplayOrder == 0)
+        {
+            SetBgAttribute(1, BG_ATTR_PRIORITY, 1);
+            SetBgAttribute(2, BG_ATTR_PRIORITY, 2);
+            ScheduleBgCopyTilemapToVram(2);
+        }
+        else
+        {
+            SetBgAttribute(2, BG_ATTR_PRIORITY, 1);
+            SetBgAttribute(1, BG_ATTR_PRIORITY, 2);
+            ScheduleBgCopyTilemapToVram(1);
+        }
+        if (sMonSummaryScreen->currPageIndex > 1)
+        {
+            SetBgTilemapBuffer(data[1], sMonSummaryScreen->bgTilemapBuffers[sMonSummaryScreen->currPageIndex - 1][0]);
+            ChangeBgX(data[1], 0x10000, BG_COORD_SET);
+        }
+        ShowBg(1);
+        ShowBg(2);
     }
     sMonSummaryScreen->bgDisplayOrder ^= 1;
     data[1] = 0;
@@ -2803,20 +2817,20 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
             else if (JOY_NEW(A_BUTTON))
             {   
                 if ( (currPageIndex == PSS_PAGE_BATTLE_MOVES) || ((currPageIndex == PSS_PAGE_CONTEST_MOVES)) )
-            {
-                if (CanReplaceMove() == TRUE)
                 {
-                    StopPokemonAnimations();
-                    PlaySE(SE_SELECT);
-                    sMoveSlotToReplace = sMonSummaryScreen->firstMoveIndex;
-                    gSpecialVar_0x8005 = sMoveSlotToReplace;
-                    gSpecialVar_Result = TRUE;
-                    BeginCloseSummaryScreen(taskId);
-                }
-                else
-                {
-                    PlaySE(SE_FAILURE);
-                    ShowCantForgetHMsWindow(taskId);
+                    if (CanReplaceMove() == TRUE)
+                    {
+                        StopPokemonAnimations();
+                        PlaySE(SE_SELECT);
+                        sMoveSlotToReplace = sMonSummaryScreen->firstMoveIndex;
+                        gSpecialVar_0x8005 = sMoveSlotToReplace;
+                        gSpecialVar_Result = TRUE;
+                        BeginCloseSummaryScreen(taskId);
+                    }
+                    else
+                    {
+                        PlaySE(SE_FAILURE);
+                        ShowCantForgetHMsWindow(taskId);
                     }
                 }
             }
