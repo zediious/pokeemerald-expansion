@@ -2283,7 +2283,10 @@ static void ChangePage(u8 taskId, s8 delta)
         struct Pokemon *mon = &sMonSummaryScreen->currentMon;
 
         if (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE)
+        {
             sMonSummaryScreen->lockMovesFlag = TRUE;
+            DestroyMoveSelectorSprites(SPRITE_ARR_ID_MOVE_SELECTOR1);
+        }
 
         if (sMonSummaryScreen->skillsPageMode != SUMMARY_SKILLS_MODE_STATS)
             sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
@@ -2306,7 +2309,10 @@ static void ChangePage(u8 taskId, s8 delta)
     }
 
     if ( (currPageIndex == PSS_PAGE_BATTLE_MOVES) && (sMonSummaryScreen->mode == SUMMARY_MODE_SELECT_MOVE) )
+    {
         sMonSummaryScreen->lockMovesFlag = FALSE;
+        CreateMoveSelectorSprites(SPRITE_ARR_ID_MOVE_SELECTOR1);
+    }
 
     // to prevent nothing showing
     if (currPageIndex >= PSS_PAGE_BATTLE_MOVES && !sMonSummaryScreen->hasRelearnableMoves)
