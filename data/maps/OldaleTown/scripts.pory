@@ -239,8 +239,7 @@ script GerbonTown_OutdoorBattleTrigger{
     if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
         trainerbattle_single(
             TRAINER_BRENDAN_ROUTE_103_TREECKO,
-            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
-            talking about! Let's go!",
+            "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
             event_script=GerbonTown_OutdoorBattleEnd
@@ -249,8 +248,7 @@ script GerbonTown_OutdoorBattleTrigger{
     elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
         trainerbattle_single(
             TRAINER_BRENDAN_ROUTE_110_MUDKIP,
-            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
-            talking about! Let's go!",
+            "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
             event_script=GerbonTown_OutdoorBattleEnd
@@ -259,8 +257,7 @@ script GerbonTown_OutdoorBattleTrigger{
     elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
         trainerbattle_single(
             TRAINER_BRENDAN_ROUTE_119_MUDKIP,
-            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}That's what I'm
-            talking about! Let's go!",
+            "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
             event_script=GerbonTown_OutdoorBattleEnd
@@ -269,8 +266,7 @@ script GerbonTown_OutdoorBattleTrigger{
     elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
         trainerbattle_single(
             TRAINER_BRENDAN_ROUTE_103_MUDKIP,
-            "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That's what I'm
-            talking about! Let's go!",
+            "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
             event_script=GerbonTown_OutdoorBattleEnd
@@ -367,7 +363,8 @@ script GerbonTownTourney_JordanStartOutside {
             can't leave once the tournament has
             started!", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Great! Let's go!")
+        setspeaker("Jordan")
+        msgbox("Great! Let's go!")
         waitmessage
         setflag(FLAG_GERBON_FIRSTSHOW_JULIA)
         setflag(FLAG_GERBON_FIRSTSHOW_CANDACE)

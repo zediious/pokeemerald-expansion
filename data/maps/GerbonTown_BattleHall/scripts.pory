@@ -264,8 +264,9 @@ script GerbonBattleHall_TournamentBattle {
         )
     }
     elif (var(VAR_GERBON_TOURNAMENT_STATE) == 5) {
-        msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}! We both made it to
-                the end! It all comes down to this!")
+        setspeaker("Jordan")
+        msgbox("{PLAYER}! We both made it to the end!
+                It all comes down to this!")
         waitmessage
 
         // Determine Jordan starter
