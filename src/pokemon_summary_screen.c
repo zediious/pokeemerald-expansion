@@ -2723,6 +2723,7 @@ static void Task_SetHandleReplaceMoveInput(u8 taskId)
 static void Task_HandleReplaceMoveInput(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
+    u32 currPageIndex = sMonSummaryScreen->currPageIndex;
 
     if (MenuHelpers_ShouldWaitForLinkRecv() != TRUE)
     {
@@ -2730,13 +2731,19 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
         {
             if (JOY_NEW(DPAD_UP))
             {
+                if ( (currPageIndex == PSS_PAGE_BATTLE_MOVES) || ((currPageIndex == PSS_PAGE_CONTEST_MOVES)) )
+            {
                 data[0] = 4;
                 ChangeSelectedMove(data, -1, &sMonSummaryScreen->firstMoveIndex);
+                }
             }
             else if (JOY_NEW(DPAD_DOWN))
             {
+                if ( (currPageIndex == PSS_PAGE_BATTLE_MOVES) || ((currPageIndex == PSS_PAGE_CONTEST_MOVES)) )
+            {
                 data[0] = 4;
                 ChangeSelectedMove(data, 1, &sMonSummaryScreen->firstMoveIndex);
+                }
             }
             else if (JOY_NEW(DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
             {
@@ -2747,6 +2754,8 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
                 ChangePage(taskId, 1);
             }
             else if (JOY_NEW(A_BUTTON))
+            {   
+                if ( (currPageIndex == PSS_PAGE_BATTLE_MOVES) || ((currPageIndex == PSS_PAGE_CONTEST_MOVES)) )
             {
                 if (CanReplaceMove() == TRUE)
                 {
@@ -2761,6 +2770,7 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
                 {
                     PlaySE(SE_FAILURE);
                     ShowCantForgetHMsWindow(taskId);
+                    }
                 }
             }
             else if (JOY_NEW(B_BUTTON))
