@@ -3113,6 +3113,9 @@ static void BattleIntroQuickRun(void)
     if (JOY_HELD(R_BUTTON))
     {
         FlagSet(FLAG_BATTLE_QUICKRUN_STATE);
+        PlaySE(SE_FLEE);
+        BtlController_Complete(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+        PrepareStringBattle(STRINGID_RANAWAYQUICKLY, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
         gBattleStruct->eventState.battleIntro = BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS;
         return;
     }
@@ -3862,10 +3865,20 @@ static void DoBattleIntro(void)
         break;
     case BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS:
 
-        // Advance encounter without message close if R_BUTTON was held
+        // Complete encounter if R_BUTTON was held during wild encounter message
         if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
-        {
-            BtlController_Complete(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+        {   
+            if (!IsBattlerMarkedForControllerExec(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT))) {
+                if (!IsTextPrinterActiveOnWindow(B_WIN_MSG))
+                {
+                    BtlController_EmitTwoReturnValues(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), 1, B_ACTION_RUN, 0);
+                    PlayerBufferExecCompleted(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+                } 
+            }
+            else
+            {
+                break;
+            }
         }
 
         if (!gBattleControllerExecFlags)
@@ -3898,7 +3911,6 @@ static void DoBattleIntro(void)
             {
                if (TryRunFromBattle(gBattlerAttacker))
                 {
-                    // PrepareStringBattle(STRINGID_RANAWAYQUICKLY, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
                     gBattleMainFunc = HandleEndTurn_FinishBattle;
                     FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
                     break;
