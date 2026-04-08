@@ -3898,6 +3898,7 @@ static void DoBattleIntro(void)
             {
                if (TryRunFromBattle(gBattlerAttacker))
                 {
+                    // PrepareStringBattle(STRINGID_RANAWAYQUICKLY, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
                     gBattleMainFunc = HandleEndTurn_FinishBattle;
                     FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
                     break;

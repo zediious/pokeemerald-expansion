@@ -878,6 +878,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_ZENMODETRIGGERED]                     = COMPOUND_STRING("{B_SCR_ABILITY} triggered!"),
     [STRINGID_ZENMODEENDED]                         = COMPOUND_STRING("{B_SCR_ABILITY} ended!"),
     [STRINGID_REGAINEDWITHPHOTOSYNTHESIS]           = COMPOUND_STRING("{B_DEF_NAME} used the flames to perform Photosynthesis!"),
+    [STRINGID_RANAWAYQUICKLY]                       = COMPOUND_STRING("You ran away quickly!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
