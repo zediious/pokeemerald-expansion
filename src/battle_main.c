@@ -3901,7 +3901,7 @@ static void DoBattleIntro(void)
             {
                if (TryRunFromBattle(gBattlerAttacker))
                 {
-                    gBattleMainFunc = HandleEndTurn_RanFromBattle;
+                    gBattleMainFunc = HandleEndTurn_FinishBattle;
                     FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
                     break;
                 } 
