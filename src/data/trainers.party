@@ -165,11 +165,7 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
-
-Pawniard
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+AI: Smart Trainer / Ace Pokemon
 
 Shiftry
 Level: 23
@@ -178,6 +174,10 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 Umbreon
 Level: 22
 IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+
+Pawniard
+Level: 25
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
 Name: Grunt
@@ -9654,14 +9654,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
-
-Innonk
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Astonish
-- Leer
+AI: Smart Trainer / Ace Pokemon
 
 Rolycoly
 Level: 6
@@ -9670,6 +9663,13 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Rapid Spin
 - Smokescreen
 
+Innonk
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Astonish
+- Leer
+
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: Jordan
 Class: Rival
@@ -9677,7 +9677,14 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Ace Pokemon
+
+Rolycoly
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
 
 Pansear
 Level: 7
@@ -9687,13 +9694,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leer
 - Scratch
 
-Rolycoly
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Rapid Spin
-- Smokescreen
-
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
 Name: Jordan
 Class: Rival
@@ -9701,7 +9701,14 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Ace Pokemon
+
+Rolycoly
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
 
 Pansage
 Level: 7
@@ -9711,13 +9718,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leer
 - Lick
 
-Rolycoly
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Rapid Spin
-- Smokescreen
-
 === TRAINER_BRENDAN_ROUTE_103_TREECKO ===
 Name: Jordan
 Class: Rival
@@ -9725,7 +9725,14 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Ace Pokemon
+
+Rolycoly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Rapid Spin
+- Smokescreen
 
 Panpour
 Level: 7
@@ -9735,13 +9742,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leer
 - Lick
 
-Rolycoly
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Rapid Spin
-- Smokescreen
-
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: Jordan
 Class: Rival
@@ -9750,11 +9750,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 Items: Potion
-AI: Smart Trainer
-
-Innape
-Level: 18
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+AI: Smart Trainer / Ace Pokemon
 
 Carkol
 Level: 18
@@ -9765,6 +9761,10 @@ Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 Capsakid
+Level: 18
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+
+Innape
 Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -9776,11 +9776,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 Items: Potion
-AI: Smart Trainer
-
-Simisear
-Level: 18
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+AI: Smart Trainer / Ace Pokemon
 
 Carkol
 Level: 18
@@ -9791,6 +9787,10 @@ Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 Capsakid
+Level: 18
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+
+Simisear
 Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -9802,11 +9802,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 Items: Potion
-AI: Smart Trainer
-
-Simisage
-Level: 18
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+AI: Smart Trainer / Ace Pokemon
 
 Carkol
 Level: 18
@@ -9817,6 +9813,10 @@ Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
 Capsakid
+Level: 18
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+
+Simisage
 Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -9828,11 +9828,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 Items: Potion
-AI: Smart Trainer
-
-Simipour
-Level: 18
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+AI: Smart Trainer / Ace Pokemon
 
 Carkol
 Level: 18
@@ -9846,6 +9842,10 @@ Capsakid
 Level: 18
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
+Simipour
+Level: 18
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
 Name: Jordan
 Class: Rival
@@ -9853,15 +9853,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
-
-Simipour
-Level: 25
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-- Water Pulse
-- Draining Kiss
-- Tickle
-- Whirlpool
+AI: Smart Trainer / Ace Pokemon
 
 Carkol
 Level: 23
@@ -9886,6 +9878,14 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Headbutt
 - Sunny Day
 - Bite
+
+Simipour
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Water Pulse
+- Draining Kiss
+- Tickle
+- Whirlpool
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
 Name: MAY
@@ -9907,7 +9907,31 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
+AI: Smart Trainer / Ace Pokemon
+
+Carkol
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Ancient Power
+- Rock Polish
+- Smokescreen
+- Take Down
+
+Electrike
+Level: 24
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Thunder Fang
+- Bite
+- Quick Attack
+- Howl
+
+Capsakid
+Level: 23
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Trailblaze
+- Headbutt
+- Sunny Day
+- Bite
 
 Simisear
 Level: 25
@@ -9917,6 +9941,15 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Foresight
 - Fire Spin
 
+=== TRAINER_MAY_ROUTE_119_MUDKIP ===
+Name: Jordan
+Class: Rival
+Pic: Steven
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer / Ace Pokemon
+
 Carkol
 Level: 23
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
@@ -9940,15 +9973,6 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Headbutt
 - Sunny Day
 - Bite
-
-=== TRAINER_MAY_ROUTE_119_MUDKIP ===
-Name: Jordan
-Class: Rival
-Pic: Steven
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Smart Trainer
 
 Simisage
 Level: 25
@@ -9957,30 +9981,6 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Bite
 - Tearful Look
 - Leech Seed
-
-Carkol
-Level: 23
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-- Ancient Power
-- Rock Polish
-- Smokescreen
-- Take Down
-
-Electrike
-Level: 24
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-- Thunder Fang
-- Bite
-- Quick Attack
-- Howl
-
-Capsakid
-Level: 23
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-- Trailblaze
-- Headbutt
-- Sunny Day
-- Bite
 
 === TRAINER_MAY_ROUTE_103_TREECKO ===
 Name: Jordan
@@ -10002,15 +10002,7 @@ Pic: Steven
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
-
-Innape
-Level: 25
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-- Take Down
-- Confusion
-- Rock Smash
-- Taunt
+AI: Smart Trainer / Ace Pokemon
 
 Carkol
 Level: 23
@@ -10035,6 +10027,14 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 - Headbutt
 - Sunny Day
 - Bite
+
+Innape
+Level: 25
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+- Take Down
+- Confusion
+- Rock Smash
+- Taunt
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
 Name: MAY
