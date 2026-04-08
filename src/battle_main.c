@@ -3893,6 +3893,18 @@ static void DoBattleIntro(void)
             }
             STARTING_STATUS_DEFINITIONS(UNPACK_STARTING_STATUS_TO_BATTLE);
             gBattleMainFunc = TryDoEventsBeforeFirstTurn;
+
+            // Trigger quick run if R_BUTTON was held during intro
+            if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
+            {
+               if (TryRunFromBattle(gBattlerAttacker))
+                {
+                    gBattleMainFunc = HandleEndTurn_RanFromBattle;
+                    FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
+                    break;
+                } 
+            }
+
         }
         break;
     }
