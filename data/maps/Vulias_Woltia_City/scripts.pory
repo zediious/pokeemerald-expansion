@@ -23,6 +23,19 @@ script Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney {
     end
 }
 
+// Dude that blocks that Aerodrome door
+script WoltiaCity_EventScript_AerodromeBlockers {
+    lock
+    setspeaker("Guard")
+    msgbox("Not allowed in when there's no match
+            going on.
+            
+            Come back another time.")
+    waitmessage
+    release
+    end
+}
+
 // Player talk to Jordan if they try to go in Aerodrome early
 script WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter {
     lock
