@@ -73,9 +73,9 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 66 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmessage
 # 68 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	playmoncry SPECIES_GOLEM, CRY_MODE_NORMAL
+	playmoncry SPECIES_KLEAVOR, CRY_MODE_NORMAL
 # 69 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement GERBONBATTLEHALL_JULIA_01_GOLEM, GerbonTownBattleHall_CandaceAndJulia01_Movement_2
+	applymovement GERBONBATTLEHALL_JULIA_01_KLEAVOR, GerbonTownBattleHall_CandaceAndJulia01_Movement_2
 # 72 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	playmoncry SPECIES_KILOWATTREL, CRY_MODE_NORMAL
 # 73 "data/maps/GerbonTown_BattleHall/scripts.pory"
@@ -83,7 +83,7 @@ GerbonTownBattleHall_CandaceAndJulia01::
 # 76 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmovement
 # 77 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	applymovement GERBONBATTLEHALL_JULIA_01_GOLEM, GerbonTownBattleHall_CandaceAndJulia01_Movement_4
+	applymovement GERBONBATTLEHALL_JULIA_01_KLEAVOR, GerbonTownBattleHall_CandaceAndJulia01_Movement_4
 # 80 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	waitmovement
 # 81 "data/maps/GerbonTown_BattleHall/scripts.pory"
@@ -752,7 +752,7 @@ GerbonTownBattleHall_CandaceAndJulia01_Text_0:
 
 GerbonTownBattleHall_CandaceAndJulia01_Text_1:
 # 64 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	.string "Golem! Use your Stone Edge attack!$"
+	.string "Kleavor! Use your Rock Slide attack!$"
 
 GerbonTownBattleHall_CandaceAndJulia01_Text_2:
 # 91 "data/maps/GerbonTown_BattleHall/scripts.pory"

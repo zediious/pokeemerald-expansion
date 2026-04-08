@@ -57,16 +57,16 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     ))
     waitmovement
 
-    // Julia tells Golem to use Stone Edge
+    // Julia tells Kleavor to use Rock Slide
     applymovement(GERBONBATTLEHALL_JULIA_01, moves(jump_in_place_right))
 
     setspeaker("Julia")
-    msgbox("Golem! Use your Stone Edge attack!")
+    msgbox("Kleavor! Use your Rock Slide attack!")
 
     waitmessage
-    // Golem misses the attack
-    playmoncry(SPECIES_GOLEM, CRY_MODE_NORMAL)
-    applymovement(GERBONBATTLEHALL_JULIA_01_GOLEM,
+    // Kleavor misses the attack
+    playmoncry(SPECIES_KLEAVOR, CRY_MODE_NORMAL)
+    applymovement(GERBONBATTLEHALL_JULIA_01_KLEAVOR,
         moves(walk_fast_right * 2, walk_in_place_fast_right, walk_fast_left * 2, face_right)
     )
     playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
@@ -74,7 +74,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
         moves(walk_faster_right)
     )
     waitmovement
-    applymovement(GERBONBATTLEHALL_JULIA_01_GOLEM,
+    applymovement(GERBONBATTLEHALL_JULIA_01_KLEAVOR,
         moves(walk_fast_left * 2, face_right)
     )
     waitmovement

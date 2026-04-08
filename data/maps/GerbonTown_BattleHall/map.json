@@ -43,8 +43,8 @@
       "flag": "FLAG_GERBON_FIRSTSHOW_CANDACE"
     },
     {
-      "local_id": "GERBONBATTLEHALL_JULIA_01_GOLEM",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GOLEM)",
+      "local_id": "GERBONBATTLEHALL_JULIA_01_KLEAVOR",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KLEAVOR)",
       "x": 8,
       "y": 3,
       "elevation": 0,
