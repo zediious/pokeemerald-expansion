@@ -110,6 +110,7 @@ static void TurnValuesCleanUp(bool8 var0);
 static void SpriteCB_BounceEffect(struct Sprite *sprite);
 static void BattleStartClearSetData(void);
 static void DoBattleIntro(void);
+static void BattleIntroQuickRun(void);
 static void TryDoEventsBeforeFirstTurn(void);
 static void HandleTurnActionSelectionState(void);
 static void RunTurnActionsFunctions(void);
