@@ -3107,6 +3107,17 @@ void BeginBattleIntro(void)
     gBattleMainFunc = DoBattleIntro;
 }
 
+static void BattleIntroQuickRun(void)
+{
+    if (JOY_HELD(R_BUTTON))
+    {
+        FlagSet(FLAG_BATTLE_QUICKRUN_STATE);
+        gBattleStruct->eventState.battleIntro = BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS;
+        return;
+    }
+    return;
+}
+
 static void BattleMainCB1(void)
 {
     gBattleMainFunc();
@@ -3723,6 +3734,7 @@ static void DoBattleIntro(void)
         }
         break;
     case BATTLE_INTRO_STATE_WAIT_FOR_INTRO_TEXT:
+        BattleIntroQuickRun();
         if (!IsBattlerMarkedForControllerExec(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)))
         {
             if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
