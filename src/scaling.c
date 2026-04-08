@@ -36,7 +36,7 @@ struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledPart
         for (u32 e = 0; e < partySize; e++) 
         {   
             u8 compareLevel;
-            if (alwaysCeiling) // If alwaysCeiling passed TRUE, set compare to levelCeil
+            if ((alwaysCeiling == TRUE) || (partySize == 1)) // If alwaysCeiling passed TRUE, set compare to levelCeil
             {
                 compareLevel = levelCeil;
             }
