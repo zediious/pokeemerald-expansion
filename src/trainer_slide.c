@@ -77,7 +77,156 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         [TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
         {
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("No way!{PAUSE_UNTIL_PRESS}"),
-        }
+        },
+        // Palladium Tournament - Second rival battle
+        [TRAINER_BRENDAN_ROUTE_110_TREECKO] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Let's have a great battle\n{PLAYER}!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("We'll never give up!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_STAB_MOVE] = COMPOUND_STRING("Wow! What a hit!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_ROUTE_119_TREECKO] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Let's have a great battle\n{PLAYER}!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("We'll never give up!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_STAB_MOVE] = COMPOUND_STRING("Wow! What a hit!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_ROUTE_103_TORCHIC] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Let's have a great battle\n{PLAYER}!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("We'll never give up!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_STAB_MOVE] = COMPOUND_STRING("Wow! What a hit!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_ROUTE_110_TORCHIC] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Let's have a great battle\n{PLAYER}!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("We'll never give up!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_STAB_MOVE] = COMPOUND_STRING("Wow! What a hit!{PAUSE_UNTIL_PRESS}"),
+        },
+        // Aerodrome Tournament - Third rival battle
+        [TRAINER_BRENDAN_ROUTE_119_TORCHIC] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("I've gotten stronger \n{PLAYER}!\nGet ready for this!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I didn't think this could happen!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("Only you have that luck!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MAY_ROUTE_110_MUDKIP] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("I've gotten stronger \n{PLAYER}!\nGet ready for this!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I didn't think this could happen!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("Only you have that luck!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MAY_ROUTE_119_MUDKIP] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("I've gotten stronger \n{PLAYER}!\nGet ready for this!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I didn't think this could happen!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("Only you have that luck!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MAY_ROUTE_103_TREECKO] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("I've gotten stronger \n{PLAYER}!\nGet ready for this!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I didn't think this could happen!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("Only you have that luck!{PAUSE_UNTIL_PRESS}"),
+        },
+        //// BATTLE HALL REP TRAINER BATTLES
+        // Julia - Palladium Battle Hall 01
+        [TRAINER_ROXANNE_1] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("We can't let this fly! Let's\ngo Stonjourner!{PLAY_BGM MUS_VS_ELITE_FOUR}{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("You came prepared!{PAUSE_UNTIL_PRESS}"),
+        },
+        // Candace - Aerodrome Battle Hall 02
+        [TRAINER_WINONA_1] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Looks like we'll have to land for\nthis one. Go Gyrados!{PLAY_BGM MUS_VS_ELITE_FOUR}{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_ENEMY_MON_UNAFFECTED] = COMPOUND_STRING("Weren't expecting that, were you?{PAUSE_UNTIL_PRESS}"),
+        },
+        //// PARTNERS - These are all the same currently
+        /// Jordan
+        // Sawgrass Forest
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANPOUR_01)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSEAR_01)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSAGE_01)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_INNAPE_01)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        // Mullen Cave
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANPOUR_02)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSEAR_02)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSAGE_02)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_INNAPE_02)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        // Igris Desert Kowtow Encounter 01
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANPOUR_03)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSEAR_03)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSAGE_03)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_INNAPE_03)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        // Igris Desert Ruvel Pyramid
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANPOUR_04)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSEAR_04)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_PANSAGE_04)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_PARTNER(PARTNER_JORDAN_INNAPE_04)] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("It's not looking good for me!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Awesome hit {PLAYER}!{PAUSE_UNTIL_PRESS}"),
+        },
     },
 };
 
