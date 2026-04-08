@@ -80,8 +80,8 @@ script IgrisDesert_EventScript_AngryKrokorok {
 script IgrisDesert_EventScript_KowtowEnc01Trainer01{
     trainerbattle_single(
         TRAINER_GRUNT_AQUA_HIDEOUT_3,
-        "Here to save the Togepi eh?",
-        "All for a little egg?"
+        "If you know what's good for you, scram!",
+        "Well, I know what's good for me!"
     )
     msgbox("Go, not like I can do anything.", MSGBOX_AUTOCLOSE)
     waitmessage
@@ -92,10 +92,10 @@ script IgrisDesert_EventScript_KowtowEnc01Trainer01{
 script IgrisDesert_EventScript_KowtowEnc01Trainer02{
     trainerbattle_single(
         TRAINER_GRUNT_SEAFLOOR_CAVERN_4,
-        "Wasting your time!",
-        "I'm wasting my time?"
+        "What, ignoring him? We'll show you!",
+        "Stupid Pawniard, get it together!"
     )
-    msgbox("Don't twist my words!", MSGBOX_AUTOCLOSE)
+    msgbox("Get out of my sight!", MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
@@ -118,7 +118,7 @@ script IgrisDesert_EventScript_KowtowEnc01Trainer04{
         "Stay away from the boss!",
         "Or, don't I suppose."
     )
-    msgbox("Jeez, these Pawniard need to toughen
+    msgbox("Weak! These Pawniard need to toughen
             up.", MSGBOX_AUTOCLOSE)
     waitmessage
     end
@@ -139,15 +139,15 @@ script IgrisDesert_EventScript_KowtowAdmin {
     lock
     setspeaker("???")
     msgbox("For the last time, stand on guard
-            while I-")
+            while I deal with the-")
     playse(SE_PIN)
     applymovement(IGRIS_KOWTOWADMIN_01, moves(emote_exclamation_mark, face_right))
     setspeaker("Kowtow Admin")
-    msgbox("You're not my team!
+    msgbox("You're not my team! Did those worms
+            succumb to you?
             
-            
-            What, here to serve some Justice? That
-            won't be served so easily!")
+            What, here to serve some 'Justice'?
+            That won't be served so easily!")
     waitmessage
     setspeaker("Distant Voice")
     msgbox("{PLAYER}...wait!")
@@ -171,7 +171,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
     applymovement(IGRIS_KOWTOWADMIN_01, moves(jump_in_place_right * 2))
     waitmovement
     setspeaker("Kowtow Admin")
-    msgbox("Oh, you're a big talker huh!")
+    msgbox("Oh, you're a BIG talker huh!")
     waitmessage
     trainerbattle_single(
         TRAINER_GRUNT_SEAFLOOR_CAVERN_1,
@@ -185,8 +185,13 @@ script IgrisDesert_EventScript_KowtowAdmin {
 script IgrisDesert_KowtowAdmin_AfterBattle {
     lock
     setspeaker("Kowtow Admin")
-    msgbox("Have not had to use one of these for
-            quite some time...
+    msgbox("Huh, not bad for a group of
+            'do-gooders'. You caught me on a
+            bad day though, don't make anything
+            of it!
+    
+            Well, I've not had to use one of these
+            for quite some time...
             
             Smokescreen!")
     waitmessage
