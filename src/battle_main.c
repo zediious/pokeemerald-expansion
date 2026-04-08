@@ -110,6 +110,7 @@ static void TurnValuesCleanUp(bool8 var0);
 static void SpriteCB_BounceEffect(struct Sprite *sprite);
 static void BattleStartClearSetData(void);
 static void DoBattleIntro(void);
+static void BattleIntroQuickRun(void);
 static void TryDoEventsBeforeFirstTurn(void);
 static void HandleTurnActionSelectionState(void);
 static void RunTurnActionsFunctions(void);
@@ -3107,6 +3108,20 @@ void BeginBattleIntro(void)
     gBattleMainFunc = DoBattleIntro;
 }
 
+static void BattleIntroQuickRun(void)
+{
+    if (JOY_HELD(R_BUTTON))
+    {
+        FlagSet(FLAG_BATTLE_QUICKRUN_STATE);
+        PlaySE(SE_FLEE);
+        BtlController_Complete(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+        PrepareStringBattle(STRINGID_RANAWAYQUICKLY, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+        gBattleStruct->eventState.battleIntro = BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS;
+        return;
+    }
+    return;
+}
+
 static void BattleMainCB1(void)
 {
     gBattleMainFunc();
@@ -3723,6 +3738,7 @@ static void DoBattleIntro(void)
         }
         break;
     case BATTLE_INTRO_STATE_WAIT_FOR_INTRO_TEXT:
+        BattleIntroQuickRun();
         if (!IsBattlerMarkedForControllerExec(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)))
         {
             if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -3848,6 +3864,23 @@ static void DoBattleIntro(void)
         gBattleStruct->eventState.battleIntro++;
         break;
     case BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS:
+
+        // Complete encounter if R_BUTTON was held during wild encounter message
+        if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
+        {   
+            if (!IsBattlerMarkedForControllerExec(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT))) {
+                if (!IsTextPrinterActiveOnWindow(B_WIN_MSG))
+                {
+                    BtlController_EmitTwoReturnValues(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), 1, B_ACTION_RUN, 0);
+                    PlayerBufferExecCompleted(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+                } 
+            }
+            else
+            {
+                break;
+            }
+        }
+
         if (!gBattleControllerExecFlags)
         {
             gBattleStruct->eventState.beforeFirstTurn = 0;
@@ -3872,6 +3905,18 @@ static void DoBattleIntro(void)
             }
             STARTING_STATUS_DEFINITIONS(UNPACK_STARTING_STATUS_TO_BATTLE);
             gBattleMainFunc = TryDoEventsBeforeFirstTurn;
+
+            // Trigger quick run if R_BUTTON was held during intro
+            if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
+            {
+               if (TryRunFromBattle(gBattlerAttacker))
+                {
+                    gBattleMainFunc = HandleEndTurn_FinishBattle;
+                    FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
+                    break;
+                } 
+            }
+
         }
         break;
     }

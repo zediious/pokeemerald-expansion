@@ -60,6 +60,24 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        //// JORDAN RIVAL BATTLES
+        // Gerbon Town - First rival battle
+        [TRAINER_BRENDAN_ROUTE_103_TREECKO] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("No way!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("No way!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_ROUTE_119_MUDKIP] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("No way!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("No way!{PAUSE_UNTIL_PRESS}"),
+        }
     },
 };
 

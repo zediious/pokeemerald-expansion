@@ -89,10 +89,12 @@ PalentoVillagePokeCenter_JordanResting::
 # 57 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	faceplayer
 # 58 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	msgbox PalentoVillagePokeCenter_JordanResting_Text_0
-# 64 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	waitmessage
+	setspeaker PalentoVillagePokeCenter_JordanResting_Text_0
+# 59 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	msgbox PalentoVillagePokeCenter_JordanResting_Text_1
 # 65 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 66 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	release
 	end
 
@@ -112,7 +114,11 @@ PalentoVillage_PokeMart_Employee_Text_1:
 
 PalentoVillagePokeCenter_JordanResting_Text_0:
 # 58 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.string "{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi {PLAYER}!\n"
+	.string "Jordan$"
+
+PalentoVillagePokeCenter_JordanResting_Text_1:
+# 59 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	.string "Hi {PLAYER}!\n"
 	.string "This Pokemon Center is pretty cool\l"
 	.string "right? Both the mart and the nurse\l"
 	.string "all in one place\p"

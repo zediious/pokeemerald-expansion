@@ -55,7 +55,8 @@ mart PalentoVillage_MartItems {
 script PalentoVillagePokeCenter_JordanResting {
     lock
     faceplayer
-    msgbox("{COLOR GREEN}Jordan: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi {PLAYER}!
+    setspeaker("Jordan")
+    msgbox("Hi {PLAYER}!
             This Pokemon Center is pretty cool
             right? Both the mart and the nurse
             all in one place
