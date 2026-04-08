@@ -91,9 +91,11 @@ script Route101_EventScript_TrainerTeachLesson{
     applymovement(ZED_Route101_CatchTeacher, moves(face_up))
     applymovement(OBJ_EVENT_ID_PLAYER, PlayerMoveInCircles)
     waitmovement
-    setwildbattle(SPECIES_WURMPLE, 2)
+    setflag(FLAG_NO_WHITEOUT) // Prevent whiteout
+    setwildbattle(SPECIES_ORICORIO_POM_POM, 4)
     dowildbattle
     lock
+    clearflag(FLAG_NO_WHITEOUT) // Clear whiteout flag
     applymovement(ZED_Route101_CatchTeacher, TrainerMoveToPlayer)
     waitmovement
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
@@ -105,10 +107,32 @@ script Route101_EventScript_TrainerTeachLesson{
                 Here, have some more Poke Balls.")
     }
     else {
-        msgbox("That's too bad, you almost had it. Don't
-                give up!
-                
-                Here, have some more Poke Balls.")
+        specialvar(VAR_RESULT, GetBattleOutcome)
+        if (var(VAR_RESULT) == B_OUTCOME_LOST) {
+             msgbox("Oh my! I didn't expect the wild Pokemon
+                    here to make all your Pokemon faint...
+
+                    Here's I'll heal them up for you.")
+            waitmessage
+            special(HealPlayerParty)
+            playfanfare(MUS_HEAL)
+            waitfanfare
+            msgbox("There you go! Make sure to train the
+                    Pokemon you already have, and heal
+                    when they're low on HP! They'll love
+                    you for it!
+                    
+                    Here, have some more Poke Balls.")
+            
+        }
+        else {
+            msgbox("That's too bad, you almost had it. Don't
+                    give up!
+                    
+                    Here, have some more Poke Balls.")
+            waitmessage
+        }
+        
     }
     giveitem(ITEM_POKE_BALL, 5)
     msgbox("Maybe I'll see you another time. Bye!")
