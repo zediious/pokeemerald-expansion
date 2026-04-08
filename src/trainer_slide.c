@@ -132,13 +132,13 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         // Julia - Palladium Battle Hall 01
         [TRAINER_ROXANNE_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("We can't let this fly! Let's\ngo Stonjourner!{PLAY_BGM MUS_VS_ELITE_FOUR}{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("{PLAY_BGM MUS_VS_ELITE_FOUR}We can't let this fly! Let's\ngo Stonjourner!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("You came prepared!{PAUSE_UNTIL_PRESS}"),
         },
         // Candace - Aerodrome Battle Hall 02
         [TRAINER_WINONA_1] =
         {
-            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Looks like we'll have to land for\nthis one. Go Gyrados!{PLAY_BGM MUS_VS_ELITE_FOUR}{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("{PLAY_BGM MUS_VS_ELITE_FOUR}Looks like we'll have to land for\nthis one. Go Gyrados!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_ENEMY_MON_UNAFFECTED] = COMPOUND_STRING("Weren't expecting that, were you?{PAUSE_UNTIL_PRESS}"),
         },
         //// PARTNERS - These are all the same currently
