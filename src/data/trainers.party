@@ -5046,7 +5046,7 @@ Gender: Female
 Music: Female
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Smart Trainer / Risky
+AI: Smart Trainer / Risky / Ace Pokemon
 
 Kilowattrel @ Sitrus Berry
 Level: 26
@@ -5081,7 +5081,7 @@ IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 - Leech Seed
 
 Gyarados
-Level: 24
+Level: 26
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Waterfall
 - Crunch
