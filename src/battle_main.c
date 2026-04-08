@@ -26,7 +26,6 @@
 #include "event_data.h"
 #include "evolution_scene.h"
 #include "frontier_util.h"
-#include "field_message_box.h"
 #include "field_weather.h"
 #include "follower_npc.h"
 #include "graphics.h"
@@ -3863,12 +3862,10 @@ static void DoBattleIntro(void)
         break;
     case BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS:
 
-        // Auto-close wild encounter message if R_BUTTON was held
+        // Advance encounter without message close if R_BUTTON was held
         if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
         {
-            HideFieldMessageBox();
-            LoadBattleMenuWindowGfx();
-            FillAroundBattleWindows();
+            BtlController_Complete(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
         }
 
         if (!gBattleControllerExecFlags)
