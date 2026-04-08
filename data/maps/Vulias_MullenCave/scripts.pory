@@ -125,13 +125,26 @@ script VuliasMullenCave_StudentEnd {
 script VuliasMullenCave_EventScript_Trainer08{
     if (var(VAR_MULLEN_CAVE_SENSEI_PROGRESS) == 2) {
         setspeaker("Sensei")
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            MULLEN_CAVE_SENSEI,
             TRAINER_KOJI_1,
             "So, you have defeated my
             students? Let us see how you fare
             against me!",
             "Hoho! Very impressive!",
-            ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive
+            ViluasMullenCave_EventScript_Trainer08_RockSmashGiveGive,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
         release
         end

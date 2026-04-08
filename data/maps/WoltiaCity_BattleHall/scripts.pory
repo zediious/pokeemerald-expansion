@@ -115,31 +115,70 @@ script WoltiaBattleHall_TournamentBattle {
     // Begin battle VS current trainer
       if (var(VAR_WOLTIA_TOURNAMENT_STATE) == 2) {
         cleartrainerflag(TRAINER_PERRY)
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            WOLTIATOURNEY_TRAINER01,
             TRAINER_PERRY,
             "You won't be able to keep up!",
             "I guess we're slower than I thought!",
-            event_script=WoltiaBattleHall_TournamentBattleAfter,
+            WoltiaBattleHall_TournamentBattleAfter,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
         }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 3) {
         cleartrainerflag(TRAINER_TED)
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            WOLTIATOURNEY_TRAINER02,
             TRAINER_TED,
             "I've seen all the scenarios! There's no
             way I could lose!",
             "Huh, I guess I didn't learn about that
             one.",
-            event_script=WoltiaBattleHall_TournamentBattleAfter,
+            WoltiaBattleHall_TournamentBattleAfter,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 4) {
         cleartrainerflag(TRAINER_WADE)
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            WOLTIATOURNEY_TRAINER03,
             TRAINER_WADE,
             "No one has better catches than me!",
             "Ah, who is no one anyways?",
-            event_script=WoltiaBattleHall_TournamentBattleAfter,
+            WoltiaBattleHall_TournamentBattleAfter,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
@@ -152,50 +191,115 @@ script WoltiaBattleHall_TournamentBattle {
         // Determine Jordan starter
         if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
             cleartrainerflag(TRAINER_BRENDAN_ROUTE_119_TORCHIC)
-            trainerbattle_single(
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                WOLTIATOURNEY_TRAINER04,
                 TRAINER_BRENDAN_ROUTE_119_TORCHIC,
                 "Don't hold back, because I wont!",
                 "What is the secret {PLAYER}!",
-                event_script=WoltiaBattleHall_TournamentBattleAfter,
+                WoltiaBattleHall_TournamentBattleAfter,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
             )
         }
         elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
             cleartrainerflag(TRAINER_MAY_ROUTE_110_MUDKIP)
-            trainerbattle_single(
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                WOLTIATOURNEY_TRAINER04,
                 TRAINER_MAY_ROUTE_110_MUDKIP,
                 "Don't hold back, because I wont!",
                 "What is the secret {PLAYER}!",
-                event_script=WoltiaBattleHall_TournamentBattleAfter,
+                WoltiaBattleHall_TournamentBattleAfter,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
             )
         }
         elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
             cleartrainerflag(TRAINER_MAY_ROUTE_119_MUDKIP)
-            trainerbattle_single(
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                WOLTIATOURNEY_TRAINER04,
                 TRAINER_MAY_ROUTE_119_MUDKIP,
                 "Don't hold back, because I wont!",
                 "What is the secret {PLAYER}!",
-                event_script=WoltiaBattleHall_TournamentBattleAfter,
+                WoltiaBattleHall_TournamentBattleAfter,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
             )
         }
         elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
             cleartrainerflag(TRAINER_MAY_ROUTE_110_TREECKO)
-            trainerbattle_single(
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                WOLTIATOURNEY_TRAINER04,
                 TRAINER_MAY_ROUTE_110_TREECKO,
                 "Don't hold back, because I wont!",
                 "What is the secret {PLAYER}!",
-                event_script=WoltiaBattleHall_TournamentBattleAfter,
+                WoltiaBattleHall_TournamentBattleAfter,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
             )
         }
     }
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 6) {
         cleartrainerflag(TRAINER_WINONA_1)
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            WOLTIATOURNEY_TRAINER05,
             TRAINER_WINONA_1,
             "It's been a long time since someone
             could best me, let's see if you're 
             worth your salt.",
             "Very salty!",
-            event_script=WoltiaBattleHall_TournamentBattleAfter,
+            WoltiaBattleHall_TournamentBattleAfter,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
 }

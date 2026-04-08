@@ -173,12 +173,25 @@ script IgrisDesert_EventScript_KowtowAdmin {
     setspeaker("Kowtow Admin")
     msgbox("Oh, you're a BIG talker huh!")
     waitmessage
-    trainerbattle_single(
+    trainerbattle(
+        TRAINER_BATTLE_CONTINUE_SCRIPT,
+        IGRIS_KOWTOWADMIN_01,
         TRAINER_GRUNT_SEAFLOOR_CAVERN_1,
         "You won't be able to talk after this!",
         "I can't believe that! Now I can't
         talk!",
-        IgrisDesert_KowtowAdmin_AfterBattle
+        IgrisDesert_KowtowAdmin_AfterBattle,
+        LOCALID_NONE,
+        TRAINER_NONE,
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        FALSE,
+        TRUE,
+        FALSE,
+        FALSE,
     )
 }
 

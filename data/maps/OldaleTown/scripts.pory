@@ -237,39 +237,91 @@ script GerbonTown_OutdoorBattleJordanAsk {
 script GerbonTown_OutdoorBattleTrigger{
     setflag(FLAG_NO_WHITEOUT)
     if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            GERBON_TOWN_JORDAN_FIRSTBATTLE,
             TRAINER_BRENDAN_ROUTE_103_TREECKO,
             "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
-            event_script=GerbonTown_OutdoorBattleEnd
+            GerbonTown_OutdoorBattleEnd,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
     elif (var(VAR_STARTER_MON) == 1) { // Starter is Pansage
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            GERBON_TOWN_JORDAN_FIRSTBATTLE,
             TRAINER_BRENDAN_ROUTE_110_MUDKIP,
             "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
-            event_script=GerbonTown_OutdoorBattleEnd
+            GerbonTown_OutdoorBattleEnd,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
     elif (var(VAR_STARTER_MON) == 2) { // Starter is Panpour
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            GERBON_TOWN_JORDAN_FIRSTBATTLE,
             TRAINER_BRENDAN_ROUTE_119_MUDKIP,
             "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
-            event_script=GerbonTown_OutdoorBattleEnd
+            GerbonTown_OutdoorBattleEnd,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
     elif (var(VAR_STARTER_MON) == 3) { // Starter is Innonk
-        trainerbattle_single(
+        trainerbattle(
+            TRAINER_BATTLE_CONTINUE_SCRIPT,
+            GERBON_TOWN_JORDAN_FIRSTBATTLE,
             TRAINER_BRENDAN_ROUTE_103_MUDKIP,
             "That's what I'm talking about! Let's go!",
             "Wow {PLAYER}, I didn't know you could
             battle like that!",
-            event_script=GerbonTown_OutdoorBattleEnd
+            GerbonTown_OutdoorBattleEnd,
+            LOCALID_NONE,
+            TRAINER_NONE,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            FALSE,
+            TRUE,
+            FALSE,
+            FALSE,
         )
     }
 }
