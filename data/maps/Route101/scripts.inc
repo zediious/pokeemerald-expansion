@@ -662,9 +662,9 @@ Route101_EventScript_ScaredTrainer_Text_0:
 
 Route101_EventScript_ScaredTrainer_Text_1:
 # 264 "data/maps/Route101/scripts.pory"
-	.string "The southern side of a Route is usually\n"
-	.string "free of trainers, but you'll be forced\l"
-	.string "to contend with wild Pokemon.\p"
+	.string "The southern side of this Route is \n"
+	.string "usually free of trainers, but you'll be\l"
+	.string "forced to contend with wild Pokemon.\p"
 	.string "That sure beats dealing with all those\n"
 	.string "tough trainers!$"
 
