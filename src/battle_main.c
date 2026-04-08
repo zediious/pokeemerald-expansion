@@ -3860,6 +3860,15 @@ static void DoBattleIntro(void)
         gBattleStruct->eventState.battleIntro++;
         break;
     case BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS:
+
+        // Auto-close wild encounter message if R_BUTTON was held
+        if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
+        {
+            HideFieldMessageBox();
+            LoadBattleMenuWindowGfx();
+            FillAroundBattleWindows();
+        }
+
         if (!gBattleControllerExecFlags)
         {
             gBattleStruct->eventState.beforeFirstTurn = 0;
