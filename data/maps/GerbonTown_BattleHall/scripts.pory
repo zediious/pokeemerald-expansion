@@ -7,8 +7,17 @@ mapscripts GerbonTown_BattleHall_MapScripts {
         VAR_GERBON_TOURNAMENT_STATE, 6: GerbonBattleHall_TournamentBattleTrigger
     ]
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
-        VAR_TEMP_5, 0: GerbonBattleHall_CreateCrowdSprites
+        VAR_TEMP_6, 0: GerbonBattleHall_CreateCrowdSprites
     ]
+    MAP_SCRIPT_ON_RESUME: GerbonBattle_OnResume
+}
+
+script GerbonBattle_OnResume {
+    if (var(VAR_BATTLEHALL_DRAWCROWD) == 1)
+    {   
+        setvar(VAR_BATTLEHALL_DRAWCROWD, 0)
+        goto(GerbonBattleHall_CreateCrowdSprites)
+    }
 }
 
 // Player walked in for first time on left, start watching
@@ -170,7 +179,8 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
 
 // Trigger battle
 script GerbonBattleHall_TournamentBattleTrigger {
-      if (var(VAR_GERBON_TOURNAMENT_STATE) == 2) {
+    call(GerbonBattleHall_Tournament_RemoveAllTrainers)
+    if (var(VAR_GERBON_TOURNAMENT_STATE) == 2) {
         setvar(VAR_GERBON_TOURNAMENT_OPPONENT, TRAINER_MARC)
         setvar(VAR_GERBON_TOURNAMENT_OPPONENT_LOCAL, GERBONTOURNEY_TRAINER01)
         clearflag(FLAG_GERBON_TOURNEY_TRAINER01)
@@ -212,6 +222,7 @@ script GerbonBattleHall_TournamentBattleTrigger {
 script GerbonBattleHall_TournamentBattle {
     lock
     delay(60)
+    setvar(VAR_BATTLEHALL_DRAWCROWD, 1)
     buffertrainername(STR_VAR_1, VAR_GERBON_TOURNAMENT_OPPONENT)
     msgbox("DING DING DING ...
     
@@ -434,30 +445,28 @@ script GerbonBattleHall_TournamentPlayerWon {
 }
 
 script GerbonBattleHall_CreateCrowdSprites {
-    setvar(VAR_TEMP_5, 1)
-
     // Left Section
     createvobject(OBJ_EVENT_GFX_OLD_MAN, 0, 2, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_OLD_WOMAN, 0, 3, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_COOK, 0, 4, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_RICH_BOY, 0, 2, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_TWIN, 0, 4, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_EXPERT_M, 0, 3, 8, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_PSYCHIC_M, 0, 8, 8, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_BUG_CATCHER, 0, 7, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_WOMAN_4, 0, 8, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_SAILOR, 0, 6, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_SAILOR, 0, 7, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_SAILOR, 0, 8, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_OLD_WOMAN, 1, 3, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_COOK, 2, 4, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_RICH_BOY, 3, 2, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_TWIN, 4, 4, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_EXPERT_M, 5, 3, 8, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_PSYCHIC_M, 6, 8, 8, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_BUG_CATCHER, 7, 7, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_WOMAN_4, 8, 8, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_SAILOR, 9, 6, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_SAILOR, 10, 7, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_SAILOR, 11, 8, 12, 3, direction=DIR_NORTH)
 
     // Right Section
-    createvobject(OBJ_EVENT_GFX_FISHERMAN, 0, 12, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_HEX_MANIAC, 0, 11, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_YOUNGSTER, 0, 13, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_GENTLEMAN, 0, 11, 8, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_BEAUTY, 0, 15, 8, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_FAT_MAN, 0, 16, 8, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_WOMAN_2, 0, 16, 10, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_POKEFAN_M, 0, 15, 12, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_POKEFAN_F, 0, 16, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_FISHERMAN, 12, 12, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_HEX_MANIAC, 13, 11, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_YOUNGSTER, 14, 13, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_GENTLEMAN, 15, 11, 8, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_BEAUTY, 16, 15, 8, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_FAT_MAN, 17, 16, 8, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_WOMAN_2, 18, 16, 10, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_POKEFAN_M, 19, 15, 12, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_POKEFAN_F, 20, 16, 12, 3, direction=DIR_NORTH)
 }
