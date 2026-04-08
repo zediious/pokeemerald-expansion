@@ -122,7 +122,7 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I didn't think this could happen!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("Only you have that luck!{PAUSE_UNTIL_PRESS}"),
         },
-        [TRAINER_MAY_ROUTE_103_TREECKO] =
+        [TRAINER_MAY_ROUTE_110_TREECKO] =
         {
             [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("I've gotten stronger \n{PLAYER}!\nGet ready for this!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I didn't think this could happen!{PAUSE_UNTIL_PRESS}"),
