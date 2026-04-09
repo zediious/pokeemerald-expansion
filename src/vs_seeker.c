@@ -747,6 +747,7 @@ static u16 GetTrainerFlagFromScript(const u8 *script)
         trainerFlag = ScriptPeekHalfword(ctx);
     }
     Free(ctx);
+    ClearTrainerFlag(trainerFlag);
     return trainerFlag;
 }
 
