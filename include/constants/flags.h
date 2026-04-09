@@ -707,7 +707,7 @@
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag
 #define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
+#define FLAG_I_VS_SEEKER_CHARGING               0x28F // VS Seeker charging flag
 #define FLAG_BATTLE_QUICKRUN_STATE              0x290 // State tracker for quick run from wild encounter
 #define FLAG_CAP_BEFORE_FIRSTRIVAL              0x291 // Applies first level cap before first fight with rival Jordan
 #define FLAG_WOLTIA_AERO_BLOCKER                0x292 // Sailor who blocks entrance to Aerodrome in Woltia
