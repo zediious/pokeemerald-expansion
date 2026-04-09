@@ -439,11 +439,7 @@ static u8 CanUseVsSeeker(void)
     if ((vsSeekerChargeSteps == VSSEEKER_RECHARGE_STEPS) && !HasFightableTrainers())
         return VSSEEKER_NO_ONE_IN_RANGE;
 
-    if (vsSeekerChargeSteps == VSSEEKER_RECHARGE_STEPS)
-        return VSSEEKER_CAN_USE;
-
-    ConvertIntToDecimalStringN(gStringVar1, (VSSEEKER_RECHARGE_STEPS - vsSeekerChargeSteps), STR_CONV_MODE_LEFT_ALIGN, 3);
-    return VSSEEKER_NOT_CHARGED;
+    return VSSEEKER_CAN_USE;
 #else
     return VSSEEKER_NO_ONE_IN_RANGE;
 #endif //FREE_MATCH_CALL
