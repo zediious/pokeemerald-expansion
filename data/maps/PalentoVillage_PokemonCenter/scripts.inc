@@ -32,92 +32,98 @@ PalentoVillage_HealerChansey::
 # 22 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
 # 23 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	msgbox PalentoVillage_HealerChansey_Text_0
+	setspeaker PalentoVillage_HealerChansey_Text_0
 # 24 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	waitmoncry
+	msgbox PalentoVillage_HealerChansey_Text_1
 # 25 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	waitmessage
+	waitmoncry
 # 26 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	closemessage
+	waitmessage
 # 27 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	closemessage
+# 28 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	release
 	return
 
 
 PalentoVillage_PokeMart_Employee::
-# 32 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	lock
 # 33 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	lock
+# 34 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	msgbox PalentoVillage_PokeMart_Employee_Text_0
-# 35 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	waitmessage
 # 36 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	pokemart PalentoVillage_MartItems
-# 37 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	msgbox PalentoVillage_PokeMart_Employee_Text_1
-# 38 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	waitmessage
+# 37 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	pokemart PalentoVillage_MartItems
+# 38 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	msgbox PalentoVillage_PokeMart_Employee_Text_1
 # 39 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 40 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 43 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-PalentoVillage_MartItems:
 # 44 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_POKE_BALL
+PalentoVillage_MartItems:
 # 45 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_POKE_BALL
 # 46 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_POTION
+	.2byte ITEM_GREAT_BALL
 # 47 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
 # 48 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_SUPER_POTION
 # 49 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ANTIDOTE
 # 50 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_PARALYZE_HEAL
 # 51 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	.2byte ITEM_BURN_HEAL
+# 52 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_NONE
 
 PalentoVillagePokeCenter_JordanResting::
-# 56 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	lock
 # 57 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	faceplayer
+	lock
 # 58 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	setspeaker PalentoVillagePokeCenter_JordanResting_Text_0
+	faceplayer
 # 59 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	setspeaker PalentoVillagePokeCenter_JordanResting_Text_0
+# 60 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	msgbox PalentoVillagePokeCenter_JordanResting_Text_1
-# 65 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
-	waitmessage
 # 66 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	waitmessage
+# 67 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	release
 	end
 
 
 PalentoVillage_HealerChansey_Text_0:
 # 23 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+	.string "Chansey$"
+
+PalentoVillage_HealerChansey_Text_1:
+# 24 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.string "Chans-eee$"
 
 PalentoVillage_PokeMart_Employee_Text_0:
-# 33 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 34 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.string "Welcome!\n"
 	.string "How may I serve you?$"
 
 PalentoVillage_PokeMart_Employee_Text_1:
-# 37 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 38 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.string "Please come again!$"
 
 PalentoVillagePokeCenter_JordanResting_Text_0:
-# 58 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 59 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.string "Jordan$"
 
 PalentoVillagePokeCenter_JordanResting_Text_1:
-# 59 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
+# 60 "data/maps/PalentoVillage_PokemonCenter/scripts.pory"
 	.string "Hi {PLAYER}!\n"
 	.string "This Pokemon Center is pretty cool\l"
 	.string "right? Both the mart and the nurse\l"

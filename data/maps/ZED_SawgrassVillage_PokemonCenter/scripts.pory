@@ -20,6 +20,7 @@ script SawgrassVillage_Pokecenter_Nurse {
 script SawgrassVillage_HealerChansey {
     lock
     playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    setspeaker("Chansey")
     msgbox("Chans-eee")
     waitmoncry
     waitmessage

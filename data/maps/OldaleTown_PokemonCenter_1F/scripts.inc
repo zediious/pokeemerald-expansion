@@ -32,238 +32,244 @@ Gerbon_HealerChansey::
 # 22 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
 # 23 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox Gerbon_HealerChansey_Text_0
+	setspeaker Gerbon_HealerChansey_Text_0
 # 24 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	msgbox Gerbon_HealerChansey_Text_1
 # 25 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
+	waitmoncry
 # 26 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	closemessage
+	waitmessage
 # 27 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	closemessage
+# 28 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	return
 
 
 GerbonPokemonCenter_CounterOldMan::
-# 34 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 35 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 36 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_CounterOldMan_Text_0
+	faceplayer
 # 37 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	setspeaker GerbonPokemonCenter_CounterOldMan_Text_0
+# 38 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox GerbonPokemonCenter_CounterOldMan_Text_1
-# 41 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
 # 42 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmessage
+# 43 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 GerbonPokemonCenter_RichBoyPreTourney::
-# 48 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 49 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 50 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_RichBoyPreTourney_Text_0
+	faceplayer
 # 51 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	setspeaker GerbonPokemonCenter_RichBoyPreTourney_Text_0
+# 52 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox GerbonPokemonCenter_RichBoyPreTourney_Text_1
-# 54 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
 # 55 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_RichBoyPreTourney_Text_2
-# 56 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_TADBULB, CRY_MODE_NORMAL
-# 57 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_RichBoyPreTourney_Text_3
-# 58 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	waitmessage
+# 56 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	setspeaker GerbonPokemonCenter_RichBoyPreTourney_Text_2
+# 57 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	playmoncry SPECIES_TADBULB, CRY_MODE_NORMAL
+# 58 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	msgbox GerbonPokemonCenter_RichBoyPreTourney_Text_3
 # 59 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	waitmessage
 # 60 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmoncry
+# 61 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 GerbonPokemonCenter_RichBoyPreTourneyMon::
-# 65 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 66 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 67 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_RichBoyPreTourney_Text_2
+	faceplayer
 # 68 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_TADBULB, CRY_MODE_NORMAL
+	setspeaker GerbonPokemonCenter_RichBoyPreTourney_Text_2
 # 69 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_RichBoyPreTourney_Text_3
+	playmoncry SPECIES_TADBULB, CRY_MODE_NORMAL
 # 70 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
+	msgbox GerbonPokemonCenter_RichBoyPreTourney_Text_3
 # 71 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	waitmessage
 # 72 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmoncry
+# 73 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 GerbonPokemonCenter_ChairCamperPostTourney::
-# 78 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 79 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 80 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_ChairCamperPostTourney_Text_0
+	faceplayer
 # 81 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	setspeaker GerbonPokemonCenter_ChairCamperPostTourney_Text_0
+# 82 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox GerbonPokemonCenter_ChairCamperPostTourney_Text_1
-# 89 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
 # 90 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmessage
+# 91 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 GerbonPokemonCenter_TablePokefan::
-# 96 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 97 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 98 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_TablePokefan_Text_0
+	faceplayer
 # 99 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	setspeaker GerbonPokemonCenter_TablePokefan_Text_0
+# 100 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox GerbonPokemonCenter_TablePokefan_Text_1
-# 101 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
 # 102 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
-# 103 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_CLEFFA, CRY_MODE_NORMAL
-# 104 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_LOTAD, CRY_MODE_NORMAL
-# 105 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_TablePokefan_Text_2
-# 106 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	waitmessage
+# 103 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
+# 104 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	playmoncry SPECIES_CLEFFA, CRY_MODE_NORMAL
+# 105 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	playmoncry SPECIES_LOTAD, CRY_MODE_NORMAL
+# 106 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	msgbox GerbonPokemonCenter_TablePokefan_Text_2
 # 107 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	waitmessage
 # 108 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmoncry
+# 109 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	goto_if_unset FLAG_GERBON_POKEFAN_HEARTSCALE, GerbonPokemonCenter_TablePokefan_2
 GerbonPokemonCenter_TablePokefan_1:
-# 115 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 116 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 GerbonPokemonCenter_TablePokefan_2:
-# 109 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_TablePokefan_Text_0
 # 110 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_TablePokefan_Text_3
+	setspeaker GerbonPokemonCenter_TablePokefan_Text_0
 # 111 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
+	msgbox GerbonPokemonCenter_TablePokefan_Text_3
 # 112 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	giveitem ITEM_HEART_SCALE, 1
+	waitmessage
 # 113 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	giveitem ITEM_HEART_SCALE, 1
+# 114 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	setflag FLAG_GERBON_POKEFAN_HEARTSCALE
 	goto GerbonPokemonCenter_TablePokefan_1
 
 
 GerbonPokemonCenter_TablePokefanLotad::
-# 120 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 121 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 122 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_TablePokefanLotad_Text_0
+	faceplayer
 # 123 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_LOTAD, CRY_MODE_NORMAL
+	setspeaker GerbonPokemonCenter_TablePokefanLotad_Text_0
 # 124 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_TablePokefanLotad_Text_1
+	playmoncry SPECIES_LOTAD, CRY_MODE_NORMAL
 # 125 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
+	msgbox GerbonPokemonCenter_TablePokefanLotad_Text_1
 # 126 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	waitmessage
 # 127 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmoncry
+# 128 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 GerbonPokemonCenter_TablePokefanCleffa::
-# 132 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 133 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 134 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_TablePokefanCleffa_Text_0
+	faceplayer
 # 135 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_CLEFFA, CRY_MODE_NORMAL
+	setspeaker GerbonPokemonCenter_TablePokefanCleffa_Text_0
 # 136 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_TablePokefanCleffa_Text_1
+	playmoncry SPECIES_CLEFFA, CRY_MODE_NORMAL
 # 137 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
+	msgbox GerbonPokemonCenter_TablePokefanCleffa_Text_1
 # 138 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	waitmessage
 # 139 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmoncry
+# 140 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 GerbonPokemonCenter_TablePokefanAzurill::
-# 144 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	lock
 # 145 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	faceplayer
+	lock
 # 146 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setspeaker GerbonPokemonCenter_TablePokefanAzurill_Text_0
+	faceplayer
 # 147 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
+	setspeaker GerbonPokemonCenter_TablePokefanAzurill_Text_0
 # 148 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	msgbox GerbonPokemonCenter_TablePokefanAzurill_Text_1
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
 # 149 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmessage
+	msgbox GerbonPokemonCenter_TablePokefanAzurill_Text_1
 # 150 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	waitmoncry
+	waitmessage
 # 151 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	waitmoncry
+# 152 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 Gerbon_HealerChansey_Text_0:
 # 23 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	.string "Chansey$"
+
+Gerbon_HealerChansey_Text_1:
+# 24 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Chans-eee$"
 
 GerbonPokemonCenter_CounterOldMan_Text_0:
-# 36 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 37 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Old Man$"
 
 GerbonPokemonCenter_CounterOldMan_Text_1:
-# 37 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 38 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Pokemon Centers will always heal your\n"
 	.string "Pokemon to full health, for no charge!\p"
 	.string "Never hesitate to use one!$"
 
 GerbonPokemonCenter_RichBoyPreTourney_Text_0:
-# 50 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 51 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Rich Boy$"
 
 GerbonPokemonCenter_RichBoyPreTourney_Text_1:
-# 51 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 52 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Let's go train a bit more Tadbulb!\n"
 	.string "{COLOR RED}The Tournament{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is going to be tough, we\l"
 	.string "need every edge we can get!$"
 
 GerbonPokemonCenter_RichBoyPreTourney_Text_2:
-# 55 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 56 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Tadbulb$"
 
 GerbonPokemonCenter_RichBoyPreTourney_Text_3:
-# 57 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 58 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Ie-eio-oo-wea!$"
 
 GerbonPokemonCenter_ChairCamperPostTourney_Text_0:
-# 80 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 81 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Camper$"
 
 GerbonPokemonCenter_ChairCamperPostTourney_Text_1:
-# 81 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 82 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "I'm getting ready to go camping in\n"
 	.string "the Sawgrass Forest!\p"
 	.string "...\p"
@@ -272,42 +278,42 @@ GerbonPokemonCenter_ChairCamperPostTourney_Text_1:
 	.string "pranking me...$"
 
 GerbonPokemonCenter_TablePokefan_Text_0:
-# 98 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 99 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Pokefan$"
 
 GerbonPokemonCenter_TablePokefan_Text_1:
-# 99 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 100 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "My Pokemon are so sweet, I love them so\n"
 	.string "dearly!$"
 
 GerbonPokemonCenter_TablePokefan_Text_2:
-# 105 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 106 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "The man's Pokemon seem to concur!$"
 
 GerbonPokemonCenter_TablePokefan_Text_3:
-# 110 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 111 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "I must spread this love! Take this!$"
 
 GerbonPokemonCenter_TablePokefanLotad_Text_0:
-# 122 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 123 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Lotad$"
 
 GerbonPokemonCenter_TablePokefanLotad_Text_1:
-# 124 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 125 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Ee-e!$"
 
 GerbonPokemonCenter_TablePokefanCleffa_Text_0:
-# 134 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 135 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Cleffa$"
 
 GerbonPokemonCenter_TablePokefanCleffa_Text_1:
-# 136 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 137 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Ee-aaa-uu!$"
 
 GerbonPokemonCenter_TablePokefanAzurill_Text_0:
-# 146 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 147 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Azurill$"
 
 GerbonPokemonCenter_TablePokefanAzurill_Text_1:
-# 148 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+# 149 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "Iiiii-eiiii!$"

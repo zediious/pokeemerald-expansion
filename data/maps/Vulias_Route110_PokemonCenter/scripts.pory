@@ -43,6 +43,7 @@ script Route110_Pokecenter_Nurse {
 script Route110PokeCenter_HealerChansey {
     lock
     playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    setspeaker("Chansey")
     msgbox("Chans-eee")
     waitmoncry
     waitmessage

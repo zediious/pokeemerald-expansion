@@ -20,6 +20,7 @@ script Gerbon_Pokecenter_Nurse {
 script Gerbon_HealerChansey {
     lock
     playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+    setspeaker("Chansey")
     msgbox("Chans-eee")
     waitmoncry
     waitmessage
