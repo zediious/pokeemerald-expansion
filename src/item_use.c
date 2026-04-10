@@ -977,7 +977,11 @@ void ItemUseOutOfBattle_Repel(u8 taskId)
     if (REPEL_STEP_COUNT == 0)
         gTasks[taskId].func = Task_StartUseRepel;
     else
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_RepelEffectsDisabled, CloseItemMessage);
+        if (!gTasks[taskId].data[2])
+            DisplayItemMessageOnField(taskId, gText_RepelEffectsDisabled, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_RepelEffectsDisabled, CloseItemMessage);
+
         VarSet(VAR_REPEL_STEP_COUNT, 0);
 }
 
@@ -1001,7 +1005,10 @@ static void Task_UseRepel(u8 taskId)
     #if VAR_LAST_REPEL_LURE_USED != 0
         VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
     #endif
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_RepelEffectsEnabled, CloseItemMessage);
+        if (!gTasks[taskId].data[2])
+            DisplayItemMessageOnField(taskId, gText_RepelEffectsEnabled, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_RepelEffectsEnabled, CloseItemMessage);
     }
 }
 void HandleUseExpiredRepel(struct ScriptContext *ctx)
