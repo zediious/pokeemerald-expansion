@@ -162,16 +162,10 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     applymovement(GERBON_BATTLEHALL_JORDAN_01, moves(walk_right, walk_up))
     waitmovement
     delay(60)
-    fadescreenswapbuffers(FADE_TO_BLACK)
-    setflag(FLAG_GERBON_BATTLEHALL_JORDAN01)
-    removeobject(GERBON_BATTLEHALL_JORDAN_01)
-    clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
-    addobject(GERBON_TOWN_JORDAN_FIRSTBATTLE, MAP_OLDALE_TOWN)
     clearflag(FLAG_GERBON_TOWN_BLOCKERS)
-    addobject(GERBON_PALLADIUM_BLOCKER_1, MAP_OLDALE_TOWN)
-    addobject(GERBON_PALLADIUM_BLOCKER_2, MAP_OLDALE_TOWN)
-    delay(60)
+    clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
     warp(MAP_OLDALE_TOWN, 28, 14)
+    waitstate
     end
 }
 
