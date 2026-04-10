@@ -1216,6 +1216,12 @@ struct SaveBlock1
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
     struct DaycareMon route5DayCareMon;
 #endif
+    /*0x3???*/ u16 registeredItem1; // registered for use with SELECT + DPAD_UP combo
+    /*0x3???*/ u16 registeredItem2; // registered for use with SELECT + DPAD_RIGHT combo
+    /*0x3???*/ u16 registeredItem3; // registered for use with SELECT + DPAD_DOWN combo
+    /*0x3???*/ u16 registeredItem4; // registered for use with SELECT + DPAD_LEFT combo
+    /*0x3???*/ u16 registeredItem5; // registered for use with SELECT + A_BUTTON combo
+    /*0x3???*/ u16 registeredItem6; // registered for use with SELECT + B_BUTTON combo
     // sizeof: 0x3???
 };
 
