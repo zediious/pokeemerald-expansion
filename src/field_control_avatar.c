@@ -128,6 +128,10 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
             input->heldDirection = TRUE;
             input->heldDirection2 = TRUE;
         }
+
+        if (heldKeys & (SELECT_BUTTON))
+            input->heldSelect = TRUE;
+
     }
 
     if (forcedMove == FALSE)
@@ -232,8 +236,25 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->tookStep && TryFindHiddenPokemon())
         return TRUE;
 
-    if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+    if (input->heldSelect)
+    {
+        if (JOY_HELD(DPAD_UP))
+            UseRegisteredKeyItemOnField(0);
+        else if (JOY_HELD(DPAD_RIGHT))
+            UseRegisteredKeyItemOnField(1);
+        else if (JOY_HELD(DPAD_DOWN))
+            UseRegisteredKeyItemOnField(2);
+        else if (JOY_HELD(DPAD_LEFT))
+            UseRegisteredKeyItemOnField(3);
+        else if (JOY_HELD(A_BUTTON))
+            UseRegisteredKeyItemOnField(4);
+        else if (JOY_HELD(B_BUTTON))
+            UseRegisteredKeyItemOnField(5);
+        else
+            UseRegisteredKeyItemOnField(0); // Only holding SELECT
+
         return TRUE;
+    }
 
     if (input->pressedRButton && TryStartDexNavSearch())
         return TRUE;
