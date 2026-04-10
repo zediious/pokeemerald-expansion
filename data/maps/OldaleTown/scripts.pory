@@ -50,6 +50,15 @@ script GerbonTown_EventScript_TownSign {
     releaseall
 }
 
+// Restaraunt sign
+script GerbonTown_EventScript_RestarauntSign {
+    lockall
+    msgbox("The Sassy Salazzle
+    
+            Battle and Dine!")
+    releaseall
+}
+
 // Sign to Route 110
 script GerbonTown_EventScript_Route110Sign {
     lockall
