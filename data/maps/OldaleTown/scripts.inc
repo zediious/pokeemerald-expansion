@@ -717,6 +717,10 @@ GerbonTown_EventScript_ExpertHouseSlaking::
 	setspeaker GerbonTown_EventScript_ExpertHouseSlaking_Text_0
 # 617 "data/maps/OldaleTown/scripts.pory"
 	msgbox GerbonTown_EventScript_ExpertHouseSlaking_Text_1
+# 618 "data/maps/OldaleTown/scripts.pory"
+	waitmessage
+# 619 "data/maps/OldaleTown/scripts.pory"
+	msgbox GerbonTown_EventScript_ExpertHouseSlaking_Text_2
 # 621 "data/maps/OldaleTown/scripts.pory"
 	waitmoncry
 # 622 "data/maps/OldaleTown/scripts.pory"
@@ -1129,7 +1133,10 @@ GerbonTown_EventScript_ExpertHouseSlaking_Text_0:
 
 GerbonTown_EventScript_ExpertHouseSlaking_Text_1:
 # 617 "data/maps/OldaleTown/scripts.pory"
-	.string "Grahh-uh!\p"
+	.string "Grahh-uh!$"
+
+GerbonTown_EventScript_ExpertHouseSlaking_Text_2:
+# 619 "data/maps/OldaleTown/scripts.pory"
 	.string "It looks as though you have woken up\n"
 	.string "the Slaking, not a good idea!$"
 

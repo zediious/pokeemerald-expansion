@@ -614,9 +614,9 @@ script GerbonTown_EventScript_ExpertHouseSlaking {
     faceplayer
     playmoncry(SPECIES_SLAKING, CRY_MODE_NORMAL)
     setspeaker("Slaking")
-    msgbox("Grahh-uh!
-    
-            It looks as though you have woken up
+    msgbox("Grahh-uh!")
+    waitmessage
+    msgbox("It looks as though you have woken up
             the Slaking, not a good idea!")
     waitmoncry
     waitmessage
