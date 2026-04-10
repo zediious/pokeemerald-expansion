@@ -1829,3 +1829,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/GerbonTown_House03/scripts.inc"
 
 	.include "data/maps/WoltiaCity_Mart/scripts.inc"
+
+	.include "data/maps/GerbonTown_FlatFloor01/scripts.inc"
+
+	.include "data/maps/GerbonTown_FlatFloor02/scripts.inc"

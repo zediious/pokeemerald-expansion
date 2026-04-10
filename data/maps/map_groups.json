@@ -165,7 +165,9 @@
     "GerbonTown_BattleHall_PrepRoom",
     "GerbonTown_House01",
     "GerbonTown_House02",
-    "GerbonTown_House03"
+    "GerbonTown_House03",
+    "GerbonTown_FlatFloor01",
+    "GerbonTown_FlatFloor02"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",

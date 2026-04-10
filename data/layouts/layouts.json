@@ -9773,6 +9773,26 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/WoltiaCity_Mart/border.bin",
       "blockdata_filepath": "data/layouts/WoltiaCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_GERBON_TOWN_FLAT_FLOOR01",
+      "name": "GerbonTown_FlatFloor01_Layout",
+      "width": 14,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/GerbonTown_FlatFloor01/border.bin",
+      "blockdata_filepath": "data/layouts/GerbonTown_FlatFloor01/map.bin"
+    },
+    {
+      "id": "LAYOUT_GERBON_TOWN_FLAT_FLOOR02",
+      "name": "GerbonTown_FlatFloor02_Layout",
+      "width": 14,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/GerbonTown_FlatFloor02/border.bin",
+      "blockdata_filepath": "data/layouts/GerbonTown_FlatFloor02/map.bin"
     }
   ]
 }
