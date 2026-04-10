@@ -237,23 +237,47 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         return TRUE;
 
     if (input->heldSelect)
-    {
-        if (JOY_HELD(DPAD_UP))
-            UseRegisteredKeyItemOnField(0);
-        else if (JOY_HELD(DPAD_RIGHT))
-            UseRegisteredKeyItemOnField(1);
-        else if (JOY_HELD(DPAD_DOWN))
-            UseRegisteredKeyItemOnField(2);
-        else if (JOY_HELD(DPAD_LEFT))
-            UseRegisteredKeyItemOnField(3);
-        else if (JOY_HELD(A_BUTTON))
-            UseRegisteredKeyItemOnField(4);
-        else if (JOY_HELD(B_BUTTON))
-            UseRegisteredKeyItemOnField(5);
-        else
-            UseRegisteredKeyItemOnField(0); // Only holding SELECT
+    {   
+        u8 checkHeldCounter = 0;
+        while (JOY_HELD(SELECT_BUTTON) && checkHeldCounter < 5)
+        {
+            if (JOY_HELD(DPAD_UP))
+            {
+                UseRegisteredKeyItemOnField(0);
+                return TRUE;
+            }
+            else if (JOY_HELD(DPAD_RIGHT))
+            {
+                UseRegisteredKeyItemOnField(1);
+                return TRUE;
+            }
+            else if (JOY_HELD(DPAD_DOWN))
+            {
+                UseRegisteredKeyItemOnField(2);
+                return TRUE;
+            }
+            else if (JOY_HELD(DPAD_LEFT))
+            {
+                UseRegisteredKeyItemOnField(3);
+                return TRUE;
+            }
+            else if (JOY_HELD(A_BUTTON))
+            {
+                UseRegisteredKeyItemOnField(4);
+                return TRUE;
+            }
+            else if (JOY_HELD(B_BUTTON))
+            {
+                UseRegisteredKeyItemOnField(5);
+                return TRUE;
+            }
+            checkHeldCounter++;
+        }
 
+        // Did not press another button
+        UseRegisteredKeyItemOnField(0); // Only holding SELECT
         return TRUE;
+        
     }
 
     if (input->pressedRButton && TryStartDexNavSearch())
