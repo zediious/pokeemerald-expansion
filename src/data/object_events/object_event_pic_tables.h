@@ -214,6 +214,10 @@ static const struct SpriteFrameImage sPicTable_Journal[] = {
     overworld_frame(gObjectEventPic_Journal, 2, 4, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_Waitress[] = {
+    overworld_ascending_frames(gObjectEventPic_Waitress, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_HexManiac[] = {
     overworld_ascending_frames(gObjectEventPic_HexManiac, 2, 4),
 };

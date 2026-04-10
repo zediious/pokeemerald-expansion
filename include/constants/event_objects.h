@@ -414,6 +414,7 @@
 #define OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG        387
 #define OBJ_EVENT_GFX_NEWPOLICEMAN               388
 #define OBJ_EVENT_GFX_JOURNAL                    389
+#define OBJ_EVENT_GFX_WAITRESS                   390
 
 // FRLG equivalents
 
@@ -425,7 +426,7 @@
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        390
+#define NUM_OBJ_EVENT_GFX                        391
 
 
 // These are dynamic object gfx ids.
@@ -572,6 +573,7 @@
 #define OBJ_EVENT_PAL_TAG_SS_ANNE                 0x1133
 #define OBJ_EVENT_PAL_TAG_NEW_POLICE              0x1134
 #define OBJ_EVENT_PAL_TAG_JOURNAL                 0x1135
+#define OBJ_EVENT_PAL_TAG_WAITRESS                 0x1136
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
