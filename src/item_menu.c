@@ -2472,6 +2472,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
                 }
             }
+            break;
 
         case 1:
             if (gSaveBlock1Ptr->registeredItem1 != ITEM_NONE)
@@ -2492,6 +2493,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem1 = ITEM_NONE;
                 }
             }
+            break;
             
         case 2:
             if (gSaveBlock1Ptr->registeredItem2 != ITEM_NONE)
@@ -2512,6 +2514,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem2 = ITEM_NONE;
                 }
             }
+            break;
 
         case 3:
             if (gSaveBlock1Ptr->registeredItem3 != ITEM_NONE)
@@ -2532,6 +2535,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem3 = ITEM_NONE;
                 }
             }
+            break;
 
         case 4:
             if (gSaveBlock1Ptr->registeredItem4 != ITEM_NONE)
@@ -2552,6 +2556,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem4 = ITEM_NONE;
                 }
             }
+            break;
 
         case 5:
             if (gSaveBlock1Ptr->registeredItem5 != ITEM_NONE)
@@ -2572,6 +2577,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem5 = ITEM_NONE;
                 }
             }
+            break;
 
         case 6:
             if (gSaveBlock1Ptr->registeredItem6 != ITEM_NONE)
@@ -2592,6 +2598,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
                     gSaveBlock1Ptr->registeredItem6 = ITEM_NONE;
                 }
             }
+            break;
     }
 
     ScriptContext_SetupScript(EventScript_SelectWithoutRegisteredItem);
