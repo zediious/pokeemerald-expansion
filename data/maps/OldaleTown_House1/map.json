@@ -17,17 +17,17 @@
   "warp_events": [
     {
       "x": 3,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "15"
     },
     {
       "x": 4,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "15"
     }
   ],
   "coord_events": [],

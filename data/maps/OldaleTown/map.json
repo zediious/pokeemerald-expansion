@@ -428,6 +428,20 @@
       "elevation": 0,
       "dest_map": "MAP_GERBON_TOWN_HOUSE03",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
