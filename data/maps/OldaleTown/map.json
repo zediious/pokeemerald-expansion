@@ -449,6 +449,13 @@
       "elevation": 0,
       "dest_map": "MAP_GERBON_TOWN_FLAT_FLOOR01",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_GERBON_TOWN_RESTARAUNT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

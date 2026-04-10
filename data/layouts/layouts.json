@@ -9793,6 +9793,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/GerbonTown_FlatFloor02/border.bin",
       "blockdata_filepath": "data/layouts/GerbonTown_FlatFloor02/map.bin"
+    },
+    {
+      "id": "LAYOUT_GERBON_TOWN_RESTARAUNT",
+      "name": "GerbonTown_Restaraunt_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RestarauntInterior",
+      "border_filepath": "data/layouts/GerbonTown_Restaraunt/border.bin",
+      "blockdata_filepath": "data/layouts/GerbonTown_Restaraunt/map.bin"
     }
   ]
 }
