@@ -456,3 +456,6 @@ const u16 gMetatileAttributes_IgrisUnderground[] = INCBIN_U16("data/tilesets/pri
 
 const u16 gMetatiles_Igris_Ruins[] = INCBIN_U16("data/tilesets/secondary/igris_ruins/metatiles.bin");
 const u16 gMetatileAttributes_Igris_Ruins[] = INCBIN_U16("data/tilesets/secondary/igris_ruins/metatile_attributes.bin");
+
+const u16 gMetatiles_RestarauntInterior[] = INCBIN_U16("data/tilesets/secondary/restaraunt_interior/metatiles.bin");
+const u16 gMetatileAttributes_RestarauntInterior[] = INCBIN_U16("data/tilesets/secondary/restaraunt_interior/metatile_attributes.bin");
