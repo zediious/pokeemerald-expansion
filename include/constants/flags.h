@@ -705,7 +705,7 @@
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
+#define FLAG_NOCONTEXT_SWITCHINGMON             0x28D // Indicates Party mons are actively being switches, initiated with SELECT
 #define FLAG_REGISTERBIND_MENU_OPEN             0x28E // Indicates the bag UI for selecting register bind is currently open
 #define FLAG_I_VS_SEEKER_CHARGING               0x28F // VS Seeker charging flag
 #define FLAG_BATTLE_QUICKRUN_STATE              0x290 // State tracker for quick run from wild encounter

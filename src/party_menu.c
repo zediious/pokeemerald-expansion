@@ -1439,9 +1439,13 @@ void Task_HandleChooseMonInput(u8 taskId)
             }
             break;
         case SELECT_BUTTON:
-            PlaySE(SE_SELECT);
-            CursorCb_Switch(taskId);
-            break;
+            if (!FlagGet(FLAG_NOCONTEXT_SWITCHINGMON))
+            {
+                FlagSet(FLAG_NOCONTEXT_SWITCHINGMON);
+                PlaySE(SE_SELECT);
+                CursorCb_Switch(taskId);
+                break;
+            }   
         }
     }
 }
@@ -1509,6 +1513,7 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
         case PARTY_ACTION_SWITCH:
             PlaySE(SE_SELECT);
             SwitchSelectedMons(taskId);
+            FlagClear(FLAG_NOCONTEXT_SWITCHINGMON);
             break;
         case PARTY_ACTION_CHOOSE_AND_CLOSE:
             PlaySE(SE_SELECT);
