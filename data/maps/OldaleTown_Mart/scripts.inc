@@ -151,8 +151,8 @@ GerbonMart_RightShelfOldMan_Text_0:
 
 GerbonMart_RightShelfOldMan_Text_1:
 # 72 "data/maps/OldaleTown_Mart/scripts.pory"
-	.string "If you don't want to encounter\n"
-	.string "any Pokemon, buy a Repel!\p"
-	.string "The Repels around here are better than\n"
-	.string "in other regions. Our basic Repel lasts\l"
-	.string "for 500 steps, and are a great value!$"
+	.string "Are you looking for a Repel? They\n"
+	.string "stopped selling them here in Vulias\l"
+	.string "after the {COLOR RED}Ultra Repel{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was invented.\p"
+	.string "You don't have one? Sorry...neither\n"
+	.string "do I!$"

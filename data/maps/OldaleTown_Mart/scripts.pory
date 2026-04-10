@@ -69,12 +69,12 @@ script GerbonMart_RightShelfOldMan{
     lock
     faceplayer
     setspeaker("Old Man")
-    msgbox("If you don't want to encounter
-            any Pokemon, buy a Repel!
+    msgbox("Are you looking for a Repel? They
+            stopped selling them here in Vulias
+            after the {COLOR RED}Ultra Repel{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} was invented.
             
-            The Repels around here are better than
-            in other regions. Our basic Repel lasts
-            for 500 steps, and are a great value!")
+            You don't have one? Sorry...neither
+            do I!")
     waitmessage
     release
     end
