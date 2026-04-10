@@ -2441,7 +2441,7 @@ static void Task_ItemContext_GiveToPC(u8 taskId)
 
 #define tUsingRegisteredKeyItem data[3] // See usage in item_use.c
 
-bool8 UseRegisteredKeyItemOnField(void)
+bool8 UseRegisteredKeyItemOnField(u8 regSlot)
 {
     u8 taskId;
 
@@ -2449,24 +2449,151 @@ bool8 UseRegisteredKeyItemOnField(void)
         return FALSE;
     HideMapNamePopUpWindow();
     ChangeBgY_ScreenOff(0, 0, BG_COORD_SET);
-    if (gSaveBlock1Ptr->registeredItem != ITEM_NONE)
+
+
+    switch (regSlot)
     {
-        if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
-        {
-            LockPlayerFieldControls();
-            FreezeObjectEvents();
-            PlayerFreeze();
-            StopPlayerAvatar();
-            gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem;
-            taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem), 8);
-            gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
-            return TRUE;
-        }
-        else
-        {
-            gSaveBlock1Ptr->registeredItem = ITEM_NONE;
-        }
+        case 0:
+            if (gSaveBlock1Ptr->registeredItem != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem = ITEM_NONE;
+                }
+            }
+
+        case 1:
+            if (gSaveBlock1Ptr->registeredItem1 != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem1, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem1;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem1), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem1 = ITEM_NONE;
+                }
+            }
+            
+        case 2:
+            if (gSaveBlock1Ptr->registeredItem2 != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem2, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem2;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem2), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem2 = ITEM_NONE;
+                }
+            }
+
+        case 3:
+            if (gSaveBlock1Ptr->registeredItem3 != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem3, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem3;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem3), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem3 = ITEM_NONE;
+                }
+            }
+
+        case 4:
+            if (gSaveBlock1Ptr->registeredItem4 != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem4, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem4;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem4), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem4 = ITEM_NONE;
+                }
+            }
+
+        case 5:
+            if (gSaveBlock1Ptr->registeredItem5 != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem5, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem5;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem5), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem5 = ITEM_NONE;
+                }
+            }
+
+        case 6:
+            if (gSaveBlock1Ptr->registeredItem6 != ITEM_NONE)
+            {
+                if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem6, 1) == TRUE)
+                {
+                    LockPlayerFieldControls();
+                    FreezeObjectEvents();
+                    PlayerFreeze();
+                    StopPlayerAvatar();
+                    gSpecialVar_ItemId = gSaveBlock1Ptr->registeredItem6;
+                    taskId = CreateTask(GetItemFieldFunc(gSaveBlock1Ptr->registeredItem6), 8);
+                    gTasks[taskId].tUsingRegisteredKeyItem = TRUE;
+                    return TRUE;
+                }
+                else
+                {
+                    gSaveBlock1Ptr->registeredItem6 = ITEM_NONE;
+                }
+            }
     }
+
     ScriptContext_SetupScript(EventScript_SelectWithoutRegisteredItem);
     return TRUE;
 }
