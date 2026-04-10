@@ -746,6 +746,6 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_PIC_BACK_STEVEN, 4, gTrainerBackPic_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_PIC_BACK_POKEDUDE, 4, gTrainerBackPic_Pokedude, gTrainerBackPicPalette_Pokedude, sBackAnims_OldManPokedude),
     TRAINER_BACK_SPRITE(TRAINER_PIC_BACK_OLD_MAN, 4, gTrainerBackPic_OldMan, gTrainerBackPicPalette_OldMan, sBackAnims_OldManPokedude),
-    TRAINER_BACK_SPRITE(TRAINER_PIC_BACK_NOLAND, 4, gTrainerBackPic_Noland, gTrainerBackPicPalette_Noland, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_PIC_BACK_FACTORY_HEAD_NOLAND, 4, gTrainerBackPic_Noland, gTrainerBackPicPalette_Noland, sBackAnims_Hoenn),
 
 };
