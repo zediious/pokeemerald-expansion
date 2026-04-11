@@ -15,6 +15,7 @@
 #include "util.h"
 #include "pokemon.h"
 #include "random.h"
+#include "scaling.h"
 #include "battle_controllers.h"
 #include "battle_interface.h"
 #include "text.h"
@@ -6183,10 +6184,25 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     }
     else
     {
+        const u8 trainerPartySize = GetTrainerPartySizeFromId(trainerId);
         const struct TrainerMon *party = GetTrainerPartyFromId(trainerId);
+        struct TrainerMon scaledParty[trainerPartySize];
+
+        // Set flag to not scale level if trainer among exclusions
+        u32 t;
+        for (t = 0; t < ExcludeScalingTrainersCount(); t++) {
+            if (trainerId == ExcludeScalingTrainers[t]) {
+                FlagSet(FLAG_SCALING_EXCLUDE_SCALE);
+                break;
+            }
+        }
+        
+        memcpy(scaledParty, party, trainerPartySize * sizeof(struct TrainerMon));
+        party = ScaleTrainerMons(trainerPartySize, scaledParty, TRUE, FALSE);
+
         if (party == NULL)
             return 20;
-        lastMonLevel = party[GetTrainerPartySizeFromId(trainerId) - 1].lvl;
+        lastMonLevel = party[trainerPartySize - 1].lvl;
         trainerMoney = gTrainerClasses[GetTrainerClassFromId(trainerId)].money ?: 5;
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
