@@ -198,8 +198,11 @@ struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, str
         case EVO_LEVEL: // Evolve if at or beyond evo lvl param, to third evo if applicable
             const struct Evolution *evolutions = GetSpeciesEvolutions(chosenEvo.targetSpecies);
             if (evolutions != NULL) {
-                // Recurse to evolve the newly-evolved mon
-                trainerMon.species = chosenEvo.targetSpecies;
+                // Recurse to evolve the newly-evolved mon if the 1st stage can evolve to 2nd stage
+                if ((chosenEvo.param <= trainerMon.lvl))
+                    trainerMon.species = chosenEvo.targetSpecies;
+                else
+                    return trainerMon;
                 evolutionCount = GetSpeciesEvolutionCount(chosenEvo.targetSpecies);
                 trainerMon = EvolveTrainerMon(evolutions, trainerMon, levelCeil, evolutionCount);
                 return trainerMon;
