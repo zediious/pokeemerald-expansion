@@ -20,6 +20,49 @@
 #include "constants/items.h"
 #include "constants/trainers.h"
 
+// List of trainers that are excluded from scaling
+const u16 ExcludeScalingTrainers[] = 
+{   
+    // Palladium
+    TRAINER_MARC,
+    TRAINER_CRISTIAN,
+    TRAINER_BRYAN,
+    TRAINER_BRENDAN_ROUTE_110_TREECKO,
+    TRAINER_BRENDAN_ROUTE_119_TREECKO,
+    TRAINER_BRENDAN_ROUTE_103_TORCHIC,
+    TRAINER_BRENDAN_ROUTE_110_TORCHIC,
+    TRAINER_ROXANNE_1,
+    // Aerodrome
+    TRAINER_PERRY,
+    TRAINER_TED,
+    TRAINER_WADE,
+    TRAINER_BRENDAN_ROUTE_119_TORCHIC,
+    TRAINER_MAY_ROUTE_110_MUDKIP,
+    TRAINER_MAY_ROUTE_119_MUDKIP,
+    TRAINER_MAY_ROUTE_110_TREECKO,
+    TRAINER_WINONA_1,
+};
+
+// List of trainers that are excluded from evolution during scaling.
+// The levels of the mons will still scale, but they will not evolve.
+// Duplicates between this and `ExcludeScalingTrainers` are not needed.
+const u16 ExcludeScalingEvoTrainers[] =
+{
+    //Sensei's students, should always have Tyrogue
+    TRAINER_CALVIN_1,
+    TRAINER_BILLY,
+};
+
+u8 ExcludeScalingTrainersCount(void)
+{
+    return ARRAY_COUNT(ExcludeScalingTrainers);
+}
+
+u8 ExcludeScalingEvoTrainersCount(void)
+{
+    return ARRAY_COUNT(ExcludeScalingEvoTrainers);
+}
+
 static struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveBranchTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount);
 static struct TrainerMon EvolveParentTrainerMon(const struct Evolution *evolutions, const struct Evolution *parentEvolutions, struct TrainerMon trainerMon, u32 evoIndex, u8 levelCeil);

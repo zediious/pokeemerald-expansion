@@ -458,39 +458,6 @@ static void (*const sEndTurnFuncsTable[])(void) =
     [B_OUTCOME_MON_TELEPORTED]    = HandleEndTurn_FinishBattle,
 };
 
-// List of trainers that are excluded from scaling
-static const u16 ExcludeScalingTrainers[] = 
-{   
-    // Palladium
-    TRAINER_MARC,
-    TRAINER_CRISTIAN,
-    TRAINER_BRYAN,
-    TRAINER_BRENDAN_ROUTE_110_TREECKO,
-    TRAINER_BRENDAN_ROUTE_119_TREECKO,
-    TRAINER_BRENDAN_ROUTE_103_TORCHIC,
-    TRAINER_BRENDAN_ROUTE_110_TORCHIC,
-    TRAINER_ROXANNE_1,
-    // Aerodrome
-    TRAINER_PERRY,
-    TRAINER_TED,
-    TRAINER_WADE,
-    TRAINER_BRENDAN_ROUTE_119_TORCHIC,
-    TRAINER_MAY_ROUTE_110_MUDKIP,
-    TRAINER_MAY_ROUTE_119_MUDKIP,
-    TRAINER_MAY_ROUTE_103_TREECKO,
-    TRAINER_WINONA_1,
-};
-
-// List of trainers that are excluded from evolution during scaling.
-// The levels of the mons will still scale, but they will not evolve.
-// Duplicates between this and `ExcludeScalingTrainers` are not needed.
-static const u16 ExcludeScalingEvoTrainers[] =
-{
-    //Sensei's students, should always have Tyrogue
-    TRAINER_CALVIN_1,
-    TRAINER_BILLY,
-};
-
 const u8 gStatusConditionString_PoisonJpn[] = _("どく$$$$$");
 const u8 gStatusConditionString_SleepJpn[] = _("ねむり$$$$");
 const u8 gStatusConditionString_ParalysisJpn[] = _("まひ$$$$$");
@@ -2131,14 +2098,14 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
     // Set flags to not scale or evolve during scaling if among exclusions
     u32 t;
-    for (t = 0; t < ARRAY_COUNT(ExcludeScalingTrainers); t++) {
+    for (t = 0; t < ExcludeScalingTrainersCount(); t++) {
         if (trainerNum == ExcludeScalingTrainers[t]) {
             FlagSet(FLAG_SCALING_EXCLUDE_SCALE);
             break;
         }
     }
 
-    for (t = 0; t < ARRAY_COUNT(ExcludeScalingEvoTrainers); t++) {
+    for (t = 0; t < ExcludeScalingEvoTrainersCount(); t++) {
         if (trainerNum == ExcludeScalingEvoTrainers[t]) {
             FlagSet(FLAG_SCALING_EXCLUDE_EVO);
             break;
