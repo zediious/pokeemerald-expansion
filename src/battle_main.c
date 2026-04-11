@@ -5624,6 +5624,7 @@ static void HandleEndTurn_BattleLost(void)
         gBattlescriptCurrInstr = BattleScript_LocalBattleLost;
     }
 
+    FlagClear(FLAG_BATTLE_PLAYER_SWITCHED);
     gBattleMainFunc = HandleEndTurn_FinishBattle;
 }
 
