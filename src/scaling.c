@@ -111,49 +111,6 @@ struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledPart
     return scaledParty;
 }
 
-void ScaleTrainerMon(struct TrainerMon *scaledMon, bool32 evolveExcluded, bool32 alwaysCeiling, u8 levelCeil) // Scale a single mon
-{   
-    struct TrainerMon tempScaledMon = *scaledMon;
-
-    // Get player's highest level mon only if not passed > 0
-    if (levelCeil != 0)
-    {
-        levelCeil = GetPlayerLevelCeiling();
-    }
-    
-    // Don't scale if no player mon is at least level 10
-    if (levelCeil >= 10)
-    {
-        u8 compareLevel;
-        if (alwaysCeiling) // If alwaysCeiling passed TRUE, set compare to levelCeil
-        {
-            compareLevel = levelCeil;
-        }
-        else // If not, set compare to ((levelCeil - 1) - [1-3])
-        {
-            compareLevel = ((levelCeil - 1) - (Random() % 3));
-        } 
-
-        // Don't set if calced level is lower than set level
-        if (tempScaledMon.lvl < compareLevel) {
-            tempScaledMon.lvl = compareLevel;
-
-            // Don't evolve if evolveExcluded was passed TRUE
-            if (evolveExcluded) {return;}
-
-            // Don't evolve if Pokemon has a held Everstone or Eviolite
-            if (scaledMon->heldItem == ITEM_EVIOLITE || scaledMon->heldItem == ITEM_EVERSTONE) {return;}
-
-            const struct Evolution *evolutions = GetSpeciesEvolutions(scaledMon->species);
-            u8 evolutionCount = GetSpeciesEvolutionCount(scaledMon->species);
-            if (evolutions == NULL) {return;}
-            
-            // Evolve the Pokemon if applicable
-            *scaledMon = EvolveTrainerMon(evolutions, *scaledMon, levelCeil, evolutionCount);
-        }
-    }
-}
-
 struct TrainerMon EvolveTrainerMon(const struct Evolution *evolutions, struct TrainerMon trainerMon, u8 levelCeil, u8 evolutionCount)
 {
     // If mon has more than one evolution (i.e Wurmple), randomize as evenly as possible between each
