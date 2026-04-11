@@ -2242,33 +2242,26 @@ static void ItemMenu_Unregister_ReturnToBag(u8 taskId)
 static void ItemMenu_Unregister(u8 taskId)
 {
     if (gSaveBlock1Ptr->registeredItem == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem = ITEM_NONE;
-    }
+
     else if (gSaveBlock1Ptr->registeredItem1 == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem1 = ITEM_NONE;
-    }
+
     else if (gSaveBlock1Ptr->registeredItem2 == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem2 = ITEM_NONE;
-    }
+
     else if (gSaveBlock1Ptr->registeredItem3 == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem3 = ITEM_NONE;
-    }
+
     else if (gSaveBlock1Ptr->registeredItem4 == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem4 = ITEM_NONE;
-    }
+
     else if (gSaveBlock1Ptr->registeredItem5 == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem5 = ITEM_NONE;
-    }
+
     else if (gSaveBlock1Ptr->registeredItem6 == gSpecialVar_ItemId)
-    {
         gSaveBlock1Ptr->registeredItem6 = ITEM_NONE;
-    }
+
     ItemMenu_Unregister_ReturnToBag(taskId);
 }
 
@@ -2277,46 +2270,25 @@ static void ItemMenu_Register(u8 taskId, s32 hotkey)
     // Assign the item to the respective register slot, unassign if already assigned
     switch (hotkey) {
         case 1:
-            if (gSaveBlock1Ptr->registeredItem == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem = gSpecialVar_ItemId;
             break;
         case 2:
-            if (gSaveBlock1Ptr->registeredItem1 == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem1 = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem1 = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem1 = gSpecialVar_ItemId;
             break;
         case 3:
-            if (gSaveBlock1Ptr->registeredItem2 == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem2 = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem2 = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem2 = gSpecialVar_ItemId;
             break;
         case 4:
-            if (gSaveBlock1Ptr->registeredItem3 == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem3 = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem3 = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem3 = gSpecialVar_ItemId;
             break;
         case 5:
-            if (gSaveBlock1Ptr->registeredItem4 == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem4 = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem4 = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem4 = gSpecialVar_ItemId;
             break;
         case 6:
-            if (gSaveBlock1Ptr->registeredItem5 == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem5 = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem5 = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem5 = gSpecialVar_ItemId;
             break;
         case 7:
-            if (gSaveBlock1Ptr->registeredItem6 == gSpecialVar_ItemId)
-                gSaveBlock1Ptr->registeredItem6 = ITEM_NONE;
-            else
-                gSaveBlock1Ptr->registeredItem6 = gSpecialVar_ItemId;
+            gSaveBlock1Ptr->registeredItem6 = gSpecialVar_ItemId;
             break;
     }
 }
@@ -2453,7 +2425,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
 
     switch (regSlot)
     {
-        case 0:
+        case 1:
             if (gSaveBlock1Ptr->registeredItem != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
@@ -2474,7 +2446,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
             }
             break;
 
-        case 1:
+        case 2:
             if (gSaveBlock1Ptr->registeredItem1 != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem1, 1) == TRUE)
@@ -2495,7 +2467,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
             }
             break;
             
-        case 2:
+        case 3:
             if (gSaveBlock1Ptr->registeredItem2 != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem2, 1) == TRUE)
@@ -2516,7 +2488,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
             }
             break;
 
-        case 3:
+        case 4:
             if (gSaveBlock1Ptr->registeredItem3 != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem3, 1) == TRUE)
@@ -2537,7 +2509,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
             }
             break;
 
-        case 4:
+        case 5:
             if (gSaveBlock1Ptr->registeredItem4 != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem4, 1) == TRUE)
@@ -2558,7 +2530,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
             }
             break;
 
-        case 5:
+        case 6:
             if (gSaveBlock1Ptr->registeredItem5 != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem5, 1) == TRUE)
@@ -2579,7 +2551,7 @@ bool8 UseRegisteredKeyItemOnField(u8 regSlot)
             }
             break;
 
-        case 6:
+        case 7:
             if (gSaveBlock1Ptr->registeredItem6 != ITEM_NONE)
             {
                 if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem6, 1) == TRUE)

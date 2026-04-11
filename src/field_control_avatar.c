@@ -244,39 +244,39 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         {
             if (JOY_HELD(DPAD_UP))
             {
-                UseRegisteredKeyItemOnField(0);
+                UseRegisteredKeyItemOnField(2);
                 return TRUE;
             }
             else if (JOY_HELD(DPAD_RIGHT))
             {
-                UseRegisteredKeyItemOnField(1);
+                UseRegisteredKeyItemOnField(3);
                 return TRUE;
             }
             else if (JOY_HELD(DPAD_DOWN))
             {
-                UseRegisteredKeyItemOnField(2);
+                UseRegisteredKeyItemOnField(4);
                 return TRUE;
             }
             else if (JOY_HELD(DPAD_LEFT))
             {
-                UseRegisteredKeyItemOnField(3);
+                UseRegisteredKeyItemOnField(5);
                 return TRUE;
             }
             else if (JOY_HELD(A_BUTTON))
             {
-                UseRegisteredKeyItemOnField(4);
+                UseRegisteredKeyItemOnField(6);
                 return TRUE;
             }
             else if (JOY_HELD(B_BUTTON))
             {
-                UseRegisteredKeyItemOnField(5);
+                UseRegisteredKeyItemOnField(7);
                 return TRUE;
             }
             checkHeldCounter++;
         }
 
         // Did not press another button
-        UseRegisteredKeyItemOnField(0); // Only holding SELECT
+        UseRegisteredKeyItemOnField(1); // Only holding SELECT
         return TRUE;
         
     }
