@@ -351,6 +351,8 @@ RuvelPyramid01_SpikeTrap_1:
 # 234 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	warp MAP_VULIAS_RUVEL_PYRAMID_1, 12, 14
 # 235 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	waitstate
+# 236 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	release
 	end
 
@@ -376,45 +378,45 @@ RuvelPyramid01_SpikeTrap_5:
 
 
 RubelPyramid01_PoliceWarnTrigger::
-# 241 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	lock
 # 242 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement RUVEL_COP_01, RubelPyramid01_PoliceWarnTrigger_Movement_0
+	lock
 # 243 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	playse SE_PIN
+	applymovement RUVEL_COP_01, RubelPyramid01_PoliceWarnTrigger_Movement_0
 # 244 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RubelPyramid01_PoliceWarnTrigger_Movement_1
+	playse SE_PIN
 # 245 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	waitmovement
+	applymovement OBJ_EVENT_ID_PLAYER, RubelPyramid01_PoliceWarnTrigger_Movement_1
 # 246 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	waitse
+	waitmovement
 # 247 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	delay 30
+	waitse
 # 248 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setspeaker RubelPyramid01_PoliceWarnTrigger_Text_0
+	delay 30
 # 249 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setspeaker RubelPyramid01_PoliceWarnTrigger_Text_0
+# 250 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	msgbox RubelPyramid01_PoliceWarnTrigger_Text_1
-# 263 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	waitmessage
 # 264 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 22
+	waitmessage
 # 265 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	applymovement RUVEL_COP_01, RubelPyramid01_PoliceWarnTrigger_Movement_2
+	setvar VAR_ZED_STORY_TRACKER, 22
 # 266 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	applymovement RUVEL_COP_01, RubelPyramid01_PoliceWarnTrigger_Movement_2
+# 267 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	release
 	end
 
 
 RubelPyramid01_PoliceTalk::
-# 272 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	lock
 # 273 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	faceplayer
+	lock
 # 274 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
-	setspeaker RubelPyramid01_PoliceWarnTrigger_Text_0
+	faceplayer
 # 275 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+	setspeaker RubelPyramid01_PoliceWarnTrigger_Text_0
+# 276 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	msgbox RubelPyramid01_PoliceTalk_Text_0
-# 279 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 280 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	release
 	end
 
@@ -467,23 +469,23 @@ RuvelPyramid01_SpikeTrap_Movement_4:
 	jump_in_place_left
 	step_end
 
-# 242 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 243 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RubelPyramid01_PoliceWarnTrigger_Movement_0:
-# 242 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 243 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	face_right
-# 242 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 243 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 244 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 245 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RubelPyramid01_PoliceWarnTrigger_Movement_1:
-# 244 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 245 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	face_left
 	step_end
 
-# 265 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 266 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 RubelPyramid01_PoliceWarnTrigger_Movement_2:
-# 265 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 266 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	face_down
 	step_end
 
@@ -516,11 +518,11 @@ RuvelPyramid01_Cofagrigus_AfterBattle_Text_1:
 	.string "the Pyramid...$"
 
 RubelPyramid01_PoliceWarnTrigger_Text_0:
-# 248 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 249 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	.string "Policeman$"
 
 RubelPyramid01_PoliceWarnTrigger_Text_1:
-# 249 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 250 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	.string "You! No one is allowed past this point!\p"
 	.string "...\p"
 	.string "Ah, you're helping to find the child?\n"
@@ -534,7 +536,7 @@ RubelPyramid01_PoliceWarnTrigger_Text_1:
 	.string "Pyramid are still active!$"
 
 RubelPyramid01_PoliceTalk_Text_0:
-# 275 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
+# 276 "data/maps/Vulias_Ruvel_Pyramid_1/scripts.pory"
 	.string "Remember, watch out for the spikes!\n"
 	.string "You'll need to come back here for\l"
 	.string "medical assistance if you do end up\l"

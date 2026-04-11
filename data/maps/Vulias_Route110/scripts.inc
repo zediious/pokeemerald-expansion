@@ -216,6 +216,8 @@ VuliasRoute110_PlayerArrivedToJordan::
 # 197 "data/maps/Vulias_Route110/scripts.pory"
 	warp MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4
 # 198 "data/maps/Vulias_Route110/scripts.pory"
+	waitstate
+# 199 "data/maps/Vulias_Route110/scripts.pory"
 	release
 	end
 

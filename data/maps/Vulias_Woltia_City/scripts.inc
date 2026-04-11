@@ -75,21 +75,21 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit::
 # 53 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_ZED_STORY_TRACKER, 17
 	goto_if_eq WoltiaCity_EventScript_JordanTriggerOldRuinVisit_1
-# 84 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
 # 85 "data/maps/Vulias_Woltia_City/scripts.pory"
-	faceplayer
+	lock
 # 86 "data/maps/Vulias_Woltia_City/scripts.pory"
+	faceplayer
+# 87 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4
-# 98 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 99 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 100 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 101 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setfollowernpc WOLTIA_JORDAN_TRIGGERTOURNEY, FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE, WoltiaCity_EventScript_JordanFollowerKeeganEncounter, PARTNER_JORDAN_PANSEAR_03
-# 106 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 15
 # 107 "data/maps/Vulias_Woltia_City/scripts.pory"
-	questupdated 0
+	setvar VAR_ZED_STORY_TRACKER, 15
 # 108 "data/maps/Vulias_Woltia_City/scripts.pory"
+	questupdated 0
+# 109 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
@@ -105,11 +105,11 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_1:
 # 59 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaCity_EventScript_JordanTriggerOldRuinVisit_4
-# 76 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
 # 77 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 78 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_3
-# 79 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 80 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
@@ -135,110 +135,112 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_4:
 # 72 "data/maps/Vulias_Woltia_City/scripts.pory"
 	warp MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 5
 # 73 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitstate
+# 74 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 
 WoltiaCity_EventScript_JordanFollowerKeeganEncounter::
-# 116 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
 # 117 "data/maps/Vulias_Woltia_City/scripts.pory"
-	faceplayer
+	lock
 # 118 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+	faceplayer
 # 119 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 120 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_JordanFollowerKeeganEncounter_Text_0
-# 122 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
 # 123 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 124 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 
 WoltiaCity_EventScript_NoLeaveWhileFollower::
-# 129 "data/maps/Vulias_Woltia_City/scripts.pory"
-	checkfollowernpc
 # 130 "data/maps/Vulias_Woltia_City/scripts.pory"
+	checkfollowernpc
+# 131 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaCity_EventScript_NoLeaveWhileFollower_2
 WoltiaCity_EventScript_NoLeaveWhileFollower_1:
 	end
 
 WoltiaCity_EventScript_NoLeaveWhileFollower_2:
-# 131 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
 # 132 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+	lock
 # 133 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 134 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_NoLeaveWhileFollower_Text_0
-# 138 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
 # 139 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0
+	waitmessage
 # 140 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0
 # 141 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 142 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	goto WoltiaCity_EventScript_NoLeaveWhileFollower_1
 
 
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth::
-# 148 "data/maps/Vulias_Woltia_City/scripts.pory"
-	checkfollowernpc
 # 149 "data/maps/Vulias_Woltia_City/scripts.pory"
+	checkfollowernpc
+# 150 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_2
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_1:
 	end
 
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_2:
-# 150 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
 # 151 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+	lock
 # 152 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 153 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_NoLeaveWhileFollower_Text_0
-# 157 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
 # 158 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
+	waitmessage
 # 159 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
 # 160 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 161 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	goto WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_1
 
 
 WoltiaCity_JordanGoToIgris::
-# 167 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 19
 # 168 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
+	setvar VAR_ZED_STORY_TRACKER, 19
 # 169 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
+	lock
 # 170 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
 # 171 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
 # 172 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 173 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_JordanGoToIgris_Text_0
-# 187 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_2
-# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
+# 173 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 174 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_JordanGoToIgris_Text_0
+# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_2
 # 190 "data/maps/Vulias_Woltia_City/scripts.pory"
-	delay 30
+	waitmovement
 # 191 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY
+	delay 30
 # 192 "data/maps/Vulias_Woltia_City/scripts.pory"
-	removeobject WOLTIA_JORDAN_TRIGGERTOURNEY
+	setflag FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY
 # 193 "data/maps/Vulias_Woltia_City/scripts.pory"
-	questupdated 0
+	removeobject WOLTIA_JORDAN_TRIGGERTOURNEY
 # 194 "data/maps/Vulias_Woltia_City/scripts.pory"
+	questupdated 0
+# 195 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
@@ -259,55 +261,55 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_1:
 	face_left
 	step_end
 
-# 139 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 140 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0:
-# 139 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 140 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_up
 	step_end
 
-# 158 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 159 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0:
-# 158 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 159 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
 	step_end
 
-# 169 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_0:
-# 169 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_right
 	step_end
 
-# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_1:
-# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_left
 	step_end
 
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_2:
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 188 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 189 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
 	step_end
 
@@ -337,12 +339,12 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_2:
 	.string "I won't let you get me this time!$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_3:
-# 77 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 78 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Got it! You should definitly hurry, I\n"
 	.string "don't want you to miss it!$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4:
-# 86 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 87 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Heya! The tournament is still not set to\n"
 	.string "start for a little bit, we have some time\l"
 	.string "to kill.\p"
@@ -354,20 +356,20 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4:
 	.string "Lead the way! It's just up ahead!$"
 
 WoltiaCity_EventScript_JordanFollowerKeeganEncounter_Text_0:
-# 119 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 120 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Let's go to the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! It's just to\n"
 	.string "the right of the giant building right\l"
 	.string "there!$"
 
 WoltiaCity_EventScript_NoLeaveWhileFollower_Text_0:
-# 133 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 134 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Where you going? It won't take long,\n"
 	.string "let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!\p"
 	.string "It's just to right of the giant building\n"
 	.string "on the north side of the city!$"
 
 WoltiaCity_JordanGoToIgris_Text_0:
-# 173 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 174 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "You did it again {PLAYER}!\n"
 	.string "I've just got to keep getting stronger\l"
 	.string "so I can beat you one day! Your\l"

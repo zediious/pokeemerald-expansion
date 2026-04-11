@@ -91,7 +91,7 @@ WoltiaBattleHall_PrepRoom_MatchStarterWoman_1:
 # 76 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_12
-# 92 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 93 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_13
 	return
@@ -150,16 +150,18 @@ WoltiaBattleHall_PrepRoom_MatchStarterWoman_16:
 	removeobject WOLTIA_TOURNEY_ORGANIZER
 # 89 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	warp MAP_WOLTIA_CITY_BATTLE_HALL, 5, 5
+# 90 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+	waitstate
 	end
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_13:
-# 93 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
-	setspeaker WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_0
 # 94 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
-	msgbox WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_7
+	setspeaker WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_0
 # 95 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
-	waitmessage
+	msgbox WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_7
 # 96 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+	waitmessage
+# 97 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	release
 	end
 
@@ -250,5 +252,5 @@ WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_6:
 	.string "Let's go!$"
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_7:
-# 94 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 95 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	.string "Don't dilly dally!$"

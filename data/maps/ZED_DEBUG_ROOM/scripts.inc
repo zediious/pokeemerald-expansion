@@ -12,6 +12,8 @@ GoToDebugRoom::
 	goto_if_eq GoToDebugRoom_2
 GoToDebugRoom_1:
 # 13 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	waitstate
+# 14 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	release
 	end
 
@@ -22,292 +24,298 @@ GoToDebugRoom_2:
 
 
 JumpToPreWoltiaTourney::
-# 18 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	lock
 # 19 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	msgbox JumpToPreWoltiaTourney_Text_0, MSGBOX_YESNO
+	lock
 # 20 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	msgbox JumpToPreWoltiaTourney_Text_0, MSGBOX_YESNO
+# 21 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq JumpToPreWoltiaTourney_2
 JumpToPreWoltiaTourney_1:
-# 59 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 60 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	waitstate
+# 61 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	release
 	end
 
 JumpToPreWoltiaTourney_2:
-# 21 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 12
 # 22 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE102_STAIRBLOCKERS
+	setvar VAR_ZED_STORY_TRACKER, 12
 # 23 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_KOWTOW
+	setflag FLAG_ROUTE102_STAIRBLOCKERS
 # 24 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
+	setflag FLAG_SAWGRASSFOREST_KOWTOW
 # 25 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE110_JORDAN
+	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
 # 26 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_JORDANINHOME
+	setflag FLAG_ROUTE110_JORDAN
 # 27 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	setflag FLAG_JORDANINHOME
 # 28 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_MULLED_CAVE_JORDAN_01
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 29 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
+	setflag FLAG_MULLED_CAVE_JORDAN_01
 # 30 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
+	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
 # 31 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
 # 32 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_CRASH_KID
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 33 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_GERBON_CRASH_KID
+# 34 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	setflag FLAG_GERBONSOUTH_BLOCKERS
-# 35 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 36 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 37 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_SHARE, 1
 # 38 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_EXP_SHARE, 1
+# 39 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_ULTRA_REPEL, 1
-# 40 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 41 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_TM_ROCK_TOMB, 1
-# 42 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
 # 43 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_GREAT_BALL, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
 # 44 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_SUPER_POTION, 20
+	giveitem ITEM_GREAT_BALL, 20
 # 45 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_SUPER_POTION, 20
+# 46 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_FULL_HEAL, 20
-# 47 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISEAR, 22
 # 48 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISAGE, 22
+	givemon SPECIES_SIMISEAR, 22
 # 49 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMIPOUR, 22
+	givemon SPECIES_SIMISAGE, 22
 # 50 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_INNAPE, 22
+	givemon SPECIES_SIMIPOUR, 22
 # 51 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_INNAPE, 22
+# 52 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	givemon SPECIES_FLAMIGO, 22
-# 53 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 54 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	delay 30
-# 55 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setrespawn HEAL_LOCATION_OLDALE_TOWN
 # 56 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setrespawn HEAL_LOCATION_OLDALE_TOWN
+# 57 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	warp MAP_VULIAS_ROUTE103, 50, 17
 	goto JumpToPreWoltiaTourney_1
 
 
 JumpToRuvelPyramid::
-# 64 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	lock
-# 65 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	msgbox JumpToRuvelPyramid_Text_0, MSGBOX_YESNO
 # 66 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	lock
+# 67 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	msgbox JumpToRuvelPyramid_Text_0, MSGBOX_YESNO
+# 68 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq JumpToRuvelPyramid_2
 JumpToRuvelPyramid_1:
-# 115 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 117 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	waitstate
+# 118 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	release
 	end
 
 JumpToRuvelPyramid_2:
-# 67 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 19
-# 68 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE103_SAVED_TOGEPI
 # 69 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRISDESERT_KOWTOW_01
+	setvar VAR_ZED_STORY_TRACKER, 19
 # 70 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRISDESERT_JORDAN_01
+	setflag FLAG_ROUTE103_SAVED_TOGEPI
 # 71 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRIS_BEAUTY
+	setflag FLAG_IGRISDESERT_KOWTOW_01
 # 72 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRIS_TOGEPI
+	setflag FLAG_IGRISDESERT_JORDAN_01
 # 73 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE103_BEAUTY
+	setflag FLAG_IGRIS_BEAUTY
 # 74 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE102_STAIRBLOCKERS
+	setflag FLAG_IGRIS_TOGEPI
 # 75 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_KOWTOW
+	setflag FLAG_ROUTE103_BEAUTY
 # 76 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
+	setflag FLAG_ROUTE102_STAIRBLOCKERS
 # 77 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE110_JORDAN
+	setflag FLAG_SAWGRASSFOREST_KOWTOW
 # 78 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_JORDANINHOME
+	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
 # 79 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	setflag FLAG_ROUTE110_JORDAN
 # 80 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_MULLED_CAVE_JORDAN_01
+	setflag FLAG_JORDANINHOME
 # 81 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 82 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
+	setflag FLAG_MULLED_CAVE_JORDAN_01
 # 83 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
 # 84 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_CRASH_KID
+	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
 # 85 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBONSOUTH_BLOCKERS
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 86 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ANGRY_KROKOROK_01
+	setflag FLAG_GERBON_CRASH_KID
+# 87 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_GERBONSOUTH_BLOCKERS
 # 88 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_ANGRY_KROKOROK_01
+# 90 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 89 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_BADGE02_GET
 # 91 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_BADGE02_GET
+# 93 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	giveitem ITEM_EXP_SHARE, 1
-# 92 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_ULTRA_REPEL, 1
 # 94 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_HM_CUT, 1
-# 95 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_ROCK_TOMB, 1
+	giveitem ITEM_ULTRA_REPEL, 1
 # 96 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_AERIAL_ACE, 1
+	giveitem ITEM_HM_CUT, 1
+# 97 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TM_ROCK_TOMB, 1
 # 98 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
-# 99 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_GREAT_BALL, 20
+	giveitem ITEM_TM_AERIAL_ACE, 1
 # 100 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_SUPER_POTION, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
 # 101 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_FULL_HEAL, 20
+	giveitem ITEM_GREAT_BALL, 20
+# 102 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_SUPER_POTION, 20
 # 103 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISEAR, 30
-# 104 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISAGE, 30
+	giveitem ITEM_FULL_HEAL, 20
 # 105 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMIPOUR, 30
+	givemon SPECIES_SIMISEAR, 30
 # 106 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_INNAPE, 30
+	givemon SPECIES_SIMISAGE, 30
 # 107 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_FLAMIGO, 30
+	givemon SPECIES_SIMIPOUR, 30
+# 108 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_INNAPE, 30
 # 109 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	delay 30
+	givemon SPECIES_FLAMIGO, 30
 # 111 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	delay 30
+# 113 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	setrespawn HEAL_LOCATION_VULIAS_WOLTIA_CITY
-# 112 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 114 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DESERT, 19, 52
 	goto JumpToRuvelPyramid_1
 
 
 JumpToIgrisPart2::
-# 120 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 123 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	lock
-# 121 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 124 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	msgbox JumpToIgrisPart2_Text_0, MSGBOX_YESNO
-# 122 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 125 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq JumpToIgrisPart2_2
 JumpToIgrisPart2_1:
-# 184 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 187 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	waitstate
+# 188 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	release
 	end
 
 JumpToIgrisPart2_2:
-# 123 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 24
-# 124 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE103_SAVED_TOGEPI
-# 125 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRISDESERT_KOWTOW_01
 # 126 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRISDESERT_JORDAN_01
+	setvar VAR_ZED_STORY_TRACKER, 24
 # 127 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRIS_BEAUTY
+	setflag FLAG_ROUTE103_SAVED_TOGEPI
 # 128 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRIS_TOGEPI
+	setflag FLAG_IGRISDESERT_KOWTOW_01
 # 129 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE103_BEAUTY
+	setflag FLAG_IGRISDESERT_JORDAN_01
 # 130 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE102_STAIRBLOCKERS
+	setflag FLAG_IGRIS_BEAUTY
 # 131 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_KOWTOW
+	setflag FLAG_IGRIS_TOGEPI
 # 132 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
+	setflag FLAG_ROUTE103_BEAUTY
 # 133 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ROUTE110_JORDAN
+	setflag FLAG_ROUTE102_STAIRBLOCKERS
 # 134 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_JORDANINHOME
+	setflag FLAG_SAWGRASSFOREST_KOWTOW
 # 135 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
 # 136 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_MULLED_CAVE_JORDAN_01
+	setflag FLAG_ROUTE110_JORDAN
 # 137 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
+	setflag FLAG_JORDANINHOME
 # 138 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 139 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	setflag FLAG_MULLED_CAVE_JORDAN_01
 # 140 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBON_CRASH_KID
+	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
 # 141 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_GERBONSOUTH_BLOCKERS
+	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
 # 142 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_ANGRY_KROKOROK_01
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 143 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND
+	setflag FLAG_GERBON_CRASH_KID
 # 144 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND
+	setflag FLAG_GERBONSOUTH_BLOCKERS
 # 145 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMID_COFAPUZZLE
+	setflag FLAG_ANGRY_KROKOROK_01
 # 146 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMID_GOTHORITA01
+	setflag FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND
 # 147 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMID_LOSTKID01
+	setflag FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND
 # 148 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_GENTLEMAN
+	setflag FLAG_RUVELPYRAMID_COFAPUZZLE
 # 149 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_LOSTKID
+	setflag FLAG_RUVELPYRAMID_GOTHORITA01
 # 150 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM
+	setflag FLAG_RUVELPYRAMID_LOSTKID01
 # 151 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
+	setflag FLAG_RUVELPYRAMIDEXT_GENTLEMAN
 # 152 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKID
 # 153 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_RUVELPYRAMIDEXT_JORDAN
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM
 # 154 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_IGRIS_JORDAN_02
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
 # 155 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3
+# 156 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_JORDAN
 # 157 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_BADGE01_GET
+	setflag FLAG_IGRIS_JORDAN_02
 # 158 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setflag FLAG_BADGE02_GET
+	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
 # 160 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_SHARE, 1
+	setflag FLAG_BADGE01_GET
 # 161 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_ULTRA_REPEL, 1
+	setflag FLAG_BADGE02_GET
 # 163 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_HM_CUT, 1
+	giveitem ITEM_EXP_SHARE, 1
 # 164 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_ROCK_TOMB, 1
-# 165 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_TM_AERIAL_ACE, 1
+	giveitem ITEM_ULTRA_REPEL, 1
+# 166 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_HM_CUT, 1
 # 167 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_EXP_CANDY_XL, 20
+	giveitem ITEM_TM_ROCK_TOMB, 1
 # 168 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_GREAT_BALL, 20
-# 169 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_SUPER_POTION, 20
+	giveitem ITEM_TM_AERIAL_ACE, 1
 # 170 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	giveitem ITEM_FULL_HEAL, 20
+	giveitem ITEM_EXP_CANDY_XL, 20
+# 171 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_GREAT_BALL, 20
 # 172 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISEAR, 30
+	giveitem ITEM_SUPER_POTION, 20
 # 173 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMISAGE, 30
-# 174 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_SIMIPOUR, 30
+	giveitem ITEM_FULL_HEAL, 20
 # 175 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_INNAPE, 30
+	givemon SPECIES_SIMISEAR, 30
 # 176 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	givemon SPECIES_FLAMIGO, 30
+	givemon SPECIES_SIMISAGE, 30
+# 177 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_SIMIPOUR, 30
 # 178 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	delay 30
-# 180 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
-	setrespawn HEAL_LOCATION_VULIAS_PALENTO_VILLAGE
+	givemon SPECIES_INNAPE, 30
+# 179 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_FLAMIGO, 30
 # 181 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	delay 30
+# 183 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setrespawn HEAL_LOCATION_VULIAS_PALENTO_VILLAGE
+# 184 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DESERT, 47, 10
 	goto JumpToIgrisPart2_1
 
@@ -317,13 +325,13 @@ GoToDebugRoom_Text_0:
 	.string "Want debug room?$"
 
 JumpToPreWoltiaTourney_Text_0:
-# 19 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 20 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	.string "Jump to pre-woltia tourney?$"
 
 JumpToRuvelPyramid_Text_0:
-# 65 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 67 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	.string "Jump to post-woltia tourney?$"
 
 JumpToIgrisPart2_Text_0:
-# 121 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+# 124 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	.string "Jump to post-ruvel pyramid?$"

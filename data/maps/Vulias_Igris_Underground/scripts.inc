@@ -43,18 +43,22 @@ IgrisUnder_WarpOutSouth::
 # 27 "data/maps/Vulias_Igris_Underground/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2
 # 28 "data/maps/Vulias_Igris_Underground/scripts.pory"
+	waitstate
+# 29 "data/maps/Vulias_Igris_Underground/scripts.pory"
 	release
 	return
 
 
 IgrisUnder_WarpOutNorth::
-# 32 "data/maps/Vulias_Igris_Underground/scripts.pory"
-	lock
 # 33 "data/maps/Vulias_Igris_Underground/scripts.pory"
-	setflag FLAG_LEAVING_IGRIS_UNDER_NORTH
+	lock
 # 34 "data/maps/Vulias_Igris_Underground/scripts.pory"
-	warp MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2
+	setflag FLAG_LEAVING_IGRIS_UNDER_NORTH
 # 35 "data/maps/Vulias_Igris_Underground/scripts.pory"
+	warp MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2
+# 36 "data/maps/Vulias_Igris_Underground/scripts.pory"
+	waitstate
+# 37 "data/maps/Vulias_Igris_Underground/scripts.pory"
 	release
 	return
 

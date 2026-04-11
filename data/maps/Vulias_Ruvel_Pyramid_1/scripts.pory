@@ -232,6 +232,7 @@ script RuvelPyramid01_SpikeTrap {
     ))
     waitmovement
     warp(MAP_VULIAS_RUVEL_PYRAMID_1, 12, 14)
+    waitstate
     release
     end
 }

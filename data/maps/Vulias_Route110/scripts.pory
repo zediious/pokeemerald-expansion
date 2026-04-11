@@ -195,6 +195,7 @@ script VuliasRoute110_PlayerArrivedToJordan {
 
     // Warp player back to Jordan's house
     warp(MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4)
+    waitstate
     release
     end
 }

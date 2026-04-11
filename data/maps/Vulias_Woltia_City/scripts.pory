@@ -70,6 +70,7 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
             waitmessage
             setvar(VAR_WOLTIA_TOURNAMENT_STATE, 1)
             warp(MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 5)
+            waitstate
             release
             end
         } else {

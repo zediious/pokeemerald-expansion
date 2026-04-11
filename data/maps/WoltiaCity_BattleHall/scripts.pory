@@ -330,6 +330,7 @@ script WoltiaBattleHall_TournamentBattleAfter {
     warp(MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 6)
     call(WoltiaBattleHall_Tournament_RemoveAllTrainers)
     special(RemoveCameraObject)
+    waitstate
     release
     end
 }
@@ -402,6 +403,7 @@ script WoltiaBattleHall_TournamentPlayerWon {
         delay(30)
         setflag(FLAG_ANGRY_KROKOROK_01)
         warp(MAP_VULIAS_WOLTIA_CITY, 11, 15)
+        waitstate
         release
         end
 }

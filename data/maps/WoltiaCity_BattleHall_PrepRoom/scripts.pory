@@ -87,6 +87,7 @@ script WoltiaBattleHall_PrepRoom_MatchStarterWoman {
             lock
             removeobject(WOLTIA_TOURNEY_ORGANIZER)
             warp(MAP_WOLTIA_CITY_BATTLE_HALL, 5, 5)
+            waitstate
             end
         }
     elif (var(VAR_RESULT) == NO) {

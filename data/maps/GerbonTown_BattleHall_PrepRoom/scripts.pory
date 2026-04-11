@@ -88,6 +88,7 @@ script GerbonBattleHall_PrepRoom_MatchStarterWoman {
             lock
             removeobject(GERBON_TOURNEY_ORGANIZER)
             warp(MAP_GERBON_TOWN_BATTLE_HALL, 5, 3)
+            waitstate
             end
         }
     elif (var(VAR_RESULT) == NO) {

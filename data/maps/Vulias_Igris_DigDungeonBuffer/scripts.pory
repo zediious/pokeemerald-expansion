@@ -38,6 +38,7 @@ script IgrisDigDungeonBuffer_DecideWarp {
             setvar(VAR_IGRIS_UNDER_DOHOPLEFT, 1)
             clearflag(FLAG_ENTERING_IGRISUNDER_NORTH)
             warp(MAP_VULIAS_IGRIS_UNDERGROUND_2, 15, 3)
+            
         } else {
             // send to south
             setvar(VAR_IGRIS_UNDER_DOHOPLEFT, 1)
@@ -50,6 +51,7 @@ script IgrisDigDungeonBuffer_DecideWarp {
         warp(MAP_VULIAS_IGRIS_DESERT, 43, 51)
     }
     release
+    waitstate
     end
 }
 

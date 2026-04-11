@@ -166,6 +166,8 @@ LittlerootTown_StartGame_WarpAfterPickMon::
 # 110 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	warp MAP_ZED_LITTLEROOT_TOWN_TEST01_1F, 2, 4
 # 111 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
+	waitstate
+# 112 "data/maps/ZED_Littleroot_StartRoom_PickPokemon/scripts.pory"
 	release
 	return
 

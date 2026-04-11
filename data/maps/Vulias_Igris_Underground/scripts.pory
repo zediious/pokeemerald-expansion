@@ -25,6 +25,7 @@ script IgrisUnder_WarpOutSouth {
     lock
     setflag(FLAG_LEAVING_IGRIS_UNDER_SOUTH)
     warp(MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2)
+    waitstate
     release
 }
 
@@ -32,5 +33,6 @@ script IgrisUnder_WarpOutNorth {
     lock
     setflag(FLAG_LEAVING_IGRIS_UNDER_NORTH)
     warp(MAP_VULIAS_IGRIS_DIG_DUNGEON_BUFFER, 1, 2)
+    waitstate
     release
 }

@@ -471,6 +471,7 @@ script GerbonBattleHall_TournamentBattleAfter {
     warp(MAP_GERBON_TOWN_BATTLE_HALL_PREP_ROOM, 4, 5)
     call(GerbonBattleHall_Tournament_RemoveAllTrainers)
     special(RemoveCameraObject)
+    waitstate
     release
     end
 }
@@ -538,6 +539,7 @@ script GerbonBattleHall_TournamentPlayerWon {
         setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
         clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
         warp(MAP_OLDALE_TOWN, 28, 14)
+        waitstate
         release
         end
 }

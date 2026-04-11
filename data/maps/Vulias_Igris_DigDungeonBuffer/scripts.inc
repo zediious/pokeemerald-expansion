@@ -36,13 +36,15 @@ IgrisDigDungeonBuffer_DecideWarp::
 	compare VAR_0x8004, FALSE
 	goto_if_ne IgrisDigDungeonBuffer_DecideWarp_10
 IgrisDigDungeonBuffer_DecideWarp_9:
-# 49 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	setvar VAR_IGRIS_DIGDUNGEON_DOHOP, 1
 # 50 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	setvar VAR_IGRIS_DIGDUNGEON_DOHOP, 1
+# 51 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DESERT, 43, 51
 IgrisDigDungeonBuffer_DecideWarp_7:
-# 52 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 53 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	release
+# 54 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	waitstate
 	end
 
 IgrisDigDungeonBuffer_DecideWarp_2:
@@ -62,9 +64,9 @@ IgrisDigDungeonBuffer_DecideWarp_5:
 IgrisDigDungeonBuffer_DecideWarp_8:
 # 36 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	goto_if_set FLAG_ENTERING_IGRISUNDER_NORTH, IgrisDigDungeonBuffer_DecideWarp_13
-# 43 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	setvar VAR_IGRIS_UNDER_DOHOPLEFT, 1
 # 44 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	setvar VAR_IGRIS_UNDER_DOHOPLEFT, 1
+# 45 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	warp MAP_VULIAS_IGRIS_UNDERGROUND, 15, 22
 	goto IgrisDigDungeonBuffer_DecideWarp_7
 
@@ -84,61 +86,61 @@ IgrisDigDungeonBuffer_DecideWarp_13:
 
 
 SpinPlayer360::
-# 58 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_0
-# 59 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	playse SE_M_DIG
 # 60 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	waitmovement
+	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_0
 # 61 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_1
+	playse SE_M_DIG
 # 62 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	playse SE_M_DIG
+	waitmovement
 # 63 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	waitmovement
+	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_1
 # 64 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_2
+	playse SE_M_DIG
 # 65 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	playse SE_M_DIG
-# 66 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	waitmovement
+# 66 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_2
 # 67 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_3
-# 68 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	playse SE_M_DIG
+# 68 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	waitmovement
 # 69 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, SpinPlayer360_Movement_3
+# 70 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+	playse SE_M_DIG
+# 71 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	waitmovement
 	return
 
 
-# 58 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 60 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 SpinPlayer360_Movement_0:
-# 58 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 60 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	face_left
-# 58 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 60 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	slide_up
 	step_end
 
-# 61 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 63 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 SpinPlayer360_Movement_1:
-# 61 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 63 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	face_up
-# 61 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 63 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	slide_right
 	step_end
 
-# 64 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 66 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 SpinPlayer360_Movement_2:
-# 64 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 66 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	face_right
-# 64 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 66 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	slide_down
 	step_end
 
-# 67 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 69 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 SpinPlayer360_Movement_3:
-# 67 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 69 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	face_down
-# 67 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
+# 69 "data/maps/Vulias_Igris_DigDungeonBuffer/scripts.pory"
 	slide_left
 	step_end

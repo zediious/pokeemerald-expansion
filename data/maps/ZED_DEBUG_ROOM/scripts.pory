@@ -10,6 +10,7 @@ script GoToDebugRoom {
     if (var(VAR_RESULT) == YES) {
         warp(MAP_ZED_DEBUG_ROOM, 17, 9)
     }
+    waitstate
     release
     end
 }
@@ -56,6 +57,7 @@ script JumpToPreWoltiaTourney {
         warp(MAP_VULIAS_ROUTE103, 50, 17)
     }
     
+    waitstate
     release
     end
 }
@@ -112,6 +114,7 @@ script JumpToRuvelPyramid {
         warp(MAP_VULIAS_IGRIS_DESERT, 19, 52)
     }
     
+    waitstate
     release
     end
 }
@@ -181,6 +184,7 @@ script JumpToIgrisPart2 {
         warp(MAP_VULIAS_IGRIS_DESERT, 47, 10)
     }
     
+    waitstate
     release
     end
 }

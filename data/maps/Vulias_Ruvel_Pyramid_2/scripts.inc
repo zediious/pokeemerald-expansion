@@ -316,37 +316,39 @@ RuvelPyramid02_Gothorita_AfterBattle::
 	removeobject RUVEL_LOSTKID_01
 # 191 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	warp MAP_VULIAS_IGRIS_DESERT, 13, 16
+# 192 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitstate
 	return
 
 
 RuvelPyramid02_CatchableCofagrigusEncounter::
-# 196 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	lock
 # 197 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	msgbox RuvelPyramid02_CatchableCofagrigusEncounter_Text_0, MSGBOX_SIGN
+	lock
 # 198 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmessage
+	msgbox RuvelPyramid02_CatchableCofagrigusEncounter_Text_0, MSGBOX_SIGN
 # 199 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	closemessage
+	waitmessage
 # 200 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	delay 60
+	closemessage
 # 201 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	setflag FLAG_SMART_WILD_MON
+	delay 60
 # 202 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	playmoncry SPECIES_COFAGRIGUS, CRY_MODE_NORMAL
+	setflag FLAG_SMART_WILD_MON
 # 203 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_COFAGRIGUS, CRY_MODE_NORMAL
 # 204 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	waitmoncry
+# 205 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	delay 30
-# 206 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 207 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	createmon 1, 0, SPECIES_COFAGRIGUS, 30, ITEM_SPELL_TAG, hpIv = 31, atkIv = 0, defIv = 31, speedIv = 0, spAtkIv = 31, spDefIv = 0
-# 209 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	dowildbattle
 # 210 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	removeobject RUVEL_CATCHABLE_COFA
+	dowildbattle
 # 211 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
-	clearflag FLAG_SMART_WILD_MON
+	removeobject RUVEL_CATCHABLE_COFA
 # 212 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+	clearflag FLAG_SMART_WILD_MON
+# 213 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	release
 	end
 
@@ -592,5 +594,5 @@ RuvelPyramid02_Gothorita_AfterBattle_Text_4:
 	.string "Stay between us!$"
 
 RuvelPyramid02_CatchableCofagrigusEncounter_Text_0:
-# 197 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
+# 198 "data/maps/Vulias_Ruvel_Pyramid_2/scripts.pory"
 	.string "The Cofagrigus eyes you steadily...$"

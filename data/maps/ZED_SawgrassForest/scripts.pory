@@ -60,6 +60,7 @@ script SawgrassForest_MapScript_OnFrameMakeJordanFollower {
         setvar(VAR_ZED_STORY_TRACKER, 3)
         release
         warp(MAP_LITTLEROOT_TOWN, 3, 25)
+        waitstate
         end
     }
 }
@@ -134,6 +135,7 @@ script SawgrassForest_JordanLeave {
             setflag(FLAG_SAWGRASSFOREST_PLAYERLEFT)
             setvar(VAR_ZED_STORY_TRACKER, 3)
             warp(MAP_LITTLEROOT_TOWN, 3, 25)
+            waitstate
             end
         } else {
             applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))

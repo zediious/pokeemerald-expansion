@@ -189,6 +189,7 @@ script RuvelPyramid02_Gothorita_AfterBattle {
     destroyfollowernpc
     removeobject(RUVEL_LOSTKID_01)
     warp(MAP_VULIAS_IGRIS_DESERT, 13, 16)
+    waitstate
 }
 
 // Catchable Cofagrigus encounter deeper within
