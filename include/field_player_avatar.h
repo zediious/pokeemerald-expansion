@@ -1,6 +1,7 @@
 #ifndef GUARD_FIELD_PLAYER_AVATAR_H
 #define GUARD_FIELD_PLAYER_AVATAR_H
 
+extern bool8 sAllowRun;
 void PlayerStep(enum Direction direction, u16 newKeys, u16 heldKeys);
 bool8 TryDoMetatileBehaviorForcedMovement();
 void ClearPlayerAvatarInfo(void);

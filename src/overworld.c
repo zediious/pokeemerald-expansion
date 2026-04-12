@@ -200,6 +200,7 @@ static u8 sPlayerLinkStates[MAX_LINK_PLAYERS];
 static u16 (*sPlayerKeyInterceptCallback)(u32);
 static bool8 sReceivingFromLink;
 static u8 sRfuKeepAliveTimer;
+static bool8 sBHeldLastFrame = FALSE;
 
 COMMON_DATA u16 *gOverworldTilemapBuffer_Bg2 = NULL;
 COMMON_DATA u16 *gOverworldTilemapBuffer_Bg1 = NULL;
@@ -1612,6 +1613,17 @@ bool32 IsOverworldLinkActive(void)
         return FALSE;
 }
 
+static void UpdateRunToggle(u16 heldKeys)
+{
+    bool8 bHeldNow = (heldKeys & B_BUTTON) != 0;
+    if (bHeldNow && !sBHeldLastFrame)
+    {
+        sAllowRun = !sAllowRun;
+    }
+
+    sBHeldLastFrame = bHeldNow;
+}
+
 static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
 {
     struct FieldInput inputStruct;
@@ -1622,6 +1634,7 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
     CancelSignPostMessageBox(&inputStruct);
     if (!ArePlayerFieldControlsLocked())
     {
+        UpdateRunToggle(heldKeys);
         if (ProcessPlayerFieldInput(&inputStruct) == 1)
         {
             LockPlayerFieldControls();
