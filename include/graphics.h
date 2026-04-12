@@ -3393,6 +3393,7 @@ extern const u16 gObjectEventPal_RubySapphireMay[];
 extern const u16 gObjectEventPal_NewPoliceman[];
 extern const u16 gObjectEventPal_Journal[];
 extern const u16 gObjectEventPal_Waitress[];
+extern const u16 gObjectEventPal_Waiter[];
 
 // Mail
 extern const u16 gMailPalette_Orange[];
