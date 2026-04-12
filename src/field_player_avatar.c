@@ -921,8 +921,14 @@ static void PlayerNotOnBikeMoving(enum Direction direction, u16 heldKeys)
         return;
     }
 
+    bool8 doRun;
+    if (VarGet(VAR_TOGGLERUN_SETTING) == 1)
+        doRun = sAllowRun;
+    else
+        doRun = (heldKeys & B_BUTTON) ? TRUE : FALSE;
+
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
-     && (sAllowRun == TRUE)
+     && (doRun == TRUE)
      && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0
      && !FollowerNPCComingThroughDoor()
