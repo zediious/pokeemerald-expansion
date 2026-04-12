@@ -1988,7 +1988,8 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     s32 i;
     u8 monsCount;
     struct Trainer tempTrainer;
-    struct TrainerMon scaledParty[trainer->partySize];
+    u32 tempPartyCount = trainer->poolSize > 0 ? trainer->poolSize : trainer->partySize;
+    struct TrainerMon scaledParty[tempPartyCount];
 
     // Scale levels of trainer mons, and evolve them if applicable
     if (!FlagGet(FLAG_SCALING_EXCLUDE_SCALE)) {
@@ -2000,11 +2001,11 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
         }
 
         // Make a copy of trainer and their party
-        memcpy(scaledParty, trainer->party, trainer->partySize * sizeof(struct TrainerMon));
+        memcpy(scaledParty, trainer->party, tempPartyCount * sizeof(struct TrainerMon));
         memcpy(&tempTrainer, trainer, sizeof(struct Trainer));
 
         // Scale the party if applicable, returns un-modified party if not.
-        tempTrainer.party = ScaleTrainerMons(trainer->partySize, scaledParty, evolveExcluded, FALSE);
+        tempTrainer.party = ScaleTrainerMons(tempPartyCount, scaledParty, evolveExcluded, FALSE);
         trainer = &tempTrainer;
     }
 
