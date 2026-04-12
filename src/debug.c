@@ -4181,7 +4181,8 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ENCOUNTER_CHAMPION)       \
     X(MUS_CREDITS)                  \
     X(MUS_END)                      \
-    X(MUS_DUSK_FOREST)                      \
+    X(MUS_DUSK_FOREST)              \
+    X(MUS_BOUTIQUE)                 \
     X(MUS_B_FRONTIER)               \
     X(MUS_B_ARENA)                  \
     X(MUS_OBTAIN_B_POINTS)          \
