@@ -230,6 +230,11 @@ extern const u8 gText_SwitchBehavior[];
 extern const u8 gText_SwitchBehavior_Option01[];
 extern const u8 gText_SwitchBehavior_Option02[];
 
+// Toggle Run Option
+extern const u8 gText_ToggleRun[];
+extern const u8 gText_ToggleRun_Option01[];
+extern const u8 gText_ToggleRun_Option02[];
+
 // main menu/birch speech text
 extern const u8 gText_Birch_Welcome[];
 extern const u8 gText_ThisIsAPokemon[];

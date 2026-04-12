@@ -1462,3 +1462,7 @@ const u8 gText_PageNav[] = _("{L_BUTTON}{R_BUTTON} PAGE");
 const u8 gText_SwitchBehavior[] = _("One Switch");
 const u8 gText_SwitchBehavior_Option01[] = _("No");
 const u8 gText_SwitchBehavior_Option02[] = _("Yes");
+
+const u8 gText_ToggleRun[] = _("Toggle Run");
+const u8 gText_ToggleRun_Option01[] = _("Off");
+const u8 gText_ToggleRun_Option02[] = _("On");

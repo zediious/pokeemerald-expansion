@@ -26,6 +26,7 @@
 #define tButtonMode data[5]
 #define tWindowFrameType data[6]
 #define tSwitchBehavior data[7]
+#define tToggleRun data[8]
 
 // Page 1
 enum
@@ -44,6 +45,7 @@ enum
 enum
 {
     MENUITEM_SWITCHBEHAVIOR,
+    MENUITEM_TOGGLERUN,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -64,6 +66,7 @@ enum
 
 // Page 2
 #define YPOS_SWITCHBEHAVIOR      (MENUITEM_SWITCHBEHAVIOR* 16)
+#define YPOS_TOGGLERUN           (MENUITEM_TOGGLERUN* 16)
 
 
 #define PAGE_COUNT 2
@@ -87,6 +90,8 @@ static u8 FrameType_ProcessInput(u8 selection);
 static void FrameType_DrawChoices(u8 selection);
 static u8   SwitchBehavior_ProcessInput(u8 selection);
 static void SwitchBehavior_DrawChoices(u8 selection);
+static u8   ToggleRun_ProcessInput(u8 selection);
+static void ToggleRun_DrawChoices(u8 selection);
 static u8 ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
@@ -132,6 +137,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
 {
     [MENUITEM_SWITCHBEHAVIOR]  = gText_SwitchBehavior,
+    [MENUITEM_TOGGLERUN]       = gText_ToggleRun,
     [MENUITEM_CANCEL_PG2]      = COMPOUND_STRING("Cancel"),
 };
 
@@ -207,6 +213,7 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tButtonMode = gSaveBlock2Ptr->optionsButtonMode;
     gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
     gTasks[taskId].tSwitchBehavior = gSaveBlock2Ptr->optionsSwitchBehavior;
+    gTasks[taskId].tToggleRun = gSaveBlock2Ptr->optionsToggleRun;
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -226,6 +233,7 @@ static void DrawOptionsPg2(u8 taskId)
 {
     ReadAllCurrentSettings(taskId);
     SwitchBehavior_DrawChoices(gTasks[taskId].tSwitchBehavior);
+    ToggleRun_DrawChoices(gTasks[taskId].tToggleRun);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -518,7 +526,14 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
 
             if (previousOption != gTasks[taskId].tSwitchBehavior)
                 SwitchBehavior_DrawChoices(gTasks[taskId].tSwitchBehavior);
-            break;   
+            break;
+        case MENUITEM_TOGGLERUN:
+            previousOption = gTasks[taskId].tToggleRun;
+            gTasks[taskId].tToggleRun = ToggleRun_ProcessInput(gTasks[taskId].tToggleRun);
+
+            if (previousOption != gTasks[taskId].tToggleRun)
+                ToggleRun_DrawChoices(gTasks[taskId].tToggleRun);
+            break;  
         default:
             return;
         }
@@ -539,6 +554,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].tButtonMode;
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
     gSaveBlock2Ptr->optionsSwitchBehavior = gTasks[taskId].tSwitchBehavior;
+    gSaveBlock2Ptr->optionsToggleRun = gTasks[taskId].tToggleRun;
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -594,7 +610,6 @@ static u8 SwitchBehavior_ProcessInput(u8 selection)
     }
     // Update the switch behavior variable based on the selection
     VarSet(VAR_SWITCHBEHAVIOR_SETTING, selection);  // Set the switch behavior variable
-    DebugPrintf("Should set var to %d", selection);
     return selection;
 }
 
@@ -608,6 +623,37 @@ static void SwitchBehavior_DrawChoices(u8 selection)
     // Draw each menu choice at the calculated positions
     DrawOptionMenuChoice(gText_OneSwitchOff, 104, YPOS_SWITCHBEHAVIOR, styles[0]);
     DrawOptionMenuChoice(gText_OneSwitchOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_OneSwitchOn, 170), YPOS_SWITCHBEHAVIOR, styles[1]);
+}
+
+static u8 ToggleRun_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (++selection > 1)  // If the selection exceeds 3, wrap around to 0
+            selection = 0;
+            sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (--selection > 1)  // If the selection is negative, wrap around to 3
+            selection = 1;
+            sArrowPressed = TRUE;
+    }
+    // Update the toggle run variable based on the selection
+    VarSet(VAR_TOGGLERUN_SETTING, selection);  // Set the toggle run behavior variable
+    return selection;
+}
+
+static void ToggleRun_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;  // Highlight the selected option
+
+    // Draw each menu choice at the calculated positions
+    DrawOptionMenuChoice(gText_OneSwitchOff, 104, YPOS_TOGGLERUN, styles[0]);
+    DrawOptionMenuChoice(gText_OneSwitchOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_OneSwitchOn, 170), YPOS_TOGGLERUN, styles[1]);
 }
 
 static u8 TextSpeed_ProcessInput(u8 selection)
