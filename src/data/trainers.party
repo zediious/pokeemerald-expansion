@@ -2985,137 +2985,278 @@ Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RODNEY ===
-Name: RODNEY
-Class: Swimmer M
-Pic: Swimmer M
+Name: Rodney
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Party Size: 1
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Gyarados
-Level: 34
+Swirlix @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Paras @ Oran Berry
+Level: 1
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Milcery @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Poltchageist @ Oran Berry
+Level: 1
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RICHARD ===
-Name: RICHARD
-Class: Swimmer M
-Pic: Swimmer M
+Name: Richard
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Party Size: 1
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Pelipper
-Level: 34
+Applin @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tropius @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Miltank @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Farfetch’d-Galar @ Oran Berry
+Level: 1
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HERMAN ===
-Name: HERMAN
-Class: Swimmer M
-Pic: Swimmer M
+Name: Herman
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Party Size: 1
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Wingull
-Level: 33
+Teddiursa @ Oran Berry
+Level: 1
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacruel
-Level: 33
+Vanillite @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Cherubi @ Oran Berry
+Level: 1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Munchlax @ Oran Berry
+Level: 1
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SANTIAGO ===
-Name: SANTIAGO
-Class: Swimmer M
-Pic: Swimmer M
+Name: Rodney
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Party Size: 2
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Tentacruel
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Slurpuff @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Wailmer
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Parasect @ Sitrus Berry
+Level: 1
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Alcremie @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Sinistcha @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_GILBERT ===
-Name: GILBERT
-Class: Swimmer M
-Pic: Swimmer M
+Name: Richard
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Party Size: 2
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Sharpedo
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Applin @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Tropius @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Miltank @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Farfetch’d-Galar @ Sitrus Berry
+Level: 1
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 === TRAINER_FRANKLIN ===
-Name: FRANKLIN
-Class: Swimmer M
-Pic: Swimmer M
+Name: Herman
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Party Size: 2
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Sealeo
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Teddiursa @ Sitrus Berry
+Level: 1
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+Vanillish @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Cherrim @ Sitrus Berry
+Level: 1
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Munchlax @ Sitrus Berry
+Level: 1
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
 === TRAINER_KEVIN ===
-Name: KEVIN
-Class: Swimmer M
-Pic: Swimmer M
+Name: Rodney
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Spheal
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Slurpuff @ Focus Sash
+Level: 1
+Ability: Unburden
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+
+Parasect @ Sitrus Berry
+Level: 1
+Ability: Effect Spore
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Alcremie @ Sitrus Berry
+Level: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Draining Kiss
+
+Sinistcha @ Leftovers
+Level: 1
+Ability: Heatproof
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Strength Sap
+- Stun Spore
+- Hex
 
 === TRAINER_JACK ===
-Name: JACK
-Class: Swimmer M
-Pic: Swimmer M
+Name: Richard
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Gyarados
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Applin @ Miracle Seed
+Level: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Tropius @ Sitrus Berry
+Level: 1
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Miltank @ Silk Scarf
+Level: 1
+Ability: Thick Fat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double-Edge
+
+Sirfetch’d @ Focus Sash
+Level: 1
+Ability: Scrappy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brick Break
+- Swords Dance
 
 === TRAINER_DUDLEY ===
-Name: DUDLEY
-Class: Swimmer M
-Pic: Swimmer M
+Name: Herman
+Class: Waiter
+Pic: Waiter
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
+Party Size: 3
+Pool Rules: Basic
+Pool Pick Functions: Default
 
-Tentacool
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ursaring @ Toxic Orb
+Level: 1
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
 
-Wingull
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Vanilluxe @ Focus Sash
+Level: 1
+Ability: Weak Armor
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Tentacruel
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Cherrim @ Focus Sash
+Level: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sunny Day
+- Petal Dance
+
+Snorlax @ Leftovers
+Level: 1
+Ability: Thick Fat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Rest
+- Snore
 
 === TRAINER_CHAD ===
 Name: CHAD

@@ -11,8 +11,16 @@ script GerbonTown_MapScript_OnTransition {
     if (var(VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER) == 0) {
         goto(GerbonTown_BattleHallDisables)
     }
+    call(GerbonTown_Restaurant_Prepare)
     end
 }
+
+// Prepare Restaraunt for another session
+script GerbonTown_Restaurant_Prepare {
+    setvar(VAR_RESTARAUNT_STATE, 0)
+    setflag(FLAG_GERBON_WAITER_T1_01)
+}
+
 // Disables elements of the palladium show until it's been initiated
 script GerbonTown_BattleHallDisables{
     setflag(FLAG_CANDACE01_MON2)

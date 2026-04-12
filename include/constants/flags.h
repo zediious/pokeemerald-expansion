@@ -680,7 +680,7 @@
 #define FLAG_GERBON_GOT_MACHO                   0x271 // Player got Macho Brace from Gerbon Town NPC
 #define FLAG_MINT_VENDING_USED                  0x272 // Indicates player has used a mint vending machine at least once
 #define FLAG_WOLTIA_HIKER_AVALANCE              0x273 // Hiker in Woltia mart gave Avalance TM
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
+#define FLAG_GERBON_WAITER_T1_01                0x274 // Tier 1 first trainer
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag

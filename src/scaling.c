@@ -51,6 +51,15 @@ const u16 ExcludeScalingEvoTrainers[] =
     //Sensei's students, should always have Tyrogue
     TRAINER_CALVIN_1,
     TRAINER_BILLY,
+    // Sassy Salazzle Waiters, excluding Applin Trainer's T2 and T3 parties
+    TRAINER_RODNEY,
+    TRAINER_RICHARD,
+    TRAINER_HERMAN,
+    TRAINER_SANTIAGO,
+    TRAINER_FRANKLIN,
+    TRAINER_KEVIN,
+    TRAINER_DUDLEY
+
 };
 
 u8 ExcludeScalingTrainersCount(void)

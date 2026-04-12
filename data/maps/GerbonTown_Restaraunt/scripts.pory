@@ -1,1 +1,566 @@
-mapscripts GerbonTown_Restaraunt_MapScripts {}
+mapscripts GerbonTown_Restaraunt_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_RESTARAUNT_STATE, 0: GerbonTown_Restaurant_Init
+    ]
+}
+
+// VAR_RESTARAUNT_STATE
+// 0: Not in restaraunt
+// 1: Entered restaraunt, asked which tier by Hostess
+// 2: Selected Tier 1
+// 3: Selected Tier 2
+// 4: Selected Tier 3
+// 20: Awaiting and battling Trainer 1 in Tier 1
+// 21: Awaiting and battling Trainer 2 in Tier 1
+// 22: Awaiting and battling Trainer 3 in Tier 1
+// 23: Won in Tier 1, receiving prize and leaving
+// 24: Lost in Tier 1, consolation and leaving
+// 30: Awaiting and battling Trainer 1 in Tier 2
+// 31: Awaiting and battling Trainer 2 in Tier 2
+// 32: Awaiting and battling Trainer 3 in Tier 2
+// 33: Won in Tier 2, receiving prize and leaving
+// 34: Lost in Tier 2, consolation and leaving
+// 40: Awaiting and battling Trainer 1 in Tier 3
+// 41: Awaiting and battling Trainer 2 in Tier 3
+// 42: Awaiting and battling Trainer 3 in Tier 3
+// 43: Won in Tier 3, receiving prize and leaving
+// 44: Lost in Tier 3, consolation and leaving
+// 100: Selected Cancel, walking out
+
+script GerbonTown_Restaurant_Init {
+    setvar(VAR_RESTARAUNT_STATE, 1)
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2))
+    waitmovement
+    delay(20)
+    setspeaker("Hostess")
+    msgbox("Welcome to {COLOR RED}The Sassy Salazzle!")
+    goto(GerbonTown_Restaurant_DecideTier)
+}
+
+script GerbonTown_Restaurant_DecideTier {
+    setvar(VAR_RESTARAUNT_STATE, 1)
+    setspeaker("Hostess")
+    msgbox("What experience will you have today?")
+    waitmessage
+    dynmultipush("Tier 1", 2)
+    dynmultipush("Tier 2", 3)
+    dynmultipush("Tier 3", 4)
+    dynmultipush("Nevermind", 100)
+    dynmultistack(0, 0, TRUE, 4, FALSE, 1, 0)
+    copyvar(VAR_RESTARAUNT_STATE, VAR_RESULT)
+    closemessage
+    setspeaker("Hostess")
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 2:  // Tier 1
+            msgbox("That will cost you 300, are you sure?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES)
+            {   
+                if (checkmoney(300))
+                {
+                    removemoney(300)
+                    setvar(VAR_RESTARAUNT_STATE, 20)
+                    goto(GerbonTown_Restaurant_BringPlayerToTable)
+                }
+                else
+                {
+                    setspeaker("Hostess")
+                    msgbox("I'm sorry, you don't have enough money
+                            for that!")
+                    waitmessage
+                    goto(GerbonTown_Restaurant_DecideTier)
+                }
+            }
+            else {goto(GerbonTown_Restaurant_DecideTier)}
+            break
+        case 3:  // Tier 2
+            msgbox("That will cost you 1000, are you sure?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES)
+            {
+                if (specialvar(VAR_RESULT, GetPlayerLevelCeiling) < 25)
+                {
+                    setspeaker("Hostess")
+                    msgbox("I'm sorry, your Pokemon are not
+                            powerful enough to participate!
+                            At least one of your Pokemon must
+                            be Level 25.")
+                    waitmessage
+                    goto(GerbonTown_Restaurant_DecideTier)
+                }
+                if (checkmoney(1000))
+                {
+                    removemoney(1000)
+                    setvar(VAR_RESTARAUNT_STATE, 30)
+                    goto(GerbonTown_Restaurant_BringPlayerToTable)
+                }
+                else
+                {
+                    setspeaker("Hostess")
+                    msgbox("I'm sorry, you don't have enough money
+                            for that!")
+                    waitmessage
+                    goto(GerbonTown_Restaurant_DecideTier)
+                }
+            }
+            else {goto(GerbonTown_Restaurant_DecideTier)}
+            break
+        case 4: // Tier 3
+            msgbox("That will cost you 2000, are you sure?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES)
+            {
+                if (specialvar(VAR_RESULT, GetPlayerLevelCeiling) < 40)
+                {
+                    setspeaker("Hostess")
+                    msgbox("I'm sorry, your Pokemon are not
+                            powerful enough to participate!
+                            At least one of your Pokemon must
+                            be Level 40.")
+                    waitmessage
+                    goto(GerbonTown_Restaurant_DecideTier)
+                }
+                if (checkmoney(2000))
+                {
+                    removemoney(2000)
+                    setvar(VAR_RESTARAUNT_STATE, 40)
+                    goto(GerbonTown_Restaurant_BringPlayerToTable)
+                }
+                else
+                {
+                    setspeaker("Hostess")
+                    msgbox("I'm sorry, you don't have enough money
+                            for that!")
+                    waitmessage
+                    goto(GerbonTown_Restaurant_DecideTier)
+                }
+            }
+            else {goto(GerbonTown_Restaurant_DecideTier)}
+            break
+        case 100:  // Nevermind
+            setvar(VAR_RESTARAUNT_STATE, 100)
+            goto(GerbonTown_Restaurant_EarlyExitNevermind)
+            break
+    }
+}
+
+script GerbonTown_Restaurant_EarlyExitNevermind {
+    setspeaker("Hostess")
+    msgbox("Come again!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down * 2))
+    warp(MAP_OLDALE_TOWN, 18)
+    waitstate
+    release
+    end
+}
+
+script GerbonTown_Restaurant_BringPlayerToTable {
+    setflag(FLAG_NO_WHITEOUT)
+    setspeaker("Hostess")
+    msgbox("Thank you for dining with us! Please
+            follow me!")
+    waitmessage
+    applymovement(GERBON_WAITRESS, moves(
+        walk_left, walk_up * 2, walk_left * 7,
+        walk_up * 2, walk_left, face_down))
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
+        walk_left, walk_up * 3, walk_left * 7,
+        walk_up, walk_left, walk_down, face_left))
+    waitmovement
+    applymovement(GERBON_WAITRESS, moves(walk_down))
+    waitmovement
+    setspeaker("Hostess")
+    msgbox("Our team will be with you shortly!")
+    waitmessage
+    closemessage
+    applymovement(GERBON_WAITRESS, moves(
+        walk_right, walk_down, walk_right * 8, walk_down * 2))
+    waitmovement
+    addobject(BATTLE_WAITER)
+    goto(GerbonTown_Restaurant_BeginBattle01)
+}
+
+script GerbonTown_Restaurant_BeginBattle01 {
+    delay(10)
+    applymovement(BATTLE_WAITER, BattleWaiter_WalkToTable)
+    waitmovement
+    special(HealPlayerParty)
+    setspeaker("Rodney")
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 20: // Tier 1
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_RODNEY,
+                "I present you with your first course!",
+                "You eat fast! I hope you liked it!",
+                GerbonTown_Restaurant_EndBattle01,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+        case 30: // Tier 2
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_SANTIAGO,
+                "I present you with your first course!",
+                "You eat fast! I hope you liked it!",
+                GerbonTown_Restaurant_EndBattle01,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+        case 40: // Tier 3
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_KEVIN,
+                "I present you with your first course!",
+                "You eat fast! I hope you liked it!",
+                GerbonTown_Restaurant_EndBattle01,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+    }
+}
+
+script GerbonTown_Restaurant_EndBattle01 {
+    lock
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_LOST)
+    {
+        goto(GerbonTown_Restaurant_LostBattleSkipToLeave)
+    }
+    
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 20: // Tier 1
+            setvar(VAR_RESTARAUNT_STATE, 21)
+            cleartrainerflag(TRAINER_RODNEY)
+        case 30: // Tier 2
+            setvar(VAR_RESTARAUNT_STATE, 31)
+            cleartrainerflag(TRAINER_SANTIAGO)
+        case 40: // Tier 3
+            setvar(VAR_RESTARAUNT_STATE, 41)
+            cleartrainerflag(TRAINER_KEVIN)
+    }
+    setspeaker("Rodney")
+    msgbox("Your second course will be here soon!")
+    waitmessage
+    goto(GerbonTown_Restaurant_BeginBattle02)
+}
+
+script GerbonTown_Restaurant_BeginBattle02 {
+    special(HealPlayerParty)
+    closemessage
+    call(BattleWaiter_TableWalkAwayAndBack)
+    setspeaker("Richard")
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 21: // Tier 1
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_RICHARD,
+                "Your delectable second course is here!",
+                "Did you even taste that?",
+                GerbonTown_Restaurant_EndBattle02,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+        case 31: // Tier 2
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_GILBERT,
+                "Your delectable second course is here!",
+                "Did you even taste that?",
+                GerbonTown_Restaurant_EndBattle02,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+        case 41: // Tier 3
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_JACK,
+                "Your delectable second course is here!",
+                "Did you even taste that?",
+                GerbonTown_Restaurant_EndBattle02,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+    }
+}
+
+script GerbonTown_Restaurant_EndBattle02 {
+    lock
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_LOST)
+    {
+        goto(GerbonTown_Restaurant_LostBattleSkipToLeave)
+    }
+
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 21: // Tier 1
+            setvar(VAR_RESTARAUNT_STATE, 22)
+            cleartrainerflag(TRAINER_RICHARD)
+        case 31: // Tier 2
+            setvar(VAR_RESTARAUNT_STATE, 32)
+            cleartrainerflag(TRAINER_GILBERT)
+        case 41: // Tier 3
+            setvar(VAR_RESTARAUNT_STATE, 42)
+            cleartrainerflag(TRAINER_JACK)
+    }
+    setspeaker("Richard")
+    msgbox("Your final course is en route!")
+    waitmessage
+    goto(GerbonTown_Restaurant_BeginBattle03)
+}
+
+script GerbonTown_Restaurant_BeginBattle03 {
+    special(HealPlayerParty)
+    call(BattleWaiter_TableWalkAwayAndBack)
+    setspeaker("Herman")
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 22: // Tier 1
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_HERMAN,
+                "Surely you'll have no better meal than
+                this!",
+                "Magnifico!",
+                GerbonTown_Restaurant_EndBattle03,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+        case 32: // Tier 2
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_FRANKLIN,
+                "Surely you'll have no better meal than
+                this!",
+                "Magnifico!",
+                GerbonTown_Restaurant_EndBattle03,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+        case 42: // Tier 3
+            trainerbattle(
+                TRAINER_BATTLE_CONTINUE_SCRIPT,
+                BATTLE_WAITER,
+                TRAINER_DUDLEY,
+                "Surely you'll have no better meal than
+                this!",
+                "Magnifico!",
+                GerbonTown_Restaurant_EndBattle03,
+                LOCALID_NONE,
+                TRAINER_NONE,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                NULL,
+                FALSE,
+                TRUE,
+                FALSE,
+                FALSE,
+            )
+            break
+    }
+}
+
+script GerbonTown_Restaurant_EndBattle03 {
+    lock
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    closemessage
+    if (var(VAR_RESULT) == B_OUTCOME_LOST)
+    {
+        goto(GerbonTown_Restaurant_LostBattleSkipToLeave)
+    }
+
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 22: // Tier 1
+            setvar(VAR_RESTARAUNT_STATE, 23)
+            cleartrainerflag(TRAINER_HERMAN)
+        case 32: // Tier 2
+            setvar(VAR_RESTARAUNT_STATE, 33)
+            cleartrainerflag(TRAINER_FRANKLIN)
+        case 42: // Tier 3
+            setvar(VAR_RESTARAUNT_STATE, 43)
+            cleartrainerflag(TRAINER_DUDLEY)
+    }
+    setspeaker("Herman")
+    msgbox("We hope you enjoyed your time here!
+    
+            Your hostess will come soon to
+            get you sorted!")
+    waitmessage
+    goto(GerbonTown_Restaurant_GivePrizeAndLeave)
+}
+
+// After losing, leave
+script GerbonTown_Restaurant_LostBattleSkipToLeave {
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    delay(30)
+    removeobject(BATTLE_WAITER)
+    setobjectxy(GERBON_WAITRESS, 3, 5)
+    delay(30)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+    setspeaker("Hostess")
+    msgbox("We're sorry you lost a battle, but we
+            hope you enjoyed your meal!
+            
+            Allow me to escort you to the door.")
+    goto(GerbonTown_Restaurant_EscortAfterwards)
+}
+
+// After winning, determine prize and leave
+script GerbonTown_Restaurant_GivePrizeAndLeave {
+    closemessage
+    applymovement(BATTLE_WAITER, BattleWaiter_WalkAwayFromTable)
+    waitmovement
+    setobjectxy(GERBON_WAITRESS, 12, 6)
+    delay(60)
+    applymovement(GERBON_WAITRESS, BattleWaiter_WalkToTable)
+    waitmovement
+    setspeaker("Hostess")
+    msgbox("Congratulations on defeating all of
+            our skilled staff! Here is a prize
+            to commemorate your achievement!")
+    call(GerbonTown_Restaurant_DeterminePrize)
+    setspeaker("Hostess")
+    msgbox("Allow me to escort you to the door.")
+    waitmessage
+    goto(GerbonTown_Restaurant_EscortAfterwards)
+}
+
+// Determine prize after winning based on tier
+script GerbonTown_Restaurant_DeterminePrize {
+    switch (var(VAR_RESTARAUNT_STATE))
+    {
+        case 23: // Tier 1
+            giveitem(ITEM_TINY_MUSHROOM, 1) // Temp
+            
+        case 33: // Tier 2
+            giveitem(ITEM_TINY_MUSHROOM, 1) // Temp
+            
+        case 43: // Tier 3
+            giveitem(ITEM_TINY_MUSHROOM, 1) // Temp
+            
+    }
+}
+
+// Walk out after winning
+script GerbonTown_Restaurant_EscortAfterwards {
+    applymovement(GERBON_WAITRESS, BattleWaiter_WalkAwayFromTable)
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, walk_right, walk_down, walk_right * 2))
+    clearflag(FLAG_NO_WHITEOUT)
+    warp(MAP_OLDALE_TOWN, 18)
+    waitstate
+    release
+    end
+}
+
+// Movements
+script BattleWaiter_TableWalkAwayAndBack {
+    applymovement(BATTLE_WAITER, BattleWaiter_WalkAwayFromTable)
+    waitmovement
+    delay(60)
+    applymovement(BATTLE_WAITER, BattleWaiter_WalkToTable)
+    waitmovement
+}
+
+movement BattleWaiter_WalkToTable {
+    walk_left * 8, walk_up, walk_left, face_down
+}
+
+movement BattleWaiter_WalkAwayFromTable {
+    walk_right, walk_down, walk_right * 8
+}
