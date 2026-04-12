@@ -27,6 +27,7 @@
 #define tWindowFrameType data[6]
 #define tSwitchBehavior data[7]
 #define tToggleRun data[8]
+#define tBattleSpeed data[9]
 
 // Page 1
 enum
@@ -46,6 +47,7 @@ enum
 {
     MENUITEM_SWITCHBEHAVIOR,
     MENUITEM_TOGGLERUN,
+    MENUITEM_BATTLESPEED,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -67,6 +69,7 @@ enum
 // Page 2
 #define YPOS_SWITCHBEHAVIOR      (MENUITEM_SWITCHBEHAVIOR* 16)
 #define YPOS_TOGGLERUN           (MENUITEM_TOGGLERUN* 16)
+#define YPOS_BATTLESPEED         (MENUITEM_BATTLESPEED* 16)
 
 
 #define PAGE_COUNT 2
@@ -92,6 +95,8 @@ static u8   SwitchBehavior_ProcessInput(u8 selection);
 static void SwitchBehavior_DrawChoices(u8 selection);
 static u8   ToggleRun_ProcessInput(u8 selection);
 static void ToggleRun_DrawChoices(u8 selection);
+static u8   BattleSpeed_ProcessInput(u8 selection);
+static void BattleSpeed_DrawChoices(u8 selection);
 static u8 ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
@@ -138,6 +143,7 @@ static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
 {
     [MENUITEM_SWITCHBEHAVIOR]  = gText_SwitchBehavior,
     [MENUITEM_TOGGLERUN]       = gText_ToggleRun,
+    [MENUITEM_BATTLESPEED]     = gText_BattleSpeed,
     [MENUITEM_CANCEL_PG2]      = COMPOUND_STRING("Cancel"),
 };
 
@@ -214,6 +220,7 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
     gTasks[taskId].tSwitchBehavior = gSaveBlock2Ptr->optionsSwitchBehavior;
     gTasks[taskId].tToggleRun = gSaveBlock2Ptr->optionsToggleRun;
+    gTasks[taskId].tBattleSpeed = VarGet(VAR_BATTLESPEED_SETTING);
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -234,6 +241,7 @@ static void DrawOptionsPg2(u8 taskId)
     ReadAllCurrentSettings(taskId);
     SwitchBehavior_DrawChoices(gTasks[taskId].tSwitchBehavior);
     ToggleRun_DrawChoices(gTasks[taskId].tToggleRun);
+    BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -533,6 +541,13 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
 
             if (previousOption != gTasks[taskId].tToggleRun)
                 ToggleRun_DrawChoices(gTasks[taskId].tToggleRun);
+            break;
+        case MENUITEM_BATTLESPEED:
+            previousOption = gTasks[taskId].tBattleSpeed;
+            gTasks[taskId].tBattleSpeed = BattleSpeed_ProcessInput(gTasks[taskId].tBattleSpeed);
+
+            if (previousOption != gTasks[taskId].tBattleSpeed)
+                BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
             break;  
         default:
             return;
@@ -555,6 +570,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
     gSaveBlock2Ptr->optionsSwitchBehavior = gTasks[taskId].tSwitchBehavior;
     gSaveBlock2Ptr->optionsToggleRun = gTasks[taskId].tToggleRun;
+    VarSet(VAR_BATTLESPEED_SETTING, gTasks[taskId].tBattleSpeed);
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -654,6 +670,51 @@ static void ToggleRun_DrawChoices(u8 selection)
     // Draw each menu choice at the calculated positions
     DrawOptionMenuChoice(gText_OneSwitchOff, 104, YPOS_TOGGLERUN, styles[0]);
     DrawOptionMenuChoice(gText_OneSwitchOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_OneSwitchOn, 170), YPOS_TOGGLERUN, styles[1]);
+}
+
+static u8 BattleSpeed_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (++selection > 3)  // If the selection exceeds 3, wrap around to 0
+            selection = 0;
+            sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (selection != 0)
+            selection--;
+        else
+            selection = 3;
+            sArrowPressed = TRUE;
+    }
+    VarSet(VAR_BATTLESPEED_SETTING, selection);  // Set the battle speed config variable
+    return selection;
+}
+
+static void BattleSpeed_DrawChoices(u8 selection)
+{
+    u8 styles[4];
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[2] = 0;
+    styles[3] = 0;
+    styles[selection] = 1;  // Highlight the selected option
+    s32 width1x, width2x, width3x, width4x, xMid;
+
+    // Draw each menu choice at the calculated positions
+    DrawOptionMenuChoice(gText_BattleSpeed_1x, 95, YPOS_BATTLESPEED, styles[0]);
+
+    width1x = GetStringWidth(FONT_NORMAL, gText_BattleSpeed_1x, 0);
+    width2x = GetStringWidth(FONT_NORMAL, gText_BattleSpeed_2x, 0);
+    width3x = GetStringWidth(FONT_NORMAL, gText_BattleSpeed_3x, 0);
+    width4x = GetStringWidth(FONT_NORMAL, gText_BattleSpeed_4x, 0);
+
+    xMid = (width1x - width2x - width3x - width4x) / 2 + 104;
+
+    DrawOptionMenuChoice(gText_BattleSpeed_2x, (95 + (((xMid + 52) - 95) / 2)), YPOS_BATTLESPEED, styles[1]);
+    DrawOptionMenuChoice(gText_BattleSpeed_3x, (xMid + 52), YPOS_BATTLESPEED, styles[2]);
+    DrawOptionMenuChoice(gText_BattleSpeed_4x, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSpeed_4x, 185), YPOS_BATTLESPEED, styles[3]);
 }
 
 static u8 TextSpeed_ProcessInput(u8 selection)

@@ -235,6 +235,13 @@ extern const u8 gText_ToggleRun[];
 extern const u8 gText_ToggleRun_Option01[];
 extern const u8 gText_ToggleRun_Option02[];
 
+// Battle Speed Option
+extern const u8 gText_BattleSpeed[];
+extern const u8 gText_BattleSpeed_1x[];
+extern const u8 gText_BattleSpeed_2x[];
+extern const u8 gText_BattleSpeed_3x[];
+extern const u8 gText_BattleSpeed_4x[];
+
 // main menu/birch speech text
 extern const u8 gText_Birch_Welcome[];
 extern const u8 gText_ThisIsAPokemon[];
