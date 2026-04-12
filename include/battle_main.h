@@ -116,6 +116,10 @@ bool32 DidPlayerForfeitNormalTrainerBattle(void);
 void BattleDebug_WonBattle(void);
 s32 Factorial(s32 n);
 
+// Battle Speedup
+bool32 InBattleChoosingMoves();
+bool32 InBattleRunningActions();
+
 extern struct MultiPartnerMenuPokemon gMultiPartnerParty[MULTI_PARTY_SIZE];
 
 extern const struct SpriteTemplate gUnusedBattleInitSprite;
