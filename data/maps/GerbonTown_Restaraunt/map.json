@@ -2,7 +2,7 @@
   "id": "MAP_GERBON_TOWN_RESTARAUNT",
   "name": "GerbonTown_Restaraunt",
   "layout": "LAYOUT_GERBON_TOWN_RESTARAUNT",
-  "music": "MUS_OLDALE",
+  "music": "MUS_BOUTIQUE",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
