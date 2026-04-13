@@ -1728,3 +1728,25 @@ const struct Tileset gTileset_RestarauntInterior =
     .metatileAttributes = gMetatileAttributes_RestarauntInterior,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PineForest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PineForest,
+    .palettes = gTilesetPalettes_PineForest,
+    .metatiles = gMetatiles_PineForest,
+    .metatileAttributes = gMetatileAttributes_PineForest,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PineForestMisc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PineForestMisc,
+    .palettes = gTilesetPalettes_PineForestMisc,
+    .metatiles = gMetatiles_PineForestMisc,
+    .metatileAttributes = gMetatileAttributes_PineForestMisc,
+    .callback = NULL,
+};

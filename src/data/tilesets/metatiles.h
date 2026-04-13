@@ -459,3 +459,9 @@ const u16 gMetatileAttributes_Igris_Ruins[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_RestarauntInterior[] = INCBIN_U16("data/tilesets/secondary/restaraunt_interior/metatiles.bin");
 const u16 gMetatileAttributes_RestarauntInterior[] = INCBIN_U16("data/tilesets/secondary/restaraunt_interior/metatile_attributes.bin");
+
+const u16 gMetatiles_PineForest[] = INCBIN_U16("data/tilesets/primary/pine_forest/metatiles.bin");
+const u16 gMetatileAttributes_PineForest[] = INCBIN_U16("data/tilesets/primary/pine_forest/metatile_attributes.bin");
+
+const u16 gMetatiles_PineForestMisc[] = INCBIN_U16("data/tilesets/secondary/pine_forest_misc/metatiles.bin");
+const u16 gMetatileAttributes_PineForestMisc[] = INCBIN_U16("data/tilesets/secondary/pine_forest_misc/metatile_attributes.bin");

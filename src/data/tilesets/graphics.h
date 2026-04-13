@@ -3371,3 +3371,41 @@ const u16 gTilesetPalettes_RestarauntInterior[][16] =
 };
 
 const u32 gTilesetTiles_RestarauntInterior[] = INCBIN_U32("data/tilesets/secondary/restaraunt_interior/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_PineForest[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/pine_forest/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_PineForest[] = INCBIN_U32("data/tilesets/primary/pine_forest/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_PineForestMisc[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/pine_forest_misc/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_PineForestMisc[] = INCBIN_U32("data/tilesets/secondary/pine_forest_misc/tiles.4bpp.lz");
