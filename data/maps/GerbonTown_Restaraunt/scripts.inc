@@ -596,111 +596,102 @@ GerbonTown_Restaurant_GivePrizeAndLeave::
 
 
 GerbonTown_Restaurant_DeterminePrize::
-# 525 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	switch VAR_RESTARAUNT_STATE
-# 527 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	case 23, GerbonTown_Restaurant_DeterminePrize_2
-# 530 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	case 33, GerbonTown_Restaurant_DeterminePrize_3
-# 533 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	case 43, GerbonTown_Restaurant_DeterminePrize_4
-	return
-
-GerbonTown_Restaurant_DeterminePrize_2:
-# 528 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	giveitem ITEM_TINY_MUSHROOM, 1
-	return
-
-GerbonTown_Restaurant_DeterminePrize_3:
-# 531 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	giveitem ITEM_TINY_MUSHROOM, 1
-	return
-
-GerbonTown_Restaurant_DeterminePrize_4:
-# 534 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	giveitem ITEM_TINY_MUSHROOM, 1
+# 535 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	special GivePlayerRestaurantPrize
+# 536 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	bufferitemname STR_VAR_1, VAR_TEMP_1
+# 537 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	buffernumberstring STR_VAR_2, VAR_TEMP_2
+# 538 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 539 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	msgbox GerbonTown_Restaurant_DeterminePrize_Text_0
+# 543 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	waitmessage
+# 544 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	waitfanfare
 	return
 
 
 GerbonTown_Restaurant_EscortAfterwards::
-# 547 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	applymovement GERBON_WAITRESS, BattleWaiter_WalkAwayFromTable
-# 548 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	delay 30
 # 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_Restaurant_EscortAfterwards_Movement_0
+	applymovement GERBON_WAITRESS, BattleWaiter_WalkAwayFromTable
 # 550 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	clearflag FLAG_NO_WHITEOUT
+	delay 30
 # 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	warp MAP_OLDALE_TOWN, 18
+	applymovement OBJ_EVENT_ID_PLAYER, GerbonTown_Restaurant_EscortAfterwards_Movement_0
 # 552 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	waitstate
+	clearflag FLAG_NO_WHITEOUT
 # 553 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	warp MAP_OLDALE_TOWN, 18
+# 554 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	waitstate
+# 555 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	release
 	end
 
 
 BattleWaiter_TableWalkAwayAndBack::
-# 559 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	applymovement BATTLE_WAITER, BattleWaiter_WalkAwayFromTable
-# 560 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	waitmovement
 # 561 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	delay 60
+	applymovement BATTLE_WAITER, BattleWaiter_WalkAwayFromTable
 # 562 "data/maps/GerbonTown_Restaraunt/scripts.pory"
-	applymovement BATTLE_WAITER, BattleWaiter_WalkToTable
+	waitmovement
 # 563 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	delay 60
+# 564 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	applymovement BATTLE_WAITER, BattleWaiter_WalkToTable
+# 565 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	waitmovement
 	return
 
 
-# 566 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 568 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 BattleWaiter_WalkToTable:
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_up
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_left
-# 567 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 569 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	face_down
 	step_end
 
-# 570 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 572 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 BattleWaiter_WalkAwayFromTable:
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_down
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 571 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 573 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
 	step_end
 
@@ -820,17 +811,17 @@ GerbonTown_Restaurant_BringPlayerToTable_Movement_3:
 	walk_down
 	step_end
 
-# 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 GerbonTown_Restaurant_EscortAfterwards_Movement_0:
-# 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_up
-# 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_down
-# 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
-# 549 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+# 551 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	walk_right
 	step_end
 
@@ -972,3 +963,9 @@ GerbonTown_Restaurant_GivePrizeAndLeave_Text_0:
 GerbonTown_Restaurant_GivePrizeAndLeave_Text_1:
 # 528 "data/maps/GerbonTown_Restaraunt/scripts.pory"
 	.string "Allow me to escort you to the door.$"
+
+GerbonTown_Restaurant_DeterminePrize_Text_0:
+# 539 "data/maps/GerbonTown_Restaraunt/scripts.pory"
+	.string "You have received the following:\n"
+	.string "{STR_VAR_2} {STR_VAR_1}!\p"
+	.string "{PLAYER} put away the {STR_VAR_1}$"

@@ -532,18 +532,16 @@ script GerbonTown_Restaurant_GivePrizeAndLeave {
 
 // Determine prize after winning based on tier
 script GerbonTown_Restaurant_DeterminePrize {
-    switch (var(VAR_RESTARAUNT_STATE))
-    {
-        case 23: // Tier 1
-            giveitem(ITEM_TINY_MUSHROOM, 1) // Temp
+    special(GivePlayerRestaurantPrize)
+    bufferitemname(STR_VAR_1, VAR_TEMP_1)
+    buffernumberstring(STR_VAR_2, VAR_TEMP_2)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("You have received the following:
+            {STR_VAR_2} {STR_VAR_1}!
             
-        case 33: // Tier 2
-            giveitem(ITEM_TINY_MUSHROOM, 1) // Temp
-            
-        case 43: // Tier 3
-            giveitem(ITEM_TINY_MUSHROOM, 1) // Temp
-            
-    }
+            {PLAYER} put away the {STR_VAR_1}")
+    waitmessage
+    waitfanfare
 }
 
 // Walk out after winning
