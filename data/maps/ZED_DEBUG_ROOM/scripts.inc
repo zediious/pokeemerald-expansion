@@ -320,6 +320,135 @@ JumpToIgrisPart2_2:
 	goto JumpToIgrisPart2_1
 
 
+JumpToRoute104::
+# 193 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	lock
+# 194 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	msgbox JumpToRoute104_Text_0, MSGBOX_YESNO
+# 195 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq JumpToRoute104_2
+JumpToRoute104_1:
+# 260 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	waitstate
+# 261 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	release
+	end
+
+JumpToRoute104_2:
+# 196 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 24
+# 197 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_ROUTE103_SAVED_TOGEPI
+# 198 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRISDESERT_KOWTOW_01
+# 199 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRISDESERT_JORDAN_01
+# 200 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRIS_BEAUTY
+# 201 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRIS_TOGEPI
+# 202 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_ROUTE103_BEAUTY
+# 203 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_ROUTE102_STAIRBLOCKERS
+# 204 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_KOWTOW
+# 205 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_MUGGEDWOMAN
+# 206 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_ROUTE110_JORDAN
+# 207 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_JORDANINHOME
+# 208 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+# 209 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_MULLED_CAVE_JORDAN_01
+# 210 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_JORDANFOLLOWER
+# 211 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_SAWGRASSFOREST_JORDANNOTRIGGER
+# 212 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+# 213 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_GERBON_CRASH_KID
+# 214 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_GERBONSOUTH_BLOCKERS
+# 215 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_ANGRY_KROKOROK_01
+# 216 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMID_COFAGRIGUS01_FOUND
+# 217 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMID_COFAGRIGUS02_FOUND
+# 218 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMID_COFAPUZZLE
+# 219 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMID_GOTHORITA01
+# 220 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMID_LOSTKID01
+# 221 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_GENTLEMAN
+# 222 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKID
+# 223 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM
+# 224 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM2
+# 225 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_LOSTKIDMOM3
+# 226 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_RUVELPYRAMIDEXT_JORDAN
+# 227 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRIS_JORDAN_02
+# 228 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	clearflag FLAG_PALENTOPOKECENTER_JORDAN01
+# 230 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_BADGE01_GET
+# 231 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_BADGE02_GET
+# 232 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setflag FLAG_IGRISDESERT_PASSED
+# 234 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_EXP_SHARE, 1
+# 235 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_ULTRA_REPEL, 1
+# 236 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TERA_ORB, 1
+# 238 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_HM_CUT, 1
+# 239 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_HM_ROCK_SMASH, 1
+# 240 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TM_ROCK_TOMB, 1
+# 241 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_TM_AERIAL_ACE, 1
+# 243 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_EXP_CANDY_XL, 20
+# 244 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_GREAT_BALL, 20
+# 245 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_SUPER_POTION, 20
+# 246 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	giveitem ITEM_FULL_HEAL, 20
+# 248 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_MANDRASEAR, 37
+# 249 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_BONOSAGE, 37
+# 250 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_PONGAPOUR, 37
+# 251 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_INNAPE, 36
+# 252 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	givemon SPECIES_FLAMIGO, 37
+# 254 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	delay 30
+# 256 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	setrespawn HEAL_LOCATION_VULIAS_PALENTO_VILLAGE
+# 257 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	warp MAP_VULIAS_ROUTE104, 26, 56
+	goto JumpToRoute104_1
+
+
 GoToDebugRoom_Text_0:
 # 9 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	.string "Want debug room?$"
@@ -335,3 +464,7 @@ JumpToRuvelPyramid_Text_0:
 JumpToIgrisPart2_Text_0:
 # 124 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
 	.string "Jump to post-ruvel pyramid?$"
+
+JumpToRoute104_Text_0:
+# 194 "data/maps/ZED_DEBUG_ROOM/scripts.pory"
+	.string "Jump to Route 104?$"
