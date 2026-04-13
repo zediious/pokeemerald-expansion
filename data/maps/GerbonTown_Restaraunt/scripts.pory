@@ -251,6 +251,7 @@ script GerbonTown_Restaurant_BeginBattle01 {
                 FALSE,
                 FALSE,
             )
+            break
     }
 }
 
@@ -267,12 +268,15 @@ script GerbonTown_Restaurant_EndBattle01 {
         case 20: // Tier 1
             setvar(VAR_RESTARAUNT_STATE, 21)
             cleartrainerflag(TRAINER_RODNEY)
+            break
         case 30: // Tier 2
             setvar(VAR_RESTARAUNT_STATE, 31)
             cleartrainerflag(TRAINER_SANTIAGO)
+            break
         case 40: // Tier 3
             setvar(VAR_RESTARAUNT_STATE, 41)
             cleartrainerflag(TRAINER_KEVIN)
+            break
     }
     setspeaker("Rodney")
     msgbox("Your second course will be here soon!")
@@ -366,12 +370,15 @@ script GerbonTown_Restaurant_EndBattle02 {
         case 21: // Tier 1
             setvar(VAR_RESTARAUNT_STATE, 22)
             cleartrainerflag(TRAINER_RICHARD)
+            break
         case 31: // Tier 2
             setvar(VAR_RESTARAUNT_STATE, 32)
             cleartrainerflag(TRAINER_GILBERT)
+            break
         case 41: // Tier 3
             setvar(VAR_RESTARAUNT_STATE, 42)
             cleartrainerflag(TRAINER_JACK)
+            break
     }
     setspeaker("Richard")
     msgbox("Your final course is en route!")
@@ -468,12 +475,15 @@ script GerbonTown_Restaurant_EndBattle03 {
         case 22: // Tier 1
             setvar(VAR_RESTARAUNT_STATE, 23)
             cleartrainerflag(TRAINER_HERMAN)
+            break
         case 32: // Tier 2
             setvar(VAR_RESTARAUNT_STATE, 33)
             cleartrainerflag(TRAINER_FRANKLIN)
+            break
         case 42: // Tier 3
             setvar(VAR_RESTARAUNT_STATE, 43)
             cleartrainerflag(TRAINER_DUDLEY)
+            break
     }
     setspeaker("Herman")
     msgbox("We hope you enjoyed your time here!
