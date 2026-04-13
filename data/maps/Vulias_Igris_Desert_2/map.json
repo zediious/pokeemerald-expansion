@@ -153,6 +153,20 @@
       "elevation": 0,
       "dest_map": "MAP_VULIAS_IGRIS_MOUNTAIN_TUNNEL",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE104",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE104",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
