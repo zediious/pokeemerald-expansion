@@ -9807,10 +9807,10 @@
     {
       "id": "LAYOUT_VULIAS_LIORDUN_TOWN",
       "name": "Vulias_Liordun_Town_Layout",
-      "width": 70,
+      "width": 49,
       "height": 41,
       "primary_tileset": "gTileset_PineForest",
-      "secondary_tileset": "gTileset_Lab",
+      "secondary_tileset": "gTileset_LiordunTown",
       "border_filepath": "data/layouts/Vulias_Liordun_Town/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Liordun_Town/map.bin"
     }
