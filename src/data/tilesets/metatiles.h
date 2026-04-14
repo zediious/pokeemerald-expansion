@@ -465,3 +465,6 @@ const u16 gMetatileAttributes_PineForest[] = INCBIN_U16("data/tilesets/primary/p
 
 const u16 gMetatiles_PineForestMisc[] = INCBIN_U16("data/tilesets/secondary/pine_forest_misc/metatiles.bin");
 const u16 gMetatileAttributes_PineForestMisc[] = INCBIN_U16("data/tilesets/secondary/pine_forest_misc/metatile_attributes.bin");
+
+const u16 gMetatiles_LiordunTown[] = INCBIN_U16("data/tilesets/secondary/liordun_town/metatiles.bin");
+const u16 gMetatileAttributes_LiordunTown[] = INCBIN_U16("data/tilesets/secondary/liordun_town/metatile_attributes.bin");

@@ -1750,3 +1750,14 @@ const struct Tileset gTileset_PineForestMisc =
     .metatileAttributes = gMetatileAttributes_PineForestMisc,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_LiordunTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_LiordunTown,
+    .palettes = gTilesetPalettes_LiordunTown,
+    .metatiles = gMetatiles_LiordunTown,
+    .metatileAttributes = gMetatileAttributes_LiordunTown,
+    .callback = NULL,
+};
