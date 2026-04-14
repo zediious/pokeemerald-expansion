@@ -9667,7 +9667,7 @@
     {
       "id": "LAYOUT_VULIAS_ROUTE104",
       "name": "Vulias_Route104_Layout",
-      "width": 64,
+      "width": 65,
       "height": 71,
       "primary_tileset": "gTileset_PineForest",
       "secondary_tileset": "gTileset_PineForestMisc",
