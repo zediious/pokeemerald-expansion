@@ -1674,6 +1674,10 @@
     {
       "id": "MAPSEC_IGRIS_MOUNTAIN_TUNNEL",
       "name": "Mountain Tunnel"
+    },
+    {
+      "id": "MAPSEC_LIORDUN_TOWN",
+      "name": "Liordun Town"
     }
   ]
 }
