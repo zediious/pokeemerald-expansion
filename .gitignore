@@ -71,3 +71,4 @@ __pycache__
 rom2sp.sh
 /tilesetCompilePrimary.sh
 /tilesetCompileSecondary.sh
+/obstagoonBuild.sh
