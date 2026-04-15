@@ -1761,3 +1761,25 @@ const struct Tileset gTileset_LiordunTown =
     .metatileAttributes = gMetatileAttributes_LiordunTown,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_LiordunHallExt =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_LiordunHallExt,
+    .palettes = gTilesetPalettes_LiordunHallExt,
+    .metatiles = gMetatiles_LiordunHallExt,
+    .metatileAttributes = gMetatileAttributes_LiordunHallExt,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_LiordunTownPrime =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_LiordunTownPrime,
+    .palettes = gTilesetPalettes_LiordunTownPrime,
+    .metatiles = gMetatiles_LiordunTownPrime,
+    .metatileAttributes = gMetatileAttributes_LiordunTownPrime,
+    .callback = NULL,
+};

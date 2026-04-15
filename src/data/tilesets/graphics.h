@@ -3428,3 +3428,41 @@ const u16 gTilesetPalettes_LiordunTown[][16] =
 };
 
 const u32 gTilesetTiles_LiordunTown[] = INCBIN_U32("data/tilesets/secondary/liordun_town/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_LiordunHallExt[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_LiordunHallExt[] = INCBIN_U32("data/tilesets/secondary/liordun_hall_ext/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_LiordunTownPrime[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/liordun_town_prime/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_LiordunTownPrime[] = INCBIN_U32("data/tilesets/primary/liordun_town_prime/tiles.4bpp.lz");

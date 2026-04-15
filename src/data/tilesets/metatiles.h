@@ -468,3 +468,9 @@ const u16 gMetatileAttributes_PineForestMisc[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_LiordunTown[] = INCBIN_U16("data/tilesets/secondary/liordun_town/metatiles.bin");
 const u16 gMetatileAttributes_LiordunTown[] = INCBIN_U16("data/tilesets/secondary/liordun_town/metatile_attributes.bin");
+
+const u16 gMetatiles_LiordunHallExt[] = INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/metatiles.bin");
+const u16 gMetatileAttributes_LiordunHallExt[] = INCBIN_U16("data/tilesets/secondary/liordun_hall_ext/metatile_attributes.bin");
+
+const u16 gMetatiles_LiordunTownPrime[] = INCBIN_U16("data/tilesets/primary/liordun_town_prime/metatiles.bin");
+const u16 gMetatileAttributes_LiordunTownPrime[] = INCBIN_U16("data/tilesets/primary/liordun_town_prime/metatile_attributes.bin");

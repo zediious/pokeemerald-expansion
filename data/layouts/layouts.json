@@ -9667,7 +9667,7 @@
     {
       "id": "LAYOUT_VULIAS_ROUTE104",
       "name": "Vulias_Route104_Layout",
-      "width": 70,
+      "width": 77,
       "height": 71,
       "primary_tileset": "gTileset_PineForest",
       "secondary_tileset": "gTileset_PineForestMisc",
@@ -9807,9 +9807,9 @@
     {
       "id": "LAYOUT_VULIAS_LIORDUN_TOWN",
       "name": "Vulias_Liordun_Town_Layout",
-      "width": 49,
+      "width": 54,
       "height": 41,
-      "primary_tileset": "gTileset_PineForest",
+      "primary_tileset": "gTileset_LiordunTownPrime",
       "secondary_tileset": "gTileset_LiordunTown",
       "border_filepath": "data/layouts/Vulias_Liordun_Town/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Liordun_Town/map.bin"
