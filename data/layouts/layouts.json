@@ -9807,12 +9807,22 @@
     {
       "id": "LAYOUT_VULIAS_LIORDUN_TOWN",
       "name": "Vulias_Liordun_Town_Layout",
-      "width": 54,
+      "width": 67,
       "height": 41,
       "primary_tileset": "gTileset_LiordunTownPrime",
       "secondary_tileset": "gTileset_LiordunTown",
       "border_filepath": "data/layouts/Vulias_Liordun_Town/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Liordun_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_LIORDUN_TOWN_BATTLE_HALL_EXT",
+      "name": "Vulias_Liordun_Town_BattleHall_Ext_Layout",
+      "width": 22,
+      "height": 19,
+      "primary_tileset": "gTileset_LiordunTownPrime",
+      "secondary_tileset": "gTileset_LiordunHallExt",
+      "border_filepath": "data/layouts/Vulias_Liordun_Town_BattleHall_Ext/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_Liordun_Town_BattleHall_Ext/map.bin"
     }
   ]
 }
