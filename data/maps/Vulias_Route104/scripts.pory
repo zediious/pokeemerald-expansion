@@ -1,1 +1,117 @@
 mapscripts Vulias_Route104_MapScripts {}
+
+//// Route Trainers
+
+// Couple on Bridge
+script Route104_EventScript_Trainer01{
+    trainerbattle_single(
+        TRAINER_DEZ_AND_LUKE,
+        "We love to spend time on this bridge.
+        Our Pokemon love it too!",
+        "Ack! Time to head home then?"
+    )
+    msgbox("No, we can't let a lost battle sour our
+            mood!.", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Ninja Kid in Bush
+script Route104_EventScript_Trainer02{
+    trainerbattle_single(
+        TRAINER_HIDEO,
+        "I'll stop you!",
+        "Oh, you're not one of them?"
+    )
+    msgbox("Those mean {COLOR RED}Team Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} thugs came
+            through here earlier! I thought you
+            were one of them.
+            
+            They're never doing anything good...", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Triathelete running in circles
+script Route104_EventScript_Trainer03{
+    trainerbattle_single(
+        TRAINER_KYRA,
+        "Hey! You're ruining my training regimen!",
+        "Ah well, that as a good workout!"
+    )
+    msgbox("I can't break for too long! Got to keep
+            up my pace!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Bug Catcher, is "David" from Sawgrass Forest
+script Route104_EventScript_Trainer04{
+    trainerbattle_single(
+        TRAINER_RICK,
+        "Gah! There aren't any bugs here at all!",
+        "Where are the bugs!"
+    )
+    msgbox("I caught all of the bugs in Sawgrass
+            Forest, now I need more!
+            
+            ...
+            
+            Do I have a problem?", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Black Belt running
+script Route104_EventScript_Trainer05{
+    trainerbattle_single(
+        TRAINER_ZANDER,
+        "Huah! Show me what you can do!",
+        "I am thoroughly impressed!"
+    )
+    msgbox("I have much more training to do!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Fisherman
+script Route104_EventScript_Trainer06{
+    trainerbattle_single(
+        TRAINER_CLAUDE,
+        "I'm having a hard time fishing from this
+        cliff!",
+        "I need a stronger cast!"
+    )
+    msgbox("Maybe I should find a different spot...", MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+//// Non-trainer NPC
+
+// Hiker by Igris entrance
+script Route104_EventScript_HikerTired {
+    lock
+    faceplayer
+    setspeaker("Hiker")
+    msgbox("What a hike! I was hoping to see a
+            Pokemon Center here, but it looks
+            like I've got a ways to go still!")
+    waitmessage
+    release
+    end
+}
+
+// Construction Worker blocking entrance to Mine
+script Route104_EventScript_BlockingMiner {
+    lock
+    faceplayer
+    setspeaker("Miner")
+    msgbox("Hold! There's been an accident in the
+            mines, visitors are not allowed in
+            for now. Apologies! Come back another
+            time!")
+    waitmessage
+    release
+    end
+}
