@@ -222,6 +222,10 @@ static const struct SpriteFrameImage sPicTable_Waiter[] = {
     overworld_ascending_frames(gObjectEventPic_Waiter, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_ConstWorker[] = {
+    overworld_ascending_frames(gObjectEventPic_ConstWorker, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_HexManiac[] = {
     overworld_ascending_frames(gObjectEventPic_HexManiac, 2, 4),
 };
