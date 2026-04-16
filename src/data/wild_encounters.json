@@ -38015,6 +38015,130 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_VULIAS_ROUTE104",
+          "base_label": "gVulias_Route104",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_RATICATE_ALOLA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_WATCHOG"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_MAUSHOLD_FOUR"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_PERSIAN"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_XATU"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_FARFETCHD_GALAR"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_MAUSHOLD_FOUR"
+              },
+              {
+                "min_level": 29,
+                "max_level": 32,
+                "species": "SPECIES_KADABRA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_KIRLIA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 33,
+                "species": "SPECIES_AXEW"
+              },
+              {
+                "min_level": 32,
+                "max_level": 33,
+                "species": "SPECIES_AXEW"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 21,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
         }
       ]
     },
