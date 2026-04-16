@@ -1203,8 +1203,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sCharjabugLevelUpLearnset,
         .teachableLearnset = sCharjabugTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_VIKAVOLT, CONDITIONS({IF_IN_MAPSEC, MAPSEC_NEW_MAUVILLE})},
-                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_VIKAVOLT},
-                                {EVO_NONE, 0, SPECIES_VIKAVOLT_TOTEM}),
+                                {EVO_NONE, 0, SPECIES_VIKAVOLT_TOTEM},
+                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_VIKAVOLT}),
     },
 
     [SPECIES_VIKAVOLT] =
@@ -3747,7 +3747,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         )
         .levelUpLearnset = sSteeneeLevelUpLearnset,
         .teachableLearnset = sSteeneeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_TSAREENA, CONDITIONS({IF_KNOWS_MOVE, MOVE_STOMP})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_TSAREENA, CONDITIONS({IF_KNOWS_MOVE, MOVE_STOMP})}),
     },
 
     [SPECIES_TSAREENA] =
@@ -7473,7 +7473,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sPoipoleLevelUpLearnset,
         .teachableLearnset = sPoipoleTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_NAGANADEL, CONDITIONS({IF_KNOWS_MOVE, MOVE_DRAGON_PULSE})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_NAGANADEL, CONDITIONS({IF_KNOWS_MOVE, MOVE_DRAGON_PULSE})}),
     },
 
     [SPECIES_NAGANADEL] =

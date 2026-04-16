@@ -4705,8 +4705,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .teachableLearnset = sBasculinWhiteStripedTeachableLearnset,
         .eggMoveLearnset = sBasculinWhiteStripedEggMoveLearnset,
         .formSpeciesIdTable = sBasculinFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BASCULEGION_M, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_MALE})},
-                                {EVO_LEVEL, 0, SPECIES_BASCULEGION_F, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_FEMALE})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_BASCULEGION_M, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_MALE})},
+                                {EVO_LEVEL, 30, SPECIES_BASCULEGION_F, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_FEMALE})}),
     },
 
     [SPECIES_BASCULEGION_M] =
@@ -11497,7 +11497,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPawniardLevelUpLearnset,
         .teachableLearnset = sPawniardTeachableLearnset,
         .eggMoveLearnset = sPawniardEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_BISHARP}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 45, SPECIES_BISHARP}),
     },
 
     [SPECIES_BISHARP] =
@@ -11566,7 +11566,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sBisharpLevelUpLearnset,
         .teachableLearnset = sBisharpTeachableLearnset,
     #if P_GEN_9_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_KINGAMBIT, CONDITIONS({IF_DEFEAT_X_WITH_ITEMS, SPECIES_BISHARP, ITEM_LEADERS_CREST, 3})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 55, SPECIES_KINGAMBIT, CONDITIONS({IF_DEFEAT_X_WITH_ITEMS, SPECIES_BISHARP, ITEM_LEADERS_CREST, 3})}),
     #endif
     },
 

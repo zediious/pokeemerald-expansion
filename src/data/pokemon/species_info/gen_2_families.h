@@ -2597,7 +2597,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sBonslyLevelUpLearnset,
         .teachableLearnset = sBonslyTeachableLearnset,
         .eggMoveLearnset = sBonslyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SUDOWOODO, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_SUDOWOODO, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC})}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 
@@ -3004,7 +3004,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sAipomTeachableLearnset,
         .eggMoveLearnset = sAipomEggMoveLearnset,
     #if P_GEN_4_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_AMBIPOM, CONDITIONS({IF_KNOWS_MOVE, MOVE_DOUBLE_HIT})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_AMBIPOM, CONDITIONS({IF_KNOWS_MOVE, MOVE_DOUBLE_HIT})}),
     #endif
     },
 
@@ -3329,7 +3329,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sYanmaTeachableLearnset,
         .eggMoveLearnset = sYanmaEggMoveLearnset,
     #if P_GEN_4_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_YANMEGA, CONDITIONS({IF_KNOWS_MOVE, MOVE_ANCIENT_POWER})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_YANMEGA, CONDITIONS({IF_KNOWS_MOVE, MOVE_ANCIENT_POWER})}),
     #endif
     },
 
@@ -4384,7 +4384,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sGirafarigTeachableLearnset,
         .eggMoveLearnset = sGirafarigEggMoveLearnset,
     #if P_GEN_9_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_FARIGIRAF, CONDITIONS({IF_KNOWS_MOVE, MOVE_TWIN_BEAM})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_FARIGIRAF, CONDITIONS({IF_KNOWS_MOVE, MOVE_TWIN_BEAM})}),
     #endif
     },
 
@@ -4674,8 +4674,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sDunsparceTeachableLearnset,
         .eggMoveLearnset = sDunsparceEggMoveLearnset,
     #if P_GEN_9_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_DUDUNSPARCE_TWO_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_GT, 0})},
-                                {EVO_LEVEL, 0, SPECIES_DUDUNSPARCE_THREE_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_EQ, 0})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_DUDUNSPARCE_TWO_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_GT, 0})},
+                                {EVO_LEVEL, 30, SPECIES_DUDUNSPARCE_THREE_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_EQ, 0})}),
     #endif
     },
 
@@ -5266,7 +5266,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sQwilfishHisuiTeachableLearnset,
         .eggMoveLearnset = sQwilfishHisuiEggMoveLearnset,
         .formSpeciesIdTable = sQwilfishFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_OVERQWIL, CONDITIONS({IF_KNOWS_MOVE, MOVE_BARB_BARRAGE})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_OVERQWIL, CONDITIONS({IF_KNOWS_MOVE, MOVE_BARB_BARRAGE})}),
     },
 
     [SPECIES_OVERQWIL] =
@@ -6493,7 +6493,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sPiloswineLevelUpLearnset,
         .teachableLearnset = sPiloswineTeachableLearnset,
     #if P_GEN_4_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MAMOSWINE, CONDITIONS({IF_KNOWS_MOVE, MOVE_ANCIENT_POWER})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_MAMOSWINE, CONDITIONS({IF_KNOWS_MOVE, MOVE_ANCIENT_POWER})}),
     #endif
     },
 
@@ -7100,7 +7100,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sMantykeLevelUpLearnset,
         .teachableLearnset = sMantykeTeachableLearnset,
         .eggMoveLearnset = sMantykeEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MANTINE, CONDITIONS({IF_SPECIES_IN_PARTY, SPECIES_REMORAID})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_MANTINE, CONDITIONS({IF_SPECIES_IN_PARTY, SPECIES_REMORAID})}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 
@@ -7766,7 +7766,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sStantlerTeachableLearnset,
         .eggMoveLearnset = sStantlerEggMoveLearnset,
     #if P_GEN_8_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_WYRDEER, CONDITIONS({IF_USED_MOVE_X_TIMES, MOVE_PSYSHIELD_BASH, 20})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_WYRDEER, CONDITIONS({IF_USED_MOVE_X_TIMES, MOVE_PSYSHIELD_BASH, 20})}),
     #endif
     },
 
