@@ -28,13 +28,13 @@ GerbonTown_BattleHall_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 
 GerbonBattle_OnResume::
 # 16 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	compare VAR_BATTLEHALL_DRAWCROWD, 1
+	compare VAR_ONRESUME_DRAWCROWD, 1
 	goto_if_eq GerbonBattle_OnResume_1
 	return
 
 GerbonBattle_OnResume_1:
 # 18 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setvar VAR_BATTLEHALL_DRAWCROWD, 0
+	setvar VAR_ONRESUME_DRAWCROWD, 0
 # 19 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	goto GerbonBattleHall_CreateCrowdSprites
 	return
@@ -287,7 +287,7 @@ GerbonBattleHall_TournamentBattle::
 # 218 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	delay 60
 # 219 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setvar VAR_BATTLEHALL_DRAWCROWD, 1
+	setvar VAR_ONRESUME_DRAWCROWD, 1
 # 220 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	buffertrainername STR_VAR_1, VAR_GERBON_TOURNAMENT_OPPONENT
 # 221 "data/maps/GerbonTown_BattleHall/scripts.pory"

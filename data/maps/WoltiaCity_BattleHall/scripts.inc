@@ -28,13 +28,13 @@ WoltiaCity_BattleHall_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 
 WoltiaBattle_OnResume::
 # 16 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	compare VAR_BATTLEHALL_DRAWCROWD, 1
+	compare VAR_ONRESUME_DRAWCROWD, 1
 	goto_if_eq WoltiaBattle_OnResume_1
 	return
 
 WoltiaBattle_OnResume_1:
 # 18 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setvar VAR_BATTLEHALL_DRAWCROWD, 0
+	setvar VAR_ONRESUME_DRAWCROWD, 0
 # 19 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	goto WoltiaBattleHall_CreateCrowdSprites
 	return
@@ -149,7 +149,7 @@ WoltiaBattleHall_TournamentBattle::
 # 85 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	delay 60
 # 86 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setvar VAR_BATTLEHALL_DRAWCROWD, 1
+	setvar VAR_ONRESUME_DRAWCROWD, 1
 # 87 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	buffertrainername STR_VAR_1, VAR_WOLTIA_TOURNAMENT_OPPONENT
 # 88 "data/maps/WoltiaCity_BattleHall/scripts.pory"

@@ -13,9 +13,9 @@ mapscripts WoltiaCity_BattleHall_MapScripts {
 }
 
 script WoltiaBattle_OnResume {
-    if (var(VAR_BATTLEHALL_DRAWCROWD) == 1)
+    if (var(VAR_ONRESUME_DRAWCROWD) == 1)
     {   
-        setvar(VAR_BATTLEHALL_DRAWCROWD, 0)
+        setvar(VAR_ONRESUME_DRAWCROWD, 0)
         goto(WoltiaBattleHall_CreateCrowdSprites)
     }
 }
@@ -83,7 +83,7 @@ script WoltiaBattleHall_TournamentBattleTrigger {
 script WoltiaBattleHall_TournamentBattle {
     lock
     delay(60)
-    setvar(VAR_BATTLEHALL_DRAWCROWD, 1)
+    setvar(VAR_ONRESUME_DRAWCROWD, 1)
     buffertrainername(STR_VAR_1, VAR_WOLTIA_TOURNAMENT_OPPONENT)
     playse(SE_DING_DONG)
     setspeaker("Announcer")

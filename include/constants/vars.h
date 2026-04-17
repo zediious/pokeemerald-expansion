@@ -266,7 +266,7 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_BATTLEHALL_DRAWCROWD                         0x40F7 // Controls whether crowd will be drawn after a battle
+#define VAR_ONRESUME_DRAWCROWD                         0x40F7 // Controls whether crowds will be drawn on resume in maps that have crowds
 #define VAR_TOGGLERUN_SETTING                            0x40F8 // User setting for toggle run behavior
 #define VAR_BATTLESPEED_SETTING                          0x40F9 // Battle speed setting
 #define VAR_RESTARAUNT_STATE                             0x40FA // Current state of battle restaraunt

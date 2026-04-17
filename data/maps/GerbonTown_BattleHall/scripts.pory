@@ -13,9 +13,9 @@ mapscripts GerbonTown_BattleHall_MapScripts {
 }
 
 script GerbonBattle_OnResume {
-    if (var(VAR_BATTLEHALL_DRAWCROWD) == 1)
+    if (var(VAR_ONRESUME_DRAWCROWD) == 1)
     {   
-        setvar(VAR_BATTLEHALL_DRAWCROWD, 0)
+        setvar(VAR_ONRESUME_DRAWCROWD, 0)
         goto(GerbonBattleHall_CreateCrowdSprites)
     }
 }
@@ -216,7 +216,7 @@ script GerbonBattleHall_TournamentBattleTrigger {
 script GerbonBattleHall_TournamentBattle {
     lock
     delay(60)
-    setvar(VAR_BATTLEHALL_DRAWCROWD, 1)
+    setvar(VAR_ONRESUME_DRAWCROWD, 1)
     buffertrainername(STR_VAR_1, VAR_GERBON_TOURNAMENT_OPPONENT)
     msgbox("DING DING DING ...
     
