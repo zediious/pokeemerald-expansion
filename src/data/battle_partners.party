@@ -548,4 +548,36 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Quick Attack
 - Howl
 
+=== PARTNER_CALVIN_LIORDUNHECTIC ===
+Name: Calvin
+Class: Leader
+Pic: Expert M
+Gender: Male
+Music: Male
+Back Pic: Old Man
+AI: Smart Trainer / Force Setup First Turn
+
+Excadrill
+Level: 37
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bulldoze
+- Rock Slide
+- Slash
+- Stealth Rock
+
+Gastrodon
+Level: 37
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Water Pulse
+- Bulldoze
+- Muddy Water
+- Stealth Rock
+
+Mudsdale
+Level: 37
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- High Horsepower
+- Heavy Slam
+- Strength
+- Stealth Rock
 
