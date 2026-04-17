@@ -11497,7 +11497,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPawniardLevelUpLearnset,
         .teachableLearnset = sPawniardTeachableLearnset,
         .eggMoveLearnset = sPawniardEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 45, SPECIES_BISHARP}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_BISHARP}),
     },
 
     [SPECIES_BISHARP] =
