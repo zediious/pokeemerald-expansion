@@ -185,9 +185,10 @@ script LiordunTown_EventScript_HecticGruntJumpBattleAfter
     setspeaker("???")
     msgbox("Wah? You're here to help?
     
-            ...
-            
-            Ah, the one from the TV! The name is
+            ...")
+    waitmessage
+    setspeaker("Calvin")
+    msgbox("Ah, the one from the TV! The name is
             {COLOR RED}Calvin!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
             
             Help me out here would you? These rough
@@ -462,8 +463,8 @@ script LiordunTown_EventScript_CreateBattles
         createvobject(OBJ_EVENT_GFX_AQUA_MEMBER_M, 17, 37, 16, 3, direction=DIR_NORTH)
         createvobject(OBJ_EVENT_GFX_AQUA_MEMBER_F, 24, 40, 16, 3, direction=DIR_EAST)
         createvobject(OBJ_EVENT_GFX_SPECIES(PAWNIARD), 25, 41, 16, 3, direction=DIR_EAST)
-    createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 18, 39, 19, 3, direction=DIR_SOUTH)
-    createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 23, 43, 23, 3, direction=DIR_NORTH)
+        createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 18, 39, 19, 3, direction=DIR_SOUTH)
+        createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 23, 43, 23, 3, direction=DIR_NORTH)
     }
 }
 
