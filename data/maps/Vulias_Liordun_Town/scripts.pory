@@ -152,6 +152,7 @@ script LiordunTown_EventScript_PlayerStoppedByGrunts
     setflag(FLAG_LIORDUN_HECTIC_KOWTOWGRUNTMONS)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     // kowtow grunts jump in front and behind player
+    playse(SE_BIKE_HOP)
     applymovement(LIORDUN_HECTIC_JUMPGRUNT01, moves(jump_2_right, face_up))
     applymovement(LIORDUN_HECTIC_JUMPGRUNT02, moves(jump_2_left, face_down))
     waitmovement
