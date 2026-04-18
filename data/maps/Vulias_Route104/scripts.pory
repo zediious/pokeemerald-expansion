@@ -7,6 +7,10 @@ mapscripts Vulias_Route104_MapScripts {
 script Route104_MapScript_ResetLiordunCrowd
 {
     setvar(VAR_ONRESUME_DRAWCROWD, 0)
+    if (!flag(FLAG_IGRISDESERT_PASSED))
+    {
+        setflag(FLAG_IGRISDESERT_PASSED)
+    }
 }
 
 //// Route Trainers
