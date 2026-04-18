@@ -141,6 +141,12 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("{PLAY_BGM MUS_VS_ELITE_FOUR}Looks like we'll have to land for\nthis one. Go Gyrados!{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_ENEMY_MON_UNAFFECTED] = COMPOUND_STRING("Weren't expecting that, were you?{PAUSE_UNTIL_PRESS}"),
         },
+        //// KOWTOW BATTLES
+        // Kowtow Admin in Liordun Town
+        [TRAINER_GRUNT_MT_CHIMNEY_1] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("This cannot be! Rip them apart\nBisharp!{PAUSE_UNTIL_PRESS}"),
+        },
         //// PARTNERS - These are all the same currently
         /// Jordan
         // Sawgrass Forest
