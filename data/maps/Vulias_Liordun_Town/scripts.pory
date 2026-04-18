@@ -1,13 +1,12 @@
 mapscripts Vulias_Liordun_Town_MapScripts {
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
         VAR_TEMP_6, 0: LiordunTown_MapScript_OnWarpCrowd
-        VAR_ZED_STORY_TRACKER, 26: LiordunTown_MapScript_OnWarpEndKowtowRaid
+    ]
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ZED_STORY_TRACKER, 27: LiordunTown_EventScript_AfterKowtowDisappears
     ]
     MAP_SCRIPT_ON_RESUME: LiordunTown_MapScript_OnResume
 }
-
-// TODO: Create script to clean up the town later, ensure this is called in map scripts every time after
-// Ensure that this clears up the collision blockers over the vobjects
 
 script LiordunTown_MapScript_OnWarpCrowd
 {
@@ -19,15 +18,11 @@ script LiordunTown_MapScript_OnWarpCrowd
     }
 }
 
-// Accessed after warp following admin 2v2 battle with Calvin
-script LiordunTown_MapScript_OnWarpEndKowtowRaid
-{
-    goto(LiordunTown_EventScript_AfterKowtowDisappears)
-}
 
 // Handle re-drawing crowd when returning from bag menu, etc
 script LiordunTown_MapScript_OnResume
 {
+    call(LiordunTown_SetMapState)
     if (var(VAR_ONRESUME_DRAWCROWD) == 1)
     {   
         setvar(VAR_ONRESUME_DRAWCROWD, 0)
@@ -36,10 +31,22 @@ script LiordunTown_MapScript_OnResume
         call(LiordunTown_EventScript_CreateCrowd)
     }
     // Use hectic music during the raid if leaving and re-entering map before completing
-    if (var(VAR_ZED_STORY_TRACKER) >= 25) // TODO: && <= <var_value_after_everything_done>
+    if ((var(VAR_ZED_STORY_TRACKER) >= 25) && (var(VAR_ZED_STORY_TRACKER) < 28)) // TODO: && <= <var_value_after_everything_done>
     {
         playbgm(MUS_ENCOUNTER_AQUA, TRUE)
     }
+}
+
+// Set metatiles based on story state (this town changes a lot)
+script LiordunTown_SetMapState
+{
+    switch (var(VAR_ZED_STORY_TRACKER))
+    {
+        case (28):
+            setmetatile(44, 27, 0x031, 0)
+            setmetatile(44, 28, 0x039, 0)
+    }
+    special(DrawWholeMapView)
 }
 
 // Triggers for player first entry
@@ -92,6 +99,9 @@ script LiordunTown_EventScript_PlayerFirstEnterScene
     applymovement(LIORDUN_HECTIC_WARNER, moves(walk_fast_left * 10))
     waitmovement
     removeobject(LIORDUN_HECTIC_WARNER)
+    removeobject(LIORDUNHECTIC_JORDANLATE)
+    setflag(FLAG_LIORDUNHECTIC_JORDANLATE)
+    questupdated(0)
     release
     end
 }
@@ -203,12 +213,6 @@ script LiordunTown_EventScript_HecticGruntJumpBattleAfter
             grandpa! You'll regret this kid!")
     waitmovement
     waitmessage
-    setfollowernpc(
-        LIORDUN_HECTIC_CALVIN_BATTLE,
-        FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
-        LiordunTownHectit_EventScript_CalvinFollower,
-        PARTNER_CALVIN_LIORDUNHECTIC
-    )
     special(ChooseHalfPartyForBattle)
 	waitstate
     goto(LiordunTownHectic_RawScript_Start2v2)
@@ -280,6 +284,7 @@ script LiordunTown_Hectic_AdminAfterBattle
     setflag(FLAG_LIORDUNHECTIC_DRAWBATTLERS)
     setvar(VAR_ZED_STORY_TRACKER, 26)
     warp(MAP_VULIAS_LIORDUN_TOWN, 43, 16)
+    setvar(VAR_ZED_STORY_TRACKER, 27)
     waitstate
     end
 }
@@ -287,13 +292,100 @@ script LiordunTown_Hectic_AdminAfterBattle
 // Accessed via warp map script after the warp above completes
 script LiordunTown_EventScript_AfterKowtowDisappears
 {
+    setvar(VAR_ZED_STORY_TRACKER, 28)
+    call(LiordunTown_SetMapState)
+    fadedefaultbgm
     applymovement(LIORDUN_HECTIC_CALVIN_BATTLE, moves(face_up))
     setspeaker("Calvin")
-    msgbox("They're gone! A shame these fine
-            officers couldn't aprehend them...")
+    msgbox("They're gone! Looks like the officers
+            are chasing after them...I have my
+            doubts regarding their success.
+            
+            I cannot thank you enough...
+            {PLAYER}, was it? I can't say for sure
+            I would have made it through that by
+            myself.
+            
+            That...girl. The leader. There's an
+            element of truth to her words. Our
+            Battle Hall is ancient, and has stood
+            since time lost to history. There are a
+            good few folks in our own town, and
+            elsewhere, that lament me allowing
+            {COLOR RED}Sinvesta{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} to use it for their
+            tournaments.
+            
+            Bahh...they don't realize that without
+            the money, the Hall would have fallen
+            into disarray years ago! It doesn't feel
+            right, but what else can we do?
+
+            Wow! Look at me go! You're very kind for
+            indulging me a moment there. Thank you
+            for your assistance here.")
     waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_down))
+    applymovement(LIORDUN_HECTIC_CALVIN_BATTLE, moves(emote_exclamation_mark, face_down))
+    playse(SE_PIN)
+    addobject(LIORDUNHECTIC_JORDANLATE)
+    applymovement(LIORDUNHECTIC_JORDANLATE, moves(walk_fast_up * 7, face_right))
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    applymovement(LIORDUN_HECTIC_CALVIN_BATTLE, moves(face_left))
+    setspeaker("Jordan")
+    msgbox("{PLAYER}! I should have known you
+            would be helping here! Looks like
+            I'm a little late to the party...")
+    waitmessage
+    setspeaker("Calvin")
+    msgbox("Hoho, you didn't miss much don't worry!
+            You two must be friends?
+            
+            Well, I have to attend some business in
+            the Hall, I hope I'll see you again soon!")
+    waitmessage
+    applymovement(LIORDUN_HECTIC_CALVIN_BATTLE, moves(walk_right, walk_up * 4, walk_left * 2, walk_up * 2))
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    applymovement(LIORDUNHECTIC_JORDANLATE, moves(face_up))
+    waitmovement(LIORDUN_HECTIC_CALVIN_BATTLE)
+    removeobject(LIORDUN_HECTIC_CALVIN_BATTLE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    applymovement(LIORDUNHECTIC_JORDANLATE, moves(face_right))
+    waitmovement
+    setspeaker("Jordan")
+    msgbox("That's Calvin! Did you battle with him?
+            Awesome! Those Kowtow goons got what
+            was coming to them then!
+            
+            ...
+            
+            Really? People are saying that? I guess
+            I can see why some people don't like
+            the tournaments, but it's all just good
+            fun, right? Besides, doing all of...
+            this, to prove that point is just wrong!
+            
+            ...something to think about I guess.
+            
+            Anyways! It looks like they're going to
+            delay the tournament because of this,
+            so I say we go check out the {COLOR RED}Mine{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} back
+            on Route 104!
+            
+            They allow visitors to the safe areas, I
+            hear there are tons of cool things down
+            there, and Pokemon!
+            
+            I'll meet you there, definitely rest up
+            if you need too! See you soon!")
+    applymovement(LIORDUNHECTIC_JORDANLATE, moves(walk_down * 10))
+    delay(60)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(LIORDUNHECTIC_JORDANLATE)
+    removeobject(LIORDUNHECTIC_JORDANLATE)
+    questupdated(0)
     release
-    // more to come
 }
 
 //// Fluff NPCs during initial entry
@@ -315,37 +407,71 @@ script LiordunTown_EventScript_HecticGentleman
 
 // Brother calming little sister
 script LiordunTown_EventScript_HecticBrotherCalmingSister 
-{ // TODO: Make this not do anything after the kowtow leave liordun town
-    lock
-    setspeaker("Youngster")
-    msgbox("Don't worry! Just keep close to me and
-            it will be over soon!")
-    waitmessage
-    setspeaker("Little Girl")
-    msgbox("Wahhh! I'm scared! They hurt that Old
-            Man! They're gonna hurt us! Wahhh!")
-    waitmessage
-    setspeaker("Youngster")
-    msgbox("Not while you've got me! Don't worry!")
-    waitmessage
-    release
-    end
+{
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        lock
+        setspeaker("Youngster")
+        msgbox("Don't worry! Just keep close to me and
+                it will be over soon!")
+        waitmessage
+        setspeaker("Little Girl")
+        msgbox("Wahhh! I'm scared! They hurt that Old
+                Man! They're gonna hurt us! Wahhh!")
+        waitmessage
+        setspeaker("Youngster")
+        msgbox("Not while you've got me! Don't worry!")
+        waitmessage
+        release
+        end
+    }
+    elif ((var(VAR_ZED_STORY_TRACKER) >= 28) && (var(VAR_ZED_STORY_TRACKER) <= 30))
+    {
+        lock
+        setspeaker("Youngster")
+        msgbox("See! Everything's alright now!")
+        waitmessage
+        setspeaker("Little Girl")
+        msgbox("Sniff, thank you big brother!")
+        waitmessage
+        setspeaker(NULL)
+        msgbox("The sight touches your heart.")
+        waitmessage
+        release
+        end
+    }
 }
 
 // Old Woman helping injured Old Man
 script LiordunTown_EventScript_HecticOldCoupleHelping
-{ // TODO: Make this not do anything after the kowtow leave liordun town
-    lock
-    setspeaker("Old Woman")
-    msgbox("Stay down dear! That leg of yours needs
-            to be looked at, we have to wait for
-            this chaos to die down!")
-    waitmessage
-    setspeaker("Old Man")
-    msgbox("I'll be fine! Watch thi--ACK!!")
-    waitmessage
-    release
-    end
+{
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        lock
+        setspeaker("Old Woman")
+        msgbox("Stay down dear! That leg of yours needs
+                to be looked at, we have to wait for
+                this chaos to die down!")
+        waitmessage
+        setspeaker("Old Man")
+        msgbox("I'll be fine! Watch thi--ACK!!")
+        waitmessage
+        release
+        end
+    }
+    elif ((var(VAR_ZED_STORY_TRACKER) >= 28) && (var(VAR_ZED_STORY_TRACKER) <= 30))
+    {
+        lock
+        setspeaker("Old Woman")
+        msgbox("Now we need to wait for the Ambulance
+                dear, don't you dare try to get up yet!")
+        waitmessage
+        setspeaker("Old Man")
+        msgbox("No! That will cost so mu--ACK!!")
+        waitmessage
+        release
+        end
+    }
 }
 
 // Conflicted Hex Maniac
@@ -381,35 +507,90 @@ script LiordunTown_EventScript_HecticHidingEmployee
 // Father calming his two children
 script LiordunTown_EventScript_HecticFatherCalmingChildren
 {
-    lock
-    setspeaker("Man")
-    msgbox("Settle down you two! Let's let the
-            Police do their job!")
-    waitmessage
-    setspeaker("Little Girl")
-    msgbox("But what about the tournament!")
-    waitmessage
-    turnvobject(30, DIR_WEST)
-    setspeaker("Little Boy")
-    msgbox("I don't want to miss it!")
-    waitmessage
-    setspeaker("Man")
-    msgbox("We'll just have to wait and see!")
-    waitmessage
-    turnvobject(30, DIR_EAST)
-    release
-    end
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        lock
+        setspeaker("Man")
+        msgbox("Settle down you two! Let's let the
+                Police do their job!")
+        waitmessage
+        setspeaker("Little Girl")
+        msgbox("But what about the tournament!")
+        waitmessage
+        turnvobject(30, DIR_WEST)
+        setspeaker("Little Boy")
+        msgbox("I don't want to miss it!")
+        waitmessage
+        setspeaker("Man")
+        msgbox("We'll just have to wait and see!")
+        waitmessage
+        turnvobject(30, DIR_EAST)
+        release
+        end
+    }
+    elif ((var(VAR_ZED_STORY_TRACKER) >= 28) && (var(VAR_ZED_STORY_TRACKER) <= 30))
+    {
+        lock
+        setspeaker("Little Girl")
+        msgbox("So do we get to see the tournament!")
+        waitmessage
+        turnvobject(30, DIR_WEST)
+        setspeaker("Little Boy")
+        msgbox("Let's go daddy let's go!")
+        waitmessage
+        setspeaker("Man")
+        msgbox("Pipe it down! It may be delayed!")
+        waitmessage
+        setspeaker("Little Boy and Girl")
+        msgbox("Wahhh!")
+        turnvobject(30, DIR_EAST)
+        delay(10)
+        turnvobject(30, DIR_WEST)
+        delay(10)
+        turnvobject(30, DIR_EAST)
+        release
+        end
+    }
 }
 
 // Angry crowd does not respond
 script LiordunTown_EventScript_AngryCrowdInteract
 {
-    lock
-    msgbox("The crowd does not budge to your
-            pushing.")
-    waitmessage
-    release
-    end
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        lock
+        msgbox("The crowd does not budge to your
+                pushing.")
+        waitmessage
+        release
+        end
+    }
+    elif ((var(VAR_ZED_STORY_TRACKER) >= 28) && (var(VAR_ZED_STORY_TRACKER) <= 30))
+    {
+        call(LiordunTown_EventScript_CrowdRandomBark)
+    }
+}
+
+// Below two used for two crowd members who are moved out of the way to allow passage
+script LiordunTown_EventScript_AngryCrowdInteract_Special01
+{
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        lock
+        msgbox("The crowd does not budge to your
+                pushing.")
+        waitmessage
+        release
+        end
+    }
+}
+
+script LiordunTown_EventScript_AngryCrowdInteract_Special02
+{
+    if ((var(VAR_ZED_STORY_TRACKER) >= 28) && (var(VAR_ZED_STORY_TRACKER) <= 30))
+    {
+        call(LiordunTown_EventScript_CrowdRandomBark)
+    }
 }
 
 // Organizer trying to calm crowd
@@ -417,15 +598,52 @@ script LiordunTown_EventScript_OrganizerAttemptCalmCrowd
 {
     lock
     setspeaker("Organizer")
-    msgbox("Please everyone, stay calm while the
-            police sort this out!")
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        msgbox("Please everyone, stay calm while the
+                police sort this out!")
+    }
+    
+    elif ((var(VAR_ZED_STORY_TRACKER) >= 28) && (var(VAR_ZED_STORY_TRACKER) <= 30))
+    {
+        msgbox("I'm sorry everyone, but the tournament
+                will be delayed until tomorrow!")
+
+    }
     waitmessage
     setspeaker(NULL)
     msgbox("The crowd does not appear to be happy
             to hear this.")
-    waitmessage
     release
     end
+}
+
+// Randomized talking from crowd after Kowtow leaves
+script LiordunTown_EventScript_CrowdRandomBark
+{   
+    lock
+    setspeaker("Crowd")
+    random(6)
+    switch (var(VAR_RESULT)) {
+        case 0:
+            msgbox("So we have to wait until tomorrow?")
+        case 1:
+            msgbox("I paid good money to be here!")
+        case 2:
+            msgbox("Why can't we just go in! Those goons are
+                    gone now!")
+        case 3:
+            msgbox("Let me out of here! I'm getting
+                    squeezed!")
+        case 4:
+            msgbox("I want my money back now!")
+        case 5:
+            msgbox("We can wait one day people!")
+        case 6:
+            msgbox("I think I'll just go home...")
+    }
+    waitmessage
+    release
 }
 
 // Creates angry crowd
@@ -433,12 +651,10 @@ script LiordunTown_EventScript_CreateCrowd
 {
     // Sprites forming the initial blockade of player
     createvobject(OBJ_EVENT_GFX_OLD_MAN, 0, 40, 31, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_BEAUTY, 1, 40, 30, 3, direction=DIR_NORTH)
     createvobject(OBJ_EVENT_GFX_COOK, 2, 41, 29, 3, direction=DIR_NORTH)
     createvobject(OBJ_EVENT_GFX_RICH_BOY, 3, 42, 29, 3, direction=DIR_NORTH)
     createvobject(OBJ_EVENT_GFX_FAT_MAN, 4, 43, 29, 3, direction=DIR_NORTH)
-    createvobject(OBJ_EVENT_GFX_EXPERT_M, 5, 44, 28, 3, direction=DIR_WEST)
-    createvobject(OBJ_EVENT_GFX_PSYCHIC_M, 6, 44, 27, 3, direction=DIR_WEST)
+    createvobject(OBJ_EVENT_GFX_FAT_MAN, 4, 45, 31, 3, direction=DIR_NORTH)
 
     // Filler
     createvobject(OBJ_EVENT_GFX_POKEFAN_F, 7, 41, 30, 3, direction=DIR_NORTH)
@@ -448,6 +664,18 @@ script LiordunTown_EventScript_CreateCrowd
     createvobject(OBJ_EVENT_GFX_POKEFAN_M, 11, 44, 30, 3, direction=DIR_NORTH)
     createvobject(OBJ_EVENT_GFX_FISHERMAN, 12, 45, 29, 3, direction=DIR_WEST)
     createvobject(OBJ_EVENT_GFX_HEX_MANIAC, 13, 45, 30, 3, direction=DIR_WEST)
+
+    // Two sprites that move after kowtow leaves
+    if (!flag(FLAG_LIORDUNHECTIC_DRAWBATTLERS))
+    {
+        createvobject(OBJ_EVENT_GFX_EXPERT_M, 5, 44, 28, 3, direction=DIR_WEST)
+        createvobject(OBJ_EVENT_GFX_PSYCHIC_M, 6, 44, 27, 3, direction=DIR_WEST)
+    }
+    else
+    {
+        createvobject(OBJ_EVENT_GFX_EXPERT_M, 5, 46, 29, 3, direction=DIR_WEST)
+        createvobject(OBJ_EVENT_GFX_PSYCHIC_M, 6, 47, 29, 3, direction=DIR_WEST)
+    }
 
     setvar(VAR_ONRESUME_DRAWCROWD, 1)
 }

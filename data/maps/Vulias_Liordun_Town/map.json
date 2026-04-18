@@ -80,7 +80,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_LIORDUNHECTIC_CALVIN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
@@ -232,6 +232,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_LIORDUN_HECTIC_KOWTOWGRUNTMONS"
+    },
+    {
+      "local_id": "LIORDUNHECTIC_JORDANLATE",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "x": 42,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_LIORDUNHECTIC_JORDANLATE"
     }
   ],
   "warp_events": [
@@ -415,7 +429,7 @@
     },
     {
       "type": "sign",
-      "x": 40,
+      "x": 41,
       "y": 30,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -435,12 +449,60 @@
       "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LiordunTown_EventScript_AngryCrowdInteract"
+      "script": "LiordunTown_EventScript_AngryCrowdInteract_Special01"
     },
     {
       "type": "sign",
       "x": 44,
       "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LiordunTown_EventScript_AngryCrowdInteract_Special01"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LiordunTown_EventScript_AngryCrowdInteract_Special02"
+    },
+    {
+      "type": "sign",
+      "x": 47,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LiordunTown_EventScript_AngryCrowdInteract_Special02"
+    },
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LiordunTown_EventScript_AngryCrowdInteract"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LiordunTown_EventScript_AngryCrowdInteract"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 30,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LiordunTown_EventScript_AngryCrowdInteract"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LiordunTown_EventScript_AngryCrowdInteract"

@@ -2,6 +2,7 @@ mapscripts Vulias_Route104_MapScripts {
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
         VAR_TEMP_5, 0: Route104_MapScript_ResetLiordunCrowd
     ]
+    MAP_SCRIPT_ON_TRANSITION: Route104_MapScript_SetState
 }
 
 script Route104_MapScript_ResetLiordunCrowd
@@ -11,6 +12,21 @@ script Route104_MapScript_ResetLiordunCrowd
     {
         setflag(FLAG_IGRISDESERT_PASSED)
     }
+}
+
+script Route104_MapScript_SetState
+{
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        setflag(FLAG_ROUTE104_WORKER)
+        clearflag(FLAG_ROUTE104_WORKERBLOCKER)
+    }
+    else
+    {
+        setflag(FLAG_ROUTE104_WORKERBLOCKER)
+        clearflag(FLAG_ROUTE104_WORKER)
+    }
+    
 }
 
 //// Route Trainers
@@ -115,6 +131,21 @@ script Route104_EventScript_HikerTired {
     end
 }
 
+script Route104_EventScript_MinerTrigger
+{
+    lock
+    if (var(VAR_ZED_STORY_TRACKER) < 28)
+    {
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+        goto(Route104_EventScript_BlockingMiner)
+    }
+    else
+    {
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+        goto(Route104_EventScript_WelcomingMiner)
+    }  
+}
+
 // Construction Worker blocking entrance to Mine
 script Route104_EventScript_BlockingMiner {
     lock
@@ -124,6 +155,21 @@ script Route104_EventScript_BlockingMiner {
             mines, visitors are not allowed in
             for now. Apologies! Come back another
             time!")
+    waitmessage
+    release
+    end
+}
+
+// Construction Worker welcoming to the mine
+script Route104_EventScript_WelcomingMiner {
+    lock
+    faceplayer
+    setspeaker("Miner")
+    msgbox("Welcome! I hope you enjoy the Mines!
+            Be sure to stay out of the blocked-off
+            areas, there are some very dangerous
+            parts of the mines you must stay away
+            from!")
     waitmessage
     release
     end

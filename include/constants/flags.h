@@ -694,10 +694,10 @@
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
+#define FLAG_ROUTE104_WORKER                    0x282 // Worker no longer blocking way into Route 104 Mine
+#define FLAG_ROUTE104_WORKERBLOCKER             0x283 // Worker blocking way into Route 104 Mine
+#define FLAG_LIORDUNHECTIC_CALVIN               0x284 // Calvin during Liordun raid
+#define FLAG_LIORDUNHECTIC_JORDANLATE           0x285 // Jordan who arrives late to Liordun
 #define FLAG_WOLTIA_SINVESTAEMP_OUTSIDE         0x286 // Sinvesta Employee who talks to player after winning Wolita tourney
 #define FLAG_LIORDUNHECTIC_DRAWBATTLERS         0x287 // Allow drawing battler vobjects during Liordun raid
 #define FLAG_LIORDUNHECTIC_KOWTOW               0x288 // Kowtow member event objects in liordun raid

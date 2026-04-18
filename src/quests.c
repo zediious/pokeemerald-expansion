@@ -377,7 +377,9 @@ static const struct QuestStoryDescRange sMainQuestDescRanges[] =
 	{12, 14,  gText_MainQuestDesc_07},
 	{15, 15,  gText_MainQuestDesc_08},
 	{16, 18,  gText_MainQuestDesc_09},
-	{19, 99,  gText_MainQuestDesc_10},
+	{19, 24,  gText_MainQuestDesc_10},
+	{25, 27,  COMPOUND_STRING("Something is wrong in Liordun Town!")},
+	{28, 99,  COMPOUND_STRING("The Kowtow raid is over!\nJordan and I are going to\nexplore a Mine on Route 104!")},
 };
 
 // Define dynamic locations
@@ -391,7 +393,8 @@ static const struct QuestStoryMapRange sMainQuestMapRanges[] =
 	{10, 11,  gText_MainQuestMap_05},
 	{12, 16,  gText_MainQuestMap_06},
 	{16, 17,  gText_MainQuestMap_07},
-	{19, 99,  gText_MainQuestMap_08},
+	{19, 27,  gText_MainQuestMap_08},
+	{28, 99,  COMPOUND_STRING("Route 104 Mine")},
 };
 
 // Define dynamic sprites
@@ -403,7 +406,9 @@ static const struct QuestStorySpriteRange sMainQuestSpriteRanges[] =
 	{10, 11,  OBJ_EVENT_GFX_POKE_BALL},
 	{12, 16,  OBJ_EVENT_GFX_STEVEN},
 	{16, 17,  OBJ_EVENT_GFX_WINONA},
-	{19, 99,  OBJ_EVENT_GFX_SPECIES(KROKOROK)},
+	{19, 24,  OBJ_EVENT_GFX_SPECIES(KROKOROK)},
+	{25, 27,  OBJ_EVENT_GFX_MAGMA_MEMBER_F},
+	{28, 99,  OBJ_EVENT_GFX_CONSTWORKER},
 };
 
 ////////////////////////END DYNAMIC DESCRIPTION, MAP///////////////////////////
