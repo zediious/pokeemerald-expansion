@@ -82,8 +82,8 @@ struct TrainerMon *ScaleTrainerMons(u32 partySize, struct TrainerMon *scaledPart
     // Get player's highest level mon
     u8 levelCeil = GetPlayerLevelCeiling();
 
-    // Don't scale if no player mon is at least level 10
-    if (levelCeil >= 10)
+    // Don't scale if no player mon is at least level 10 or option is disabled
+    if ((levelCeil >= 10) && (gSaveBlock2Ptr->optionsScaleTrainers == 1))
     {
         for (u32 e = 0; e < partySize; e++) 
         {   
