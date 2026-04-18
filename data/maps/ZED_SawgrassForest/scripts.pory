@@ -366,6 +366,8 @@ script SawgrassForest_KowtowEncounter {
         "Who are you calling trash!"
     )
     waitmessage
+    special(ChooseHalfPartyForBattle)
+	waitstate
 
     // Based on starter, begin 2v2 battle with proper partner team
     if (var(VAR_STARTER_MON) == 0) { // Starter is Pansear
