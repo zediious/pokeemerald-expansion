@@ -399,6 +399,16 @@ script LiordunTown_EventScript_HecticFatherCalmingChildren
     end
 }
 
+// Angry crowd does not respond
+script LiordunTown_EventScript_AngryCrowdInteract
+{
+    lock
+    msgbox("The crowd does not budge to your
+            pushing.")
+    waitmessage
+    release
+    end
+}
 
 // Creates angry crowd
 script LiordunTown_EventScript_CreateCrowd
