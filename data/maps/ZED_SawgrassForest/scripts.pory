@@ -296,6 +296,7 @@ script SawgrassForest_KowtowEncounter {
     playse(SE_PIN)
     waitmovement
     waitse
+    playbgm(MUS_ENCOUNTER_AQUA, FALSE)
     delay(60)
     applymovement(SAWGRASS_KOWTOW_01, moves(
         walk_down, walk_right, walk_down, walk_right * 2
@@ -308,7 +309,7 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmovement
 
-    setspeaker("Kowtow Grnt 1")
+    setspeaker("Kowtow Grunt 1")
     msgbox(
         "What are you doing here! I guess that
         guy we paid to block the entrance
@@ -319,7 +320,7 @@ script SawgrassForest_KowtowEncounter {
     applymovement(SAWGRASS_KOWTOW_01, moves(face_down))
     applymovement(SAWGRASS_KOWTOW_02, moves(face_up))
 
-    setspeaker("Kowtow Grnt 1")
+    setspeaker("Kowtow Grunt 1")
     msgbox(
         "I guess we'll just have to take them
         down ourselves, the boss don't got to
@@ -327,9 +328,9 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmessage
 
-    setspeaker("Kowtow Grnt 2")
+    setspeaker("Kowtow Grunt 2")
     msgbox(
-        "Sure, sure, until his {COLOR RED}Kingambit{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares
+        "Sure, sure, until his {COLOR RED}Bisharp{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} stares
         us down for so long that we break into
         a sweat!"
     )
@@ -349,7 +350,7 @@ script SawgrassForest_KowtowEncounter {
     )
     waitmessage
 
-    setspeaker("Kowtow Grnt 1")
+    setspeaker("Kowtow Grunt 1")
     msgbox(
         "Quit being a..."
     )
@@ -361,7 +362,7 @@ script SawgrassForest_KowtowEncounter {
     waitmovement
     waitse
 
-    setspeaker("Kowtow Grnt 1")
+    setspeaker("Kowtow Grunt 1")
     msgbox(
         "Who are you calling trash!"
     )
@@ -422,8 +423,9 @@ script Sawgrass_Kowtow_Whiteout {
 }
 
 script Sawgrass_Kowtow_AfterBattle {
+    playbgm(MUS_ENCOUNTER_AQUA, FALSE)
     lock
-    setspeaker("Kowtow Grnt 1")
+    setspeaker("Kowtow Grunt 1")
     msgbox("No good, use the smokescreen!")
     waitmessage
 
@@ -438,6 +440,7 @@ script Sawgrass_Kowtow_AfterBattle {
     fadescreenswapbuffers(FADE_FROM_BLACK)
 
     call(SawgrassForest_KowtowScene_FollowPlayerFace)
+    fadedefaultbgm
 
     setspeaker("Jordan")
     msgbox(

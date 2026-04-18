@@ -145,9 +145,12 @@ script IgrisDesert_EventScript_KowtowAdmin {
     setspeaker("Kowtow Admin")
     msgbox("You're not my team! Did those worms
             succumb to you?
+
+            ...
             
-            What, here to serve some 'Justice'?
-            That won't be served so easily!")
+            This little egg? What, here to serve
+            some 'Justice'? that won't be served so
+            easily!")
     waitmessage
     setspeaker("Distant Voice")
     msgbox("{PLAYER}...wait!")
@@ -198,8 +201,7 @@ script IgrisDesert_EventScript_KowtowAdmin {
 script IgrisDesert_KowtowAdmin_AfterBattle {
     lock
     setspeaker("Kowtow Admin")
-    msgbox("Huh, not bad for a group of
-            'do-gooders'. You caught me on a
+    msgbox("Huh, not bad...You caught me on a
             bad day though, don't make anything
             of it!
     
@@ -234,12 +236,12 @@ script IgrisDesert_KowtowAdmin_AfterBattle {
         smoke bomb, pack some goggles along
         with us, or something.
         
-        We're sure to come across them again
-        with the fact that we've seen them
-        twice on our trip so far.
+        We're sure to come across them again,
+        they seem to be getting more brazen
+        lately...
         
-        This Togepi! It must be the one that
-        lady was in shambles over! "
+        That Togepi! It must be the one that
+        lady was in shambles over!"
     )
     waitmessage
     playse(SE_PIN)

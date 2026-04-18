@@ -337,7 +337,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PSYCHIC] = { _("Psychic"), 6 },
     [TRAINER_CLASS_GENTLEMAN] = { _("Gentleman"), 20, BALL_LUXURY },
     [TRAINER_CLASS_ELITE_FOUR] = { _("Elite Four"), 25, BALL_ULTRA },
-    [TRAINER_CLASS_LEADER] = { _("Rep Trainer"), 25, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_ULTRA : BALL_POKE },
+    [TRAINER_CLASS_LEADER] = { _("Battle Ace"), 25, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_ULTRA : BALL_POKE },
     [TRAINER_CLASS_SCHOOL_KID] = { _("School Kid") },
     [TRAINER_CLASS_SR_AND_JR] = { _("Sr. and Jr."), 4 },
     [TRAINER_CLASS_WINSTRATE] = { _("Winstrate"), 10 },

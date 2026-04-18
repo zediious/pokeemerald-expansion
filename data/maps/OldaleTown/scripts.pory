@@ -362,25 +362,26 @@ script GerbonTown_OutdoorBattleEnd {
         waitmessage 
     }
     msgbox("I've been thinking, maybe we should try
-            to challenge the {COLOR RED}Representative
-            Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon Town. That's Julia,
-            one of the trainers we just watched!
-            Most people call them 'Rep Trainers'.
+            to challenge the {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon
+            Town. That's Julia, one of the trainers
+            we just watched!
 
-            Every three years, there is a
-            tournment in each of the stadiums.
-            Whoever wins gets to face the current
-            {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. If they win, they get to
-            become the new {COLOR RED}Rep Trainer!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+            Every two years, there is a
+            tournament in each of the stadiums.
+            Sinvesta calls it a {COLOR RED}Showcase
+            Tournament{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. Whoever wins gets to face
+            the current {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}. It's a great way
+            to test your skill!
             
-            We've got to get stronger first though,
-            I don't think either of us stand a
-            chance right now.
+            I think we need to train our Pokemon
+            though. I don't think either of us would
+            even be able to make it to the end of
+            tournament!
             
             Meet me at the entrance to {COLOR RED}
-            Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, south of
-            Sawgrass Village. I know a good place
-            to train Pokemon there!
+            Sawgrass Forest{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, just south of my
+            house! We'll be able to train our
+            Pokemon there!
 
             See you soon!")
     waitmessage
@@ -421,8 +422,8 @@ script GerbonTownTourney_JordanStartOutside {
             
             16 trainers are entering, and you will
             battle a total of four trainers.
-            Then, you'll be facing the current
-            {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Julia!
+            Then, you'll be facing the {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY},
+            Julia!
 
             When the tournament starts, you'll be in
             the prep room, where you'll be able to
@@ -457,11 +458,16 @@ script GerbonTownTourney_JordanAfter {
             that I didn't win, but I can't deny what
             I bore witness to! I said it before, but
             you must have really been practicing!
+
+            Honestly, it's pretty rare for someone
+            to beat a Battle Ace, they're supposed
+            to be the best of the best! I think you
+            surpised a lot of people just now!
             
-            Don't worry though, because I'm going
-            to get you next time! That's right!
-            We're going to battle in the next
-            tournament in {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+            I can't let you get away with that by
+            yourself, I'm going to get you next
+            time! That's right, we're going to battle
+            in the next tournament in {COLOR RED}Woltia City{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
             
             ...
             

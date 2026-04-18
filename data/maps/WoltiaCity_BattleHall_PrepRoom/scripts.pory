@@ -69,8 +69,7 @@ script WoltiaBattleHall_PrepRoom_MatchStarterWoman {
 
     elif (var(VAR_WOLTIA_TOURNAMENT_STATE) == 5) {
         msgbox("Are you ready to start your final
-                match against the current
-                {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Candace?", MSGBOX_YESNO)
+                match against the {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}?", MSGBOX_YESNO)
     }
 
     if (var(VAR_RESULT) == YES) {

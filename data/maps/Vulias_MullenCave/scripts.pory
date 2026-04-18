@@ -37,8 +37,8 @@ script VuliasMullenCave_EventScript_Trainer01{
 script VuliasMullenCave_EventScript_Trainer02{
     trainerbattle_single(
         TRAINER_HUEY,
-        "I was looking for the Woltia City Docks,
-        but I think I lost my way!",
+        "I was looking for the Gerbon Town
+        Docks, but I think I lost my way!",
         "Ah, then I definitely lost my way."
     )
     msgbox("Don't be like me, read signs!", MSGBOX_AUTOCLOSE)

@@ -316,144 +316,152 @@ WoltiaBattleHall_TournamentBattleAfter_2:
 
 WoltiaBattleHall_TournamentPlayerWon::
 # 339 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playse SE_DING_DONG
+	playbgm MUS_CONTEST_WINNER, FALSE
 # 340 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitse
-# 341 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	playse SE_DING_DONG
+# 341 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitse
 # 342 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setspeaker WoltiaBattleHall_TournamentBattle_Text_0
+	playse SE_DING_DONG
 # 343 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitse
+# 344 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playse SE_DING_DONG
+# 345 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitse
+# 346 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setspeaker WoltiaBattleHall_TournamentBattle_Text_0
+# 347 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_0
-# 349 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 350 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playfanfare SE_APPLAUSE
-# 351 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setvar VAR_WOLTIA_TOURNAMENT_STATE, 7
-# 352 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitfanfare
-# 353 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	applymovement WOLTIATOURNEY_TRAINER05, WoltiaBattleHall_TournamentPlayerWon_Movement_0
-# 354 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setspeaker WoltiaBattleHall_TournamentPlayerWon_Text_1
 # 355 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_2
-# 358 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
+# 356 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playfanfare SE_APPLAUSE
+# 357 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setvar VAR_WOLTIA_TOURNAMENT_STATE, 7
+# 358 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitfanfare
+# 359 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	applymovement WOLTIATOURNEY_TRAINER05, WoltiaBattleHall_TournamentPlayerWon_Movement_0
 # 360 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setspeaker WoltiaBattleHall_TournamentPlayerWon_Text_1
 # 361 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_3
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_2
+# 364 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
 # 365 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 367 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_BADGE02_GET
-# 368 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playfanfare MUS_OBTAIN_BADGE
-# 369 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_4, MSGBOX_SIGN
-# 370 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitfanfare
-# 371 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 374 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	playfanfare MUS_LEVEL_UP
-# 375 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_5, MSGBOX_SIGN
-# 378 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitfanfare
-# 379 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
-# 381 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	delay 30
-# 382 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setspeaker WoltiaBattleHall_TournamentPlayerWon_Text_1
+# 366 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_3
+# 374 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
+# 376 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_BADGE02_GET
+# 377 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	playfanfare MUS_OBTAIN_BADGE
+# 378 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_4, MSGBOX_SIGN
+# 379 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitfanfare
+# 380 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
 # 383 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_6
-# 386 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	waitmessage
+	playfanfare MUS_LEVEL_UP
+# 384 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_5, MSGBOX_SIGN
+# 387 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitfanfare
 # 388 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	giveitem ITEM_TM_AERIAL_ACE, 1
-# 389 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
+# 390 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	delay 30
 # 391 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setspeaker WoltiaBattleHall_TournamentPlayerWon_Text_1
 # 392 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_7
-# 397 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_6
+# 395 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitmessage
+# 397 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	giveitem ITEM_TM_AERIAL_ACE, 1
 # 398 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 18
-# 399 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	addobject WOLTIA_AERODROME_BLOCKER
+	waitmessage
 # 400 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	setflag FLAG_GERBON_RUVELMOMKID
+	setspeaker WoltiaBattleHall_TournamentPlayerWon_Text_1
 # 401 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	msgbox WoltiaBattleHall_TournamentPlayerWon_Text_7
+# 409 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	waitmessage
+# 410 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 18
+# 411 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	addobject WOLTIA_AERODROME_BLOCKER
+# 412 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	setflag FLAG_GERBON_RUVELMOMKID
+# 413 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setflag FLAG_WOLTIATOURNEY_DISABLED
-# 402 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 414 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	clearflag FLAG_WOLTIATOURNEY_ENABLED
-# 403 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 415 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	delay 30
-# 404 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 416 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	setflag FLAG_ANGRY_KROKOROK_01
-# 405 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 417 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	warp MAP_VULIAS_WOLTIA_CITY, 11, 15
-# 406 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 418 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	waitstate
-# 407 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 419 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	release
 	end
 
 
 WoltiaBattleHall_CreateCrowdSprites::
-# 413 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_OLD_MAN, 0, 1, 17, 3, direction = DIR_NORTH
-# 414 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_OLD_WOMAN, 1, 2, 17, 3, direction = DIR_NORTH
-# 415 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_COOK, 2, 3, 17, 3, direction = DIR_NORTH
-# 416 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_RICH_BOY, 3, 1, 15, 3, direction = DIR_NORTH
-# 417 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_TWIN, 4, 3, 15, 3, direction = DIR_NORTH
-# 418 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_EXPERT_M, 5, 1, 13, 3, direction = DIR_NORTH
-# 419 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_PSYCHIC_M, 6, 3, 11, 3, direction = DIR_NORTH
-# 420 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_BUG_CATCHER, 7, 1, 9, 3, direction = DIR_NORTH
-# 421 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_WOMAN_4, 8, 2, 9, 3, direction = DIR_NORTH
-# 422 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_SAILOR, 9, 5, 17, 3, direction = DIR_NORTH
-# 423 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_SAILOR, 10, 6, 17, 3, direction = DIR_NORTH
-# 424 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_SAILOR, 11, 7, 17, 3, direction = DIR_NORTH
 # 425 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_NEWPOLICEMAN, 12, 6, 15, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_OLD_MAN, 0, 1, 17, 3, direction = DIR_NORTH
 # 426 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_YOUNGSTER, 13, 5, 13, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_OLD_WOMAN, 1, 2, 17, 3, direction = DIR_NORTH
 # 427 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_HIKER, 14, 7, 13, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_COOK, 2, 3, 17, 3, direction = DIR_NORTH
 # 428 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_NURSE, 15, 5, 11, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_RICH_BOY, 3, 1, 15, 3, direction = DIR_NORTH
 # 429 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 16, 6, 9, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_TWIN, 4, 3, 15, 3, direction = DIR_NORTH
+# 430 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_EXPERT_M, 5, 1, 13, 3, direction = DIR_NORTH
+# 431 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_PSYCHIC_M, 6, 3, 11, 3, direction = DIR_NORTH
 # 432 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_FISHERMAN, 17, 12, 9, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_BUG_CATCHER, 7, 1, 9, 3, direction = DIR_NORTH
 # 433 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 18, 14, 9, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_WOMAN_4, 8, 2, 9, 3, direction = DIR_NORTH
 # 434 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_YOUNGSTER, 19, 16, 9, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_SAILOR, 9, 5, 17, 3, direction = DIR_NORTH
 # 435 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_GENTLEMAN, 20, 17, 9, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_SAILOR, 10, 6, 17, 3, direction = DIR_NORTH
 # 436 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_BEAUTY, 21, 12, 11, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_SAILOR, 11, 7, 17, 3, direction = DIR_NORTH
 # 437 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_FAT_MAN, 22, 12, 13, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_NEWPOLICEMAN, 12, 6, 15, 3, direction = DIR_NORTH
 # 438 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_YOUNGSTER, 13, 5, 13, 3, direction = DIR_NORTH
+# 439 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_HIKER, 14, 7, 13, 3, direction = DIR_NORTH
+# 440 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_NURSE, 15, 5, 11, 3, direction = DIR_NORTH
+# 441 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 16, 6, 9, 3, direction = DIR_NORTH
+# 444 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_FISHERMAN, 17, 12, 9, 3, direction = DIR_NORTH
+# 445 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 18, 14, 9, 3, direction = DIR_NORTH
+# 446 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_YOUNGSTER, 19, 16, 9, 3, direction = DIR_NORTH
+# 447 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_GENTLEMAN, 20, 17, 9, 3, direction = DIR_NORTH
+# 448 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_BEAUTY, 21, 12, 11, 3, direction = DIR_NORTH
+# 449 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_FAT_MAN, 22, 12, 13, 3, direction = DIR_NORTH
+# 450 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	createvobject OBJ_EVENT_GFX_WOMAN_2, 23, 17, 13, 3, direction = DIR_NORTH
 	return
 
@@ -492,11 +500,11 @@ WoltiaBattleHall_TournamentBattle_Movement_2:
 	walk_left
 	step_end
 
-# 353 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 359 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 WoltiaBattleHall_TournamentPlayerWon_Movement_0:
-# 353 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 359 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	walk_left
-# 353 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 359 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	walk_left
 	step_end
 
@@ -562,7 +570,7 @@ WoltiaBattleHall_TournamentBattle_Text_12:
 
 WoltiaBattleHall_TournamentBattle_Text_13:
 # 290 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	.string "Very salty!$"
+	.string "You're no joke!$"
 
 WoltiaBattleHall_TournamentBattleAfter_Text_0:
 # 318 "data/maps/WoltiaCity_BattleHall/scripts.pory"
@@ -572,47 +580,55 @@ WoltiaBattleHall_TournamentBattleAfter_Text_0:
 	.string "The next match will begin soon!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_0:
-# 343 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 347 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "DING DING DING DING DING DING\p"
 	.string "{PLAYER} has defeated the standing\n"
-	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Candace!\p"
-	.string "They now take the crown! What an upset!$"
+	.string "{COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Candace!\p"
+	.string "This new challenger has now won their\n"
+	.string "second {COLOR RED}Showcase Tournament!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!\l"
+	.string "A rising star is in the works!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_1:
-# 354 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 360 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "Candace$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_2:
-# 355 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 361 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "That was a great battle! I think\n"
 	.string "Kilowattrel wants to have another go at\l"
-	.string "you!$"
+	.string "you, they're shaking in their Poke Ball!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_3:
-# 361 "data/maps/WoltiaCity_BattleHall/scripts.pory"
-	.string "You're the new Rep Trainer for Woltia\n"
-	.string "City! Congratulations! Here is the \l"
-	.string "Aerodrome Ribbon, the mark of your\l"
-	.string "status.$"
+# 366 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+	.string "I'll be honest, it doesn't feel good to\n"
+	.string "lose during a Showcase Tournament like\l"
+	.string "this...I hope my fans don't think less of\l"
+	.string "me!\p"
+	.string "But that's a me problem, not you!\n"
+	.string "Congratulations! Here is the Aerodrome\l"
+	.string "Ribbon, the mark of your achievement.$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_4:
-# 369 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 378 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "You got the Aerodrome Ribbon!$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_5:
-# 375 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 384 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "The level cap has been raised to 34\p"
 	.string "You can now use {COLOR RED}Rock Smash!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_6:
-# 383 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 392 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "Also, here's a little something extra\n"
 	.string "from me, I think you'll find some good\l"
 	.string "use for it.$"
 
 WoltiaBattleHall_TournamentPlayerWon_Text_7:
-# 392 "data/maps/WoltiaCity_BattleHall/scripts.pory"
+# 401 "data/maps/WoltiaCity_BattleHall/scripts.pory"
 	.string "That move can't miss! It helps you get\n"
 	.string "out of some sticky situations! It\l"
 	.string "didn't help me enough against you!\p"
-	.string "Thank you for the wonderful battle!$"
+	.string "I know I'm a bit sour about this, but\n"
+	.string "really, thank you for the wonderful\l"
+	.string "battle! It's been a long time since\l"
+	.string "I felt something like that.$"

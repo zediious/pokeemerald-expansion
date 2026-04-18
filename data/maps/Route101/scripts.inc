@@ -639,8 +639,8 @@ Route101_EventScript_Trainer02_Text_1:
 
 Route101_EventScript_Trainer02_Text_2:
 # 240 "data/maps/Route101/scripts.pory"
-	.string "I wonder what I'll find under all of\n"
-	.string "these ashes.$"
+	.string "I want to make sure I'm strong enough\n"
+	.string "for the {COLOR RED}Showcase Tournament!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Route101_EventScript_Trainer03_Text_0:
 # 249 "data/maps/Route101/scripts.pory"
@@ -696,7 +696,7 @@ Route101_EventScript_HouseKid_Text_0:
 Route101_EventScript_HouseKid_Text_1:
 # 306 "data/maps/Route101/scripts.pory"
 	.string "I love to watch Pokemon Battles on TV!\n"
-	.string "The {COLOR RED}Rep Trainers{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to\l"
+	.string "The {COLOR RED}Battle Aces{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to\l"
 	.string "be like them someday!$"
 
 Route101_EventScript_HouseMunchlax_Text_0:

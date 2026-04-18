@@ -26,10 +26,12 @@ script GerbonTownBattleHall_EventScript_FirstEnterWatchLeft {
     setvar(VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER, 1)
 
     setspeaker("Announcer")
+    playse(SE_DING_DONG)
     msgbox("DING DING DING ...
     
             The match is about to begin!")
 
+    waitse
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(
             walk_up * 6
@@ -45,10 +47,12 @@ script GerbonTownBattleHall_EventScript_FirstEnterWatchRight {
     setvar(VAR_GERBON_BATTLEHALL_CANDACEJULIA01_TRIGGER, 1)
 
     setspeaker("Announcer")
+    playse(SE_DING_DONG)
     msgbox("DING DING DING ...
     
             The match is about to begin!")
 
+    waitse
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(
             walk_up * 5,
@@ -107,13 +111,13 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     waitmessage
     playmoncry(SPECIES_KILOWATTREL, CRY_MODE_NORMAL)
     applymovement(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL,
-        moves(walk_fast_left * 2, walk_in_place_fast_left, walk_faster_right * 3)
+        moves(walk_fast_left * 2, walk_in_place_fast_left, walk_faster_right * 3, enter_pokeball)
     )
     waitmovement
-    waitmoncry
-    // Candace switches out Kilowattrel for Mantine
     setflag(FLAG_CANDACE01_MON)
     removeobject(GERBONBATTLEHALL_CANDACE_01_KILOWATTREL)
+    waitmoncry
+    // Candace switches out Kilowattrel for Mantine
     delay(60)
 
     setspeaker("Candace")
@@ -122,7 +126,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
     // Mantine appears, and gets into place
     clearflag(GERBONBATTLEHALL_CANDACE_01_MANTINE)
     addobject(GERBONBATTLEHALL_CANDACE_01_MANTINE)
-    applymovement(GERBONBATTLEHALL_CANDACE_01_MANTINE, moves(walk_left))
+    applymovement(GERBONBATTLEHALL_CANDACE_01_MANTINE, moves(exit_pokeball, walk_left))
     delay(20)
     playmoncry(SPECIES_MANTINE, CRY_MODE_NORMAL)
     waitmoncry
@@ -152,7 +156,7 @@ script GerbonTownBattleHall_CandaceAndJulia01 {
             Well, I did, but not in a bad way! I'm glad
             I got to you before the show ended! I
             decided I couldn't let you see your
-            first {COLOR RED}Exhibition Match!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} alone! Are you
+            first {COLOR RED}Feature Match!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} alone! Are you
             enjoying it so far?
             
             Let's keep watching!")
@@ -218,11 +222,13 @@ script GerbonBattleHall_TournamentBattle {
     delay(60)
     setvar(VAR_ONRESUME_DRAWCROWD, 1)
     buffertrainername(STR_VAR_1, VAR_GERBON_TOURNAMENT_OPPONENT)
+    playse(SE_DING_DONG)
     msgbox("DING DING DING ...
     
             Avid battlers, step up!
             
             {PLAYER} VS {STR_VAR_1}!" )
+    waitse
     waitmessage
 
     // Move camera to "center" stage
@@ -457,12 +463,14 @@ script GerbonBattleHall_TournamentBattleAfter {
         goto(GerbonBattleHall_TournamentPlayerWon)
     }
 
+    playse(SE_DING_DONG)
     msgbox("DING DING DING ...
     
             Congratulations {PLAYER}! What a
             battle that was!
             
             The next match will begin soon!" )
+    waitse
     waitmessage
     playfanfare(SE_APPLAUSE)
     waitse
@@ -477,13 +485,21 @@ script GerbonBattleHall_TournamentBattleAfter {
 }
 
 script GerbonBattleHall_TournamentPlayerWon {
+        playbgm(MUS_CONTEST_WINNER, FALSE)
         setspeaker("Announcer")
+        playse(SE_DING_DONG)
+        waitse
+        playse(SE_DING_DONG)
+        waitse
+        playse(SE_DING_DONG)
+        waitse
         msgbox("DING DING DING DING DING DING
     
             {PLAYER} has defeated the standing
-            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Julia!
+            {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Julia!
 
-            They now take the crown! What an upset!" )
+            What an unexpected turn of events! The
+            crowd can't contain itself!")
         waitmessage
         playfanfare(SE_APPLAUSE)
         setvar(VAR_GERBON_TOURNAMENT_STATE, 7)
@@ -495,10 +511,13 @@ script GerbonBattleHall_TournamentPlayerWon {
         unhappy in my shoes, but I can't stop
         smiling!
         
-        You're the new Rep Trainer for Gerbon
-        Town! Congratulations! Here is the 
-        Palladium Ribbon, the mark of your
-        status.")
+        Only a handful of folks have ever
+        beaten me before, you should be proud!
+        It's clear your Pokemon trust you
+        deeply.
+
+        Here is the Palladium Ribbon, the mark
+        of your achievement!.")
         waitmessage
 
         setflag(FLAG_BADGE01_GET)
@@ -536,6 +555,7 @@ script GerbonBattleHall_TournamentPlayerWon {
         delay(30)
         clearflag(FLAG_GERBON_TOWN_BLOCKERS)
         clearflag(FLAG_GERBONTOURNEY_ENABLED)
+        setflag(FLAG_GERBONTOURNEY_DISABLED)
         setflag(FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE)
         clearflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
         warp(MAP_OLDALE_TOWN, 28, 14)

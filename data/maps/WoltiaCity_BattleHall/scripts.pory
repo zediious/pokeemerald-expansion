@@ -287,7 +287,7 @@ script WoltiaBattleHall_TournamentBattle {
             "It's been a long time since someone
             could best me, let's see if you're 
             worth your salt.",
-            "Very salty!",
+            "You're no joke!",
             WoltiaBattleHall_TournamentBattleAfter,
             LOCALID_NONE,
             TRAINER_NONE,
@@ -336,16 +336,22 @@ script WoltiaBattleHall_TournamentBattleAfter {
 }
 
 script WoltiaBattleHall_TournamentPlayerWon {
+        playbgm(MUS_CONTEST_WINNER, FALSE)
         playse(SE_DING_DONG)
         waitse
         playse(SE_DING_DONG)
+        waitse
+        playse(SE_DING_DONG)
+        waitse
         setspeaker("Announcer")
         msgbox("DING DING DING DING DING DING
     
             {PLAYER} has defeated the standing
-            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Candace!
+            {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Candace!
 
-            They now take the crown! What an upset!" )
+            This new challenger has now won their
+            second {COLOR RED}Showcase Tournament!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+            A rising star is in the works!" )
         waitmessage
         playfanfare(SE_APPLAUSE)
         setvar(VAR_WOLTIA_TOURNAMENT_STATE, 7)
@@ -354,14 +360,17 @@ script WoltiaBattleHall_TournamentPlayerWon {
         setspeaker("Candace")
         msgbox("That was a great battle! I think
                 Kilowattrel wants to have another go at
-                you!")
+                you, they're shaking in their Poke Ball!")
         waitmessage
-        
         setspeaker("Candace")
-        msgbox("You're the new Rep Trainer for Woltia
-        City! Congratulations! Here is the 
-        Aerodrome Ribbon, the mark of your
-        status.")
+        msgbox("I'll be honest, it doesn't feel good to
+                lose during a Showcase Tournament like
+                this...I hope my fans don't think less of
+                me!
+        
+                But that's a me problem, not you!
+                Congratulations! Here is the Aerodrome
+                Ribbon, the mark of your achievement.")
         waitmessage
 
         setflag(FLAG_BADGE02_GET)
@@ -393,7 +402,10 @@ script WoltiaBattleHall_TournamentPlayerWon {
                 out of some sticky situations! It
                 didn't help me enough against you!
                 
-                Thank you for the wonderful battle!")
+                I know I'm a bit sour about this, but
+                really, thank you for the wonderful
+                battle! It's been a long time since
+                I felt something like that.")
         waitmessage
         setvar(VAR_ZED_STORY_TRACKER, 18)
         addobject(WOLTIA_AERODROME_BLOCKER)

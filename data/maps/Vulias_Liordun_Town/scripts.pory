@@ -84,7 +84,8 @@ script LiordunTown_EventScript_PlayerFirstEnterScene
     setspeaker("Woman")
     msgbox("I wouldn't go that way! Some thugs are
             trashing the whole town! I don't want
-            any part in that!")
+            any part in that! I came to Vulias for
+            tournaments, not this!")
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, face_down))
     waitmovement
@@ -110,14 +111,15 @@ script LiordunTown_EventScript_PlayerSpeakBlockingCop
     waitse
     waitmovement
     setspeaker("Policeman")
-    msgbox("Wait! You're the Rep Trainer from Woltia
-            and Gerbon Town! That ain't happened
-            before and you're all over the news!
+    msgbox("Wait! You're that trainer who won the
+            Woltia and Gerbon tournaments! That
+            ain't happened in a long time, and you're
+            all over the news!
             
             I reckon you can help out here, these
             Kowtow scum trashed the whole town,
-            the Liordun Town Rep Trainer is
-            battling their 'head honcho' up ahead.
+            the Liordun Town Battle Ace is battling
+            their 'head honcho' up ahead.
             
             No reason for me to keep you here!")
     waitmessage
@@ -176,7 +178,7 @@ script LiordunTown_EventScript_HecticGruntJumpBattleAfter
     applymovement(LIORDUN_HECTIC_JUMPGRUNT01, moves(walk_left * 2, face_right))
     applymovement(LIORDUN_HECTIC_JUMPGRUNT02, moves(walk_right * 2, face_left))
     waitmovement
-    // player advances forward to the admin and rep trainer
+    // player advances forward to the admin and battle ace
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_right * 2, walk_up))
     waitmovement
     setspeaker("???")

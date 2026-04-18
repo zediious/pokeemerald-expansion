@@ -698,7 +698,7 @@
 #define FLAG_UNUSED_0x283  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
+#define FLAG_WOLTIA_SINVESTAEMP_OUTSIDE         0x286 // Sinvesta Employee who talks to player after winning Wolita tourney
 #define FLAG_LIORDUNHECTIC_DRAWBATTLERS         0x287 // Allow drawing battler vobjects during Liordun raid
 #define FLAG_LIORDUNHECTIC_KOWTOW               0x288 // Kowtow member event objects in liordun raid
 #define FLAG_LIORDUN_HECTIC_KOWTOWGRUNTMONS     0x289 // Pokemon of the two grunts that jump to you before admin

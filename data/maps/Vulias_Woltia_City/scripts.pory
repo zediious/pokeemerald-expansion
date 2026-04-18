@@ -75,7 +75,7 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
             end
         } else {
             setspeaker("Jordan")
-            msgbox("Got it! You should definitly hurry, I
+            msgbox("Got it! You should definitely hurry, I
                     don't want you to miss it!")
             release
             end
@@ -84,9 +84,9 @@ script WoltiaCity_EventScript_JordanTriggerOldRuinVisit {
     else {
         lock
         faceplayer
-        msgbox("Heya! The tournament is still not set to
-                start for a little bit, we have some time
-                to kill.
+        msgbox("{PLAYER}! The tournament is still not
+                set to start for a little bit, we have
+                some time to kill.
                 
                 Let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, right
                 there next to {COLOR RED}The Aerodrome{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.
@@ -176,6 +176,30 @@ script WoltiaCity_JordanGoToIgris {
             so I can beat you one day! Your
             Pokemon really love you, it shows.
             
+            You're probably going to make the
+            news, it's very rare tha-")
+    waitmessage
+    goto(WoltiaCity_SinvestaTalkToPlayer)
+    setspeaker("Jordan")
+    msgbox("So, what did they say!
+    
+            ...
+            
+            Oh man! That's amazing news! If they've
+            got their eye on you, they're probably
+            considering you as a Battle Ace!
+            
+            Like I was saying, it's incredibly rare
+            for someone to beat two Battle Aces! I
+            think only four people have ever done
+            that besides you! I guess we've got to
+            see how far you can take it!
+            
+            Oh but don't you worry, I'm going to end
+            up stopping you short! My Pokemon and I
+            are going to get so strong, you won't
+            believe it!
+            
             Anyways, let's not waste any more time!
             The next Battle Hall is in Liordun
             Town, which is a litle bit past
@@ -185,7 +209,6 @@ script WoltiaCity_JordanGoToIgris {
             I'm going to go ahead of you, but we'll
             probably see each other there! Catch
             you later!")
-    waitmessage
     applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(walk_down * 12))
     waitmovement
     delay(30)
@@ -194,4 +217,70 @@ script WoltiaCity_JordanGoToIgris {
     questupdated(0)
     release
     end
+}
+
+script WoltiaCity_SinvestaTalkToPlayer
+{
+    addobject(WOLTIA_SINVESTA_EMPLOYEE)
+    applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(face_up, emote_exclamation_mark))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_exclamation_mark))
+    playse(SE_PIN)
+    applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_left))
+    delay(5)
+    applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_down))
+    applymovement(WOLTIA_AERODROME_BLOCKER, moves(face_right))
+    waitmovement(WOLTIA_SINVESTA_EMPLOYEE)
+    waitse
+    setspeaker("???")
+    msgbox("{PLAYER}, if I could have a moment of
+            your time, please.")
+    waitmessage
+    applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    setspeaker("Jordan")
+    msgbox("Ooo, look at you! You're really making
+            waves! I'll wait here!")
+    waitmessage
+    applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_right * 4, walk_up, face_down))
+    delay(10)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, walk_right * 4, face_up))
+    waitmovement(WOLTIA_SINVESTA_EMPLOYEE)
+    applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_right, face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    setspeaker("???")
+    msgbox("Ahem, thank you for your time. I am a
+            representative of {COLOR RED}Sinvesta, the
+            organization behind the tournament you
+            have just participated in.")
+    waitmessage
+    setspeaker("Sinvesta Representative")
+    msgbox("Seeing as you have now won both the
+            Palladium and Aerodrome tournaments, I
+            wanted to congratulate you personally.
+            
+            This is a rare achievement, only a...
+            select few, have ever made such a mark.
+            
+            It is our understanding that you wish
+            to participate in further tournaments
+            in other locations, as well. We'll be
+            watching you with great interest.
+            
+            Have a good day, {PLAYER}.")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, face_up))
+    delay(10)
+    applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_down, walk_left * 2))
+    waitmovement
+    applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_left, face_right))
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, walk_left * 4, walk_up, face_left))
+    applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_left, walk_up))
+    waitmovement
+    applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_right, face_down))
+    playse(SE_DOOR)
+    removeobject(WOLTIA_SINVESTA_EMPLOYEE)
+    waitse
+    waitmovement
+    waitmovement(OBJ_EVENT_ID_PLAYER)
 }

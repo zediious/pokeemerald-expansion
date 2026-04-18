@@ -90,10 +90,10 @@ GerbonBattleHall_PrepRoom_MatchStarterWoman::
 	compare VAR_GERBON_TOURNAMENT_STATE, 5
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_6
 GerbonBattleHall_PrepRoom_MatchStarterWoman_1:
-# 77 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 76 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_12
-# 94 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 93 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_13
 	return
@@ -124,71 +124,71 @@ GerbonBattleHall_PrepRoom_MatchStarterWoman_6:
 	goto GerbonBattleHall_PrepRoom_MatchStarterWoman_1
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_12:
-# 78 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 77 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setspeaker GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_0
-# 79 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 78 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	msgbox GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_6
-# 80 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 79 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	waitmessage
-# 82 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 81 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_GERBON_TOURNAMENT_STATE, 1
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_17
-# 83 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 82 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_GERBON_TOURNAMENT_STATE, 2
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_18
-# 84 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 83 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_GERBON_TOURNAMENT_STATE, 3
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_19
-# 85 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 84 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_GERBON_TOURNAMENT_STATE, 4
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_20
-# 86 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 85 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_GERBON_TOURNAMENT_STATE, 5
 	goto_if_eq GerbonBattleHall_PrepRoom_MatchStarterWoman_21
 GerbonBattleHall_PrepRoom_MatchStarterWoman_16:
-# 88 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 87 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	lock
-# 89 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 88 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	removeobject GERBON_TOURNEY_ORGANIZER
-# 90 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 89 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	warp MAP_GERBON_TOWN_BATTLE_HALL, 5, 3
-# 91 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 90 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	waitstate
 	end
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_13:
-# 95 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 94 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setspeaker GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_0
-# 96 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 95 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	msgbox GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_7
-# 97 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 96 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	waitmessage
-# 98 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 97 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	release
 	end
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_17:
-# 82 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 81 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_GERBON_TOURNAMENT_STATE, 2
 	goto GerbonBattleHall_PrepRoom_MatchStarterWoman_16
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_18:
-# 83 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 82 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_GERBON_TOURNAMENT_STATE, 3
 	goto GerbonBattleHall_PrepRoom_MatchStarterWoman_16
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_19:
-# 84 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 83 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_GERBON_TOURNAMENT_STATE, 4
 	goto GerbonBattleHall_PrepRoom_MatchStarterWoman_16
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_20:
-# 85 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 84 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_GERBON_TOURNAMENT_STATE, 5
 	goto GerbonBattleHall_PrepRoom_MatchStarterWoman_16
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_21:
-# 86 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 85 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_GERBON_TOURNAMENT_STATE, 6
 	goto GerbonBattleHall_PrepRoom_MatchStarterWoman_16
 
@@ -246,13 +246,12 @@ GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_4:
 GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_5:
 # 72 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	.string "Are you ready to start your final\n"
-	.string "match against the current\l"
-	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}?$"
+	.string "match against the {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}?$"
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_6:
-# 79 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 78 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	.string "Let's go!$"
 
 GerbonBattleHall_PrepRoom_MatchStarterWoman_Text_7:
-# 96 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
+# 95 "data/maps/GerbonTown_BattleHall_PrepRoom/scripts.pory"
 	.string "Don't dilly dally!$"

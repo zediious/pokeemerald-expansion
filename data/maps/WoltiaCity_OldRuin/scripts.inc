@@ -57,49 +57,49 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter::
 	setspeaker WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_2
 # 39 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	msgbox WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_6
-# 48 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	waitmessage
-# 49 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	delay 60
 # 50 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	applymovement WOLTIA_RUIN_KEEGAN, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_7
-# 51 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	waitmovement
-# 52 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	setflag FLAG_WOLTIA_RUIN_KEEGAN
-# 53 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	removeobject WOLTIA_RUIN_KEEGAN
-# 54 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	playse SE_EXIT
-# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_8
-# 56 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	waitmovement
-# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	setspeaker WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_0
-# 58 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	msgbox WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_7
-# 68 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	waitmessage
-# 69 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_7
-# 70 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 51 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	delay 60
+# 52 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	applymovement WOLTIA_RUIN_KEEGAN, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_7
+# 53 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	waitmovement
-# 71 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	destroyfollowernpc
-# 72 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 54 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	setflag FLAG_WOLTIA_RUIN_KEEGAN
+# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	removeobject WOLTIA_RUIN_KEEGAN
+# 56 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	playse SE_EXIT
+# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_8
+# 58 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	waitmovement
+# 59 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	setspeaker WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_0
+# 60 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	msgbox WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_7
+# 70 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	waitmessage
+# 71 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	applymovement OBJ_EVENT_ID_NPC_FOLLOWER, WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_7
+# 72 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	waitmovement
 # 73 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 16
+	destroyfollowernpc
 # 74 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	waitse
+	playse SE_EXIT
 # 75 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	delay 30
+	setvar VAR_ZED_STORY_TRACKER, 16
 # 76 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	clearflag FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY
+	waitse
 # 77 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	questupdated 0
+	delay 30
 # 78 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	clearflag FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY
+# 79 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+	questupdated 0
+# 80 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	release
 	end
 
@@ -168,21 +168,21 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_6:
 	face_left
 	step_end
 
-# 50 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 52 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_7:
-# 50 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 52 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	walk_down
 	step_end
 
-# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Movement_8:
-# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	walk_down
-# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	walk_right
-# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	walk_down
-# 55 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 57 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	face_right
 	step_end
 
@@ -220,8 +220,9 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_5:
 
 WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_6:
 # 39 "data/maps/WoltiaCity_OldRuin/scripts.pory"
-	.string "You're the new {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon\n"
-	.string "Town, are you not? I saw your 'battle'.\l"
+	.string "You're the one who deafeated {COLOR RED}Julia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of\n"
+	.string "Gerbon Town, are you not? I saw your\l"
+	.string "'battle'.\p"
 	.string "Pathetic.\p"
 	.string "They sit in the stands, they cheer, and\n"
 	.string "they clap. And you all call it battle.\p"
@@ -229,7 +230,7 @@ WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_6:
 	.string "word truly means.$"
 
 WoltiaOldRuin_EventScript_TriggerKeeganEncounter_Text_7:
-# 58 "data/maps/WoltiaCity_OldRuin/scripts.pory"
+# 60 "data/maps/WoltiaCity_OldRuin/scripts.pory"
 	.string "That was...weird, to say the least.\n"
 	.string "How can he call your battle pathetic?\l"
 	.string "Who does he think he is?\p"

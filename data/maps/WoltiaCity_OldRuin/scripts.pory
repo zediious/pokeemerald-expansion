@@ -36,8 +36,10 @@ script WoltiaOldRuin_EventScript_TriggerKeeganEncounter {
     msgbox("The mysterious man sizes you up
             from head to toe.")
     setspeaker("???")
-    msgbox("You're the new {COLOR RED}Rep Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of Gerbon
-        Town, are you not? I saw your 'battle'.
+    msgbox("You're the one who deafeated {COLOR RED}Julia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} of
+        Gerbon Town, are you not? I saw your
+        'battle'.
+        
         Pathetic.
         
         They sit in the stands, they cheer, and

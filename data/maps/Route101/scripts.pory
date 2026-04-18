@@ -237,8 +237,8 @@ script Route101_EventScript_Trainer02{
         "This place is so cool, I can't contain it!",
         "I have been contained."
     )
-    msgbox("I wonder what I'll find under all of
-            these ashes.", MSGBOX_AUTOCLOSE)
+    msgbox("I want to make sure I'm strong enough
+            for the {COLOR RED}Showcase Tournament!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}", MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
@@ -304,7 +304,7 @@ script Route101_EventScript_HouseKid {
     faceplayer
     setspeaker("Youngster")
     msgbox("I love to watch Pokemon Battles on TV!
-            The {COLOR RED}Rep Trainers{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to
+            The {COLOR RED}Battle Aces{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are so cool, I want to
             be like them someday!")
     waitmessage
     release

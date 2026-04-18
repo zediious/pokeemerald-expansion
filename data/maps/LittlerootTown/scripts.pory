@@ -12,10 +12,9 @@ script LittlerootTown_EventScript_TrainerTips01 {
     lockall
     msgbox("Trainer Tips!
     
-            Always be sure to go into
-            the Pokemon center in new places you
-            visit, even if you don't plan to use the
-            services.
+            Always enter the Pokemon center in new
+            places you visit, even if you don't plan
+            to use the services.
             
             That way, you'll respawn there if you
             lose a battle!")
@@ -35,7 +34,7 @@ script LittlerootTown_EventScript_JordanTalk01 {
     release
 }
 
-script LittlerootTown_EventScript_ElderTalk01 {
+script LittlerootTown_EventScript_ElderTalk01 { // TODO: This elder will be in Plume Hamlet when that town is made, change line to reflect
     lock
     faceplayer
     setspeaker("Elder")

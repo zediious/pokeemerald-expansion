@@ -88,10 +88,10 @@ WoltiaBattleHall_PrepRoom_MatchStarterWoman::
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 5
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_6
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_1:
-# 76 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 75 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_12
-# 93 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 92 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_13
 	return
@@ -122,71 +122,71 @@ WoltiaBattleHall_PrepRoom_MatchStarterWoman_6:
 	goto WoltiaBattleHall_PrepRoom_MatchStarterWoman_1
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_12:
-# 77 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 76 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setspeaker WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_0
-# 78 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 77 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	msgbox WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_6
-# 79 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 78 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	waitmessage
-# 81 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 80 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 1
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_17
-# 82 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 81 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 2
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_18
-# 83 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 82 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 3
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_19
-# 84 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 83 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 4
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_20
-# 85 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 84 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	compare VAR_WOLTIA_TOURNAMENT_STATE, 5
 	goto_if_eq WoltiaBattleHall_PrepRoom_MatchStarterWoman_21
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_16:
-# 87 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 86 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	lock
-# 88 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 87 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	removeobject WOLTIA_TOURNEY_ORGANIZER
-# 89 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 88 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	warp MAP_WOLTIA_CITY_BATTLE_HALL, 5, 5
-# 90 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 89 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	waitstate
 	end
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_13:
-# 94 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 93 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setspeaker WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_0
-# 95 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 94 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	msgbox WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_7
-# 96 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 95 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	waitmessage
-# 97 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 96 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	release
 	end
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_17:
-# 81 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 80 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_WOLTIA_TOURNAMENT_STATE, 2
 	goto WoltiaBattleHall_PrepRoom_MatchStarterWoman_16
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_18:
-# 82 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 81 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_WOLTIA_TOURNAMENT_STATE, 3
 	goto WoltiaBattleHall_PrepRoom_MatchStarterWoman_16
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_19:
-# 83 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 82 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_WOLTIA_TOURNAMENT_STATE, 4
 	goto WoltiaBattleHall_PrepRoom_MatchStarterWoman_16
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_20:
-# 84 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 83 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_WOLTIA_TOURNAMENT_STATE, 5
 	goto WoltiaBattleHall_PrepRoom_MatchStarterWoman_16
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_21:
-# 85 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 84 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	setvar VAR_WOLTIA_TOURNAMENT_STATE, 6
 	goto WoltiaBattleHall_PrepRoom_MatchStarterWoman_16
 
@@ -244,13 +244,12 @@ WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_4:
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_5:
 # 71 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	.string "Are you ready to start your final\n"
-	.string "match against the current\l"
-	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, Candace?$"
+	.string "match against the {COLOR RED}Battle Ace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}?$"
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_6:
-# 78 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 77 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	.string "Let's go!$"
 
 WoltiaBattleHall_PrepRoom_MatchStarterWoman_Text_7:
-# 95 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
+# 94 "data/maps/WoltiaCity_BattleHall_PrepRoom/scripts.pory"
 	.string "Don't dilly dally!$"

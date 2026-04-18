@@ -31,10 +31,12 @@ script LittlerootTown_EventScript_JordanAwakenStart {
             
             Like I said yesterday, you absolutely
             must check out {COLOR RED}The Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in
-            Gerbon Town, just east of here.
+            Gerbon Town, just east of here. The
+            match between Julia and Candace is
+            going to be awesome!
             
             I'm tuckered out today, but I'll go
-            to the other {COLOR RED}Battle Stadiums{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} with you
+            to the other {COLOR RED}Battle Halls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} with you
             tomorrow!"
     )
     waitmessage
@@ -98,7 +100,7 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
             expensive I'll admit it. That should
             be at least half!
             
-            Anyways, don't go to hard on your
+            Anyways, don't go too hard on your
             Pokemon, those trainers are really
             tough! Good luck!")
     waitmessage
@@ -139,10 +141,9 @@ script SawgrassVillage_AwakenAfterRoute110 {
             have gotten good sleep, because today,
             we're gonna have great battles!
             
-            The tournament to decide the next 
-            {COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The
-            Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is starting today! I'm going
-            to make my way over there.
+            The {COLOR RED}Showcase Tournament{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The
+            Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}is starting today! I'm going to
+            make my way over there.
             
             You can take your time, do a bit of
             training if you want! Meet me at the

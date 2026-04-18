@@ -450,8 +450,8 @@ VuliasMullenCave_EventScript_Trainer01_Text_2:
 
 VuliasMullenCave_EventScript_Trainer02_Text_0:
 # 40 "data/maps/Vulias_MullenCave/scripts.pory"
-	.string "I was looking for the Woltia City Docks,\n"
-	.string "but I think I lost my way!$"
+	.string "I was looking for the Gerbon Town\n"
+	.string "Docks, but I think I lost my way!$"
 
 VuliasMullenCave_EventScript_Trainer02_Text_1:
 # 42 "data/maps/Vulias_MullenCave/scripts.pory"

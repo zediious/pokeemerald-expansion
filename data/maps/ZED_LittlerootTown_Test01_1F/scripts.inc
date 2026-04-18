@@ -30,121 +30,121 @@ LittlerootTown_EventScript_JordanAwakenStart::
 	setspeaker LittlerootTown_EventScript_JordanAwakenStart_Text_0
 # 26 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	msgbox LittlerootTown_EventScript_JordanAwakenStart_Text_1
-# 40 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 42 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmessage
-# 41 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	closemessage
 # 43 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	closemessage
+# 45 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_2
-# 50 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 52 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
-# 53 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 55 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	startquest 0
-# 56 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 1
-# 57 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	fadedefaultbgm
 # 58 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 1
+# 59 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	fadedefaultbgm
+# 60 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	return
 
 
 LittlerootTown_EventScript_JordanRememberTrainers::
-# 63 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 65 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	lock
-# 64 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 66 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_0
-# 67 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	delay 60
-# 68 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_EventScript_JordanRememberTrainers_Movement_0
 # 69 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	delay 60
+# 70 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_EventScript_JordanRememberTrainers_Movement_0
+# 71 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_1
-# 75 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmovement
-# 76 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setspeaker LittlerootTown_EventScript_JordanAwakenStart_Text_0
 # 77 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_0
-# 88 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmessage
-# 89 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	closemessage
-# 90 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	giveitem ITEM_POTION, 10
-# 91 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	giveitem ITEM_FULL_HEAL, 5
-# 92 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_1
-# 104 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmessage
-# 105 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	closemessage
-# 106 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_2
-# 112 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
-# 113 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setvar VAR_JORDAN_WARNED_TRAINERS, 1
+# 78 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setspeaker LittlerootTown_EventScript_JordanAwakenStart_Text_0
+# 79 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_0
+# 90 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	waitmessage
+# 91 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	closemessage
+# 92 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	giveitem ITEM_POTION, 10
+# 93 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	giveitem ITEM_FULL_HEAL, 5
+# 94 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	msgbox LittlerootTown_EventScript_JordanRememberTrainers_Text_1
+# 106 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	waitmessage
+# 107 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	closemessage
+# 108 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	applymovement JordanInHome, LittlerootTown_EventScript_JordanRememberTrainers_Movement_2
 # 114 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN
+	waitmovement
 # 115 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setvar VAR_JORDAN_WARNED_TRAINERS, 1
+# 116 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN
+# 117 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 
 
 SawgrassVillage_AwakenAfterRoute110::
-# 121 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 123 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	lock
-# 122 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 7
 # 124 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setvar VAR_ZED_STORY_TRACKER, 7
+# 126 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	playbgm MUS_ENCOUNTER_MAY, 0
-# 125 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 127 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_0
-# 128 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	playse SE_PIN
-# 129 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	delay 60
 # 130 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	playse SE_PIN
+# 131 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	delay 60
+# 132 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	applymovement JordanInHome, LittlerootTown_EventScript_JordanAwakenStart_Movement_1
-# 136 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmovement
-# 137 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setspeaker LittlerootTown_EventScript_JordanAwakenStart_Text_0
 # 138 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	msgbox SawgrassVillage_AwakenAfterRoute110_Text_0
-# 151 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitmessage
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	applymovement JordanInHome, SawgrassVillage_AwakenAfterRoute110_Movement_0
-# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	waitmovement
+# 139 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	setspeaker LittlerootTown_EventScript_JordanAwakenStart_Text_0
+# 140 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	msgbox SawgrassVillage_AwakenAfterRoute110_Text_0
+# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	waitmessage
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	applymovement JordanInHome, SawgrassVillage_AwakenAfterRoute110_Movement_0
 # 154 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	playse SE_DOOR
+	waitmovement
 # 155 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	setflag FLAG_JORDANINHOME
+	playse SE_DOOR
 # 156 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	removeobject JordanInHome
+	setflag FLAG_JORDANINHOME
 # 157 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_BLOCKERS
+	removeobject JordanInHome
 # 158 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	addobject GERBON_PALLADIUM_BLOCKER_1
+	clearflag FLAG_GERBON_TOWN_BLOCKERS
 # 159 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	addobject GERBON_PALLADIUM_BLOCKER_2
+	addobject GERBON_PALLADIUM_BLOCKER_1
 # 160 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	clearflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	addobject GERBON_PALLADIUM_BLOCKER_2
 # 161 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	waitse
+	clearflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 162 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	fadedefaultbgm
+	waitse
 # 163 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	special HealPlayerParty
+	fadedefaultbgm
 # 164 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	delay 30
+	special HealPlayerParty
 # 165 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	questupdated 0
+	delay 30
 # 166 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	questupdated 0
+# 167 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	release
 	end
 
@@ -173,79 +173,79 @@ LittlerootTown_EventScript_JordanAwakenStart_Movement_1:
 	walk_left
 	step_end
 
-# 43 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-LittlerootTown_EventScript_JordanAwakenStart_Movement_2:
-# 44 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
 # 45 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 46 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 46 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 46 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
+LittlerootTown_EventScript_JordanAwakenStart_Movement_2:
 # 46 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	walk_right
 # 47 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	walk_down
 # 48 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 48 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 48 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 48 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 49 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 50 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	face_left
 	step_end
 
-# 68 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 70 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 LittlerootTown_EventScript_JordanRememberTrainers_Movement_0:
-# 68 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 70 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	face_right
 	step_end
 
-# 69 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 71 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 LittlerootTown_EventScript_JordanRememberTrainers_Movement_1:
-# 70 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 72 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	walk_up
-# 71 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_left
-# 71 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_left
-# 71 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_left
-# 72 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 72 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
 # 73 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	face_left
-	step_end
-
-# 106 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-LittlerootTown_EventScript_JordanRememberTrainers_Movement_2:
-# 107 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_up
-# 107 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_up
-# 108 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 108 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 108 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_right
-# 109 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 110 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	face_left
-	step_end
-
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-SawgrassVillage_AwakenAfterRoute110_Movement_0:
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
-	walk_down
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	walk_left
-# 152 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 73 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_left
+# 73 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_left
+# 74 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 74 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 75 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	face_left
+	step_end
+
+# 108 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+LittlerootTown_EventScript_JordanRememberTrainers_Movement_2:
+# 109 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_up
+# 109 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_up
+# 110 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 110 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 110 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_right
+# 111 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 112 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	face_left
+	step_end
+
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+SawgrassVillage_AwakenAfterRoute110_Movement_0:
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_down
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+	walk_left
+# 153 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	walk_down
 	step_end
 
@@ -262,13 +262,15 @@ LittlerootTown_EventScript_JordanAwakenStart_Text_1:
 	.string "coolest thing in the world!\p"
 	.string "Like I said yesterday, you absolutely\n"
 	.string "must check out {COLOR RED}The Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in\l"
-	.string "Gerbon Town, just east of here.\p"
+	.string "Gerbon Town, just east of here. The\l"
+	.string "match between Julia and Candace is\l"
+	.string "going to be awesome!\p"
 	.string "I'm tuckered out today, but I'll go\n"
-	.string "to the other {COLOR RED}Battle Stadiums{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} with you\l"
+	.string "to the other {COLOR RED}Battle Halls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} with you\l"
 	.string "tomorrow!$"
 
 LittlerootTown_EventScript_JordanRememberTrainers_Text_0:
-# 77 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 79 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	.string "Sorry, I forgot to tell you!\n"
 	.string "The trainers around here don't mess\l"
 	.string "around, you'll face a pretty tough\l"
@@ -280,26 +282,25 @@ LittlerootTown_EventScript_JordanRememberTrainers_Text_0:
 	.string "help out. Catch!$"
 
 LittlerootTown_EventScript_JordanRememberTrainers_Text_1:
-# 92 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 94 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	.string "Those should cover our meal in\n"
 	.string "Woltia City, that you paid for.\p"
 	.string "...\p"
 	.string "Alright, that was quite a bit more\n"
 	.string "expensive I'll admit it. That should\l"
 	.string "be at least half!\p"
-	.string "Anyways, don't go to hard on your\n"
+	.string "Anyways, don't go too hard on your\n"
 	.string "Pokemon, those trainers are really\l"
 	.string "tough! Good luck!$"
 
 SawgrassVillage_AwakenAfterRoute110_Text_0:
-# 138 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
+# 140 "data/maps/ZED_LittlerootTown_Test01_1F/scripts.pory"
 	.string "Good morning {PLAYER}! You better\n"
 	.string "have gotten good sleep, because today,\l"
 	.string "we're gonna have great battles!\p"
-	.string "The tournament to decide the next \n"
-	.string "{COLOR RED}Representative Trainer{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The\l"
-	.string "Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is starting today! I'm going\l"
-	.string "to make my way over there.\p"
+	.string "The {COLOR RED}Showcase Tournament{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The\n"
+	.string "Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}is starting today! I'm going to\l"
+	.string "make my way over there.\p"
 	.string "You can take your time, do a bit of\n"
 	.string "training if you want! Meet me at the\l"
 	.string "entrance to {COLOR RED}The Palladium!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
