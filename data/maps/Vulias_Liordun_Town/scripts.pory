@@ -264,6 +264,7 @@ script LiordunTown_Hectic_AdminAfterBattle
     fadescreenswapbuffers(FADE_TO_BLACK)
     playse(SE_M_DOUBLE_TEAM)
     setflag(FLAG_LIORDUNHECTIC_KOWTOW)
+    removeobject(LIORDUN_HECTIC_BLOCKING_COP)
     removeobject(LIORDUN_HECTIC_JUMPGRUNT01)
     removeobject(LIORDUN_HECTIC_JUMPGRUNT02)
     removeobject(LIORDUN_HECTIC_KOWTOWADMIN)
