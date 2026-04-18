@@ -20,6 +20,12 @@ script JumpToPreGerbonTourney {
     msgbox("Jump to pre-gerbon tourney?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
         setvar(VAR_ZED_STORY_TRACKER, 7)
+        setvar(VAR_GERBON_BATTLEHALL_DISABLES_TRIGGER, 1)
+        setflag(FLAG_GERBON_FIRSTSHOW_JULIA)
+        setflag(FLAG_GERBON_FIRSTSHOW_CANDACE)
+        setflag(FLAG_GERBON_FIRSTSHOW_GOLEM)
+        setflag(FLAG_CANDACE01_MON)
+        setflag(FLAG_CANDACE01_MON2)
         setflag(FLAG_SAWGRASSFOREST_KOWTOW)
         setflag(FLAG_SAWGRASSFOREST_MUGGEDWOMAN)
         setflag(FLAG_ROUTE110_JORDAN)
