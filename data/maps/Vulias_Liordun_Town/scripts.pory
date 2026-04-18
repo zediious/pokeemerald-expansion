@@ -1,1 +1,453 @@
-mapscripts Vulias_Liordun_Town_MapScripts {}
+mapscripts Vulias_Liordun_Town_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        VAR_TEMP_6, 0: LiordunTown_MapScript_OnWarpCrowd
+        VAR_ZED_STORY_TRACKER, 26: LiordunTown_MapScript_OnWarpEndKowtowRaid
+    ]
+    MAP_SCRIPT_ON_RESUME: LiordunTown_MapScript_OnResume
+}
+
+// TODO: Create script to clean up the town later, ensure this is called in map scripts every time after
+// Ensure that this clears up the collision blockers over the vobjects
+
+script LiordunTown_MapScript_OnWarpCrowd
+{
+    if (var(VAR_ZED_STORY_TRACKER) >= 24) // TODO: && <= <var_value_after_everything_done>
+    {
+        call(LiordunTown_EventScript_CreateGroups)
+        call(LiordunTown_EventScript_CreateBattles)
+        call(LiordunTown_EventScript_CreateCrowd)
+    }
+}
+
+// Accessed after warp following admin 2v2 battle with Calvin
+script LiordunTown_MapScript_OnWarpEndKowtowRaid
+{
+    goto(LiordunTown_EventScript_AfterKowtowDisappears)
+}
+
+// Handle re-drawing crowd when returning from bag menu, etc
+script LiordunTown_MapScript_OnResume
+{
+    if (var(VAR_ONRESUME_DRAWCROWD) == 1)
+    {   
+        setvar(VAR_ONRESUME_DRAWCROWD, 0)
+        call(LiordunTown_EventScript_CreateGroups)
+        call(LiordunTown_EventScript_CreateBattles)
+        call(LiordunTown_EventScript_CreateCrowd)
+    }
+    // Use hectic music during the raid if leaving and re-entering map before completing
+    if (var(VAR_ZED_STORY_TRACKER) >= 25) // TODO: && <= <var_value_after_everything_done>
+    {
+        playbgm(MUS_ENCOUNTER_AQUA, TRUE)
+    }
+}
+
+// Triggers for player first entry
+script LiordunTown_EventScript_PlayerFirstEnterTrigger01
+{
+    setobjectxy(LIORDUN_HECTIC_WARNER, 25, 27)
+    goto(LiordunTown_EventScript_PlayerFirstEnterScene)
+}
+
+script LiordunTown_EventScript_PlayerFirstEnterTrigger02
+{
+    setobjectxy(LIORDUN_HECTIC_WARNER, 25, 28)
+    goto(LiordunTown_EventScript_PlayerFirstEnterScene)
+}
+
+script LiordunTown_EventScript_PlayerFirstEnterTrigger03
+{
+    setobjectxy(LIORDUN_HECTIC_WARNER, 25, 29)
+    goto(LiordunTown_EventScript_PlayerFirstEnterScene)
+}
+
+script LiordunTown_EventScript_PlayerFirstEnterTrigger04
+{
+    setobjectxy(LIORDUN_HECTIC_WARNER, 25, 30)
+    goto(LiordunTown_EventScript_PlayerFirstEnterScene)
+}
+
+script LiordunTown_EventScript_PlayerFirstEnterTrigger05
+{
+    setobjectxy(LIORDUN_HECTIC_WARNER, 25, 31)
+    goto(LiordunTown_EventScript_PlayerFirstEnterScene)
+}
+
+// Player enters for first time
+script LiordunTown_EventScript_PlayerFirstEnterScene
+{
+    lock
+    setvar(VAR_ZED_STORY_TRACKER, 25)
+    playbgm(MUS_ENCOUNTER_AQUA, TRUE)
+    applymovement(LIORDUN_HECTIC_WARNER, moves(walk_fast_left * 7))
+    waitmovement
+    setspeaker("Woman")
+    msgbox("I wouldn't go that way! Some thugs are
+            trashing the whole town! I don't want
+            any part in that!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, face_down))
+    waitmovement
+    applymovement(LIORDUN_HECTIC_WARNER, moves(walk_fast_left * 10))
+    waitmovement
+    removeobject(LIORDUN_HECTIC_WARNER)
+    release
+    end
+}
+
+// Player speaks to police blocking way north
+script LiordunTown_EventScript_PlayerSpeakBlockingCop
+{
+    lock
+    faceplayer
+    setspeaker("Policeman")
+    msgbox("Stay back! We'll have this under control
+            soon, please follow the instructions of
+            the organiz-")
+    waitmessage
+    applymovement(LIORDUN_HECTIC_BLOCKING_COP, moves(emote_exclamation_mark))
+    playse(SE_PIN)
+    waitse
+    waitmovement
+    setspeaker("Policeman")
+    msgbox("Wait! You're the Rep Trainer from Woltia
+            and Gerbon Town! That ain't happened
+            before and you're all over the news!
+            
+            I reckon you can help out here, these
+            Kowtow scum trashed the whole town,
+            the Liordun Town Rep Trainer is
+            battling their 'head honcho' up ahead.
+            
+            No reason for me to keep you here!")
+    waitmessage
+    applymovement(LIORDUN_HECTIC_BLOCKING_COP, moves(walk_up, walk_right, face_left))
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 3))
+    waitmovement
+    applymovement(LIORDUN_HECTIC_BLOCKING_COP, moves(walk_left, walk_down))
+    waitmovement
+    setflag(FLAG_LIORDUN_HECTIC_TALKEDCOP)
+    goto(LiordunTown_EventScript_PlayerStoppedByGrunts)
+}
+
+// Player walks forward, stopped by the grunts
+script LiordunTown_EventScript_PlayerStoppedByGrunts
+{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 3))
+    // battles on side of player end, despawn their mons into Pokeballs
+    // Happens while player is walking
+    applymovement(LIORDUN_HECTIC_MON01, moves(enter_pokeball))
+    applymovement(LIORDUN_HECTIC_MON02, moves(enter_pokeball))
+    applymovement(LIORDUN_HECTIC_MON03, moves(enter_pokeball))
+    applymovement(LIORDUN_HECTIC_MON04, moves(enter_pokeball))
+    waitmovement
+    removeobject(LIORDUN_HECTIC_MON01)
+    removeobject(LIORDUN_HECTIC_MON02)
+    removeobject(LIORDUN_HECTIC_MON03)
+    removeobject(LIORDUN_HECTIC_MON04)
+    setflag(FLAG_LIORDUN_HECTIC_KOWTOWGRUNTMONS)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    // kowtow grunts jump in front and behind player
+    applymovement(LIORDUN_HECTIC_JUMPGRUNT01, moves(jump_2_right, face_up))
+    applymovement(LIORDUN_HECTIC_JUMPGRUNT02, moves(jump_2_left, face_down))
+    waitmovement
+    setspeaker("Kowtow Grunt")
+    msgbox("Where do you think you're going?
+            Like we would let you past!")
+    waitmessage
+    trainerbattle_two_trainers(
+        TRAINER_GRUNT_AQUA_HIDEOUT_7,
+        "You don't know what you're doing!",
+        TRAINER_GRUNT_AQUA_HIDEOUT_8,
+        "Bah! We never get our way!"
+    )
+    goto(LiordunTown_EventScript_HecticGruntJumpBattleAfter)
+}
+
+script LiordunTown_EventScript_HecticGruntJumpBattleAfter
+{
+    setspeaker("Kowtow Grunt")
+    msgbox("If only the boss would let us go wild...
+    
+            Get out of my sight!")
+    waitmessage
+    applymovement(LIORDUN_HECTIC_JUMPGRUNT01, moves(walk_left * 2, face_right))
+    applymovement(LIORDUN_HECTIC_JUMPGRUNT02, moves(walk_right * 2, face_left))
+    waitmovement
+    // player advances forward to the admin and rep trainer
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_right * 2, walk_up))
+    waitmovement
+    setspeaker("???")
+    msgbox("Wah? You're here to help?
+    
+            ...
+            
+            Ah, the one from the TV! The name is
+            {COLOR RED}Calvin!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
+            
+            Help me out here would you? These rough
+            scoundrels think they can get what
+            they want by force!")
+    waitmessage
+    applymovement(LIORDUN_HECTIC_KOWTOWADMIN, moves(jump_in_place_right * 2))
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, walk_up * 2, walk_left))
+    setspeaker("Kowtow Admin")
+    msgbox("Aghhhh! Needed some help did you
+            grandpa! You'll regret this kid!")
+    waitmovement
+    waitmessage
+    setfollowernpc(
+        LIORDUN_HECTIC_CALVIN_BATTLE,
+        FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE,
+        LiordunTownHectit_EventScript_CalvinFollower,
+        PARTNER_CALVIN_LIORDUNHECTIC
+    )
+    special(ChooseHalfPartyForBattle)
+	waitstate
+    goto(LiordunTownHectic_RawScript_Start2v2)
+    release
+}
+
+script LiordunTownHectit_EventScript_CalvinFollower {nop} // We will never be able to interact with them
+
+// Initiate 2v2 Battle with Grunts VS Player and Jordan
+// Notably, this has no issues being performed while having a follower.
+// Poryscript does not appear to have a shorthand for this.
+raw
+`
+LiordunTownHectic_RawScript_Start2v2::
+    multi_2_vs_2 TRAINER_GRUNT_MT_CHIMNEY_1, LiordunTownHectic_AdminLoss, TRAINER_GRUNT_AQUA_HIDEOUT_6, LiordunTownHectic_Grunt_Loss, PARTNER_CALVIN_LIORDUNHECTIC
+    goto(LiordunTownHectic_RawScript_AfterMultiDirect)
+
+LiordunTownHectic_RawScript_AfterMultiDirect::
+    switch VAR_RESULT
+	case 1, LiordunTown_Hectic_AdminAfterBattle
+	goto LiordunTown_Hectic_AdminWhiteout
+
+LiordunTownHectic_AdminLoss:
+    .string "This cannot stand!$"
+
+LiordunTownHectic_Grunt_Loss:
+    .string "How could we lose!$"
+`
+
+script LiordunTown_Hectic_AdminWhiteout {
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_7)
+    cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_8)
+    special(SetCB2WhiteOut)
+}
+
+script LiordunTown_Hectic_AdminAfterBattle
+{
+    lock
+    applymovement(LIORDUN_HECTIC_KOWTOWADMIN, moves(
+        jump_in_place_right, jump_in_place_down * 2, jump_in_place_right))
+    waitmovement
+    setspeaker("Kowtow Admin")
+    msgbox("Rahh! Unacceptable! For you of all
+            people to succumb to Sinvesta's wishes
+            Calvin, it's pathetic!
+            
+            You all cheer for these toy crowns while
+            Vulias' bones rot beneath our feet!
+            
+            You'll regret your choices soon enough.
+            
+            ...Kowtow, let's move out!")
+    waitmessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    playse(SE_M_DOUBLE_TEAM)
+    setflag(FLAG_LIORDUNHECTIC_KOWTOW)
+    removeobject(LIORDUN_HECTIC_JUMPGRUNT01)
+    removeobject(LIORDUN_HECTIC_JUMPGRUNT02)
+    removeobject(LIORDUN_HECTIC_KOWTOWADMIN)
+    removeobject(LIORDUN_HECTIC_CALVINMON)
+    delay(60)
+
+    // Because I don't want to write a function to delete vobjects, we do the following
+    // 1. Set flag that prevents creating the vobjects for the battling grunts, cops, and their mons
+    // 2. Warp the player to the same spot they're standing after the blackout
+    // 3. Player warps back in, the other vobjects draw again but the battlers are gone
+    setflag(FLAG_LIORDUNHECTIC_DRAWBATTLERS)
+    setvar(VAR_ZED_STORY_TRACKER, 26)
+    warp(MAP_VULIAS_LIORDUN_TOWN, 43, 16)
+    waitstate
+    end
+}
+
+// Accessed via warp map script after the warp above completes
+script LiordunTown_EventScript_AfterKowtowDisappears
+{
+    applymovement(LIORDUN_HECTIC_CALVIN_BATTLE, moves(face_up))
+    setspeaker("Calvin")
+    msgbox("They're gone! A shame these fine
+            officers couldn't aprehend them...")
+    waitmessage
+    release
+    // more to come
+}
+
+//// Fluff NPCs during initial entry
+
+// Bemused Gentleman
+script LiordunTown_EventScript_HecticGentleman
+{
+    lock
+    faceplayer
+    setspeaker("Gentleman")
+    msgbox("Monsterous behavior! Just look at the
+            state of this place! Those {COLOR RED}Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+            goons ought to be ashamed of
+            themselves!")
+    waitmessage
+    release
+    end
+}
+
+// Brother calming little sister
+script LiordunTown_EventScript_HecticBrotherCalmingSister 
+{ // TODO: Make this not do anything after the kowtow leave liordun town
+    lock
+    setspeaker("Youngster")
+    msgbox("Don't worry! Just keep close to me and
+            it will be over soon!")
+    waitmessage
+    setspeaker("Little Girl")
+    msgbox("Wahhh! I'm scared! They hurt that Old
+            Man! They're gonna hurt us! Wahhh!")
+    waitmessage
+    setspeaker("Youngster")
+    msgbox("Not while you've got me! Don't worry!")
+    waitmessage
+    release
+    end
+}
+
+// Old Woman helping injured Old Man
+script LiordunTown_EventScript_HecticOldCoupleHelping
+{ // TODO: Make this not do anything after the kowtow leave liordun town
+    lock
+    setspeaker("Old Woman")
+    msgbox("Stay down dear! That leg of yours needs
+            to be looked at, we have to wait for
+            this chaos to die down!")
+    waitmessage
+    setspeaker("Old Man")
+    msgbox("I'll be fine! Watch thi--ACK!!")
+    waitmessage
+    release
+    end
+}
+
+// Conflicted Hex Maniac
+script LiordunTown_EventScript_HecticHexManiacConflicted
+{
+    lock
+    faceplayer
+    setspeaker("Hex Maniac")
+    msgbox("Those {COLOR RED}Kowtow{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} folks make a good
+            point, but they take it too far!
+            
+            None of this will help anything...")
+    waitmessage
+    release
+    end
+}
+
+// Market employee hiding
+script LiordunTown_EventScript_HecticHidingEmployee
+{
+    lock
+    faceplayer
+    setspeaker("Mart Employee")
+    msgbox("Not only did they trash the steets, but
+            they robbed me of my Pokemon Vitamins!
+            
+            Pure scoundrels!")
+    waitmessage
+    release
+    end
+}
+
+// Father calming his two children
+script LiordunTown_EventScript_HecticFatherCalmingChildren
+{
+    lock
+    setspeaker("Man")
+    msgbox("Settle down you two! Let's let the
+            Police do their job!")
+    waitmessage
+    setspeaker("Little Girl")
+    msgbox("But what about the tournament!")
+    waitmessage
+    turnvobject(30, DIR_WEST)
+    setspeaker("Little Boy")
+    msgbox("I don't want to miss it!")
+    waitmessage
+    setspeaker("Man")
+    msgbox("We'll just have to wait and see!")
+    waitmessage
+    turnvobject(30, DIR_EAST)
+    release
+    end
+}
+
+
+// Creates angry crowd
+script LiordunTown_EventScript_CreateCrowd
+{
+    // Sprites forming the initial blockade of player
+    createvobject(OBJ_EVENT_GFX_OLD_MAN, 0, 40, 31, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_BEAUTY, 1, 40, 30, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_COOK, 2, 41, 29, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_RICH_BOY, 3, 42, 29, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_FAT_MAN, 4, 43, 29, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_EXPERT_M, 5, 44, 28, 3, direction=DIR_WEST)
+    createvobject(OBJ_EVENT_GFX_PSYCHIC_M, 6, 44, 27, 3, direction=DIR_WEST)
+
+    // Filler
+    createvobject(OBJ_EVENT_GFX_POKEFAN_F, 7, 41, 30, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_WOMAN_4, 8, 42, 30, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_SAILOR, 9, 43, 30, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_SAILOR, 10, 44, 29, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_POKEFAN_M, 11, 44, 30, 3, direction=DIR_NORTH)
+    createvobject(OBJ_EVENT_GFX_FISHERMAN, 12, 45, 29, 3, direction=DIR_WEST)
+    createvobject(OBJ_EVENT_GFX_HEX_MANIAC, 13, 45, 30, 3, direction=DIR_WEST)
+
+    setvar(VAR_ONRESUME_DRAWCROWD, 1)
+}
+
+// Battles between Kowtow and Police
+script LiordunTown_EventScript_CreateBattles
+{
+    if (!flag(FLAG_LIORDUNHECTIC_DRAWBATTLERS))
+    {
+        createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 14, 37, 13, 3, direction=DIR_SOUTH)
+        createvobject(OBJ_EVENT_GFX_SPECIES(HOUNDOOM), 15, 37, 14, 3, direction=DIR_SOUTH)
+        createvobject(OBJ_EVENT_GFX_SPECIES(PAWNIARD), 16, 37, 15, 3, direction=DIR_NORTH)
+        createvobject(OBJ_EVENT_GFX_AQUA_MEMBER_M, 17, 37, 16, 3, direction=DIR_NORTH)
+        createvobject(OBJ_EVENT_GFX_AQUA_MEMBER_F, 24, 40, 16, 3, direction=DIR_EAST)
+        createvobject(OBJ_EVENT_GFX_SPECIES(PAWNIARD), 25, 41, 16, 3, direction=DIR_EAST)
+    }
+    createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 18, 39, 19, 3, direction=DIR_SOUTH)
+    createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 23, 43, 23, 3, direction=DIR_NORTH)
+}
+
+// Old Man/Woman and the kids facing each other
+// Battles between Kowtow and Police
+script LiordunTown_EventScript_CreateGroups
+{
+    createvobject(OBJ_EVENT_GFX_OLD_MAN, 26, 25, 21, 3, direction=DIR_EAST)
+    createvobject(OBJ_EVENT_GFX_OLD_WOMAN, 27, 26, 21, 3, direction=DIR_WEST)
+
+    createvobject(OBJ_EVENT_GFX_TWIN, 28, 33, 22, 3, direction=DIR_SOUTH)
+    createvobject(OBJ_EVENT_GFX_YOUNGSTER, 29, 33, 23, 3, direction=DIR_NORTH)
+
+    createvobject(OBJ_EVENT_GFX_MAN_1, 30, 35, 27, 3, direction=DIR_EAST)
+    createvobject(OBJ_EVENT_GFX_LITTLE_BOY, 31, 34, 27, 3, direction=DIR_EAST)
+    createvobject(OBJ_EVENT_GFX_LITTLE_GIRL, 32, 36, 27, 3, direction=DIR_WEST)
+}

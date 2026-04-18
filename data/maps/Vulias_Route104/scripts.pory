@@ -1,4 +1,13 @@
-mapscripts Vulias_Route104_MapScripts {}
+mapscripts Vulias_Route104_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        VAR_TEMP_5, 0: Route104_MapScript_ResetLiordunCrowd
+    ]
+}
+
+script Route104_MapScript_ResetLiordunCrowd
+{
+    setvar(VAR_ONRESUME_DRAWCROWD, 0)
+}
 
 //// Route Trainers
 

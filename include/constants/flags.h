@@ -699,12 +699,12 @@
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
+#define FLAG_LIORDUNHECTIC_DRAWBATTLERS         0x287 // Allow drawing battler vobjects during Liordun raid
+#define FLAG_LIORDUNHECTIC_KOWTOW               0x288 // Kowtow member event objects in liordun raid
+#define FLAG_LIORDUN_HECTIC_KOWTOWGRUNTMONS     0x289 // Pokemon of the two grunts that jump to you before admin
+#define FLAG_LIORDUN_HECTIC_TALKEDCOP           0x28A // Got let into barricade by the cop
+#define FLAG_LIORDUN_WARNING_RUNNER             0x28B // Person running away who warns player of Liordun raid
+#define FLAG_LIORDUN_HECTIC_NPCS                0x28C // NPCs that only exist during Liordun Town Kowtow Raid
 #define FLAG_NOCONTEXT_SWITCHINGMON             0x28D // Indicates Party mons are actively being switches, initiated with SELECT
 #define FLAG_REGISTERBIND_MENU_OPEN             0x28E // Indicates the bag UI for selecting register bind is currently open
 #define FLAG_I_VS_SEEKER_CHARGING               0x28F // VS Seeker charging flag
