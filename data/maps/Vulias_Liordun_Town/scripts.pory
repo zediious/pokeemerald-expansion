@@ -410,6 +410,22 @@ script LiordunTown_EventScript_AngryCrowdInteract
     end
 }
 
+// Organizer trying to calm crowd
+script LiordunTown_EventScript_OrganizerAttemptCalmCrowd
+{
+    lock
+    setspeaker("Organizer")
+    msgbox("Please everyone, stay calm while the
+            police sort this out!")
+    waitmessage
+    setspeaker(NULL)
+    msgbox("The crowd does not appear to be happy
+            to hear this.")
+    waitmessage
+    release
+    end
+}
+
 // Creates angry crowd
 script LiordunTown_EventScript_CreateCrowd
 {
@@ -445,9 +461,9 @@ script LiordunTown_EventScript_CreateBattles
         createvobject(OBJ_EVENT_GFX_AQUA_MEMBER_M, 17, 37, 16, 3, direction=DIR_NORTH)
         createvobject(OBJ_EVENT_GFX_AQUA_MEMBER_F, 24, 40, 16, 3, direction=DIR_EAST)
         createvobject(OBJ_EVENT_GFX_SPECIES(PAWNIARD), 25, 41, 16, 3, direction=DIR_EAST)
-    }
     createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 18, 39, 19, 3, direction=DIR_SOUTH)
     createvobject(OBJ_EVENT_GFX_NEWPOLICEMAN, 23, 43, 23, 3, direction=DIR_NORTH)
+    }
 }
 
 // Old Man/Woman and the kids facing each other
