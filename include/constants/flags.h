@@ -693,7 +693,7 @@
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
 #define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
+#define FLAG_PREVENT_RUNTOGGLE                  0x281 // Used to prevent run toggle from working while in start menu
 #define FLAG_ROUTE104_WORKER                    0x282 // Worker no longer blocking way into Route 104 Mine
 #define FLAG_ROUTE104_WORKERBLOCKER             0x283 // Worker blocking way into Route 104 Mine
 #define FLAG_LIORDUNHECTIC_CALVIN               0x284 // Calvin during Liordun raid

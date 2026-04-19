@@ -201,6 +201,7 @@ static u16 (*sPlayerKeyInterceptCallback)(u32);
 static bool8 sReceivingFromLink;
 static u8 sRfuKeepAliveTimer;
 static bool8 sBHeldLastFrame = FALSE;
+static u8 menuLeftCounter = 0;
 
 COMMON_DATA u16 *gOverworldTilemapBuffer_Bg2 = NULL;
 COMMON_DATA u16 *gOverworldTilemapBuffer_Bg1 = NULL;
@@ -1615,13 +1616,27 @@ bool32 IsOverworldLinkActive(void)
 
 static void UpdateRunToggle(u16 heldKeys)
 {
-    bool8 bHeldNow = (heldKeys & B_BUTTON) != 0;
-    if (bHeldNow && !sBHeldLastFrame)
+    DebugPrintf("VAR_RUNTOGGLE_COUNTER = %d", VarGet(VAR_RUNTOGGLE_COUNTER));
+    if (VarGet(VAR_RUNTOGGLE_COUNTER) == 0)
     {
-        sAllowRun = !sAllowRun;
-    }
+        if ((!FlagGet(FLAG_PREVENT_RUNTOGGLE)) && (gStartMenuWindowId == WINDOW_NONE))
+        {
+            menuLeftCounter = 5;
+            bool8 bHeldNow = (heldKeys & B_BUTTON) != 0;
+            if (bHeldNow && !sBHeldLastFrame)
+            {
+                sAllowRun = !sAllowRun;
+            }
 
-    sBHeldLastFrame = bHeldNow;
+            sBHeldLastFrame = bHeldNow;
+        }
+    }
+    else
+    {
+        menuLeftCounter -= 1;
+        VarSet(VAR_RUNTOGGLE_COUNTER, menuLeftCounter);
+    }
+    
 }
 
 static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
@@ -1634,7 +1649,6 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
     CancelSignPostMessageBox(&inputStruct);
     if (!ArePlayerFieldControlsLocked())
     {
-        UpdateRunToggle(heldKeys);
         if (ProcessPlayerFieldInput(&inputStruct) == 1)
         {
             LockPlayerFieldControls();
@@ -1642,6 +1656,7 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
         }
         else
         {
+            UpdateRunToggle(heldKeys);
             PlayerStep(inputStruct.dpadDirection, newKeys, heldKeys);
         }
     }

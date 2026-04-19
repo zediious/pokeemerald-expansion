@@ -48,6 +48,7 @@ struct MenuAction
 
 extern const u16 gStandardMenuPalette[];
 extern EWRAM_DATA u8 gPopupTaskId;
+extern EWRAM_DATA u8 gStartMenuWindowId;
 
 void FreeAllOverworldWindowBuffers(void);
 void InitStandardTextBoxWindows(void);

@@ -638,6 +638,7 @@ void ShowStartMenu(void)
         StopPlayerAvatar();
     }
     CreateStartMenuTask(Task_ShowStartMenu);
+    FlagSet(FLAG_PREVENT_RUNTOGGLE);
     LockPlayerFieldControls();
 }
 
@@ -1501,6 +1502,8 @@ static void HideStartMenuWindow(void)
     RemoveStartMenuWindow();
     ScriptUnfreezeObjectEvents();
     UnlockPlayerFieldControls();
+    FlagClear(FLAG_PREVENT_RUNTOGGLE);
+    VarSet(VAR_RUNTOGGLE_COUNTER, 5);
 }
 
 void HideStartMenu(void)

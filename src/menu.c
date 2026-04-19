@@ -63,7 +63,7 @@ static void task_free_buf_after_copying_tile_data_to_vram(u8 taskId);
 static void FillMenuTilemapBufferRect(u32 bg, u16 tileNum, u8 x, u8 y, u8 width, u8 height);
 static void Task_SmoothBlendLayers(u8 taskId);
 
-static EWRAM_DATA u8 sStartMenuWindowId = 0;
+EWRAM_DATA u8 gStartMenuWindowId = 0;
 static EWRAM_DATA u8 sMapNamePopupWindowId = 0;
 static EWRAM_DATA u8 sSecondaryPopupWindowId = 0;
 static EWRAM_DATA struct Menu sMenu = {0};
@@ -142,7 +142,7 @@ void InitStandardTextBoxWindows(void)
 {
     ResetNameboxData();
     InitWindows(sStandardTextBox_WindowTemplates);
-    sStartMenuWindowId = WINDOW_NONE;
+    gStartMenuWindowId = WINDOW_NONE;
     sMapNamePopupWindowId = WINDOW_NONE;
     if (OW_POPUP_GENERATION == GEN_5)
         sSecondaryPopupWindowId = WINDOW_NONE;
@@ -392,22 +392,22 @@ void DisplayYesNoMenuWithDefault(u8 initialCursorPos)
 
 u8 AddStartMenuWindow(u8 numActions)
 {
-    if (sStartMenuWindowId == WINDOW_NONE)
-        sStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
-    return sStartMenuWindowId;
+    if (gStartMenuWindowId == WINDOW_NONE)
+        gStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
+    return gStartMenuWindowId;
 }
 
 u8 GetStartMenuWindowId(void)
 {
-    return sStartMenuWindowId;
+    return gStartMenuWindowId;
 }
 
 void RemoveStartMenuWindow(void)
 {
-    if (sStartMenuWindowId != WINDOW_NONE)
+    if (gStartMenuWindowId != WINDOW_NONE)
     {
-        RemoveWindow(sStartMenuWindowId);
-        sStartMenuWindowId = WINDOW_NONE;
+        RemoveWindow(gStartMenuWindowId);
+        gStartMenuWindowId = WINDOW_NONE;
     }
 }
 
