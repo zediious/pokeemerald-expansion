@@ -1616,7 +1616,6 @@ bool32 IsOverworldLinkActive(void)
 
 static void UpdateRunToggle(u16 heldKeys)
 {
-    DebugPrintf("VAR_RUNTOGGLE_COUNTER = %d", VarGet(VAR_RUNTOGGLE_COUNTER));
     if (VarGet(VAR_RUNTOGGLE_COUNTER) == 0)
     {
         if ((!FlagGet(FLAG_PREVENT_RUNTOGGLE)) && (gStartMenuWindowId == WINDOW_NONE))
