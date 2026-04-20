@@ -176,6 +176,8 @@ script IgrisDesert_EventScript_KowtowAdmin {
     setspeaker("Kowtow Admin")
     msgbox("Oh, you're a BIG talker huh!")
     waitmessage
+    special(ChooseHalfPartyForBattle)
+	waitstate
     trainerbattle(
         TRAINER_BATTLE_CONTINUE_SCRIPT,
         IGRIS_KOWTOWADMIN_01,
