@@ -537,17 +537,17 @@ const struct SpeciesInfo gSpeciesInfo[] =
             ANIMCMD_FRAME(1, 20),
             ANIMCMD_FRAME(0, 5),
         ),
-        .frontAnimId = ANIM_CONCAVE_ARC_LARGE,
-        .enemyMonElevation = 1,
+        .frontAnimId = ANIM_SHRINK_GROW_SLOW,
         .backPic = gMonBackPic_Innape,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 1,
-        .backAnimId = ANIM_CONCAVE_ARC_SMALL,
+        .backPicSize = MON_COORDS_SIZE(48, 56),
+        .backPicYOffset = 5,
+        .backAnimId = BACK_ANIM_H_SLIDE,
         .palette = gMonPalette_Innape,
         .shinyPalette = gMonShinyPalette_Innape,
         .iconSprite = gMonIcon_Innape,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+	    .enemyMonElevation = 1,
         SHADOW(-2, 6, SHADOW_SIZE_M)
         FOOTPRINT(Innape)
         OVERWORLD(
