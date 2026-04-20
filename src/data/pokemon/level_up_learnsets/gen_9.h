@@ -22381,7 +22381,7 @@ static const struct LevelUpMove sPecharuntLevelUpLearnset[] = {
 #endif //P_FAMILY_PECHARUNT
 
 // Innonk
-static const struct LevelUpMove sInnapeLevelUpLearnset[] = {
+static const struct LevelUpMove sInnonkLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_AFTER_YOU),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
@@ -22395,7 +22395,7 @@ static const struct LevelUpMove sInnapeLevelUpLearnset[] = {
 };
 
 // Innape
-static const struct LevelUpMove sInnapeRealLevelUpLearnset[] = {
+static const struct LevelUpMove sInnapeLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_HEADBUTT),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_AFTER_YOU),
