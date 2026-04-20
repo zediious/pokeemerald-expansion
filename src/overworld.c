@@ -2118,6 +2118,8 @@ void CB2_ContinueSavedGame(void)
 
     PlayTimeCounter_Start();
     ScriptContext_Init();
+    VarSet(VAR_RUNTOGGLE_COUNTER, 0);
+    FlagClear(FLAG_PREVENT_RUNTOGGLE);
     UnlockPlayerFieldControls();
     gExitStairsMovementDisabled = TRUE;
     InitMatchCallCounters();
