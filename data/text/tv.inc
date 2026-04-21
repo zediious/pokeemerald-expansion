@@ -6035,8 +6035,54 @@ gTVBattleHallWinWoltiaText04::
 	.string "roars for {PLAYER} in the near\l"
 	.string "future!$"
 
-gTVBattleHallWinWoltiaText05::
-# 3048 "data/text/tv.pory"
+gTVBattleHallWinGerbonText00::
+# 3049 "data/text/tv.pory"
+	.string "Thank you for tuning in to The Vulias\n"
+	.string "Battlers Network, the most trusted\l"
+	.string "source for the world of Battling!\p"
+	.string "We interviewed {PLAYER} today, who\n"
+	.string "defeated {COLOR RED}Julia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Gerbon Town\l"
+	.string "Showcase Tournament!$"
+
+gTVBattleHallWinGerbonText01::
+# 3059 "data/text/tv.pory"
+	.string "{PLAYER} told us that they are a\n"
+	.string "very experienced Pokemon Trainer\l"
+	.string "from the Alola Region! How exciting!\p"
+	.string "With the level of prowess we saw today,\n"
+	.string "one can only guess how far they'll go!$"
+
+gTVBattleHallWinGerbonText02::
+# 3068 "data/text/tv.pory"
+	.string "{PLAYER} says they know a few things\n"
+	.string "about Pokemon Battles, but that they\l"
+	.string "certainly have more to learn. As it\l"
+	.string "turns out, what they already know was\l"
+	.string "plenty!$"
+
+gTVBattleHallWinGerbonText03::
+# 3076 "data/text/tv.pory"
+	.string "{PLAYER} let us know that they have\n"
+	.string "nearly no experience with battling! Was\l"
+	.string "this victory a fluke? If not, what does\l"
+	.string "that mean for our Battle Aces?$"
+
+gTVBattleHallWinGerbonText04::
+# 3083 "data/text/tv.pory"
+	.string "After their battle with {COLOR RED}Julia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY},\n"
+	.string "{PLAYER} reports they felt feelings\l"
+	.string "of {STR_VAR_1}.\p"
+	.string "That speaks volumes!$"
+
+gTVBattleHallWinGerbonText05::
+# 3091 "data/text/tv.pory"
+	.string "{PLAYER}'s {STR_VAR_1} worked\n"
+	.string "hard to seal the victory, and we hope\l"
+	.string "we continue to see more from this\l"
+	.string "fine trainer, and their Pokemon!$"
+
+gTVBattleHallWinCommonOutro::
+# 3099 "data/text/tv.pory"
 	.string "That's all for today folks! Stay tuned\n"
 	.string "for the latest updates on the Showcase\l"
 	.string "Tournaments! Thank you again for\l"

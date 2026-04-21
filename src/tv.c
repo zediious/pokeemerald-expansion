@@ -438,13 +438,23 @@ static const u8 *const sTVContestLiveUpdatesTextGroup[] = {
     [CONTESTLIVE_STATE_OUTRO]                 = ContestLiveUpdates_Text_Outro
 };
 
+static const u8 *const sTVBattleHallWinGerbonTextGroup[] = {
+    gTVBattleHallWinGerbonText00,
+    gTVBattleHallWinGerbonText01,
+    gTVBattleHallWinGerbonText02,
+    gTVBattleHallWinGerbonText03,
+    gTVBattleHallWinGerbonText04,
+    gTVBattleHallWinGerbonText05,
+    gTVBattleHallWinCommonOutro
+};
+
 static const u8 *const sTVBattleHallWinWoltiaTextGroup[] = {
     gTVBattleHallWinWoltiaText00,
     gTVBattleHallWinWoltiaText01,
     gTVBattleHallWinWoltiaText02,
     gTVBattleHallWinWoltiaText03,
     gTVBattleHallWinWoltiaText04,
-    gTVBattleHallWinWoltiaText05
+    gTVBattleHallWinCommonOutro
 };
 
 static const u8 *const sTVPokemonBattleUpdateTextGroup[] = {
@@ -4320,39 +4330,72 @@ static void DoTVShowBattleHallWin(void)
     show = &gSaveBlock1Ptr->tvShows[gSpecialVar_0x8004];
     gSpecialVar_Result = FALSE;
     state = sTVShowState;
-    switch (state)
-    {
-        case 0:
-            if (show->battleHallWin.satisfied == 0)
-                sTVShowState = 1;
-            else
-                sTVShowState = 2;
-            break;
-        case 1:
-            sTVShowState = 3;
-            break;
-        case 2:
-            sTVShowState = 3;
-            break;
-        case 3:
-            CopyEasyChatWord(gStringVar1, show->battleHallWin.words[0]);
-            sTVShowState = 4;
-            break;
-        case 4:
-            StringCopy(gStringVar1, GetSpeciesName(show->battleHallWin.species));
-            sTVShowState = 5;
-            break;
-        case 5:
-            sTVShowState = 6;
-            TVShowDone();
-            break;
-    }
 
     switch (VarGet(VAR_INTERVIEWS_STORY))
     {
-        case 2: // Woltia
-            ShowFieldMessage(sTVBattleHallWinWoltiaTextGroup[state]);
-            break;
+    case 2: // Gerbon
+        switch(state)
+        {
+            case 0:
+                if (show->battleHallWin.satisfied == 0)
+                    sTVShowState = 1;
+                else if (show->battleHallWin.satisfied == 1)
+                    sTVShowState = 2;
+                else
+                    sTVShowState = 3;
+                break;
+            case 1:
+                sTVShowState = 4;
+                break;
+            case 2:
+                sTVShowState = 4;
+                break;
+            case 3:
+                sTVShowState = 4;
+                break;
+            case 4:
+                CopyEasyChatWord(gStringVar1, show->battleHallWin.words[0]);
+                sTVShowState = 5;
+                break;
+            case 5:
+                StringCopy(gStringVar1, GetSpeciesName(show->battleHallWin.species));
+                sTVShowState = 6;
+                break;
+            case 6:
+                TVShowDone();
+                break;
+        }
+        ShowFieldMessage(sTVBattleHallWinGerbonTextGroup[state]);
+        break;
+    case 4: // Woltia
+        switch (state)
+        {
+            case 0:
+                if (show->battleHallWin.satisfied == 0)
+                    sTVShowState = 1;
+                else
+                    sTVShowState = 2;
+                break;
+            case 1:
+                sTVShowState = 3;
+                break;
+            case 2:
+                sTVShowState = 3;
+                break;
+            case 3:
+                CopyEasyChatWord(gStringVar1, show->battleHallWin.words[0]);
+                sTVShowState = 4;
+                break;
+            case 4:
+                StringCopy(gStringVar1, GetSpeciesName(show->battleHallWin.species));
+                sTVShowState = 5;
+                break;
+            case 5:
+                TVShowDone();
+                break;
+        }
+        ShowFieldMessage(sTVBattleHallWinWoltiaTextGroup[state]);
+        break;
     }
 }
 

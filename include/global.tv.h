@@ -497,7 +497,7 @@ typedef union // size = 0x24
         u8 kind;
         bool8 active;
         u16 species;
-        bool8 satisfied;
+        u8 satisfied;
         u16 words[1];
     } battleHallWin;
 } TVShow;

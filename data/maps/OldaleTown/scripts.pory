@@ -12,7 +12,19 @@ script GerbonTown_MapScript_OnTransition {
         goto(GerbonTown_BattleHallDisables)
     }
     call(GerbonTown_Restaurant_Prepare)
+    call(GerbonTown_DisableReportersBeforeValid)
     end
+}
+
+
+script GerbonTown_DisableReportersBeforeValid
+{
+    if (var(VAR_ZED_STORY_TRACKER) < 9)
+    {
+        setflag(FLAG_GERBON_INTERVIEW01_INTERVIEWCREW)
+        removeobject(GERBON_INTERVIEW01_INTERVIEWER)
+        removeobject(GERBON_INTERVIEW01_CAMERAMAN)
+    }
 }
 
 // Prepare Restaraunt for another session
@@ -453,6 +465,7 @@ script GerbonTownTourney_JordanStartOutside {
 script GerbonTownTourney_JordanAfter {
     lock
     faceplayer
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     setspeaker("Jordan")
     msgbox("That was amazing! I'm a little miffed
             that I didn't win, but I can't deny what
@@ -511,8 +524,12 @@ script GerbonTownTourney_JordanAfter {
     applymovement(GERBON_TOWN_JORDAN_FIRSTBATTLE, moves(
         walk_down, walk_left * 12
     ))
-    waitmovement
+    delay(40)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(GERBON_TOWN_JORDAN_FIRSTBATTLE)
     setvar(VAR_ZED_STORY_TRACKER, 10)
+    setflag(FLAG_SYS_TV_START)
+    setvar(VAR_INTERVIEWS_STORY, 1)
     setflag(FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE)
     removeobject(GERBON_TOWN_JORDAN_FIRSTBATTLE)
 
@@ -521,8 +538,38 @@ script GerbonTownTourney_JordanAfter {
 
     questupdated(0)
 
-    release
+    delay(20)
+    goto(GerbonTownTourney_InterviewAfterGerbonWin)
     end
+}
+
+script GerbonTownTourney_InterviewAfterGerbonWin
+{
+    applymovement(GERBON_INTERVIEW01_INTERVIEWER, moves(walk_down, walk_left * 2))
+    applymovement(GERBON_INTERVIEW01_CAMERAMAN, moves(walk_down * 2, walk_left * 3))
+    waitmovement(GERBON_INTERVIEW01_CAMERAMAN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_right))
+    playse(SE_PIN)
+    waitse
+    setspeaker("Interviewer")
+    call(BattleHall_EventScript_InterviewStart)
+    lock
+    setspeaker("Interviewer")
+    msgbox("Thank you for your time! We hope to see
+            you again soon!")
+    waitmessage
+    closemessage
+    applymovement(GERBON_INTERVIEW01_CAMERAMAN, moves(walk_right, face_left))
+    waitmovement
+    applymovement(GERBON_INTERVIEW01_INTERVIEWER, moves(walk_down, walk_left * 10))
+    delay(60)
+    applymovement(GERBON_INTERVIEW01_CAMERAMAN, moves(walk_left * 11))
+    waitmovement(GERBON_INTERVIEW01_INTERVIEWER)
+    waitmovement(GERBON_INTERVIEW01_CAMERAMAN)
+    removeobject(GERBON_INTERVIEW01_INTERVIEWER)
+    removeobject(GERBON_INTERVIEW01_CAMERAMAN)
+    setvar(VAR_INTERVIEWS_STORY, 2)
+    release
 }
 
 //// Other NPCs in exteriors and interiors

@@ -558,66 +558,68 @@ GerbonBattleHall_TournamentPlayerWon::
 # 555 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	delay 30
 # 556 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_BLOCKERS
+	clearflag FLAG_GERBON_INTERVIEW01_INTERVIEWCREW
 # 557 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBONTOURNEY_ENABLED
+	clearflag FLAG_GERBON_TOWN_BLOCKERS
 # 558 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setflag FLAG_GERBONTOURNEY_DISABLED
+	clearflag FLAG_GERBONTOURNEY_ENABLED
 # 559 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
+	setflag FLAG_GERBONTOURNEY_DISABLED
 # 560 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
+	setflag FLAG_GERBON_JORDAN_TOURNEY_OUTSIDE
 # 561 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	warp MAP_OLDALE_TOWN, 28, 14
+	clearflag FLAG_GERBON_TOWN_JORDAN_FIRSTBATTLE
 # 562 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	waitstate
+	warp MAP_OLDALE_TOWN, 28, 14
 # 563 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	waitstate
+# 564 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	release
 	end
 
 
 GerbonBattleHall_CreateCrowdSprites::
-# 569 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_OLD_MAN, 0, 2, 12, 3, direction = DIR_NORTH
 # 570 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_OLD_WOMAN, 1, 3, 12, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_OLD_MAN, 0, 2, 12, 3, direction = DIR_NORTH
 # 571 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_COOK, 2, 4, 12, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_OLD_WOMAN, 1, 3, 12, 3, direction = DIR_NORTH
 # 572 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_RICH_BOY, 3, 2, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_COOK, 2, 4, 12, 3, direction = DIR_NORTH
 # 573 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_TWIN, 4, 4, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_RICH_BOY, 3, 2, 10, 3, direction = DIR_NORTH
 # 574 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_EXPERT_M, 5, 3, 8, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_TWIN, 4, 4, 10, 3, direction = DIR_NORTH
 # 575 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_PSYCHIC_M, 6, 8, 8, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_EXPERT_M, 5, 3, 8, 3, direction = DIR_NORTH
 # 576 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_BUG_CATCHER, 7, 7, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_PSYCHIC_M, 6, 8, 8, 3, direction = DIR_NORTH
 # 577 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_WOMAN_4, 8, 8, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_BUG_CATCHER, 7, 7, 10, 3, direction = DIR_NORTH
 # 578 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_SAILOR, 9, 6, 12, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_WOMAN_4, 8, 8, 10, 3, direction = DIR_NORTH
 # 579 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_SAILOR, 10, 7, 12, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_SAILOR, 9, 6, 12, 3, direction = DIR_NORTH
 # 580 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_SAILOR, 10, 7, 12, 3, direction = DIR_NORTH
+# 581 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	createvobject OBJ_EVENT_GFX_SAILOR, 11, 8, 12, 3, direction = DIR_NORTH
-# 583 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_FISHERMAN, 12, 12, 12, 3, direction = DIR_NORTH
 # 584 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 13, 11, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_FISHERMAN, 12, 12, 12, 3, direction = DIR_NORTH
 # 585 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_YOUNGSTER, 14, 13, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_HEX_MANIAC, 13, 11, 10, 3, direction = DIR_NORTH
 # 586 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_GENTLEMAN, 15, 11, 8, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_YOUNGSTER, 14, 13, 10, 3, direction = DIR_NORTH
 # 587 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_BEAUTY, 16, 15, 8, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_GENTLEMAN, 15, 11, 8, 3, direction = DIR_NORTH
 # 588 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_FAT_MAN, 17, 16, 8, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_BEAUTY, 16, 15, 8, 3, direction = DIR_NORTH
 # 589 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_WOMAN_2, 18, 16, 10, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_FAT_MAN, 17, 16, 8, 3, direction = DIR_NORTH
 # 590 "data/maps/GerbonTown_BattleHall/scripts.pory"
-	createvobject OBJ_EVENT_GFX_POKEFAN_M, 19, 15, 12, 3, direction = DIR_NORTH
+	createvobject OBJ_EVENT_GFX_WOMAN_2, 18, 16, 10, 3, direction = DIR_NORTH
 # 591 "data/maps/GerbonTown_BattleHall/scripts.pory"
+	createvobject OBJ_EVENT_GFX_POKEFAN_M, 19, 15, 12, 3, direction = DIR_NORTH
+# 592 "data/maps/GerbonTown_BattleHall/scripts.pory"
 	createvobject OBJ_EVENT_GFX_POKEFAN_F, 20, 16, 12, 3, direction = DIR_NORTH
 	return
 

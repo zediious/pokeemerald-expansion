@@ -4,6 +4,7 @@ mapscripts Vulias_Woltia_City_MapScripts {
         VAR_ZED_STORY_TRACKER, 18: WoltiaCity_JordanGoToIgris
         VAR_WOLTIA_DISABLETRAINERS_TRIGGER, 0: Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers
     ]
+    MAP_SCRIPT_ON_TRANSITION: WoltiaCity_DisableReportersBeforeValid
 }
 
 script Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers {
@@ -21,6 +22,17 @@ script Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney {
     addobject(WOLTIA_JORDAN_TRIGGERTOURNEY)
     setflag(FLAG_WOLTIATOURNEY_ENABLED)
     end
+}
+
+script WoltiaCity_DisableReportersBeforeValid
+{
+    if (var(VAR_ZED_STORY_TRACKER) < 19)
+    {
+        setflag(FLAG_WOLTIA_INTERVIEW01_INTERVIEWCREW)
+        setflag(FLAG_WOLTIA_SINVESTAEMP_OUTSIDE)
+        removeobject(WOLTIA_INTERVIEW01_INTERVIEWER)
+        removeobject(WOLTIA_INTERVIEW01_CAMERAMAN)
+    }
 }
 
 // Dude that blocks that Aerodrome door
@@ -179,7 +191,7 @@ script WoltiaCity_JordanGoToIgris {
             You're probably going to make the
             news, it's very rare tha-")
     waitmessage
-    goto(WoltiaCity_SinvestaTalkToPlayer)
+    call(WoltiaCity_SinvestaTalkToPlayer)
     setspeaker("Jordan")
     msgbox("So, what did they say!
     
@@ -212,7 +224,11 @@ script WoltiaCity_JordanGoToIgris {
     applymovement(WOLTIA_JORDAN_TRIGGERTOURNEY, moves(walk_down * 12))
     waitmovement
     delay(30)
+    setvar(VAR_INTERVIEWS_STORY, 3)
     setflag(FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY)
+    clearflag(FLAG_WOLTIA_INTERVIEW01_INTERVIEWCREW)
+    addobject(WOLTIA_INTERVIEW01_INTERVIEWER)
+    addobject(WOLTIA_INTERVIEW01_CAMERAMAN)
     removeobject(WOLTIA_JORDAN_TRIGGERTOURNEY)
     questupdated(0)
     release
@@ -226,8 +242,9 @@ script WoltiaCity_SinvestaTalkToPlayer
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_exclamation_mark))
     playse(SE_PIN)
     applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_left))
-    delay(5)
+    delay(20)
     applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_down))
+    waitmovement(WOLTIA_AERODROME_BLOCKER)
     applymovement(WOLTIA_AERODROME_BLOCKER, moves(face_right))
     waitmovement(WOLTIA_SINVESTA_EMPLOYEE)
     waitse
@@ -269,13 +286,14 @@ script WoltiaCity_SinvestaTalkToPlayer
             Have a good day, {PLAYER}.")
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, face_up))
+    closemessage
     delay(10)
     applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_down, walk_left * 2))
     waitmovement
     applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_left, face_right))
     waitmovement
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, walk_left * 4, walk_up, face_left))
-    applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_left, walk_up))
+    applymovement(WOLTIA_SINVESTA_EMPLOYEE, moves(walk_left * 2, walk_up))
     waitmovement
     applymovement(WOLTIA_AERODROME_BLOCKER, moves(walk_right, face_down))
     playse(SE_DOOR)
@@ -283,4 +301,67 @@ script WoltiaCity_SinvestaTalkToPlayer
     waitse
     waitmovement
     waitmovement(OBJ_EVENT_ID_PLAYER)
+}
+
+script WoltiaCity_InterviewAfterWoltiaWin_Trigger01
+{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, walk_down * 2))
+    goto(WoltiaCity_InterviewAfterWoltiaWin)
+}
+
+script WoltiaCity_InterviewAfterWoltiaWin_Trigger02
+{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down * 2))
+    goto(WoltiaCity_InterviewAfterWoltiaWin)
+}
+
+script WoltiaCity_InterviewAfterWoltiaWin_Trigger03
+{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left, walk_down * 2))
+    goto(WoltiaCity_InterviewAfterWoltiaWin)
+}
+
+script WoltiaCity_InterviewAfterWoltiaWin_Trigger04
+{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left * 3, walk_down * 2))
+    goto(WoltiaCity_InterviewAfterWoltiaWin)
+}
+
+script WoltiaCity_InterviewAfterWoltiaWin_Trigger05
+{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left * 4, walk_down * 2))
+    goto(WoltiaCity_InterviewAfterWoltiaWin)
+}
+
+script WoltiaCity_InterviewAfterWoltiaWin
+{
+    applymovement(WOLTIA_INTERVIEW01_INTERVIEWER, moves(walk_right))
+    applymovement(WOLTIA_INTERVIEW01_CAMERAMAN, moves(walk_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_left))
+    playse(SE_PIN)
+    waitse
+    setspeaker("Interviewer")
+    call(BattleHall_EventScript_InterviewStart)
+    lock
+    setspeaker("Interviewer")
+    msgbox("Thank you for your time! We hope to see
+            you again soon!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, face_down))
+    closemessage
+    waitmovement
+    applymovement(WOLTIA_INTERVIEW01_INTERVIEWER, moves(walk_right, walk_down * 10))
+    delay(30)
+    applymovement(WOLTIA_INTERVIEW01_CAMERAMAN, moves(walk_right, walk_down * 10))
+    waitmovement(WOLTIA_INTERVIEW01_CAMERAMAN)
+    removeobject(WOLTIA_INTERVIEW01_CAMERAMAN)
+    removeobject(WOLTIA_INTERVIEW01_INTERVIEWER)
+    setvar(VAR_INTERVIEWS_STORY, 4)
+    release
 }

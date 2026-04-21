@@ -113,6 +113,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_WOLTIA_SINVESTAEMP_OUTSIDE"
+    },
+    {
+      "local_id": "WOLTIA_INTERVIEW01_INTERVIEWER",
+      "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
+      "x": 9,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_WOLTIA_INTERVIEW01_INTERVIEWCREW"
+    },
+    {
+      "local_id": "WOLTIA_INTERVIEW01_CAMERAMAN",
+      "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
+      "x": 9,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_WOLTIA_INTERVIEW01_INTERVIEWCREW"
     }
   ],
   "warp_events": [
@@ -217,6 +245,51 @@
       "var": "VAR_ZED_STORY_TRACKER",
       "var_value": "14",
       "script": "WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_INTERVIEWS_STORY",
+      "var_value": "3",
+      "script": "WoltiaCity_InterviewAfterWoltiaWin_Trigger01"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_INTERVIEWS_STORY",
+      "var_value": "3",
+      "script": "WoltiaCity_InterviewAfterWoltiaWin_Trigger02"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_INTERVIEWS_STORY",
+      "var_value": "3",
+      "script": "WoltiaCity_InterviewAfterWoltiaWin_Trigger03"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_INTERVIEWS_STORY",
+      "var_value": "3",
+      "script": "WoltiaCity_InterviewAfterWoltiaWin_Trigger04"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_INTERVIEWS_STORY",
+      "var_value": "3",
+      "script": "WoltiaCity_InterviewAfterWoltiaWin_Trigger05"
     }
   ],
   "bg_events": []

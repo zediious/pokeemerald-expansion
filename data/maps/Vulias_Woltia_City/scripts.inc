@@ -1,4 +1,6 @@
 Vulias_Woltia_City_MapScripts::
+# 7 "data/maps/Vulias_Woltia_City/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, WoltiaCity_DisableReportersBeforeValid
 # 2 "data/maps/Vulias_Woltia_City/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Vulias_Woltia_City_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
@@ -14,543 +16,781 @@ Vulias_Woltia_City_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 Vulias_Woltia_City_MapScript_OnFrameDisableTourneyTrainers::
-# 10 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setvar VAR_WOLTIA_DISABLETRAINERS_TRIGGER, 1
 # 11 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER01
+	setvar VAR_WOLTIA_DISABLETRAINERS_TRIGGER, 1
 # 12 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER02
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER01
 # 13 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER03
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER02
 # 14 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER04
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER03
 # 15 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER04
+# 16 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setflag FLAG_WOLTIA_TOURNEY_TRAINER05
 	end
 
 
 Vulias_Woltia_City_MapScript_OnFrameEnableJordanTourney::
-# 20 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setvar VAR_ZED_STORY_TRACKER, 17
 # 21 "data/maps/Vulias_Woltia_City/scripts.pory"
-	addobject WOLTIA_JORDAN_TRIGGERTOURNEY
+	setvar VAR_ZED_STORY_TRACKER, 17
 # 22 "data/maps/Vulias_Woltia_City/scripts.pory"
+	addobject WOLTIA_JORDAN_TRIGGERTOURNEY
+# 23 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setflag FLAG_WOLTIATOURNEY_ENABLED
 	end
 
 
-WoltiaCity_EventScript_AerodromeBlockers::
-# 28 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
+WoltiaCity_DisableReportersBeforeValid::
 # 29 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_AerodromeBlockers_Text_0
-# 30 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_EventScript_AerodromeBlockers_Text_1
+	compare VAR_ZED_STORY_TRACKER, 19
+	goto_if_lt WoltiaCity_DisableReportersBeforeValid_1
+	return
+
+WoltiaCity_DisableReportersBeforeValid_1:
+# 31 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setflag FLAG_WOLTIA_INTERVIEW01_INTERVIEWCREW
+# 32 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setflag FLAG_WOLTIA_SINVESTAEMP_OUTSIDE
+# 33 "data/maps/Vulias_Woltia_City/scripts.pory"
+	removeobject WOLTIA_INTERVIEW01_INTERVIEWER
 # 34 "data/maps/Vulias_Woltia_City/scripts.pory"
+	removeobject WOLTIA_INTERVIEW01_CAMERAMAN
+	return
+
+
+WoltiaCity_EventScript_AerodromeBlockers::
+# 40 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 41 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_AerodromeBlockers_Text_0
+# 42 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_EventScript_AerodromeBlockers_Text_1
+# 46 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 35 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 47 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter::
-# 41 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 53 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
-# 42 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 54 "data/maps/Vulias_Woltia_City/scripts.pory"
 	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_0
-# 43 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 55 "data/maps/Vulias_Woltia_City/scripts.pory"
 	delay 20
-# 44 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 56 "data/maps/Vulias_Woltia_City/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_1
-# 45 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 57 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
-# 46 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 58 "data/maps/Vulias_Woltia_City/scripts.pory"
 	goto WoltiaCity_EventScript_JordanTriggerOldRuinVisit
 	return
 
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit::
-# 52 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 64 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 53 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 65 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_ZED_STORY_TRACKER, 17
 	goto_if_eq WoltiaCity_EventScript_JordanTriggerOldRuinVisit_1
-# 85 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 97 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
-# 86 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 98 "data/maps/Vulias_Woltia_City/scripts.pory"
 	faceplayer
-# 87 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4
 # 99 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4
+# 111 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 101 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 113 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setfollowernpc WOLTIA_JORDAN_TRIGGERTOURNEY, FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE, WoltiaCity_EventScript_JordanFollowerKeeganEncounter, PARTNER_JORDAN_PANSEAR_03
-# 107 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 119 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 15
-# 108 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 120 "data/maps/Vulias_Woltia_City/scripts.pory"
 	questupdated 0
-# 109 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 121 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_1:
-# 54 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 66 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
-# 55 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 67 "data/maps/Vulias_Woltia_City/scripts.pory"
 	faceplayer
-# 56 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 68 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_1, MSGBOX_YESNO
-# 58 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 70 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 59 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 71 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaCity_EventScript_JordanTriggerOldRuinVisit_4
-# 77 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 89 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 78 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 90 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_3
-# 80 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 92 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_4:
-# 60 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER01
-# 61 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER02
-# 62 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER03
-# 63 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER04
-# 64 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setflag FLAG_WOLTIA_TOURNEY_TRAINER05
-# 65 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 66 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_2
-# 70 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
-# 71 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setvar VAR_WOLTIA_TOURNAMENT_STATE, 1
 # 72 "data/maps/Vulias_Woltia_City/scripts.pory"
-	warp MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 5
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER01
 # 73 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitstate
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER02
 # 74 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER03
+# 75 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER04
+# 76 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setflag FLAG_WOLTIA_TOURNEY_TRAINER05
+# 77 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 78 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_2
+# 82 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 83 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setvar VAR_WOLTIA_TOURNAMENT_STATE, 1
+# 84 "data/maps/Vulias_Woltia_City/scripts.pory"
+	warp MAP_WOLTIA_CITY_BATTLE_HALL_PREP_ROOM, 4, 5
+# 85 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitstate
+# 86 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 
 WoltiaCity_EventScript_JordanFollowerKeeganEncounter::
-# 117 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 129 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
-# 118 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 130 "data/maps/Vulias_Woltia_City/scripts.pory"
 	faceplayer
-# 119 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 131 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 120 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 132 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_JordanFollowerKeeganEncounter_Text_0
-# 123 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 135 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 124 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 136 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 
 WoltiaCity_EventScript_NoLeaveWhileFollower::
-# 130 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 142 "data/maps/Vulias_Woltia_City/scripts.pory"
 	checkfollowernpc
-# 131 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 143 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaCity_EventScript_NoLeaveWhileFollower_2
 WoltiaCity_EventScript_NoLeaveWhileFollower_1:
 	end
 
 WoltiaCity_EventScript_NoLeaveWhileFollower_2:
-# 132 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 144 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
-# 133 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 145 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 134 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 146 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_NoLeaveWhileFollower_Text_0
-# 139 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 151 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 140 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 152 "data/maps/Vulias_Woltia_City/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0
-# 141 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 153 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
-# 142 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 154 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	goto WoltiaCity_EventScript_NoLeaveWhileFollower_1
 
 
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth::
-# 149 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 161 "data/maps/Vulias_Woltia_City/scripts.pory"
 	checkfollowernpc
-# 150 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 162 "data/maps/Vulias_Woltia_City/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_2
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_1:
 	end
 
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_2:
-# 151 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 163 "data/maps/Vulias_Woltia_City/scripts.pory"
 	lock
-# 152 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 164 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 153 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 165 "data/maps/Vulias_Woltia_City/scripts.pory"
 	msgbox WoltiaCity_EventScript_NoLeaveWhileFollower_Text_0
-# 158 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmessage
-# 159 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
-# 160 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 172 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
-# 161 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 173 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	goto WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_1
 
 
 WoltiaCity_JordanGoToIgris::
-# 168 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 180 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setvar VAR_ZED_STORY_TRACKER, 19
-# 169 "data/maps/Vulias_Woltia_City/scripts.pory"
-	lock
-# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
-# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
-# 172 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
-# 173 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
-# 174 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_JordanGoToIgris_Text_0
 # 181 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
+	lock
 # 182 "data/maps/Vulias_Woltia_City/scripts.pory"
-	goto WoltiaCity_SinvestaTalkToPlayer
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
 # 183 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
 # 184 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_JordanGoToIgris_Text_1
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_2
-# 213 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
-# 214 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 185 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 186 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_JordanGoToIgris_Text_0
+# 193 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 194 "data/maps/Vulias_Woltia_City/scripts.pory"
+	call WoltiaCity_SinvestaTalkToPlayer
+# 195 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 196 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_JordanGoToIgris_Text_1
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_2
+# 225 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 226 "data/maps/Vulias_Woltia_City/scripts.pory"
 	delay 30
-# 215 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 227 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setvar VAR_INTERVIEWS_STORY, 3
+# 228 "data/maps/Vulias_Woltia_City/scripts.pory"
 	setflag FLAG_WOLTIA_JORDAN_OUTSIDETOURNEY
-# 216 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 229 "data/maps/Vulias_Woltia_City/scripts.pory"
+	clearflag FLAG_WOLTIA_INTERVIEW01_INTERVIEWCREW
+# 230 "data/maps/Vulias_Woltia_City/scripts.pory"
+	addobject WOLTIA_INTERVIEW01_INTERVIEWER
+# 231 "data/maps/Vulias_Woltia_City/scripts.pory"
+	addobject WOLTIA_INTERVIEW01_CAMERAMAN
+# 232 "data/maps/Vulias_Woltia_City/scripts.pory"
 	removeobject WOLTIA_JORDAN_TRIGGERTOURNEY
-# 217 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 233 "data/maps/Vulias_Woltia_City/scripts.pory"
 	questupdated 0
-# 218 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 234 "data/maps/Vulias_Woltia_City/scripts.pory"
 	release
 	end
 
 
 WoltiaCity_SinvestaTalkToPlayer::
-# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
-	addobject WOLTIA_SINVESTA_EMPLOYEE
-# 225 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_SinvestaTalkToPlayer_Movement_0
-# 226 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_0
-# 227 "data/maps/Vulias_Woltia_City/scripts.pory"
-	playse SE_PIN
-# 228 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_1
-# 229 "data/maps/Vulias_Woltia_City/scripts.pory"
-	delay 5
-# 230 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
-# 231 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_JordanGoToIgris_Movement_0
-# 232 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement WOLTIA_SINVESTA_EMPLOYEE
-# 233 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitse
-# 234 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_SinvestaTalkToPlayer_Text_0
-# 235 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_1
-# 237 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
-# 238 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
-# 239 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
 # 240 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+	addobject WOLTIA_SINVESTA_EMPLOYEE
 # 241 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_2
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_SinvestaTalkToPlayer_Movement_0
+# 242 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_0
 # 243 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
+	playse SE_PIN
 # 244 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_SinvestaTalkToPlayer_Movement_2
+	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_1
 # 245 "data/maps/Vulias_Woltia_City/scripts.pory"
-	delay 10
+	delay 20
 # 246 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_3
+	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0
 # 247 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement WOLTIA_SINVESTA_EMPLOYEE
+	waitmovement WOLTIA_AERODROME_BLOCKER
 # 248 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_4
+	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_JordanGoToIgris_Movement_0
 # 249 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement WOLTIA_SINVESTA_EMPLOYEE
 # 250 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_SinvestaTalkToPlayer_Text_0
-# 251 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_3
-# 255 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
-# 256 "data/maps/Vulias_Woltia_City/scripts.pory"
-	setspeaker WoltiaCity_SinvestaTalkToPlayer_Text_4
-# 257 "data/maps/Vulias_Woltia_City/scripts.pory"
-	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_5
-# 270 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmessage
-# 271 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_5
-# 272 "data/maps/Vulias_Woltia_City/scripts.pory"
-	delay 10
-# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_SinvestaTalkToPlayer_Movement_6
-# 274 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
-# 275 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_7
-# 276 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_8
-# 278 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_SinvestaTalkToPlayer_Movement_9
-# 279 "data/maps/Vulias_Woltia_City/scripts.pory"
-	waitmovement
-# 280 "data/maps/Vulias_Woltia_City/scripts.pory"
-	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_4
-# 281 "data/maps/Vulias_Woltia_City/scripts.pory"
-	playse SE_DOOR
-# 282 "data/maps/Vulias_Woltia_City/scripts.pory"
-	removeobject WOLTIA_SINVESTA_EMPLOYEE
-# 283 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitse
-# 284 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 251 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_SinvestaTalkToPlayer_Text_0
+# 252 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_1
+# 254 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 255 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_JORDAN_TRIGGERTOURNEY, WoltiaCity_JordanGoToIgris_Movement_0
+# 256 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_JordanGoToIgris_Movement_1
+# 257 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0
+# 258 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_2
+# 260 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_SinvestaTalkToPlayer_Movement_2
+# 262 "data/maps/Vulias_Woltia_City/scripts.pory"
+	delay 10
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_3
+# 264 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement WOLTIA_SINVESTA_EMPLOYEE
+# 265 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_4
+# 266 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 267 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_SinvestaTalkToPlayer_Text_0
+# 268 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_3
+# 272 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_SinvestaTalkToPlayer_Text_4
+# 274 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_SinvestaTalkToPlayer_Text_5
+# 287 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 288 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_5
+# 289 "data/maps/Vulias_Woltia_City/scripts.pory"
+	closemessage
+# 290 "data/maps/Vulias_Woltia_City/scripts.pory"
+	delay 10
+# 291 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_SinvestaTalkToPlayer_Movement_6
+# 292 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement
-# 285 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 293 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_7
+# 294 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_SinvestaTalkToPlayer_Movement_8
+# 296 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_SINVESTA_EMPLOYEE, WoltiaCity_SinvestaTalkToPlayer_Movement_9
+# 297 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 298 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_AERODROME_BLOCKER, WoltiaCity_SinvestaTalkToPlayer_Movement_4
+# 299 "data/maps/Vulias_Woltia_City/scripts.pory"
+	playse SE_DOOR
+# 300 "data/maps/Vulias_Woltia_City/scripts.pory"
+	removeobject WOLTIA_SINVESTA_EMPLOYEE
+# 301 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitse
+# 302 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 303 "data/maps/Vulias_Woltia_City/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
 	return
 
 
-# 42 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Trigger01::
+# 308 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 309 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Trigger01_Movement_0
+# 310 "data/maps/Vulias_Woltia_City/scripts.pory"
+	goto WoltiaCity_InterviewAfterWoltiaWin
+	return
+
+
+WoltiaCity_InterviewAfterWoltiaWin_Trigger02::
+# 315 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 316 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Trigger02_Movement_0
+# 317 "data/maps/Vulias_Woltia_City/scripts.pory"
+	goto WoltiaCity_InterviewAfterWoltiaWin
+	return
+
+
+WoltiaCity_InterviewAfterWoltiaWin_Trigger03::
+# 322 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 323 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Trigger03_Movement_0
+# 324 "data/maps/Vulias_Woltia_City/scripts.pory"
+	goto WoltiaCity_InterviewAfterWoltiaWin
+	return
+
+
+WoltiaCity_InterviewAfterWoltiaWin_Trigger04::
+# 329 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Trigger04_Movement_0
+# 331 "data/maps/Vulias_Woltia_City/scripts.pory"
+	goto WoltiaCity_InterviewAfterWoltiaWin
+	return
+
+
+WoltiaCity_InterviewAfterWoltiaWin_Trigger05::
+# 336 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Trigger05_Movement_0
+# 338 "data/maps/Vulias_Woltia_City/scripts.pory"
+	goto WoltiaCity_InterviewAfterWoltiaWin
+	return
+
+
+WoltiaCity_InterviewAfterWoltiaWin::
+# 343 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_INTERVIEW01_INTERVIEWER, WoltiaCity_InterviewAfterWoltiaWin_Movement_0
+# 344 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_INTERVIEW01_CAMERAMAN, WoltiaCity_InterviewAfterWoltiaWin_Movement_0
+# 345 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 346 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Movement_1
+# 347 "data/maps/Vulias_Woltia_City/scripts.pory"
+	playse SE_PIN
+# 348 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitse
+# 349 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_InterviewAfterWoltiaWin_Text_0
+# 350 "data/maps/Vulias_Woltia_City/scripts.pory"
+	call BattleHall_EventScript_InterviewStart
+# 351 "data/maps/Vulias_Woltia_City/scripts.pory"
+	lock
+# 352 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setspeaker WoltiaCity_InterviewAfterWoltiaWin_Text_0
+# 353 "data/maps/Vulias_Woltia_City/scripts.pory"
+	msgbox WoltiaCity_InterviewAfterWoltiaWin_Text_1
+# 355 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmessage
+# 356 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, WoltiaCity_InterviewAfterWoltiaWin_Movement_2
+# 357 "data/maps/Vulias_Woltia_City/scripts.pory"
+	closemessage
+# 358 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_INTERVIEW01_INTERVIEWER, WoltiaCity_InterviewAfterWoltiaWin_Movement_3
+# 360 "data/maps/Vulias_Woltia_City/scripts.pory"
+	delay 30
+# 361 "data/maps/Vulias_Woltia_City/scripts.pory"
+	applymovement WOLTIA_INTERVIEW01_CAMERAMAN, WoltiaCity_InterviewAfterWoltiaWin_Movement_3
+# 362 "data/maps/Vulias_Woltia_City/scripts.pory"
+	waitmovement WOLTIA_INTERVIEW01_CAMERAMAN
+# 363 "data/maps/Vulias_Woltia_City/scripts.pory"
+	removeobject WOLTIA_INTERVIEW01_CAMERAMAN
+# 364 "data/maps/Vulias_Woltia_City/scripts.pory"
+	removeobject WOLTIA_INTERVIEW01_INTERVIEWER
+# 365 "data/maps/Vulias_Woltia_City/scripts.pory"
+	setvar VAR_INTERVIEWS_STORY, 4
+# 366 "data/maps/Vulias_Woltia_City/scripts.pory"
+	release
+	return
+
+
+# 54 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_0:
-# 42 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 54 "data/maps/Vulias_Woltia_City/scripts.pory"
 	emote_exclamation_mark
-# 42 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 54 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_right
 	step_end
 
-# 44 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 56 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_TriggerIfEnter_Movement_1:
-# 44 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 56 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 44 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 56 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_left
 	step_end
 
-# 140 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 152 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_EventScript_NoLeaveWhileFollower_Movement_0:
-# 140 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 152 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_up
 	step_end
 
-# 159 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_EventScript_NoLeaveWhileFollowerSouth_Movement_0:
-# 159 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
 	step_end
 
-# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 182 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_0:
-# 170 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 182 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_right
 	step_end
 
-# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 183 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_1:
-# 171 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 183 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_left
 	step_end
 
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_JordanGoToIgris_Movement_2:
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 212 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 224 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
 	step_end
 
-# 225 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 241 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_0:
-# 225 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 241 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_up
-# 225 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 241 "data/maps/Vulias_Woltia_City/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 228 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_1:
-# 228 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
 	step_end
 
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_2:
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_up
-# 244 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 261 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_down
 	step_end
 
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_3:
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_up
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 246 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 263 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_up
 	step_end
 
-# 248 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 265 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_4:
-# 248 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 265 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_right
-# 248 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 265 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_down
 	step_end
 
-# 271 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 288 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_5:
-# 271 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 288 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 271 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 288 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_up
 	step_end
 
-# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 291 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_6:
-# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 291 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 291 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 291 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
 	step_end
 
-# 275 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 293 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_7:
-# 275 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 293 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 275 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 293 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_right
 	step_end
 
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_8:
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_down
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_up
-# 277 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 295 "data/maps/Vulias_Woltia_City/scripts.pory"
 	face_left
 	step_end
 
-# 278 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 296 "data/maps/Vulias_Woltia_City/scripts.pory"
 WoltiaCity_SinvestaTalkToPlayer_Movement_9:
-# 278 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 296 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_left
-# 278 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 296 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 296 "data/maps/Vulias_Woltia_City/scripts.pory"
 	walk_up
+	step_end
+
+# 309 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Trigger01_Movement_0:
+# 309 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_right
+# 309 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 309 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+	step_end
+
+# 316 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Trigger02_Movement_0:
+# 316 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 316 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+	step_end
+
+# 323 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Trigger03_Movement_0:
+# 323 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 323 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 323 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+	step_end
+
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Trigger04_Movement_0:
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 330 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+	step_end
+
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Trigger05_Movement_0:
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_left
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 337 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+	step_end
+
+# 343 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Movement_0:
+# 343 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_right
+	step_end
+
+# 346 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Movement_1:
+# 346 "data/maps/Vulias_Woltia_City/scripts.pory"
+	emote_exclamation_mark
+# 346 "data/maps/Vulias_Woltia_City/scripts.pory"
+	face_left
+	step_end
+
+# 356 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Movement_2:
+# 356 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_up
+# 356 "data/maps/Vulias_Woltia_City/scripts.pory"
+	face_down
+	step_end
+
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+WoltiaCity_InterviewAfterWoltiaWin_Movement_3:
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_right
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
+# 359 "data/maps/Vulias_Woltia_City/scripts.pory"
+	walk_down
 	step_end
 
 WoltiaCity_EventScript_AerodromeBlockers_Text_0:
-# 29 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 41 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Guard$"
 
 WoltiaCity_EventScript_AerodromeBlockers_Text_1:
-# 30 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 42 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Not allowed in when there's no match\n"
 	.string "going on.\p"
 	.string "Come back another time.$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_0:
-# 52 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 64 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Jordan$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_1:
-# 56 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 68 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Ready to go? They are letting in\n"
 	.string "tournament entrants now!$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_2:
-# 66 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 78 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Nice! I'm excited about this!\p"
 	.string "You bet we'll see each other at the end!\n"
 	.string "I won't let you get me this time!$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_3:
-# 78 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 90 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Got it! You should definitely hurry, I\n"
 	.string "don't want you to miss it!$"
 
 WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4:
-# 87 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 99 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "{PLAYER}! The tournament is still not\n"
 	.string "set to start for a little bit, we have\l"
 	.string "some time to kill.\p"
@@ -562,20 +802,20 @@ WoltiaCity_EventScript_JordanTriggerOldRuinVisit_Text_4:
 	.string "Lead the way! It's just up ahead!$"
 
 WoltiaCity_EventScript_JordanFollowerKeeganEncounter_Text_0:
-# 120 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 132 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Let's go to the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}! It's just to\n"
 	.string "the right of the giant building right\l"
 	.string "there!$"
 
 WoltiaCity_EventScript_NoLeaveWhileFollower_Text_0:
-# 134 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 146 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Where you going? It won't take long,\n"
 	.string "let's go check out the {COLOR RED}Old Ruin{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!\p"
 	.string "It's just to right of the giant building\n"
 	.string "on the north side of the city!$"
 
 WoltiaCity_JordanGoToIgris_Text_0:
-# 174 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 186 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "You did it again {PLAYER}!\n"
 	.string "I've just got to keep getting stronger\l"
 	.string "so I can beat you one day! Your\l"
@@ -584,7 +824,7 @@ WoltiaCity_JordanGoToIgris_Text_0:
 	.string "news, it's very rare tha-$"
 
 WoltiaCity_JordanGoToIgris_Text_1:
-# 184 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 196 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "So, what did they say!\p"
 	.string "...\p"
 	.string "Oh man! That's amazing news! If they've\n"
@@ -609,32 +849,32 @@ WoltiaCity_JordanGoToIgris_Text_1:
 	.string "you later!$"
 
 WoltiaCity_SinvestaTalkToPlayer_Text_0:
-# 234 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 251 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "???$"
 
 WoltiaCity_SinvestaTalkToPlayer_Text_1:
-# 235 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 252 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "{PLAYER}, if I could have a moment of\n"
 	.string "your time, please.$"
 
 WoltiaCity_SinvestaTalkToPlayer_Text_2:
-# 241 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 258 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Ooo, look at you! You're really making\n"
 	.string "waves! I'll wait here!$"
 
 WoltiaCity_SinvestaTalkToPlayer_Text_3:
-# 251 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 268 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Ahem, thank you for your time. I am a\n"
 	.string "representative of {COLOR RED}Sinvesta, the\l"
 	.string "organization behind the tournament you\l"
 	.string "have just participated in.$"
 
 WoltiaCity_SinvestaTalkToPlayer_Text_4:
-# 256 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 273 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Sinvesta Representative$"
 
 WoltiaCity_SinvestaTalkToPlayer_Text_5:
-# 257 "data/maps/Vulias_Woltia_City/scripts.pory"
+# 274 "data/maps/Vulias_Woltia_City/scripts.pory"
 	.string "Seeing as you have now won both the\n"
 	.string "Palladium and Aerodrome tournaments, I\l"
 	.string "wanted to congratulate you personally.\p"
@@ -645,3 +885,12 @@ WoltiaCity_SinvestaTalkToPlayer_Text_5:
 	.string "in other locations, as well. We'll be\l"
 	.string "watching you with great interest.\p"
 	.string "Have a good day, {PLAYER}.$"
+
+WoltiaCity_InterviewAfterWoltiaWin_Text_0:
+# 349 "data/maps/Vulias_Woltia_City/scripts.pory"
+	.string "Interviewer$"
+
+WoltiaCity_InterviewAfterWoltiaWin_Text_1:
+# 353 "data/maps/Vulias_Woltia_City/scripts.pory"
+	.string "Thank you for your time! We hope to see\n"
+	.string "you again soon!$"

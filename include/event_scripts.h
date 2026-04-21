@@ -405,7 +405,15 @@ extern const u8 gTVBattleHallWinWoltiaText01[];
 extern const u8 gTVBattleHallWinWoltiaText02[];
 extern const u8 gTVBattleHallWinWoltiaText03[];
 extern const u8 gTVBattleHallWinWoltiaText04[];
-extern const u8 gTVBattleHallWinWoltiaText05[];
+
+extern const u8 gTVBattleHallWinGerbonText00[];
+extern const u8 gTVBattleHallWinGerbonText01[];
+extern const u8 gTVBattleHallWinGerbonText02[];
+extern const u8 gTVBattleHallWinGerbonText03[];
+extern const u8 gTVBattleHallWinGerbonText04[];
+extern const u8 gTVBattleHallWinGerbonText05[];
+
+extern const u8 gTVBattleHallWinCommonOutro[];
 
 //field effects
 extern const u8 EventScript_UseStrength[];

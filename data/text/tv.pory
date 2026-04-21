@@ -3045,7 +3045,58 @@ text gTVBattleHallWinWoltiaText04 {
     future!"
 }
 
-text gTVBattleHallWinWoltiaText05 {
+// Gerbon Interview Show
+text gTVBattleHallWinGerbonText00 {
+    "Thank you for tuning in to The Vulias
+    Battlers Network, the most trusted
+    source for the world of Battling!
+    
+    We interviewed {PLAYER} today, who
+    defeated {COLOR RED}Julia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} in the Gerbon Town
+	Showcase Tournament!"
+}
+
+text gTVBattleHallWinGerbonText01 {
+    "{PLAYER} told us that they are a
+	very experienced Pokemon Trainer
+	from the Alola Region! How exciting!
+	
+	With the level of prowess we saw today,
+	one can only guess how far they'll go!"
+}
+
+text gTVBattleHallWinGerbonText02 {
+    "{PLAYER} says they know a few things
+	about Pokemon Battles, but that they
+	certainly have more to learn. As it
+	turns out, what they already know was
+	plenty!"
+}
+
+text gTVBattleHallWinGerbonText03 {
+    "{PLAYER} let us know that they have
+	nearly no experience with battling! Was
+	this victory a fluke? If not, what does
+	that mean for our Battle Aces?"
+}
+
+text gTVBattleHallWinGerbonText04 {
+    "After their battle with {COLOR RED}Julia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY},
+    {PLAYER} reports they felt feelings
+	of {STR_VAR_1}.
+
+    That speaks volumes!"
+}
+
+text gTVBattleHallWinGerbonText05 {
+    "{PLAYER}'s {STR_VAR_1} worked
+    hard to seal the victory, and we hope
+	we continue to see more from this
+	fine trainer, and their Pokemon!"
+}
+
+// Common Outro for Battle Hall TV Show
+text gTVBattleHallWinCommonOutro {
     "That's all for today folks! Stay tuned
     for the latest updates on the Showcase
     Tournaments! Thank you again for
