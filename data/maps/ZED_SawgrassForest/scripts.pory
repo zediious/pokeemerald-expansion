@@ -361,6 +361,9 @@ script SawgrassForest_KowtowEncounter {
     playse(SE_PIN)
     waitmovement
     waitse
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    applymovement(OBJ_EVENT_ID_NPC_FOLLOWER, moves(face_left))
+    waitmovement
 
     setspeaker("Kowtow Grunt 1")
     msgbox(
@@ -425,6 +428,7 @@ script Sawgrass_Kowtow_Whiteout {
 script Sawgrass_Kowtow_AfterBattle {
     playbgm(MUS_ENCOUNTER_AQUA, FALSE)
     lock
+    special(HealPlayerParty)
     setspeaker("Kowtow Grunt 1")
     msgbox("No good, use the smokescreen!")
     waitmessage
@@ -498,8 +502,8 @@ script Sawgrass_Kowtow_AfterBattle {
         Ah well, I'm not sure we would be able to
         restrain them anyways. In any case, it's
         good that you got that {COLOR RED}Exp Share{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!
-        will definitely be useful! Lucky for
-        me, I already have one!
+        That will definitely be useful! Lucky
+        for me, I already have one!
 
         ...
         

@@ -66,7 +66,8 @@ script LittlerootTown_EventScript_JordanRememberTrainers{
     applymovement(JordanInHome, moves(
         emote_exclamation_mark
     ))
-    delay(60)
+    playse(SE_PIN)
+    waitse
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     applymovement(JordanInHome, moves(
         walk_up,
@@ -142,8 +143,8 @@ script SawgrassVillage_AwakenAfterRoute110 {
             we're gonna have great battles!
             
             The {COLOR RED}Showcase Tournament{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} for {COLOR RED}The
-            Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}is starting today! I'm going to
-            make my way over there.
+            Palladium{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is starting today! I'm going
+            to make my way over there.
             
             You can take your time, do a bit of
             training if you want! Meet me at the
