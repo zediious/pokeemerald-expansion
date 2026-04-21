@@ -38,6 +38,7 @@
 #define TVSHOW_BATTLE_UPDATE                        10
 #define TVSHOW_FAN_CLUB_SPECIAL                     11
 #define TVSHOW_LILYCOVE_CONTEST_LADY                12
+#define TVSHOW_VULIAS_BATTLEHALL                    13
 //
 #define TVGROUP_NORMAL_END                          20
 

@@ -130,6 +130,7 @@ static void InterviewAfter_RecentHappenings(void);
 static void InterviewAfter_PkmnFanClubOpinions(void);
 static void InterviewAfter_BravoTrainerPokemonProfile(void);
 static void InterviewAfter_BravoTrainerBattleTowerProfile(void);
+static void InterviewAfter_BattleHallWin(void);
 static void InterviewAfter_ContestLiveUpdates(void);
 static void InitWorldOfMastersShowAttempt(void);
 static void TryPutPokemonTodayFailedOnTheAir(void);
@@ -151,10 +152,12 @@ static void InterviewBefore_RecentHappenings(void);
 static void InterviewBefore_PkmnFanClubOpinions(void);
 static void InterviewBefore_Dummy(void);
 static void InterviewBefore_BravoTrainerBTProfile(void);
+static void InterviewBefore_BattleHallWin(void);
 static void InterviewBefore_ContestLiveUpdates(void);
 static void InterviewBefore_3CheersForPokeblocks(void);
 static void InterviewBefore_FanClubSpecial(void);
 static void ChangeBoxPokemonNickname_CB(void);
+static void DoTVShowBattleHallWin(void);
 static void DoTVShowPokemonFanClubLetter(void);
 static void DoTVShowRecentHappenings(void);
 static void DoTVShowPokemonFanClubOpinions(void);
@@ -433,6 +436,15 @@ static const u8 *const sTVContestLiveUpdatesTextGroup[] = {
     [CONTESTLIVE_STATE_REPEATED_APPEALS]      = ContestLiveUpdates_Text_RepeatedAppeals,
     [CONTESTLIVE_STATE_LOST]                  = ContestLiveUpdates_Text_ValiantEffortButLost,
     [CONTESTLIVE_STATE_OUTRO]                 = ContestLiveUpdates_Text_Outro
+};
+
+static const u8 *const sTVBattleHallWinWoltiaTextGroup[] = {
+    gTVBattleHallWinWoltiaText00,
+    gTVBattleHallWinWoltiaText01,
+    gTVBattleHallWinWoltiaText02,
+    gTVBattleHallWinWoltiaText03,
+    gTVBattleHallWinWoltiaText04,
+    gTVBattleHallWinWoltiaText05
 };
 
 static const u8 *const sTVPokemonBattleUpdateTextGroup[] = {
@@ -1080,6 +1092,9 @@ void InterviewAfter(void)
 {
     switch (gSpecialVar_0x8005)
     {
+    case TVSHOW_VULIAS_BATTLEHALL:
+        InterviewAfter_BattleHallWin();
+        break;
     case TVSHOW_FAN_CLUB_LETTER:
         InterviewAfter_FanClubLetter();
         break;
@@ -1496,6 +1511,21 @@ static void InterviewAfter_BravoTrainerBattleTowerProfile(void)
         show->bravoTrainerTower.opponentLanguage = LANGUAGE_JAPANESE;
     else
         show->bravoTrainerTower.opponentLanguage = gSaveBlock2Ptr->frontier.towerInterview.opponentLanguage;
+}
+
+static void InterviewAfter_BattleHallWin(void)
+{
+    TVShow *show = &gSaveBlock1Ptr->tvShows[sCurTVShowSlot];
+    show->battleHallWin.kind = TVSHOW_VULIAS_BATTLEHALL;
+    show->battleHallWin.active = TRUE;
+    show->battleHallWin.species = gSaveBlock2Ptr->frontier.towerInterview.playerSpecies;
+    show->battleHallWin.satisfied = gSpecialVar_0x8003;
+    StorePlayerIdInNormalShow(show);
+}
+
+void SaveBattleHallInterviewData(void)
+{
+    gSaveBlock2Ptr->frontier.towerInterview.playerSpecies = GetMonData(GetBattlerMon(0), MON_DATA_SPECIES);
 }
 
 void TryPutSmartShopperOnAir(void)
@@ -2881,6 +2911,9 @@ void InterviewBefore(void)
     gSpecialVar_Result = FALSE;
     switch (gSpecialVar_0x8005)
     {
+    case TVSHOW_VULIAS_BATTLEHALL:
+        InterviewBefore_BattleHallWin();
+        break;
     case TVSHOW_FAN_CLUB_LETTER:
         InterviewBefore_FanClubLetter();
         break;
@@ -2982,6 +3015,14 @@ static void InterviewBefore_BravoTrainerBTProfile(void)
     if (!gSpecialVar_Result)
         InitializeEasyChatWordArray(gSaveBlock1Ptr->tvShows[sCurTVShowSlot].bravoTrainerTower.words,
                         ARRAY_COUNT(gSaveBlock1Ptr->tvShows[sCurTVShowSlot].bravoTrainerTower.words));
+}
+
+static void InterviewBefore_BattleHallWin(void)
+{
+    TryReplaceOldTVShowOfKind(TVSHOW_VULIAS_BATTLEHALL);
+    if (!gSpecialVar_Result)
+        InitializeEasyChatWordArray(gSaveBlock1Ptr->tvShows[sCurTVShowSlot].battleHallWin.words,
+                        ARRAY_COUNT(gSaveBlock1Ptr->tvShows[sCurTVShowSlot].battleHallWin.words));
 }
 
 static void InterviewBefore_FanClubSpecial(void)
@@ -4168,6 +4209,9 @@ void DoTVShow(void)
     {
         switch (gSaveBlock1Ptr->tvShows[gSpecialVar_0x8004].common.kind)
         {
+        case TVSHOW_VULIAS_BATTLEHALL:
+            DoTVShowBattleHallWin();
+            break;
         case TVSHOW_FAN_CLUB_LETTER:
             DoTVShowPokemonFanClubLetter();
             break;
@@ -4265,6 +4309,50 @@ void DoTVShow(void)
             DoTVShowLilycoveContestLady();
             break;
         }
+    }
+}
+
+static void DoTVShowBattleHallWin(void)
+{
+    TVShow *show;
+    u8 state;
+
+    show = &gSaveBlock1Ptr->tvShows[gSpecialVar_0x8004];
+    gSpecialVar_Result = FALSE;
+    state = sTVShowState;
+    switch (state)
+    {
+        case 0:
+            if (show->battleHallWin.satisfied == 0)
+                sTVShowState = 1;
+            else
+                sTVShowState = 2;
+            break;
+        case 1:
+            sTVShowState = 3;
+            break;
+        case 2:
+            sTVShowState = 3;
+            break;
+        case 3:
+            CopyEasyChatWord(gStringVar1, show->battleHallWin.words[0]);
+            sTVShowState = 4;
+            break;
+        case 4:
+            StringCopy(gStringVar1, GetSpeciesName(show->battleHallWin.species));
+            sTVShowState = 5;
+            break;
+        case 5:
+            sTVShowState = 6;
+            TVShowDone();
+            break;
+    }
+
+    switch (VarGet(VAR_INTERVIEWS_STORY))
+    {
+        case 2: // Woltia
+            ShowFieldMessage(sTVBattleHallWinWoltiaTextGroup[state]);
+            break;
     }
 }
 

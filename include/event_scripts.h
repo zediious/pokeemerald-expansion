@@ -399,6 +399,14 @@ extern const u8 SecretBase_Text_Trainer7Defeated[];
 extern const u8 SecretBase_Text_Trainer8Defeated[];
 extern const u8 SecretBase_Text_Trainer9Defeated[];
 
+// New Interview text data
+extern const u8 gTVBattleHallWinWoltiaText00[];
+extern const u8 gTVBattleHallWinWoltiaText01[];
+extern const u8 gTVBattleHallWinWoltiaText02[];
+extern const u8 gTVBattleHallWinWoltiaText03[];
+extern const u8 gTVBattleHallWinWoltiaText04[];
+extern const u8 gTVBattleHallWinWoltiaText05[];
+
 //field effects
 extern const u8 EventScript_UseStrength[];
 extern const u8 EventScript_FailSweetScent[];

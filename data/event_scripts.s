@@ -1739,6 +1739,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/special_vending.inc"
+	.include "data/scripts/interview_battlehall.inc"
 
 	.include "data/maps/ZED_LittlerootTown_Test01_1F/scripts.inc"
 

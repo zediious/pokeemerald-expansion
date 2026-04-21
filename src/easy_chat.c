@@ -644,6 +644,18 @@ static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
         .confirmText2 = gText_IsAsShownOkay,
     },
     {
+        .type = EASY_CHAT_TYPE_BATTLE_HALL_INTERVIEW,
+        .numColumns = 1,
+        .numRows = 1,
+        .frameId = FRAMEID_INTERVIEW_SHOW_PERSON,
+        .fourFooterOptions = FALSE,
+        .titleText = gText_Interview,
+        .instructionsText1 = gText_FindWordsThatDescribeYour,
+        .instructionsText2 = gText_FeelingsRightNow,
+        .confirmText1 = gText_TheAnswer,
+        .confirmText2 = gText_IsAsShownOkay,
+    },
+    {
         .type = EASY_CHAT_TYPE_CONTEST_INTERVIEW,
         .numColumns = 1,
         .numRows = 1,
@@ -1419,6 +1431,9 @@ void ShowEasyChatScreen(void)
     u8 displayedPersonType = EASY_CHAT_PERSON_DISPLAY_NONE;
     switch (gSpecialVar_0x8004)
     {
+    case EASY_CHAT_TYPE_BATTLE_HALL_INTERVIEW:
+        words = gSaveBlock1Ptr->tvShows[gSpecialVar_0x8005].battleHallWin.words;
+        break;
     case EASY_CHAT_TYPE_PROFILE:
         words = gSaveBlock1Ptr->easyChatProfile;
         break;

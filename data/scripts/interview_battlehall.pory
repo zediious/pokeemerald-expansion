@@ -1,0 +1,123 @@
+script BattleHall_EventScript_InterviewStart
+{
+    lock
+    setvar(VAR_0x8005, TVSHOW_VULIAS_BATTLEHALL)
+    special(InterviewBefore)
+    setspeaker("Interviewer")
+    switch (var(VAR_INTERVIEWS_STORY))
+    {
+        case 1: // Woltia
+            msgbox
+            (
+                "Hello! We're with the Vulias Battlers
+                Network, the entire region is in a buzz
+                over your victory! Beating two {COLOR RED}Battle
+                Aces{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is no small feat!
+                
+                Can we get a few quick words from you
+                about the battle?", MSGBOX_YESNO
+            )
+    }
+
+    waitmessage
+    if (var(VAR_RESULT) == YES)
+    {
+        goto(BattleHall_EventScript_AcceptInterview)
+    }
+
+    goto(BattleHall_EventScript_DeclineInterview)
+}
+
+script BattleHall_EventScript_AcceptInterview
+{
+    msgbox
+    (
+        "Fantastic, thank you!
+        Did you think you might lose in your
+        battle against {COLOR RED}Candace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, or were you
+        confident you would win from the start?"
+    )
+    waitmessage
+    setspeaker("Interviewer")
+    dynmultipush("Confident", 0)
+    dynmultipush("It was a challenge", 1)
+    dynmultistack(0, 0, TRUE, 2, FALSE, 1, 0)
+    if (var(VAR_RESULT) == 0) // gg ez
+    {
+        msgbox
+        (
+            "Such confidence! Many people think
+            that the {COLOR RED}Battle Aces{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} may not be the
+            strongest trainers. You're proving it
+            with your actions, and with such a
+            strong statement!"
+        )
+    }
+    else // Challenge
+    {
+        msgbox
+        (
+            "No surpise there! There is a good
+            reason that the {COLOR RED}Battle Aces{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are known
+            strongest trainers in Vulias! Despite
+            that, you managed to defeat two!"
+        )
+    }
+    waitmessage
+    setspeaker("Interviewer")
+    msgbox
+    (
+        "One more question, if I may! If you were
+        to describe your battle with {COLOR RED}Candace{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}
+        with one word, what would that word be?"
+    )
+    waitmessage
+    setvar(VAR_0x8004, EASY_CHAT_TYPE_BATTLE_HALL_INTERVIEW)
+    copyvar(VAR_RESULT, VAR_0x8003)
+    copyvar(VAR_0x8005, VAR_0x8009)
+    call(Common_ShowEasyChatScreen)
+    lock
+
+    switch (var(VAR_RESULT))
+    {
+        case 1:
+            setspeaker("Interviewer")
+            msgbox
+            (
+                "Amazing! That one statement, it sums it
+                all up perfectly!"
+            )
+            setflag(FLAG_TEMP_2)
+            copyvar(VAR_0x8004, VAR_0x8008)
+        case 0:
+            setspeaker("Interviewer")
+            msgbox
+            (
+                "Ahh, the silent type? It pays sometimes
+                to keep them guessing!"
+            )
+    }
+    waitmessage
+    setvar(VAR_0x8005, TVSHOW_VULIAS_BATTLEHALL)
+    goto(BattleHall_EventScript_EndInterview)
+}
+
+script BattleHall_EventScript_DeclineInterview
+{
+    setspeaker("Interviewer")
+    msgbox
+    (
+        "Oh...apologies for the disturbance! We
+        hope to have an interview with you next
+        time!"
+    )
+    waitmessage
+    goto(BattleHall_EventScript_EndInterview)
+}
+
+script BattleHall_EventScript_EndInterview
+{
+    special(InterviewAfter)
+    incrementgamestat(GAME_STAT_GOT_INTERVIEWED)
+    release
+}

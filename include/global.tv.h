@@ -490,6 +490,16 @@ typedef union // size = 0x24
         /*0x18*/ u8 language;
         /*0x19*/ //u8 padding;
     } massOutbreak;
+
+    // Battle Hall Win
+    // TVSHOW_VULIAS_BATTLEHALL
+    struct {
+        u8 kind;
+        bool8 active;
+        u16 species;
+        bool8 satisfied;
+        u16 words[1];
+    } battleHallWin;
 } TVShow;
 
 typedef struct

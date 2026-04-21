@@ -5741,6 +5741,7 @@ static void HandleEndTurn_FinishBattle(void)
                 }
             }
             TryPutPokemonTodayOnAir();
+            SaveBattleHallInterviewData();
         }
 
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
