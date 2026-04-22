@@ -34,6 +34,7 @@
 // Geodude
 TEST("Evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution to 3rd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 45, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -49,6 +50,7 @@ TEST("Evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution to 3rd stage")
 // Geodude
 TEST("Evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution lines to 2nd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 39, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -64,6 +66,7 @@ TEST("Evolves (EVO_LEVEL -> ! EVO_LEVEL) type evolution lines to 2nd stage")
 // Geodude
 TEST("Does not evolve (EVO_LEVEL -> ! EVO_LEVEL) type evolution if level not met for 2nd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -81,6 +84,7 @@ TEST("Does not evolve (EVO_LEVEL -> ! EVO_LEVEL) type evolution if level not met
 // Happiny
 TEST("Evolves (! EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 25, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -96,6 +100,7 @@ TEST("Evolves (! EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
 // Happiny
 TEST("Selects 1st or 2nd stage in (! EVO_LEVEL -> EVO_LEVEL) type evolution if not reaching 3rd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 17, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -136,6 +141,7 @@ TEST("Selects 1st or 2nd stage in (! EVO_LEVEL -> EVO_LEVEL) type evolution if n
 // Charmander
 TEST("Evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -151,6 +157,7 @@ TEST("Evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 3rd stage")
 // Charmander
 TEST("Evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 2nd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -166,6 +173,7 @@ TEST("Evolves (EVO_LEVEL -> EVO_LEVEL) type evolution to 2nd stage")
 // Charmander
 TEST("Does not evolve (EVO_LEVEL -> EVO_LEVEL) type evolution if level not met for 2nd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 15, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -183,6 +191,7 @@ TEST("Does not evolve (EVO_LEVEL -> EVO_LEVEL) type evolution if level not met f
 // Hippopotas
 TEST("Evolves 2 stage EVO_LEVEL type evolution to 2rd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 38, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -198,6 +207,7 @@ TEST("Evolves 2 stage EVO_LEVEL type evolution to 2rd stage")
 // Hippopotas
 TEST("Does not evolve 2 stage EVO_LEVEL type evolution if level not met for 2nd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 33, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -215,6 +225,7 @@ TEST("Does not evolve 2 stage EVO_LEVEL type evolution if level not met for 2nd 
 // Capsakid
 TEST("Selects either stage in two stage ! EVO_LEVEL type evolution")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -257,6 +268,7 @@ TEST("Selects either stage in two stage ! EVO_LEVEL type evolution")
 // Eevee
 TEST("Selects Eevee and evos when evolving")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -336,6 +348,7 @@ TEST("Selects Eevee and evos when evolving")
 // Tyrogue
 TEST("Tyrogue does not evolve with levelCeil < 20")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 19, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -378,6 +391,7 @@ TEST("Tyrogue does not evolve with levelCeil < 20")
 // Tyrogue
 TEST("Selects only evos of Tyrogue when evolving at level >= 20")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 20, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -426,6 +440,7 @@ TEST("Selects only evos of Tyrogue when evolving at level >= 20")
 // Oddish
 TEST("Evolves to either ! EVO_LEVEL 3rd evo in 3 stage evo where 3rd evo is a divergent")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -467,6 +482,7 @@ TEST("Evolves to either ! EVO_LEVEL 3rd evo in 3 stage evo where 3rd evo is a di
 // Ralts
 TEST("Evolves to either ! EVO_LEVEL or EVO_LEVEL 3rd evo in 3 stage evo where 3rd evo is a divergent and 2nd stage can evolve")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 34, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -507,6 +523,7 @@ TEST("Evolves to either ! EVO_LEVEL or EVO_LEVEL 3rd evo in 3 stage evo where 3r
 // Ralts
 TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only chooses ! EVO_LEVEL or 2nd stage if levelCeil >= 20 and <= 30")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 29, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -547,6 +564,7 @@ TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only
 // Ralts
 TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only chooses 1st stage if 1st stage cannot evolve to EVO_LEVEL 2nd stage")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 19, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -584,6 +602,7 @@ TEST("3 stage line with 3rd stage being divergent ! EVO_LEVEL and EVO_LEVEL only
 // Porygon
 TEST("Selects either ! EVO_LEVEL stage or does not evolve when all stages of 3 stage evo are ! EVO_LEVEL")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 40, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -632,6 +651,7 @@ TEST("Selects either ! EVO_LEVEL stage or does not evolve when all stages of 3 s
 // Nincada
 TEST("Evolves Shedinja or Ninjask from Nincada when player level ceiling >= 20")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -674,6 +694,7 @@ TEST("Evolves Shedinja or Ninjask from Nincada when player level ceiling >= 20")
 // Nincada
 TEST("Does not evolve Shedinja or Ninjask from Nincada when player level ceiling <= 20")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 19, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -690,6 +711,7 @@ TEST("Does not evolve Shedinja or Ninjask from Nincada when player level ceiling
 
 TEST("Will never scale trainer mon level to player ceiling if more than one mon is in trainer party")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 24, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -735,6 +757,7 @@ TEST("Will never scale trainer mon level to player ceiling if more than one mon 
 
 TEST("Will always scale trainer mon level to player ceiling if trainer only has one mon in party")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 67, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -768,6 +791,7 @@ TEST("Will always scale trainer mon level to player ceiling if trainer only has 
 
 TEST("Will never lower a trainer mon level, and will not evolve them if so")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 25, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -783,6 +807,7 @@ TEST("Will never lower a trainer mon level, and will not evolve them if so")
 
 TEST("Will not scale trainer mons if player level ceiling < 10")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 9, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -797,6 +822,7 @@ TEST("Will not scale trainer mons if player level ceiling < 10")
 
 TEST("Will not evolve Pokemon holding an Everstone or Eviolite, but will scale them")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 50, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -818,6 +844,7 @@ TEST("Will not evolve Pokemon holding an Everstone or Eviolite, but will scale t
 
 TEST("FLAG_SCALING_EXCLUDE_SCALE being set prevents Pokemon from scaling at all")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 90, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -834,6 +861,7 @@ TEST("FLAG_SCALING_EXCLUDE_SCALE being set prevents Pokemon from scaling at all"
 
 TEST("FLAG_SCALING_EXCLUDE_EVO being set allows Pokemon to scale, but it cannot evolve")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 90, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -853,6 +881,7 @@ TEST("FLAG_SCALING_EXCLUDE_EVO being set allows Pokemon to scale, but it cannot 
 
 TEST("Pokemon with no evolution do not evolve into anything with levelCeil == 100")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 100, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
@@ -879,6 +908,7 @@ TEST("Pokemon with no evolution do not evolve into anything with levelCeil == 10
 
 TEST("Test that a full party of six that all evolve differently scale and evolve as expected")
 {
+    gSaveBlock2Ptr->optionsScaleTrainers = 1;
     struct Pokemon playerMon;
     CreateMon(&playerMon, SPECIES_AIPOM, 70, 0, OTID_STRUCT_PRESET(0));
     gPlayerParty[0] = playerMon;
