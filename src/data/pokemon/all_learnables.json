@@ -1,5 +1,5 @@
 {
-    "INNAPE": [
+    "INNONK": [
     "MOVE_ALLY_SWITCH",
     "MOVE_ATTRACT",
     "MOVE_BODY_SLAM",
@@ -68,7 +68,7 @@
     "MOVE_VACUUM_WAVE",
     "MOVE_WORK_UP"
   ],
-  "INNAPE_REAL": [
+  "INNAPE": [
     "MOVE_ALLY_SWITCH",
     "MOVE_ATTRACT",
     "MOVE_BODY_SLAM",
