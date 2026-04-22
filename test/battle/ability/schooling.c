@@ -1,11 +1,11 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is 25-percent or less at the end of the turn")
+SINGLE_BATTLE_TEST("Schooling switches Level 15+ Wishiwashi's form when HP is 25-percent or less at the end of the turn")
 {
     u16 level;
-    PARAMETRIZE { level = 19; }
-    PARAMETRIZE { level = 20; }
+    PARAMETRIZE { level = 14; }
+    PARAMETRIZE { level = 15; }
 
     GIVEN {
         ASSUME(GetSpeciesBaseHP(SPECIES_WISHIWASHI_SOLO) == GetSpeciesBaseHP(SPECIES_WISHIWASHI_SCHOOL));
@@ -19,7 +19,7 @@ SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is 25
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE); MOVE(opponent, MOVE_SUPER_FANG); }
     } SCENE {
-        if (level >= 20)
+        if (level >= 15)
         {
             ABILITY_POPUP(player, ABILITY_SCHOOLING);
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FORM_CHANGE, player);
@@ -27,7 +27,7 @@ SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is 25
         MESSAGE("Wishiwashi used Celebrate!");
         MESSAGE("The opposing Wobbuffet used Super Fang!");
         HP_BAR(player);
-        if (level >= 20)
+        if (level >= 15)
         {
             ABILITY_POPUP(player, ABILITY_SCHOOLING);
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FORM_CHANGE, player);
@@ -37,14 +37,14 @@ SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is 25
     }
 }
 
-SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is over 25-percent before the first turn")
+SINGLE_BATTLE_TEST("Schooling switches Level 15+ Wishiwashi's form when HP is over 25-percent before the first turn")
 {
     u16 level;
     bool32 overQuarterHP;
-    PARAMETRIZE { level = 19; overQuarterHP = FALSE; }
-    PARAMETRIZE { level = 20; overQuarterHP = FALSE; }
-    PARAMETRIZE { level = 19; overQuarterHP = TRUE; }
-    PARAMETRIZE { level = 20; overQuarterHP = TRUE; }
+    PARAMETRIZE { level = 14; overQuarterHP = FALSE; }
+    PARAMETRIZE { level = 15; overQuarterHP = FALSE; }
+    PARAMETRIZE { level = 14; overQuarterHP = TRUE; }
+    PARAMETRIZE { level = 15; overQuarterHP = TRUE; }
 
     GIVEN {
         ASSUME(GetSpeciesBaseHP(SPECIES_WISHIWASHI_SOLO) == GetSpeciesBaseHP(SPECIES_WISHIWASHI_SCHOOL));
@@ -58,7 +58,7 @@ SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is ov
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE); MOVE(opponent, MOVE_CELEBRATE); }
     } SCENE {
-        if (level >= 20 && overQuarterHP)
+        if (level >= 15 && overQuarterHP)
         {
             ABILITY_POPUP(player, ABILITY_SCHOOLING);
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FORM_CHANGE, player);
@@ -66,18 +66,18 @@ SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is ov
         MESSAGE("Wishiwashi used Celebrate!");
         MESSAGE("The opposing Wobbuffet used Celebrate!");
     } THEN {
-        if (level >= 20 && overQuarterHP)
+        if (level >= 15 && overQuarterHP)
             EXPECT_EQ(player->species, SPECIES_WISHIWASHI_SCHOOL);
         else
             EXPECT_EQ(player->species, SPECIES_WISHIWASHI_SOLO);
     }
 }
 
-SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is healed above 25-percent")
+SINGLE_BATTLE_TEST("Schooling switches Level 15+ Wishiwashi's form when HP is healed above 25-percent")
 {
     u16 level;
-    PARAMETRIZE { level = 19; }
-    PARAMETRIZE { level = 20; }
+    PARAMETRIZE { level = 14; }
+    PARAMETRIZE { level = 15; }
 
     GIVEN {
         ASSUME(GetSpeciesBaseHP(SPECIES_WISHIWASHI_SOLO) == GetSpeciesBaseHP(SPECIES_WISHIWASHI_SCHOOL));
@@ -94,13 +94,13 @@ SINGLE_BATTLE_TEST("Schooling switches Level 20+ Wishiwashi's form when HP is he
         MESSAGE("Wishiwashi used Celebrate!");
         MESSAGE("The opposing Wobbuffet used Heal Pulse!");
         HP_BAR(player);
-        if (level >= 20)
+        if (level >= 15)
         {
             ABILITY_POPUP(player, ABILITY_SCHOOLING);
             ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_FORM_CHANGE, player);
         }
     } THEN {
-        if (level >= 20)
+        if (level >= 15)
             EXPECT_EQ(player->species, SPECIES_WISHIWASHI_SCHOOL);
         else
             EXPECT_EQ(player->species, SPECIES_WISHIWASHI_SOLO);
