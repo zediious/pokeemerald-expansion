@@ -950,10 +950,10 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     [SPECIES_BUNNELBY] =
     {
         .baseHP        = 38,
-        .baseAttack    = 36,
+        .baseAttack    = 46,
         .baseDefense   = 38,
-        .baseSpeed     = 57,
-        .baseSpAttack  = 32,
+        .baseSpeed     = 65,
+        .baseSpAttack  = 37,
         .baseSpDefense = 36,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
