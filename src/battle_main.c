@@ -3909,6 +3909,13 @@ static void DoBattleIntro(void)
                 {
                     BtlController_EmitTwoReturnValues(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), 1, B_ACTION_RUN, 0);
                     PlayerBufferExecCompleted(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+
+                    if (TryRunFromBattle(gBattlerAttacker))
+                    {
+                        gBattleMainFunc = HandleEndTurn_FinishBattle;
+                        FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
+                        break;
+                    }
                 } 
             }
             else
@@ -3941,17 +3948,6 @@ static void DoBattleIntro(void)
             }
             STARTING_STATUS_DEFINITIONS(UNPACK_STARTING_STATUS_TO_BATTLE);
             gBattleMainFunc = TryDoEventsBeforeFirstTurn;
-
-            // Trigger quick run if R_BUTTON was held during intro
-            if (FlagGet(FLAG_BATTLE_QUICKRUN_STATE))
-            {
-               if (TryRunFromBattle(gBattlerAttacker))
-                {
-                    gBattleMainFunc = HandleEndTurn_FinishBattle;
-                    FlagClear(FLAG_BATTLE_QUICKRUN_STATE);
-                    break;
-                } 
-            }
 
         }
         break;
