@@ -3134,16 +3134,20 @@ void BeginBattleIntro(void)
 
 static void BattleIntroQuickRun(void)
 {
-    if (JOY_HELD(R_BUTTON))
+    if (!FlagGet(FLAG_NO_RUNNING))
     {
-        FlagSet(FLAG_BATTLE_QUICKRUN_STATE);
-        PlaySE(SE_FLEE);
-        BtlController_Complete(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
-        PrepareStringBattle(STRINGID_RANAWAYQUICKLY, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
-        gBattleStruct->eventState.battleIntro = BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS;
+        if (JOY_HELD(R_BUTTON))
+        {
+            FlagSet(FLAG_BATTLE_QUICKRUN_STATE);
+            PlaySE(SE_FLEE);
+            BtlController_Complete(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+            PrepareStringBattle(STRINGID_RANAWAYQUICKLY, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+            gBattleStruct->eventState.battleIntro = BATTLE_INTRO_STATE_SET_DEX_AND_BATTLE_VARS;
+            return;
+        }
         return;
     }
-    return;
+    
 }
 
 bool32 InBattleChoosingMoves()
