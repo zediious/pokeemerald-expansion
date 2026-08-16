@@ -247,6 +247,7 @@ void DrawDialogueFrame(u8 windowId, bool8 copyToVram)
 {
     sTileNum = DLG_WINDOW_BASE_TILE_NUM;
     sPaletteNum = DLG_WINDOW_PALETTE_NUM;
+    FlagSet(FLAG_PREVENT_RUNTOGGLE);
     CallWindowFunction(windowId, GetWindowFunc_DialogueFrame());
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);

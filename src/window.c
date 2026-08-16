@@ -4,6 +4,7 @@
 #include "bg.h"
 #include "blit.h"
 #include "decompress.h"
+#include "event_data.h"
 
 COMMON_DATA void *gWindowBgTilemapBuffers[NUM_BACKGROUNDS] = {0};
 extern u32 gWindowTileAutoAllocEnabled;
@@ -219,6 +220,9 @@ void RemoveWindow(u32 windowId)
         BgTileAllocOp(bgLayer, gWindows[windowId].window.baseBlock, gWindows[windowId].window.width * gWindows[windowId].window.height, 2);
 
     gWindows[windowId].window = sDummyWindowTemplate;
+
+    FlagClear(FLAG_PREVENT_RUNTOGGLE);
+    VarSet(VAR_RUNTOGGLE_COUNTER, 5);
 
     if (GetNumActiveWindowsOnBg(bgLayer) == 0)
     {
