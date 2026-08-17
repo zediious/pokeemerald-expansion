@@ -69,6 +69,4 @@ __pycache__
 /tools/poryscript/poryscript
 
 rom2sp.sh
-/tilesetCompilePrimary.sh
-/tilesetCompileSecondary.sh
 /obstagoonBuild.sh
