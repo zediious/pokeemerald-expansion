@@ -8,7 +8,7 @@ TILESET_DIR=/home/jackd/Projects/ROM\ Hacking\ Work/_Assets/Custom/Art/Tilesets/
 cd "$TILESET_DIR/$1/"
 
 # Split image layers into new images
-wine gale-splitter.exe --noclip "$1.gal"
+gale-splitter.exe --noclip "$1.gal"
 
 # Remove the frame prefix
 cd "$1"
