@@ -3607,6 +3607,7 @@ static void DoBattleIntro(void)
         battler = gBattleCommunication[1];
         BtlController_EmitGetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_ALL_BATTLE, 0);
         MarkBattlerForControllerExec(battler);
+        FlagClear(FLAG_BATTLE_QUICKRUN_STATE); // Clear quickrun state
         gBattleStruct->eventState.battleIntro++;
         break;
     case BATTLE_INTRO_STATE_LOOP_BATTLER_DATA:
