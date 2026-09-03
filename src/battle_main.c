@@ -3134,7 +3134,7 @@ void BeginBattleIntro(void)
 
 static void BattleIntroQuickRun(void)
 {
-    if (!FlagGet(FLAG_NO_RUNNING))
+    if ((!FlagGet(FLAG_NO_RUNNING)) && (!FlagGet(FLAG_BATTLE_QUICKRUN_STATE)))
     {
         if (JOY_HELD(R_BUTTON))
         {
@@ -3607,6 +3607,7 @@ static void DoBattleIntro(void)
         battler = gBattleCommunication[1];
         BtlController_EmitGetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_ALL_BATTLE, 0);
         MarkBattlerForControllerExec(battler);
+        FlagClear(FLAG_BATTLE_QUICKRUN_STATE); // Clear quickrun state
         gBattleStruct->eventState.battleIntro++;
         break;
     case BATTLE_INTRO_STATE_LOOP_BATTLER_DATA:
@@ -3776,9 +3777,6 @@ static void DoBattleIntro(void)
         }
         break;
     case BATTLE_INTRO_STATE_WAIT_FOR_INTRO_TEXT:
-        if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_RECORDED | BATTLE_TYPE_RECORDED_LINK
-                                | BATTLE_TYPE_RECORDED_IS_MASTER | BATTLE_TYPE_LINK)))
-            BattleIntroQuickRun();
         if (!IsBattlerMarkedForControllerExec(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)))
         {
             if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -3793,6 +3791,9 @@ static void DoBattleIntro(void)
                     gBattleStruct->eventState.battleIntro = BATTLE_INTRO_STATE_WAIT_FOR_TRAINER_2_SEND_OUT_ANIM;
             }
         }
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_RECORDED | BATTLE_TYPE_RECORDED_LINK
+                                | BATTLE_TYPE_RECORDED_IS_MASTER | BATTLE_TYPE_LINK)))
+            BattleIntroQuickRun();
         break;
     case BATTLE_INTRO_STATE_TRAINER_SEND_OUT_TEXT:
         if (gBattleTypeFlags & BATTLE_TYPE_RECORDED_LINK && !(gBattleTypeFlags & BATTLE_TYPE_RECORDED_IS_MASTER))
