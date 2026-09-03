@@ -3134,7 +3134,7 @@ void BeginBattleIntro(void)
 
 static void BattleIntroQuickRun(void)
 {
-    if (!FlagGet(FLAG_NO_RUNNING))
+    if ((!FlagGet(FLAG_NO_RUNNING)) && (!FlagGet(FLAG_BATTLE_QUICKRUN_STATE)))
     {
         if (JOY_HELD(R_BUTTON))
         {
