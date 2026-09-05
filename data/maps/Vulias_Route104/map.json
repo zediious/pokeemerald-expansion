@@ -173,6 +173,13 @@
       "elevation": 0,
       "dest_map": "MAP_VULIAS_LIORDUN_TOWN",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 53,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_DIG_SITE_L1",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -186,5 +193,14 @@
       "script": "Route104_EventScript_MinerTrigger"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 52,
+      "y": 52,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Route104_EventScript_DigSiteSign"
+    }
+  ]
 }

@@ -9823,6 +9823,16 @@
       "secondary_tileset": "gTileset_LiordunHallExt",
       "border_filepath": "data/layouts/Vulias_Liordun_Town_BattleHall_Ext/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_Liordun_Town_BattleHall_Ext/map.bin"
+    },
+    {
+      "id": "LAYOUT_VULIAS_DIG_SITE_L1",
+      "name": "Vulias_DigSite_L1_Layout",
+      "width": 15,
+      "height": 40,
+      "primary_tileset": "gTileset_IgrisUnderground",
+      "secondary_tileset": "gTileset_Igris_Ruins",
+      "border_filepath": "data/layouts/Vulias_DigSite_L1/border.bin",
+      "blockdata_filepath": "data/layouts/Vulias_DigSite_L1/map.bin"
     }
   ]
 }

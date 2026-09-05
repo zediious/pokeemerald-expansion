@@ -1,0 +1,28 @@
+{
+  "id": "MAP_VULIAS_DIG_SITE_L1",
+  "name": "Vulias_DigSite_L1",
+  "layout": "LAYOUT_VULIAS_DIG_SITE_L1",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 2,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_VULIAS_ROUTE104",
+      "dest_warp_id": "4"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

@@ -152,7 +152,7 @@ script Route104_EventScript_BlockingMiner {
     faceplayer
     setspeaker("Miner")
     msgbox("Hold! There's been an accident in the
-            mines, visitors are not allowed in
+            Dig Site, visitors are not allowed in
             for now. Apologies! Come back another
             time!")
     waitmessage
@@ -160,17 +160,26 @@ script Route104_EventScript_BlockingMiner {
     end
 }
 
-// Construction Worker welcoming to the mine
+// Construction Worker welcoming to the dig site
 script Route104_EventScript_WelcomingMiner {
     lock
     faceplayer
     setspeaker("Miner")
-    msgbox("Welcome! I hope you enjoy the Mines!
+    msgbox("Welcome! I hope you enjoy the Dig Site!
             Be sure to stay out of the blocked-off
             areas, there are some very dangerous
-            parts of the mines you must stay away
+            parts of the site you must stay away
             from!")
     waitmessage
     release
     end
+}
+
+//// Signs
+
+// Sign by entrance to the dig site
+script Route104_EventScript_DigSiteSign {
+    lockall
+    msgbox("{RIGHT_ARROW} Vulias Dig Site")
+    releaseall
 }

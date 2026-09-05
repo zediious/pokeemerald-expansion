@@ -1840,3 +1840,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Vulias_Liordun_Town/scripts.inc"
 
 	.include "data/maps/Vulias_Liordun_Town_BattleHall_Ext/scripts.inc"
+
+	.include "data/maps/Vulias_DigSite_L1/scripts.inc"

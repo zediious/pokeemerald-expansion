@@ -170,6 +170,16 @@ Route104_EventScript_WelcomingMiner::
 	end
 
 
+Route104_EventScript_DigSiteSign::
+# 182 "data/maps/Vulias_Route104/scripts.pory"
+	lockall
+# 183 "data/maps/Vulias_Route104/scripts.pory"
+	msgbox Route104_EventScript_DigSiteSign_Text_0
+# 184 "data/maps/Vulias_Route104/scripts.pory"
+	releaseall
+	return
+
+
 # 139 "data/maps/Vulias_Route104/scripts.pory"
 Route104_EventScript_MinerTrigger_Movement_0:
 # 139 "data/maps/Vulias_Route104/scripts.pory"
@@ -281,14 +291,18 @@ Route104_EventScript_BlockingMiner_Text_0:
 Route104_EventScript_BlockingMiner_Text_1:
 # 154 "data/maps/Vulias_Route104/scripts.pory"
 	.string "Hold! There's been an accident in the\n"
-	.string "mines, visitors are not allowed in\l"
+	.string "Dig Site, visitors are not allowed in\l"
 	.string "for now. Apologies! Come back another\l"
 	.string "time!$"
 
 Route104_EventScript_WelcomingMiner_Text_0:
 # 168 "data/maps/Vulias_Route104/scripts.pory"
-	.string "Welcome! I hope you enjoy the Mines!\n"
+	.string "Welcome! I hope you enjoy the Dig Site!\n"
 	.string "Be sure to stay out of the blocked-off\l"
 	.string "areas, there are some very dangerous\l"
-	.string "parts of the mines you must stay away\l"
+	.string "parts of the site you must stay away\l"
 	.string "from!$"
+
+Route104_EventScript_DigSiteSign_Text_0:
+# 183 "data/maps/Vulias_Route104/scripts.pory"
+	.string "{RIGHT_ARROW} Vulias Dig Site$"
