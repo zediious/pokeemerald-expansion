@@ -1,24 +1,9 @@
+# Must be ran from project root
+# Requires Porytiles 2.0
+
 # Parameters
-# $1: Name/Directory for the Secondary tileset being compiled in the work directory (The .gal file and it's containing directory need same name)
-# $2: Name/Directory for the Secondary tileset in the pokeemerald project (~/data/tilesets/secondary/$2)
-# $3: Name/Directory of the parent primary tileset being compiled against's work directory (The .gal file and it's containing directory need same name)
+# $1: Name/Directory for the Secondary tileset in the pokeemerald project (~/data/tilesets/secondary/$1)
+# $2: Name/Directory of the parent primary tileset being compiled against
 
-TILESET_DIR=/home/jackd/Projects/ROM\ Hacking\ Work/_Assets/Custom/Art/Tilesets/
-
-# Move to the tileset work dir
-cd "$TILESET_DIR/$1/"
-
-# Split image layers into new images
-gale-splitter.exe --noclip "$1.gal"
-
-# Remove the frame prefix
-cd "$1"
-mv f0_top.png top.png
-mv f0_middle.png middle.png
-mv f0_bottom.png bottom.png
-
-# Move to project tileset directory
-cd /home/jackd/Repositories/pokeemerald-expansion/data/tilesets/
-
-# Compile the tileset to the protect tileset directory
-porytiles compile-secondary -Wall -o "secondary/$2" "$TILESET_DIR/$1/$1" "$TILESET_DIR/$3/$3" ../../include/constants/metatile_behaviors.h
+# Compile the tileset to the project tileset directory
+porytiles compile-tileset --metatile-attribute-size 2 "gTileset_$1" --primary-pairing-mode manual --primary-pairing-partners "gTileset_$2"
