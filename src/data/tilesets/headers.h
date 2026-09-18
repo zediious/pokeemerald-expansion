@@ -1700,10 +1700,10 @@ const struct Tileset gTileset_IgrisUnderground =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_IgrisUnderground,
-    .palettes = gTilesetPalettes_IgrisUnderground,
-    .metatiles = gMetatiles_IgrisUnderground,
-    .metatileAttributes = gMetatileAttributes_IgrisUnderground,
+    .tiles = gTilesetTiles_PorytilesManaged_IgrisUnderground,
+    .palettes = gTilesetPalettes_PorytilesManaged_IgrisUnderground,
+    .metatiles = gMetatiles_PorytilesManaged_IgrisUnderground,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_IgrisUnderground,
     .callback = NULL,
 };
 
@@ -1781,5 +1781,16 @@ const struct Tileset gTileset_LiordunTownPrime =
     .palettes = gTilesetPalettes_LiordunTownPrime,
     .metatiles = gMetatiles_LiordunTownPrime,
     .metatileAttributes = gMetatileAttributes_LiordunTownPrime,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Igris_Digsite =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Igris_Digsite,
+    .palettes = gTilesetPalettes_PorytilesManaged_Igris_Digsite,
+    .metatiles = gMetatiles_PorytilesManaged_Igris_Digsite,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Igris_Digsite,
     .callback = NULL,
 };

@@ -474,3 +474,9 @@ const u16 gMetatileAttributes_LiordunHallExt[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_LiordunTownPrime[] = INCBIN_U16("data/tilesets/primary/liordun_town_prime/metatiles.bin");
 const u16 gMetatileAttributes_LiordunTownPrime[] = INCBIN_U16("data/tilesets/primary/liordun_town_prime/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_IgrisUnderground[] = INCBIN_U16("data/tilesets/primary/igris_underground/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_IgrisUnderground[] = INCBIN_U16("data/tilesets/primary/igris_underground/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Igris_Digsite[] = INCBIN_U16("data/tilesets/secondary/igris_digsite/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Igris_Digsite[] = INCBIN_U16("data/tilesets/secondary/igris_digsite/porytiles_bin/metatile_attributes.bin");

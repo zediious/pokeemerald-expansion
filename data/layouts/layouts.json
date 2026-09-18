@@ -9830,7 +9830,7 @@
       "width": 15,
       "height": 40,
       "primary_tileset": "gTileset_IgrisUnderground",
-      "secondary_tileset": "gTileset_Igris_Ruins",
+      "secondary_tileset": "gTileset_Igris_Digsite",
       "border_filepath": "data/layouts/Vulias_DigSite_L1/border.bin",
       "blockdata_filepath": "data/layouts/Vulias_DigSite_L1/map.bin"
     }

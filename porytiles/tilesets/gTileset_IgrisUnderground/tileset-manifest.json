@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_IgrisUnderground",
+  ".metatiles": "gMetatiles_IgrisUnderground",
+  ".palettes": "gTilesetPalettes_IgrisUnderground",
+  ".tiles": "gTilesetTiles_IgrisUnderground",
+  "imported": true,
+  "version": 1
+}
