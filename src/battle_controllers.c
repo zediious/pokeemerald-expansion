@@ -3038,9 +3038,20 @@ u32 Rogue_GetBattleSpeedScale(bool32 forHealthbar)
 {
     u8 battleSceneOption = VarGet(VAR_BATTLESPEED_SETTING); // Originally GetBattleSceneOption() with a saveblock stored value;
 
-    // Hold L to slow down
-    if(JOY_HELD(L_BUTTON))
-        return 1;
+    // Hold L to slow down, or to speed up, based on config
+
+    // Slow down if L is held down
+    if (!FlagGet(FLAG_BATTLESPEED_CONTROL))
+    {
+        if(JOY_HELD(L_BUTTON))
+            return 1;
+    }
+    // Speed up if L is held down
+    else
+    {
+        if (!JOY_HELD(L_BUTTON))
+            return 1;
+    }
 
     // We want to speed up all anims until input selection starts
     if(InBattleChoosingMoves())
