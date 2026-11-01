@@ -183,6 +183,7 @@ void NewGameInitData(void)
     gSaveBlock2Ptr->optionsSwitchBehavior = 0;
     gSaveBlock2Ptr->optionsToggleRun = 0;
     gSaveBlock2Ptr->optionsScaleTrainers = 1;
+    gSaveBlock2Ptr->optionsSpeedBehavior = 1;
     InitPlayerTrainerId();
     PlayTimeCounter_Reset();
     ClearPokedexFlags();
