@@ -604,6 +604,7 @@ struct SaveBlock2
              u16 optionsSwitchBehavior:2;
              u16 optionsToggleRun:2;
              u16 optionsScaleTrainers:2;
+             u16 optionsSpeedBehavior:1;
              //u16 padding1:4;
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;

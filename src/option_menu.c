@@ -29,6 +29,7 @@
 #define tToggleRun data[8]
 #define tBattleSpeed data[9]
 #define tScaleTrainers data[10]
+#define tSpeedBehavior data[11]
 
 // Page 1
 enum
@@ -50,6 +51,7 @@ enum
     MENUITEM_TOGGLERUN,
     MENUITEM_BATTLESPEED,
     MENUITEM_SCALETRAINERS,
+    MENUITEM_SPEEDBEHAVIOR,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -73,6 +75,7 @@ enum
 #define YPOS_TOGGLERUN           (MENUITEM_TOGGLERUN* 16)
 #define YPOS_BATTLESPEED         (MENUITEM_BATTLESPEED* 16)
 #define YPOS_SCALETRAINERS       (MENUITEM_SCALETRAINERS* 16)
+#define YPOS_SPEEDBEHAVIOR       (MENUITEM_SPEEDBEHAVIOR* 16)
 
 
 #define PAGE_COUNT 2
@@ -102,6 +105,8 @@ static u8   BattleSpeed_ProcessInput(u8 selection);
 static void BattleSpeed_DrawChoices(u8 selection);
 static u8   ScaleTrainers_ProcessInput(u8 selection);
 static void ScaleTrainers_DrawChoices(u8 selection);
+static u8   SpeedBehavior_ProcessInput(u8 selection);
+static void SpeedBehavior_DrawChoices(u8 selection);
 static u8 ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
@@ -150,6 +155,7 @@ static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
     [MENUITEM_TOGGLERUN]       = gText_ToggleRun,
     [MENUITEM_BATTLESPEED]     = gText_BattleSpeed,
     [MENUITEM_SCALETRAINERS]   = gText_ScaleTrainers,
+    [MENUITEM_SPEEDBEHAVIOR]   = gText_SpeedBehavior,
     [MENUITEM_CANCEL_PG2]      = COMPOUND_STRING("Cancel"),
 };
 
@@ -228,6 +234,7 @@ static void ReadAllCurrentSettings(u8 taskId)
     gTasks[taskId].tToggleRun = gSaveBlock2Ptr->optionsToggleRun;
     gTasks[taskId].tBattleSpeed = VarGet(VAR_BATTLESPEED_SETTING);
     gTasks[taskId].tScaleTrainers = gSaveBlock2Ptr->optionsScaleTrainers;
+    gTasks[taskId].tSpeedBehavior = gSaveBlock2Ptr->optionsSpeedBehavior;
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -250,6 +257,7 @@ static void DrawOptionsPg2(u8 taskId)
     ToggleRun_DrawChoices(gTasks[taskId].tToggleRun);
     BattleSpeed_DrawChoices(gTasks[taskId].tBattleSpeed);
     ScaleTrainers_DrawChoices(gTasks[taskId].tScaleTrainers);
+    SpeedBehavior_DrawChoices(gTasks[taskId].tSpeedBehavior);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -564,6 +572,13 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             if (previousOption != gTasks[taskId].tScaleTrainers)
                 ScaleTrainers_DrawChoices(gTasks[taskId].tScaleTrainers);
             break; 
+        case MENUITEM_SPEEDBEHAVIOR:
+            previousOption = gTasks[taskId].tSpeedBehavior;
+            gTasks[taskId].tSpeedBehavior = SpeedBehavior_ProcessInput(gTasks[taskId].tSpeedBehavior);
+
+            if (previousOption != gTasks[taskId].tSpeedBehavior)
+                SpeedBehavior_DrawChoices(gTasks[taskId].tSpeedBehavior);
+            break; 
         default:
             return;
         }
@@ -587,6 +602,11 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsToggleRun = gTasks[taskId].tToggleRun;
     VarSet(VAR_BATTLESPEED_SETTING, gTasks[taskId].tBattleSpeed);
     gSaveBlock2Ptr->optionsScaleTrainers = gTasks[taskId].tScaleTrainers;
+    if (gTasks[taskId].tSpeedBehavior == 1)
+        FlagSet(FLAG_BATTLESPEED_CONTROL);
+    else
+        FlagClear(FLAG_BATTLESPEED_CONTROL);
+    gSaveBlock2Ptr->optionsSpeedBehavior= gTasks[taskId].tSpeedBehavior;
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -760,6 +780,35 @@ static void ScaleTrainers_DrawChoices(u8 selection)
     // Draw each menu choice at the calculated positions
     DrawOptionMenuChoice(gText_OneSwitchOff, 104, YPOS_SCALETRAINERS, styles[0]);
     DrawOptionMenuChoice(gText_OneSwitchOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_OneSwitchOn, 170), YPOS_SCALETRAINERS, styles[1]);
+}
+
+static u8 SpeedBehavior_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (++selection > 1)  // If the selection exceeds 3, wrap around to 0
+            selection = 0;
+            sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (--selection > 1)  // If the selection is negative, wrap around to 3
+            selection = 1;
+            sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void SpeedBehavior_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;  // Highlight the selected option
+
+    // Draw each menu choice at the calculated positions
+    DrawOptionMenuChoice(gText_SpeedBehavior_Option02, 104, YPOS_SPEEDBEHAVIOR, styles[0]);
+    DrawOptionMenuChoice(gText_SpeedBehavior_Option01, GetStringRightAlignXOffset(FONT_NORMAL, gText_SpeedBehavior_Option01, 170), YPOS_SPEEDBEHAVIOR, styles[1]);
 }
 
 static u8 TextSpeed_ProcessInput(u8 selection)
