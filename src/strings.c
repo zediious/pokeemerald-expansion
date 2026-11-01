@@ -1469,6 +1469,10 @@ const u8 gText_ToggleRun_Option02[] = _("On");
 
 const u8 gText_ScaleTrainers[] = _("Scale Trainers");
 
+const u8 gText_SpeedBehavior[] = _("Speed Hold R");
+const u8 gText_SpeedBehavior_Option01[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Speed");
+const u8 gText_SpeedBehavior_Option02[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Slow");
+
 const u8 gText_BattleSpeed[] = _("Battle Speed");
 const u8 gText_BattleSpeed_1x[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}1x");
 const u8 gText_BattleSpeed_2x[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}2x");

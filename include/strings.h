@@ -245,6 +245,11 @@ extern const u8 gText_BattleSpeed_4x[];
 // Scale Trainers Option
 extern const u8 gText_ScaleTrainers[];
 
+// Speed Behavior Option
+extern const u8 gText_SpeedBehavior[];
+extern const u8 gText_SpeedBehavior_Option01[];
+extern const u8 gText_SpeedBehavior_Option02[];
+
 // main menu/birch speech text
 extern const u8 gText_Birch_Welcome[];
 extern const u8 gText_ThisIsAPokemon[];
